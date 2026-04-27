@@ -32,6 +32,111 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .nav-link.nav-advogados {
+      color: var(--gold);
+      font-weight: 600;
+      background: rgba(201,168,76,0.08);
+      border: 1px solid rgba(201,168,76,0.25);
+    }
+    .nav-link.nav-advogados:hover,
+    .nav-link.nav-advogados:focus-visible {
+      background: rgba(201,168,76,0.14);
+      color: var(--gold-light);
+    }
+
+    /* Seção nicho advogados na home */
+    .nicho-advogados {
+      background: var(--navy);
+      padding: 80px 0;
+    }
+    .nicho-banner {
+      background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy-mid) 100%);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 20px;
+      padding: 56px 60px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 48px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .nicho-banner::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .nicho-banner-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 100px;
+      padding: 5px 14px;
+      margin-bottom: 16px;
+    }
+    .nicho-banner h2 {
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.25;
+      margin-bottom: 14px;
+    }
+    .nicho-banner p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      max-width: 520px;
+    }
+    .nicho-banner-cta {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 12px;
+    }
+    .nicho-pilulas {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-end;
+      margin-bottom: 8px;
+    }
+    .nicho-pilula {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 100px;
+      padding: 5px 14px;
+      white-space: nowrap;
+    }
+    .nicho-pilula svg { color: var(--gold); flex-shrink: 0; }
+
+    @media (max-width: 900px) {
+      .nicho-banner {
+        grid-template-columns: 1fr;
+        padding: 40px 32px;
+        gap: 32px;
+      }
+      .nicho-banner-cta { align-items: flex-start; }
+      .nicho-pilulas { align-items: flex-start; }
+    }
+    @media (max-width: 640px) {
+      .nicho-banner { padding: 32px 24px; }
+      .nicho-banner .btn { width: 100%; justify-content: center; }
+    }
+  </style>
 
   <!-- Schema.org LocalBusiness -->
   <script type="application/ld+json">
@@ -100,6 +205,7 @@
         <li><a href="#para-quem" class="nav-link">Para quem</a></li>
         <li><a href="#diferenciais" class="nav-link">Diferenciais</a></li>
         <li><a href="#metodo" class="nav-link">Método</a></li>
+        <li><a href="para-advogados.html" class="nav-link nav-advogados">Para Advogados</a></li>
         <li><a href="#contato" class="nav-link nav-cta">Fale comigo</a></li>
       </ul>
     </div>
@@ -367,6 +473,46 @@
             </div>
             <h3>Profissionais Liberais</h3>
             <p>Contadores, arquitetos, consultores e outros profissionais que precisam de presença digital forte e profissional.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO NICHO: PARA ADVOGADOS -->
+    <section class="nicho-advogados" aria-labelledby="nicho-titulo">
+      <div class="container">
+        <div class="nicho-banner fade-in">
+          <div class="nicho-banner-texto">
+            <div class="nicho-banner-tag">Especialidade em Advocacia</div>
+            <h2 id="nicho-titulo">
+              Você é advogado em Goiânia?<br>
+              <span class="text-gold">Tenho uma página feita para você.</span>
+            </h2>
+            <p>
+              Sou bacharel em Direito e trabalho exclusivamente dentro do Provimento 205/2021 da OAB. Ajudo escritórios de advocacia a aparecerem no Google e captarem clientes de forma ética — sem risco disciplinar.
+            </p>
+          </div>
+          <div class="nicho-banner-cta">
+            <div class="nicho-pilulas">
+              <div class="nicho-pilula">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                100% dentro das normas da OAB
+              </div>
+              <div class="nicho-pilula">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Exclusividade por área e região
+              </div>
+              <div class="nicho-pilula">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Análise gratuita sem compromisso
+              </div>
+            </div>
+            <a href="para-advogados.html" class="btn btn-primary">
+              Ver página para advogados
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
