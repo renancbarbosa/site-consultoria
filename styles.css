@@ -403,6 +403,8 @@ section {
 .hero-photo-frame {
   position: relative;
   width: 340px;
+  background: #1B2A41;
+  border-radius: 18px;
 }
 
 .hero-photo-frame::before {
