@@ -239,6 +239,88 @@ section {
   color: var(--navy);
 }
 
+/* ── Dropdown "Para você" ── */
+.nav-nicho-group {
+  position: relative;
+}
+
+.nav-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background var(--transition);
+}
+
+.nav-dropdown-toggle:hover,
+.nav-dropdown-toggle:focus-visible {
+  color: var(--white);
+  background: rgba(255,255,255,0.06);
+}
+
+.nav-dropdown-toggle[aria-expanded="true"] {
+  color: var(--gold);
+  background: rgba(201,168,76,0.08);
+}
+
+.nav-dropdown-toggle .chevron {
+  transition: transform var(--transition);
+}
+
+.nav-dropdown-toggle[aria-expanded="true"] .chevron {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 240px;
+  background: rgba(17,34,54,0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(201,168,76,0.15);
+  border-radius: var(--radius-md);
+  padding: 8px;
+  box-shadow: var(--shadow-hover);
+  z-index: 1001;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.nav-dropdown-menu.open {
+  display: flex;
+}
+
+.nav-dropdown-item {
+  display: block;
+  padding: 10px 16px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background var(--transition);
+  white-space: nowrap;
+}
+
+.nav-dropdown-item:hover,
+.nav-dropdown-item:focus-visible {
+  color: var(--white);
+  background: rgba(255,255,255,0.06);
+}
+
+.nav-dropdown-item.ativo {
+  color: var(--gold);
+  font-weight: 600;
+  background: rgba(201,168,76,0.08);
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -1167,6 +1249,29 @@ section {
     padding: 14px 32px;
     width: 100%;
     text-align: center;
+  }
+
+  /* Dropdown mobile: esconde toggle, exibe itens direto no hamburger */
+  .nav-dropdown-toggle { display: none; }
+  .nav-nicho-group { width: 100%; }
+  .nav-dropdown-menu {
+    display: flex !important;
+    position: static;
+    transform: none;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    min-width: 0;
+    gap: 0;
+  }
+  .nav-dropdown-item {
+    font-size: 1.1rem;
+    padding: 12px 32px;
+    text-align: center;
+    width: 100%;
   }
 
   /* Hero: foto abaixo do texto em mobile */

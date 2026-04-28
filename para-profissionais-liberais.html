@@ -67,19 +67,6 @@
   </script>
 
   <style>
-    /* ── Nav ativo nesta página ── */
-    .nav-link.nav-profissionais {
-      color: var(--gold);
-      font-weight: 600;
-      background: rgba(201,168,76,0.08);
-      border: 1px solid rgba(201,168,76,0.25);
-    }
-    .nav-link.nav-profissionais:hover,
-    .nav-link.nav-profissionais:focus-visible {
-      background: rgba(201,168,76,0.14);
-      color: var(--gold-light);
-    }
-
     /* ── Dores ── */
     .dores { background: var(--navy-mid); }
     .dores-grid {
@@ -470,10 +457,19 @@
         <li><a href="index.html#para-quem"    class="nav-link">Para quem</a></li>
         <li><a href="index.html#diferenciais" class="nav-link">Diferenciais</a></li>
         <li><a href="index.html#metodo"       class="nav-link">Método</a></li>
-        <li><a href="para-advogados.html"     class="nav-link">Para Advogados</a></li>
-        <li><a href="para-clinicas.html"      class="nav-link">Para Clínicas</a></li>
-        <li><a href="para-profissionais-liberais.html" class="nav-link nav-profissionais" aria-current="page">Para Profissionais Liberais</a></li>
-        <li><a href="index.html#contato"      class="nav-link nav-cta">Fale comigo</a></li>
+        <li class="nav-nicho-group">
+          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            Para você
+            <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="para-advogados.html" class="nav-dropdown-item" role="menuitem">Para Advogados</a>
+            <a href="para-clinicas.html" class="nav-dropdown-item" role="menuitem">Para Clínicas</a>
+            <a href="para-profissionais-liberais.html" class="nav-dropdown-item ativo" role="menuitem" aria-current="page">Para Profissionais Liberais</a>
+            <a href="para-comercios-locais.html" class="nav-dropdown-item" role="menuitem">Para Comércios Locais</a>
+          </div>
+        </li>
+        <li><a href="index.html#contato" class="nav-link nav-cta">Fale comigo</a></li>
       </ul>
     </div>
   </nav>
@@ -1036,6 +1032,7 @@
           <a href="para-advogados.html">Para Advogados</a>
           <a href="para-clinicas.html">Para Clínicas</a>
           <a href="para-profissionais-liberais.html" aria-current="page" style="color: var(--gold);">Para Profissionais Liberais</a>
+          <a href="para-comercios-locais.html">Para Comércios Locais</a>
         </nav>
       </div>
       <div class="footer-social">
@@ -1099,6 +1096,27 @@
 
     navToggle.addEventListener('click', () => toggleMenu());
     navLinks.forEach(l => l.addEventListener('click', () => toggleMenu(false)));
+    navMenu.querySelectorAll('.nav-dropdown-item').forEach(l => l.addEventListener('click', () => toggleMenu(false)));
+
+    // Dropdown "Para você"
+    (function () {
+      const dropToggle = document.querySelector('.nav-dropdown-toggle');
+      const dropMenu   = document.querySelector('.nav-dropdown-menu');
+      if (!dropToggle || !dropMenu) return;
+      dropToggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const isOpen = dropToggle.getAttribute('aria-expanded') === 'true';
+        dropToggle.setAttribute('aria-expanded', String(!isOpen));
+        dropMenu.classList.toggle('open', !isOpen);
+      });
+      document.addEventListener('click', function (e) {
+        if (!dropToggle.contains(e.target) && !dropMenu.contains(e.target)) {
+          dropToggle.setAttribute('aria-expanded', 'false');
+          dropMenu.classList.remove('open');
+        }
+      });
+    })();
+
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape' && navMenu.classList.contains('open')) toggleMenu(false);
     });

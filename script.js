@@ -197,6 +197,35 @@ form.addEventListener('submit', e => {
 });
 
 // ============================================================
+// DROPDOWN "Para você"
+// ============================================================
+(function () {
+  const dropToggle = document.querySelector('.nav-dropdown-toggle');
+  const dropMenu   = document.querySelector('.nav-dropdown-menu');
+  if (!dropToggle || !dropMenu) return;
+
+  dropToggle.addEventListener('click', function (e) {
+    e.stopPropagation();
+    const isOpen = dropToggle.getAttribute('aria-expanded') === 'true';
+    dropToggle.setAttribute('aria-expanded', String(!isOpen));
+    dropMenu.classList.toggle('open', !isOpen);
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!dropToggle.contains(e.target) && !dropMenu.contains(e.target)) {
+      dropToggle.setAttribute('aria-expanded', 'false');
+      dropMenu.classList.remove('open');
+    }
+  });
+
+  dropMenu.querySelectorAll('.nav-dropdown-item').forEach(function (item) {
+    item.addEventListener('click', function () {
+      toggleMenu(false);
+    });
+  });
+})();
+
+// ============================================================
 // SMOOTH SCROLL para links âncora
 // ============================================================
 document.querySelectorAll('a[href^="#"]').forEach(link => {
