@@ -64,7 +64,7 @@ sections.forEach(s => sectionObserver.observe(s));
 // FADE-IN — Intersection Observer
 // ============================================================
 const fadeEls = document.querySelectorAll(
-  '.servico-card, .paraquem-card, .diferencial-item, .metodo-step, .sobre-texto, .sobre-card, .contato-info, .contato-form-wrap, .section-header'
+  '.servico-card, .paraquem-card, .diferencial-item, .metodo-step, .sobre-texto, .sobre-card, .contato-info, .contato-form-wrap, .section-header, .nicho-banner'
 );
 
 fadeEls.forEach(el => el.classList.add('fade-in'));
