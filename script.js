@@ -149,52 +149,54 @@ function validateForm() {
   return valid;
 }
 
-// Limpar erro ao digitar
-['nome', 'email', 'mensagem'].forEach(name => {
-  const field = getField(name);
-  if (field) field.addEventListener('input', () => clearError(name));
-});
+if (form) {
+  // Limpar erro ao digitar
+  ['nome', 'email', 'mensagem'].forEach(name => {
+    const field = getField(name);
+    if (field) field.addEventListener('input', () => clearError(name));
+  });
 
-form.addEventListener('submit', e => {
-  e.preventDefault();
+  form.addEventListener('submit', e => {
+    e.preventDefault();
 
-  if (!validateForm()) return;
+    if (!validateForm()) return;
 
-  const nome = getField('nome').value.trim();
-  const email = getField('email').value.trim();
-  const telefone = getField('telefone').value.trim();
-  const mensagem = getField('mensagem').value.trim();
+    const nome = getField('nome').value.trim();
+    const email = getField('email').value.trim();
+    const telefone = getField('telefone').value.trim();
+    const mensagem = getField('mensagem').value.trim();
 
-  const texto = [
-    `Olá Renan! Vim pelo seu site e gostaria de saber mais sobre consultoria digital.`,
-    ``,
-    `*Nome:* ${nome}`,
-    `*E-mail:* ${email}`,
-    telefone ? `*Telefone:* ${telefone}` : '',
-    ``,
-    `*Mensagem:*`,
-    mensagem
-  ].filter(l => l !== undefined).join('\n');
+    const texto = [
+      `Olá Renan! Vim pelo seu site e gostaria de saber mais sobre consultoria digital.`,
+      ``,
+      `*Nome:* ${nome}`,
+      `*E-mail:* ${email}`,
+      telefone ? `*Telefone:* ${telefone}` : '',
+      ``,
+      `*Mensagem:*`,
+      mensagem
+    ].filter(l => l !== undefined).join('\n');
 
-  const url = `https://wa.me/5562991161040?text=${encodeURIComponent(texto)}`;
-  window.open(url, '_blank', 'noopener,noreferrer');
+    const url = `https://wa.me/5562991161040?text=${encodeURIComponent(texto)}`;
+    window.open(url, '_blank', 'noopener,noreferrer');
 
-  // Feedback visual
-  const btn = form.querySelector('button[type="submit"]');
-  const originalHTML = btn.innerHTML;
-  btn.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Mensagem preparada!`;
-  btn.disabled = true;
-  btn.style.background = '#25D366';
-  btn.style.color = '#fff';
+    // Feedback visual
+    const btn = form.querySelector('button[type="submit"]');
+    const originalHTML = btn.innerHTML;
+    btn.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Mensagem preparada!`;
+    btn.disabled = true;
+    btn.style.background = '#25D366';
+    btn.style.color = '#fff';
 
-  setTimeout(() => {
-    btn.innerHTML = originalHTML;
-    btn.disabled = false;
-    btn.style.background = '';
-    btn.style.color = '';
-    form.reset();
-  }, 3000);
-});
+    setTimeout(() => {
+      btn.innerHTML = originalHTML;
+      btn.disabled = false;
+      btn.style.background = '';
+      btn.style.color = '';
+      form.reset();
+    }, 3000);
+  });
+}
 
 // ============================================================
 // DROPDOWN "Para você"
