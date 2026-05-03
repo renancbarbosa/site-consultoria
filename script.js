@@ -1,7 +1,8 @@
 'use strict';
 
 // Ano atual no footer
-document.getElementById('anoAtual').textContent = new Date().getFullYear();
+const anoAtual = document.getElementById('anoAtual');
+if (anoAtual) anoAtual.textContent = new Date().getFullYear();
 
 // ============================================================
 // NAVBAR — scroll e menu mobile
@@ -9,9 +10,10 @@ document.getElementById('anoAtual').textContent = new Date().getFullYear();
 const navbar = document.getElementById('navbar');
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
-const navLinks = navMenu.querySelectorAll('.nav-link');
+const navLinks = navMenu ? navMenu.querySelectorAll('.nav-link') : [];
 
 function handleScroll() {
+  if (!navbar) return;
   navbar.classList.toggle('scrolled', window.scrollY > 40);
 }
 
@@ -19,6 +21,7 @@ window.addEventListener('scroll', handleScroll, { passive: true });
 handleScroll();
 
 function toggleMenu(open) {
+  if (!navMenu || !navToggle) return;
   const isOpen = typeof open === 'boolean' ? open : !navMenu.classList.contains('open');
   navMenu.classList.toggle('open', isOpen);
   navToggle.classList.toggle('active', isOpen);
@@ -26,19 +29,19 @@ function toggleMenu(open) {
   document.body.style.overflow = isOpen ? 'hidden' : '';
 }
 
-navToggle.addEventListener('click', () => toggleMenu());
+if (navToggle) navToggle.addEventListener('click', () => toggleMenu());
 
 navLinks.forEach(link => {
   link.addEventListener('click', () => toggleMenu(false));
 });
 
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && navMenu.classList.contains('open')) toggleMenu(false);
+  if (e.key === 'Escape' && navMenu && navMenu.classList.contains('open')) toggleMenu(false);
 });
 
 // Fechar menu ao clicar fora
 document.addEventListener('click', e => {
-  if (navMenu.classList.contains('open') && !navbar.contains(e.target)) toggleMenu(false);
+  if (navMenu && navbar && navMenu.classList.contains('open') && !navbar.contains(e.target)) toggleMenu(false);
 });
 
 // ============================================================
@@ -235,7 +238,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     const target = document.querySelector(link.getAttribute('href'));
     if (!target) return;
     e.preventDefault();
-    const offset = navbar.offsetHeight + 8;
+    const offset = (navbar ? navbar.offsetHeight : 0) + 8;
     const top = target.getBoundingClientRect().top + window.scrollY - offset;
     window.scrollTo({ top, behavior: 'smooth' });
   });
