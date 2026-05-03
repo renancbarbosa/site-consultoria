@@ -1105,6 +1105,175 @@ section {
 }
 
 /* ============================================================
+   AUDIENCE SELECTOR (HOME)
+   ============================================================ */
+.audience-selector {
+  background: var(--navy-mid);
+}
+
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.audience-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--navy-light);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+  transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
+}
+
+.audience-card:hover {
+  border-color: rgba(201,168,76,0.3);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+.audience-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.audience-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.audience-card-arrow {
+  display: block;
+  margin-top: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+/* ============================================================
+   VISÃO DE SUCESSO
+   ============================================================ */
+.visao-sucesso {
+  background: var(--navy-light);
+}
+
+.visao-texto {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.visao-texto p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+/* ============================================================
+   FOOTER 4 COLUNAS
+   ============================================================ */
+.footer-cols {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 48px;
+  padding: 56px 20px;
+}
+
+.footer-col-identity .logo-text {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.footer-name {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.footer-cargo {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--gold);
+  margin-bottom: 12px;
+  line-height: 1.45;
+}
+
+.footer-bio {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.footer-col-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.footer-col-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col-nav a {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+
+.footer-col-nav a:hover { color: var(--white); }
+
+.footer-col-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col-contact a,
+.footer-col-contact span {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  transition: color var(--transition);
+  line-height: 1.5;
+  word-break: break-all;
+}
+
+.footer-col-contact a:hover { color: var(--gold); }
+
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-privacy {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  transition: color var(--transition);
+  text-decoration: underline;
+}
+
+.footer-privacy:hover { color: var(--gold); }
+
+/* ============================================================
    WHATSAPP FLUTUANTE
    ============================================================ */
 .whatsapp-float {
@@ -1345,12 +1514,26 @@ section {
     gap: 24px;
   }
 
+  .audience-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .footer-cols {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    padding: 48px 20px;
+  }
+
   .whatsapp-float {
     bottom: 20px;
     right: 20px;
     width: 52px;
     height: 52px;
   }
+}
+
+@media (max-width: 480px) {
+  .audience-grid { grid-template-columns: 1fr; }
+  .footer-cols { grid-template-columns: 1fr; gap: 28px; padding: 40px 20px; }
+  .footer-bottom-inner { flex-direction: column; text-align: center; }
 }
 
 /* ============================================================
