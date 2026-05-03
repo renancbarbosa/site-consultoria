@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
 
+# Busca com IA / ChatGPT Search
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
 Sitemap: https://renancbarbosa.com.br/sitemap.xml
