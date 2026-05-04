@@ -9,1004 +9,435 @@
     gtag('js', new Date());
     gtag('config', 'G-K644KXR38G');
   </script>
+  <!-- INSERIR_GTM_ID_AQUI quando houver Google Tag Manager. GA4 atual: G-K644KXR38G -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Renan Carvalho Barbosa | Consultor de SEO Local e Google Meu Negócio no Brasil</title>
-  <meta name="description" content="Consultoria de transformação digital, SEO Local e Google Meu Negócio com base em Goiânia e atendimento online para empresas no Brasil. Apareça no Google e atraia mais clientes.">
-  <meta name="keywords" content="consultoria digital Goiânia, consultoria digital Brasil, SEO local Goiânia, SEO local Brasil, Google Meu Negócio Goiânia, Google Meu Negócio Brasil, consultor SEO local online">
+  <meta name="theme-color" content="#0D1B2A">
+  <title>SEO Local para Clínicas e Dentistas | Renan Carvalho Barbosa</title>
+  <meta name="description" content="Consultoria em SEO Local, Google Meu Negócio e sites otimizados para clínicas, dentistas, estética e saúde em Goiânia e online no Brasil.">
+  <meta name="keywords" content="SEO local para clínicas, SEO para dentistas, Google Meu Negócio para clínicas, site para clínica, consultor SEO local Goiânia">
   <meta name="author" content="Renan Carvalho Barbosa">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://renancbarbosa.com.br/">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Renan Carvalho Barbosa | Consultor de SEO Local e Google Meu Negócio no Brasil">
-  <meta property="og:description" content="Ajudo empresas locais a crescerem no digital com SEO, Google Meu Negócio, sites profissionais e estratégia de conteúdo. Base em Goiânia, atendimento online no Brasil.">
+  <meta property="og:title" content="SEO Local para Clínicas e Dentistas | Renan Carvalho Barbosa">
+  <meta property="og:description" content="Consultoria em SEO Local, Google Meu Negócio e sites otimizados para clínicas, dentistas, estética e saúde em Goiânia e online no Brasil.">
   <meta property="og:url" content="https://renancbarbosa.com.br/">
   <meta property="og:image" content="https://renancbarbosa.com.br/fotoperfil.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="1600">
   <meta property="og:locale" content="pt_BR">
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Renan Carvalho Barbosa | Consultor de SEO Local e Google Meu Negócio no Brasil">
-  <meta name="twitter:description" content="Ajudo empresas locais a crescerem no digital com SEO, Google Meu Negócio, sites profissionais e estratégia de conteúdo. Base em Goiânia, atendimento online no Brasil.">
+  <meta name="twitter:title" content="SEO Local para Clínicas e Dentistas | Renan Carvalho Barbosa">
+  <meta name="twitter:description" content="Consultoria em SEO Local, Google Meu Negócio e sites otimizados para clínicas, dentistas, estética e saúde em Goiânia e online no Brasil.">
   <meta name="twitter:image" content="https://renancbarbosa.com.br/fotoperfil.jpg">
 
-  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-
-  <!-- Preconnect para performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="styles.css">
-  <style>
-    /* Seção nicho advogados na home */
-    .nicho-advogados {
-      background: var(--navy);
-      padding: 80px 0;
-    }
-    .nicho-banner {
-      background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy-mid) 100%);
-      border: 1px solid rgba(201,168,76,0.2);
-      border-radius: 20px;
-      padding: 56px 60px;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 48px;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .nicho-banner::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    }
-    .nicho-banner-tag {
-      display: inline-block;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gold);
-      background: rgba(201,168,76,0.1);
-      border: 1px solid rgba(201,168,76,0.2);
-      border-radius: 100px;
-      padding: 5px 14px;
-      margin-bottom: 16px;
-    }
-    .nicho-banner h2 {
-      font-size: clamp(1.5rem, 2.5vw, 2rem);
-      font-weight: 700;
-      color: var(--white);
-      line-height: 1.25;
-      margin-bottom: 14px;
-    }
-    .nicho-banner p {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 1.65;
-      max-width: 520px;
-    }
-    .nicho-banner-cta {
-      flex-shrink: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 12px;
-    }
-    .nicho-pilulas {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      align-items: flex-end;
-      margin-bottom: 8px;
-    }
-    .nicho-pilula {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 100px;
-      padding: 5px 14px;
-      white-space: nowrap;
-    }
-    .nicho-pilula svg { color: var(--gold); flex-shrink: 0; }
-    .nicho-secondary-link {
-      color: var(--gold);
-      font-size: 0.86rem;
-      font-weight: 600;
-      text-decoration: underline;
-      text-underline-offset: 4px;
-      transition: color var(--transition);
-    }
-    .nicho-secondary-link:hover { color: var(--gold-light); }
 
-    @media (max-width: 900px) {
-      .nicho-banner {
-        grid-template-columns: 1fr;
-        padding: 40px 32px;
-        gap: 32px;
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://renancbarbosa.com.br/#website",
+        "name": "Renan Carvalho Barbosa",
+        "url": "https://renancbarbosa.com.br/",
+        "inLanguage": "pt-BR"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://renancbarbosa.com.br/#webpage",
+        "url": "https://renancbarbosa.com.br/",
+        "name": "SEO Local para Clínicas e Dentistas | Renan Carvalho Barbosa",
+        "description": "Consultoria em SEO Local, Google Meu Negócio e sites otimizados para clínicas, dentistas, estética e saúde em Goiânia e online no Brasil.",
+        "isPartOf": {"@id": "https://renancbarbosa.com.br/#website"},
+        "about": {"@id": "https://renancbarbosa.com.br/#service"},
+        "inLanguage": "pt-BR"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://renancbarbosa.com.br/#renan",
+        "name": "Renan Carvalho Barbosa",
+        "jobTitle": "Consultor de SEO Local e Google Meu Negócio",
+        "url": "https://renancbarbosa.com.br/",
+        "image": "https://renancbarbosa.com.br/fotoperfil.jpg",
+        "email": "contato@renancbarbosa.com.br",
+        "telephone": "+5562991161040",
+        "sameAs": ["https://linkedin.com/in/renan-carvalho-barbosa"],
+        "alumniOf": [{"@type": "EducationalOrganization", "name": "FIAP"}],
+        "knowsAbout": ["SEO Local", "Google Meu Negócio", "Google Business Profile", "Sites otimizados", "Marketing digital para clínicas"]
+      },
+      {
+        "@type": ["ProfessionalService", "LocalBusiness"],
+        "@id": "https://renancbarbosa.com.br/#service",
+        "name": "Renan Carvalho Barbosa - Consultoria em SEO Local",
+        "url": "https://renancbarbosa.com.br/",
+        "description": "Consultoria em SEO Local, Google Meu Negócio e sites otimizados para clínicas, dentistas, estética, médicos e negócios de saúde.",
+        "telephone": "+5562991161040",
+        "email": "contato@renancbarbosa.com.br",
+        "founder": {"@id": "https://renancbarbosa.com.br/#renan"},
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Goiânia",
+          "addressRegion": "GO",
+          "addressCountry": "BR"
+        },
+        "areaServed": [
+          {"@type": "City", "name": "Goiânia"},
+          {"@type": "AdministrativeArea", "name": "Goiás"},
+          {"@type": "Country", "name": "Brasil"}
+        ],
+        "sameAs": ["https://linkedin.com/in/renan-carvalho-barbosa"],
+        "serviceType": ["SEO Local", "Google Meu Negócio", "Google Business Profile", "Sites otimizados para clínicas", "Estratégia de presença digital"]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://renancbarbosa.com.br/#faq",
+        "mainEntity": [
+          {"@type": "Question", "name": "SEO local funciona para clínicas e dentistas?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. SEO local ajuda clínicas, dentistas e negócios de saúde a melhorarem a presença no Google, Google Maps e buscas por especialidade, procedimento, bairro ou cidade."}},
+          {"@type": "Question", "name": "Minha clínica precisa de site ou só Google Meu Negócio?", "acceptedAnswer": {"@type": "Answer", "text": "O ideal é trabalhar os dois. O Google Perfil da Empresa melhora a presença no Maps, enquanto o site sustenta páginas de serviço, autoridade, conteúdo e conversão."}},
+          {"@type": "Question", "name": "Atende somente Goiânia?", "acceptedAnswer": {"@type": "Answer", "text": "O atendimento presencial é em Goiânia, mas a consultoria é feita online para clínicas e negócios locais de todo o Brasil."}},
+          {"@type": "Question", "name": "É melhor investir em SEO ou Google Ads?", "acceptedAnswer": {"@type": "Answer", "text": "Depende do momento. Antes de investir pesado em Google Ads, a clínica precisa organizar site, Google Perfil da Empresa, páginas de serviço, avaliações, rastreamento e conversão."}}
+        ]
       }
-      .nicho-banner-cta { align-items: flex-start; }
-      .nicho-pilulas { align-items: flex-start; }
-    }
-    @media (max-width: 640px) {
-      .nicho-banner { padding: 32px 24px; }
-      .nicho-banner .btn { width: 100%; justify-content: center; }
-    }
-  </style>
-
-  <!-- Schema.org LocalBusiness -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Renan Carvalho Barbosa - Consultoria Digital",
-    "description": "Consultoria em transformação digital, SEO local e Google Meu Negócio para empresas locais, com base em Goiânia e atendimento online em todo o Brasil.",
-    "url": "https://renancbarbosa.com.br",
-    "telephone": "+55-62-99116-1040",
-    "email": "contato@renancbarbosa.com.br",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Goiânia",
-      "addressRegion": "GO",
-      "addressCountry": "BR"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "-16.6869",
-      "longitude": "-49.2648"
-    },
-    "areaServed": [
-      {"@type": "City", "name": "Goiânia"},
-      {"@type": "Country", "name": "Brasil"}
-    ],
-    "sameAs": [
-      "https://linkedin.com/in/renan-carvalho-barbosa"
-    ],
-    "founder": {
-      "@type": "Person",
-      "name": "Renan Carvalho Barbosa",
-      "jobTitle": "Consultor de Transformação Digital com foco em SEO Local",
-      "alumniOf": [
-        {
-          "@type": "CollegeOrUniversity",
-          "name": "FIAP"
-        }
-      ]
-    },
-    "serviceType": [
-      "SEO Local",
-      "Google Meu Negócio",
-      "Sites Profissionais",
-      "Estratégia de Conteúdo",
-      "Transformação Digital"
     ]
-  }
-  </script>
-
-  <!-- Schema.org Person -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Renan Carvalho Barbosa",
-    "jobTitle": "Consultor de Transformação Digital com foco em SEO Local",
-    "url": "https://renancbarbosa.com.br/",
-    "image": "https://renancbarbosa.com.br/fotoperfil.jpg",
-    "email": "contato@renancbarbosa.com.br",
-    "telephone": "+5562991161040",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Goiânia",
-      "addressRegion": "GO",
-      "addressCountry": "BR"
-    },
-    "sameAs": ["https://linkedin.com/in/renan-carvalho-barbosa"],
-    "alumniOf": [{"@type": "EducationalOrganization", "name": "FIAP"}],
-    "knowsAbout": ["SEO Local", "Marketing Digital", "Google Meu Negócio", "Transformação Digital"]
-  }
-  </script>
-
-  <!-- Schema.org ProfessionalService -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Renan Carvalho Barbosa - Consultoria de Transformação Digital",
-    "description": "Consultoria de transformação digital com foco em SEO local para empresas em Goiânia e atendimento online no Brasil.",
-    "url": "https://renancbarbosa.com.br/",
-    "telephone": "+5562991161040",
-    "email": "contato@renancbarbosa.com.br",
-    "areaServed": [
-      {"@type": "City", "name": "Goiânia"},
-      {"@type": "Country", "name": "Brasil"}
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Goiânia",
-      "addressRegion": "GO",
-      "addressCountry": "BR"
-    },
-    "priceRange": "$$"
   }
   </script>
 </head>
 <body>
-
-  <!-- NAVEGAÇÃO -->
   <nav class="navbar" id="navbar" role="navigation" aria-label="Menu principal">
     <div class="container nav-container">
-      <a href="#hero" class="nav-logo" aria-label="Renan Carvalho Barbosa - Página inicial">
+      <a href="/" class="nav-logo" aria-label="Renan Carvalho Barbosa - Página inicial">
         <span class="logo-text">RCB</span>
-        <span class="logo-sub">Consultoria Digital</span>
+        <span class="logo-sub">SEO Local</span>
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-menu" id="navMenu" role="list">
-        <li><a href="#sobre" class="nav-link">Sobre</a></li>
-        <li><a href="#servicos" class="nav-link">Serviços</a></li>
-        <li><a href="#para-quem" class="nav-link">Para quem</a></li>
-        <li><a href="#diferenciais" class="nav-link">Diferenciais</a></li>
-        <li><a href="#metodo" class="nav-link">Método</a></li>
+        <li><a href="/" class="nav-link active" aria-current="page">Início</a></li>
         <li class="nav-nicho-group">
           <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
-            Para você
+            SEO para Clínicas
             <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="nav-dropdown-menu" role="menu">
-            <a href="para-advogados.html" class="nav-dropdown-item" role="menuitem">Para Advogados</a>
-            <a href="para-clinicas.html" class="nav-dropdown-item" role="menuitem">Para Clínicas</a>
-            <a href="para-profissionais-liberais.html" class="nav-dropdown-item" role="menuitem">Para Profissionais Liberais</a>
-            <a href="para-comercios-locais.html" class="nav-dropdown-item" role="menuitem">Para Comércios Locais</a>
+            <a href="/seo-para-clinicas/" class="nav-dropdown-item" role="menuitem">Clínicas de saúde</a>
+            <a href="/seo-para-dentistas/" class="nav-dropdown-item" role="menuitem">Dentistas</a>
+            <a href="/seo-para-clinicas-de-estetica/" class="nav-dropdown-item" role="menuitem">Estética</a>
+            <a href="/seo-para-medicos/" class="nav-dropdown-item" role="menuitem">Médicos</a>
+            <a href="/seo-para-clinicas-de-emagrecimento/" class="nav-dropdown-item" role="menuitem">Emagrecimento</a>
           </div>
         </li>
+        <li><a href="/google-meu-negocio-para-clinicas/" class="nav-link">Google Meu Negócio</a></li>
+        <li><a href="/site-para-clinica/" class="nav-link">Site para Clínica</a></li>
         <li><a href="/blog/" class="nav-link">Blog</a></li>
-        <li><a href="#contato" class="nav-link nav-cta">Fale comigo</a></li>
+        <li><a href="/diagnostico-gratuito/" class="nav-link nav-cta">Diagnóstico Gratuito</a></li>
       </ul>
     </div>
   </nav>
 
   <main>
-
-    <!-- SEÇÃO 1: HERO -->
-    <section class="hero" id="hero" aria-label="Apresentação">
+    <section class="hero" id="inicio" aria-label="Apresentação">
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="container hero-content">
         <div class="hero-text">
-          <div class="hero-badge">SEO Local · Google Meu Negócio · Goiânia + Brasil Online</div>
-          <h1 class="hero-title">
-            Renan Carvalho<br>
-            <span class="text-gold">Barbosa</span>
-          </h1>
+          <div class="hero-badge">Goiânia presencial · Consultoria online no Brasil</div>
+          <h1 class="hero-title">SEO Local e Google Meu Negócio para clínicas, dentistas e negócios de saúde</h1>
           <p class="hero-headline">
-            Sua empresa no digital —<br>
-            <strong>com estratégia, não achismo.</strong>
+            Seu paciente já pesquisa no Google antes de marcar.<br>
+            <strong>A pergunta é: ele encontra você ou encontra seu concorrente?</strong>
           </p>
           <p class="hero-sub">
-            Ajudo empresas locais em Goiânia e em todo o Brasil a aparecerem no Google, atraírem mais clientes e crescerem com presença digital profissional.
+            Ajudo clínicas, dentistas, estética, emagrecimento e profissionais de saúde a serem encontrados no Google, transmitirem confiança e transformarem buscas em contatos qualificados.
           </p>
           <div class="hero-actions">
-            <a
-              href="https://wa.me/5562991161040?text=Ol%C3%A1%20Renan%2C%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20consultoria%20digital."
-              class="btn btn-primary btn-whatsapp"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Conversar no WhatsApp com Renan"
-            >
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-              </svg>
-              Falar no WhatsApp
-            </a>
-            <a href="#servicos" class="btn btn-outline">Conhecer serviços</a>
+            <a href="/diagnostico-gratuito/" class="btn btn-primary">Solicitar diagnóstico gratuito</a>
+            <a href="#metodo" class="btn btn-outline">Ver como funciona</a>
+          </div>
+          <div class="hero-proof" aria-label="Diferenciais rápidos">
+            <div class="hero-proof-item">
+              <strong>Base antes de anúncios</strong>
+              <span>Site, perfil, avaliações e rastreamento organizados antes de escalar mídia.</span>
+            </div>
+            <div class="hero-proof-item">
+              <strong>Saúde como foco</strong>
+              <span>Clínicas, dentistas, estética, médicos, emagrecimento e consultórios.</span>
+            </div>
+            <div class="hero-proof-item">
+              <strong>Goiânia + Brasil</strong>
+              <span>Presencial em Goiânia e consultoria online para outras cidades.</span>
+            </div>
           </div>
         </div>
         <div class="hero-photo" aria-hidden="true">
           <div class="hero-photo-frame">
-            <img
-              src="fotoperfil.jpg"
-              alt="Renan Carvalho Barbosa — Consultor de SEO Local e Transformação Digital"
-              width="420"
-              height="520"
-              loading="eager"
-              decoding="async"
-            >
+            <img src="fotoperfil.jpg" alt="Renan Carvalho Barbosa, consultor de SEO Local e Google Meu Negócio" width="420" height="520" loading="eager" decoding="async">
           </div>
         </div>
       </div>
-      <div class="hero-scroll" aria-hidden="true">
-        <span></span>
-      </div>
     </section>
 
-    <!-- AUDIENCE SELECTOR -->
-    <section class="audience-selector" aria-labelledby="audience-titulo">
+    <section class="problem-section" aria-labelledby="problema-titulo">
       <div class="container">
         <div class="section-header">
-          <h2 id="audience-titulo" class="section-title">Trabalho com 4 nichos específicos. Qual é o seu?</h2>
-          <p class="section-desc">Cada negócio tem regras, linguagem e desafios próprios. Clica no que mais combina com você pra ver como faço pro seu caso.</p>
+          <div class="section-tag">O problema</div>
+          <h2 id="problema-titulo" class="section-title">Sua clínica pode estar perdendo pacientes antes mesmo do primeiro contato</h2>
+          <p class="section-desc">Não é só estar online. É aparecer no momento em que a pessoa procura, compara e decide em quem confiar.</p>
         </div>
-        <div class="audience-grid">
-          <a href="para-advogados.html" class="audience-card">
-            <div>
-              <h3>Para Advogados</h3>
-              <p>Captação dentro do Provimento 205/2021 da OAB. Sem risco ético.</p>
-            </div>
-            <span class="audience-card-arrow">Ver mais →</span>
-          </a>
-          <a href="para-clinicas.html" class="audience-card">
-            <div>
-              <h3>Para Clínicas e Consultórios</h3>
-              <p>Mais pacientes pelo Google, dentro do CFM, CFO, CFP e COREN.</p>
-            </div>
-            <span class="audience-card-arrow">Ver mais →</span>
-          </a>
-          <a href="para-profissionais-liberais.html" class="audience-card">
-            <div>
-              <h3>Para Profissionais Liberais</h3>
-              <p>Fluxo previsível de clientes mesmo trabalhando sozinho.</p>
-            </div>
-            <span class="audience-card-arrow">Ver mais →</span>
-          </a>
-          <a href="para-comercios-locais.html" class="audience-card">
-            <div>
-              <h3>Para Comércios Locais</h3>
-              <p>Lojas, restaurantes e serviços mais visíveis no Google Maps da sua cidade.</p>
-            </div>
-            <span class="audience-card-arrow">Ver mais →</span>
-          </a>
+        <div class="problem-grid">
+          <div class="problem-card"><h3>Concorrente aparece primeiro</h3><p>O paciente busca no Google Maps e vê outros profissionais antes da sua clínica, mesmo quando seu atendimento é mais preparado.</p></div>
+          <div class="problem-card"><h3>Perfil do Google incompleto</h3><p>Categoria errada, fotos antigas, serviços ausentes e avaliações sem resposta reduzem confiança e dificultam conversão.</p></div>
+          <div class="problem-card"><h3>Site que não gera contato</h3><p>Um site institucional sem páginas de serviço, CTA, FAQ, schema e rastreamento vira cartão de visitas parado.</p></div>
+          <div class="problem-card"><h3>Instagram não pega busca ativa</h3><p>Redes sociais criam presença, mas o Google captura quem já está procurando tratamento, procedimento ou especialidade.</p></div>
+          <div class="problem-card"><h3>Anúncios sem base desperdiçam verba</h3><p>Google Ads funciona melhor quando a base orgânica, a página de destino e o atendimento estão prontos para converter.</p></div>
+          <div class="problem-card"><h3>Falta clareza nos dados</h3><p>Sem rastreamento de WhatsApp, cliques, ligações e formulários, você não sabe quais ações realmente geram oportunidades.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- SEÇÃO 2: SOBRE -->
-    <section class="sobre" id="sobre" aria-labelledby="sobre-titulo">
-      <div class="container">
-        <div class="sobre-grid">
-          <div class="sobre-visual">
-            <div class="sobre-photo-wrap">
-              <img
-                src="fotoperfil.jpg"
-                alt="Renan Carvalho Barbosa"
-                width="340"
-                height="400"
-                loading="lazy"
-                decoding="async"
-              >
-            </div>
-            <div class="sobre-stats">
-              <div class="stat">
-                <span class="stat-num">9+</span>
-                <span class="stat-label">Anos como empresário</span>
-              </div>
-              <div class="stat">
-                <span class="stat-num">2</span>
-                <span class="stat-label">Formações</span>
-              </div>
-            </div>
-          </div>
-          <div class="sobre-texto">
-            <div class="section-tag">Sobre mim</div>
-            <h2 id="sobre-titulo" class="section-title">
-              Quem opera negócios de verdade entende o que seu cliente precisa
-            </h2>
-            <p>
-              Passei <strong>mais de 9 anos como empresário em Goiânia</strong>, enfrentando na prática os desafios de atrair clientes, gerenciar equipes e fazer um negócio crescer. Já conduzi operação de negócio local e <strong>projetos do zero</strong> — do planejamento à execução.
-            </p>
-            <p>
-              Essa vivência me diferencia de consultores que apenas conhecem teoria. Eu <strong>vivi o problema que você tem</strong>.
-            </p>
-            <p>
-              Hoje complemento esse background com formação em <strong>Bacharel em Direito</strong> e <strong>graduado em Gestão de Tecnologia da Informação pela FIAP</strong> — unindo visão jurídica, estratégica e tecnológica para entregar resultados reais.
-            </p>
-            <div class="sobre-formacao">
-              <div class="formacao-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2">
-                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                  <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-                </svg>
-                <span>Bacharel em Direito</span>
-              </div>
-              <div class="formacao-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2">
-                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                  <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-                </svg>
-                <span>Graduado em Gestão de Tecnologia da Informação — FIAP</span>
-              </div>
-              <div class="formacao-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2">
-                  <rect x="2" y="7" width="20" height="14" rx="2"/>
-                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-                </svg>
-                <span>Mais de 9 anos empreendendo em Goiânia</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEÇÃO 3: SERVIÇOS -->
-    <section class="servicos" id="servicos" aria-labelledby="servicos-titulo">
+    <section class="solution-section" id="servicos" aria-labelledby="solucao-titulo">
       <div class="container">
         <div class="section-header">
-          <div class="section-tag">Serviços</div>
-          <h2 id="servicos-titulo" class="section-title">O que posso fazer pelo seu negócio</h2>
-          <p class="section-desc">Soluções digitais focadas em resultado para empresas locais, com base em Goiânia e atendimento online no Brasil.</p>
+          <div class="section-tag">A solução</div>
+          <h2 id="solucao-titulo" class="section-title">SEO Local + Google Meu Negócio + site otimizado + conteúdo + rastreamento</h2>
+          <p class="section-desc">Uma estrutura pensada para o Google entender sua clínica e para o paciente confiar antes de chamar no WhatsApp.</p>
         </div>
         <div class="servicos-grid">
-
-          <article class="servico-card" aria-labelledby="servico-seo">
-            <div class="servico-icon" aria-hidden="true">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <circle cx="11" cy="11" r="8"/>
-                <path d="m21 21-4.35-4.35"/>
-                <path d="M11 8v6M8 11h6"/>
-              </svg>
-            </div>
-            <h3 id="servico-seo" class="servico-titulo">SEO Local</h3>
-            <p class="servico-desc">
-              Faço sua empresa aparecer no Google quando clientes da sua cidade buscam pelo que você oferece. Mais visibilidade, mais clientes, mais receita.
-            </p>
-            <ul class="servico-lista" aria-label="Inclui">
-              <li>Pesquisa de palavras-chave locais</li>
-              <li>Otimização on-page e técnica</li>
-              <li>Link building local</li>
-              <li>Relatórios mensais de desempenho</li>
-            </ul>
+          <article class="servico-card">
+            <h3 class="servico-titulo">SEO Local</h3>
+            <p class="servico-desc">Arquitetura, páginas, conteúdo e sinais locais para melhorar sua presença nas buscas de alta intenção.</p>
+            <ul class="servico-lista"><li>Palavras-chave por serviço e cidade</li><li>SEO técnico e on-page</li><li>Links internos e clusters</li></ul>
+            <a class="servico-link" href="/consultoria-seo-local/">Ver consultoria SEO Local</a>
           </article>
-
-          <article class="servico-card" aria-labelledby="servico-gmb">
-            <div class="servico-icon" aria-hidden="true">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-            </div>
-            <h3 id="servico-gmb" class="servico-titulo">Google Meu Negócio</h3>
-            <p class="servico-desc">
-              Configuro, otimizo e gerencio seu perfil no Google Maps para que novos clientes te encontrem com facilidade — especialmente pelo celular.
-            </p>
-            <ul class="servico-lista" aria-label="Inclui">
-              <li>Criação e verificação do perfil</li>
-              <li>Otimização de categorias e descrição</li>
-              <li>Gestão de avaliações e respostas</li>
-              <li>Posts e atualizações periódicas</li>
-            </ul>
+          <article class="servico-card">
+            <h3 class="servico-titulo">Google Meu Negócio</h3>
+            <p class="servico-desc">Otimização do Perfil da Empresa no Google para melhorar presença no Maps e confiança do paciente.</p>
+            <ul class="servico-lista"><li>Categorias, serviços e descrição</li><li>Fotos e postagens</li><li>Avaliações e respostas</li></ul>
+            <a class="servico-link" href="/google-meu-negocio-para-clinicas/">Ver Google Meu Negócio</a>
           </article>
-
-          <article class="servico-card" aria-labelledby="servico-sites">
-            <div class="servico-icon" aria-hidden="true">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                <path d="M3 9h18M9 21V9"/>
-              </svg>
-            </div>
-            <h3 id="servico-sites" class="servico-titulo">Sites Profissionais</h3>
-            <p class="servico-desc">
-              Desenvolvimento de sites rápidos, bonitos e otimizados que convertem visitantes em clientes — com foco em performance e SEO desde o início.
-            </p>
-            <ul class="servico-lista" aria-label="Inclui">
-              <li>Design responsivo e moderno</li>
-              <li>Performance e carregamento rápido</li>
-              <li>SEO técnico integrado</li>
-              <li>Integração com WhatsApp e redes sociais</li>
-            </ul>
+          <article class="servico-card">
+            <h3 class="servico-titulo">Site otimizado</h3>
+            <p class="servico-desc">Site leve, claro e estruturado para ranquear, explicar serviços e transformar visita em contato.</p>
+            <ul class="servico-lista"><li>Páginas por procedimento</li><li>FAQ e schema</li><li>CTAs e rastreamento</li></ul>
+            <a class="servico-link" href="/site-para-clinica/">Ver site para clínica</a>
           </article>
-
-          <article class="servico-card" aria-labelledby="servico-conteudo">
-            <div class="servico-icon" aria-hidden="true">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
-                <polyline points="14 2 14 8 20 8"/>
-                <line x1="16" y1="13" x2="8" y2="13"/>
-                <line x1="16" y1="17" x2="8" y2="17"/>
-                <line x1="10" y1="9" x2="8" y2="9"/>
-              </svg>
-            </div>
-            <h3 id="servico-conteudo" class="servico-titulo">Estratégia de Conteúdo</h3>
-            <p class="servico-desc">
-              Plano de conteúdo estratégico para posicionar você como autoridade no seu nicho e na sua região, atraindo clientes qualificados organicamente.
-            </p>
-            <ul class="servico-lista" aria-label="Inclui">
-              <li>Calendário editorial mensal</li>
-              <li>Conteúdo para blog e redes sociais</li>
-              <li>Estratégia de palavras-chave</li>
-              <li>Análise de concorrência local</li>
-            </ul>
+          <article class="servico-card">
+            <h3 class="servico-titulo">Conteúdo e autoridade</h3>
+            <p class="servico-desc">Artigos e páginas que respondem dúvidas reais do paciente sem promessas sensacionalistas.</p>
+            <ul class="servico-lista"><li>Cluster de conteúdo</li><li>Busca informacional e comercial</li><li>Base para campanhas futuras</li></ul>
+            <a class="servico-link" href="/blog/">Ver blog</a>
           </article>
-
         </div>
       </div>
     </section>
 
-    <!-- SEÇÃO 4: PARA QUEM É -->
-    <section class="para-quem" id="para-quem" aria-labelledby="paraquem-titulo">
+    <section class="cluster-section" id="nichos" aria-labelledby="nichos-titulo">
       <div class="container">
         <div class="section-header">
-          <div class="section-tag">Para quem é</div>
-          <h2 id="paraquem-titulo" class="section-title">Ideal para negócios locais em Goiânia e no Brasil</h2>
-          <p class="section-desc">Trabalho com empresas que querem crescer no digital de forma consistente e profissional.</p>
+          <div class="section-tag">Nichos principais</div>
+          <h2 id="nichos-titulo" class="section-title">Páginas específicas para cada mercado de saúde</h2>
+          <p class="section-desc">Cada nicho tem dores, buscas, linguagem e cuidados regulatórios próprios.</p>
         </div>
-        <div class="paraquem-grid">
-          <div class="paraquem-card">
-            <div class="paraquem-icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-              </svg>
-            </div>
-            <h3>Clínicas e Consultórios</h3>
-            <p>Médicos, dentistas, psicólogos e outros profissionais de saúde que precisam de mais pacientes locais.</p>
-          </div>
-          <div class="paraquem-card">
-            <div class="paraquem-icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="2" y="3" width="20" height="14" rx="2"/>
-                <path d="M8 21h8M12 17v4"/>
-              </svg>
-            </div>
-            <h3>Escritórios de Advocacia</h3>
-            <p>Advogados que precisam aparecer nas buscas locais e construir autoridade digital para conquistar novos clientes.</p>
-          </div>
-          <div class="paraquem-card">
-            <div class="paraquem-icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                <polyline points="9 22 9 12 15 12 15 22"/>
-              </svg>
-            </div>
-            <h3>Comércios Locais</h3>
-            <p>Lojas, restaurantes, serviços e estabelecimentos que querem mais clientes entrando pela porta — e pelo digital.</p>
-          </div>
-          <div class="paraquem-card">
-            <div class="paraquem-icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M12 8v4l3 3"/>
-              </svg>
-            </div>
-            <h3>Profissionais Liberais</h3>
-            <p>Contadores, arquitetos, consultores e outros profissionais que precisam de presença digital forte e profissional.</p>
-          </div>
+        <div class="cluster-grid">
+          <a class="cluster-card" href="/seo-para-clinicas/"><h3>Clínicas e consultórios</h3><p>Página pilar para presença digital, SEO local, serviços e captação orgânica.</p><span class="cluster-card-link">Ver SEO para clínicas</span></a>
+          <a class="cluster-card" href="/seo-para-dentistas/"><h3>Dentistas e odontologia</h3><p>Google Maps, avaliações, páginas de procedimentos e rastreamento de contatos.</p><span class="cluster-card-link">Ver SEO para dentistas</span></a>
+          <a class="cluster-card" href="/seo-para-clinicas-de-estetica/"><h3>Estética e procedimentos</h3><p>Autoridade, prova social, conteúdo explicativo e estrutura antes de anúncios.</p><span class="cluster-card-link">Ver SEO para estética</span></a>
+          <a class="cluster-card" href="/seo-para-medicos/"><h3>Médicos e consultórios</h3><p>Busca por especialidade, agenda particular e comunicação prudente.</p><span class="cluster-card-link">Ver SEO para médicos</span></a>
+          <a class="cluster-card" href="/seo-para-clinicas-de-emagrecimento/"><h3>Emagrecimento e nutrição</h3><p>Conteúdo educativo, credibilidade e cuidado com promessas corporais.</p><span class="cluster-card-link">Ver SEO para emagrecimento</span></a>
+          <a class="cluster-card" href="/seo-local-goiania/"><h3>SEO Local em Goiânia</h3><p>Atendimento presencial em Goiânia e estratégia local para clínicas e negócios.</p><span class="cluster-card-link">Ver SEO Local Goiânia</span></a>
         </div>
       </div>
     </section>
 
-    <!-- SEÇÃO NICHO: PARA ADVOGADOS -->
-    <section class="nicho-advogados" aria-labelledby="nicho-titulo">
-      <div class="container">
-        <div class="nicho-banner">
-          <div class="nicho-banner-texto">
-            <div class="nicho-banner-tag">Especialidade em Advocacia</div>
-            <h2 id="nicho-titulo">
-              Você é advogado e quer aparecer no Google?<br>
-              <span class="text-gold">Tenho uma página feita para você.</span>
-            </h2>
-            <p>
-              Sou bacharel em Direito e trabalho exclusivamente dentro do Provimento 205/2021 da OAB. Ajudo escritórios de advocacia a aparecerem no Google e captarem clientes de forma ética — sem risco disciplinar.
-            </p>
-          </div>
-          <div class="nicho-banner-cta">
-            <div class="nicho-pilulas">
-              <div class="nicho-pilula">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                100% dentro das normas da OAB
-              </div>
-              <div class="nicho-pilula">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                Exclusividade por área e região
-              </div>
-              <div class="nicho-pilula">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                Análise gratuita sem compromisso
-              </div>
-            </div>
-            <a href="para-advogados.html" class="btn btn-primary">
-              Ver página para advogados
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEÇÃO NICHO: PARA CLÍNICAS -->
-    <section class="nicho-advogados" style="padding-top: 0;" aria-labelledby="nicho-clinicas-titulo">
-      <div class="container">
-        <div class="nicho-banner" style="margin-top: 0; border-color: rgba(201,168,76,0.15);">
-          <div class="nicho-banner-texto">
-            <div class="nicho-banner-tag">Especialidade em Saúde</div>
-            <h2 id="nicho-clinicas-titulo">
-              Para clínicas e profissionais de saúde.<br>
-              <span class="text-gold">Mais pacientes pelo Google.</span>
-            </h2>
-            <p>
-              Mais pacientes chegando pelo Google, dentro da regulamentação do seu conselho. Trabalho com CFM, CFO, CFP e COREN — sem sensacionalismo, sem antes-e-depois proibido.
-            </p>
-          </div>
-          <div class="nicho-banner-cta">
-            <div class="nicho-pilulas">
-              <div class="nicho-pilula">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                CFM 2.336/2023
-              </div>
-              <div class="nicho-pilula">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                Google Meu Negócio
-              </div>
-              <div class="nicho-pilula">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                Captação de pacientes
-              </div>
-            </div>
-            <a href="para-clinicas.html" class="btn btn-primary">
-              Ver página para clínicas
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </a>
-            <a href="/blog/como-aparecer-google-clinica-estetica-goiania.html" class="nicho-secondary-link">
-              Ler guia sobre ranqueamento de clínicas no Google
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEÇÃO NICHO: PARA PROFISSIONAIS LIBERAIS -->
-    <section class="nicho-advogados" style="padding-top: 0;" aria-labelledby="nicho-profissionais-titulo">
-      <div class="container">
-        <div class="nicho-banner" style="margin-top: 0;">
-          <div class="nicho-banner-texto">
-            <div class="nicho-banner-tag">Especialidade em Profissionais Liberais</div>
-            <h2 id="nicho-profissionais-titulo">
-              Para profissionais liberais com atendimento local ou online.<br>
-              <span class="text-gold">Fluxo previsível de clientes pelo Google.</span>
-            </h2>
-            <p>
-              Fluxo previsível de clientes pelo Google, mesmo trabalhando sozinho. Para nutricionistas, fisioterapeutas, personal trainers, esteticistas e demais profissionais liberais.
-            </p>
-          </div>
-          <div class="nicho-banner-cta">
-            <div class="nicho-pilulas">
-              <div class="nicho-pilula">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                Google Meu Negócio
-              </div>
-              <div class="nicho-pilula">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                SEO Local
-              </div>
-              <div class="nicho-pilula">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                Captação recorrente
-              </div>
-            </div>
-            <a href="para-profissionais-liberais.html" class="btn btn-primary">
-              Ver página para profissionais liberais
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEÇÃO NICHO: PARA COMÉRCIOS LOCAIS -->
-    <section class="nicho-advogados" style="padding-top: 0;" aria-labelledby="nicho-comercios-titulo">
-      <div class="container">
-        <div class="nicho-banner" style="margin-top: 0;">
-          <div class="nicho-banner-texto">
-            <div class="nicho-banner-tag">Especialidade em Comércios Locais</div>
-            <h2 id="nicho-comercios-titulo">
-              Para restaurantes, lojas, salões e comércios locais.<br>
-              <span class="text-gold">Seu negócio mais visível no Google Maps.</span>
-            </h2>
-            <p>
-              Quando alguém busca "restaurante perto de mim" ou "salão de beleza na minha cidade", você quer aparecer. Otimizo seu perfil no Google Meu Negócio, seu site e sua presença local para atrair clientes da sua região todo dia.
-            </p>
-          </div>
-          <div class="nicho-banner-cta">
-            <div class="nicho-pilulas">
-              <div class="nicho-pilula">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                Google Maps otimizado
-              </div>
-              <div class="nicho-pilula">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                SEO Local por bairro
-              </div>
-              <div class="nicho-pilula">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                Mais clientes presenciais
-              </div>
-            </div>
-            <a href="para-comercios-locais.html" class="btn btn-primary">
-              Ver página para comércios locais
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEÇÃO 5: DIFERENCIAIS -->
-    <section class="diferenciais" id="diferenciais" aria-labelledby="diferenciais-titulo">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-tag">Por que me escolher</div>
-          <h2 id="diferenciais-titulo" class="section-title">O que me diferencia dos demais</h2>
-        </div>
-        <div class="diferenciais-grid">
-          <div class="diferencial-item">
-            <div class="diferencial-num" aria-hidden="true">01</div>
-            <div class="diferencial-content">
-              <h3>Visão de quem empreendeu de verdade</h3>
-              <p>9 anos como empresário me ensinaram o que funciona na prática. Não vendo teoria — entrego estratégias que já testei na pele.</p>
-            </div>
-          </div>
-          <div class="diferencial-item">
-            <div class="diferencial-num" aria-hidden="true">02</div>
-            <div class="diferencial-content">
-              <h3>SEO local com visão de mercado real</h3>
-              <p>Tenho base em Goiânia e atendo online empresas de todo o Brasil. A estratégia respeita a cidade, o bairro, a concorrência e o comportamento de busca de cada negócio.</p>
-            </div>
-          </div>
-          <div class="diferencial-item">
-            <div class="diferencial-num" aria-hidden="true">03</div>
-            <div class="diferencial-content">
-              <h3>Formação técnica e jurídica combinadas</h3>
-              <p>Direito + GTI na FIAP = visão de compliance digital, contratos, LGPD e tecnologia que protege e potencializa seu negócio.</p>
-            </div>
-          </div>
-          <div class="diferencial-item">
-            <div class="diferencial-num" aria-hidden="true">04</div>
-            <div class="diferencial-content">
-              <h3>Atendimento direto e sem intermediários</h3>
-              <p>Você fala diretamente comigo — não com um estagiário ou gerente de conta. Cada projeto recebe atenção personalizada.</p>
-            </div>
-          </div>
-          <div class="diferencial-item">
-            <div class="diferencial-num" aria-hidden="true">05</div>
-            <div class="diferencial-content">
-              <h3>Resultados mensuráveis desde o início</h3>
-              <p>Tudo que fazemos é rastreado e reportado. Você sabe exatamente o que está funcionando e o que está gerando retorno.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEÇÃO 6: MÉTODO -->
     <section class="metodo" id="metodo" aria-labelledby="metodo-titulo">
       <div class="container">
         <div class="section-header">
-          <div class="section-tag">Como trabalho</div>
-          <h2 id="metodo-titulo" class="section-title">Método em 4 etapas</h2>
-          <p class="section-desc">Um processo claro, transparente e orientado a resultados.</p>
+          <div class="section-tag">Como funciona</div>
+          <h2 id="metodo-titulo" class="section-title">Um método para organizar a base antes de acelerar</h2>
+          <p class="section-desc">Google Ads pode entrar depois, mas a base precisa estar pronta para não comprar clique que não converte.</p>
         </div>
         <div class="metodo-steps">
-          <div class="metodo-step">
-            <div class="step-number" aria-hidden="true">1</div>
-            <div class="step-content">
-              <h3>Diagnóstico</h3>
-              <p>Analiso sua presença digital atual, seus concorrentes e as oportunidades do seu mercado local, seja em Goiânia ou em outra cidade do Brasil. Sem achismo — só dados.</p>
-            </div>
-          </div>
-          <div class="metodo-arrow" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </div>
-          <div class="metodo-step">
-            <div class="step-number" aria-hidden="true">2</div>
-            <div class="step-content">
-              <h3>Estratégia</h3>
-              <p>Criamos juntos um plano personalizado com metas claras, prioridades definidas e cronograma realista para o seu negócio.</p>
-            </div>
-          </div>
-          <div class="metodo-arrow" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </div>
-          <div class="metodo-step">
-            <div class="step-number" aria-hidden="true">3</div>
-            <div class="step-content">
-              <h3>Execução</h3>
-              <p>Implemento as ações definidas com rigor técnico — SEO, conteúdo, Google Meu Negócio, site. Cada detalhe importa.</p>
-            </div>
-          </div>
-          <div class="metodo-arrow" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </div>
-          <div class="metodo-step">
-            <div class="step-number" aria-hidden="true">4</div>
-            <div class="step-content">
-              <h3>Monitoramento</h3>
-              <p>Acompanho os resultados, ajusto a rota e entrego relatórios periódicos. Sua visibilidade digital cresce de forma consistente.</p>
-            </div>
-          </div>
+          <div class="metodo-step"><div class="step-number">1</div><h3>Diagnóstico</h3><p>Analiso site, Google Perfil da Empresa, concorrentes, avaliações, buscas e rastreamento.</p></div>
+          <div class="metodo-arrow" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          <div class="metodo-step"><div class="step-number">2</div><h3>Correção da base</h3><p>Ajusto estrutura, mensagens, páginas, CTAs, dados técnicos e oportunidades rápidas.</p></div>
+          <div class="metodo-arrow" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          <div class="metodo-step"><div class="step-number">3</div><h3>Perfil e site</h3><p>Otimização do Google Business Profile, páginas de serviço, conteúdo, FAQ e schema.</p></div>
+          <div class="metodo-arrow" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          <div class="metodo-step"><div class="step-number">4</div><h3>Rastreamento</h3><p>Eventos de WhatsApp, formulários, relatórios e leitura do que está gerando contatos reais.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- SEÇÃO 7: CONTATO -->
-    <section class="contato" id="contato" aria-labelledby="contato-titulo">
+    <section class="local-section" aria-labelledby="local-titulo">
+      <div class="container split-grid">
+        <div class="split-copy">
+          <div class="section-tag">Goiânia + Brasil</div>
+          <h2 id="local-titulo" class="section-title">Atendimento presencial em Goiânia e consultoria online para todo o Brasil</h2>
+          <p>Para clínicas em Goiânia, o trabalho considera região, bairro, concorrência local e comportamento real de busca. Para clientes de outras cidades, a consultoria acontece online com a mesma estrutura de diagnóstico, execução e acompanhamento.</p>
+          <p>Quando fizer sentido, a estratégia pode considerar Setor Bueno, Marista, Oeste, Jardim Goiás, Nova Suíça, Campinas, Centro, Aparecida de Goiânia, Anápolis e Rio Verde, sem transformar a página em repetição artificial de cidade.</p>
+          <a href="/seo-local-goiania/" class="btn btn-outline">Ver SEO Local em Goiânia</a>
+        </div>
+        <div class="diagnostic-card">
+          <h3>O que entra na análise local</h3>
+          <ul class="check-list">
+            <li>Como sua clínica aparece no Google Maps.</li>
+            <li>Quais concorrentes aparecem antes.</li>
+            <li>Se o site tem páginas para serviços importantes.</li>
+            <li>Se avaliações, fotos e categorias transmitem confiança.</li>
+            <li>Quais buscas podem virar páginas, conteúdo ou anúncios.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="sobre" id="sobre" aria-labelledby="sobre-titulo">
+      <div class="container sobre-grid">
+        <div class="sobre-visual">
+          <div class="sobre-photo-wrap">
+            <img src="fotoperfil.jpg" alt="Renan Carvalho Barbosa" width="340" height="400" loading="lazy" decoding="async">
+          </div>
+          <div class="sobre-stats">
+            <div class="stat"><span class="stat-num">9+</span><span class="stat-label">Anos como empresário</span></div>
+            <div class="stat"><span class="stat-num">2</span><span class="stat-label">Formações</span></div>
+          </div>
+        </div>
+        <div class="sobre-texto">
+          <div class="section-tag">Por que Renan</div>
+          <h2 id="sobre-titulo" class="section-title">Consultoria com visão de negócio, SEO local, tecnologia e comunicação responsável</h2>
+          <p>Passei mais de 9 anos como empresário em Goiânia, lidando com atendimento, operação, concorrência e aquisição de clientes. Isso muda a forma como olho para um site: não como peça bonita, mas como parte de uma estrutura de venda.</p>
+          <p>Sou bacharel em Direito e graduado em Gestão de Tecnologia da Informação pela FIAP. Essa combinação ajuda na leitura estratégica, técnica e regulatória, especialmente em áreas como saúde, estética e odontologia.</p>
+          <p>Não trabalho como agência genérica de posts. Meu foco é organizar a base digital para que Google, paciente e equipe comercial encontrem uma presença clara, confiável e mensurável.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band" id="diagnostico" aria-labelledby="diagnostico-titulo">
       <div class="container">
-        <div class="contato-grid">
-          <div class="contato-info">
-            <div class="section-tag">Contato</div>
-            <h2 id="contato-titulo" class="section-title">Vamos conversar sobre o seu negócio?</h2>
-            <p>Dê o primeiro passo para transformar sua presença digital, em Goiânia ou em qualquer cidade do Brasil. Entre em contato — respondo rapidamente.</p>
-            <div class="contato-canais">
-              <a
-                href="https://wa.me/5562991161040?text=Ol%C3%A1%20Renan%2C%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20consultoria%20digital."
-                class="canal-item canal-whatsapp"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Contato pelo WhatsApp"
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                </svg>
-                <div>
-                  <span class="canal-label">WhatsApp</span>
-                  <span class="canal-value">(62) 99116-1040</span>
-                </div>
-              </a>
-              <a
-                href="mailto:contato@renancbarbosa.com.br"
-                class="canal-item"
-                aria-label="Enviar email para Renan"
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                  <rect x="2" y="4" width="20" height="16" rx="2"/>
-                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-                </svg>
-                <div>
-                  <span class="canal-label">E-mail</span>
-                  <span class="canal-value">contato@renancbarbosa.com.br</span>
-                </div>
-              </a>
-              <a
-                href="https://linkedin.com/in/renan-carvalho-barbosa"
-                class="canal-item"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Perfil do LinkedIn de Renan"
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                  <rect x="2" y="9" width="4" height="12"/>
-                  <circle cx="4" cy="4" r="2"/>
-                </svg>
-                <div>
-                  <span class="canal-label">LinkedIn</span>
-                  <span class="canal-value">renan-carvalho-barbosa</span>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="contato-form-wrap">
-            <form class="contato-form" id="contatoForm" novalidate aria-label="Formulário de contato">
-              <h3 class="form-titulo">Envie uma mensagem</h3>
-              <div class="form-group">
-                <label for="nome">Nome <span aria-hidden="true">*</span></label>
-                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required autocomplete="name" aria-required="true">
-                <span class="form-error" id="nome-error" role="alert"></span>
-              </div>
-              <div class="form-group">
-                <label for="email">E-mail <span aria-hidden="true">*</span></label>
-                <input type="email" id="email" name="email" placeholder="seu@email.com" required autocomplete="email" aria-required="true">
-                <span class="form-error" id="email-error" role="alert"></span>
-              </div>
-              <div class="form-group">
-                <label for="telefone">Telefone / WhatsApp</label>
-                <input type="tel" id="telefone" name="telefone" placeholder="(62) 9 9999-9999" autocomplete="tel">
-              </div>
-              <div class="form-group">
-                <label for="mensagem">Mensagem <span aria-hidden="true">*</span></label>
-                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Fale sobre seu negócio e o que precisa..." required aria-required="true"></textarea>
-                <span class="form-error" id="mensagem-error" role="alert"></span>
-              </div>
-              <button type="submit" class="btn btn-primary btn-full">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <line x1="22" y1="2" x2="11" y2="13"/>
-                  <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-                </svg>
-                Enviar mensagem
-              </button>
-              <p class="form-nota">Ao enviar, você será redirecionado pro WhatsApp pra continuarmos a conversa por lá. Se preferir, fale direto: <a href="https://wa.me/5562991161040" target="_blank" rel="noopener noreferrer" style="color:var(--gold);text-decoration:underline;">WhatsApp (62) 99116-1040</a></p>
-            </form>
-          </div>
+        <div class="cta-inner">
+          <div class="section-tag">Diagnóstico gratuito</div>
+          <h2 id="diagnostico-titulo" class="section-title">Quer saber o que impede sua clínica de aparecer melhor no Google?</h2>
+          <p>Receba uma análise inicial do seu Google Perfil da Empresa, site, concorrentes, avaliações, páginas faltantes e oportunidades de SEO.</p>
+          <a href="/diagnostico-gratuito/" class="btn btn-primary">Solicitar diagnóstico gratuito</a>
+          <span class="secondary-note">Sem compromisso. A análise inicial mostra prioridades antes de qualquer proposta.</span>
         </div>
       </div>
     </section>
 
+    <section class="faq-section" id="faq" aria-labelledby="faq-titulo">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">FAQ</div>
+          <h2 id="faq-titulo" class="section-title">Perguntas frequentes</h2>
+        </div>
+        <div class="faq-grid">
+          <div class="faq-card"><h3>SEO local funciona para clínicas?</h3><p>Funciona quando existe base: perfil do Google bem configurado, site claro, páginas por serviço, avaliações, conteúdo e rastreamento. Não é atalho, é construção.</p></div>
+          <div class="faq-card"><h3>Preciso de site ou só Google Meu Negócio?</h3><p>O ideal é usar os dois. O Perfil da Empresa trabalha o Maps; o site sustenta autoridade, páginas específicas, explicação dos serviços e conversão.</p></div>
+          <div class="faq-card"><h3>Quanto tempo leva?</h3><p>Primeiros sinais podem aparecer em semanas, mas melhora consistente costuma exigir alguns meses de execução e acompanhamento, dependendo da concorrência.</p></div>
+          <div class="faq-card"><h3>SEO substitui Google Ads?</h3><p>Não necessariamente. SEO organiza a base. Google Ads pode acelerar demanda depois que site, perfil, oferta e rastreamento estão prontos.</p></div>
+          <div class="faq-card"><h3>Atende fora de Goiânia?</h3><p>Sim. O atendimento presencial é em Goiânia, mas a consultoria online atende clínicas, dentistas e negócios de saúde em todo o Brasil.</p></div>
+          <div class="faq-card"><h3>O diagnóstico é gratuito?</h3><p>Sim. A análise inicial aponta problemas e oportunidades. Você só avança para um projeto se fizer sentido para os dois lados.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contato" id="contato" aria-labelledby="contato-titulo">
+      <div class="container contato-grid">
+        <div class="contato-info">
+          <div class="section-tag">Contato</div>
+          <h2 id="contato-titulo" class="section-title">Vamos avaliar sua presença no Google?</h2>
+          <p>Use o diagnóstico gratuito como primeiro passo para entender onde sua clínica está invisível e quais ajustes podem melhorar sua presença digital.</p>
+          <div class="contato-canais">
+            <a href="https://wa.me/5562991161040?text=Ol%C3%A1%2C%20Renan.%20Quero%20solicitar%20um%20diagn%C3%B3stico%20gratuito%20da%20minha%20presen%C3%A7a%20no%20Google." class="canal-item canal-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Solicitar diagnóstico gratuito pelo WhatsApp">
+              <div><span class="canal-label">WhatsApp</span><span class="canal-value">(62) 99116-1040</span></div>
+            </a>
+            <a href="mailto:contato@renancbarbosa.com.br" class="canal-item" aria-label="Enviar e-mail para Renan">
+              <div><span class="canal-label">E-mail</span><span class="canal-value">contato@renancbarbosa.com.br</span></div>
+            </a>
+            <a href="https://linkedin.com/in/renan-carvalho-barbosa" class="canal-item" target="_blank" rel="noopener noreferrer" aria-label="Perfil de Renan no LinkedIn">
+              <div><span class="canal-label">LinkedIn</span><span class="canal-value">renan-carvalho-barbosa</span></div>
+            </a>
+          </div>
+        </div>
+        <div class="contato-form-wrap">
+          <form class="contato-form" id="contatoForm" novalidate aria-label="Formulário de contato">
+            <h3 class="form-titulo">Enviar mensagem</h3>
+            <div class="form-group"><label for="nome">Nome <span aria-hidden="true">*</span></label><input type="text" id="nome" name="nome" placeholder="Seu nome completo" required autocomplete="name" aria-required="true"><span class="form-error" id="nome-error" role="alert"></span></div>
+            <div class="form-group"><label for="email">E-mail <span aria-hidden="true">*</span></label><input type="email" id="email" name="email" placeholder="seu@email.com" required autocomplete="email" aria-required="true"><span class="form-error" id="email-error" role="alert"></span></div>
+            <div class="form-group"><label for="telefone">Telefone / WhatsApp</label><input type="tel" id="telefone" name="telefone" placeholder="(62) 9 9999-9999" autocomplete="tel"></div>
+            <div class="form-group"><label for="mensagem">Mensagem <span aria-hidden="true">*</span></label><textarea id="mensagem" name="mensagem" rows="4" placeholder="Fale sobre sua clínica, cidade e o que precisa melhorar..." required aria-required="true"></textarea><span class="form-error" id="mensagem-error" role="alert"></span></div>
+            <button type="submit" class="btn btn-primary btn-full">Enviar pelo WhatsApp</button>
+            <p class="form-nota">Ao enviar, você será redirecionado para o WhatsApp.</p>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- FOOTER -->
   <footer class="footer" role="contentinfo">
     <div class="container footer-cols">
       <div class="footer-col footer-col-identity">
         <span class="logo-text">RCB</span>
         <strong class="footer-name">Renan Carvalho Barbosa</strong>
-        <span class="footer-cargo">Consultor de Transformação Digital com foco em SEO Local</span>
-        <p class="footer-bio">Com base em Goiânia e atendimento online para empresas em todo o Brasil. Bacharel em Direito e graduado em Gestão de TI pela FIAP.</p>
+        <span class="footer-cargo">Consultor de SEO Local e Google Meu Negócio</span>
+        <p class="footer-bio">Com base em Goiânia e atendimento online para clínicas e negócios locais em todo o Brasil. Bacharel em Direito e graduado em Gestão de TI pela FIAP.</p>
       </div>
       <div class="footer-col">
-        <h4 class="footer-col-title">Navegação</h4>
-        <nav class="footer-col-nav" aria-label="Links do rodapé">
-          <a href="#sobre">Sobre</a>
-          <a href="#servicos">Serviços</a>
-          <a href="#diferenciais">Diferenciais</a>
-          <a href="/blog/">Blog</a>
-          <a href="#contato">Contato</a>
+        <h4 class="footer-col-title">Serviços</h4>
+        <nav class="footer-col-nav" aria-label="Links de serviços">
+          <a href="/consultoria-seo-local/">Consultoria SEO Local</a>
+          <a href="/google-meu-negocio-para-clinicas/">Google Meu Negócio</a>
+          <a href="/site-para-clinica/">Site para clínica</a>
+          <a href="/diagnostico-gratuito/">Diagnóstico gratuito</a>
         </nav>
       </div>
       <div class="footer-col">
-        <h4 class="footer-col-title">Para o seu negócio</h4>
+        <h4 class="footer-col-title">Nichos principais</h4>
         <nav class="footer-col-nav" aria-label="Páginas de nicho">
-          <a href="para-advogados.html">Para Advogados</a>
-          <a href="para-clinicas.html">Para Clínicas e Consultórios</a>
-          <a href="para-profissionais-liberais.html">Para Profissionais Liberais</a>
-          <a href="para-comercios-locais.html">Para Comércios Locais</a>
+          <a href="/seo-para-clinicas/">Clínicas</a>
+          <a href="/seo-para-dentistas/">Dentistas</a>
+          <a href="/seo-para-clinicas-de-estetica/">Estética</a>
+          <a href="/seo-para-medicos/">Médicos</a>
+          <a href="/seo-para-clinicas-de-emagrecimento/">Emagrecimento</a>
         </nav>
+        <div class="footer-secondary">
+          <h4 class="footer-col-title">Outros nichos</h4>
+          <nav class="footer-col-nav" aria-label="Outros nichos atendidos">
+            <a href="/para-advogados.html">SEO para advogados</a>
+            <a href="/para-comercios-locais.html">Comércios locais</a>
+          </nav>
+        </div>
       </div>
       <div class="footer-col">
-        <h4 class="footer-col-title">Contato Direto</h4>
+        <h4 class="footer-col-title">Contato</h4>
         <div class="footer-col-contact">
           <a href="https://wa.me/5562991161040" target="_blank" rel="noopener noreferrer">WhatsApp: (62) 99116-1040</a>
           <a href="mailto:contato@renancbarbosa.com.br">contato@renancbarbosa.com.br</a>
           <a href="https://linkedin.com/in/renan-carvalho-barbosa" target="_blank" rel="noopener noreferrer">linkedin.com/in/renan-carvalho-barbosa</a>
-          <span>Goiânia – GO</span>
+          <span>Goiânia - GO</span>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
         <p>&copy; <span id="anoAtual"></span> Renan Carvalho Barbosa. Todos os direitos reservados.</p>
-        <a href="privacidade.html" class="footer-privacy">Política de Privacidade</a>
+        <a href="/privacidade.html" class="footer-privacy">Política de Privacidade</a>
       </div>
     </div>
   </footer>
 
-  <!-- Botão flutuante WhatsApp -->
-  <a
-    href="https://wa.me/5562991161040?text=Ol%C3%A1%20Renan%2C%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20consultoria%20digital."
-    class="whatsapp-float"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Falar no WhatsApp com Renan Carvalho Barbosa"
-    title="Falar no WhatsApp"
-  >
+  <a href="https://wa.me/5562991161040?text=Ol%C3%A1%2C%20Renan.%20Quero%20solicitar%20um%20diagn%C3%B3stico%20gratuito%20da%20minha%20presen%C3%A7a%20no%20Google." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Solicitar diagnóstico gratuito pelo WhatsApp" title="Diagnóstico gratuito">
     <svg width="30" height="30" viewBox="0 0 24 24" fill="white" aria-hidden="true">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
     </svg>
   </a>
-
   <script src="script.js" defer></script>
 </body>
 </html>

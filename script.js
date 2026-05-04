@@ -95,6 +95,12 @@ fadeEls.forEach(el => fadeObserver.observe(el));
 // ============================================================
 const form = document.getElementById('contatoForm');
 
+function trackEvent(eventName, params = {}) {
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', eventName, params);
+  }
+}
+
 function getField(name) {
   return form.elements[name];
 }
@@ -181,6 +187,10 @@ if (form) {
     ].filter(l => l !== undefined).join('\n');
 
     const url = `https://wa.me/5562991161040?text=${encodeURIComponent(texto)}`;
+    trackEvent('generate_lead', {
+      method: 'contact_form_whatsapp',
+      page_path: window.location.pathname
+    });
     window.open(url, '_blank', 'noopener,noreferrer');
 
     // Feedback visual
@@ -229,6 +239,37 @@ if (form) {
     });
   });
 })();
+
+// ============================================================
+// RASTREAMENTO — cliques de contato
+// ============================================================
+document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+  link.addEventListener('click', () => {
+    trackEvent('click_whatsapp', {
+      page_path: window.location.pathname,
+      link_url: link.href,
+      cta_label: link.getAttribute('aria-label') || link.textContent.trim()
+    });
+  });
+});
+
+document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+  link.addEventListener('click', () => {
+    trackEvent('click_email', {
+      page_path: window.location.pathname,
+      link_url: link.href
+    });
+  });
+});
+
+document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+  link.addEventListener('click', () => {
+    trackEvent('click_phone', {
+      page_path: window.location.pathname,
+      link_url: link.href
+    });
+  });
+});
 
 // ============================================================
 // SMOOTH SCROLL para links âncora
