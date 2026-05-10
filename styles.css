@@ -1239,8 +1239,8 @@ section {
 .cta-inner-media {
   max-width: 1040px;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.92fr);
-  gap: 52px;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.62fr);
+  gap: 48px;
   align-items: center;
   text-align: left;
 }
@@ -1255,8 +1255,8 @@ section {
 }
 
 .cta-image {
-  aspect-ratio: 4 / 3;
-  min-height: 260px;
+  aspect-ratio: 3 / 2;
+  min-height: 180px;
 }
 
 .cta-inner p {
