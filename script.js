@@ -67,7 +67,7 @@ sections.forEach(s => sectionObserver.observe(s));
 // FADE-IN — Intersection Observer
 // ============================================================
 const fadeEls = document.querySelectorAll(
-  '.servico-card, .paraquem-card, .diferencial-item, .metodo-step, .sobre-texto, .sobre-card, .contato-info, .contato-form-wrap, .section-header'
+  '.servico-card, .paraquem-card, .diferencial-item, .metodo-step, .sobre-texto, .sobre-card, .contato-info, .contato-form-wrap, .section-header, .depoimento-card'
 );
 
 fadeEls.forEach(el => el.classList.add('fade-in'));
@@ -84,7 +84,7 @@ const fadeObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 
 // Adiciona delay escalonado para cards em grid
-document.querySelectorAll('.servicos-grid .servico-card, .paraquem-grid .paraquem-card').forEach((el, i) => {
+document.querySelectorAll('.servicos-grid .servico-card, .paraquem-grid .paraquem-card, .depoimentos-grid .depoimento-card').forEach((el, i) => {
   el.dataset.delay = i * 80;
 });
 
@@ -268,6 +268,38 @@ document.querySelectorAll('a[href^="tel:"]').forEach(link => {
       page_path: window.location.pathname,
       link_url: link.href
     });
+  });
+});
+
+// ============================================================
+// BARRA DE PROGRESSO DE SCROLL
+// ============================================================
+const progressBar = document.getElementById('scrollProgress');
+if (progressBar) {
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = total > 0 ? `${(scrolled / total) * 100}%` : '0%';
+  }, { passive: true });
+}
+
+// ============================================================
+// FAQ ACCORDION
+// ============================================================
+document.querySelectorAll('.faq-trigger').forEach(trigger => {
+  trigger.addEventListener('click', () => {
+    const item = trigger.closest('.faq-item');
+    const isOpen = item.classList.contains('is-open');
+
+    document.querySelectorAll('.faq-item.is-open').forEach(openItem => {
+      openItem.classList.remove('is-open');
+      openItem.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+    });
+
+    if (!isOpen) {
+      item.classList.add('is-open');
+      trigger.setAttribute('aria-expanded', 'true');
+    }
   });
 });
 

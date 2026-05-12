@@ -678,6 +678,23 @@ section {
   50% { opacity: 1; }
 }
 
+/* ── Hero: animações de entrada ── */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.hero-badge   { animation: heroFadeUp 0.65s cubic-bezier(0.16,1,0.3,1) both; }
+.hero-title   { animation: heroFadeUp 0.65s cubic-bezier(0.16,1,0.3,1) 0.10s both; }
+.hero-headline{ animation: heroFadeUp 0.65s cubic-bezier(0.16,1,0.3,1) 0.20s both; }
+.hero-sub     { animation: heroFadeUp 0.65s cubic-bezier(0.16,1,0.3,1) 0.30s both; }
+.hero-actions { animation: heroFadeUp 0.65s cubic-bezier(0.16,1,0.3,1) 0.40s both; }
+.hero-proof   { animation: heroFadeUp 0.65s cubic-bezier(0.16,1,0.3,1) 0.50s both; }
+.hero-photo   { animation: heroFadeIn 0.90s ease 0.30s both; }
+
 /* ============================================================
    SOBRE
    ============================================================ */
@@ -1120,16 +1137,14 @@ section {
 }
 
 .problem-grid,
-.cluster-grid,
-.faq-grid {
+.cluster-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
 .problem-card,
-.cluster-card,
-.faq-card {
+.cluster-card {
   background: linear-gradient(158deg, rgba(22,46,76,0.6) 0%, rgba(14,28,48,0.72) 100%);
   border: 1px solid rgba(255,255,255,0.07);
   border-radius: var(--radius-md);
@@ -1145,8 +1160,7 @@ section {
 }
 
 .problem-card h3,
-.cluster-card h3,
-.faq-card h3 {
+.cluster-card h3 {
   color: var(--white);
   font-size: 1rem;
   line-height: 1.35;
@@ -1154,11 +1168,120 @@ section {
 }
 
 .problem-card p,
-.cluster-card p,
+.cluster-card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+/* ── FAQ legado (subpáginas) ── */
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.faq-card {
+  background: linear-gradient(158deg, rgba(22,46,76,0.6) 0%, rgba(14,28,48,0.72) 100%);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: var(--radius-md);
+  padding: 26px 24px;
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.faq-card h3 {
+  color: var(--white);
+  font-size: 1rem;
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+
 .faq-card p {
   color: var(--text-muted);
   font-size: 0.9rem;
   line-height: 1.65;
+}
+
+/* ── FAQ Accordion ── */
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: linear-gradient(158deg, rgba(22,46,76,0.6) 0%, rgba(14,28,48,0.72) 100%);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.faq-item.is-open {
+  border-color: rgba(201,168,76,0.3);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.22), 0 0 0 1px rgba(201,168,76,0.08);
+}
+
+.faq-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 24px;
+  text-align: left;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.35;
+  gap: 16px;
+  transition: color var(--transition);
+}
+
+.faq-trigger:hover { color: var(--gold-light); }
+
+.faq-item.is-open .faq-trigger { color: var(--gold-light); }
+
+.faq-icon {
+  flex-shrink: 0;
+  color: var(--gold);
+  transition: transform var(--transition);
+}
+
+.faq-item.is-open .faq-icon { transform: rotate(180deg); }
+
+.faq-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+
+.faq-item.is-open .faq-panel {
+  grid-template-rows: 1fr;
+}
+
+.faq-panel-body {
+  overflow: hidden;
+  padding: 0 24px;
+}
+
+.faq-item.is-open .faq-panel-body {
+  padding-bottom: 20px;
+}
+
+.faq-panel-body::before {
+  content: '';
+  display: block;
+  height: 1px;
+  background: rgba(255,255,255,0.06);
+  margin-bottom: 16px;
+}
+
+.faq-panel-body p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.75;
 }
 
 .cluster-card-link {
@@ -1881,6 +2004,159 @@ section {
 }
 
 /* ============================================================
+   BARRA DE PROGRESSO DE SCROLL
+   ============================================================ */
+#scrollProgress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold-light));
+  z-index: 2000;
+  transition: width 0.08s linear;
+  pointer-events: none;
+}
+
+/* ============================================================
+   DEPOIMENTOS
+   ============================================================ */
+.depoimentos {
+  background:
+    radial-gradient(ellipse 60% 70% at 8% 20%, rgba(201,168,76,0.055), transparent 55%),
+    radial-gradient(ellipse 50% 60% at 92% 80%, rgba(201,168,76,0.04), transparent 55%),
+    var(--navy-mid);
+  border-top: 1px solid rgba(201,168,76,0.07);
+}
+
+.depoimentos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.depoimento-card {
+  position: relative;
+  background: linear-gradient(158deg, rgba(22,46,76,0.72) 0%, rgba(10,20,38,0.84) 100%);
+  border: 1px solid rgba(201,168,76,0.18);
+  border-radius: 20px;
+  padding: 36px 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  overflow: hidden;
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.06),
+    inset 0 0 0 1px rgba(201,168,76,0.04),
+    0 20px 48px rgba(0,0,0,0.3);
+  margin: 0;
+}
+
+/* Linha dourada no topo */
+.depoimento-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 28px;
+  right: 28px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(223,192,110,0.65), transparent);
+}
+
+/* Aspas tipográficas como watermark */
+.depoimento-card::after {
+  content: '\201C';
+  position: absolute;
+  top: -4px;
+  right: 22px;
+  font-size: 8.5rem;
+  line-height: 1;
+  color: rgba(201,168,76,0.065);
+  font-family: Georgia, 'Times New Roman', serif;
+  pointer-events: none;
+  user-select: none;
+}
+
+.depoimento-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(201,168,76,0.36);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.08),
+    inset 0 0 0 1px rgba(201,168,76,0.06),
+    0 28px 60px rgba(0,0,0,0.38),
+    0 0 44px rgba(201,168,76,0.07);
+}
+
+.depoimento-stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 20px;
+}
+
+.depoimento-star {
+  color: var(--gold);
+  font-size: 13px;
+  line-height: 1;
+  filter: drop-shadow(0 0 5px rgba(201,168,76,0.55));
+}
+
+.depoimento-texto {
+  flex: 1;
+  margin-bottom: 22px;
+}
+
+.depoimento-texto p {
+  color: rgba(232,236,240,0.88);
+  font-size: 0.94rem;
+  line-height: 1.8;
+  font-style: italic;
+}
+
+.depoimento-autor {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.depoimento-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, rgba(201,168,76,0.22), rgba(201,168,76,0.06));
+  border: 1.5px solid rgba(201,168,76,0.48);
+  box-shadow:
+    0 0 0 3px rgba(201,168,76,0.09),
+    0 0 14px rgba(201,168,76,0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-light);
+  font-size: 0.7rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  letter-spacing: 0.5px;
+}
+
+.depoimento-autor strong {
+  display: block;
+  color: var(--white);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.depoimento-autor span {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+/* ============================================================
    ANIMAÇÕES DE ENTRADA
    ============================================================ */
 .fade-in {
@@ -1976,6 +2252,11 @@ section {
 
   .diferenciais-grid {
     grid-template-columns: 1fr;
+  }
+
+  .depoimentos-grid {
+    grid-template-columns: 1fr;
+    max-width: 560px;
   }
 }
 
@@ -2150,7 +2431,8 @@ section {
   .page-actions { flex-direction: column; }
   .problem-grid,
   .cluster-grid,
-  .faq-grid {
+  .faq-grid,
+  .depoimentos-grid {
     grid-template-columns: 1fr;
   }
 
