@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://renancbarbosa.com.br/sitemap.xml
+Sitemap: https://rcbseo.com.br/sitemap.xml
