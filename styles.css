@@ -2031,9 +2031,8 @@ section {
 
 .depoimentos-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  max-width: 920px;
   margin: 0 auto;
 }
 
@@ -2255,8 +2254,7 @@ section {
   }
 
   .depoimentos-grid {
-    grid-template-columns: 1fr;
-    max-width: 560px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -2463,4 +2461,204 @@ section {
   html { scroll-behavior: auto; }
 
   .fade-in { opacity: 1; transform: none; }
+}
+
+/* ============================================================
+   DEPOIMENTOS — NOVOS ELEMENTOS (estrutura article/footer)
+   ============================================================ */
+.subtitle {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  max-width: 660px;
+  margin-bottom: 40px;
+}
+
+.depoimento-card .stars {
+  color: var(--gold);
+  font-size: 14px;
+  letter-spacing: 2px;
+  filter: drop-shadow(0 0 5px rgba(201,168,76,0.55));
+  margin-bottom: 20px;
+}
+
+.depoimento-card blockquote {
+  flex: 1;
+  color: rgba(232,236,240,0.88);
+  font-size: 0.94rem;
+  line-height: 1.8;
+  font-style: italic;
+  margin: 0 0 22px;
+}
+
+.depoimento-card footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.depoimento-card .autor {
+  color: var(--white);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.depoimento-card .contexto {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+/* ============================================================
+   SITE-FOOTER (5 colunas com NAP completo)
+   ============================================================ */
+.site-footer {
+  background: #08121d;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr 1.4fr;
+  gap: 40px;
+  padding: 56px 20px;
+}
+
+.footer-logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.footer-business-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.footer-tagline {
+  font-size: 0.8rem;
+  color: var(--gold);
+  line-height: 1.45;
+  margin-bottom: 4px;
+}
+
+.footer-owner {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.footer-col h4 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+
+.footer-col ul li a:hover { color: var(--white); }
+
+.footer-contact p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 6px;
+}
+
+.footer-contact a {
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+
+.footer-contact a:hover { color: var(--gold); }
+
+.footer-areas {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.footer-areas p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 4px;
+}
+
+.site-footer .footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.04);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.site-footer .footer-bottom p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.site-footer .footer-bottom a {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-decoration: underline;
+  transition: color var(--transition);
+}
+
+.site-footer .footer-bottom a:hover { color: var(--gold); }
+
+@media (max-width: 1100px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    padding: 48px 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 40px 20px;
+  }
+
+  .depoimentos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 40px 20px;
+  }
 }
