@@ -2711,3 +2711,266 @@ section {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================
+   DIAGNÓSTICO — Entregáveis
+   ============================================================ */
+
+.entregaveis {
+  padding: 80px 0;
+  background: #0A1520;
+}
+
+.entregaveis .eyebrow {
+  color: #C9A84C;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 0 0 16px;
+  text-align: center;
+}
+
+.entregaveis h2 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+
+.entregaveis .subtitle {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 48px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.entregaveis-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.entregavel-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 32px 28px;
+  transition: border-color 0.2s ease;
+}
+
+.entregavel-card:hover {
+  border-color: rgba(201, 168, 76, 0.3);
+}
+
+.entregavel-numero {
+  color: #C9A84C;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+}
+
+.entregavel-card h3 {
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+.entregavel-card p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .entregaveis-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .entregaveis h2 {
+    font-size: 1.7rem;
+  }
+}
+
+/* ============================================================
+   DIAGNÓSTICO — Prova social
+   ============================================================ */
+
+.prova-social-diagnostico {
+  padding: 70px 0;
+  background: #0D1B2A;
+}
+
+.prova-social-diagnostico .eyebrow {
+  color: #C9A84C;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 0 0 16px;
+  text-align: center;
+}
+
+.prova-social-diagnostico h2 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 48px;
+}
+
+.prova-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.prova-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 28px;
+}
+
+.prova-card .stars {
+  color: #C9A84C;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 14px;
+}
+
+.prova-card blockquote {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 20px;
+  font-style: normal;
+  quotes: none;
+}
+
+.prova-card footer {
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.prova-card .autor {
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.prova-card .contexto {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .prova-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   DIAGNÓSTICO — Formulário de qualificação
+   ============================================================ */
+
+.formulario-diagnostico .form-row {
+  margin-bottom: 20px;
+}
+
+.formulario-diagnostico label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.formulario-diagnostico .required {
+  color: #C9A84C;
+}
+
+.formulario-diagnostico input,
+.formulario-diagnostico select,
+.formulario-diagnostico textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  box-sizing: border-box;
+}
+
+.formulario-diagnostico input::placeholder,
+.formulario-diagnostico textarea::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.formulario-diagnostico input:focus,
+.formulario-diagnostico select:focus,
+.formulario-diagnostico textarea:focus {
+  outline: none;
+  border-color: #C9A84C;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.formulario-diagnostico select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23C9A84C' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.formulario-diagnostico select option {
+  background: #0D1B2A;
+  color: #ffffff;
+}
+
+.formulario-diagnostico textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.formulario-diagnostico .form-submit {
+  width: 100%;
+  margin-top: 8px;
+  padding: 14px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+}
+
+.formulario-diagnostico .form-disclaimer {
+  margin-top: 14px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
+.formulario-diagnostico .form-error {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: #f87171;
+  min-height: 1em;
+}
