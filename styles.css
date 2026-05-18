@@ -3216,7 +3216,23 @@ section {
   margin-bottom: 56px;
 }
 
-.case-section h2 {
+.case-study-title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: var(--white);
+  margin: 0 0 12px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(201, 168, 76, 0.4);
+}
+
+.case-study-intro {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 48px;
+}
+
+.case-section h3 {
   font-size: clamp(1.4rem, 2.5vw, 1.8rem);
   font-weight: 700;
   color: var(--white);
@@ -3225,18 +3241,11 @@ section {
   border-bottom: 1px solid rgba(201, 168, 76, 0.25);
 }
 
-.case-section h3 {
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: var(--gold);
-  margin: 28px 0 10px;
-}
-
 .case-section h4 {
   font-size: 1rem;
   font-weight: 600;
-  color: var(--white);
-  margin: 24px 0 8px;
+  color: var(--gold);
+  margin: 32px 0 8px;
 }
 
 .case-section p {
@@ -3365,9 +3374,11 @@ section {
 
 .case-img {
   width: 100%;
+  max-width: 100%;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  margin: 16px 0;
+  box-shadow: 0 4px 28px rgba(0, 0, 0, 0.45);
+  margin: 20px 0 6px;
   display: block;
 }
 
@@ -3392,8 +3403,20 @@ section {
     padding: 48px 0 72px;
   }
 
+  .case-study-title {
+    font-size: 1.5rem;
+  }
+
   .case-callout-stat {
     gap: 20px;
+  }
+
+  .case-callout-stat .stat-number {
+    font-size: 1.6rem;
+  }
+
+  .case-section h3 {
+    font-size: 1.3rem;
   }
 
   .cta-buttons {
@@ -3402,5 +3425,6 @@ section {
 
   .cta-buttons .btn {
     text-align: center;
+    width: 100%;
   }
 }
