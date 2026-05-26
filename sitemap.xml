@@ -73,6 +73,12 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://rcbseo.com.br/sobre/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://rcbseo.com.br/blog/</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>weekly</changefreq>
