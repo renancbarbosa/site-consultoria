@@ -3428,3 +3428,22 @@ section {
     width: 100%;
   }
 }
+
+/* Article byline — author, date, reading time */
+.article-byline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+.article-byline a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.byline-separator {
+  opacity: 0.4;
+}
