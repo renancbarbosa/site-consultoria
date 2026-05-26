@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-K644KXR38G"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'functionality_storage': 'granted',
+      'security_storage': 'granted',
+      'wait_for_update': 500
+    });
     gtag('js', new Date());
     gtag('config', 'G-K644KXR38G', { 'anonymize_ip': true });
   </script>
@@ -1195,7 +1203,7 @@
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
         <p>&copy; <span id="anoAtual"></span> Renan Carvalho Barbosa. Todos os direitos reservados.</p>
-        <a href="privacidade.html" class="footer-privacy">Política de Privacidade</a>
+        <a href="/privacidade" class="footer-privacy">Política de Privacidade</a><a href="/cookies/" class="footer-privacy" style="margin-left:1rem;">Política de Cookies</a>
       </div>
     </div>
   </footer>
@@ -1313,5 +1321,19 @@
   </script>
   <!-- Cloudflare Web Analytics -->
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "958c755428354df69e95c4366389faca"}'></script>
+  <script defer src="/assets/js/cookie-consent.js"></script>
+
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-banner-title" aria-describedby="cookie-banner-desc" hidden>
+    <div class="cookie-banner-content">
+      <div class="cookie-banner-text">
+        <strong id="cookie-banner-title">Este site usa cookies</strong>
+        <p id="cookie-banner-desc">Utilizamos cookies do Google Analytics para entender como o site é usado e melhorar a experiência. Você pode aceitar ou recusar. <a href="/cookies/">Saiba mais</a>.</p>
+      </div>
+      <div class="cookie-banner-actions">
+        <button type="button" class="btn btn-secondary cookie-btn-reject" data-cookie-action="reject">Recusar</button>
+        <button type="button" class="btn btn-primary cookie-btn-accept" data-cookie-action="accept">Aceitar</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
