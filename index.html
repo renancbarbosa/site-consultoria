@@ -62,7 +62,7 @@
         "name": "SEO Local para Clínicas e Dentistas | Renan Carvalho Barbosa",
         "description": "Consultoria em SEO Local, Google Meu Negócio e sites otimizados para clínicas, dentistas, estética e saúde em Goiânia e online no Brasil.",
         "isPartOf": {"@id": "https://rcbseo.com.br/#website"},
-        "about": {"@id": "https://rcbseo.com.br/#service"},
+        "about": {"@id": "https://rcbseo.com.br/#business"},
         "inLanguage": "pt-BR"
       },
       {
@@ -79,15 +79,18 @@
       },
       {
         "@type": ["ProfessionalService", "LocalBusiness"],
-        "@id": "https://rcbseo.com.br/#service",
-        "name": "Renan Carvalho Barbosa - Consultoria em SEO Local",
+        "@id": "https://rcbseo.com.br/#business",
+        "name": "RCB Consultoria",
+        "alternateName": "RCB Consultoria - SEO Local e Google Meu Negócio",
+        "description": "Consultoria especializada em SEO Local e Google Meu Negócio para clínicas, dentistas, profissionais de saúde, advogados e profissionais liberais em Goiânia e Brasil.",
         "url": "https://rcbseo.com.br/",
-        "description": "Consultoria em SEO Local, Google Meu Negócio e sites otimizados para clínicas, dentistas, estética, médicos e negócios de saúde.",
         "telephone": "+5562991161040",
         "email": "contato@rcbseo.com.br",
         "image": "https://rcbseo.com.br/renan-carvalho-barbosa-consultor-seo-local-goiania.jpg",
+        "logo": "https://rcbseo.com.br/logo.png",
         "priceRange": "$$",
         "founder": {"@id": "https://rcbseo.com.br/#renan"},
+        "serviceType": ["SEO Local", "Google Meu Negócio", "Google Business Profile", "Sites otimizados para clínicas", "Estratégia de presença digital"],
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Goiânia",
@@ -95,11 +98,55 @@
           "addressCountry": "BR"
         },
         "areaServed": [
-          {"@type": "City", "name": "Goiânia"},
-          {"@type": "AdministrativeArea", "name": "Goiás"},
+          {"@type": "City", "name": "Goiânia", "containedInPlace": {"@type": "State", "name": "Goiás"}},
+          {"@type": "City", "name": "Aparecida de Goiânia", "containedInPlace": {"@type": "State", "name": "Goiás"}},
+          {"@type": "City", "name": "Trindade", "containedInPlace": {"@type": "State", "name": "Goiás"}},
+          {"@type": "City", "name": "Senador Canedo", "containedInPlace": {"@type": "State", "name": "Goiás"}},
           {"@type": "Country", "name": "Brasil"}
         ],
-        "serviceType": ["SEO Local", "Google Meu Negócio", "Google Business Profile", "Sites otimizados para clínicas", "Estratégia de presença digital"]
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "08:00",
+            "closes": "18:00"
+          }
+        ],
+        "sameAs": ["https://www.instagram.com/rcbseo"],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+5562991161040",
+          "contactType": "customer service",
+          "areaServed": "BR",
+          "availableLanguage": "Portuguese"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "3",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": {"@type": "Person", "name": "Marcius Fleury"},
+            "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+            "reviewBody": "Serviço impecável, ágil e direto ao ponto. Um parceiro estratégico confiável que cumpre os prazos e garante a eficiência necessária para o fluxo da nossa operação. Atendimento altamente profissional. Recomendo fortemente."
+          },
+          {
+            "@type": "Review",
+            "author": {"@type": "Person", "name": "Laís Breitenbach Simão"},
+            "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+            "reviewBody": "Excelente trabalho de otimização do perfil Google. A consultoria ajudou minha confeitaria a aparecer muito melhor nas buscas e hoje consigo ver minha confeitaria no topo em várias pesquisas da região. O que mais gostei foi a forma clara e objetiva de explicar tudo sobre Google Meu Negócio e SEO local, sem promessas fáceis ou milagrosas."
+          },
+          {
+            "@type": "Review",
+            "author": {"@type": "Person", "name": "Fátima Isabel Breitenbach Simão"},
+            "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+            "reviewBody": "A consultoria que fez meu comércio local aparecer no Google Maps em Goiânia. Serviço excelente."
+          }
+        ]
       },
       {
         "@type": "FAQPage",
@@ -117,137 +164,6 @@
   }
   </script>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "@id": "https://rcbseo.com.br/#business",
-    "name": "RCB Consultoria",
-    "alternateName": "RCB Consultoria - SEO Local e Google Meu Negócio",
-    "description": "Consultoria especializada em SEO Local e Google Meu Negócio para clínicas, dentistas, profissionais de saúde, advogados e profissionais liberais em Goiânia e Brasil.",
-    "url": "https://rcbseo.com.br/",
-    "telephone": "+5562991161040",
-    "email": "contato@rcbseo.com.br",
-    "image": "https://rcbseo.com.br/renan-carvalho-barbosa-consultor-seo-local-goiania.jpg",
-    "logo": "https://rcbseo.com.br/logo.png",
-    "priceRange": "$$",
-    "founder": {
-      "@type": "Person",
-      "name": "Renan Carvalho Barbosa",
-      "jobTitle": "Consultor de SEO Local"
-    },
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "Goiânia",
-        "containedInPlace": {
-          "@type": "State",
-          "name": "Goiás"
-        }
-      },
-      {
-        "@type": "City",
-        "name": "Aparecida de Goiânia",
-        "containedInPlace": {
-          "@type": "State",
-          "name": "Goiás"
-        }
-      },
-      {
-        "@type": "City",
-        "name": "Trindade",
-        "containedInPlace": {
-          "@type": "State",
-          "name": "Goiás"
-        }
-      },
-      {
-        "@type": "City",
-        "name": "Senador Canedo",
-        "containedInPlace": {
-          "@type": "State",
-          "name": "Goiás"
-        }
-      },
-      {
-        "@type": "Country",
-        "name": "Brasil"
-      }
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Goiânia",
-      "addressRegion": "GO",
-      "addressCountry": "BR"
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "08:00",
-        "closes": "18:00"
-      }
-    ],
-    "sameAs": [
-      "https://www.instagram.com/rcbseo"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+5562991161040",
-      "contactType": "customer service",
-      "areaServed": "BR",
-      "availableLanguage": "Portuguese"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "3",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "review": [
-      {
-        "@type": "Review",
-        "author": {
-          "@type": "Person",
-          "name": "Marcius Fleury"
-        },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        },
-        "reviewBody": "Serviço impecável, ágil e direto ao ponto. Um parceiro estratégico confiável que cumpre os prazos e garante a eficiência necessária para o fluxo da nossa operação. Atendimento altamente profissional. Recomendo fortemente."
-      },
-      {
-        "@type": "Review",
-        "author": {
-          "@type": "Person",
-          "name": "Laís Breitenbach Simão"
-        },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        },
-        "reviewBody": "Excelente trabalho de otimização do perfil Google. A consultoria ajudou minha confeitaria a aparecer muito melhor nas buscas e hoje consigo ver minha confeitaria no topo em várias pesquisas da região. O que mais gostei foi a forma clara e objetiva de explicar tudo sobre Google Meu Negócio e SEO local, sem promessas fáceis ou milagrosas."
-      },
-      {
-        "@type": "Review",
-        "author": {
-          "@type": "Person",
-          "name": "Fátima Isabel Breitenbach Simão"
-        },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        },
-        "reviewBody": "A consultoria que fez meu comércio local aparecer no Google Maps em Goiânia. Serviço excelente."
-      }
-    ]
-  }
-  </script>
 </head>
 <body>
   <div id="scrollProgress" aria-hidden="true"></div>
