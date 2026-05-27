@@ -1,0 +1,1077 @@
+{
+  "/blog/como-aparecer-google-clinica-estetica-goiania/": {
+    "file": "blog/como-aparecer-google-clinica-estetica-goiania.html",
+    "inbound_count": 3,
+    "outbound_count": 4,
+    "inbound": [
+      {
+        "from": "/blog/",
+        "anchor": "Como aparecer no Google quando alguém procura clínica de estética em Goiânia SEO Local Como aparecer no Google quando alguém procura clínica de estética em Goiânia Entenda como uma clínica de estética pode disputar as primeiras posições no Google Maps, melhorar o ranqueamento local e virar escolha antes da concorrência. 2 de maio de 2026 Ler artigo"
+      },
+      {
+        "from": "/para-clinicas/",
+        "anchor": "Ler o guia sobre presença de clínicas de estética no Google"
+      },
+      {
+        "from": "/seo-para-clinicas-de-estetica/",
+        "anchor": "Como aparecer no Google quando alguém procura clínica de estética em Goiânia →"
+      }
+    ],
+    "outbound": [
+      {
+        "to": "/sobre/",
+        "anchor": "Renan Carvalho Barbosa"
+      },
+      {
+        "to": "/seo-para-clinicas-de-estetica/",
+        "anchor": "SEO local para clínicas de estética"
+      },
+      {
+        "to": "/seo-para-clinicas-de-estetica/",
+        "anchor": "Veja a página de SEO para clínicas de estética →"
+      },
+      {
+        "to": "/blog/",
+        "anchor": "Voltar ao blog"
+      }
+    ]
+  },
+  "/blog/": {
+    "file": "blog/index.html",
+    "inbound_count": 2,
+    "outbound_count": 2,
+    "inbound": [
+      {
+        "from": "/blog/como-aparecer-google-clinica-estetica-goiania/",
+        "anchor": "Voltar ao blog"
+      },
+      {
+        "from": "/blog/por-que-minha-clinica-odontologica-nao-aparece-no-google/",
+        "anchor": "Voltar ao blog"
+      }
+    ],
+    "outbound": [
+      {
+        "to": "/blog/como-aparecer-google-clinica-estetica-goiania/",
+        "anchor": "Como aparecer no Google quando alguém procura clínica de estética em Goiânia SEO Local Como aparecer no Google quando alguém procura clínica de estética em Goiânia Entenda como uma clínica de estética pode disputar as primeiras posições no Google Maps, melhorar o ranqueamento local e virar escolha antes da concorrência. 2 de maio de 2026 Ler artigo"
+      },
+      {
+        "to": "/blog/por-que-minha-clinica-odontologica-nao-aparece-no-google/",
+        "anchor": "Por que minha clínica odontológica não aparece no Google? SEO Local para Dentistas Por que minha clínica odontológica não aparece no Google? Veja os principais motivos que impedem uma clínica odontológica de aparecer melhor no Google e no Maps, e como organizar a base para mudar isso. 5 de maio de 2026 Ler artigo"
+      }
+    ]
+  },
+  "/blog/por-que-minha-clinica-odontologica-nao-aparece-no-google/": {
+    "file": "blog/por-que-minha-clinica-odontologica-nao-aparece-no-google.html",
+    "inbound_count": 2,
+    "outbound_count": 6,
+    "inbound": [
+      {
+        "from": "/blog/",
+        "anchor": "Por que minha clínica odontológica não aparece no Google? SEO Local para Dentistas Por que minha clínica odontológica não aparece no Google? Veja os principais motivos que impedem uma clínica odontológica de aparecer melhor no Google e no Maps, e como organizar a base para mudar isso. 5 de maio de 2026 Ler artigo"
+      },
+      {
+        "from": "/seo-para-dentistas/",
+        "anchor": "Por que minha clínica odontológica não aparece no Google? →"
+      }
+    ],
+    "outbound": [
+      {
+        "to": "/sobre/",
+        "anchor": "Renan Carvalho Barbosa"
+      },
+      {
+        "to": "/seo-para-dentistas/",
+        "anchor": "SEO local para dentistas"
+      },
+      {
+        "to": "/seo-para-dentistas/",
+        "anchor": "SEO para dentistas"
+      },
+      {
+        "to": "/google-meu-negocio-para-clinicas/",
+        "anchor": "Google Meu Negócio para clínicas"
+      },
+      {
+        "to": "/seo-para-clinicas/",
+        "anchor": "SEO para clínicas"
+      },
+      {
+        "to": "/blog/",
+        "anchor": "Voltar ao blog"
+      }
+    ]
+  },
+  "/cases/": {
+    "file": "cases/index.html",
+    "inbound_count": 6,
+    "outbound_count": 4,
+    "inbound": [
+      {
+        "from": "/diagnostico-gratuito/",
+        "anchor": "Case Docevidade — #1 no Local Pack"
+      },
+      {
+        "from": "/seo-para-clinicas/",
+        "anchor": "Ver case real: cliente que alcançou #1 no Google com 4 avaliações →"
+      },
+      {
+        "from": "/seo-para-clinicas-de-estetica/",
+        "anchor": "Ver case real: cliente que alcançou #1 no Google com 4 avaliações →"
+      },
+      {
+        "from": "/seo-para-dentistas/",
+        "anchor": "Ver case real: cliente que alcançou #1 no Google com 4 avaliações →"
+      },
+      {
+        "from": "/sobre/",
+        "anchor": "/cases/"
+      },
+      {
+        "from": "/sobre/",
+        "anchor": "Ver case completo"
+      }
+    ],
+    "outbound": [
+      {
+        "to": "/sobre/",
+        "anchor": "Renan Carvalho Barbosa"
+      },
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "to": "/consultoria-seo-local/",
+        "anchor": "Ver como funciona a consultoria"
+      },
+      {
+        "to": "/seo-para-clinicas-de-estetica/",
+        "anchor": "clínicas de estética"
+      }
+    ]
+  },
+  "/consultoria-seo-local/": {
+    "file": "consultoria-seo-local/index.html",
+    "inbound_count": 5,
+    "outbound_count": 10,
+    "inbound": [
+      {
+        "from": "/cases/",
+        "anchor": "Ver como funciona a consultoria"
+      },
+      {
+        "from": "/diagnostico-gratuito/",
+        "anchor": "Como funciona a consultoria"
+      },
+      {
+        "from": "/seo-local-goiania/",
+        "anchor": "como funciona a consultoria de SEO Local"
+      },
+      {
+        "from": "/site-para-clinica/",
+        "anchor": "Ver consultoria SEO Local"
+      },
+      {
+        "from": "/sobre/",
+        "anchor": "Ver como funciona a consultoria"
+      }
+    ],
+    "outbound": [
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "to": "/seo-local-goiania/",
+        "anchor": "SEO Local em Goiânia"
+      },
+      {
+        "to": "/sobre/",
+        "anchor": "página sobre Renan Carvalho Barbosa"
+      },
+      {
+        "to": "/seo-local-goiania/",
+        "anchor": "SEO Local em Goiânia"
+      },
+      {
+        "to": "/seo-para-clinicas/",
+        "anchor": "SEO para clínicas"
+      },
+      {
+        "to": "/google-meu-negocio-para-clinicas/",
+        "anchor": "Google Meu Negócio"
+      },
+      {
+        "to": "/site-para-clinica/",
+        "anchor": "Site para clínica"
+      },
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "Diagnóstico gratuito"
+      },
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      }
+    ]
+  },
+  "/contato/": {
+    "file": "contato/index.html",
+    "inbound_count": 1,
+    "outbound_count": 2,
+    "inbound": [
+      {
+        "from": "/cookies/",
+        "anchor": "página de contato"
+      }
+    ],
+    "outbound": [
+      {
+        "to": "/sobre/",
+        "anchor": "Conhecer o consultor"
+      },
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "página de diagnóstico gratuito"
+      }
+    ]
+  },
+  "/cookies/": {
+    "file": "cookies/index.html",
+    "inbound_count": 1,
+    "outbound_count": 1,
+    "inbound": [
+      {
+        "from": "/privacidade/",
+        "anchor": "Política de Cookies"
+      }
+    ],
+    "outbound": [
+      {
+        "to": "/contato/",
+        "anchor": "página de contato"
+      }
+    ]
+  },
+  "/diagnostico-gratuito/": {
+    "file": "diagnostico-gratuito/index.html",
+    "inbound_count": 28,
+    "outbound_count": 5,
+    "inbound": [
+      {
+        "from": "/cases/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "from": "/consultoria-seo-local/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "from": "/consultoria-seo-local/",
+        "anchor": "Diagnóstico gratuito"
+      },
+      {
+        "from": "/consultoria-seo-local/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "from": "/consultoria-seo-local/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "from": "/contato/",
+        "anchor": "página de diagnóstico gratuito"
+      },
+      {
+        "from": "/google-meu-negocio-para-clinicas/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "from": "/google-meu-negocio-para-clinicas/",
+        "anchor": "Diagnóstico gratuito"
+      },
+      {
+        "from": "/google-meu-negocio-para-clinicas/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "from": "/seo-local-goiania/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "from": "/seo-local-goiania/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "from": "/seo-para-clinicas/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "from": "/seo-para-clinicas/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "from": "/seo-para-clinicas-de-emagrecimento/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "from": "/seo-para-clinicas-de-emagrecimento/",
+        "anchor": "Diagnóstico gratuito"
+      },
+      {
+        "from": "/seo-para-clinicas-de-emagrecimento/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "from": "/seo-para-clinicas-de-estetica/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "from": "/seo-para-clinicas-de-estetica/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "from": "/seo-para-dentistas/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "from": "/seo-para-dentistas/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "from": "/seo-para-medicos/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "from": "/seo-para-medicos/",
+        "anchor": "Diagnóstico gratuito"
+      },
+      {
+        "from": "/seo-para-medicos/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "from": "/site-para-clinica/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "from": "/site-para-clinica/",
+        "anchor": "Diagnóstico gratuito"
+      },
+      {
+        "from": "/site-para-clinica/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "from": "/sobre/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "from": "/sobre/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      }
+    ],
+    "outbound": [
+      {
+        "to": "/diagnostico-gratuito/exemplo/",
+        "anchor": "Ver deck completo de exemplo →"
+      },
+      {
+        "to": "/sobre/",
+        "anchor": "Sobre Renan Carvalho Barbosa"
+      },
+      {
+        "to": "/cases/",
+        "anchor": "Case Docevidade — #1 no Local Pack"
+      },
+      {
+        "to": "/consultoria-seo-local/",
+        "anchor": "Como funciona a consultoria"
+      },
+      {
+        "to": "/seo-local-goiania/",
+        "anchor": "SEO Local em Goiânia"
+      }
+    ]
+  },
+  "/google-meu-negocio-para-clinicas/": {
+    "file": "google-meu-negocio-para-clinicas/index.html",
+    "inbound_count": 7,
+    "outbound_count": 9,
+    "inbound": [
+      {
+        "from": "/blog/por-que-minha-clinica-odontologica-nao-aparece-no-google/",
+        "anchor": "Google Meu Negócio para clínicas"
+      },
+      {
+        "from": "/consultoria-seo-local/",
+        "anchor": "Google Meu Negócio"
+      },
+      {
+        "from": "/seo-para-clinicas/",
+        "anchor": "Google Meu Negócio para clínicas"
+      },
+      {
+        "from": "/seo-para-clinicas-de-emagrecimento/",
+        "anchor": "Google Meu Negócio"
+      },
+      {
+        "from": "/seo-para-dentistas/",
+        "anchor": "Guia completo de Google Meu Negócio para clínicas"
+      },
+      {
+        "from": "/seo-para-medicos/",
+        "anchor": "Google Meu Negócio para clínicas"
+      },
+      {
+        "from": "/site-para-clinica/",
+        "anchor": "Google Meu Negócio"
+      }
+    ],
+    "outbound": [
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "to": "/seo-para-clinicas/",
+        "anchor": "Ver SEO para clínicas"
+      },
+      {
+        "to": "/seo-para-clinicas/",
+        "anchor": "SEO para clínicas de saúde"
+      },
+      {
+        "to": "/seo-local-goiania/",
+        "anchor": "SEO Local em Goiânia"
+      },
+      {
+        "to": "/site-para-clinica/",
+        "anchor": "Site para clínica"
+      },
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "Diagnóstico gratuito"
+      },
+      {
+        "to": "/seo-para-dentistas/",
+        "anchor": "SEO para dentistas"
+      },
+      {
+        "to": "/seo-para-medicos/",
+        "anchor": "SEO para médicos"
+      },
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      }
+    ]
+  },
+  "/para-advogados/": {
+    "file": "para-advogados/index.html",
+    "inbound_count": 0,
+    "outbound_count": 0,
+    "inbound": [],
+    "outbound": []
+  },
+  "/para-clinicas/": {
+    "file": "para-clinicas.html",
+    "inbound_count": 0,
+    "outbound_count": 1,
+    "inbound": [],
+    "outbound": [
+      {
+        "to": "/blog/como-aparecer-google-clinica-estetica-goiania/",
+        "anchor": "Ler o guia sobre presença de clínicas de estética no Google"
+      }
+    ]
+  },
+  "/para-comercios-locais/": {
+    "file": "para-comercios-locais/index.html",
+    "inbound_count": 0,
+    "outbound_count": 0,
+    "inbound": [],
+    "outbound": []
+  },
+  "/para-profissionais-liberais/": {
+    "file": "para-profissionais-liberais/index.html",
+    "inbound_count": 0,
+    "outbound_count": 4,
+    "inbound": [],
+    "outbound": [
+      {
+        "to": "/seo-para-clinicas/",
+        "anchor": "Ver SEO para clínicas"
+      },
+      {
+        "to": "/seo-para-medicos/",
+        "anchor": "Ver SEO para médicos"
+      },
+      {
+        "to": "/seo-para-clinicas-de-estetica/",
+        "anchor": "Ver SEO para estética"
+      },
+      {
+        "to": "/seo-para-dentistas/",
+        "anchor": "Ver SEO para dentistas"
+      }
+    ]
+  },
+  "/privacidade/": {
+    "file": "privacidade.html",
+    "inbound_count": 0,
+    "outbound_count": 1,
+    "inbound": [],
+    "outbound": [
+      {
+        "to": "/cookies/",
+        "anchor": "Política de Cookies"
+      }
+    ]
+  },
+  "/seo-local-goiania/": {
+    "file": "seo-local-goiania/index.html",
+    "inbound_count": 9,
+    "outbound_count": 6,
+    "inbound": [
+      {
+        "from": "/consultoria-seo-local/",
+        "anchor": "SEO Local em Goiânia"
+      },
+      {
+        "from": "/consultoria-seo-local/",
+        "anchor": "SEO Local em Goiânia"
+      },
+      {
+        "from": "/diagnostico-gratuito/",
+        "anchor": "SEO Local em Goiânia"
+      },
+      {
+        "from": "/google-meu-negocio-para-clinicas/",
+        "anchor": "SEO Local em Goiânia"
+      },
+      {
+        "from": "/seo-para-clinicas/",
+        "anchor": "Veja como funciona o atendimento local →"
+      },
+      {
+        "from": "/seo-para-clinicas-de-emagrecimento/",
+        "anchor": "SEO Local em Goiânia"
+      },
+      {
+        "from": "/seo-para-dentistas/",
+        "anchor": "SEO Local em Goiânia"
+      },
+      {
+        "from": "/seo-para-medicos/",
+        "anchor": "SEO Local em Goiânia"
+      },
+      {
+        "from": "/site-para-clinica/",
+        "anchor": "SEO Local em Goiânia"
+      }
+    ],
+    "outbound": [
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "to": "/seo-para-clinicas/",
+        "anchor": "Ver estratégia para clínicas"
+      },
+      {
+        "to": "/seo-para-dentistas/",
+        "anchor": "odontologia"
+      },
+      {
+        "to": "/seo-para-clinicas-de-emagrecimento/",
+        "anchor": "clínicas de emagrecimento"
+      },
+      {
+        "to": "/consultoria-seo-local/",
+        "anchor": "como funciona a consultoria de SEO Local"
+      },
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      }
+    ]
+  },
+  "/seo-para-clinicas/": {
+    "file": "seo-para-clinicas/index.html",
+    "inbound_count": 10,
+    "outbound_count": 14,
+    "inbound": [
+      {
+        "from": "/blog/por-que-minha-clinica-odontologica-nao-aparece-no-google/",
+        "anchor": "SEO para clínicas"
+      },
+      {
+        "from": "/consultoria-seo-local/",
+        "anchor": "SEO para clínicas"
+      },
+      {
+        "from": "/google-meu-negocio-para-clinicas/",
+        "anchor": "Ver SEO para clínicas"
+      },
+      {
+        "from": "/google-meu-negocio-para-clinicas/",
+        "anchor": "SEO para clínicas de saúde"
+      },
+      {
+        "from": "/para-profissionais-liberais/",
+        "anchor": "Ver SEO para clínicas"
+      },
+      {
+        "from": "/seo-local-goiania/",
+        "anchor": "Ver estratégia para clínicas"
+      },
+      {
+        "from": "/seo-para-clinicas-de-emagrecimento/",
+        "anchor": "Ver SEO para clínicas"
+      },
+      {
+        "from": "/seo-para-clinicas-de-emagrecimento/",
+        "anchor": "SEO para clínicas de saúde"
+      },
+      {
+        "from": "/seo-para-medicos/",
+        "anchor": "SEO para clínicas de saúde"
+      },
+      {
+        "from": "/site-para-clinica/",
+        "anchor": "SEO para clínicas"
+      }
+    ],
+    "outbound": [
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "to": "/google-meu-negocio-para-clinicas/",
+        "anchor": "Google Meu Negócio para clínicas"
+      },
+      {
+        "to": "/site-para-clinica/",
+        "anchor": "Site para clínica"
+      },
+      {
+        "to": "/seo-para-dentistas/",
+        "anchor": "Clínicas odontológicas e dentistas"
+      },
+      {
+        "to": "/seo-para-clinicas-de-estetica/",
+        "anchor": "Clínicas de estética e estética avançada"
+      },
+      {
+        "to": "/seo-para-medicos/",
+        "anchor": "Médicos, clínicas médicas e consultórios"
+      },
+      {
+        "to": "/seo-para-clinicas-de-emagrecimento/",
+        "anchor": "Clínicas de emagrecimento e nutrição"
+      },
+      {
+        "to": "/seo-para-dentistas/",
+        "anchor": "SEO para dentistas"
+      },
+      {
+        "to": "/seo-para-clinicas-de-estetica/",
+        "anchor": "SEO para clínicas de estética"
+      },
+      {
+        "to": "/seo-para-medicos/",
+        "anchor": "SEO para médicos"
+      },
+      {
+        "to": "/seo-para-clinicas-de-emagrecimento/",
+        "anchor": "SEO para emagrecimento"
+      },
+      {
+        "to": "/seo-local-goiania/",
+        "anchor": "Veja como funciona o atendimento local →"
+      },
+      {
+        "to": "/cases/",
+        "anchor": "Ver case real: cliente que alcançou #1 no Google com 4 avaliações →"
+      },
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      }
+    ]
+  },
+  "/seo-para-clinicas-de-emagrecimento/": {
+    "file": "seo-para-clinicas-de-emagrecimento/index.html",
+    "inbound_count": 4,
+    "outbound_count": 9,
+    "inbound": [
+      {
+        "from": "/seo-local-goiania/",
+        "anchor": "clínicas de emagrecimento"
+      },
+      {
+        "from": "/seo-para-clinicas/",
+        "anchor": "Clínicas de emagrecimento e nutrição"
+      },
+      {
+        "from": "/seo-para-clinicas/",
+        "anchor": "SEO para emagrecimento"
+      },
+      {
+        "from": "/seo-para-clinicas-de-estetica/",
+        "anchor": "estratégia para clínicas de emagrecimento"
+      }
+    ],
+    "outbound": [
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "to": "/seo-para-clinicas/",
+        "anchor": "Ver SEO para clínicas"
+      },
+      {
+        "to": "/seo-para-clinicas/",
+        "anchor": "SEO para clínicas de saúde"
+      },
+      {
+        "to": "/seo-local-goiania/",
+        "anchor": "SEO Local em Goiânia"
+      },
+      {
+        "to": "/seo-para-medicos/",
+        "anchor": "SEO para médicos"
+      },
+      {
+        "to": "/google-meu-negocio-para-clinicas/",
+        "anchor": "Google Meu Negócio"
+      },
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "Diagnóstico gratuito"
+      },
+      {
+        "to": "/seo-para-clinicas-de-estetica/",
+        "anchor": "clínicas de estética"
+      },
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      }
+    ]
+  },
+  "/seo-para-clinicas-de-estetica/": {
+    "file": "seo-para-clinicas-de-estetica/index.html",
+    "inbound_count": 7,
+    "outbound_count": 5,
+    "inbound": [
+      {
+        "from": "/blog/como-aparecer-google-clinica-estetica-goiania/",
+        "anchor": "SEO local para clínicas de estética"
+      },
+      {
+        "from": "/blog/como-aparecer-google-clinica-estetica-goiania/",
+        "anchor": "Veja a página de SEO para clínicas de estética →"
+      },
+      {
+        "from": "/cases/",
+        "anchor": "clínicas de estética"
+      },
+      {
+        "from": "/para-profissionais-liberais/",
+        "anchor": "Ver SEO para estética"
+      },
+      {
+        "from": "/seo-para-clinicas/",
+        "anchor": "Clínicas de estética e estética avançada"
+      },
+      {
+        "from": "/seo-para-clinicas/",
+        "anchor": "SEO para clínicas de estética"
+      },
+      {
+        "from": "/seo-para-clinicas-de-emagrecimento/",
+        "anchor": "clínicas de estética"
+      }
+    ],
+    "outbound": [
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "to": "/seo-para-clinicas-de-emagrecimento/",
+        "anchor": "estratégia para clínicas de emagrecimento"
+      },
+      {
+        "to": "/cases/",
+        "anchor": "Ver case real: cliente que alcançou #1 no Google com 4 avaliações →"
+      },
+      {
+        "to": "/blog/como-aparecer-google-clinica-estetica-goiania/",
+        "anchor": "Como aparecer no Google quando alguém procura clínica de estética em Goiânia →"
+      },
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      }
+    ]
+  },
+  "/seo-para-dentistas/": {
+    "file": "seo-para-dentistas/index.html",
+    "inbound_count": 8,
+    "outbound_count": 6,
+    "inbound": [
+      {
+        "from": "/blog/por-que-minha-clinica-odontologica-nao-aparece-no-google/",
+        "anchor": "SEO local para dentistas"
+      },
+      {
+        "from": "/blog/por-que-minha-clinica-odontologica-nao-aparece-no-google/",
+        "anchor": "SEO para dentistas"
+      },
+      {
+        "from": "/google-meu-negocio-para-clinicas/",
+        "anchor": "SEO para dentistas"
+      },
+      {
+        "from": "/para-profissionais-liberais/",
+        "anchor": "Ver SEO para dentistas"
+      },
+      {
+        "from": "/seo-local-goiania/",
+        "anchor": "odontologia"
+      },
+      {
+        "from": "/seo-para-clinicas/",
+        "anchor": "Clínicas odontológicas e dentistas"
+      },
+      {
+        "from": "/seo-para-clinicas/",
+        "anchor": "SEO para dentistas"
+      },
+      {
+        "from": "/site-para-clinica/",
+        "anchor": "Site para dentista"
+      }
+    ],
+    "outbound": [
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "to": "/seo-local-goiania/",
+        "anchor": "SEO Local em Goiânia"
+      },
+      {
+        "to": "/google-meu-negocio-para-clinicas/",
+        "anchor": "Guia completo de Google Meu Negócio para clínicas"
+      },
+      {
+        "to": "/cases/",
+        "anchor": "Ver case real: cliente que alcançou #1 no Google com 4 avaliações →"
+      },
+      {
+        "to": "/blog/por-que-minha-clinica-odontologica-nao-aparece-no-google/",
+        "anchor": "Por que minha clínica odontológica não aparece no Google? →"
+      },
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      }
+    ]
+  },
+  "/seo-para-medicos/": {
+    "file": "seo-para-medicos/index.html",
+    "inbound_count": 6,
+    "outbound_count": 8,
+    "inbound": [
+      {
+        "from": "/google-meu-negocio-para-clinicas/",
+        "anchor": "SEO para médicos"
+      },
+      {
+        "from": "/para-profissionais-liberais/",
+        "anchor": "Ver SEO para médicos"
+      },
+      {
+        "from": "/seo-para-clinicas/",
+        "anchor": "Médicos, clínicas médicas e consultórios"
+      },
+      {
+        "from": "/seo-para-clinicas/",
+        "anchor": "SEO para médicos"
+      },
+      {
+        "from": "/seo-para-clinicas-de-emagrecimento/",
+        "anchor": "SEO para médicos"
+      },
+      {
+        "from": "/site-para-clinica/",
+        "anchor": "Site para médico"
+      }
+    ],
+    "outbound": [
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "to": "/site-para-clinica/",
+        "anchor": "Ver site para clínica"
+      },
+      {
+        "to": "/seo-para-clinicas/",
+        "anchor": "SEO para clínicas de saúde"
+      },
+      {
+        "to": "/seo-local-goiania/",
+        "anchor": "SEO Local em Goiânia"
+      },
+      {
+        "to": "/google-meu-negocio-para-clinicas/",
+        "anchor": "Google Meu Negócio para clínicas"
+      },
+      {
+        "to": "/site-para-clinica/",
+        "anchor": "Site para clínica médica"
+      },
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "Diagnóstico gratuito"
+      },
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      }
+    ]
+  },
+  "/site-para-clinica/": {
+    "file": "site-para-clinica/index.html",
+    "inbound_count": 5,
+    "outbound_count": 9,
+    "inbound": [
+      {
+        "from": "/consultoria-seo-local/",
+        "anchor": "Site para clínica"
+      },
+      {
+        "from": "/google-meu-negocio-para-clinicas/",
+        "anchor": "Site para clínica"
+      },
+      {
+        "from": "/seo-para-clinicas/",
+        "anchor": "Site para clínica"
+      },
+      {
+        "from": "/seo-para-medicos/",
+        "anchor": "Ver site para clínica"
+      },
+      {
+        "from": "/seo-para-medicos/",
+        "anchor": "Site para clínica médica"
+      }
+    ],
+    "outbound": [
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "to": "/consultoria-seo-local/",
+        "anchor": "Ver consultoria SEO Local"
+      },
+      {
+        "to": "/seo-para-clinicas/",
+        "anchor": "SEO para clínicas"
+      },
+      {
+        "to": "/seo-local-goiania/",
+        "anchor": "SEO Local em Goiânia"
+      },
+      {
+        "to": "/google-meu-negocio-para-clinicas/",
+        "anchor": "Google Meu Negócio"
+      },
+      {
+        "to": "/seo-para-medicos/",
+        "anchor": "Site para médico"
+      },
+      {
+        "to": "/seo-para-dentistas/",
+        "anchor": "Site para dentista"
+      },
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "Diagnóstico gratuito"
+      },
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      }
+    ]
+  },
+  "/sobre/": {
+    "file": "sobre/index.html",
+    "inbound_count": 6,
+    "outbound_count": 5,
+    "inbound": [
+      {
+        "from": "/blog/como-aparecer-google-clinica-estetica-goiania/",
+        "anchor": "Renan Carvalho Barbosa"
+      },
+      {
+        "from": "/blog/por-que-minha-clinica-odontologica-nao-aparece-no-google/",
+        "anchor": "Renan Carvalho Barbosa"
+      },
+      {
+        "from": "/cases/",
+        "anchor": "Renan Carvalho Barbosa"
+      },
+      {
+        "from": "/consultoria-seo-local/",
+        "anchor": "página sobre Renan Carvalho Barbosa"
+      },
+      {
+        "from": "/contato/",
+        "anchor": "Conhecer o consultor"
+      },
+      {
+        "from": "/diagnostico-gratuito/",
+        "anchor": "Sobre Renan Carvalho Barbosa"
+      }
+    ],
+    "outbound": [
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      },
+      {
+        "to": "/consultoria-seo-local/",
+        "anchor": "Ver como funciona a consultoria"
+      },
+      {
+        "to": "/cases/",
+        "anchor": "/cases/"
+      },
+      {
+        "to": "/cases/",
+        "anchor": "Ver case completo"
+      },
+      {
+        "to": "/diagnostico-gratuito/",
+        "anchor": "Solicitar diagnóstico gratuito"
+      }
+    ]
+  }
+}
