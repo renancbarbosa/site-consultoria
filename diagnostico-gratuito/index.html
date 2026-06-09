@@ -260,7 +260,7 @@
       ].join('\n');
       var url = 'https://wa.me/5562991161040?text=' + encodeURIComponent(texto);
       if (typeof window.gtag === 'function') {
-        window.gtag('event', 'generate_lead', { method: 'contact_form_whatsapp', page_path: window.location.pathname });
+        window.gtag('event', 'envio_formulario', { method: 'contact_form_whatsapp', page_location: window.location.href });
       }
       window.open(url, '_blank', 'noopener,noreferrer');
       var btn = form.querySelector('button[type="submit"]');
