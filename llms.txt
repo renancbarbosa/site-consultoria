@@ -1,45 +1,37 @@
-# Renan Carvalho Barbosa
+# RCB Consultoria
 
-> Consultoria em SEO Local, Google Meu Negócio/Google Business Profile, sites otimizados e presença digital para clínicas, dentistas, estética, médicos, emagrecimento e negócios de saúde.
+> Consultoria especializada em SEO Local, Google Meu Negócio (Google Business Profile), sites otimizados e automação de processos para clínicas, dentistas, estética, médicos, advogados e comércios locais em Goiânia e região, com atendimento online em todo o Brasil. Fundada por Renan Carvalho Barbosa.
 
-## Site
-
-- URL principal: https://rcbseo.com.br/
-- Diagnóstico gratuito: https://rcbseo.com.br/diagnostico-gratuito/
-- Consultoria SEO Local: https://rcbseo.com.br/consultoria-seo-local/
-- SEO Local em Goiânia: https://rcbseo.com.br/seo-local-goiania/
-- Blog: https://rcbseo.com.br/blog/
-
-## Páginas Comerciais Principais
-
-- SEO para clínicas e consultórios: https://rcbseo.com.br/seo-para-clinicas/
-- SEO para dentistas e clínicas odontológicas: https://rcbseo.com.br/seo-para-dentistas/
-- SEO para clínicas de estética: https://rcbseo.com.br/seo-para-clinicas-de-estetica/
-- SEO para médicos: https://rcbseo.com.br/seo-para-medicos/
-- SEO para clínicas de emagrecimento: https://rcbseo.com.br/seo-para-clinicas-de-emagrecimento/
-- Google Meu Negócio para clínicas: https://rcbseo.com.br/google-meu-negocio-para-clinicas/
-- Site para clínica: https://rcbseo.com.br/site-para-clinica/
-
-## Nichos Secundários
-
-- SEO para advogados: https://rcbseo.com.br/para-advogados.html
-- Marketing para comércios locais: https://rcbseo.com.br/para-comercios-locais.html
-
-## Temas Principais
-
-- SEO local para clínicas, dentistas e saúde.
-- Google Meu Negócio e Google Business Profile.
-- Ranqueamento no Google Maps.
-- Sites otimizados para clínicas.
-- Base orgânica antes de campanhas de Google Ads.
-- Atendimento presencial em Goiânia e consultoria online no Brasil.
-
-## Artigos
-
-- Como aparecer no Google quando alguém procura clínica de estética em Goiânia: https://rcbseo.com.br/blog/como-aparecer-google-clinica-estetica-goiania.html
-
-## Contato
-
+## Sobre
+- Fundador: Renan Carvalho Barbosa, consultor de SEO Local e Google Meu Negócio.
+- Atendimento: presencial em Goiânia e região metropolitana; online no restante do Brasil.
 - WhatsApp: +55 62 99116-1040
 - E-mail: contato@rcbseo.com.br
-- LinkedIn: https://linkedin.com/in/renan-carvalho-barbosa
+- Página institucional: https://rcbseo.com.br/sobre/
+
+## Serviços
+- SEO para clínicas: https://rcbseo.com.br/seo-para-clinicas/ — SEO local para clínicas e consultórios aparecerem no Google e no Maps.
+- SEO para dentistas: https://rcbseo.com.br/seo-para-dentistas/ — Posicionamento de clínicas odontológicas nas buscas locais.
+- SEO para clínicas de estética: https://rcbseo.com.br/seo-para-clinicas-de-estetica/ — Visibilidade no Google para clínicas e profissionais de estética.
+- SEO para médicos: https://rcbseo.com.br/seo-para-medicos/ — Presença digital e autoridade para médicos e consultórios.
+- SEO para clínicas de emagrecimento: https://rcbseo.com.br/seo-para-clinicas-de-emagrecimento/ — SEO para clínicas de emagrecimento atraírem pacientes locais.
+- SEO local em Goiânia: https://rcbseo.com.br/seo-local-goiania/ — SEO local para negócios que querem ranquear em Goiânia.
+- Consultoria de SEO local: https://rcbseo.com.br/consultoria-seo-local/ — Consultoria estratégica de SEO local e Google Meu Negócio.
+- Google Meu Negócio para clínicas: https://rcbseo.com.br/google-meu-negocio-para-clinicas/ — Otimização do Perfil da Empresa no Google para clínicas.
+- Site para clínica: https://rcbseo.com.br/site-para-clinica/ — Sites otimizados e rápidos para clínicas converterem visitas em contatos.
+- Automação de processos: https://rcbseo.com.br/automacao-de-processos/ — Automação de atendimento e processos (n8n) para negócios locais.
+- SEO para advogados: https://rcbseo.com.br/para-advogados/ — SEO local e presença digital para advogados e escritórios.
+- SEO para profissionais liberais: https://rcbseo.com.br/para-profissionais-liberais/ — Posicionamento no Google para profissionais liberais.
+- SEO para comércios locais: https://rcbseo.com.br/para-comercios-locais/ — SEO local e Google Maps para comércios de bairro e região.
+
+## Conteúdo
+- Como aparecer no Google quando alguém procura clínica de estética em Goiânia: https://rcbseo.com.br/blog/como-aparecer-google-clinica-estetica-goiania/ — Guia prático para clínicas de estética ganharem visibilidade no Google e no Maps.
+- Por que minha clínica odontológica não aparece no Google: https://rcbseo.com.br/blog/por-que-minha-clinica-odontologica-nao-aparece-no-google/ — Causas comuns de baixa visibilidade de clínicas odontológicas e como corrigir.
+
+## Redes e perfis
+- Instagram: https://www.instagram.com/rcbseo
+- LinkedIn: https://www.linkedin.com/in/renan-carvalho-barbosa
+- Google: https://share.google/sYd1qgUhLvw0u4cHL
+
+## Contato
+- Diagnóstico gratuito disponível pelo site e WhatsApp: https://rcbseo.com.br/diagnostico-gratuito/
