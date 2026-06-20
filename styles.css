@@ -103,6 +103,28 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
   font-weight: 600;
 }
 
+.section-faq .faq-item {
+  background: #f5f7fa;
+  border: 1px solid #e3e8ef;
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-bottom: 14px;
+  overflow: visible;
+}
+.section-faq .faq-item:last-child {
+  margin-bottom: 0;
+}
+.section-faq .faq-item h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  color: #0D1B2A;
+}
+.section-faq .faq-item p {
+  margin: 0;
+  line-height: 1.65;
+  color: #1f2a37;
+}
+
 section {
   padding: 96px 0;
 }
