@@ -125,6 +125,18 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
   color: #1f2a37;
 }
 
+.list-steps {
+  margin: 0;
+  padding-left: 22px;
+}
+.list-steps li {
+  margin-bottom: 12px;
+  line-height: 1.65;
+}
+.list-steps li:last-child {
+  margin-bottom: 0;
+}
+
 section {
   padding: 96px 0;
 }
