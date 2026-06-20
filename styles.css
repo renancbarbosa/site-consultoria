@@ -82,6 +82,27 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
   padding: 0 20px;
 }
 
+.section-nav-pages {
+  margin: 28px 0;
+  padding: 20px 24px;
+  background: #f5f7fa;
+  border: 1px solid #e3e8ef;
+  border-left: 3px solid #0D1B2A;
+  border-radius: 10px;
+}
+.section-nav-pages p {
+  margin: 0 0 8px;
+  line-height: 1.65;
+  color: #1f2a37;
+}
+.section-nav-pages p:last-child {
+  margin-bottom: 0;
+}
+.section-nav-pages a {
+  color: #0D1B2A;
+  font-weight: 600;
+}
+
 section {
   padding: 96px 0;
 }
