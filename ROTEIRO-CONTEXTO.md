@@ -215,10 +215,16 @@ diferentes (consultoria, GBP, auditoria, site). #10 entra logo em seguida.
 > `/blog/erros-que-impedem-empresa-aparecer-no-google/` (checklist de erros → hubs auditoria +
 > consultoria, diferenciado do "por que não aparece").
 >
-> **Próximo (ONDA 3D, a planejar):** "Blog ainda vale a pena para empresa local?" e "Como criar
-> páginas de serviço que ranqueiam" (alimentam conteúdo e site); "SEO ou tráfego pago" (confirmar
-> ângulo consultivo); e início do cluster de **nichos não-saúde** (prestadores, contadores,
-> manutenção/reforma).
+> ✅ **ONDA 3D concluída (23/06/2026):** publicados 5 artigos do cluster conteúdo/comparação/site —
+> `/blog/o-que-e-seo-local/`, `/blog/seo-ou-trafego-pago-empresa-local/`,
+> `/blog/blog-vale-a-pena-empresa-local/`, `/blog/como-criar-paginas-de-servico-que-ranqueiam/` e
+> `/blog/como-melhorar-posicionamento-empresa-google/`. Tráfego pago tratado em tom consultivo
+> (a RCB não o vende como serviço principal). Blog passa a ter 18 artigos amplos/comerciais.
+>
+> **Próximo (ONDA 3E, a planejar — aguardando aprovação):** cluster de **nichos não-saúde** —
+> SEO para prestadores de serviço, contadores, empresas de manutenção e reformas, empresas locais
+> e profissionais liberais. Decidir entre artigos de blog e/ou fortalecer os hubs existentes
+> (`/para-comercios-locais/`, `/para-profissionais-liberais/`), sem criar páginas rasas.
 
 ---
 
