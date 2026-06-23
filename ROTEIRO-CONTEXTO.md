@@ -209,9 +209,16 @@ diferentes (consultoria, GBP, auditoria, site). #10 entra logo em seguida.
 > SEO local" (URL preservada, sem novo post). O post de clínicas
 > `/blog/google-meu-negocio-para-clinicas-passo-a-passo/` segue como aplicação nichada.
 >
-> **Próximo (ONDA 3C, a planejar):** "Como receber mais orçamentos pelo WhatsApp" (#9, conversão),
-> "SEO local demora quanto tempo" (#7) e início do cluster de nichos não-saúde (prestadores,
-> contadores, manutenção/reforma).
+> ✅ **ONDA 3C concluída (23/06/2026):** publicados `/blog/como-receber-orcamentos-whatsapp-site/`
+> (conversão → hub site-otimizado), `/blog/quanto-tempo-demora-seo-local/` (expectativa → hub
+> diagnóstico; genérico, com cross-link para o recorte de clínicas) e
+> `/blog/erros-que-impedem-empresa-aparecer-no-google/` (checklist de erros → hubs auditoria +
+> consultoria, diferenciado do "por que não aparece").
+>
+> **Próximo (ONDA 3D, a planejar):** "Blog ainda vale a pena para empresa local?" e "Como criar
+> páginas de serviço que ranqueiam" (alimentam conteúdo e site); "SEO ou tráfego pago" (confirmar
+> ângulo consultivo); e início do cluster de **nichos não-saúde** (prestadores, contadores,
+> manutenção/reforma).
 
 ---
 
