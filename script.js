@@ -215,27 +215,44 @@ if (form) {
 // DROPDOWN "Para você"
 // ============================================================
 (function () {
-  const dropToggle = document.querySelector('.nav-dropdown-toggle');
-  const dropMenu   = document.querySelector('.nav-dropdown-menu');
-  if (!dropToggle || !dropMenu) return;
+  const groups = [];
+  document.querySelectorAll('.nav-nicho-group').forEach(function (group) {
+    const dropToggle = group.querySelector('.nav-dropdown-toggle');
+    const dropMenu   = group.querySelector('.nav-dropdown-menu');
+    if (!dropToggle || !dropMenu) return;
+    groups.push({ dropToggle: dropToggle, dropMenu: dropMenu });
+  });
+  if (!groups.length) return;
 
-  dropToggle.addEventListener('click', function (e) {
-    e.stopPropagation();
-    const isOpen = dropToggle.getAttribute('aria-expanded') === 'true';
-    dropToggle.setAttribute('aria-expanded', String(!isOpen));
-    dropMenu.classList.toggle('open', !isOpen);
+  function closeAll(except) {
+    groups.forEach(function (g) {
+      if (g === except) return;
+      g.dropToggle.setAttribute('aria-expanded', 'false');
+      g.dropMenu.classList.remove('open');
+    });
+  }
+
+  groups.forEach(function (g) {
+    g.dropToggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      const isOpen = g.dropToggle.getAttribute('aria-expanded') === 'true';
+      closeAll(g);
+      g.dropToggle.setAttribute('aria-expanded', String(!isOpen));
+      g.dropMenu.classList.toggle('open', !isOpen);
+    });
+    g.dropMenu.querySelectorAll('.nav-dropdown-item').forEach(function (item) {
+      item.addEventListener('click', function () {
+        toggleMenu(false);
+      });
+    });
   });
 
   document.addEventListener('click', function (e) {
-    if (!dropToggle.contains(e.target) && !dropMenu.contains(e.target)) {
-      dropToggle.setAttribute('aria-expanded', 'false');
-      dropMenu.classList.remove('open');
-    }
-  });
-
-  dropMenu.querySelectorAll('.nav-dropdown-item').forEach(function (item) {
-    item.addEventListener('click', function () {
-      toggleMenu(false);
+    groups.forEach(function (g) {
+      if (!g.dropToggle.contains(e.target) && !g.dropMenu.contains(e.target)) {
+        g.dropToggle.setAttribute('aria-expanded', 'false');
+        g.dropMenu.classList.remove('open');
+      }
     });
   });
 })();
