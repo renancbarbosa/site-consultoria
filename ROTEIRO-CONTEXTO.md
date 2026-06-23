@@ -198,6 +198,12 @@ Diferencial secundário: `/automacao-de-processos/`. Prova social: `/cases/` (1 
 DOR (empresa/site não aparece), Maps e a comparação site×Instagram, alimentando 3 páginas-dinheiro
 diferentes (consultoria, GBP, auditoria, site). #10 entra logo em seguida.
 
+> ✅ **ONDA 3A concluída (23/06/2026):** os 4 artigos do lote inicial foram publicados —
+> `/blog/por-que-minha-empresa-nao-aparece-no-google/`, `/blog/como-aparecer-no-google-maps/`,
+> `/blog/por-que-meu-site-nao-aparece-no-google/` e `/blog/site-ou-instagram-para-empresa-local/`.
+> Próximo lote (ONDA 3B): #10 (otimizar o Perfil), #3 (GMN não aparece), #5 (site indexado) e a
+> ampliação do post de preço (#6, resolvendo a canibalização).
+
 ---
 
 ## 6. Clusters (hubs por intenção)
