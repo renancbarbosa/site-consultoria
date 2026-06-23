@@ -4,3 +4,8 @@
 /privacidade.html /privacidade/ 301
 /blog/como-aparecer-google-clinica-estetica-goiania.html /blog/como-aparecer-google-clinica-estetica-goiania/ 301
 /blog/por-que-minha-clinica-odontologica-nao-aparece-no-google.html /blog/por-que-minha-clinica-odontologica-nao-aparece-no-google/ 301
+# Diagnostico: renomeado de /diagnostico-gratuito/ para /diagnostico-presenca-digital/
+/diagnostico-gratuito/ /diagnostico-presenca-digital/ 301
+/diagnostico-gratuito /diagnostico-presenca-digital/ 301
+/diagnostico-gratuito/exemplo/ /diagnostico-presenca-digital/exemplo/ 301
+/diagnostico-gratuito/* /diagnostico-presenca-digital/:splat 301

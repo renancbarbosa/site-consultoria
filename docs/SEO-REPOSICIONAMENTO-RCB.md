@@ -61,8 +61,8 @@ Legenda: **MANTER** (URL e papel preservados) · **CRIAR** (página nova) · **R
 | `/seo-local-goiania/` | **MANTER** = página local da solução na cidade | Papel: "SEO local Goiânia" (serviço na cidade). |
 | `/google-meu-negocio-para-clinicas/` | **MANTER** (ativo de saúde) | NÃO transformar em genérica. Vai linkar para a futura `/google-perfil-empresa/` e vice-versa. |
 | `/site-para-clinica/` | **MANTER** (ativo de saúde) | NÃO transformar em genérica. Vira aplicação da futura página genérica de site. |
-| `/diagnostico-gratuito/` | **DEPOIS** (decisão de renomear) | Ver §4.3 — tendência: renomear para `/diagnostico-presenca-digital/` com 301. |
-| `/diagnostico-gratuito/exemplo/` | **DEPOIS** (segue o diagnóstico) | Se renomear o pai, este vira `/diagnostico-presenca-digital/exemplo/` com 301. |
+| `/diagnostico-gratuito/` | ✅ **RENOMEADO 301** → `/diagnostico-presenca-digital/` (ONDA 2B) | Reposicionado como "Diagnóstico de Presença Digital". Redirect 301 no `_redirects`. |
+| `/diagnostico-gratuito/exemplo/` | ✅ **MOVIDO 301** → `/diagnostico-presenca-digital/exemplo/` (ONDA 2B) | Página `noindex`, movida junto via `git mv`. |
 | `/automacao-de-processos/` | **MANTER** (rebaixada) | Diferencial secundário, fora do menu principal. |
 | `/cases/` | **MANTER** | Prova social (1 case hoje). |
 | `/para-advogados/` | **DEPOIS** (manter vs. `/seo-para-advogados/`) | Recomendação em §4.3. Por ora mantida. |
@@ -72,6 +72,11 @@ Legenda: **MANTER** (URL e papel preservados) · **CRIAR** (página nova) · **R
 | `/sobre/` · `/contato/` · `/privacidade/` · `/cookies/` · `/blog/` + artigos | **MANTER** | — |
 
 ### 4.2 Páginas-dinheiro a CRIAR (ONDA 2)
+
+> ✅ **ONDA 2A executada:** `/auditoria-seo/`, `/google-perfil-empresa/`, `/site-otimizado-para-seo/`,
+> `/conteudo-para-seo/` e `/acompanhamento-seo/` criadas. ✅ **ONDA 2B executada:**
+> `/diagnostico-presenca-digital/` (renomeação do diagnóstico). Pendente: wiring no menu global
+> (dropdown "Serviços") + interlinking a partir das páginas antigas (home/rodapé) — ONDA 3.
 
 | Nova URL | Papel | Liga-se a |
 |----------|-------|-----------|
@@ -87,12 +92,12 @@ Legenda: **MANTER** (URL e papel preservados) · **CRIAR** (página nova) · **R
 
 ### 4.3 Decisões adiadas (precisam do seu OK antes de executar)
 
-**A) `/diagnostico-gratuito/` → `/diagnostico-presenca-digital/`?**
-Recomendação: **renomear com 301** (criar a nova, redirecionar a antiga), porque "diagnóstico de
-presença digital" é mais profissional, mais claro e menos "isca grátis". Antes de executar, será
-apresentado o pacote completo: está no sitemap (sim), links internos que apontam para ela (vários
-CTAs na home e no rodapé de todas as páginas), tratamento de `/exemplo/`, linha do `_redirects` e
-lista de links a atualizar. **Não executado na ONDA 1.**
+**A) `/diagnostico-gratuito/` → `/diagnostico-presenca-digital/`?** ✅ **EXECUTADO na ONDA 2B.**
+Pasta renomeada via `git mv` (index + `/exemplo/`). Redirects 301 no `_redirects` (4 linhas,
+incluindo `*`/`:splat`). Todos os `href="/diagnostico-gratuito/"` (159) trocados, link de `/exemplo/`
+ajustado, `sitemap.xml` e `llms.txt` atualizados, página reposicionada como "Diagnóstico de Presença
+Digital" (análise inicial e gratuita). Rótulo do menu mantido como "Diagnóstico gratuito" (apelo de
+conversão), apontando para a nova URL.
 
 **B) `/para-advogados/` → `/seo-para-advogados/`?**
 Três opções: (A) manter `/para-advogados/`; (B) criar `/seo-para-advogados/` + 301; (C) apenas
