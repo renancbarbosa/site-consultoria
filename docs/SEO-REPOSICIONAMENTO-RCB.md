@@ -145,16 +145,52 @@ títulos/metas/canonical antes de pensar em consolidação. **Sem redirecionamen
 nova, nenhum commit, nenhum push. As páginas-dinheiro novas e a renomeação do diagnóstico ficam
 para a ONDA 2 — assim o menu é reescrito uma única vez já apontando para páginas reais.
 
-## 7. Próximos passos (ONDA 2)
+## 7. Histórico de execução das ondas
 
-1. Aprovar o mapa de URLs (§4.2 e §4.3), em especial a renomeação do diagnóstico.
-2. Criar as páginas-dinheiro: `/google-perfil-empresa/`, `/site-otimizado-para-seo/`,
-   `/auditoria-seo/`, `/conteudo-para-seo/`, `/acompanhamento-seo/` (e `/diagnostico-presenca-digital/`
-   se aprovado).
-3. Atualizar menu (adicionar dropdown "Serviços" com as novas páginas), sitemap, canonical,
-   breadcrumbs, schema e interlinking.
-4. Atualizar `ROTEIRO-CONTEXTO.md` para refletir o eixo amplo.
+| Onda | Commit | O que entrou |
+|------|--------|--------------|
+| ONDA 1 | `076ead5` | Reposiciona home e menu (eixo amplo, saúde como nicho) |
+| ONDA 2A | `a1825c4` | 5 páginas-dinheiro de serviço |
+| ONDA 2B | `750e1cd` | Renomeia diagnóstico → `/diagnostico-presenca-digital/` com 301 |
+| ONDA 2C | `f5c1286` | Menu "Serviços", rodapé e interlinking das páginas-dinheiro |
+| ONDA 2D | *(docs)* | Atualiza `ROTEIRO-CONTEXTO.md` (eixo amplo) e este checklist |
+
+**Push/deploy:** feito em 23/06/2026 (`b6dd007..f5c1286 → main`). Cloudflare Pages publicou sem erro.
+
+## 8. Checklist pós-deploy (validado em produção — 23/06/2026)
+
+### 8.1 URLs novas publicadas (todas 200 em produção)
+- `/diagnostico-presenca-digital/` · `/diagnostico-presenca-digital/exemplo/`
+- `/auditoria-seo/` · `/google-perfil-empresa/` · `/site-otimizado-para-seo/`
+- `/conteudo-para-seo/` · `/acompanhamento-seo/`
+
+### 8.2 Redirects 301 confirmados em produção
+- `/diagnostico-gratuito/` → `/diagnostico-presenca-digital/` ✅ 301
+- `/diagnostico-gratuito/exemplo/` → `/diagnostico-presenca-digital/exemplo/` ✅ 301
+- Regras no `_redirects` (Cloudflare Pages): mãe com/sem barra + `/exemplo/` + `*`/`:splat`.
+
+### 8.3 Sitemap / llms / links
+- `sitemap.xml`: 6 URLs novas presentes; antiga `/diagnostico-gratuito/` removida. ✅
+- `llms.txt`: atualizado com as páginas-dinheiro e a nova URL do diagnóstico. ✅
+- Links internos: **0 quebrados** (2.183 verificados em 45 páginas).
+
+### 8.4 Ações pendentes no Google Search Console (fazer quando possível)
+- [ ] **Inspecionar e solicitar indexação** de `/diagnostico-presenca-digital/` e das 5 páginas-dinheiro novas.
+- [ ] **Inspecionar `/diagnostico-gratuito/`** para confirmar que o Google registra o **301**.
+- [ ] **Reenviar o sitemap** (`https://rcbseo.com.br/sitemap.xml`) para acelerar a descoberta.
+- [ ] Acompanhar, nas semanas seguintes, se a URL antiga sai do índice e a nova entra.
+
+### 8.5 Próximos passos (ONDA 3 — conteúdo)
+1. Produzir o **primeiro lote** de artigos amplos/comerciais (ver `ROTEIRO-CONTEXTO.md` §5).
+   Lote inicial recomendado: #1 "Por que minha empresa não aparece no Google?", #2 "Como aparecer
+   no Google Maps?", #4 "Por que meu site não aparece no Google?", #8 "Site ou Instagram para
+   empresa local?".
+2. **Resolver canibalização de preço:** ampliar `/blog/quanto-custa-consultoria-seo-local/` como
+   genérico em vez de criar um post novo de "quanto custa SEO local".
+3. Interligar cada novo artigo à sua página-dinheiro (hub do cluster) + diagnóstico/contato.
+4. (Opcional, cosmético) Padronizar os dois `id="diagnostico-gratuito"` (âncoras de seção em
+   `/para-comercios-locais/` e `/para-profissionais-liberais/`) para `id="cta-diagnostico"`.
 
 ---
 
-*Documento de planejamento e registro. A ONDA 1 alterou a home e o menu; nenhum commit foi feito.*
+*Documento de planejamento e registro. Reflete o estado publicado em produção em 23/06/2026.*
