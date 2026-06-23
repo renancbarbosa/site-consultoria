@@ -34,6 +34,10 @@
 - Como aparecer no Google Maps: https://rcbseo.com.br/blog/como-aparecer-no-google-maps/ — O que decide o ranqueamento no Maps e o passo a passo para aparecer melhor.
 - Por que meu site não aparece no Google: https://rcbseo.com.br/blog/por-que-meu-site-nao-aparece-no-google/ — Diferença entre estar no ar e indexado, causas e como resolver a indexação.
 - Site ou Instagram para empresa local: https://rcbseo.com.br/blog/site-ou-instagram-para-empresa-local/ — O papel de cada canal e como decidir o próximo passo para gerar contatos.
+- Como otimizar o Google Perfil da Empresa: https://rcbseo.com.br/blog/como-otimizar-google-perfil-empresa/ — Checklist de otimização do perfil (categorias, serviços, fotos, avaliações, posts, NAP).
+- Google Meu Negócio não aparece: o que pode ser?: https://rcbseo.com.br/blog/google-meu-negocio-nao-aparece/ — Causas de um perfil não aparecer no Maps (verificação, suspensão, categoria, distância) e como resolver.
+- Como saber se meu site está indexado no Google: https://rcbseo.com.br/blog/como-saber-se-meu-site-esta-indexado/ — Comando site:, Search Console, sitemap, canonical e noindex para verificar a indexação.
+- Quanto custa SEO local: https://rcbseo.com.br/blog/quanto-custa-consultoria-seo-local/ — Fatores que definem o preço do SEO local e quando o investimento faz sentido.
 - Como aparecer no Google quando alguém procura clínica de estética em Goiânia: https://rcbseo.com.br/blog/como-aparecer-google-clinica-estetica-goiania/ — Guia prático para clínicas de estética ganharem visibilidade no Google e no Maps.
 - Por que minha clínica odontológica não aparece no Google: https://rcbseo.com.br/blog/por-que-minha-clinica-odontologica-nao-aparece-no-google/ — Causas comuns de baixa visibilidade de clínicas odontológicas e como corrigir.
 

@@ -201,8 +201,17 @@ diferentes (consultoria, GBP, auditoria, site). #10 entra logo em seguida.
 > ✅ **ONDA 3A concluída (23/06/2026):** os 4 artigos do lote inicial foram publicados —
 > `/blog/por-que-minha-empresa-nao-aparece-no-google/`, `/blog/como-aparecer-no-google-maps/`,
 > `/blog/por-que-meu-site-nao-aparece-no-google/` e `/blog/site-ou-instagram-para-empresa-local/`.
-> Próximo lote (ONDA 3B): #10 (otimizar o Perfil), #3 (GMN não aparece), #5 (site indexado) e a
-> ampliação do post de preço (#6, resolvendo a canibalização).
+>
+> ✅ **ONDA 3B concluída (23/06/2026):** publicados `/blog/como-otimizar-google-perfil-empresa/`
+> (solução/checklist), `/blog/google-meu-negocio-nao-aparece/` (dor) e
+> `/blog/como-saber-se-meu-site-esta-indexado/` (solução). A canibalização de preço (#6) foi
+> resolvida **ampliando** `/blog/quanto-custa-consultoria-seo-local/` para o genérico "quanto custa
+> SEO local" (URL preservada, sem novo post). O post de clínicas
+> `/blog/google-meu-negocio-para-clinicas-passo-a-passo/` segue como aplicação nichada.
+>
+> **Próximo (ONDA 3C, a planejar):** "Como receber mais orçamentos pelo WhatsApp" (#9, conversão),
+> "SEO local demora quanto tempo" (#7) e início do cluster de nichos não-saúde (prestadores,
+> contadores, manutenção/reforma).
 
 ---
 
