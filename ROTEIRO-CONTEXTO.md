@@ -221,10 +221,18 @@ diferentes (consultoria, GBP, auditoria, site). #10 entra logo em seguida.
 > `/blog/como-melhorar-posicionamento-empresa-google/`. Tráfego pago tratado em tom consultivo
 > (a RCB não o vende como serviço principal). Blog passa a ter 18 artigos amplos/comerciais.
 >
-> **Próximo (ONDA 3E, a planejar — aguardando aprovação):** cluster de **nichos não-saúde** —
-> SEO para prestadores de serviço, contadores, empresas de manutenção e reformas, empresas locais
-> e profissionais liberais. Decidir entre artigos de blog e/ou fortalecer os hubs existentes
-> (`/para-comercios-locais/`, `/para-profissionais-liberais/`), sem criar páginas rasas.
+> ✅ **ONDA 3E concluída (23/06/2026):** cluster de **nichos não-saúde** publicado como **artigos de
+> blog** (decisão do Renan: não criar páginas `/seo-para-*` dedicadas agora, para evitar páginas
+> rasas e canibalização com os hubs `/para-comercios-locais/` e `/para-profissionais-liberais/`).
+> Os artigos testam demanda, alimentam os hubs e reforçam o eixo amplo. Publicados:
+> `/blog/seo-para-prestadores-de-servico/` (operacional → hub profissionais liberais + consultoria),
+> `/blog/seo-para-contadores/` (autoridade → consultoria + conteúdo),
+> `/blog/seo-para-manutencao-e-reformas/` (orçamento/portfólio → comércios locais + consultoria),
+> `/blog/seo-para-empresas-locais/` (guia amplo → comércios locais + consultoria) e
+> `/blog/seo-para-profissionais-liberais/` (autoridade/ética → hub profissionais liberais + consultoria).
+> Diferenciação explícita **prestador de serviço operacional × profissional liberal** feita nos dois
+> artigos, com cross-link entre eles, para evitar canibalização. Blog passa a ter 23 artigos
+> amplos/comerciais. Nenhuma URL de hub foi alterada.
 
 ---
 
