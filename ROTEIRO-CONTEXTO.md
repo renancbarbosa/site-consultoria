@@ -275,6 +275,21 @@ diferentes (consultoria, GBP, auditoria, site). #10 entra logo em seguida.
 > condicional para `/blog/como-acompanhar-seo-local-evoluindo/` (inexistente) foi omitido, sem link
 > quebrado. Blog passa a ter 40 artigos amplos/comerciais. Nenhuma página-dinheiro ou URL antiga
 > alterada.
+>
+> ✅ **ONDA 3I concluída (24/06/2026):** cluster **operacional/comercial** — 7 artigos:
+> `/blog/usar-avaliacoes-google-confianca-conversao/` (estratégia de avaliações → Google Perfil),
+> `/blog/responder-avaliacoes-google-sem-parecer-automatico/` (como responder, genérico → Google
+> Perfil; cruza com o recorte de clínicas), `/blog/quais-servicos-merecem-pagina-propria/` (critério
+> de decisão → site otimizado), `/blog/duvidas-frequentes-em-conteudo-seo/` (método de conteúdo →
+> conteúdo para SEO), `/blog/erros-no-whatsapp-que-perdem-orcamento/` (conversão → site +
+> diagnóstico), `/blog/como-melhorar-pagina-de-contato/` (página de contato → site otimizado) e
+> `/blog/como-acompanhar-seo-local-evoluindo/` (métricas/evolução → acompanhamento). Esta última
+> fechou a ponta solta da ONDA 3H: foi adicionado um cross-link contextual para ela no artigo
+> `/blog/site-precisa-acompanhamento-depois-de-publicado/`. Diferenciações: avaliações (usar × responder),
+> "quais serviços merecem página" (decisão) × "quais páginas ter" (3G) × "como criar página";
+> "dúvidas em conteúdo" (método) × "blog vale a pena" (decisão); "erros no WhatsApp" e "página de
+> contato" cruzados com "integrar canais" e "receber orçamentos". Blog passa a ter 47 artigos
+> amplos/comerciais. Única alteração em URL antiga: o cross-link autorizado no artigo da 3H.
 
 ---
 
