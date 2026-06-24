@@ -328,6 +328,21 @@ diferentes (consultoria, GBP, auditoria, site). #10 entra logo em seguida.
 > guia adicionado **apenas no topo do `/blog/`** (rodapé global e menu principal ficam para a 4E,
 > conforme decisão). Atualizados `sitemap.xml` (nova URL, priority 0.8) e `llms.txt` (guia como URL
 > importante). Sem artigos/serviços novos, sem redirects, sem Search Console.
+>
+> ✅ **ONDA 4D concluída (24/06/2026):** reforço de argumento (texto, não listas de links) em 3
+> páginas-âncora, com **um parágrafo curto contextual** integrado a uma seção existente de cada uma
+> (sem competir com o bloco "Conteúdos relacionados" da 4A, sem mini-seção nova):
+> **`/diagnostico-presenca-digital/`** (seção "Como funciona") — diagnóstico como ponto de partida
+> antes de refazer site/perfil ou contratar, com links para `o-que-e-diagnostico-presenca-digital`,
+> `empresa-perdendo-clientes-no-google` e `o-que-analisar-antes-de-contratar-seo`;
+> **`/site-otimizado-para-seo/`** (seção "O problema") — ferramenta importa, estratégia importa mais
+> (sem atacar Wix/WordPress), com links para `site-wix-wordpress-ou-site-otimizado-seo`,
+> `site-barato-empresa-local-vale-a-pena`, `site-bonito-nao-aparece-no-google` e
+> `site-precisa-acompanhamento-depois-de-publicado`;
+> **`/acompanhamento-seo/`** (seção "O problema") — acompanhamento como evolução contínua, não
+> mensalidade forçada, com links para `site-precisa-acompanhamento-depois-de-publicado`,
+> `como-acompanhar-seo-local-evoluindo` e `quanto-custa-manter-site-otimizado-seo`. `lastmod` das 3
+> páginas em 2026-06-24. `llms.txt` não alterado (sem motivo). Sem menu/rodapé/redirects/Search Console.
 
 ---
 
