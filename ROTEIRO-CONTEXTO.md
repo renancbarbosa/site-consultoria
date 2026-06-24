@@ -233,6 +233,20 @@ diferentes (consultoria, GBP, auditoria, site). #10 entra logo em seguida.
 > Diferenciação explícita **prestador de serviço operacional × profissional liberal** feita nos dois
 > artigos, com cross-link entre eles, para evitar canibalização. Blog passa a ter 23 artigos
 > amplos/comerciais. Nenhuma URL de hub foi alterada.
+>
+> ✅ **ONDA 3F concluída (23/06/2026):** cluster de **contratação, decisão e conversão** (fundo de
+> funil) publicado — 5 artigos:
+> `/blog/como-escolher-consultoria-seo-local/` (escolha do fornecedor → consultoria + diagnóstico),
+> `/blog/o-que-analisar-antes-de-contratar-seo/` (check interno antes de contratar → diagnóstico +
+> auditoria), `/blog/como-funciona-auditoria-seo-na-pratica/` (processo da auditoria → hub auditoria),
+> `/blog/checklist-presenca-digital-empresa-local/` (checklist-ponte → diagnóstico) e
+> `/blog/vale-a-pena-seo-para-pequena-empresa/` (objeção de investimento, versão ampla → consultoria
+> + diagnóstico). Diferenciações de canibalização aplicadas: **#1 (escolher fornecedor) × #2 (check
+> no próprio negócio)** com cross-link entre si; **#5 (pequena empresa, amplo)** cruzado com
+> "fazer sozinho ou contratar" (execução) e "clínica pequena" (recorte de saúde), sem duplicar
+> intenção. Temas "consultor × agência" e "transformar visitas em orçamento" tratados apenas por
+> cross-link para artigos existentes (não criados de novo). Blog passa a ter 28 artigos
+> amplos/comerciais. Nenhuma página-dinheiro ou URL antiga alterada.
 
 ---
 
