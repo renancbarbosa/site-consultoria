@@ -229,6 +229,35 @@
       white-space: nowrap;
     }
     .blog-card:hover .blog-card-link { gap: 8px; }
+
+    /* Sumário de seções (TOC) */
+    .blog-toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 8px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid rgba(201,168,76,0.12);
+    }
+    .blog-toc a {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: rgba(255,255,255,0.035);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 100px;
+      padding: 8px 16px;
+      transition: color var(--transition), border-color var(--transition), background var(--transition);
+    }
+    .blog-toc a:hover {
+      color: var(--gold);
+      border-color: rgba(201,168,76,0.4);
+      background: rgba(201,168,76,0.06);
+    }
+    /* Clusters do blog */
+    .blog-cluster { margin-top: 64px; scroll-margin-top: 90px; }
+    .blog-cluster:first-of-type { margin-top: 40px; }
+    @media (max-width: 640px) { .blog-cluster { margin-top: 48px; } }
   </style>
 </head>
 <body>
@@ -264,1088 +293,1107 @@
     <!-- GRID DE ARTIGOS -->
     <section class="blog-grid-section" aria-label="Artigos publicados">
       <div class="container">
-        <div class="blog-grid">
+        <nav class="blog-toc" aria-label="Seções do blog">
+          <a href="#comece-por-aqui">Comece por aqui</a>
+          <a href="#aparecer-no-google">Aparecer no Google</a>
+          <a href="#google-perfil">Google Perfil da Empresa</a>
+          <a href="#site-conversao-whatsapp">Site, conversão e WhatsApp</a>
+          <a href="#conteudo-autoridade">Conteúdo e autoridade</a>
+          <a href="#diagnostico-auditoria">Diagnóstico, auditoria e indexação</a>
+          <a href="#contratacao-preco-objecoes">Contratação, preço, prazo e objeções</a>
+          <a href="#nichos">Nichos e tipos de negócio</a>
+        </nav>
 
-          <a href="/blog/usar-avaliacoes-google-confianca-conversao/" class="blog-card" aria-label="Ler artigo: Como usar avaliações do Google para melhorar confiança e conversão">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Como usar avaliações do Google para melhorar confiança e conversão</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Reputação e conversão</span>
-              <h2 class="blog-card-title">Como usar avaliações do Google para melhorar confiança e conversão</h2>
-              <p class="blog-card-desc">Avaliação não é só nota: é prova social, redução de insegurança e apoio à decisão. Como usar as avaliações para converter mais.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-24">24 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
+        <div class="blog-cluster" id="comece-por-aqui">
+          <div class="section-header">
+            <div class="section-tag">Seção 1</div>
+            <h2 class="section-title">Comece por aqui</h2>
+          </div>
+          <div class="blog-grid">
+            <a href="/blog/o-que-e-seo-local/" class="blog-card" aria-label="Ler artigo: O que é SEO local e como ele ajuda empresas locais">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">O que é SEO local e como ele ajuda empresas locais</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">SEO local explicado</span>
+                          <h2 class="blog-card-title">O que é SEO local e como ele ajuda empresas locais</h2>
+                          <p class="blog-card-desc">SEO local explicado em linguagem simples para dono de negócio: o que é, do que é feito e como ajuda a ser encontrado no Google e no Maps.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/seo-para-empresas-locais/" class="blog-card" aria-label="Ler artigo: SEO para empresas locais: guia para ser encontrado na sua cidade">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">SEO para empresas locais: guia para ser encontrado na sua cidade</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">SEO local explicado</span>
+                          <h2 class="blog-card-title">SEO para empresas locais: guia para ser encontrado na sua cidade</h2>
+                          <p class="blog-card-desc">Guia amplo de SEO local para comércio, serviços, escritórios e oficinas: os 4 pilares para aparecer no Google e no Maps na própria cidade.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/por-que-minha-empresa-nao-aparece-no-google/" class="blog-card" aria-label="Ler artigo: Por que minha empresa não aparece no Google?">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Por que minha empresa não aparece no Google?</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Aparecer no Google</span>
+                          <h2 class="blog-card-title">Por que minha empresa não aparece no Google?</h2>
+                          <p class="blog-card-desc">As causas mais comuns de um negócio local ficar invisível no Google, como diagnosticar você mesmo e o que arrumar primeiro para ser encontrado.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/seo-ou-trafego-pago-empresa-local/" class="blog-card" aria-label="Ler artigo: SEO ou tráfego pago para empresa local?">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">SEO ou tráfego pago para empresa local?</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Comparação</span>
+                          <h2 class="blog-card-title">SEO ou tráfego pago para empresa local?</h2>
+                          <p class="blog-card-desc">O que cada um faz, quando usar anúncio, quando investir em SEO e por que os dois podem se complementar — sem demonizar nenhum.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/site-ou-instagram-para-empresa-local/" class="blog-card" aria-label="Ler artigo: Site ou Instagram para empresa local?">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Site ou Instagram para empresa local?</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Site x Instagram</span>
+                          <h2 class="blog-card-title">Site ou Instagram para empresa local?</h2>
+                          <p class="blog-card-desc">O papel de cada um na jornada do cliente, o que o Instagram não resolve sozinho e como decidir o próximo passo para gerar contatos.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+          </div>
+        </div>
 
-          <a href="/blog/responder-avaliacoes-google-sem-parecer-automatico/" class="blog-card" aria-label="Ler artigo: Como responder avaliações no Google sem parecer resposta automática">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Como responder avaliações no Google sem parecer resposta automática</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Reputação online</span>
-              <h2 class="blog-card-title">Como responder avaliações no Google sem parecer resposta automática</h2>
-              <p class="blog-card-desc">Como escrever respostas humanas, específicas e úteis — para qualquer negócio local. Sem cair no efeito robô do copia-e-cola.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-24">24 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
+        <div class="blog-cluster" id="aparecer-no-google">
+          <div class="section-header">
+            <div class="section-tag">Seção 2</div>
+            <h2 class="section-title">Aparecer no Google</h2>
+          </div>
+          <div class="blog-grid">
+            <a href="/blog/como-aparecer-no-google-maps/" class="blog-card" aria-label="Ler artigo: Como aparecer no Google Maps?">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Como aparecer no Google Maps?</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Google Perfil da Empresa</span>
+                          <h2 class="blog-card-title">Como aparecer no Google Maps?</h2>
+                          <p class="blog-card-desc">O que decide quem aparece no Maps e o passo a passo para o seu negócio aparecer melhor na busca por serviço + cidade.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/como-melhorar-posicionamento-empresa-google/" class="blog-card" aria-label="Ler artigo: Como melhorar o posicionamento da empresa no Google">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Como melhorar o posicionamento da empresa no Google</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Posicionamento</span>
+                          <h2 class="blog-card-title">Como melhorar o posicionamento da empresa no Google</h2>
+                          <p class="blog-card-desc">As frentes que realmente movem o ponteiro: diagnóstico, base técnica, Google Perfil, conteúdo, avaliações e consistência. Sem promessa de primeira página.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/empresa-perdendo-clientes-no-google/" class="blog-card" aria-label="Ler artigo: Como saber se sua empresa está perdendo clientes no Google">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Como saber se sua empresa está perdendo clientes no Google</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Aparecer no Google</span>
+                          <h2 class="blog-card-title">Como saber se sua empresa está perdendo clientes no Google</h2>
+                          <p class="blog-card-desc">Os sintomas da perda silenciosa: concorrentes na frente, perfil fraco, site sem páginas, poucas avaliações, contatos que não chegam e páginas não indexadas.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/oportunidades-seo-local-antes-dos-concorrentes/" class="blog-card" aria-label="Ler artigo: Como identificar oportunidades de SEO local antes dos concorrentes">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Como identificar oportunidades de SEO local antes dos concorrentes</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Estratégia</span>
+                          <h2 class="blog-card-title">Como identificar oportunidades de SEO local antes dos concorrentes</h2>
+                          <p class="blog-card-desc">Serviços sem página, buscas mal atendidas, lacunas no perfil, perguntas sem resposta e concorrentes com site fraco: onde sair na frente.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/erros-que-impedem-empresa-aparecer-no-google/" class="blog-card" aria-label="Ler artigo: Erros que impedem uma empresa local de aparecer no Google">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Erros que impedem uma empresa local de aparecer no Google</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Checklist de erros</span>
+                          <h2 class="blog-card-title">Erros que impedem uma empresa local de aparecer no Google</h2>
+                          <p class="blog-card-desc">Checklist dos erros mais comuns — perfil, categoria, NAP, site, avaliações — com a correção inicial de cada um, item por item.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+          </div>
+        </div>
 
-          <a href="/blog/quais-servicos-merecem-pagina-propria/" class="blog-card" aria-label="Ler artigo: Como saber quais serviços merecem uma página própria no site">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Como saber quais serviços merecem uma página própria no site</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Site que ranqueia e converte</span>
-              <h2 class="blog-card-title">Como saber quais serviços merecem uma página própria no site</h2>
-              <p class="blog-card-desc">O critério de decisão: busca específica, ticket, demanda local, dúvida recorrente, margem, diferenciação, intenção e concorrência.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-24">24 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
+        <div class="blog-cluster" id="google-perfil">
+          <div class="section-header">
+            <div class="section-tag">Seção 3</div>
+            <h2 class="section-title">Google Perfil da Empresa</h2>
+          </div>
+          <div class="blog-grid">
+            <a href="/blog/como-otimizar-google-perfil-empresa/" class="blog-card" aria-label="Ler artigo: Como otimizar o Google Perfil da Empresa">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Como otimizar o Google Perfil da Empresa</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Google Perfil da Empresa</span>
+                          <h2 class="blog-card-title">Como otimizar o Google Perfil da Empresa</h2>
+                          <p class="blog-card-desc">Checklist completo: categorias, serviços, fotos, avaliações, posts, NAP e site vinculado para aparecer melhor no Google Maps.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/google-meu-negocio-nao-aparece/" class="blog-card" aria-label="Ler artigo: Google Meu Negócio não aparece: o que pode ser?">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Google Meu Negócio não aparece: o que pode ser?</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Google Perfil da Empresa</span>
+                          <h2 class="blog-card-title">Google Meu Negócio não aparece: o que pode ser?</h2>
+                          <p class="blog-card-desc">Verificação, suspensão, categoria, distância, concorrência: as causas de um perfil sumir do Maps e como diagnosticar e resolver.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/google-perfil-atrapalhando-resultados/" class="blog-card" aria-label="Ler artigo: Como saber se o Google Perfil está atrapalhando seus resultados">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Como saber se o Google Perfil está atrapalhando seus resultados</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Google Perfil da Empresa</span>
+                          <h2 class="blog-card-title">Como saber se o Google Perfil está atrapalhando seus resultados</h2>
+                          <p class="blog-card-desc">Quando um perfil mal configurado prejudica: categoria errada, serviços incompletos, falta de fotos, avaliações sem resposta e dados inconsistentes.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/usar-avaliacoes-google-confianca-conversao/" class="blog-card" aria-label="Ler artigo: Como usar avaliações do Google para melhorar confiança e conversão">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Como usar avaliações do Google para melhorar confiança e conversão</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Reputação e conversão</span>
+                          <h2 class="blog-card-title">Como usar avaliações do Google para melhorar confiança e conversão</h2>
+                          <p class="blog-card-desc">Avaliação não é só nota: é prova social, redução de insegurança e apoio à decisão. Como usar as avaliações para converter mais.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-24">24 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/responder-avaliacoes-google-sem-parecer-automatico/" class="blog-card" aria-label="Ler artigo: Como responder avaliações no Google sem parecer resposta automática">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Como responder avaliações no Google sem parecer resposta automática</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Reputação online</span>
+                          <h2 class="blog-card-title">Como responder avaliações no Google sem parecer resposta automática</h2>
+                          <p class="blog-card-desc">Como escrever respostas humanas, específicas e úteis — para qualquer negócio local. Sem cair no efeito robô do copia-e-cola.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-24">24 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+          </div>
+        </div>
 
-          <a href="/blog/duvidas-frequentes-em-conteudo-seo/" class="blog-card" aria-label="Ler artigo: Como transformar dúvidas frequentes dos clientes em conteúdo para SEO">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Como transformar dúvidas frequentes dos clientes em conteúdo para SEO</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Conteúdo e autoridade</span>
-              <h2 class="blog-card-title">Como transformar dúvidas frequentes dos clientes em conteúdo para SEO</h2>
-              <p class="blog-card-desc">Método prático para virar as perguntas reais dos clientes em posts, FAQs e páginas de serviço que atraem busca e geram contato.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-24">24 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
+        <div class="blog-cluster" id="site-conversao-whatsapp">
+          <div class="section-header">
+            <div class="section-tag">Seção 4</div>
+            <h2 class="section-title">Site, conversão e WhatsApp</h2>
+          </div>
+          <div class="blog-grid">
+            <a href="/blog/paginas-que-empresa-local-precisa-no-site/" class="blog-card" aria-label="Ler artigo: Quais páginas uma empresa local precisa ter no site">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Quais páginas uma empresa local precisa ter no site</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Site que ranqueia e converte</span>
+                          <h2 class="blog-card-title">Quais páginas uma empresa local precisa ter no site</h2>
+                          <p class="blog-card-desc">O conjunto de páginas que o site precisa ter: home, serviços, página por serviço, páginas locais, sobre, contato, FAQ, blog e prova.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/como-criar-paginas-de-servico-que-ranqueiam/" class="blog-card" aria-label="Ler artigo: Como criar páginas de serviço que aparecem no Google">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Como criar páginas de serviço que aparecem no Google</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Páginas de serviço</span>
+                          <h2 class="blog-card-title">Como criar páginas de serviço que aparecem no Google</h2>
+                          <p class="blog-card-desc">A estrutura de uma página de serviço que o Google entende e o cliente confia: intenção, título, explicação, FAQ, CTA, provas reais e links internos.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/quais-servicos-merecem-pagina-propria/" class="blog-card" aria-label="Ler artigo: Como saber quais serviços merecem uma página própria no site">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Como saber quais serviços merecem uma página própria no site</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Site que ranqueia e converte</span>
+                          <h2 class="blog-card-title">Como saber quais serviços merecem uma página própria no site</h2>
+                          <p class="blog-card-desc">O critério de decisão: busca específica, ticket, demanda local, dúvida recorrente, margem, diferenciação, intenção e concorrência.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-24">24 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/integrar-site-google-perfil-whatsapp/" class="blog-card" aria-label="Ler artigo: Como integrar site, Google Perfil e WhatsApp para gerar orçamento">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Como integrar site, Google Perfil e WhatsApp para gerar orçamento</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Conversão</span>
+                          <h2 class="blog-card-title">Como integrar site, Google Perfil e WhatsApp para gerar orçamento</h2>
+                          <p class="blog-card-desc">A jornada como sistema único: o cliente encontra no Google, confia no perfil, entende no site e chama no WhatsApp — sem quebrar no meio.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/como-receber-orcamentos-whatsapp-site/" class="blog-card" aria-label="Ler artigo: Como receber mais orçamentos pelo WhatsApp usando o site">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Como receber mais orçamentos pelo WhatsApp usando o site</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Conversão</span>
+                          <h2 class="blog-card-title">Como receber mais orçamentos pelo WhatsApp usando o site</h2>
+                          <p class="blog-card-desc">Por que sites bonitos não geram contato e o que ajustar — botão de WhatsApp, CTAs, páginas de serviço e confiança — para transformar visita em orçamento.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/erros-no-whatsapp-que-perdem-orcamento/" class="blog-card" aria-label="Ler artigo: Erros no WhatsApp que fazem a empresa perder orçamento">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Erros no WhatsApp que fazem a empresa perder orçamento</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Conversão</span>
+                          <h2 class="blog-card-title">Erros no WhatsApp que fazem a empresa perder orçamento</h2>
+                          <p class="blog-card-desc">Demora, resposta genérica, falta de direcionamento, sumiço e ausência de CTA: os erros de atendimento que custam orçamento.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-24">24 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/como-melhorar-pagina-de-contato/" class="blog-card" aria-label="Ler artigo: Como melhorar a página de contato de uma empresa local">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Como melhorar a página de contato de uma empresa local</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Conversão</span>
+                          <h2 class="blog-card-title">Como melhorar a página de contato de uma empresa local</h2>
+                          <p class="blog-card-desc">A página de contato como ponto de conversão: telefone, WhatsApp, formulário, mapa, horários, áreas atendidas, CTA e confiança.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-24">24 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/site-bonito-nao-aparece-no-google/" class="blog-card" aria-label="Ler artigo: Site bonito mas não aparece no Google: o que pode estar errado?">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Site bonito mas não aparece no Google: o que pode estar errado?</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Auditoria e indexação</span>
+                          <h2 class="blog-card-title">Site bonito mas não aparece no Google: o que pode estar errado?</h2>
+                          <p class="blog-card-desc">Aparência não é SEO: indexação, conteúdo fraco, títulos ruins, falta de páginas de serviço, site pesado e pouca autoridade.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-24">24 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+          </div>
+        </div>
 
-          <a href="/blog/erros-no-whatsapp-que-perdem-orcamento/" class="blog-card" aria-label="Ler artigo: Erros no WhatsApp que fazem a empresa perder orçamento">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Erros no WhatsApp que fazem a empresa perder orçamento</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Conversão</span>
-              <h2 class="blog-card-title">Erros no WhatsApp que fazem a empresa perder orçamento</h2>
-              <p class="blog-card-desc">Demora, resposta genérica, falta de direcionamento, sumiço e ausência de CTA: os erros de atendimento que custam orçamento.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-24">24 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
+        <div class="blog-cluster" id="conteudo-autoridade">
+          <div class="section-header">
+            <div class="section-tag">Seção 5</div>
+            <h2 class="section-title">Conteúdo e autoridade</h2>
+          </div>
+          <div class="blog-grid">
+            <a href="/blog/blog-vale-a-pena-empresa-local/" class="blog-card" aria-label="Ler artigo: Blog ainda vale a pena para empresa local?">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Blog ainda vale a pena para empresa local?</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Conteúdo</span>
+                          <h2 class="blog-card-title">Blog ainda vale a pena para empresa local?</h2>
+                          <p class="blog-card-desc">Por que blog sem estratégia morreu, mas o blog estratégico continua sendo um ativo: captura buscas, apoia as páginas de serviço e cria autoridade.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/duvidas-frequentes-em-conteudo-seo/" class="blog-card" aria-label="Ler artigo: Como transformar dúvidas frequentes dos clientes em conteúdo para SEO">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Como transformar dúvidas frequentes dos clientes em conteúdo para SEO</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Conteúdo e autoridade</span>
+                          <h2 class="blog-card-title">Como transformar dúvidas frequentes dos clientes em conteúdo para SEO</h2>
+                          <p class="blog-card-desc">Método prático para virar as perguntas reais dos clientes em posts, FAQs e páginas de serviço que atraem busca e geram contato.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-24">24 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+          </div>
+        </div>
 
-          <a href="/blog/como-melhorar-pagina-de-contato/" class="blog-card" aria-label="Ler artigo: Como melhorar a página de contato de uma empresa local">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Como melhorar a página de contato de uma empresa local</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Conversão</span>
-              <h2 class="blog-card-title">Como melhorar a página de contato de uma empresa local</h2>
-              <p class="blog-card-desc">A página de contato como ponto de conversão: telefone, WhatsApp, formulário, mapa, horários, áreas atendidas, CTA e confiança.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-24">24 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
+        <div class="blog-cluster" id="diagnostico-auditoria">
+          <div class="section-header">
+            <div class="section-tag">Seção 6</div>
+            <h2 class="section-title">Diagnóstico, auditoria e indexação</h2>
+          </div>
+          <div class="blog-grid">
+            <a href="/blog/o-que-e-diagnostico-presenca-digital/" class="blog-card" aria-label="Ler artigo: O que é um Diagnóstico de Presença Digital?">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">O que é um Diagnóstico de Presença Digital?</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Presença digital</span>
+                          <h2 class="blog-card-title">O que é um Diagnóstico de Presença Digital?</h2>
+                          <p class="blog-card-desc">A oferta-âncora explicada: o que é, para quem serve e o que analisa — Google, site, perfil, conteúdo, concorrentes, indexação e conversão.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/como-funciona-auditoria-seo-na-pratica/" class="blog-card" aria-label="Ler artigo: Como funciona uma auditoria de SEO na prática">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Como funciona uma auditoria de SEO na prática</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Auditoria e indexação</span>
+                          <h2 class="blog-card-title">Como funciona uma auditoria de SEO na prática</h2>
+                          <p class="blog-card-desc">As etapas reais de uma auditoria: rastreamento, indexação, Search Console, títulos, canibalização, conteúdo, links internos e plano de ação.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/por-que-meu-site-nao-aparece-no-google/" class="blog-card" aria-label="Ler artigo: Por que meu site não aparece no Google?">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Por que meu site não aparece no Google?</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Auditoria e indexação</span>
+                          <h2 class="blog-card-title">Por que meu site não aparece no Google?</h2>
+                          <p class="blog-card-desc">A diferença entre estar no ar e estar indexado, as causas de um site invisível e como diagnosticar e resolver.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/como-saber-se-meu-site-esta-indexado/" class="blog-card" aria-label="Ler artigo: Como saber se meu site está indexado no Google?">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Como saber se meu site está indexado no Google?</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Auditoria e indexação</span>
+                          <h2 class="blog-card-title">Como saber se meu site está indexado no Google?</h2>
+                          <p class="blog-card-desc">Comando site:, Google Search Console, sitemap, canonical e noindex: como verificar a indexação e o que fazer quando há problema.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/o-que-analisar-antes-de-contratar-seo/" class="blog-card" aria-label="Ler artigo: O que analisar antes de contratar alguém para melhorar seu Google">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">O que analisar antes de contratar alguém para melhorar seu Google</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Contratação</span>
+                          <h2 class="blog-card-title">O que analisar antes de contratar alguém para melhorar seu Google</h2>
+                          <p class="blog-card-desc">O check no próprio negócio — site, perfil, indexação, avaliações, páginas e conversão — para chegar à conversa sabendo o que você tem.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/checklist-presenca-digital-empresa-local/" class="blog-card" aria-label="Ler artigo: Checklist de presença digital para empresas locais">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Checklist de presença digital para empresas locais</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Presença digital</span>
+                          <h2 class="blog-card-title">Checklist de presença digital para empresas locais</h2>
+                          <p class="blog-card-desc">Um checklist prático, ponto a ponto: site, Google Perfil, Maps, avaliações, páginas, WhatsApp, conteúdo, indexação e conversão.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/melhorar-site-atual-ou-fazer-um-novo/" class="blog-card" aria-label="Ler artigo: Posso melhorar meu site atual ou preciso fazer um novo?">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Posso melhorar meu site atual ou preciso fazer um novo?</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Decisão</span>
+                          <h2 class="blog-card-title">Posso melhorar meu site atual ou preciso fazer um novo?</h2>
+                          <p class="blog-card-desc">Os critérios para decidir: estrutura, tecnologia, velocidade, indexação, histórico e custo-benefício. Diagnostique antes de refazer.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-24">24 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+          </div>
+        </div>
 
-          <a href="/blog/como-acompanhar-seo-local-evoluindo/" class="blog-card" aria-label="Ler artigo: Como acompanhar se o SEO local está evoluindo">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Como acompanhar se o SEO local está evoluindo</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Acompanhamento de SEO</span>
-              <h2 class="blog-card-title">Como acompanhar se o SEO local está evoluindo</h2>
-              <p class="blog-card-desc">Os sinais certos — impressões, cliques, posições, ações no Google Perfil, ligações, rotas e orçamentos — sem ansiedade por resultado imediato.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-24">24 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
+        <div class="blog-cluster" id="contratacao-preco-objecoes">
+          <div class="section-header">
+            <div class="section-tag">Seção 7</div>
+            <h2 class="section-title">Contratação, preço, prazo e objeções</h2>
+          </div>
+          <div class="blog-grid">
+            <a href="/blog/como-escolher-consultoria-seo-local/" class="blog-card" aria-label="Ler artigo: Como escolher uma consultoria de SEO local">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Como escolher uma consultoria de SEO local</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Contratação</span>
+                          <h2 class="blog-card-title">Como escolher uma consultoria de SEO local</h2>
+                          <p class="blog-card-desc">O que avaliar, quais perguntas fazer e os red flags para evitar ao contratar — começando pela maior delas, a promessa de primeira página.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/consultor-seo-ou-agencia-de-marketing-digital/" class="blog-card" aria-label="Ler artigo: Consultor de SEO ou agência de marketing digital: o que é melhor para clínicas e negócios locais?">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Consultor de SEO ou agência de marketing digital: o que é melhor para clínicas e negócios locais?</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Consultoria</span>
+                          <h2 class="blog-card-title">Consultor de SEO ou agência de marketing digital: o que é melhor para clínicas e negócios locais?</h2>
+                          <p class="blog-card-desc">A diferença entre contratar um consultor de SEO independente e uma agência de marketing digital, e o que faz mais sentido para clínicas, consultórios e negócios locais.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-21">21 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/consultor-seo-ou-fazer-sozinho-checklist/" class="blog-card" aria-label="Ler artigo: Consultor SEO ou fazer sozinho: checklist para decidir">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Consultor SEO ou fazer sozinho: checklist para decidir</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Consultoria</span>
+                          <h2 class="blog-card-title">Consultor SEO ou fazer sozinho: checklist para decidir</h2>
+                          <p class="blog-card-desc">Use este checklist prático para decidir se você deve contratar um consultor de SEO ou tentar fazer o SEO da sua clínica sozinho. Sem enrolação.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-21">21 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/vale-a-pena-contratar-consultor-de-seo-ou-fazer-sozinho/" class="blog-card" aria-label="Ler artigo: Vale a pena contratar um consultor de SEO ou fazer sozinho?">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Vale a pena contratar um consultor de SEO ou fazer sozinho?</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Consultoria</span>
+                          <h2 class="blog-card-title">Vale a pena contratar um consultor de SEO ou fazer sozinho?</h2>
+                          <p class="blog-card-desc">Quando vale a pena contratar um consultor de SEO e quando faz sentido fazer sozinho, com foco em clínicas, consultórios e negócios locais que querem aparecer no Google.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-21">21 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/vale-a-pena-seo-para-pequena-empresa/" class="blog-card" aria-label="Ler artigo: Vale a pena contratar SEO para pequena empresa?">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Vale a pena contratar SEO para pequena empresa?</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Investimento</span>
+                          <h2 class="blog-card-title">Vale a pena contratar SEO para pequena empresa?</h2>
+                          <p class="blog-card-desc">Quando o SEO faz sentido para um pequeno negócio, quando talvez não seja prioridade e o que muda conforme a sua base digital, prazo e investimento.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/como-saber-se-consultor-google-meu-negocio-e-bom/" class="blog-card" aria-label="Ler artigo: Como saber se um consultor de Google Meu Negócio é bom?">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Como saber se um consultor de Google Meu Negócio é bom?</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Google Meu Negócio</span>
+                          <h2 class="blog-card-title">Como saber se um consultor de Google Meu Negócio é bom?</h2>
+                          <p class="blog-card-desc">Os sinais que diferenciam um bom consultor de Google Meu Negócio de um amador: perguntas para fazer, o que ele deve entregar e os red flags para evitar.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-21">21 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/quanto-custa-consultoria-seo-local/" class="blog-card" aria-label="Ler artigo: Quanto custa SEO local? Fatores de preço e o que está incluso">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Quanto custa SEO local? Fatores de preço e o que está incluso</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Investimento</span>
+                          <h2 class="blog-card-title">Quanto custa SEO local? Fatores de preço e o que está incluso</h2>
+                          <p class="blog-card-desc">O que define o preço do SEO local, quais faixas o mercado pratica e quando o investimento vale a pena para negócios locais e profissionais de serviço.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/quanto-tempo-demora-seo-local/" class="blog-card" aria-label="Ler artigo: SEO local demora quanto tempo?">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">SEO local demora quanto tempo?</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Expectativa</span>
+                          <h2 class="blog-card-title">SEO local demora quanto tempo?</h2>
+                          <p class="blog-card-desc">Os fatores que definem o prazo do SEO local — situação inicial, concorrência, site, perfil e consistência — com uma linha do tempo realista, sem promessa de data.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/site-barato-empresa-local-vale-a-pena/" class="blog-card" aria-label="Ler artigo: Vale a pena fazer um site barato para empresa local?">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Vale a pena fazer um site barato para empresa local?</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Investimento</span>
+                          <h2 class="blog-card-title">Vale a pena fazer um site barato para empresa local?</h2>
+                          <p class="blog-card-desc">Quando um site simples basta e quando o barato sai caro: sem SEO, páginas genéricas, dificuldade de indexação, pouca conversão e retrabalho.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-24">24 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/site-wix-wordpress-ou-site-otimizado-seo/" class="blog-card" aria-label="Ler artigo: Site no Wix, WordPress ou site otimizado para SEO: qual a diferença?">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Site no Wix, WordPress ou site otimizado para SEO: qual a diferença?</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Comparação</span>
+                          <h2 class="blog-card-title">Site no Wix, WordPress ou site otimizado para SEO: qual a diferença?</h2>
+                          <p class="blog-card-desc">A diferença não está na ferramenta, e sim na estratégia: arquitetura, SEO técnico, conteúdo, páginas de serviço, indexação e conversão.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/site-precisa-acompanhamento-depois-de-publicado/" class="blog-card" aria-label="Ler artigo: Por que um site precisa de acompanhamento depois de publicado?">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Por que um site precisa de acompanhamento depois de publicado?</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Acompanhamento de SEO</span>
+                          <h2 class="blog-card-title">Por que um site precisa de acompanhamento depois de publicado?</h2>
+                          <p class="blog-card-desc">Publicar é o começo, não o fim: o Google muda, concorrentes se movem, páginas perdem desempenho e a conversão precisa ser cuidada.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-24">24 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/quanto-custa-manter-site-otimizado-seo/" class="blog-card" aria-label="Ler artigo: Quanto custa manter um site otimizado para SEO?">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Quanto custa manter um site otimizado para SEO?</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Investimento</span>
+                          <h2 class="blog-card-title">Quanto custa manter um site otimizado para SEO?</h2>
+                          <p class="blog-card-desc">O que entra na manutenção e a diferença entre hospedagem, domínio, manutenção técnica e acompanhamento de SEO. Sem inventar valores.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-24">24 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/como-acompanhar-seo-local-evoluindo/" class="blog-card" aria-label="Ler artigo: Como acompanhar se o SEO local está evoluindo">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Como acompanhar se o SEO local está evoluindo</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Acompanhamento de SEO</span>
+                          <h2 class="blog-card-title">Como acompanhar se o SEO local está evoluindo</h2>
+                          <p class="blog-card-desc">Os sinais certos — impressões, cliques, posições, ações no Google Perfil, ligações, rotas e orçamentos — sem ansiedade por resultado imediato.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-24">24 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+          </div>
+        </div>
 
-          <a href="/blog/site-wix-wordpress-ou-site-otimizado-seo/" class="blog-card" aria-label="Ler artigo: Site no Wix, WordPress ou site otimizado para SEO: qual a diferença?">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Site no Wix, WordPress ou site otimizado para SEO: qual a diferença?</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Comparação</span>
-              <h2 class="blog-card-title">Site no Wix, WordPress ou site otimizado para SEO: qual a diferença?</h2>
-              <p class="blog-card-desc">A diferença não está na ferramenta, e sim na estratégia: arquitetura, SEO técnico, conteúdo, páginas de serviço, indexação e conversão.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/site-barato-empresa-local-vale-a-pena/" class="blog-card" aria-label="Ler artigo: Vale a pena fazer um site barato para empresa local?">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Vale a pena fazer um site barato para empresa local?</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Investimento</span>
-              <h2 class="blog-card-title">Vale a pena fazer um site barato para empresa local?</h2>
-              <p class="blog-card-desc">Quando um site simples basta e quando o barato sai caro: sem SEO, páginas genéricas, dificuldade de indexação, pouca conversão e retrabalho.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-24">24 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/site-precisa-acompanhamento-depois-de-publicado/" class="blog-card" aria-label="Ler artigo: Por que um site precisa de acompanhamento depois de publicado?">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Por que um site precisa de acompanhamento depois de publicado?</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Acompanhamento de SEO</span>
-              <h2 class="blog-card-title">Por que um site precisa de acompanhamento depois de publicado?</h2>
-              <p class="blog-card-desc">Publicar é o começo, não o fim: o Google muda, concorrentes se movem, páginas perdem desempenho e a conversão precisa ser cuidada.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-24">24 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/melhorar-site-atual-ou-fazer-um-novo/" class="blog-card" aria-label="Ler artigo: Posso melhorar meu site atual ou preciso fazer um novo?">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Posso melhorar meu site atual ou preciso fazer um novo?</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Decisão</span>
-              <h2 class="blog-card-title">Posso melhorar meu site atual ou preciso fazer um novo?</h2>
-              <p class="blog-card-desc">Os critérios para decidir: estrutura, tecnologia, velocidade, indexação, histórico e custo-benefício. Diagnostique antes de refazer.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-24">24 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/site-bonito-nao-aparece-no-google/" class="blog-card" aria-label="Ler artigo: Site bonito mas não aparece no Google: o que pode estar errado?">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Site bonito mas não aparece no Google: o que pode estar errado?</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Auditoria e indexação</span>
-              <h2 class="blog-card-title">Site bonito mas não aparece no Google: o que pode estar errado?</h2>
-              <p class="blog-card-desc">Aparência não é SEO: indexação, conteúdo fraco, títulos ruins, falta de páginas de serviço, site pesado e pouca autoridade.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-24">24 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/quanto-custa-manter-site-otimizado-seo/" class="blog-card" aria-label="Ler artigo: Quanto custa manter um site otimizado para SEO?">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Quanto custa manter um site otimizado para SEO?</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Investimento</span>
-              <h2 class="blog-card-title">Quanto custa manter um site otimizado para SEO?</h2>
-              <p class="blog-card-desc">O que entra na manutenção e a diferença entre hospedagem, domínio, manutenção técnica e acompanhamento de SEO. Sem inventar valores.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-24">24 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/o-que-e-diagnostico-presenca-digital/" class="blog-card" aria-label="Ler artigo: O que é um Diagnóstico de Presença Digital?">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">O que é um Diagnóstico de Presença Digital?</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Presença digital</span>
-              <h2 class="blog-card-title">O que é um Diagnóstico de Presença Digital?</h2>
-              <p class="blog-card-desc">A oferta-âncora explicada: o que é, para quem serve e o que analisa — Google, site, perfil, conteúdo, concorrentes, indexação e conversão.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/empresa-perdendo-clientes-no-google/" class="blog-card" aria-label="Ler artigo: Como saber se sua empresa está perdendo clientes no Google">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Como saber se sua empresa está perdendo clientes no Google</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Aparecer no Google</span>
-              <h2 class="blog-card-title">Como saber se sua empresa está perdendo clientes no Google</h2>
-              <p class="blog-card-desc">Os sintomas da perda silenciosa: concorrentes na frente, perfil fraco, site sem páginas, poucas avaliações, contatos que não chegam e páginas não indexadas.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/google-perfil-atrapalhando-resultados/" class="blog-card" aria-label="Ler artigo: Como saber se o Google Perfil está atrapalhando seus resultados">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Como saber se o Google Perfil está atrapalhando seus resultados</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Google Perfil da Empresa</span>
-              <h2 class="blog-card-title">Como saber se o Google Perfil está atrapalhando seus resultados</h2>
-              <p class="blog-card-desc">Quando um perfil mal configurado prejudica: categoria errada, serviços incompletos, falta de fotos, avaliações sem resposta e dados inconsistentes.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/paginas-que-empresa-local-precisa-no-site/" class="blog-card" aria-label="Ler artigo: Quais páginas uma empresa local precisa ter no site">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Quais páginas uma empresa local precisa ter no site</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Site que ranqueia e converte</span>
-              <h2 class="blog-card-title">Quais páginas uma empresa local precisa ter no site</h2>
-              <p class="blog-card-desc">O conjunto de páginas que o site precisa ter: home, serviços, página por serviço, páginas locais, sobre, contato, FAQ, blog e prova.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/integrar-site-google-perfil-whatsapp/" class="blog-card" aria-label="Ler artigo: Como integrar site, Google Perfil e WhatsApp para gerar orçamento">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Como integrar site, Google Perfil e WhatsApp para gerar orçamento</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Conversão</span>
-              <h2 class="blog-card-title">Como integrar site, Google Perfil e WhatsApp para gerar orçamento</h2>
-              <p class="blog-card-desc">A jornada como sistema único: o cliente encontra no Google, confia no perfil, entende no site e chama no WhatsApp — sem quebrar no meio.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/oportunidades-seo-local-antes-dos-concorrentes/" class="blog-card" aria-label="Ler artigo: Como identificar oportunidades de SEO local antes dos concorrentes">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Como identificar oportunidades de SEO local antes dos concorrentes</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Estratégia</span>
-              <h2 class="blog-card-title">Como identificar oportunidades de SEO local antes dos concorrentes</h2>
-              <p class="blog-card-desc">Serviços sem página, buscas mal atendidas, lacunas no perfil, perguntas sem resposta e concorrentes com site fraco: onde sair na frente.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/como-escolher-consultoria-seo-local/" class="blog-card" aria-label="Ler artigo: Como escolher uma consultoria de SEO local">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Como escolher uma consultoria de SEO local</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Contratação</span>
-              <h2 class="blog-card-title">Como escolher uma consultoria de SEO local</h2>
-              <p class="blog-card-desc">O que avaliar, quais perguntas fazer e os red flags para evitar ao contratar — começando pela maior delas, a promessa de primeira página.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/o-que-analisar-antes-de-contratar-seo/" class="blog-card" aria-label="Ler artigo: O que analisar antes de contratar alguém para melhorar seu Google">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">O que analisar antes de contratar alguém para melhorar seu Google</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Contratação</span>
-              <h2 class="blog-card-title">O que analisar antes de contratar alguém para melhorar seu Google</h2>
-              <p class="blog-card-desc">O check no próprio negócio — site, perfil, indexação, avaliações, páginas e conversão — para chegar à conversa sabendo o que você tem.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/como-funciona-auditoria-seo-na-pratica/" class="blog-card" aria-label="Ler artigo: Como funciona uma auditoria de SEO na prática">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Como funciona uma auditoria de SEO na prática</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Auditoria e indexação</span>
-              <h2 class="blog-card-title">Como funciona uma auditoria de SEO na prática</h2>
-              <p class="blog-card-desc">As etapas reais de uma auditoria: rastreamento, indexação, Search Console, títulos, canibalização, conteúdo, links internos e plano de ação.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/checklist-presenca-digital-empresa-local/" class="blog-card" aria-label="Ler artigo: Checklist de presença digital para empresas locais">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Checklist de presença digital para empresas locais</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Presença digital</span>
-              <h2 class="blog-card-title">Checklist de presença digital para empresas locais</h2>
-              <p class="blog-card-desc">Um checklist prático, ponto a ponto: site, Google Perfil, Maps, avaliações, páginas, WhatsApp, conteúdo, indexação e conversão.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/vale-a-pena-seo-para-pequena-empresa/" class="blog-card" aria-label="Ler artigo: Vale a pena contratar SEO para pequena empresa?">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Vale a pena contratar SEO para pequena empresa?</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Investimento</span>
-              <h2 class="blog-card-title">Vale a pena contratar SEO para pequena empresa?</h2>
-              <p class="blog-card-desc">Quando o SEO faz sentido para um pequeno negócio, quando talvez não seja prioridade e o que muda conforme a sua base digital, prazo e investimento.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/seo-para-prestadores-de-servico/" class="blog-card" aria-label="Ler artigo: SEO para prestadores de serviço: como aparecer no Google">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">SEO para prestadores de serviço: como aparecer no Google</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">SEO por nicho</span>
-              <h2 class="blog-card-title">SEO para prestadores de serviço: como aparecer no Google</h2>
-              <p class="blog-card-desc">Eletricista, encanador, ar-condicionado, manutenção, chaveiro, dedetizadora: como aparecer no Google na hora em que o cliente precisa e receber mais chamados.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/seo-para-contadores/" class="blog-card" aria-label="Ler artigo: SEO para contadores: como atrair empresas pelo Google">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">SEO para contadores: como atrair empresas pelo Google</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">SEO por nicho</span>
-              <h2 class="blog-card-title">SEO para contadores: como atrair empresas pelo Google</h2>
-              <p class="blog-card-desc">Como o escritório contábil aparece no Google e atrai empresas e MEIs com perfil otimizado, conteúdo de autoridade e site que transmite credibilidade.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/seo-para-manutencao-e-reformas/" class="blog-card" aria-label="Ler artigo: SEO para empresas de manutenção e reformas">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">SEO para empresas de manutenção e reformas</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">SEO por nicho</span>
-              <h2 class="blog-card-title">SEO para empresas de manutenção e reformas</h2>
-              <p class="blog-card-desc">Reforma, pintura, marcenaria, energia solar, instalação e manutenção: como aparecer no Google com portfólio visual e receber mais pedidos de orçamento.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/seo-para-empresas-locais/" class="blog-card" aria-label="Ler artigo: SEO para empresas locais: guia para ser encontrado na sua cidade">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">SEO para empresas locais: guia para ser encontrado na sua cidade</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">SEO local explicado</span>
-              <h2 class="blog-card-title">SEO para empresas locais: guia para ser encontrado na sua cidade</h2>
-              <p class="blog-card-desc">Guia amplo de SEO local para comércio, serviços, escritórios e oficinas: os 4 pilares para aparecer no Google e no Maps na própria cidade.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/seo-para-profissionais-liberais/" class="blog-card" aria-label="Ler artigo: SEO para profissionais liberais: autoridade e clientes no Google">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">SEO para profissionais liberais: autoridade e clientes no Google</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">SEO por nicho</span>
-              <h2 class="blog-card-title">SEO para profissionais liberais: autoridade e clientes no Google</h2>
-              <p class="blog-card-desc">Consultores, arquitetos, fisioterapeutas, psicólogos e advogados: como construir autoridade no Google e atrair clientes que decidem por confiança.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/o-que-e-seo-local/" class="blog-card" aria-label="Ler artigo: O que é SEO local e como ele ajuda empresas locais">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">O que é SEO local e como ele ajuda empresas locais</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">SEO local explicado</span>
-              <h2 class="blog-card-title">O que é SEO local e como ele ajuda empresas locais</h2>
-              <p class="blog-card-desc">SEO local explicado em linguagem simples para dono de negócio: o que é, do que é feito e como ajuda a ser encontrado no Google e no Maps.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/seo-ou-trafego-pago-empresa-local/" class="blog-card" aria-label="Ler artigo: SEO ou tráfego pago para empresa local?">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">SEO ou tráfego pago para empresa local?</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Comparação</span>
-              <h2 class="blog-card-title">SEO ou tráfego pago para empresa local?</h2>
-              <p class="blog-card-desc">O que cada um faz, quando usar anúncio, quando investir em SEO e por que os dois podem se complementar — sem demonizar nenhum.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/blog-vale-a-pena-empresa-local/" class="blog-card" aria-label="Ler artigo: Blog ainda vale a pena para empresa local?">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Blog ainda vale a pena para empresa local?</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Conteúdo</span>
-              <h2 class="blog-card-title">Blog ainda vale a pena para empresa local?</h2>
-              <p class="blog-card-desc">Por que blog sem estratégia morreu, mas o blog estratégico continua sendo um ativo: captura buscas, apoia as páginas de serviço e cria autoridade.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/como-criar-paginas-de-servico-que-ranqueiam/" class="blog-card" aria-label="Ler artigo: Como criar páginas de serviço que aparecem no Google">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Como criar páginas de serviço que aparecem no Google</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Páginas de serviço</span>
-              <h2 class="blog-card-title">Como criar páginas de serviço que aparecem no Google</h2>
-              <p class="blog-card-desc">A estrutura de uma página de serviço que o Google entende e o cliente confia: intenção, título, explicação, FAQ, CTA, provas reais e links internos.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/como-melhorar-posicionamento-empresa-google/" class="blog-card" aria-label="Ler artigo: Como melhorar o posicionamento da empresa no Google">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Como melhorar o posicionamento da empresa no Google</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Posicionamento</span>
-              <h2 class="blog-card-title">Como melhorar o posicionamento da empresa no Google</h2>
-              <p class="blog-card-desc">As frentes que realmente movem o ponteiro: diagnóstico, base técnica, Google Perfil, conteúdo, avaliações e consistência. Sem promessa de primeira página.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/como-receber-orcamentos-whatsapp-site/" class="blog-card" aria-label="Ler artigo: Como receber mais orçamentos pelo WhatsApp usando o site">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Como receber mais orçamentos pelo WhatsApp usando o site</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Conversão</span>
-              <h2 class="blog-card-title">Como receber mais orçamentos pelo WhatsApp usando o site</h2>
-              <p class="blog-card-desc">Por que sites bonitos não geram contato e o que ajustar — botão de WhatsApp, CTAs, páginas de serviço e confiança — para transformar visita em orçamento.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/quanto-tempo-demora-seo-local/" class="blog-card" aria-label="Ler artigo: SEO local demora quanto tempo?">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">SEO local demora quanto tempo?</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Expectativa</span>
-              <h2 class="blog-card-title">SEO local demora quanto tempo?</h2>
-              <p class="blog-card-desc">Os fatores que definem o prazo do SEO local — situação inicial, concorrência, site, perfil e consistência — com uma linha do tempo realista, sem promessa de data.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/erros-que-impedem-empresa-aparecer-no-google/" class="blog-card" aria-label="Ler artigo: Erros que impedem uma empresa local de aparecer no Google">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Erros que impedem uma empresa local de aparecer no Google</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Checklist de erros</span>
-              <h2 class="blog-card-title">Erros que impedem uma empresa local de aparecer no Google</h2>
-              <p class="blog-card-desc">Checklist dos erros mais comuns — perfil, categoria, NAP, site, avaliações — com a correção inicial de cada um, item por item.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/como-otimizar-google-perfil-empresa/" class="blog-card" aria-label="Ler artigo: Como otimizar o Google Perfil da Empresa">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Como otimizar o Google Perfil da Empresa</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Google Perfil da Empresa</span>
-              <h2 class="blog-card-title">Como otimizar o Google Perfil da Empresa</h2>
-              <p class="blog-card-desc">Checklist completo: categorias, serviços, fotos, avaliações, posts, NAP e site vinculado para aparecer melhor no Google Maps.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/google-meu-negocio-nao-aparece/" class="blog-card" aria-label="Ler artigo: Google Meu Negócio não aparece: o que pode ser?">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Google Meu Negócio não aparece: o que pode ser?</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Google Perfil da Empresa</span>
-              <h2 class="blog-card-title">Google Meu Negócio não aparece: o que pode ser?</h2>
-              <p class="blog-card-desc">Verificação, suspensão, categoria, distância, concorrência: as causas de um perfil sumir do Maps e como diagnosticar e resolver.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/como-saber-se-meu-site-esta-indexado/" class="blog-card" aria-label="Ler artigo: Como saber se meu site está indexado no Google?">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Como saber se meu site está indexado no Google?</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Auditoria e indexação</span>
-              <h2 class="blog-card-title">Como saber se meu site está indexado no Google?</h2>
-              <p class="blog-card-desc">Comando site:, Google Search Console, sitemap, canonical e noindex: como verificar a indexação e o que fazer quando há problema.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/por-que-minha-empresa-nao-aparece-no-google/" class="blog-card" aria-label="Ler artigo: Por que minha empresa não aparece no Google?">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Por que minha empresa não aparece no Google?</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Aparecer no Google</span>
-              <h2 class="blog-card-title">Por que minha empresa não aparece no Google?</h2>
-              <p class="blog-card-desc">As causas mais comuns de um negócio local ficar invisível no Google, como diagnosticar você mesmo e o que arrumar primeiro para ser encontrado.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/como-aparecer-no-google-maps/" class="blog-card" aria-label="Ler artigo: Como aparecer no Google Maps?">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Como aparecer no Google Maps?</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Google Perfil da Empresa</span>
-              <h2 class="blog-card-title">Como aparecer no Google Maps?</h2>
-              <p class="blog-card-desc">O que decide quem aparece no Maps e o passo a passo para o seu negócio aparecer melhor na busca por serviço + cidade.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/por-que-meu-site-nao-aparece-no-google/" class="blog-card" aria-label="Ler artigo: Por que meu site não aparece no Google?">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Por que meu site não aparece no Google?</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Auditoria e indexação</span>
-              <h2 class="blog-card-title">Por que meu site não aparece no Google?</h2>
-              <p class="blog-card-desc">A diferença entre estar no ar e estar indexado, as causas de um site invisível e como diagnosticar e resolver.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/site-ou-instagram-para-empresa-local/" class="blog-card" aria-label="Ler artigo: Site ou Instagram para empresa local?">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Site ou Instagram para empresa local?</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Site x Instagram</span>
-              <h2 class="blog-card-title">Site ou Instagram para empresa local?</h2>
-              <p class="blog-card-desc">O papel de cada um na jornada do cliente, o que o Instagram não resolve sozinho e como decidir o próximo passo para gerar contatos.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/como-saber-se-consultor-google-meu-negocio-e-bom/" class="blog-card" aria-label="Ler artigo: Como saber se um consultor de Google Meu Negócio é bom?">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Como saber se um consultor de Google Meu Negócio é bom?</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Google Meu Negócio</span>
-              <h2 class="blog-card-title">Como saber se um consultor de Google Meu Negócio é bom?</h2>
-              <p class="blog-card-desc">Os sinais que diferenciam um bom consultor de Google Meu Negócio de um amador: perguntas para fazer, o que ele deve entregar e os red flags para evitar.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-21">21 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/consultoria-seo-funciona-para-clinica-pequena/" class="blog-card" aria-label="Ler artigo: Consultoria SEO funciona para clínica pequena?">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Consultoria SEO funciona para clínica pequena?</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">SEO para Clínicas</span>
-              <h2 class="blog-card-title">Consultoria SEO funciona para clínica pequena?</h2>
-              <p class="blog-card-desc">SEO local para clínica pequena funciona sim — e muitas vezes melhor do que para grandes redes. Entenda por que e quando vale a pena contratar uma consultoria.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-21">21 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/seo-para-clinicas-por-que-aparecer-no-google-vale-mais-que-indicacao/" class="blog-card" aria-label="Ler artigo: SEO para clínicas: por que aparecer no Google vale mais do que depender de indicação?">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">SEO para clínicas: por que aparecer no Google vale mais do que depender de indicação?</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">SEO para Clínicas</span>
-              <h2 class="blog-card-title">SEO para clínicas: por que aparecer no Google vale mais do que depender de indicação?</h2>
-              <p class="blog-card-desc">Indicação é ótima, mas não é escalável. Entenda por que clínicas que aparecem no Google atraem mais pacientes e não dependem de indicação para crescer.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-21">21 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/consultor-seo-ou-fazer-sozinho-checklist/" class="blog-card" aria-label="Ler artigo: Consultor SEO ou fazer sozinho: checklist para decidir">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Consultor SEO ou fazer sozinho: checklist para decidir</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Consultoria</span>
-              <h2 class="blog-card-title">Consultor SEO ou fazer sozinho: checklist para decidir</h2>
-              <p class="blog-card-desc">Use este checklist prático para decidir se você deve contratar um consultor de SEO ou tentar fazer o SEO da sua clínica sozinho. Sem enrolação.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-21">21 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/quanto-tempo-leva-seo-local-clinicas/" class="blog-card" aria-label="Ler artigo: Quanto tempo leva para SEO local dar resultado para clínicas?">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Quanto tempo leva para SEO local dar resultado para clínicas?</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">SEO Local</span>
-              <h2 class="blog-card-title">Quanto tempo leva para SEO local dar resultado para clínicas?</h2>
-              <p class="blog-card-desc">O prazo real do SEO local para clínicas: o que esperar nos primeiros 90 dias, quando o Google começa a ranquear e o que acelera os resultados.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-21">21 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/consultor-seo-ou-agencia-de-marketing-digital/" class="blog-card" aria-label="Ler artigo: Consultor de SEO ou agência de marketing digital: o que é melhor para clínicas e negócios locais?">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Consultor de SEO ou agência de marketing digital: o que é melhor para clínicas e negócios locais?</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Consultoria</span>
-              <h2 class="blog-card-title">Consultor de SEO ou agência de marketing digital: o que é melhor para clínicas e negócios locais?</h2>
-              <p class="blog-card-desc">A diferença entre contratar um consultor de SEO independente e uma agência de marketing digital, e o que faz mais sentido para clínicas, consultórios e negócios locais.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-21">21 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/quanto-custa-consultoria-seo-local/" class="blog-card" aria-label="Ler artigo: Quanto custa SEO local? Fatores de preço e o que está incluso">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Quanto custa SEO local? Fatores de preço e o que está incluso</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Investimento</span>
-              <h2 class="blog-card-title">Quanto custa SEO local? Fatores de preço e o que está incluso</h2>
-              <p class="blog-card-desc">O que define o preço do SEO local, quais faixas o mercado pratica e quando o investimento vale a pena para negócios locais e profissionais de serviço.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-23">23 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/vale-a-pena-contratar-consultor-de-seo-ou-fazer-sozinho/" class="blog-card" aria-label="Ler artigo: Vale a pena contratar um consultor de SEO ou fazer sozinho?">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Vale a pena contratar um consultor de SEO ou fazer sozinho?</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Consultoria</span>
-              <h2 class="blog-card-title">Vale a pena contratar um consultor de SEO ou fazer sozinho?</h2>
-              <p class="blog-card-desc">Quando vale a pena contratar um consultor de SEO e quando faz sentido fazer sozinho, com foco em clínicas, consultórios e negócios locais que querem aparecer no Google.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-21">21 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/seo-para-medicos-aparecer-no-google/" class="blog-card" aria-label="Ler artigo: SEO para médicos: como aparecer no Google respeitando as regras do CFM">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">SEO para médicos: como aparecer no Google respeitando as regras do CFM</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">SEO para Médicos</span>
-              <h2 class="blog-card-title">SEO para médicos: como aparecer no Google respeitando as regras do CFM</h2>
-              <p class="blog-card-desc">Como o médico pode aparecer no Google e atrair pacientes dentro das regras do CFM, com perfil otimizado, conteúdo educativo e avaliações com cuidado.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-14">14 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/como-atrair-pacientes-consultorio-odontologico/" class="blog-card" aria-label="Ler artigo: Como atrair pacientes para o consultório odontológico pelo Google (sem ferir as regras do CFO)">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Como atrair pacientes para o consultório odontológico pelo Google (sem ferir as regras do CFO)</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">SEO para Dentistas</span>
-              <h2 class="blog-card-title">Como atrair pacientes para o consultório odontológico pelo Google (sem ferir as regras do CFO)</h2>
-              <p class="blog-card-desc">O caminho para o consultório odontológico aparecer no Google e atrair pacientes respeitando as regras de divulgação do CFO.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-14">14 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/vale-a-pena-contratar-consultor-google-meu-negocio/" class="blog-card" aria-label="Ler artigo: Vale a pena contratar um consultor de Google Meu Negócio para a sua clínica?">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Vale a pena contratar um consultor de Google Meu Negócio para a sua clínica?</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Google Meu Negócio</span>
-              <h2 class="blog-card-title">Vale a pena contratar um consultor de Google Meu Negócio para a sua clínica?</h2>
-              <p class="blog-card-desc">Quando o faça você mesmo resolve, quando contratar compensa, como escolher um bom consultor de Google Meu Negócio e quais red flags evitar.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-14">14 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/como-responder-avaliacoes-google-clinica/" class="blog-card" aria-label="Ler artigo: Como responder avaliações no Google (e por que isso traz mais pacientes para a sua clínica)">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Como responder avaliações no Google (e por que isso traz mais pacientes para a sua clínica)</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Reputação Online</span>
-              <h2 class="blog-card-title">Como responder avaliações no Google (e por que isso traz mais pacientes para a sua clínica)</h2>
-              <p class="blog-card-desc">Como responder avaliações positivas e negativas no Google da sua clínica sem expor o paciente, e como conseguir mais avaliações do jeito certo.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-14">14 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/clinica-de-estetica-nao-aparece-no-google/" class="blog-card" aria-label="Ler artigo: Clínica de estética não aparece no Google? Checklist de SEO local para mudar isso">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Clínica de estética não aparece no Google? Checklist de SEO local para mudar isso</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">SEO Local</span>
-              <h2 class="blog-card-title">Clínica de estética não aparece no Google? Checklist de SEO local para mudar isso</h2>
-              <p class="blog-card-desc">Sua clínica de estética não aparece no Google? Veja o checklist de SEO local para otimizar o perfil, conquistar avaliações e ganhar visibilidade.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-14">14 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/google-meu-negocio-para-clinicas-passo-a-passo/" class="blog-card" aria-label="Ler artigo: Google Meu Negócio para clínicas: o passo a passo para atrair pacientes pelo Google">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Google Meu Negócio para clínicas: o passo a passo para atrair pacientes pelo Google</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">Google Meu Negócio</span>
-              <h2 class="blog-card-title">Google Meu Negócio para clínicas: o passo a passo para atrair pacientes pelo Google</h2>
-              <p class="blog-card-desc">O passo a passo para otimizar o Google Meu Negócio da sua clínica, conquistar avaliações e aparecer para mais pacientes na busca local.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-06-14">14 de junho de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/como-aparecer-google-clinica-estetica-goiania/" class="blog-card" aria-label="Ler artigo: Como aparecer no Google quando alguém procura clínica de estética em Goiânia">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Como aparecer no Google quando alguém procura clínica de estética em Goiânia</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">SEO Local</span>
-              <h2 class="blog-card-title">Como aparecer no Google quando alguém procura clínica de estética em Goiânia</h2>
-              <p class="blog-card-desc">Entenda como uma clínica de estética pode disputar as primeiras posições no Google Maps, melhorar o ranqueamento local e virar escolha antes da concorrência.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-05-02">2 de maio de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/por-que-minha-clinica-odontologica-nao-aparece-no-google/" class="blog-card" aria-label="Ler artigo: Por que minha clínica odontológica não aparece no Google?">
-            <div class="blog-card-thumb" aria-hidden="true">
-              <span class="blog-card-thumb-title">Por que minha clínica odontológica não aparece no Google?</span>
-            </div>
-            <div class="blog-card-body">
-              <span class="blog-card-cat">SEO Local para Dentistas</span>
-              <h2 class="blog-card-title">Por que minha clínica odontológica não aparece no Google?</h2>
-              <p class="blog-card-desc">Veja os principais motivos que impedem uma clínica odontológica de aparecer melhor no Google e no Maps, e como organizar a base para mudar isso.</p>
-              <div class="blog-card-meta">
-                <time datetime="2026-05-05">5 de maio de 2026</time>
-                <span class="blog-card-link">
-                  Ler artigo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
+        <div class="blog-cluster" id="nichos">
+          <div class="section-header">
+            <div class="section-tag">Seção 8</div>
+            <h2 class="section-title">Nichos e tipos de negócio</h2>
+          </div>
+          <div class="blog-grid">
+            <a href="/blog/seo-para-prestadores-de-servico/" class="blog-card" aria-label="Ler artigo: SEO para prestadores de serviço: como aparecer no Google">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">SEO para prestadores de serviço: como aparecer no Google</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">SEO por nicho</span>
+                          <h2 class="blog-card-title">SEO para prestadores de serviço: como aparecer no Google</h2>
+                          <p class="blog-card-desc">Eletricista, encanador, ar-condicionado, manutenção, chaveiro, dedetizadora: como aparecer no Google na hora em que o cliente precisa e receber mais chamados.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/seo-para-contadores/" class="blog-card" aria-label="Ler artigo: SEO para contadores: como atrair empresas pelo Google">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">SEO para contadores: como atrair empresas pelo Google</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">SEO por nicho</span>
+                          <h2 class="blog-card-title">SEO para contadores: como atrair empresas pelo Google</h2>
+                          <p class="blog-card-desc">Como o escritório contábil aparece no Google e atrai empresas e MEIs com perfil otimizado, conteúdo de autoridade e site que transmite credibilidade.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/seo-para-manutencao-e-reformas/" class="blog-card" aria-label="Ler artigo: SEO para empresas de manutenção e reformas">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">SEO para empresas de manutenção e reformas</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">SEO por nicho</span>
+                          <h2 class="blog-card-title">SEO para empresas de manutenção e reformas</h2>
+                          <p class="blog-card-desc">Reforma, pintura, marcenaria, energia solar, instalação e manutenção: como aparecer no Google com portfólio visual e receber mais pedidos de orçamento.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/seo-para-profissionais-liberais/" class="blog-card" aria-label="Ler artigo: SEO para profissionais liberais: autoridade e clientes no Google">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">SEO para profissionais liberais: autoridade e clientes no Google</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">SEO por nicho</span>
+                          <h2 class="blog-card-title">SEO para profissionais liberais: autoridade e clientes no Google</h2>
+                          <p class="blog-card-desc">Consultores, arquitetos, fisioterapeutas, psicólogos e advogados: como construir autoridade no Google e atrair clientes que decidem por confiança.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-23">23 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/consultoria-seo-funciona-para-clinica-pequena/" class="blog-card" aria-label="Ler artigo: Consultoria SEO funciona para clínica pequena?">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Consultoria SEO funciona para clínica pequena?</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">SEO para Clínicas</span>
+                          <h2 class="blog-card-title">Consultoria SEO funciona para clínica pequena?</h2>
+                          <p class="blog-card-desc">SEO local para clínica pequena funciona sim — e muitas vezes melhor do que para grandes redes. Entenda por que e quando vale a pena contratar uma consultoria.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-21">21 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/seo-para-clinicas-por-que-aparecer-no-google-vale-mais-que-indicacao/" class="blog-card" aria-label="Ler artigo: SEO para clínicas: por que aparecer no Google vale mais do que depender de indicação?">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">SEO para clínicas: por que aparecer no Google vale mais do que depender de indicação?</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">SEO para Clínicas</span>
+                          <h2 class="blog-card-title">SEO para clínicas: por que aparecer no Google vale mais do que depender de indicação?</h2>
+                          <p class="blog-card-desc">Indicação é ótima, mas não é escalável. Entenda por que clínicas que aparecem no Google atraem mais pacientes e não dependem de indicação para crescer.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-21">21 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/quanto-tempo-leva-seo-local-clinicas/" class="blog-card" aria-label="Ler artigo: Quanto tempo leva para SEO local dar resultado para clínicas?">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Quanto tempo leva para SEO local dar resultado para clínicas?</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">SEO Local</span>
+                          <h2 class="blog-card-title">Quanto tempo leva para SEO local dar resultado para clínicas?</h2>
+                          <p class="blog-card-desc">O prazo real do SEO local para clínicas: o que esperar nos primeiros 90 dias, quando o Google começa a ranquear e o que acelera os resultados.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-21">21 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/seo-para-medicos-aparecer-no-google/" class="blog-card" aria-label="Ler artigo: SEO para médicos: como aparecer no Google respeitando as regras do CFM">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">SEO para médicos: como aparecer no Google respeitando as regras do CFM</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">SEO para Médicos</span>
+                          <h2 class="blog-card-title">SEO para médicos: como aparecer no Google respeitando as regras do CFM</h2>
+                          <p class="blog-card-desc">Como o médico pode aparecer no Google e atrair pacientes dentro das regras do CFM, com perfil otimizado, conteúdo educativo e avaliações com cuidado.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-14">14 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/como-atrair-pacientes-consultorio-odontologico/" class="blog-card" aria-label="Ler artigo: Como atrair pacientes para o consultório odontológico pelo Google (sem ferir as regras do CFO)">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Como atrair pacientes para o consultório odontológico pelo Google (sem ferir as regras do CFO)</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">SEO para Dentistas</span>
+                          <h2 class="blog-card-title">Como atrair pacientes para o consultório odontológico pelo Google (sem ferir as regras do CFO)</h2>
+                          <p class="blog-card-desc">O caminho para o consultório odontológico aparecer no Google e atrair pacientes respeitando as regras de divulgação do CFO.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-14">14 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/vale-a-pena-contratar-consultor-google-meu-negocio/" class="blog-card" aria-label="Ler artigo: Vale a pena contratar um consultor de Google Meu Negócio para a sua clínica?">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Vale a pena contratar um consultor de Google Meu Negócio para a sua clínica?</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Google Meu Negócio</span>
+                          <h2 class="blog-card-title">Vale a pena contratar um consultor de Google Meu Negócio para a sua clínica?</h2>
+                          <p class="blog-card-desc">Quando o faça você mesmo resolve, quando contratar compensa, como escolher um bom consultor de Google Meu Negócio e quais red flags evitar.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-14">14 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/como-responder-avaliacoes-google-clinica/" class="blog-card" aria-label="Ler artigo: Como responder avaliações no Google (e por que isso traz mais pacientes para a sua clínica)">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Como responder avaliações no Google (e por que isso traz mais pacientes para a sua clínica)</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Reputação Online</span>
+                          <h2 class="blog-card-title">Como responder avaliações no Google (e por que isso traz mais pacientes para a sua clínica)</h2>
+                          <p class="blog-card-desc">Como responder avaliações positivas e negativas no Google da sua clínica sem expor o paciente, e como conseguir mais avaliações do jeito certo.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-14">14 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/clinica-de-estetica-nao-aparece-no-google/" class="blog-card" aria-label="Ler artigo: Clínica de estética não aparece no Google? Checklist de SEO local para mudar isso">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Clínica de estética não aparece no Google? Checklist de SEO local para mudar isso</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">SEO Local</span>
+                          <h2 class="blog-card-title">Clínica de estética não aparece no Google? Checklist de SEO local para mudar isso</h2>
+                          <p class="blog-card-desc">Sua clínica de estética não aparece no Google? Veja o checklist de SEO local para otimizar o perfil, conquistar avaliações e ganhar visibilidade.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-14">14 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/google-meu-negocio-para-clinicas-passo-a-passo/" class="blog-card" aria-label="Ler artigo: Google Meu Negócio para clínicas: o passo a passo para atrair pacientes pelo Google">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Google Meu Negócio para clínicas: o passo a passo para atrair pacientes pelo Google</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">Google Meu Negócio</span>
+                          <h2 class="blog-card-title">Google Meu Negócio para clínicas: o passo a passo para atrair pacientes pelo Google</h2>
+                          <p class="blog-card-desc">O passo a passo para otimizar o Google Meu Negócio da sua clínica, conquistar avaliações e aparecer para mais pacientes na busca local.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-06-14">14 de junho de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/como-aparecer-google-clinica-estetica-goiania/" class="blog-card" aria-label="Ler artigo: Como aparecer no Google quando alguém procura clínica de estética em Goiânia">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Como aparecer no Google quando alguém procura clínica de estética em Goiânia</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">SEO Local</span>
+                          <h2 class="blog-card-title">Como aparecer no Google quando alguém procura clínica de estética em Goiânia</h2>
+                          <p class="blog-card-desc">Entenda como uma clínica de estética pode disputar as primeiras posições no Google Maps, melhorar o ranqueamento local e virar escolha antes da concorrência.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-05-02">2 de maio de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+            <a href="/blog/por-que-minha-clinica-odontologica-nao-aparece-no-google/" class="blog-card" aria-label="Ler artigo: Por que minha clínica odontológica não aparece no Google?">
+                        <div class="blog-card-thumb" aria-hidden="true">
+                          <span class="blog-card-thumb-title">Por que minha clínica odontológica não aparece no Google?</span>
+                        </div>
+                        <div class="blog-card-body">
+                          <span class="blog-card-cat">SEO Local para Dentistas</span>
+                          <h2 class="blog-card-title">Por que minha clínica odontológica não aparece no Google?</h2>
+                          <p class="blog-card-desc">Veja os principais motivos que impedem uma clínica odontológica de aparecer melhor no Google e no Maps, e como organizar a base para mudar isso.</p>
+                          <div class="blog-card-meta">
+                            <time datetime="2026-05-05">5 de maio de 2026</time>
+                            <span class="blog-card-link">
+                              Ler artigo
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+          </div>
         </div>
       </div>
     </section>

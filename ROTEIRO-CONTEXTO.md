@@ -302,6 +302,20 @@ diferentes (consultoria, GBP, auditoria, site). #10 entra logo em seguida.
 > para 2026-06-24. Nenhuma página nova, nenhum artigo novo, nenhum redirect. Próximas fases da ONDA 4
 > (4B blog em clusters, 4C guia `/guia-seo-local/`, 4D reforço de âncoras, 4E navegação) seguem
 > uma a uma, com aprovação.
+>
+> ✅ **ONDA 4B concluída (24/06/2026):** `/blog/index.html` reorganizado de um grid único para **8
+> seções temáticas por cluster**, cada uma com cabeçalho próprio, na ordem: (1) Comece por aqui,
+> (2) Aparecer no Google, (3) Google Perfil da Empresa, (4) Site, conversão e WhatsApp, (5) Conteúdo
+> e autoridade, (6) Diagnóstico, auditoria e indexação, (7) Contratação, preço, prazo e objeções,
+> (8) Nichos e tipos de negócio (saúde incluída como subgrupo, conforme eixo amplo com saúde como
+> nicho maduro). Adicionado **mini-sumário (TOC)** estático no topo com links-âncora para as 8
+> seções, e **IDs de seção** em cada cluster (`#comece-por-aqui`, `#aparecer-no-google`,
+> `#google-perfil`, `#site-conversao-whatsapp`, `#conteudo-autoridade`, `#diagnostico-auditoria`,
+> `#contratacao-preco-objecoes`, `#nichos`) — preparados para a futura 4C. **O `/blog/` tem 60 cards
+> no total** (os ~40 artigos amplos/comerciais das ondas 3A–3I + os artigos legados de saúde); todos
+> os 60 foram preservados na reorganização (60 antes = 60 depois, 0 duplicados, 0 perdidos). Sem
+> JavaScript, sem filtros dinâmicos; CSS do TOC/clusters adicionado no próprio `blog/index.html`.
+> Escopo restrito ao blog: nenhuma página-dinheiro, artigo, redirect ou URL alterada.
 
 ---
 
