@@ -30,6 +30,7 @@
 - SEO para comércios locais: https://rcbseo.com.br/para-comercios-locais/ — SEO local e Google Maps para comércios de bairro e região.
 
 ## Conteúdo
+- Guia de SEO Local (índice editorial): https://rcbseo.com.br/guia-seo-local/ — Hub que organiza por tema os principais conteúdos e serviços: aparecer no Google, Google Perfil, site, conteúdo, conversão, diagnóstico, contratação, nichos e acompanhamento.
 - Por que minha empresa não aparece no Google: https://rcbseo.com.br/blog/por-que-minha-empresa-nao-aparece-no-google/ — Causas comuns de um negócio local ficar invisível no Google e o que fazer primeiro.
 - Como aparecer no Google Maps: https://rcbseo.com.br/blog/como-aparecer-no-google-maps/ — O que decide o ranqueamento no Maps e o passo a passo para aparecer melhor.
 - Por que meu site não aparece no Google: https://rcbseo.com.br/blog/por-que-meu-site-nao-aparece-no-google/ — Diferença entre estar no ar e indexado, causas e como resolver a indexação.

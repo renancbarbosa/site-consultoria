@@ -316,6 +316,18 @@ diferentes (consultoria, GBP, auditoria, site). #10 entra logo em seguida.
 > os 60 foram preservados na reorganização (60 antes = 60 depois, 0 duplicados, 0 perdidos). Sem
 > JavaScript, sem filtros dinâmicos; CSS do TOC/clusters adicionado no próprio `blog/index.html`.
 > Escopo restrito ao blog: nenhuma página-dinheiro, artigo, redirect ou URL alterada.
+>
+> ✅ **ONDA 4C concluída (24/06/2026):** criada a página-guia **`/guia-seo-local/`** como **hub/índice
+> editorial** (não é página de serviço; sem oferta agressiva). Reaproveita o layout global
+> (page-hero, solution-section/cluster-section, cluster-card, cta-band — sem CSS global novo; só um
+> pequeno `<style>` na própria página para o sumário). Estrutura: hero com CTA suave ao diagnóstico +
+> sumário por âncoras; 8 blocos temáticos espelhando os clusters do blog, cada um com texto curto de
+> orientação + link para a página-dinheiro correspondente + link para a seção do `/blog/#âncora` +
+> 3 artigos-chave (modelo misto); bloco "Serviços relacionados" com as 7 páginas-dinheiro; CTA final
+> ao diagnóstico. JSON-LD `CollectionPage` + `BreadcrumbList` (sem FAQPage). Navegação: link para o
+> guia adicionado **apenas no topo do `/blog/`** (rodapé global e menu principal ficam para a 4E,
+> conforme decisão). Atualizados `sitemap.xml` (nova URL, priority 0.8) e `llms.txt` (guia como URL
+> importante). Sem artigos/serviços novos, sem redirects, sem Search Console.
 
 ---
 
