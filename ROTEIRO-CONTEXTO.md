@@ -343,6 +343,16 @@ diferentes (consultoria, GBP, auditoria, site). #10 entra logo em seguida.
 > mensalidade forçada, com links para `site-precisa-acompanhamento-depois-de-publicado`,
 > `como-acompanhar-seo-local-evoluindo` e `quanto-custa-manter-site-otimizado-seo`. `lastmod` das 3
 > páginas em 2026-06-24. `llms.txt` não alterado (sem motivo). Sem menu/rodapé/redirects/Search Console.
+>
+> ✅ **ONDA 4E-1 concluída (24/06/2026):** distribuição do `/guia-seo-local/` a partir das páginas
+> mais importantes, **sem tocar no rodapé global** (~75 arquivos ficam para a 4E-2, se ainda fizer
+> sentido). Feito: (1) link contextual para o guia na **home** (`/index.html`), ao fim da seção de
+> serviços (`#servicos`), mantendo o Diagnóstico como CTA principal; (2) link **"Guia de SEO Local"**
+> adicionado ao **rodapé das 7 páginas-dinheiro** (coluna "Serviços", após "Acompanhamento de SEO"),
+> via script idempotente — o rodapé das 7 é idêntico, sem risco de inconsistência. `lastmod` da home
+> e das 7 páginas em 2026-06-24. Menu principal mantido sem o guia. Sem artigos/páginas novas, sem
+> redirects, sem alterar `llms.txt`, sem Search Console. **4E-2 (rodapé global em todo o site)** fica
+> pendente de avaliação futura.
 
 ---
 
