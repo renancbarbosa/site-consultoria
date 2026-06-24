@@ -262,6 +262,19 @@ diferentes (consultoria, GBP, auditoria, site). #10 entra logo em seguida.
 > WhatsApp" (só o WhatsApp). Tema "auditoria prioriza o que corrigir" não foi recriado — tratado por
 > cross-link com `/blog/como-funciona-auditoria-seo-na-pratica/` e `/auditoria-seo/`. Blog passa a
 > ter 34 artigos amplos/comerciais. Nenhuma página-dinheiro ou URL antiga alterada.
+>
+> ✅ **ONDA 3H concluída (24/06/2026):** cluster **site barato, plataforma, manutenção e site
+> otimizado** — 6 artigos: `/blog/site-wix-wordpress-ou-site-otimizado-seo/` (ferramenta × estratégia
+> → site otimizado), `/blog/site-barato-empresa-local-vale-a-pena/` (objeção de preço → site
+> otimizado), `/blog/site-precisa-acompanhamento-depois-de-publicado/` (continuidade →
+> acompanhamento), `/blog/melhorar-site-atual-ou-fazer-um-novo/` (decisão → diagnóstico + auditoria),
+> `/blog/site-bonito-nao-aparece-no-google/` (aparência ≠ SEO → auditoria) e
+> `/blog/quanto-custa-manter-site-otimizado-seo/` (custo recorrente → acompanhamento). Posicionamento
+> consultivo: Wix/WordPress tratados como ferramentas legítimas; o problema é site sem estratégia,
+> SEO, estrutura, conteúdo, indexação, conversão e acompanhamento. Sem valores inventados. O link
+> condicional para `/blog/como-acompanhar-seo-local-evoluindo/` (inexistente) foi omitido, sem link
+> quebrado. Blog passa a ter 40 artigos amplos/comerciais. Nenhuma página-dinheiro ou URL antiga
+> alterada.
 
 ---
 
