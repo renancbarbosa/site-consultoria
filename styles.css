@@ -1085,6 +1085,12 @@ section {
   box-shadow: var(--shadow-card);
 }
 
+.profile-photo {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+}
+
 .page-hero-media-card {
   padding: 20px;
   background:

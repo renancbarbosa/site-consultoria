@@ -353,6 +353,23 @@ diferentes (consultoria, GBP, auditoria, site). #10 entra logo em seguida.
 > e das 7 páginas em 2026-06-24. Menu principal mantido sem o guia. Sem artigos/páginas novas, sem
 > redirects, sem alterar `llms.txt`, sem Search Console. **4E-2 (rodapé global em todo o site)** fica
 > pendente de avaliação futura.
+>
+> ✅ **ONDA 5A-1/5A-2 concluída (24/06/2026):** ajustes técnicos pré-indexação. (1) Corrigida a foto
+> esticada de `/sobre/` com regra CSS scoped `.profile-photo { width:100%; height:auto;
+> border-radius:var(--radius-lg) }` (faltava `height:auto`; o atributo `height="1600"` esticava a
+> imagem; sem trocar a imagem nem mexer no HTML). (2) Removido o schema **`aggregateRating`/`review`
+> self-serving** (RCB avaliando a si mesma — contra as diretrizes de review snippet do Google) do nó
+> `ProfessionalService/LocalBusiness "RCB Consultoria"` em **12 páginas**: `/`, `/contato/`,
+> `/google-meu-negocio-para-clinicas/`, `/para-advogados/`, `/para-comercios-locais/`,
+> `/para-profissionais-liberais/`, `/seo-local-goiania/`, `/seo-para-clinicas/`,
+> `/seo-para-clinicas-de-emagrecimento/`, `/seo-para-clinicas-de-estetica/`, `/seo-para-dentistas/`,
+> `/seo-para-medicos/`. Demais schemas (FAQPage, BreadcrumbList, LocalBusiness, Service, WebSite,
+> Person) e a seção visível de depoimentos da home foram preservados. A entidade da home já tinha
+> `logo` e `sameAs` (Instagram/Google/LinkedIn) — sem ajuste necessário. `lastmod` das 13 páginas
+> alteradas (12 + `/sobre/`) atualizado. **Não executado:** WebP/otimização de imagens em massa,
+> Search Console/IndexNow/Bing. **Case futuro:** usar o nome correto **"Nalu Prado Eventos Musicais"**
+> (https://naluprado.com.br/), criado só com evidências reais (SERP, Search Console, datas, resultados
+> comprováveis) — não usar "Madúcia".
 
 ---
 
