@@ -290,6 +290,18 @@ diferentes (consultoria, GBP, auditoria, site). #10 entra logo em seguida.
 > "dúvidas em conteúdo" (método) × "blog vale a pena" (decisão); "erros no WhatsApp" e "página de
 > contato" cruzados com "integrar canais" e "receber orçamentos". Blog passa a ter 47 artigos
 > amplos/comerciais. Única alteração em URL antiga: o cross-link autorizado no artigo da 3H.
+>
+> ✅ **ONDA 4A concluída (24/06/2026):** início da **organização estratégica interna** (sem novos
+> artigos nem páginas). Adicionado um bloco **"Conteúdos relacionados"** (seção `cluster-section` /
+> `cluster-grid` / `cluster-card`, classes já existentes no CSS — sem CSS novo) antes do CTA final
+> das 7 páginas-dinheiro: `/consultoria-seo-local/`, `/diagnostico-presenca-digital/`,
+> `/auditoria-seo/`, `/google-perfil-empresa/`, `/site-otimizado-para-seo/`, `/conteudo-para-seo/` e
+> `/acompanhamento-seo/`. Cada bloco leva 4–5 artigos do cluster da página, distribuindo relevância
+> interna e melhorando a jornada. Na `/conteudo-para-seo/` foram usados 4 links reais (a 5ª URL
+> sugerida não existia — evitado link quebrado). `lastmod` das 7 páginas atualizado no `sitemap.xml`
+> para 2026-06-24. Nenhuma página nova, nenhum artigo novo, nenhum redirect. Próximas fases da ONDA 4
+> (4B blog em clusters, 4C guia `/guia-seo-local/`, 4D reforço de âncoras, 4E navegação) seguem
+> uma a uma, com aprovação.
 
 ---
 
