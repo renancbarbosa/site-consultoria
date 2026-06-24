@@ -1,0 +1,31 @@
+# Regras de cache do Cloudflare Pages
+# IMPORTANTE: nao definimos cache para HTML, CSS ou JS de proposito.
+# Assim o Cloudflare mantem o comportamento seguro padrao (revalidacao),
+# e suas atualizacoes do site aparecem sem ficar presas em cache antigo.
+
+# Imagens: cache de 30 dias. Tempo seguro — se voce reexportar uma imagem
+# com o mesmo nome, ela se atualiza no navegador em ate um mes.
+/*.webp
+  Cache-Control: public, max-age=2592000
+/*.jpg
+  Cache-Control: public, max-age=2592000
+/*.jpeg
+  Cache-Control: public, max-age=2592000
+/*.png
+  Cache-Control: public, max-age=2592000
+/*.gif
+  Cache-Control: public, max-age=2592000
+/*.svg
+  Cache-Control: public, max-age=2592000
+
+# Favicon e icones: praticamente nunca mudam — cache de 1 ano.
+/*.ico
+  Cache-Control: public, max-age=31536000
+
+# Fontes auto-hospedadas (caso passe a usar no futuro): cache de 1 ano.
+/*.woff2
+  Cache-Control: public, max-age=31536000
+/*.woff
+  Cache-Control: public, max-age=31536000
+/*.ttf
+  Cache-Control: public, max-age=31536000
