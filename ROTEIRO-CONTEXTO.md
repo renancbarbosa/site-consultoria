@@ -247,6 +247,21 @@ diferentes (consultoria, GBP, auditoria, site). #10 entra logo em seguida.
 > intenção. Temas "consultor × agência" e "transformar visitas em orçamento" tratados apenas por
 > cross-link para artigos existentes (não criados de novo). Blog passa a ter 28 artigos
 > amplos/comerciais. Nenhuma página-dinheiro ou URL antiga alterada.
+>
+> ✅ **ONDA 3G concluída (23/06/2026):** cluster de **oferta, diagnóstico e perda de clientes** —
+> 6 artigos: `/blog/o-que-e-diagnostico-presenca-digital/` (oferta-âncora → diagnóstico),
+> `/blog/empresa-perdendo-clientes-no-google/` (dor/sintomas → diagnóstico + consultoria),
+> `/blog/google-perfil-atrapalhando-resultados/` (dor de perfil mal configurado → Google Perfil),
+> `/blog/paginas-que-empresa-local-precisa-no-site/` (estrutura → site otimizado),
+> `/blog/integrar-site-google-perfil-whatsapp/` (sistema/conversão → site + diagnóstico) e
+> `/blog/oportunidades-seo-local-antes-dos-concorrentes/` (estratégia/concorrência → consultoria +
+> auditoria). Diferenciações de canibalização: "empresa perdendo clientes" (sintomas) × "por que não
+> aparece" (causas); "Google Perfil atrapalhando" (mal configurado) × "Google Meu Negócio não
+> aparece" (sumiu); "quais páginas ter" (mapa do site) × "como criar páginas de serviço" (estrutura
+> de uma página); "integrar site/perfil/WhatsApp" (sistema) cruzado com "receber orçamentos no
+> WhatsApp" (só o WhatsApp). Tema "auditoria prioriza o que corrigir" não foi recriado — tratado por
+> cross-link com `/blog/como-funciona-auditoria-seo-na-pratica/` e `/auditoria-seo/`. Blog passa a
+> ter 34 artigos amplos/comerciais. Nenhuma página-dinheiro ou URL antiga alterada.
 
 ---
 
