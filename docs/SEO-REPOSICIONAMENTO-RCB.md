@@ -86,9 +86,15 @@ Legenda: **MANTER** (URL e papel preservados) · **CRIAR** (página nova) · **R
 | `/conteudo-para-seo/` | Vender conteúdo/clusters/blog estratégico (serviço S4) | hub do cluster de conteúdo |
 | `/acompanhamento-seo/` | Vender continuidade mensal | menciona automação como upsell |
 | `/diagnostico-presenca-digital/` *(se aprovado em §4.3)* | Porta de conversão principal | substitui/renomeia `/diagnostico-gratuito/` |
+| `/guia-seo-local/` | Hub/índice editorial (não é página de serviço) que organiza por tema os conteúdos do blog e aponta para as páginas-dinheiro — criado na **ONDA 4C** | ↔ `/blog/` (8 clusters por âncora) e as 7 páginas-dinheiro |
 
 > **Decisão de URL do site genérico:** preferir `/site-otimizado-para-seo/` por bater melhor com a
 > intenção de busca ("site otimizado para SEO") e ter menor risco de canibalizar `/site-para-clinica/`.
+
+> **Nota (atualização):** o `/guia-seo-local/` foi criado na ONDA 4C como hub/índice editorial, não
+> como página de serviço, e está fora do menu principal por ora (link no topo do `/blog/` e no rodapé
+> das 7 páginas-dinheiro). O histórico detalhado das ondas de conteúdo (3A–3I) e de organização
+> interna (4A–4E-1) está no `ROTEIRO-CONTEXTO.md`.
 
 ### 4.3 Decisões adiadas (precisam do seu OK antes de executar)
 
