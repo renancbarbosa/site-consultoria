@@ -186,7 +186,7 @@ if (form) {
       mensagem
     ].filter(l => l !== undefined).join('\n');
 
-    const url = `https://wa.me/5562991161040?text=${encodeURIComponent(texto)}`;
+    const url = `https://wa.me/5562994857886?text=${encodeURIComponent(texto)}`;
     trackEvent('envio_formulario', {
       method: 'contact_form_whatsapp',
       page_location: window.location.href
