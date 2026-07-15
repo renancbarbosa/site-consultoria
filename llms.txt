@@ -25,9 +25,19 @@
 - Google Meu Negócio para clínicas: https://rcbseo.com.br/google-meu-negocio-para-clinicas/ — Otimização do Perfil da Empresa no Google para clínicas.
 - Site para clínica: https://rcbseo.com.br/site-para-clinica/ — Sites otimizados e rápidos para clínicas converterem visitas em contatos.
 - Automação de processos: https://rcbseo.com.br/automacao-de-processos/ — Automação de atendimento e processos (n8n) para negócios locais.
-- SEO para advogados: https://rcbseo.com.br/para-advogados/ — SEO local e presença digital para advogados e escritórios.
+- SEO para advogados: https://rcbseo.com.br/para-advogados/ — SEO local e presença digital para advogados e escritórios, dentro das normas da OAB.
+- Marketing para advogados: https://rcbseo.com.br/marketing-para-advogados/ — Explicação em linguagem simples de como advogados são encontrados no Google dentro das normas da OAB.
+- SEO para contadores: https://rcbseo.com.br/seo-para-contadores/ — Escritórios de contabilidade encontrados por empresas e MEIs no Google.
+- SEO para psicólogos: https://rcbseo.com.br/seo-para-psicologos/ — Psicólogos encontrados por pacientes no Google, dentro da ética do CFP.
+- SEO para veterinários e pet shops: https://rcbseo.com.br/seo-para-veterinarios/ — Clínicas veterinárias e pet shops visíveis nas buscas de urgência e rotina.
+- SEO para imobiliárias: https://rcbseo.com.br/seo-para-imobiliarias/ — Imobiliárias e corretores gerando leads próprios sem depender só de portais.
+- SEO para pequenas empresas: https://rcbseo.com.br/seo-para-pequenas-empresas/ — Como pequenas empresas aparecem no Google sem depender de anúncios.
 - SEO para profissionais liberais: https://rcbseo.com.br/para-profissionais-liberais/ — Posicionamento no Google para profissionais liberais.
 - SEO para comércios locais: https://rcbseo.com.br/para-comercios-locais/ — SEO local e Google Maps para comércios de bairro e região.
+- Marketing para clínicas: https://rcbseo.com.br/marketing-para-clinicas/ — Marketing para clínicas em linguagem simples: ser encontrado no Google por pacientes.
+- Como atrair mais pacientes: https://rcbseo.com.br/como-atrair-mais-pacientes/ — Guia leigo do caminho do paciente no Google até o contato com a clínica.
+- Como aparecer no Google: https://rcbseo.com.br/como-aparecer-no-google/ — Passo a passo em linguagem simples para uma empresa aparecer no Google e no Maps.
+- Consultoria de SEO por cidade: https://rcbseo.com.br/consultoria-seo/ — Hub com páginas de consultoria de SEO para 199 cidades brasileiras, com dados públicos de mercado (CNPJ) de cada cidade.
 
 ## Conteúdo
 - Guia de SEO Local (índice editorial): https://rcbseo.com.br/guia-seo-local/ — Hub que organiza por tema os principais conteúdos e serviços: aparecer no Google, Google Perfil, site, conteúdo, conversão, diagnóstico, contratação, nichos e acompanhamento.
