@@ -138,11 +138,13 @@ def head_comum(titulo, desc, canonical, schema_json):
   <meta property="og:title" content="{titulo}">
   <meta property="og:description" content="{desc}">
   <meta property="og:url" content="{canonical}">
-  <meta property="og:image" content="https://rcbseo.com.br/assets/img/logo-rcb-seo-local.png">
+  <meta property="og:image" content="https://rcbseo.com.br/assets/img/og-rcb-1200x628.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="628">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{titulo}">
   <meta name="twitter:description" content="{desc}">
-  <meta name="twitter:image" content="https://rcbseo.com.br/assets/img/logo-rcb-seo-local.png">
+  <meta name="twitter:image" content="https://rcbseo.com.br/assets/img/og-rcb-1200x628.png">
   <meta name="twitter:domain" content="rcbseo.com.br">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -164,7 +166,7 @@ NAVBAR = """  <a class="skip-link" href="#main-content">Pular para o conteúdo p
 
 
 def rodape(pagina):
-    return """  <footer class="footer" role="contentinfo"><div class="container footer-cols"><div class="footer-col footer-col-identity"><span class="logo-text">RCB</span><strong class="footer-name">Renan Carvalho Barbosa</strong><span class="footer-cargo">Consultor de SEO Local e Google Meu Negócio</span><p class="footer-bio">Com base em Goiânia e atendimento online para clínicas e negócios locais em todo o Brasil.</p></div><div class="footer-col"><h4 class="footer-col-title">Serviços</h4><nav class="footer-col-nav"><a href="/consultoria-seo-local/">Consultoria SEO Local</a><a href="/consultoria-seo/">Consultoria SEO por cidade</a><a href="/diagnostico-presenca-digital/">Diagnóstico de Presença Digital</a><a href="/auditoria-seo/">Auditoria de SEO</a><a href="/google-perfil-empresa/">Google Perfil da Empresa</a><a href="/site-otimizado-para-seo/">Site otimizado para SEO</a><a href="/acompanhamento-seo/">Acompanhamento de SEO</a></nav></div><div class="footer-col"><h4 class="footer-col-title">Nichos</h4><nav class="footer-col-nav"><a href="/seo-para-clinicas/">Clínicas</a><a href="/seo-para-dentistas/">Dentistas</a><a href="/seo-para-clinicas-de-estetica/">Estética</a><a href="/seo-para-medicos/">Médicos</a><a href="/para-advogados/">Advogados</a></nav></div><div class="footer-col"><h4 class="footer-col-title">Contato</h4><div class="footer-col-contact"><a href="/contato/">Página de contato</a><a href="https://wa.me/""" + WHATS + """\" target="_blank" rel="noopener noreferrer">WhatsApp: (62) 99116-1040</a><a href="mailto:contato@rcbseo.com.br">contato@rcbseo.com.br</a><span>Goiânia - GO</span></div></div></div><div class="footer-bottom"><div class="container footer-bottom-inner"><p>&copy; <span id="anoAtual"></span> Renan Carvalho Barbosa. Todos os direitos reservados.</p><a href="/privacidade/" class="footer-privacy">Política de Privacidade</a><a href="/cookies/" class="footer-privacy" style="margin-left:1rem;">Política de Cookies</a></div></div></footer>
+    return """  <footer class="footer" role="contentinfo"><div class="container footer-cols"><div class="footer-col footer-col-identity"><span class="logo-text">RCB</span><strong class="footer-name">Renan Carvalho Barbosa</strong><span class="footer-cargo">Consultor de SEO Local e Google Meu Negócio</span><p class="footer-bio">Com base em Goiânia e atendimento online para clínicas e negócios locais em todo o Brasil.</p></div><div class="footer-col"><h4 class="footer-col-title">Serviços</h4><nav class="footer-col-nav"><a href="/consultoria-seo-local/">Consultoria SEO Local</a><a href="/consultoria-seo/">Consultoria SEO por cidade</a><a href="/diagnostico-presenca-digital/">Diagnóstico de Presença Digital</a><a href="/auditoria-seo/">Auditoria de SEO</a><a href="/google-perfil-empresa/">Google Perfil da Empresa</a><a href="/site-otimizado-para-seo/">Site otimizado para SEO</a><a href="/acompanhamento-seo/">Acompanhamento de SEO</a></nav></div><div class="footer-col"><h4 class="footer-col-title">Nichos</h4><nav class="footer-col-nav"><a href="/seo-para-clinicas/">Clínicas</a><a href="/seo-para-dentistas/">Dentistas</a><a href="/seo-para-clinicas-de-estetica/">Estética</a><a href="/seo-para-medicos/">Médicos</a><a href="/para-advogados/">Advogados</a></nav></div><div class="footer-col"><h4 class="footer-col-title">Contato</h4><div class="footer-col-contact"><a href="/contato/">Página de contato</a><a href="https://wa.me/""" + WHATS + """\" target="_blank" rel="noopener noreferrer">WhatsApp: (62) 99116-1040</a><a href="mailto:contato@rcbseo.com.br">contato@rcbseo.com.br</a><span>Rua 18-A, nº 256 — Goiânia - GO, CEP 74070-060</span></div></div></div><div class="footer-bottom"><div class="container footer-bottom-inner"><p>&copy; <span id="anoAtual"></span> Renan Carvalho Barbosa. Todos os direitos reservados.</p><a href="/privacidade/" class="footer-privacy">Política de Privacidade</a><a href="/cookies/" class="footer-privacy" style="margin-left:1rem;">Política de Cookies</a></div></div></footer>
   <script src="/script.js" defer></script>
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "958c755428354df69e95c4366389faca"}'></script>
   <script defer src="/assets/js/cookie-consent.js"></script>
@@ -209,8 +211,10 @@ def pagina_cidade(c, vizinhas):
     ref = c.get("data_referencia", c.get("snapshot", ""))
 
     titulo = f"Consultoria de SEO em {cidade} ({uf}) | Apareça no Google | RCB"
-    desc = (f"Sua empresa em {cidade} não aparece no Google? {cidade} tem {ativas} empresas ativas "
-            f"e ganhou {n90} novas em 90 dias. Consultoria de SEO online: Google Meu Negócio, site e conteúdo.")
+    if len(titulo) > 65:
+        titulo = f"Consultoria de SEO em {cidade} ({uf}) | RCB"
+    desc = (f"Sua empresa em {cidade} não aparece no Google? Consultoria online de SEO: "
+            f"Google Meu Negócio, site e conteúdo. Diagnóstico gratuito.")
 
     ramos = [(rotulo_cnae(r["nome"]), r["abertas_90d"]) for r in c.get("ramos_top", [])[:6]]
     bairros = [limpar_bairro(b["bairro"]) for b in c.get("bairros_top", [])[:4]]
@@ -384,7 +388,7 @@ def pagina_cidade(c, vizinhas):
 
 def pagina_hub(cidades):
     canonical = f"{BASE_URL}/consultoria-seo/"
-    titulo = "Consultoria de SEO por Cidade | Atendimento em todo o Brasil | RCB"
+    titulo = "Consultoria de SEO por Cidade | Todo o Brasil | RCB"
     desc = ("Consultoria de SEO e Google Meu Negócio com atendimento online para as maiores cidades do Brasil. "
             "Escolha a sua cidade e veja os dados do mercado local.")
 
