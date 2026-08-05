@@ -14,12 +14,14 @@ import json
 import os
 import glob
 import hashlib
+import re
 from urllib.parse import quote
 
 DADOS = r"C:/Users/renan/SITE-DADOS/data/cidades"
 RAIZ = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 BASE_URL = "https://rcbseo.com.br"
 WHATS = "5562991161040"
+EXPANDIR_CIDADES = os.environ.get("RCB_EXPANDIR_CIDADES") == "1"
 
 ESTADOS = {
     "AC": "Acre", "AL": "Alagoas", "AP": "Amapá", "AM": "Amazonas",
@@ -100,6 +102,18 @@ def carregar_cidades():
         if len(lista) > 1:
             for c in lista:
                 c["slug"] = f"{c['slug']}-{c['uf'].lower()}"
+
+    # Por padrão, atualiza apenas URLs já publicadas. Isso impede que uma nova
+    # carga de dados coloque centenas de páginas no ar sem revisão editorial.
+    if not EXPANDIR_CIDADES:
+        pasta_publicada = os.path.join(RAIZ, "consultoria-seo")
+        publicados = {
+            nome for nome in os.listdir(pasta_publicada)
+            if os.path.isfile(os.path.join(pasta_publicada, nome, "index.html"))
+        }
+        antes = len(cidades)
+        cidades = [c for c in cidades if c["slug"] in publicados]
+        print(f"Expansão protegida: {antes - len(cidades)} cidades novas ficaram fora da geração.")
     return sorted(cidades, key=lambda c: -c["empresas_ativas"])
 
 
@@ -209,6 +223,9 @@ def pagina_cidade(c, vizinhas):
     n12 = n_br(c["abertas_12m"])
     nmes = n_br(c["abertas_mes"])
     ref = c.get("data_referencia", c.get("snapshot", ""))
+    gerado_em = c.get("gerado_em", ref)
+    variacao = float(c.get("variacao_mes_anterior_pct", 0) or 0)
+    porte = c.get("porte", {})
 
     titulo = f"Consultoria de SEO em {cidade} ({uf}) | Apareça no Google | RCB"
     if len(titulo) > 65:
@@ -217,12 +234,26 @@ def pagina_cidade(c, vizinhas):
             f"Google Meu Negócio, site e conteúdo. Diagnóstico gratuito.")
 
     ramos = [(rotulo_cnae(r["nome"]), r["abertas_90d"]) for r in c.get("ramos_top", [])[:6]]
-    bairros = [limpar_bairro(b["bairro"]) for b in c.get("bairros_top", [])[:4]]
+    bairros = [(limpar_bairro(b["bairro"]), b["abertas_90d"]) for b in c.get("bairros_top", [])[:4]]
+
+    if variacao > 5:
+        leitura_ritmo = f"O ritmo de abertura acelerou <strong>{n_br(abs(variacao))}%</strong> em relação ao mês anterior."
+    elif variacao < -5:
+        leitura_ritmo = f"O ritmo de abertura recuou <strong>{n_br(abs(variacao))}%</strong> em relação ao mês anterior, mas {n90} negócios ainda abriram em 90 dias."
+    else:
+        leitura_ritmo = f"O ritmo de abertura ficou relativamente estável: variação de <strong>{n_br(variacao)}%</strong> em relação ao mês anterior."
+
+    ramo_lider = ramos[0] if ramos else ("serviços locais", 0)
+    leitura_mercado = (
+        f"Entre as novas empresas, <strong>{ramo_lider[0]}</strong> liderou a lista, "
+        f"com {n_br(ramo_lider[1])} aberturas em 90 dias. Isso não prova demanda de busca, "
+        "mas sinaliza onde novos concorrentes podem disputar visibilidade local."
+    )
 
     intro = INTROS[variante(slug, len(INTROS))].format(cidade=cidade)
     cta = CTAS[variante(slug + "x", len(CTAS))].format(cidade=cidade)
 
-    whats_msg = quote(f"Olá, Renan. Tenho uma empresa em {cidade}/{uf} e quero aparecer melhor no Google.")
+    whats_msg = quote(f"Olá, Renan. Tenho uma empresa em {cidade}/{uf} e quero um diagnóstico gratuito para aparecer melhor no Google.")
     whats_url = f"https://wa.me/{WHATS}?text={whats_msg}"
 
     faq = [
@@ -243,7 +274,7 @@ def pagina_cidade(c, vizinhas):
 
     schema = (
         '{"@context":"https://schema.org","@graph":['
-        '{"@type":"WebPage","url":"%s","name":"%s","description":"%s","inLanguage":"pt-BR"},'
+        '{"@type":"WebPage","url":"%s","name":"%s","description":"%s","inLanguage":"pt-BR","dateModified":"%s"},'
         '{"@type":"BreadcrumbList","itemListElement":['
         '{"@type":"ListItem","position":1,"name":"Início","item":"https://rcbseo.com.br/"},'
         '{"@type":"ListItem","position":2,"name":"Consultoria de SEO por cidade","item":"https://rcbseo.com.br/consultoria-seo/"},'
@@ -252,15 +283,27 @@ def pagina_cidade(c, vizinhas):
         '"provider":{"@type":"LocalBusiness","@id":"https://rcbseo.com.br/#business"},'
         '"areaServed":{"@type":"City","name":"%s","containedInPlace":{"@type":"State","name":"%s"}}},'
         '{"@type":"FAQPage","mainEntity":[%s]}]}'
-    ) % (canonical, titulo, desc.replace('"', "'"), cidade, canonical, cidade, cidade, uf, cidade, estado, faq_schema)
+    ) % (canonical, titulo, desc.replace('"', "'"), gerado_em, cidade, canonical, cidade, cidade, uf, cidade, estado, faq_schema)
 
     ramos_html = "\n".join(
         f'            <li>{nome} — <strong>{n_br(qtd)}</strong> novas em 90 dias</li>' for nome, qtd in ramos
     )
     bairros_html = ""
     if bairros:
+        bairros_itens = "".join(
+            f"<li><strong>{nome}</strong>: {n_br(qtd)} novas empresas em 90 dias</li>"
+            for nome, qtd in bairros
+        )
         bairros_html = f"""
-          <p>Dentro da cidade, a abertura de empresas se concentra em regiões como <strong>{", ".join(bairros)}</strong> — ou seja, é nesses bairros que a disputa pela atenção do cliente no Google Maps tende a ser mais intensa.</p>"""
+          <h3>Bairros com mais aberturas recentes</h3>
+          <ul class="audit-list">{bairros_itens}</ul>
+          <p>Esses números mostram concentração de novas empresas, não posição no Google. A concorrência de busca precisa ser confirmada no diagnóstico do seu segmento.</p>"""
+
+    porte_itens = "".join(
+        f"<li><strong>{rotulo}</strong>: {n_br(porte.get(chave, 0))} aberturas em 90 dias</li>"
+        for chave, rotulo in (("MEI", "MEI"), ("ME", "Microempresa"), ("EPP", "Empresa de pequeno porte"))
+        if porte.get(chave) is not None
+    )
 
     vizinhas_html = ""
     if vizinhas:
@@ -292,8 +335,8 @@ def pagina_cidade(c, vizinhas):
           <h1 class="page-title">Consultoria de SEO em {cidade}: faça sua empresa aparecer no Google</h1>
           <p class="page-subtitle">{intro}</p>
           <div class="page-actions">
-            <a class="btn btn-primary" href="/diagnostico-presenca-digital/" data-event="cta_click" data-location="hero" data-page="cidade-{slug}">Solicitar diagnóstico gratuito</a>
-            <a class="btn btn-outline" href="{whats_url}" target="_blank" rel="noopener noreferrer" data-event="cta_click" data-location="hero_whatsapp" data-page="cidade-{slug}">Chamar no WhatsApp</a>
+            <a class="btn btn-primary" href="{whats_url}" target="_blank" rel="noopener noreferrer" data-event="cta_click" data-location="hero_whatsapp" data-page="cidade-{slug}">Quero analisar minha empresa em {cidade}</a>
+            <a class="btn btn-outline" href="/diagnostico-presenca-digital/" data-event="cta_click" data-location="hero_secundario" data-page="cidade-{slug}">Ver o que será analisado</a>
           </div>
         </div>
         <aside class="page-hero-panel">
@@ -304,7 +347,7 @@ def pagina_cidade(c, vizinhas):
             <li><strong>{n12}</strong> novas empresas nos últimos 12 meses.</li>
             <li><strong>{nmes}</strong> abriram só no último mês.</li>
           </ul>
-          <p class="section-desc" style="font-size:.8rem;margin-top:.75rem;">Fonte: dados públicos de CNPJ (Receita Federal), referência {ref}.</p>
+          <p class="section-desc" style="font-size:.8rem;margin-top:.75rem;">Fonte: <a href="https://dados.gov.br/dados/conjuntos-dados/cadastro-nacional-da-pessoa-juridica-cnpj" target="_blank" rel="noopener noreferrer">dados públicos de CNPJ da Receita Federal</a>, referência {ref}. Página atualizada em {gerado_em}.</p>
         </aside>
       </div>
     </section>
@@ -313,15 +356,18 @@ def pagina_cidade(c, vizinhas):
       <div class="container split-grid">
         <div class="split-copy">
           <div class="section-tag">Por que agir agora</div>
-          <h2 id="concorrencia-titulo" class="section-title">A concorrência em {cidade} cresce todos os meses</h2>
-          <p>{cidade} ganhou <strong>{n90} novas empresas nos últimos 90 dias</strong>. Cada uma delas disputa espaço no Google — inclusive no seu ramo. Quando um cliente pesquisa pelo seu serviço e sua empresa não aparece, ele nem fica sabendo que você existe: escolhe entre os que aparecem.</p>{bairros_html}
-          <p>A boa notícia: a maioria das empresas da cidade ainda trata o Google como detalhe — perfil incompleto no Maps, site que não explica os serviços, nenhuma estratégia de conteúdo. Quem organiza essa base primeiro sai na frente.</p>
+          <h2 id="concorrencia-titulo" class="section-title">O que os dados de {cidade} dizem — e o que ainda precisa ser medido</h2>
+          <p>{cidade} ganhou <strong>{n90} novas empresas nos últimos 90 dias</strong>. {leitura_ritmo}</p>
+          <p>{leitura_mercado}</p>{bairros_html}
+          <p>Esses dados dimensionam o mercado, mas não substituem a análise do Google. No diagnóstico, eu verifico as buscas do seu serviço, o Maps, seu site e os concorrentes que realmente aparecem na sua frente.</p>
         </div>
         <div class="diagnostic-card">
           <h3>Ramos que mais abriram empresas em {cidade} (90 dias)</h3>
           <ul class="audit-list">
 {ramos_html}
           </ul>
+          <h3 style="margin-top:1.25rem;">Porte das empresas abertas</h3>
+          <ul class="audit-list">{porte_itens}</ul>
         </div>
       </div>
     </section>
@@ -373,7 +419,7 @@ def pagina_cidade(c, vizinhas):
           <div class="section-tag">Diagnóstico gratuito</div>
           <h2 id="cta-titulo" class="section-title">Quer aparecer no Google em {cidade}?</h2>
           <p>{cta}</p>
-          <a class="btn btn-primary" href="/diagnostico-presenca-digital/" data-event="cta_click" data-location="final" data-page="cidade-{slug}">Solicitar diagnóstico gratuito</a>
+          <a class="btn btn-primary" href="{whats_url}" target="_blank" rel="noopener noreferrer" data-event="cta_click" data-location="final_whatsapp" data-page="cidade-{slug}">Quero meu diagnóstico gratuito</a>
         </div>
       </div>
     </section>
@@ -482,6 +528,27 @@ def pagina_hub(cidades):
     return head_comum(titulo, desc, canonical, schema) + "\n" + corpo + rodape("hub-cidades")
 
 
+def atualizar_sitemap(cidades):
+    caminho = os.path.join(RAIZ, "sitemap.xml")
+    with open(caminho, encoding="utf-8") as f:
+        conteudo = f.read()
+
+    datas = {
+        f"{BASE_URL}/consultoria-seo/{c['slug']}/": c.get("gerado_em", c.get("data_referencia", ""))
+        for c in cidades
+    }
+    datas[f"{BASE_URL}/consultoria-seo/"] = max(datas.values()) if datas else ""
+
+    for url, data in datas.items():
+        if not data:
+            continue
+        padrao = rf"(<loc>{re.escape(url)}</loc>\s*<lastmod>)[^<]+"
+        conteudo = re.sub(padrao, lambda m: m.group(1) + data, conteudo, count=1)
+
+    with open(caminho, "w", encoding="utf-8", newline="\n") as f:
+        f.write(conteudo)
+
+
 def main():
     cidades = carregar_cidades()
     print(f"{len(cidades)} cidades carregadas (Goiânia excluída de propósito).")
@@ -503,6 +570,8 @@ def main():
     hub = pagina_hub(cidades)
     with open(os.path.join(RAIZ, "consultoria-seo", "index.html"), "w", encoding="utf-8", newline="\n") as f:
         f.write(hub)
+
+    atualizar_sitemap(cidades)
 
     print(f"Geradas {len(urls)} páginas de cidade + 1 hub em /consultoria-seo/.")
     return urls

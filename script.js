@@ -101,6 +101,28 @@ function trackEvent(eventName, params = {}) {
   }
 }
 
+// Disponibiliza o mesmo rastreador para formulários específicos de outras páginas.
+window.rcbTrackEvent = trackEvent;
+
+function eventContext(element) {
+  return {
+    page_location: window.location.href,
+    page_path: window.location.pathname,
+    page_id: element.dataset.page || document.body.dataset.page || '',
+    cta_location: element.dataset.location || '',
+    cta_label: element.getAttribute('aria-label') || element.textContent.trim().replace(/\s+/g, ' ').slice(0, 120),
+    link_url: element.href || ''
+  };
+}
+
+// Mede todos os CTAs marcados no HTML, inclusive links internos que antes não
+// geravam evento. O evento indica intenção; somente generate_lead é conversão.
+document.querySelectorAll('[data-event]').forEach(element => {
+  element.addEventListener('click', () => {
+    trackEvent(element.dataset.event || 'cta_click', eventContext(element));
+  });
+});
+
 function getField(name) {
   return form.elements[name];
 }
@@ -187,9 +209,12 @@ if (form) {
     ].filter(l => l !== undefined).join('\n');
 
     const url = `https://wa.me/5562991161040?text=${encodeURIComponent(texto)}`;
-    trackEvent('envio_formulario', {
+    trackEvent('generate_lead', {
       method: 'contact_form_whatsapp',
-      page_location: window.location.href
+      contact_method: 'whatsapp',
+      form_id: 'contatoForm',
+      page_location: window.location.href,
+      page_path: window.location.pathname
     });
     window.open(url, '_blank', 'noopener,noreferrer');
 
@@ -263,9 +288,12 @@ if (form) {
 document.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp.com"]').forEach(link => {
   link.addEventListener('click', () => {
     trackEvent('contato_whatsapp', {
+      contact_method: 'whatsapp',
       page_location: window.location.href,
+      page_path: window.location.pathname,
       link_url: link.href,
-      cta_label: link.getAttribute('aria-label') || link.textContent.trim()
+      cta_location: link.dataset.location || '',
+      cta_label: link.getAttribute('aria-label') || link.textContent.trim().replace(/\s+/g, ' ').slice(0, 120)
     });
   });
 });
@@ -273,7 +301,9 @@ document.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp.com"]').forEa
 document.querySelectorAll('a[href^="tel:"]').forEach(link => {
   link.addEventListener('click', () => {
     trackEvent('contato_telefone', {
+      contact_method: 'phone',
       page_location: window.location.href,
+      page_path: window.location.pathname,
       link_url: link.href
     });
   });
@@ -282,7 +312,9 @@ document.querySelectorAll('a[href^="tel:"]').forEach(link => {
 document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
   link.addEventListener('click', () => {
     trackEvent('contato_email', {
+      contact_method: 'email',
       page_location: window.location.href,
+      page_path: window.location.pathname,
       link_url: link.href
     });
   });

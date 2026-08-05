@@ -283,8 +283,14 @@
         problema
       ].join('\n');
       var url = 'https://wa.me/5562991161040?text=' + encodeURIComponent(texto);
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', 'envio_formulario', { method: 'contact_form_whatsapp', page_location: window.location.href });
+      if (typeof window.rcbTrackEvent === 'function') {
+        window.rcbTrackEvent('generate_lead', {
+          method: 'contact_form_whatsapp',
+          contact_method: 'whatsapp',
+          form_id: 'diagnosticoForm',
+          page_location: window.location.href,
+          page_path: window.location.pathname
+        });
       }
       window.open(url, '_blank', 'noopener,noreferrer');
       var btn = form.querySelector('button[type="submit"]');

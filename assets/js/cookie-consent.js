@@ -42,18 +42,21 @@
     var banner = document.getElementById('cookie-banner');
     if (!banner) return;
     banner.hidden = false;
+    document.body.classList.add('cookie-banner-visible');
   }
 
   function hideBanner() {
     var banner = document.getElementById('cookie-banner');
     if (!banner) return;
     banner.hidden = true;
+    document.body.classList.remove('cookie-banner-visible');
   }
 
   function init() {
     var stored = getStoredConsent();
     if (stored) {
       applyConsent(stored.decision);
+      document.body.classList.remove('cookie-banner-visible');
       return;
     }
     showBanner();
