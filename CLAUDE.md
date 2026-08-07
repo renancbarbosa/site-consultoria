@@ -57,7 +57,7 @@ Renan confirmou: Bing Webmaster Tools feito, sitemap reenviado no Search Console
 - Cloudflare "Crawler Hints" (Caching → Configuration): já estava ligado.
 - Cloudflare "AI Crawl Control" → **"Managed robots.txt": decidido manter DESLIGADO.** Esse botão faria o Cloudflare reescrever o `robots.txt` para bloquear crawlers de IA — mas o `robots.txt` atual permite de propósito GPTBot, ClaudeBot, Google-Extended, PerplexityBot, Applebot-Extended e CCBot (estratégia de visibilidade em IA/GEO). Ligar esse botão entraria em conflito direto com isso.
 
-## Rodada de 06/08/2026: nova divisão "SEO Nacional / mercados competitivos" (NÃO publicada ainda)
+## Rodada de 06/08/2026: nova divisão "SEO Nacional / mercados competitivos" (publicada — commit 1e2949e)
 
 Segunda frente do site, independente do SEO local e sem canibalizá-lo. **63 URLs novas** (23 páginas
 comerciais + 40 artigos). Plano completo e matriz de canibalização: `docs/seo-mercados-competitivos-plan.md`
@@ -102,8 +102,18 @@ Está detalhada no §2 do plano. Os pontos que não podem ser afrouxados:
   artigo (4,4 KB por arquivo, 13 variantes). Foram consolidadas no `styles.css`. Os artigos antigos
   mantêm o inline (que vence por vir depois) — o visual deles não mudou; os novos não repetem o bloco.
 
+### Publicação (07/08/2026)
+- Commit `1e2949e` enviado para `origin main`; Cloudflare Pages publicou automaticamente.
+  As 63 URLs foram conferidas no ar (HTTP 200) antes do passo seguinte.
+- **IndexNow enviado ao Bing com as 63 URLs novas — aceito (HTTP 200).** Reutilizada a chave
+  `19341b29c6054af601879d85a34d62c5`, a mesma de 23/07/2026. **Nunca gerar chave nova.**
+- Automatizado em `scripts/indexnow.py`: `--novas` (URLs da divisão), `--sitemap` (tudo) ou URLs
+  avulsas. Regra: só enviar depois de confirmar HTTP 200, senão o Bing rastreia e acha 404.
+
 ### Pendências desta rodada
-- **Nada foi commitado nem publicado** — aguardando OK do Renan.
+- **Falta o Renan fazer no Search Console:** reenviar o `sitemap.xml` (agora com 368 URLs) e pedir
+  indexação manual de `/seo-para-mercados-competitivos/`, `/seo-para-iptv/`, `/seo-para-bets/` e
+  `/analise-de-projeto/`. Os artigos o Google descobre pelo índice do blog + sitemap.
 - 10 dos 50 artigos planejados ficaram no backlog (motivo de cada um no §5.1 do plano). Todos os 40
   publicados são completos; nenhum arquivo vazio foi criado.
 - Achados pré-existentes, não corrigidos por serem fora do escopo desta rodada:
