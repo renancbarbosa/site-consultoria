@@ -335,6 +335,12 @@ def b1_seo_para_iptv():
          "Os fatores que realmente mexem no prazo, sem promessa de calendário."),
         ("/blog/dominio-novo-ou-expirado-para-iptv/", "Domínio novo ou expirado?",
          "A comparação honesta entre começar do zero e comprar histórico."),
+        ("/blog/iptv-primeira-pagina-3-4-meses/", "Dá para chegar em 3 ou 4 meses?",
+         "Um modelo de faixas para saber quais termos são viáveis nesse prazo e quais não são."),
+        ("/blog/seo-nacional-para-iptv-o-que-muda/", "O que muda na disputa nacional",
+         "Sem mapa e sem proximidade: o que sobra, e por que o prazo é maior."),
+        ("/blog/backlinks-para-iptv-funcionam/", "Backlinks funcionam neste nicho?",
+         "Quais tipos de veículo rendem de verdade e onde a verba costuma ser desperdiçada."),
     ])
 
     corpo += cta_final(
@@ -822,6 +828,8 @@ def b4_link_building_iptv():
          "Quando o problema não é conquistar links, e sim o que já está apontando para o site."),
         ("/blog/quanto-investir-backlinks-iptv/", "Quanto investir em autoridade",
          "Como dimensionar a verba dessa frente dentro do projeto."),
+        ("/blog/backlinks-para-iptv-funcionam/", "Backlinks para IPTV funcionam?",
+         "A leitura de eficácia por tipo de veículo, do que mais rende ao que é passivo."),
     ])
 
     corpo += cta_final(
@@ -978,6 +986,8 @@ def b5_dominio_expirado_iptv():
          "O passo a passo de verificação, com as fontes públicas usadas."),
         ("/blog/como-saber-se-dominio-expirado-foi-usado-para-spam/", "Sinais de spam",
          "O que procurar para identificar um domínio comprometido antes de comprar."),
+        ("/blog/como-escolher-dominio-expirado-com-autoridade/", "Como escolher entre candidatos",
+         "Os critérios de comparação em ordem de peso, e como definir um teto de preço."),
     ])
 
     corpo += cta_final(

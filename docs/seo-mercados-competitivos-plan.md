@@ -377,33 +377,50 @@ indexáveis próprias (evita página fraca com poucos itens — regra do briefin
 
 ---
 
-## 5.1 Status de produção (06/08/2026)
+## 5.1 Status de produção
 
-**Publicados: 40 dos 50 artigos planejados** (~29.800 palavras). Todos completos, com FAQ visível,
-schema `BlogPosting` + `BreadcrumbList` + `FAQPage`, CTA e links internos. Nenhum arquivo vazio ou
-placeholder foi criado.
+**07/08/2026 — os 50 artigos planejados estão publicados** (~39.400 palavras). Nenhum arquivo vazio,
+nenhum placeholder. Todos com FAQ visível, schema `BlogPosting` + `BreadcrumbList` + `FAQPage`,
+CTA e links internos.
 
-**Backlog — 10 artigos não produzidos.** A lista abaixo registra também por que cada um ficou por
-último: em todos os casos a intenção já é atendida, no todo ou em parte, por um conteúdo publicado.
-Isso significa que produzi-los exige um ângulo genuinamente novo — não uma reescrita do que já existe,
-que só criaria canibalização.
+Produção em dois lotes:
 
-| # | Slug | Intenção já coberta por | O que precisaria ter de novo |
+| Lote | Data | Artigos | Módulos |
 |---|---|---|---|
-| 3 | iptv-primeira-pagina-3-4-meses | artigo 2 (prazo) + FAQ dele | cenário numérico por faixa de dificuldade de termo |
-| 6 | como-escolher-dominio-expirado-com-autoridade | artigo 14 (análise de histórico) | critérios de *escolha entre candidatos*, não de verificação |
-| 7 | backlinks-para-iptv-funcionam | artigo 8 + página B4 | leitura de eficácia por tipo de veículo no nicho |
-| 9 | seo-nacional-para-iptv-o-que-muda | seção "Disputa nacional" de B1 (consolidação §4) | só se o Search Console mostrar volume próprio |
-| 11 | o-que-acontece-com-seo-ao-trocar-dominio | artigo 43 (perder posições) | mecânica técnica do que é reavaliado, mais a fundo |
-| 13 | dominio-caiu-o-que-fazer | artigo 12 (migração) + D2 | **restrito por política §2.5** — só o recorte legítimo (perda de registro), nunca o de bloqueio |
-| 20 | seo-para-afiliados-como-estruturar-projeto | página C3 (arquitetura completa) | roteiro de execução mês a mês |
-| 21 | link-building-para-bets-o-que-avaliar | artigo 38 + página C5 | critérios específicos do mercado de links do setor |
-| 26 | conteudo-autoridade-conversao-sites-de-apostas | página C1 (seção de conteúdo) | integração entre as três frentes, com métricas |
-| 27 | site-de-afiliado-competir-nacionalmente | página C3 + artigo 19 | comparação de porte: afiliado pequeno × portal grande |
+| 1 | 06/08/2026 | 40 | `artigos_competitivo`, `artigos_estrategia`, `artigos_dominios`, `artigos_backlinks`, `artigos_iptv`, `artigos_bets` |
+| 2 | 07/08/2026 | 10 | `artigos_iptv_lote2`, `artigos_dominios_lote2`, `artigos_bets_lote2` |
 
-**Recomendação:** não produzir os 10 de uma vez. Esperar o Search Console mostrar quais termos dos 40
-publicados geram impressão e priorizar o backlog por demanda observada — em vez de por completude da
-lista original.
+### Como o lote 2 foi diferenciado
+O lote 2 era o backlog justamente porque cada tema já tinha a intenção parcialmente coberta. Antes de
+escrever, foi definido um ângulo que não repetisse o conteúdo existente — o critério está no cabeçalho
+de cada módulo. Resumo:
+
+| # | Artigo | Ângulo que o diferencia |
+|---|---|---|
+| 3 | iptv-primeira-pagina-3-4-meses | modelo de 4 faixas de dificuldade de termo (o artigo 2 trata dos fatores de prazo) |
+| 6 | como-escolher-dominio-expirado-com-autoridade | COMPARA candidatos entre si (o 14 VERIFICA um domínio) |
+| 7 | backlinks-para-iptv-funcionam | eficácia por tipo de veículo (o 8 dimensiona verba) |
+| 9 | seo-nacional-para-iptv-o-que-muda | EXPLICA a mecânica da disputa; aponta para o pilar B1, que VENDE |
+| 11 | o-que-acontece-com-seo-ao-trocar-dominio | mecânica do que é reavaliado (o 43 responde "vou perder posições?") |
+| 13 | dominio-caiu-o-que-fazer | diagnóstico por causa — ver restrição abaixo |
+| 20 | seo-para-afiliados-como-estruturar-projeto | SEQUÊNCIA de execução por fase (a C3 descreve a arquitetura) |
+| 21 | link-building-para-bets-o-que-avaliar | como julgar propostas do mercado de links do setor (o 38 é genérico) |
+| 26 | conteudo-autoridade-conversao-sites-de-apostas | como as três frentes se condicionam, e as métricas que as ligam |
+| 27 | site-de-afiliado-competir-nacionalmente | recorte de PORTE: onde o pequeno ganha do grande |
+
+### Restrição aplicada ao artigo 13 (política §2.5)
+"Domínio caiu" tem leituras legítimas — registro expirado, falha de DNS ou hospedagem, pendência
+cadastral, perda de controle do domínio — e uma que a RCB não atende: domínio retirado do ar por ordem
+judicial ou administrativa. O artigo cobre as legítimas em profundidade e, sobre a ordem judicial, diz
+o que precisa ser dito: **é assunto jurídico, não de SEO, e registrar outro domínio para seguir a mesma
+operação não resolve o problema de origem e pode agravá-lo.** Nenhum contorno é oferecido.
+
+### Interligação do lote 2 (script `ligar-artigos-lote2.py`)
+19 links inseridos, editando os **módulos de conteúdo** para sobreviverem a regeração:
+- **10 cards** em "Continue por aqui" de 9 páginas comerciais → artigos do lote 2
+- **9 links contextuais** dentro do texto de artigos do lote 1 → artigos do lote 2
+
+Nenhum artigo do lote 2 ficou órfão.
 
 ---
 

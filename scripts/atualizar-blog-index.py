@@ -26,6 +26,8 @@ from rcb_artigo import data_br  # noqa: E402
 
 import artigos_competitivo, artigos_estrategia, artigos_dominios  # noqa: E402
 import artigos_backlinks, artigos_iptv, artigos_bets              # noqa: E402
+import artigos_iptv_lote2, artigos_dominios_lote2                 # noqa: E402
+import artigos_bets_lote2                                         # noqa: E402
 
 MARCA_INI = "<!-- RCB:CLUSTERS-NACIONAIS:INICIO -->"
 MARCA_FIM = "<!-- RCB:CLUSTERS-NACIONAIS:FIM -->"
@@ -37,12 +39,14 @@ GRUPOS = [
     ("mercados-competitivos", "SEO para mercados competitivos",
      "Projetos nacionais em nichos de alta concorrência: IPTV e streaming, bets e iGaming, "
      "e o que muda quando a disputa deixa de ser local.",
-     artigos_iptv.ARTIGOS + artigos_bets.ARTIGOS + artigos_estrategia.ARTIGOS
-     + artigos_competitivo.ARTIGOS),
+     artigos_iptv.ARTIGOS + artigos_iptv_lote2.ARTIGOS
+     + artigos_bets.ARTIGOS + artigos_bets_lote2.ARTIGOS
+     + artigos_estrategia.ARTIGOS + artigos_competitivo.ARTIGOS),
     ("dominios-autoridade", "Domínios, autoridade e link building",
      "Domínio expirado, migração de domínio, backlinks e recuperação de tráfego — as decisões "
      "técnicas que mais impactam projetos competitivos.",
-     artigos_dominios.ARTIGOS + artigos_backlinks.ARTIGOS),
+     artigos_dominios.ARTIGOS + artigos_dominios_lote2.ARTIGOS
+     + artigos_backlinks.ARTIGOS),
 ]
 
 SVG = ('<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" '

@@ -112,6 +112,10 @@ ARTIGOS.append({
         <p>Praticamente todo recorte deste setor tem subtemas menos disputados com demanda real —
         modalidades específicas, dúvidas de funcionamento, conteúdo de decisão. Conquistar o topo nesses
         recortes costuma render mais que ficar na terceira página do termo principal.</p>
+
+        <p>Antes de decidir onde aplicar o orçamento, vale entender como conteúdo, autoridade e
+        conversão se condicionam:
+        {link('/blog/conteudo-autoridade-conversao-sites-de-apostas/', 'as três frentes de um site de apostas')}.</p>
     """,
     "faq": [
         ("A RCB trabalha com sites de apostas?",
@@ -467,6 +471,10 @@ ARTIGOS.append({
         <p>Por isso as decisões de estrutura importam tanto: elas determinam se manter o site atualizado é
         viável no volume em que esses portais operam. A estratégia de conteúdo está em
         {link('/seo-para-afiliados-de-apostas/', 'SEO para afiliados de apostas')}.</p>
+
+        <p>E a ordem de construção — o que publicar primeiro para o projeto gerar receita durante a
+        obra — está em
+        {link('/blog/seo-para-afiliados-como-estruturar-projeto/', 'como estruturar o projeto de um portal de afiliado')}.</p>
     """,
     "faq": [
         ("Que tipo de estrutura técnica usar?",
@@ -573,6 +581,10 @@ ARTIGOS.append({
         opcional — e a estrutura do site precisa tornar essa revisão viável, com a informação volátil
         armazenada em um lugar só. Ver
         {link('/blog/como-criar-site-para-afiliado-de-apostas/', 'como criar o site do zero')}.</p>
+
+        <p>Manter poucas páginas corretas e atualizadas é, aliás, uma das poucas frentes em que um
+        portal pequeno ganha de um grande — o assunto está em
+        {link('/blog/site-de-afiliado-competir-nacionalmente/', 'o que um site de afiliado precisa para competir nacionalmente')}.</p>
     """,
     "faq": [
         ("Preciso testar pessoalmente o que avalio?",

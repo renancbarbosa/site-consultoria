@@ -566,6 +566,10 @@ ARTIGOS.append({
         <p>A recomendação que sai daí tem três formas possíveis: comprar, não comprar, ou comprar até
         determinado valor. Qualquer conclusão sem um teto de preço está incompleta.</p>
 
+        <p>Se você tem mais de um candidato aprovado e precisa decidir entre eles, os critérios de
+        comparação estão em
+        {link('/blog/como-escolher-dominio-expirado-com-autoridade/', 'como escolher um domínio expirado com autoridade')}.</p>
+
         <h2>Erros comuns nessa análise</h2>
 
         <ul>
@@ -674,6 +678,10 @@ ARTIGOS.append({
         <p><strong>Não desligue o domínio antigo.</strong> Os redirecionamentos precisam continuar
         funcionando por bastante tempo — não semanas. Enquanto houver links externos apontando para ele,
         ele tem função.</p>
+
+        <p>Esse ponto é o que separa uma migração planejada de uma perda de domínio. Se o seu caso for
+        o segundo — o registro venceu, o site saiu do ar —, o diagnóstico está em
+        {link('/blog/dominio-caiu-o-que-fazer/', 'domínio caiu: o que fazer com o site e o SEO')}.</p>
 
         <h2>Etapa 5 — Atualização externa</h2>
 
@@ -795,6 +803,10 @@ ARTIGOS.append({
         <p>Não existe prazo garantido, e desconfie de quem der um número exato. O que se observa na prática:
         sites menores tendem a estabilizar mais rápido, sites grandes levam mais tempo, e o processo é
         gradual — não há um dia em que tudo volta.</p>
+
+        <p>A mecânica por trás disso — o que exatamente é reavaliado e o que atravessa pelos
+        redirecionamentos — está em
+        {link('/blog/o-que-acontece-com-seo-ao-trocar-dominio/', 'o que acontece com o SEO quando o domínio é trocado')}.</p>
 
         <p>O acompanhamento correto olha a curva, não um ponto. Uma queda seguida de recuperação parcial
         e progressiva é o comportamento esperado. Uma queda que não se move depois de bastante tempo indica

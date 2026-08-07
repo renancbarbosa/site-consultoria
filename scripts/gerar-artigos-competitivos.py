@@ -29,6 +29,9 @@ import artigos_dominios      # noqa: E402
 import artigos_backlinks     # noqa: E402
 import artigos_iptv          # noqa: E402
 import artigos_bets          # noqa: E402
+import artigos_iptv_lote2     # noqa: E402
+import artigos_dominios_lote2 # noqa: E402
+import artigos_bets_lote2     # noqa: E402
 
 MODULOS = [
     ("Mercados competitivos", artigos_competitivo),
@@ -37,6 +40,9 @@ MODULOS = [
     ("Backlinks e autoridade", artigos_backlinks),
     ("IPTV e streaming", artigos_iptv),
     ("Bets e iGaming", artigos_bets),
+    ("IPTV — lote 2", artigos_iptv_lote2),
+    ("Domínios — lote 2", artigos_dominios_lote2),
+    ("Bets — lote 2", artigos_bets_lote2),
 ]
 
 # Referência: os artigos já publicados no site têm mediana de ~1.005 palavras

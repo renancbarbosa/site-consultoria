@@ -243,6 +243,8 @@ def c1_seo_para_bets():
          "Os fatores que mexem no prazo, sem promessa de calendário."),
         ("/link-building-para-bets/", "Link building para bets",
          "A frente que costuma decidir as posições de topo neste setor."),
+        ("/blog/conteudo-autoridade-conversao-sites-de-apostas/", "Como as três frentes se conectam",
+         "Conteúdo, autoridade e conversão se condicionam — e o desequilíbrio trava o projeto."),
     ])
 
     corpo += cta_final(
@@ -562,6 +564,10 @@ def c3_afiliados():
          "A construção técnica: estrutura de conteúdo, tabelas, filtros e escalabilidade."),
         ("/blog/como-criar-paginas-de-avaliacao-de-casas-de-apostas/", "Páginas de avaliação",
          "O passo a passo de uma página de review que sustenta posição."),
+        ("/blog/seo-para-afiliados-como-estruturar-projeto/", "A sequência de execução",
+         "Em que ordem construir cada camada — e por que a maioria inverte."),
+        ("/blog/site-de-afiliado-competir-nacionalmente/", "Competir com portal grande",
+         "Onde um portal pequeno ganha de um grande, e onde não adianta tentar."),
         ("/link-building-para-bets/", "Link building",
          "Como construir autoridade em um dos nichos mais disputados do país."),
     ])
@@ -719,6 +725,8 @@ def c4_criacao_site_afiliado():
          "A arquitetura de conteúdo que o site precisa sustentar."),
         ("/blog/como-criar-site-para-afiliado-de-apostas/", "Como criar o site do zero",
          "O passo a passo, incluindo o que decidir antes da primeira página."),
+        ("/blog/site-de-afiliado-competir-nacionalmente/", "O que é preciso para competir",
+         "A leitura de porte que define onde concentrar esforço."),
         ("/migracao-de-dominio-seo/", "Migração de domínio",
          "Se o portal já existe e vai trocar de endereço ou plataforma."),
     ])
@@ -875,6 +883,8 @@ def c5_link_building_bets():
          "Quando o problema é o que já está apontando para o seu site."),
         ("/blog/quanto-custa-um-backlink-de-qualidade/", "Quanto custa um backlink",
          "O que forma o preço e por que o mais caro nem sempre é o melhor."),
+        ("/blog/link-building-para-bets-o-que-avaliar/", "Como julgar as propostas",
+         "As sete perguntas a fazer antes de fechar, e os sinais de proposta ruim."),
     ])
 
     corpo += cta_final(

@@ -334,6 +334,10 @@ ARTIGOS.append({
 
         <p>A última pergunta costuma resolver os casos duvidosos sozinha.</p>
 
+        <p>Em setores onde chega proposta de link toda semana, vale conhecer também os sinais de oferta
+        ruim: {link('/blog/link-building-para-bets-o-que-avaliar/', 'link building para bets: o que avaliar')}
+        trata do mercado de venda de links de um dos nichos mais caros do país.</p>
+
         <h2>Um link ruim faz mal?</h2>
 
         <p>Um link ruim isolado, não — todo site acumula links que nunca pediu, e sistemas de busca lidam

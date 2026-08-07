@@ -203,6 +203,8 @@ def d1_analise_dominios():
          "Os sinais que aparecem no histórico e como verificá-los."),
         ("/blog/dominio-premium-ou-dominio-expirado/", "Premium ou expirado?",
          "A comparação entre pagar pelo nome e pagar pelo histórico."),
+        ("/blog/como-escolher-dominio-expirado-com-autoridade/", "Como escolher entre candidatos",
+         "Quando você já tem três ou quatro opções e precisa decidir qual comprar."),
     ])
 
     corpo += cta_final(
@@ -373,6 +375,10 @@ def d2_migracao_dominio():
          "O processo completo, com o checklist de cada etapa."),
         ("/blog/trocar-de-dominio-faz-perder-posicoes/", "Trocar faz perder posições?",
          "O que realmente acontece e quanto tempo costuma levar a estabilização."),
+        ("/blog/o-que-acontece-com-seo-ao-trocar-dominio/", "A mecânica da troca",
+         "O que é reavaliado, o que atravessa pelos redirecionamentos e o que se perde."),
+        ("/blog/dominio-caiu-o-que-fazer/", "Domínio caiu: o que fazer",
+         "O diagnóstico das causas — registro, DNS, hospedagem — e o que fazer em cada uma."),
         ("/recuperacao-de-trafego-organico/", "Recuperação de tráfego",
          "Se a migração já foi feita e o tráfego caiu."),
     ])
@@ -891,6 +897,8 @@ def d5_recuperacao():
          "O passo a passo do diagnóstico, com o que verificar em cada hipótese."),
         ("/blog/trocar-de-dominio-faz-perder-posicoes/", "Queda após troca de domínio",
          "O cenário mais comum e mais corrigível de todos."),
+        ("/blog/dominio-caiu-o-que-fazer/", "O site saiu do ar",
+         "Como descobrir a causa antes de agir, e o impacto real de uma indisponibilidade."),
         ("/auditoria-seo/", "Auditoria de SEO",
          "Se o objetivo é revisão geral e não investigação de uma queda específica."),
     ])

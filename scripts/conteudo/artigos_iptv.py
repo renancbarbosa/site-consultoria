@@ -230,6 +230,10 @@ ARTIGOS.append({
         <p>Se alguém oferece primeira página em poucas semanas nos termos principais, vale perguntar
         exatamente qual termo, com qual volume de busca — a resposta costuma revelar que o termo prometido
         não é o que interessa.</p>
+
+        <p>A pergunta fechada — <em>dá para chegar em três ou quatro meses?</em> — é respondida com um
+        modelo de faixas de dificuldade em
+        {link('/blog/iptv-primeira-pagina-3-4-meses/', 'IPTV na primeira página em 3 ou 4 meses')}.</p>
     """,
     "faq": [
         ("É possível chegar à primeira página em três ou quatro meses?",
@@ -551,6 +555,9 @@ ARTIGOS.append({
 
         <p>Os critérios de seleção estão em
         {link('/blog/como-avaliar-qualidade-de-um-backlink/', 'como avaliar a qualidade de um backlink')}.</p>
+
+        <p>E a leitura de quais tipos de veículo realmente rendem neste nicho está em
+        {link('/blog/backlinks-para-iptv-funcionam/', 'backlinks para IPTV funcionam?')}.</p>
 
         <h2>O que esperar do investimento</h2>
 

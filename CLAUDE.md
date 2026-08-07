@@ -111,11 +111,15 @@ Está detalhada no §2 do plano. Os pontos que não podem ser afrouxados:
   avulsas. Regra: só enviar depois de confirmar HTTP 200, senão o Bing rastreia e acha 404.
 
 ### Pendências desta rodada
-- **Falta o Renan fazer no Search Console:** reenviar o `sitemap.xml` (agora com 368 URLs) e pedir
+- **Falta o Renan fazer no Search Console:** reenviar o `sitemap.xml` (agora com 378 URLs) e pedir
   indexação manual de `/seo-para-mercados-competitivos/`, `/seo-para-iptv/`, `/seo-para-bets/` e
   `/analise-de-projeto/`. Os artigos o Google descobre pelo índice do blog + sitemap.
-- 10 dos 50 artigos planejados ficaram no backlog (motivo de cada um no §5.1 do plano). Todos os 40
-  publicados são completos; nenhum arquivo vazio foi criado.
+- **Backlog zerado em 07/08/2026:** os 10 artigos restantes foram produzidos (módulos `*_lote2.py`),
+  fechando os 50 planejados (~39.400 palavras). O ângulo que diferencia cada um do conteúdo já
+  existente está no cabeçalho dos módulos e no §5.1 do plano.
+- `scripts/ligar-artigos-lote2.py` inseriu 19 links do restante do site para os artigos novos —
+  editando os **módulos de conteúdo**, para sobreviverem a regeração. Depois de rodá-lo, é preciso
+  regerar páginas e artigos.
 - Achados pré-existentes, não corrigidos por serem fora do escopo desta rodada:
   `/consultoria-seo/palmas/` é página órfã (nenhum link aponta para ela — provável resíduo de colisão
   de slug do gerador de cidades), e 20 páginas antigas têm meta description entre 161 e 170 caracteres.

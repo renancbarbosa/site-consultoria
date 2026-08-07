@@ -37,13 +37,15 @@ def urls_da_divisao():
     import cluster_central, cluster_iptv, cluster_bets, cluster_dominios, pagina_analise
     import artigos_competitivo, artigos_estrategia, artigos_dominios
     import artigos_backlinks, artigos_iptv, artigos_bets
+    import artigos_iptv_lote2, artigos_dominios_lote2, artigos_bets_lote2
 
     urls = []
     for m in (cluster_central, cluster_iptv, cluster_bets, cluster_dominios, pagina_analise):
         for f in m.PAGINAS:
             urls.append(f"{BASE_URL}/" + f()[0].replace("index.html", ""))
     for m in (artigos_competitivo, artigos_estrategia, artigos_dominios,
-              artigos_backlinks, artigos_iptv, artigos_bets):
+              artigos_backlinks, artigos_iptv, artigos_bets,
+              artigos_iptv_lote2, artigos_dominios_lote2, artigos_bets_lote2):
         for a in m.ARTIGOS:
             urls.append(f"{BASE_URL}/blog/{a['slug']}/")
     return urls
