@@ -7,3 +7,5 @@ node_modules/
 count.js
 count.py
 AUDITORIA-CONSULTORIA.md
+__pycache__/
+graphify-out/

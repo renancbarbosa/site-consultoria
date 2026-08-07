@@ -1921,8 +1921,8 @@ section {
    ============================================================ */
 .footer-cols {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1fr;
-  gap: 48px;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+  gap: 36px;
   padding: 56px 20px;
 }
 
@@ -2585,8 +2585,9 @@ section {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr 1fr;
-  gap: 48px;
+  /* 5 colunas desde 06/08/2026: entrou a coluna "SEO Nacional". */
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+  gap: 36px;
   padding-bottom: 48px;
 }
 
@@ -3530,3 +3531,140 @@ section {
 .footer-secondary-niches p { font-size: 0.8125rem; color: rgba(255,255,255,0.6); margin: 0; }
 .footer-secondary-niches a { color: rgba(255,255,255,0.75); text-decoration: none; padding: 0 0.25rem; }
 .footer-secondary-niches a:hover { color: #fff; text-decoration: underline; }
+
+/* ============================================================
+   DIVISÃO SEO NACIONAL / MERCADOS COMPETITIVOS
+   Adicionado na rodada de 06/08/2026. Reaproveita os componentes
+   existentes (cluster-card, case-table, faq-card, formulario-diagnostico)
+   e só define o que não existia antes.
+   ============================================================ */
+
+/* Dropdown "SEO Nacional": tem itens com rótulos mais longos que os
+   outros menus, então precisa de largura própria. */
+.nav-dropdown-wide {
+  min-width: 290px;
+}
+
+/* Formulário de análise de projeto — blocos temáticos.
+   O formulário é longo de propósito (qualifica projeto de ticket alto);
+   os blocos existem para que ele não pareça um paredão de campos. */
+.form-bloco {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.10);
+  margin: 0 0 28px;
+  padding: 22px 0 0;
+}
+
+.form-bloco:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.form-bloco-titulo {
+  display: block;
+  padding: 0;
+  margin-bottom: 4px;
+  color: #C9A84C;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.form-bloco-desc {
+  margin: 0 0 18px;
+  color: rgba(255,255,255,0.55);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 20px;
+}
+
+.form-grid-2 .form-row:has(textarea) {
+  grid-column: 1 / -1;
+}
+
+.formulario-projeto .form-intro {
+  margin: -8px 0 24px;
+  color: rgba(255,255,255,0.55);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.formulario-projeto .opcional {
+  color: rgba(255,255,255,0.35);
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.form-ajuda {
+  display: block;
+  margin: -4px 0 8px;
+  color: rgba(255,255,255,0.45);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.formulario-projeto select.invalid,
+.formulario-projeto input.invalid,
+.formulario-projeto textarea.invalid {
+  border-color: #E05A5A;
+}
+
+@media (max-width: 640px) {
+  .form-grid-2 { grid-template-columns: 1fr; }
+  .form-bloco { margin-bottom: 22px; padding-top: 18px; }
+}
+
+
+/* ============================================================
+   ARTIGOS DO BLOG — layout base
+   Estas regras existiam duplicadas em <style> inline dentro de cada
+   artigo (4,4 KB por arquivo). Consolidadas aqui em 06/08/2026 para que
+   os artigos novos não precisem repeti-las. Os artigos antigos mantêm o
+   <style> inline, que continua vencendo por vir depois no <head> — o
+   visual deles não muda.
+   ============================================================ */
+
+.artigo-hero { background: var(--navy); padding-top: 80px; }
+.artigo-capa-placeholder { width: 100%; height: 420px; background: linear-gradient(135deg, var(--navy-light) 0%, #162a3a 40%, #0d2218 100%); position: relative; overflow: hidden; }
+.artigo-capa-placeholder::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 50%, rgba(201,168,76,0.12) 0%, transparent 60%); }
+.artigo-capa-placeholder::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 40%, var(--navy) 100%); }
+@media (max-width: 640px) { .artigo-capa-placeholder { height: 240px; } }
+.artigo-header { max-width: 720px; margin: 0 auto; padding: 36px 20px 56px; }
+.artigo-breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 18px; font-size: 0.78rem; color: var(--text-muted); }
+.artigo-breadcrumb a { color: var(--text-muted); transition: color var(--transition); }
+.artigo-breadcrumb a:hover { color: var(--gold); }
+.artigo-breadcrumb span { color: var(--gray-500); }
+.artigo-cat { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.2); border-radius: 100px; padding: 5px 14px; display: inline-block; margin-bottom: 20px; }
+.artigo-header h1 { font-size: clamp(1.6rem, 3.5vw, 2.5rem); font-weight: 800; color: var(--white); line-height: 1.2; margin-bottom: 20px; }
+.artigo-body { background: var(--navy-mid); padding-bottom: 96px; }
+.artigo-container { max-width: 720px; margin: 0 auto; padding: 0 20px; font-size: 18px; line-height: 1.7; color: var(--text-main); }
+@media (max-width: 640px) { .artigo-container { font-size: 16px; } }
+.artigo-container p { margin-bottom: 26px; }
+.artigo-container h2 { font-size: clamp(1.2rem, 2.5vw, 1.55rem); font-weight: 700; color: var(--gold); line-height: 1.3; margin: 60px 0 26px; padding-top: 10px; border-top: 1px solid rgba(201,168,76,0.15); }
+.artigo-container h3 { font-size: 1.05rem; font-weight: 700; color: var(--white); line-height: 1.35; margin: 34px 0 14px; }
+.artigo-container strong { color: var(--white); font-weight: 700; }
+.artigo-container ul, .artigo-container ol { margin: 0 0 26px 1.4em; line-height: 1.7; }
+.artigo-container li { margin-bottom: 10px; }
+.artigo-faq-list { display: flex; flex-direction: column; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.artigo-faq { margin: 56px 0 42px; padding-top: 10px; border-top: 1px solid rgba(201,168,76,0.15); }
+.artigo-faq h2 { margin-top: 0; border-top: 0; padding-top: 0; }
+.artigo-faq-item { background: rgba(255,255,255,0.035); border: 1px solid rgba(255,255,255,0.07); border-radius: var(--radius-md); padding: 22px 24px; }
+.artigo-faq-item h3 { color: var(--white); font-size: 1rem; line-height: 1.35; margin-bottom: 10px; margin-top: 0; }
+.artigo-faq-item p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.65; margin-bottom: 0; }
+.artigo-link { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; font-weight: 600; transition: color var(--transition); }
+.artigo-link:hover { color: var(--gold-light); }
+.artigo-cta-box { margin: 40px 0; padding: 28px; background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.18); border-radius: var(--radius-md); }
+.artigo-cta-box p { margin-bottom: 16px; color: var(--text-main); }
+.artigo-cta-box p:last-child { margin-bottom: 0; }
+.artigo-cta-wrap { margin: 40px 0 10px; }
+.artigo-cta-btn { display: inline-flex; align-items: center; gap: 12px; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 1rem; padding: 18px 32px; border-radius: var(--radius-md); transition: background var(--transition), transform var(--transition), box-shadow var(--transition); line-height: 1.3; }
+.artigo-cta-btn:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,168,76,0.3); }
+.artigo-cta-btn svg { flex-shrink: 0; }
+.artigo-voltar { max-width: 720px; margin: 0 auto; padding: 48px 20px 0; }
+.artigo-voltar a { display: inline-flex; align-items: center; gap: 8px; font-size: 0.875rem; color: var(--text-muted); transition: color var(--transition); }
+.artigo-voltar a:hover { color: var(--gold); }
