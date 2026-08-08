@@ -164,9 +164,20 @@ O que NÃO resolve: "Purge Everything", "Purge by URL", commit vazio, novo deplo
 `Cache-Control: no-cache` no pedido. Nenhum deles zera o `Age`. "Always Online" foi descartado
 (sempre esteve desligado).
 
-O que resolve: apagar o **deployment de preview** no painel (Workers & Pages → projeto →
-Deployments → entrada do branch → Delete). Apagar o branch no GitHub não basta — o deployment
-sobrevive ao branch.
+O deployment de preview foi apagado no painel (Workers & Pages → projeto → Deployments → linha com
+etiqueta "Preview" → Delete). Isso mata a origem — o preview `0724c7c2.site-consultoria-59m.pages.dev`
+passou a dar 404 — **mas não solta a cópia já grudada no roteamento do domínio**: mesmo depois disso,
+um novo "Purge by URL" não zerou o `Age`. Ou seja, apagar o branch e apagar o deployment são passos
+necessários, e ainda assim nenhum purge alcança o objeto.
+
+Desfecho: decidido **deixar expirar sozinho** (s-maxage de 7 dias a partir de ~08/08/2026 08:20 —
+vence por volta de **15/08/2026**). Impacto aceito como nulo por causa do `noindex`. As 4 URLs
+**ainda não foram enviadas ao IndexNow** — mandar agora faria o Bing encontrar 200. Enviar depois
+de 15/08, conferindo antes que respondem 404.
+
+Nome real do projeto no Cloudflare Pages: **`site-consultoria-59m`** (produção em
+`site-consultoria-59m.pages.dev`). Útil para conferir se um problema é da produção ou do domínio:
+durante todo esse episódio a produção já respondia 404 corretamente.
 
 Risco de SEO: baixo, porque o preview sai com `noindex`. Mas evite criar branches remotos neste
 repositório só para backup: o histórico do `main` já preserva tudo (`2507c42` continua alcançável),
