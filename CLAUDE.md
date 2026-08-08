@@ -183,6 +183,69 @@ Risco de SEO: baixo, porque o preview sai com `noindex`. Mas evite criar branche
 repositório só para backup: o histórico do `main` já preserva tudo (`2507c42` continua alcançável),
 e há a tag local `divisao-competitiva-backup`.
 
+## Rodada de 08/08/2026: auditoria semântica — termo de busca no início (publicada — commit 176b11b)
+
+Auditoria das 307 páginas cruzando cada uma com o termo de busca que ela deveria disputar, checando
+se o termo aparece — **e se aparece no começo** — em title, meta description, H1, H2 e primeiro
+parágrafo. Pedido do Renan: "o termo tem que estar em tudo, sempre no início".
+
+### Achado principal
+As **199 páginas de cidade estavam 100% corretas** (o gerador já embute a regra) e não foram tocadas.
+O problema estava só no conteúdo escrito à mão: **101 das 108 páginas restantes** falhavam em algo.
+A falha sistemática era o **primeiro H2 do DOM**, que em quase toda página é o rótulo do painel
+`<aside class="page-hero-panel">` — "Em uma frase", "O que a estratégia cobre", "Dores comuns",
+"O que inclui", "Problemas comuns". O Google lê esse H2 como o 2º sinal mais forte depois do H1.
+
+### O que foi aplicado (98 arquivos, 298 linhas — só texto, nenhuma URL mudou)
+- 74 primeiros H2 passaram a carregar o termo.
+- 63 H2 de FAQ: `Perguntas frequentes` → `Perguntas frequentes sobre <termo>`. Ganho duplo (termo em
+  H2 + elegibilidade para o bloco de perguntas na SERP).
+- 47 meta descriptions reescritas: termo na frente e **todas dentro de 160 caracteres**.
+- 30 aberturas de texto com o termo na primeira frase; 7 H1 e 4 titles realinhados; 9 H2 extras.
+
+### Decisões editoriais — não afrouxar sem motivo
+1. **Listas numeradas**: em artigos cujo 1º H2 é "1. Site no ar", "2. Google Perfil" etc., o termo
+   **não** foi enfiado no item 1 (fica artificial e lê como forçação). Nesses, o termo entrou no H2
+   do FAQ e num H2 de fechamento. Sobraram 29 páginas assim, de propósito.
+2. **Aberturas com gancho editorial** (15 páginas): narrativa (`/blog/como-aparecer-google-clinica-estetica-goiania/`
+   abre com uma cena) ou resposta direta (`/blog/quanto-tempo-leva-seo-local-clinicas/` abre com
+   "entre 3 e 6 meses" — formato que ganha o quadro de resposta). Mantidas como estão.
+3. Em `/para-advogados/`, `/para-comercios-locais/` e `/para-profissionais-liberais/` o subtítulo do
+   hero **voltou ao original**: o H1 já abre com o termo e repetir a mesma frase na linha de baixo é
+   repetição excessiva.
+
+### Canibalização resolvida
+`/blog/seo-para-contadores/` disputava o **termo exato** de `/seo-para-contadores/` (página de venda).
+O artigo foi realinhado para **"Como o escritório de contabilidade aparece no Google"** — title, H1,
+description, og/twitter, schema, cartão no índice do blog, `guia-seo-local` e `llms.txt`. **A URL não
+mudou** (já indexada). A página comercial ficou dona sozinha do termo.
+
+### Medido antes → depois (fora as cidades)
+| | antes | depois |
+|---|---|---|
+| páginas sem nenhum H2 com o tema | 56 | **0** |
+| aberturas sem o tema | 42 | **15** (propositais) |
+| primeiros H2 sem o tema | 88 | **29** (listas numeradas) |
+| descriptions acima de 160 caracteres | 21 | **0** |
+
+### Publicação
+- Commit `176b11b` → `origin main`; Cloudflare publicou (~1 min). As **97 URLs conferidas: HTTP 200**,
+  e conferido por amostragem que é o HTML novo no ar (não cache antigo).
+- **IndexNow enviado ao Bing com as 97 URLs — aceito (HTTP 200).** Mesma chave
+  `19341b29c6054af601879d85a34d62c5`. **Nunca gerar chave nova.**
+- Falta o Renan reenviar o `sitemap.xml` no Search Console (305 URLs, nenhuma URL nova nesta rodada).
+
+### Notas
+- `/diagnostico-presenca-digital/exemplo/` não tem H1 nem description **de propósito**: é `noindex,
+  nofollow`, fora do sitemap, e é uma demo em JS do relatório de diagnóstico. Não tratar como erro.
+- Cuidado ao trocar títulos por script: substituir a "base" do title no arquivo inteiro pode atingir
+  H1/H2 que contêm o mesmo texto como prefixo. Aconteceu em
+  `/blog/como-aparecer-google-clinica-estetica-goiania/` e foi corrigido. Sempre conferir o `git diff`.
+- Regex de meta description **para no primeiro apóstrofo** se o padrão for `content=["\'](.*?)["\']`
+  e o texto contiver `'`. Quebrou a description de `/cases/` e foi corrigido.
+- **Prioridade nº 1 continua sendo off-page** (backlinks, diretórios, LinkedIn, posts de case).
+  Posição média 38,9 — organização semântica sozinha não resolve isso.
+
 ## Como trabalhar neste projeto
 
 - Renan não é técnico: sempre explicar em português simples, passo a passo, sem jargão sem explicar.
