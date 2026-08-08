@@ -124,6 +124,30 @@ Está detalhada no §2 do plano. Os pontos que não podem ser afrouxados:
   `/consultoria-seo/palmas/` é página órfã (nenhum link aponta para ela — provável resíduo de colisão
   de slug do gerador de cidades), e 20 páginas antigas têm meta description entre 161 e 170 caracteres.
 
+## Rodada de 08/08/2026: divisão competitiva REVERTIDA (fora do ar)
+
+**Estado atual do site: a divisão "SEO Nacional / mercados competitivos" NÃO está publicada.**
+A seção acima (06/08) descreve o que foi feito, mas o resultado foi retirado do ar um dia depois.
+
+- Motivo: decisão do Renan — reavaliar se IPTV, bets e domínios expirados combinam com o
+  posicionamento da marca RCB. Não foi problema técnico nem de SEO.
+- Como foi feito: `git revert` dos commits `1e2949e`, `9e106e4` e `2507c42` (commit `122735d`).
+  O HTML voltou byte a byte ao estado de `980fe74`. Sitemap de volta a **305 URLs**, navbar sem o
+  dropdown "SEO Nacional", rodapé sem a coluna nova, `styles.css` sem o grid de 5 colunas.
+- **Preservados de propósito:** `scripts/` (incluindo `rcb_base.py`, `rcb_artigo.py`,
+  `conteudo/*.py`, os geradores, `indexnow.py`, `validar-site.py`) e
+  `docs/seo-mercados-competitivos-plan.md`. Não são páginas públicas, não têm link e não estão no
+  sitemap — guardam todo o texto das 73 URLs.
+- **Backup congelado:** branch `divisao-seo-nacional` no GitHub, apontando para `2507c42`.
+- **Para republicar tudo:** `git revert 122735d` (ou `git merge divisao-seo-nacional`), conferir
+  HTTP 200 e só então rodar `python scripts/indexnow.py --novas`.
+- As 73 URLs agora respondem 404 de propósito. Não criar redirect 301 delas para a home nem 410 —
+  a decisão pode ser revista.
+- Search Console: o Renan precisa reenviar o `sitemap.xml` (305 URLs). Nada a pedir de remoção;
+  o Google tira as 404 sozinho em algumas semanas.
+- Atenção ao `scripts/validar-site.py` daqui em diante: ele foi escrito para o site com a divisão.
+  Rodar sobre o site revertido pode acusar como quebrado o que na verdade foi removido de propósito.
+
 ## Como trabalhar neste projeto
 
 - Renan não é técnico: sempre explicar em português simples, passo a passo, sem jargão sem explicar.
