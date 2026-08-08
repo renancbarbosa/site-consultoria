@@ -147,6 +147,30 @@ A seção acima (06/08) descreve o que foi feito, mas o resultado foi retirado d
   o Google tira as 404 sozinho em algumas semanas.
 - Atenção ao `scripts/validar-site.py` daqui em diante: ele foi escrito para o site com a divisão.
   Rodar sobre o site revertido pode acusar como quebrado o que na verdade foi removido de propósito.
+- IndexNow: enviadas ao Bing as 69 URLs já confirmadas em 404 — aceito (HTTP 200), mesma chave.
+
+### Armadilha descoberta em 08/08/2026: branch novo = deployment de preview no Cloudflare Pages
+Ao criar o branch de backup `divisao-seo-nacional` (apontando para `2507c42`), o Cloudflare Pages
+gerou automaticamente um **deployment de preview** dele. Quatro URLs removidas
+(`/seo-para-iptv/`, `/seo-para-bets/`, `/analise-de-projeto/`,
+`/blog/backlinks-para-iptv-funcionam/`) continuaram respondendo **HTTP 200 no domínio de produção**,
+servindo o build pré-reversão.
+
+Como reconhecer: a resposta traz `x-robots-tag: noindex` (marca de preview do Pages),
+`Cache-Control: public, s-maxage=604800` e um `Age` que **cresce e nunca zera**. As páginas
+corretas retornam `404` com `Cache-Control: no-store`, sem `noindex`.
+
+O que NÃO resolve: "Purge Everything", "Purge by URL", commit vazio, novo deployment de produção,
+`Cache-Control: no-cache` no pedido. Nenhum deles zera o `Age`. "Always Online" foi descartado
+(sempre esteve desligado).
+
+O que resolve: apagar o **deployment de preview** no painel (Workers & Pages → projeto →
+Deployments → entrada do branch → Delete). Apagar o branch no GitHub não basta — o deployment
+sobrevive ao branch.
+
+Risco de SEO: baixo, porque o preview sai com `noindex`. Mas evite criar branches remotos neste
+repositório só para backup: o histórico do `main` já preserva tudo (`2507c42` continua alcançável),
+e há a tag local `divisao-competitiva-backup`.
 
 ## Como trabalhar neste projeto
 
