@@ -1,4 +1,5 @@
 # Regras de cache do Cloudflare Pages
+# Revisado em 08/08/2026.
 # IMPORTANTE: nao definimos cache para HTML, CSS ou JS de proposito.
 # Assim o Cloudflare mantem o comportamento seguro padrao (revalidacao),
 # e suas atualizacoes do site aparecem sem ficar presas em cache antigo.
