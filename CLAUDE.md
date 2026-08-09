@@ -246,6 +246,99 @@ mudou** (já indexada). A página comercial ficou dona sozinha do termo.
 - **Prioridade nº 1 continua sendo off-page** (backlinks, diretórios, LinkedIn, posts de case).
   Posição média 38,9 — organização semântica sozinha não resolve isso.
 
+## Rodada de 09/08/2026: refatoração de conversão — preço público e venda por WhatsApp/Pix
+
+Mudança de modelo comercial, não de SEO. Pedido do Renan: o site nunca gerou procura, e o
+diagnóstico era o problema — falava a língua errada (SEO/técnica) e não tinha preço, então
+ninguém chegava ao WhatsApp. **O site passou a ter tabela de preço pública.**
+
+### A oferta (fonte única: `scripts/rcb_pacotes.py`)
+- **Presença — R$ 997, pagamento único.** Site até 5 páginas, GMN configurado, 10 fotos,
+  avaliações. Entrega em 7 dias úteis.
+- **Crescimento — R$ 1.497/mês, mínimo 3 meses.** Presença + 2 textos/mês + gestão de
+  avaliações + relatório mensal + ajustes.
+- **Dominação — R$ 2.497/mês, mínimo 3 meses.** Crescimento + 4 textos/mês + página por
+  serviço + 3 concorrentes monitorados + prioridade.
+- **Garantia de 30 dias**: sem diferença notada na presença no Google, refaz sem custo.
+- Pagamento por **Pix combinado no WhatsApp**. Não há gateway. Não incluir Instagram, redes
+  sociais nem automação nos pacotes — são produto separado.
+
+**Mexeu em preço ou no que cada pacote inclui? Edite só `scripts/rcb_pacotes.py` e rode
+`python scripts/aplicar-conversao.py` + `python scripts/gerar-paginas-cidades.py`.** Editar o
+HTML de uma cidade à mão não adianta: a regeração sobrescreve.
+
+### O que mudou no site inteiro
+- **232 páginas com a tabela de preço** (comerciais, de nicho, de serviço, as 199 cidades, o
+  hub e o artigo `/blog/quanto-custa-consultoria-seo-local/`). Blog e institucionais não
+  repetem a tabela — o menu e a barra deles apontam para `/#pacotes`.
+- **303 páginas com barra fixa de CTA no celular** (`.cta-mobile`: "Ver preços" + "Falar no
+  WhatsApp"). Ela exige `class="tem-cta-mobile"` no `<body>`; o botão flutuante do WhatsApp
+  é escondido no celular por CSS para não brigar com ela.
+- **Menu: "Diagnóstico gratuito" → "Ver preços"** nas 303 páginas com navbar.
+- **Home reescrita do zero**: H1 de dor, 4 nichos só (clínicas, dentistas, estética,
+  comércios), 3 passos, garantia, FAQ leigo e formulário → WhatsApp. Saíram da copy: SEO,
+  schema, cluster, on-page, "9+ anos como empresário", automação e os nichos que pagam menos
+  (as páginas deles continuam no ar e linkadas pelo rodapé).
+- **Formulário da home** (`#rcbLeadForm`): grava o lead no Web3Forms e abre o WhatsApp com a
+  mensagem pronta. **Reutiliza a chave do Radar de CNPJ** (`b9f6b538-d4a7-4e5a-8ee9-5f8310832733`),
+  decisão do Renan — os leads caem no mesmo e-mail, diferenciados pelo assunto
+  "Novo lead — RCB Consultoria (site)". Se o Web3Forms falhar, o botão do WhatsApp é liberado
+  mesmo assim: a conversa não pode ser perdida por causa do registro.
+- **Diagnóstico gratuito continua existindo**, mas virou passo 2 do funil: 53 botões dourados
+  foram rebaixados para contorno. Só `/diagnostico-presenca-digital/` mantém o seu como principal.
+- **`llms.txt` ganhou seção de preços** — é o que ChatGPT/Claude/Perplexity leem.
+- Schema: `Offer` com os três preços dentro do nó `Service`. Onde não havia `Service`, o
+  script cria um. Pode fazer o preço aparecer direto no resultado do Google.
+
+### Scripts desta rodada
+- `scripts/rcb_pacotes.py` — **fonte única do preço.** Não duplicar em outro lugar.
+- `scripts/aplicar-conversao.py` — aplica em todas as páginas escritas à mão. Idempotente
+  (marcadores `<!-- RCB:PACOTES:INICIO -->` e `<!-- RCB:CTA-MOBILE -->`).
+  Aceita `--so-comerciais` / `--so-apoio`.
+- `scripts/conferir-conversao.py` — **rodar antes de qualquer publicação daqui em diante.**
+  Checa HTML balanceado, JSON-LD, links, âncoras, coerência de preço texto×schema, jargão e
+  frases que contradizem o preço. Diferente do `validar-site.py`, que foi escrito para a
+  divisão competitiva revertida e acusa falso positivo neste site.
+- `scripts/gerar-paginas-cidades.py` — agora importa o `rcb_pacotes` e embute preço + barra
+  nas cidades **e no hub**. Cuidado: `pagina_cidade()` e `pagina_hub()` são funções separadas;
+  mexer só numa deixa a outra para trás (aconteceu nesta rodada).
+
+### Armadilhas encontradas
+- **`/para-comercios-locais/` tinha o `/script.js` morto** desde sempre: o script inline da
+  página declarava `navbar`, `navToggle`, `navMenu`, `toggleMenu` e `fadeObserver` no escopo
+  global, colidindo com o `script.js` e derrubando-o inteiro com SyntaxError. **Nenhum clique
+  era medido no GA4 nessa página.** Corrigido: o inline ficou só com o que é exclusivo dela
+  (observador das classes próprias e o acordeão `.faq-question`, que o resto do site não usa),
+  dentro de uma IIFE. Ao mexer em página com script inline, conferir colisão de nomes.
+- **Regerar as cidades desfaz alteração manual.** O `aplicar-conversao.py` rodou nelas e
+  depois a regeração sobrescreveu — só não deu problema porque o gerador já tinha sido
+  ensinado. Ordem correta: ensinar o gerador → regerar.
+- `/consultoria-seo/palmas/` continua órfã e **não é produzida pelo gerador** (198 geradas,
+  199 no disco). Ela recebe as mudanças pelo `aplicar-conversao.py`, não pela regeração.
+- `diagnostico-presenca-digital/exemplo/` monta o HTML por JavaScript: contar tag aberta e
+  fechada nela não faz sentido. Está na lista `FORA_DA_CONFERENCIA` do conferidor.
+- Heredoc no Bash (`<< 'EOF'`) quebrou várias vezes com aspas e CSS. Para script com muito
+  texto, escrever o `.py` num arquivo e rodar — não colar no terminal.
+
+### Decisões editoriais — não afrouxar sem falar com o Renan
+1. **O termo "SEO para X" ficou nos títulos e H1 das páginas de nicho.** O endereço da página
+   é `/seo-para-dentistas/` e a rodada de 08/08 colocou o termo no início de propósito. O
+   jargão saiu do *corpo* do texto; o título continua servindo à busca. O H1 virou pergunta
+   na língua do cliente ("...seu consultório aparece no Google quando o paciente procura
+   implante?").
+2. **Instagram e os nichos secundários continuam no rodapé** das 300 páginas, apesar do
+   pedido de tirar da home. Motivo: o rodapé é igual no site inteiro (mexer só na home cria
+   divergência) e o link do Instagram é sinal de NAP para o perfil local. Fácil de reverter.
+3. Título da home ficou com **70 caracteres** (texto exato pedido pelo Renan). O Google corta
+   por volta de 65 — ele foi avisado e manteve.
+
+### Pendências
+- Falta o Renan reenviar o `sitemap.xml` no Search Console (**305 URLs, nenhuma nova** —
+  nenhum endereço foi criado ou removido nesta rodada).
+- **Off-page continua sendo a prioridade nº 1.** Posição média 38,9: a home nova converte
+  melhor quem chega, mas chega pouca gente. Backlinks, diretórios, LinkedIn e posts de case
+  são o que enche o funil — trabalho manual do Renan.
+
 ## Como trabalhar neste projeto
 
 - Renan não é técnico: sempre explicar em português simples, passo a passo, sem jargão sem explicar.

@@ -12,10 +12,14 @@ Goiânia é pulada de propósito: a cidade já tem /seo-local-goiania/ e
 """
 import json
 import os
+import sys
 import glob
 import hashlib
 import re
 from urllib.parse import quote
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from rcb_pacotes import bloco_cta_mobile, bloco_pacotes, ofertas_json_compacto
 
 DADOS = r"C:/Users/renan/SITE-DADOS/data/cidades"
 RAIZ = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
@@ -176,7 +180,7 @@ def head_comum(titulo, desc, canonical, schema_json):
 
 
 NAVBAR = """  <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
-  <nav class="navbar" id="navbar" role="navigation" aria-label="Menu principal"><div class="container nav-container"><a href="/" class="nav-logo" aria-label="Página inicial"><span class="logo-text">RCB</span><span class="logo-sub">SEO Local</span></a><button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button><ul class="nav-menu" id="navMenu" role="list"><li class="nav-nicho-group"><button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Serviços<svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button><div class="nav-dropdown-menu" role="menu"><a href="/consultoria-seo-local/" class="nav-dropdown-item" role="menuitem">Consultoria SEO Local</a><a href="/diagnostico-presenca-digital/" class="nav-dropdown-item" role="menuitem">Diagnóstico de Presença Digital</a><a href="/auditoria-seo/" class="nav-dropdown-item" role="menuitem">Auditoria SEO</a><a href="/google-perfil-empresa/" class="nav-dropdown-item" role="menuitem">Google Perfil da Empresa</a><a href="/site-otimizado-para-seo/" class="nav-dropdown-item" role="menuitem">Site otimizado para SEO</a><a href="/conteudo-para-seo/" class="nav-dropdown-item" role="menuitem">Conteúdo para SEO</a><a href="/acompanhamento-seo/" class="nav-dropdown-item" role="menuitem">Acompanhamento SEO</a></div></li><li class="nav-nicho-group"><button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Nichos<svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button><div class="nav-dropdown-menu" role="menu"><a href="/seo-para-clinicas/" class="nav-dropdown-item" role="menuitem">Clínicas</a><a href="/seo-para-dentistas/" class="nav-dropdown-item" role="menuitem">Dentistas</a><a href="/seo-para-clinicas-de-estetica/" class="nav-dropdown-item" role="menuitem">Estética</a><a href="/seo-para-medicos/" class="nav-dropdown-item" role="menuitem">Médicos</a><a href="/seo-para-clinicas-de-emagrecimento/" class="nav-dropdown-item" role="menuitem">Emagrecimento</a><a href="/para-advogados/" class="nav-dropdown-item" role="menuitem">Advogados</a><a href="/para-comercios-locais/" class="nav-dropdown-item" role="menuitem">Comércios locais</a><a href="/para-profissionais-liberais/" class="nav-dropdown-item" role="menuitem">Profissionais liberais</a></div></li><li><a href="/consultor-seo-goiania/" class="nav-link">Consultor SEO</a></li><li><a href="/blog/" class="nav-link">Blog</a></li><li><a href="/cases/" class="nav-link">Cases</a></li><li><a href="/sobre/" class="nav-link">Sobre</a></li><li><a href="/contato/" class="nav-link">Contato</a></li><li><a href="/diagnostico-presenca-digital/" class="nav-link nav-cta">Diagnóstico gratuito</a></li></ul></div></nav>"""
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Menu principal"><div class="container nav-container"><a href="/" class="nav-logo" aria-label="Página inicial"><span class="logo-text">RCB</span><span class="logo-sub">SEO Local</span></a><button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button><ul class="nav-menu" id="navMenu" role="list"><li class="nav-nicho-group"><button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Serviços<svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button><div class="nav-dropdown-menu" role="menu"><a href="/consultoria-seo-local/" class="nav-dropdown-item" role="menuitem">Consultoria SEO Local</a><a href="/diagnostico-presenca-digital/" class="nav-dropdown-item" role="menuitem">Diagnóstico de Presença Digital</a><a href="/auditoria-seo/" class="nav-dropdown-item" role="menuitem">Auditoria SEO</a><a href="/google-perfil-empresa/" class="nav-dropdown-item" role="menuitem">Google Perfil da Empresa</a><a href="/site-otimizado-para-seo/" class="nav-dropdown-item" role="menuitem">Site otimizado para SEO</a><a href="/conteudo-para-seo/" class="nav-dropdown-item" role="menuitem">Conteúdo para SEO</a><a href="/acompanhamento-seo/" class="nav-dropdown-item" role="menuitem">Acompanhamento SEO</a></div></li><li class="nav-nicho-group"><button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Nichos<svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button><div class="nav-dropdown-menu" role="menu"><a href="/seo-para-clinicas/" class="nav-dropdown-item" role="menuitem">Clínicas</a><a href="/seo-para-dentistas/" class="nav-dropdown-item" role="menuitem">Dentistas</a><a href="/seo-para-clinicas-de-estetica/" class="nav-dropdown-item" role="menuitem">Estética</a><a href="/seo-para-medicos/" class="nav-dropdown-item" role="menuitem">Médicos</a><a href="/seo-para-clinicas-de-emagrecimento/" class="nav-dropdown-item" role="menuitem">Emagrecimento</a><a href="/para-advogados/" class="nav-dropdown-item" role="menuitem">Advogados</a><a href="/para-comercios-locais/" class="nav-dropdown-item" role="menuitem">Comércios locais</a><a href="/para-profissionais-liberais/" class="nav-dropdown-item" role="menuitem">Profissionais liberais</a></div></li><li><a href="/consultor-seo-goiania/" class="nav-link">Consultor SEO</a></li><li><a href="/blog/" class="nav-link">Blog</a></li><li><a href="/cases/" class="nav-link">Cases</a></li><li><a href="/sobre/" class="nav-link">Sobre</a></li><li><a href="/contato/" class="nav-link">Contato</a></li><li><a href="#pacotes" class="nav-link nav-cta" data-event="cta_click" data-location="navbar" data-page="cidade">Ver preços</a></li></ul></div></nav>"""
 
 
 def rodape(pagina):
@@ -281,7 +285,8 @@ def pagina_cidade(c, vizinhas):
         '{"@type":"ListItem","position":3,"name":"%s","item":"%s"}]},'
         '{"@type":"Service","serviceType":"Consultoria de SEO","name":"Consultoria de SEO em %s","description":"Consultoria online de SEO e Google Meu Negócio para empresas de %s (%s). Diagnóstico, otimização do perfil no Google, site e conteúdo.",'
         '"provider":{"@type":"LocalBusiness","@id":"https://rcbseo.com.br/#business"},'
-        '"areaServed":{"@type":"City","name":"%s","containedInPlace":{"@type":"State","name":"%s"}}},'
+        '"areaServed":{"@type":"City","name":"%s","containedInPlace":{"@type":"State","name":"%s"}},'
+        '"offers":' + ofertas_json_compacto() + '},'
         '{"@type":"FAQPage","mainEntity":[%s]}]}'
     ) % (canonical, titulo, desc.replace('"', "'"), gerado_em, cidade, canonical, cidade, cidade, uf, cidade, estado, faq_schema)
 
@@ -322,7 +327,11 @@ def pagina_cidade(c, vizinhas):
           </div>""" for q, a in faq
     )
 
-    corpo = f"""<body>
+    # Pacotes e barra de CTA vem do rcb_pacotes.py (fonte unica do preco).
+    bloco_precos = bloco_pacotes("um negócio", f"cidade-{slug}", f" em {cidade}")
+    barra_mobile = bloco_cta_mobile(f"cidade-{slug}")
+
+    corpo = f"""<body class="tem-cta-mobile">
 {NAVBAR}
 
   <main id="main-content">
@@ -401,6 +410,7 @@ def pagina_cidade(c, vizinhas):
       </div>
     </section>
 
+{bloco_precos}
     <section class="faq-section" aria-labelledby="faq-titulo">
       <div class="container">
         <div class="section-header">
@@ -427,7 +437,7 @@ def pagina_cidade(c, vizinhas):
   </main>
 
 """
-    flutuante = f"""  <a href="{whats_url}" class="whatsapp-float" data-event="cta_click" data-location="whatsapp_flutuante" data-page="cidade-{slug}" target="_blank" rel="noopener noreferrer" aria-label="Chamar no WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+    flutuante = f"""{barra_mobile}  <a href="{whats_url}" class="whatsapp-float" data-event="cta_click" data-location="whatsapp_flutuante" data-page="cidade-{slug}" target="_blank" rel="noopener noreferrer" aria-label="Chamar no WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
 """
     return head_comum(titulo, desc, canonical, schema) + "\n" + corpo + flutuante + rodape(f"cidade-{slug}")
 
@@ -443,7 +453,11 @@ def pagina_hub(cidades):
         '{"@type":"WebPage","url":"%s","name":"%s","description":"%s","inLanguage":"pt-BR"},'
         '{"@type":"BreadcrumbList","itemListElement":['
         '{"@type":"ListItem","position":1,"name":"Início","item":"https://rcbseo.com.br/"},'
-        '{"@type":"ListItem","position":2,"name":"Consultoria de SEO por cidade","item":"%s"}]}]}'
+        '{"@type":"ListItem","position":2,"name":"Consultoria de SEO por cidade","item":"%s"}]},'
+        '{"@type":"Service","serviceType":"Consultoria de SEO","name":"Site e Google Meu Neg\u00f3cio para neg\u00f3cios locais",'
+        '"provider":{"@type":"LocalBusiness","@id":"https://rcbseo.com.br/#business"},'
+        '"areaServed":{"@type":"Country","name":"Brasil"},'
+        '"offers":' + ofertas_json_compacto() + '}]}'
     ) % (canonical, titulo, desc, canonical)
 
     por_regiao = {}
@@ -483,7 +497,11 @@ def pagina_hub(cidades):
       </div>
     </section>""")
 
-    corpo = f"""<body>
+    # Mesmos pacotes das paginas de cidade (fonte: rcb_pacotes.py).
+    bloco_precos_hub = bloco_pacotes("um negócio", "hub-cidades")
+    barra_mobile_hub = bloco_cta_mobile("hub-cidades")
+
+    corpo = f"""<body class="tem-cta-mobile">
 {NAVBAR}
 
   <main id="main-content">
@@ -512,6 +530,7 @@ def pagina_hub(cidades):
 
 {chr(10).join(blocos)}
 
+{bloco_precos_hub}
     <section class="cta-band" aria-labelledby="cta-titulo">
       <div class="container">
         <div class="cta-inner">
@@ -525,7 +544,7 @@ def pagina_hub(cidades):
   </main>
 
 """
-    return head_comum(titulo, desc, canonical, schema) + "\n" + corpo + rodape("hub-cidades")
+    return head_comum(titulo, desc, canonical, schema) + "\n" + corpo + barra_mobile_hub + rodape("hub-cidades")
 
 
 def atualizar_sitemap(cidades):
