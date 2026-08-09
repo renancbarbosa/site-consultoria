@@ -332,6 +332,15 @@ HTML de uma cidade à mão não adianta: a regeração sobrescreve.
 3. Título da home ficou com **70 caracteres** (texto exato pedido pelo Renan). O Google corta
    por volta de 65 — ele foi avisado e manteve.
 
+### Publicação (09/08/2026)
+- Commit `3fdddb0` enviado para `origin main`; Cloudflare publicou em ~1 min (313 arquivos,
+  24.313 linhas). Conferidas no ar: home, as 4 páginas de nicho, médicos, hub de cidades,
+  duas cidades, dois artigos, contato e cases — todas HTTP 200 com preço, barra e menu novo.
+- **IndexNow enviado ao Bing com as 305 URLs do sitemap — aceito (HTTP 200).** Mesma chave
+  `19341b29c6054af601879d85a34d62c5`. **Nunca gerar chave nova.** Foram todas as URLs porque
+  o conteúdo mudou em praticamente todas, mesmo sem endereço novo.
+- `.github/` continua fora do versionamento — não faz parte desta rodada.
+
 ### Pendências
 - Falta o Renan reenviar o `sitemap.xml` no Search Console (**305 URLs, nenhuma nova** —
   nenhum endereço foi criado ou removido nesta rodada).
