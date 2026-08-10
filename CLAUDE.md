@@ -443,6 +443,47 @@ e semelhantes em clinicas, estetica e comercios). Muda o rotulo do evento no rel
   8 cliques em 3 meses, melhorar a conversao de quem quase nao chega nao muda o faturamento.
   Backlinks, diretorios, LinkedIn e posts de case sao o que enche o funil.
 
+## Rodada de 10/08/2026: linha de confianca no rodape (publicada — commit eec4c54)
+
+Mudanca pequena e isolada, so no rodape. Texto acrescentado como ultimo elemento do `<footer>`
+das **305 paginas** que tem rodape:
+
+> Atendimento presencial em Goiania e regiao. Consultoria individual — nao e agencia.
+
+- Classe `.rodape-confianca`, estilo no `styles.css` (0,8rem, `#8b93a3`, centralizado, borda
+  superior sutil). **O pedido original trazia `border-top: 1px solid #eee`** — trocado de
+  proposito: o rodape do site e escuro e essa borda quase branca viraria um risco forte
+  atravessando o rodape. Renan foi avisado.
+- Inserida **antes do ultimo `</footer>`** do arquivo. Detalhe que importa: a home tem
+  `<footer>` aninhado dentro dos cartoes de depoimento, entao mirar no *ultimo* e obrigatorio.
+- Fica como irma do `.footer-bottom` (nao dentro dele) — `.footer-bottom-inner` e flex com
+  `space-between` e a linha viraria mais uma coluna da fileira.
+- **Os dois geradores foram ensinados** (`gerar-paginas-cidades.py` e `rcb_base.py`), senao a
+  proxima regeracao das 199 cidades apagaria a linha. Cidades regeradas para confirmar.
+- **Fora, de proposito:** `404.html` (nao tem rodape nenhum) e
+  `diagnostico-presenca-digital/exemplo/` (monta o HTML por JavaScript, `noindex`).
+
+Conferencia feita: `conferir-conversao.py` sem problemas; diff conferido linha a linha (nada
+alem do rodape mudou nas 305 paginas); site aberto no navegador em desktop e celular. **No
+celular a barra fixa de CTA nao cobre a linha** (linha termina em 636 px, barra comeca em
+770 px, e `elementFromPoint` confirma que a linha esta clicavel).
+
+- Publicado em `origin main`; Cloudflare publicou em ~1 min. Conferidas no ar: home, cases,
+  Anapolis, dentistas, um artigo, contato e o `styles.css` — HTTP 200 com a linha.
+- **IndexNow enviado ao Bing com as 305 URLs do sitemap — aceito (HTTP 200).** Mesma chave
+  `19341b29c6054af601879d85a34d62c5`. **Nunca gerar chave nova.** Foram todas porque o rodape
+  mudou em todas; nenhuma URL nova foi criada.
+
+### Pendente / em aberto
+- **Na home a linha fica redundante:** o rodapé dela já traz "Atendimento presencial: Goiânia/GO,
+  Aparecida de Goiânia/GO, Trindade/GO, Senador Canedo/GO" logo acima. Renan foi avisado e pode
+  pedir para tirar so da home.
+- CNPJ e razao social no rodape continuam faltando (item da auditoria de 09/08 ainda nao feito).
+
+### Armadilha de ferramenta (nao e do projeto)
+Heredoc do PowerShell (`@'...'@`) **nao funciona na ferramenta Bash** — o `@` entra literalmente
+na mensagem do commit. Para commit com varias linhas no Bash, usar `git commit -F - <<'EOF'`.
+
 ## Como trabalhar neste projeto
 
 - Renan não é técnico: sempre explicar em português simples, passo a passo, sem jargão sem explicar.
