@@ -21,6 +21,10 @@ MARCA_INI = "<!-- RCB:PACOTES:INICIO -->"
 MARCA_FIM = "<!-- RCB:PACOTES:FIM -->"
 MARCA_CTA = "<!-- RCB:CTA-MOBILE -->"
 
+# 2a frase da linha de apoio da tabela. Paginas de nicho trocam por uma versao
+# na lingua delas (ver FECHOS no aplicar-conversao.py).
+FECHO_PADRAO = "Pagamento por Pix pelo WhatsApp."
+
 PACOTES = [
     {
         "id": "presenca",
@@ -84,15 +88,21 @@ def wa(texto):
     return "https://wa.me/%s?text=%s" % (WHATS, quote(texto, safe=""))
 
 
-def bloco_pacotes(negocio, data_page, onde=""):
+def bloco_pacotes(negocio, data_page, onde="", fecho=FECHO_PADRAO):
     """negocio: 'uma clínica' / 'um comércio local' — entra na mensagem do WhatsApp.
-    onde: sufixo opcional para o texto de apoio (ex.: ' em Anápolis')."""
+    onde: sufixo opcional para o texto de apoio (ex.: ' em Anápolis').
+    fecho: 2a frase da linha de apoio. Existe para a pagina falar na lingua do
+    nicho dela ('...que a sua clinica pode dar agora') sem que a regeracao
+    apague o texto proprio."""
     cards = []
     for p in PACOTES:
         itens = "".join(
             '\n              <li%s>%s</li>' % (' class="destaque-item"' if d else "", t)
             for t, d in p["itens"]
         )
+        # A garantia fecha os tres cartoes: e o argumento que derruba o medo de
+        # pagar, e antes dela so aparecia la embaixo, longe do preco.
+        itens += '\n              <li class="pacote-garantia">Garantia de 30 dias</li>'
         periodo = ('<span class="periodo">%s</span>' % p["periodo"]) if p["periodo"] else ""
         selo = '\n            <span class="pacote-selo">Mais escolhido</span>' if p["id"] == "crescimento" else ""
         destaque = " destaque" if p["id"] == "crescimento" else ""
@@ -124,7 +134,7 @@ def bloco_pacotes(negocio, data_page, onde=""):
         '          <div class="section-tag">Preços</div>\n'
         '          <h2 id="pacotes-titulo" class="section-title">Quanto custa e o que está incluído</h2>\n'
         '          <p class="section-desc">Preço fechado, na tela, sem "solicite um orçamento". '
-        'Pagamento por Pix pelo WhatsApp.</p>\n'
+        '%s</p>\n'
         '        </div>\n'
         '        <div class="pacotes-grid">\n%s        </div>\n'
         '        <p class="pacotes-nota"><strong>Não sabe qual escolher?</strong> '
@@ -134,7 +144,7 @@ def bloco_pacotes(negocio, data_page, onde=""):
         'sentido — inclusive se a resposta for o mais barato.</p>\n'
         '      </div>\n'
         '    </section>\n'
-        '    %s\n' % (MARCA_INI, "".join(cards), wa(duvida), data_page, MARCA_FIM)
+        '    %s\n' % (MARCA_INI, fecho, "".join(cards), wa(duvida), data_page, MARCA_FIM)
     )
 
 

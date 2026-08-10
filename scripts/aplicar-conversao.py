@@ -24,8 +24,18 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from rcb_pacotes import (
-    MARCA_CTA, MARCA_INI, bloco_cta_mobile, bloco_pacotes, nav_ver_precos, ofertas,
+    FECHO_PADRAO, MARCA_CTA, MARCA_FIM, MARCA_INI, bloco_cta_mobile, bloco_pacotes,
+    nav_ver_precos, ofertas,
 )
+
+# Paginas que falam na lingua do nicho no fim da linha de apoio da tabela.
+# Fica aqui (e nao no HTML) para sobreviver a regeracao.
+FECHOS = {
+    "seo-para-dentistas": "Escolha o tamanho do passo que a sua clínica pode dar agora.",
+    "seo-para-clinicas": "Escolha o tamanho do passo que a sua clínica pode dar agora.",
+    "seo-para-clinicas-de-estetica": "Escolha o tamanho do passo que a sua clínica pode dar agora.",
+    "para-comercios-locais": "Escolha o tamanho do passo que o seu comércio pode dar agora.",
+}
 
 RAIZ = Path(__file__).resolve().parent.parent
 WHATS = "5562991161040"
@@ -126,12 +136,29 @@ def aplicar(rel, negocio, comercial):
             feito.append("barra mobile")
 
     # 4. tabela de precos -------------------------------------------------
-    if comercial and MARCA_INI not in h:
-        novo = bloco_pacotes(negocio, dp)
-        # 4a. substitui uma secao antiga de "quanto custa", se houver
+    # O hub e as 199 cidades sao donos do proprio bloco: o gerador escreve neles
+    # o nome da cidade dentro da mensagem do WhatsApp ("...um negocio em Anapolis").
+    # Reescrever daqui apagaria isso. Quem atualiza preco la e o gerar-paginas-cidades.py.
+    do_gerador = rel.startswith("consultoria-seo/")
+
+    if comercial and not do_gerador:
+        novo = bloco_pacotes(negocio, dp, fecho=FECHOS.get(rel.replace("/index.html", ""), FECHO_PADRAO))
+        # 4a. Ja tem a tabela: troca o bloco inteiro pelo atual. Sem isso, mexer
+        # no rcb_pacotes.py (preco, itens, garantia) nao chegaria nas paginas que
+        # ja foram feitas -- so nas novas.
+        if MARCA_INI in h:
+            antes = h
+            atual = re.compile(r'[ \t]*%s.*?%s\n' % (re.escape(MARCA_INI), re.escape(MARCA_FIM)),
+                               re.S)
+            h = atual.sub(lambda m: novo, h, count=1)
+            if h != antes:
+                feito.append("precos (atualizados)")
+    if comercial and not do_gerador and MARCA_INI not in h:
+        novo = bloco_pacotes(negocio, dp, fecho=FECHOS.get(rel.replace("/index.html", ""), FECHO_PADRAO))
+        # 4b. substitui uma secao antiga de "quanto custa", se houver
         padrao = re.compile(
             r'[ \t]*<section class="solution-section section-[a-z-]*precos">.*?</section>\n', re.S)
-        h, n = padrao.subn(novo, h, count=1)
+        h, n = padrao.subn(lambda m: novo, h, count=1)
         if n:
             feito.append("precos (no lugar da secao antiga)")
         else:
@@ -208,7 +235,9 @@ def main():
     if arg != "--so-apoio":
         for slug, negocio in COMERCIAIS.items():
             alvos.append((slug + "/index.html", negocio, True))
-        alvos.append(("index.html", "um negócio", True))
+        # A home NAO entra: ela foi reescrita a mao e ja tem tabela de precos,
+        # barra fixa e menu proprios. Injetar aqui criava uma segunda tabela e
+        # uma segunda barra de CTA na mesma pagina (corrigido em 09/08/2026).
 
     if arg != "--so-comerciais":
         for slug in APOIO_FIXAS:
