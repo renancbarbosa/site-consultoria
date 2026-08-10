@@ -141,18 +141,18 @@ def aplicar(rel, negocio, comercial):
     # Reescrever daqui apagaria isso. Quem atualiza preco la e o gerar-paginas-cidades.py.
     do_gerador = rel.startswith("consultoria-seo/")
 
-    if comercial and not do_gerador:
+    # 4a. Ja tem a tabela: troca o bloco inteiro pelo atual. Sem isso, mexer no
+    # rcb_pacotes.py (preco, itens, garantia) nao chegaria nas paginas que ja
+    # foram feitas -- so nas novas.
+    # Vale mesmo em pagina de apoio: /blog/quanto-custa-consultoria-seo-local/
+    # mostra a tabela e nao esta na lista de comerciais.
+    if not do_gerador and MARCA_INI in h:
         novo = bloco_pacotes(negocio, dp, fecho=FECHOS.get(rel.replace("/index.html", ""), FECHO_PADRAO))
-        # 4a. Ja tem a tabela: troca o bloco inteiro pelo atual. Sem isso, mexer
-        # no rcb_pacotes.py (preco, itens, garantia) nao chegaria nas paginas que
-        # ja foram feitas -- so nas novas.
-        if MARCA_INI in h:
-            antes = h
-            atual = re.compile(r'[ \t]*%s.*?%s\n' % (re.escape(MARCA_INI), re.escape(MARCA_FIM)),
-                               re.S)
-            h = atual.sub(lambda m: novo, h, count=1)
-            if h != antes:
-                feito.append("precos (atualizados)")
+        antes = h
+        atual = re.compile(r'[ \t]*%s.*?%s\n' % (re.escape(MARCA_INI), re.escape(MARCA_FIM)), re.S)
+        h = atual.sub(lambda m: novo, h, count=1)
+        if h != antes:
+            feito.append("precos (atualizados)")
     if comercial and not do_gerador and MARCA_INI not in h:
         novo = bloco_pacotes(negocio, dp, fecho=FECHOS.get(rel.replace("/index.html", ""), FECHO_PADRAO))
         # 4b. substitui uma secao antiga de "quanto custa", se houver
