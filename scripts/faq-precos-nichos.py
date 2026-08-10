@@ -19,9 +19,9 @@ RAIZ = Path(__file__).resolve().parent.parent
 # Respostas antigas que contradizem o preco publicado -> texto novo.
 CORRIGIR = {
     "O investimento depende do momento, da concorrência e do escopo. O diagnóstico gratuito ajuda a entender se faz sentido agora.":
-        "Cabe sim, e o preço está publicado nesta página: R$ 997 em pagamento único no Pacote Presença, "
-        "R$ 1.497 por mês no Crescimento e R$ 2.497 por mês no Dominação. Você não precisa pedir "
-        "orçamento para saber quanto é.",
+        "Cabe sim, e o preço está publicado nesta página: R$ 1.997 no Presença Lite, R$ 2.497 no "
+        "Pacote Presença, R$ 2.997 por mês no Crescimento e R$ 4.997 por mês no Dominação. Você não "
+        "precisa pedir orçamento para saber quanto é.",
 }
 
 
@@ -30,10 +30,10 @@ def perguntas(negocio, pronome):
     return [
         (
             "Quanto custa?",
-            "São três pacotes com preço fechado: Presença por R$ 997 em pagamento único, "
-            "Crescimento por R$ 1.497 por mês e Dominação por R$ 2.497 por mês. Os dois mensais "
-            "têm mínimo de 3 meses. O preço está nesta página — você não precisa pedir orçamento "
-            "para saber quanto é.",
+            "São quatro pacotes com preço fechado: Presença Lite por R$ 1.997 e Presença por "
+            "R$ 2.497, os dois em pagamento único; Crescimento por R$ 2.997 por mês e Dominação "
+            "por R$ 4.997 por mês. Os dois mensais têm mínimo de 3 meses. O preço está nesta "
+            "página — você não precisa pedir orçamento para saber quanto é.",
         ),
         (
             "Como eu pago?",

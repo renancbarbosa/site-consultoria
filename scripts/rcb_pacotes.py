@@ -27,10 +27,27 @@ FECHO_PADRAO = "Pagamento por Pix pelo WhatsApp."
 
 PACOTES = [
     {
+        "id": "presenca-lite",
+        "nome": "Pacote Presença Lite",
+        "para": "Para quem já tem site, mas o Google Meu Negócio está largado.",
+        "valor": "R$ 1.997",
+        "periodo": "",
+        "condicao": "Pagamento único",
+        "itens": [
+            ("Google Meu Negócio configurado e otimizado", False),
+            ("10 fotos profissionais publicadas no seu perfil", False),
+            ("Avaliações organizadas e respostas configuradas", False),
+            ("Perfil entregue em 7 dias úteis", True),
+        ],
+        "botao": "Quero arrumar meu Google",
+        "preco": "1997.00",
+        "mensal": False,
+    },
+    {
         "id": "presenca",
         "nome": "Pacote Presença",
         "para": "Para quem ainda não tem nada no ar, ou tem e está abandonado.",
-        "valor": "R$ 997",
+        "valor": "R$ 2.497",
         "periodo": "",
         "condicao": "Pagamento único",
         "itens": [
@@ -41,14 +58,14 @@ PACOTES = [
             ("Site entregue em 7 dias úteis", True),
         ],
         "botao": "Quero aparecer no Google",
-        "preco": "997.00",
+        "preco": "2497.00",
         "mensal": False,
     },
     {
         "id": "crescimento",
         "nome": "Pacote Crescimento",
         "para": "Para quem já tem o básico e quer subir de posição todo mês.",
-        "valor": "R$ 1.497",
+        "valor": "R$ 2.997",
         "periodo": "/mês",
         "condicao": "Mínimo de 3 meses",
         "itens": [
@@ -59,14 +76,14 @@ PACOTES = [
             ("Ajustes no site todo mês, conforme o que os números mostram", False),
         ],
         "botao": "Quero crescer no Google",
-        "preco": "1497.00",
+        "preco": "2997.00",
         "mensal": True,
     },
     {
         "id": "dominacao",
         "nome": "Pacote Dominação",
         "para": "Para quem quer ser o primeiro resultado da cidade no seu ramo.",
-        "valor": "R$ 2.497",
+        "valor": "R$ 4.997",
         "periodo": "/mês",
         "condicao": "Mínimo de 3 meses",
         "itens": [
@@ -77,7 +94,7 @@ PACOTES = [
             ("Prioridade no atendimento: sua mensagem passa na frente", False),
         ],
         "botao": "Quero dominar minha cidade",
-        "preco": "2497.00",
+        "preco": "4997.00",
         "mensal": True,
     },
 ]
@@ -140,7 +157,7 @@ def bloco_pacotes(negocio, data_page, onde="", fecho=FECHO_PADRAO):
         '        <p class="pacotes-nota"><strong>Não sabe qual escolher?</strong> '
         '<a href="%s" target="_blank" rel="noopener noreferrer" data-event="cta_click" '
         'data-location="pacotes_duvida" data-page="%s">Me chame no WhatsApp</a> e me conte do seu negócio. '
-        'Eu olho seu Google antes de você pagar qualquer coisa e digo com franqueza qual dos três faz '
+        'Eu olho seu Google antes de você pagar qualquer coisa e digo com franqueza qual dos quatro faz '
         'sentido — inclusive se a resposta for o mais barato.</p>\n'
         '      </div>\n'
         '    </section>\n'

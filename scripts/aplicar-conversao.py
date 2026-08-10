@@ -90,11 +90,11 @@ IGNORADAS = {"diagnostico-presenca-digital/exemplo", "404"}
 # Frases que contradizem o preco publicado -> texto novo.
 CONTRADICOES = [
     ("Em vez de pacote pronto, eu começo com um diagnóstico: avalio a sua presença hoje no Google, mostro o que está travando o resultado e proponho um plano com faixas de investimento compatíveis com a realidade da sua clínica.",
-     "O preço está publicado aqui na página: R$ 997 em pagamento único, ou R$ 1.497 e R$ 2.497 por mês. Antes de você pagar qualquer coisa eu olho seu Google de graça e digo com franqueza qual dos três faz sentido."),
+     "O preço está publicado aqui na página: R$ 1.997 ou R$ 2.497 em pagamento único, ou R$ 2.997 e R$ 4.997 por mês. Antes de você pagar qualquer coisa eu olho seu Google de graça e digo com franqueza qual dos quatro faz sentido."),
     ("Para ter uma ideia do investimento no seu caso, <a href=\"/diagnostico-presenca-digital/\">solicite um diagnóstico gratuito</a> e eu te retorno com uma proposta personalizada.",
      "Ficou em dúvida sobre qual pacote escolher? Me chame no WhatsApp que eu olho seu caso e te digo, sem compromisso."),
     ("O investimento depende do momento, da concorrência e do escopo. O diagnóstico gratuito ajuda a entender se faz sentido agora.",
-     "Cabe sim, e o preço está publicado nesta página: R$ 997 em pagamento único no Pacote Presença, R$ 1.497 por mês no Crescimento e R$ 2.497 por mês no Dominação."),
+     "Cabe sim, e o preço está publicado nesta página: R$ 1.997 no Presença Lite, R$ 2.497 no Pacote Presença, R$ 2.997 por mês no Crescimento e R$ 4.997 por mês no Dominação."),
     ("não existe preço de tabela — existe escopo",
      "hoje eu trabalho com preço de tabela, publicado no site"),
     ("Não existe preço de tabela — existe escopo",
@@ -139,7 +139,11 @@ def aplicar(rel, negocio, comercial):
     # O hub e as 199 cidades sao donos do proprio bloco: o gerador escreve neles
     # o nome da cidade dentro da mensagem do WhatsApp ("...um negocio em Anapolis").
     # Reescrever daqui apagaria isso. Quem atualiza preco la e o gerar-paginas-cidades.py.
-    do_gerador = rel.startswith("consultoria-seo/")
+    # /consultoria-seo/palmas/ e a excecao: esta no disco mas o gerador nao a
+    # produz (residuo de colisao de slug). Se ela ficar de fora dos dois, o
+    # preco dela congela. Por isso o bloco dela e atualizado daqui.
+    do_gerador = (rel.startswith("consultoria-seo/")
+                  and rel != "consultoria-seo/palmas/index.html")
 
     # 4a. Ja tem a tabela: troca o bloco inteiro pelo atual. Sem isso, mexer no
     # rcb_pacotes.py (preco, itens, garantia) nao chegaria nas paginas que ja
@@ -177,7 +181,9 @@ def aplicar(rel, negocio, comercial):
                     break
 
     # 5. precos na ficha do Google ---------------------------------------
-    if comercial:
+    # Nao basta ser "comercial": /blog/quanto-custa-consultoria-seo-local/ mostra
+    # a tabela e e pagina de apoio. Quem mostra preco tem que ter preco no schema.
+    if comercial or MARCA_INI in h:
         def injeta(m):
             try:
                 dados = json.loads(m.group(1))
@@ -186,9 +192,13 @@ def aplicar(rel, negocio, comercial):
             nos = dados.get("@graph") if isinstance(dados, dict) and "@graph" in dados else [dados]
             mudou = False
             for no in nos:
-                if isinstance(no, dict) and no.get("@type") == "Service" and "offers" not in no:
-                    no["offers"] = ofertas()
-                    mudou = True
+                # Sobrescreve sempre: se so inserisse quando falta, mudar preco
+                # no rcb_pacotes.py nunca chegaria a quem ja tem "offers".
+                if isinstance(no, dict) and no.get("@type") == "Service":
+                    novas = ofertas()
+                    if no.get("offers") != novas:
+                        no["offers"] = novas
+                        mudou = True
             # Pagina sem no Service nenhum: cria um, senao o preco aparece para
             # o visitante mas nao para o Google.
             if not mudou and isinstance(dados, dict) and "@graph" in dados:

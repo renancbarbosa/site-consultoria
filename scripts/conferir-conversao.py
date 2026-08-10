@@ -75,14 +75,15 @@ for rel in paginas:
 
     # preco coerente entre texto e ficha do Google
     # So paginas com a TABELA de pacotes precisam dos tres valores nos dois
-    # lugares. Citar "a partir de R$ 997" no meio de um texto e legitimo.
+    # lugares. Citar "a partir de R$ 1.997" no meio de um texto e legitimo.
     tem_tabela = "RCB:PACOTES:INICIO" in h
     if tem_tabela:
         stats["com_precos"] += 1
-        for v in ("R$ 997", "R$ 1.497", "R$ 2.497", "997.00", "1497.00", "2497.00"):
+        for v in ("R$ 1.997", "R$ 2.497", "R$ 2.997", "R$ 4.997",
+                  "1997.00", "2497.00", "2997.00", "4997.00"):
             if v not in h:
                 problemas.append("%s: tem a tabela mas falta o valor %s" % (rel, v))
-    elif "997.00" in h and "R$ 997" not in h:
+    elif "1997.00" in h and "R$ 1.997" not in h:
         problemas.append("%s: preco no schema sem preco no texto" % rel)
 
     # barra do celular e menu novo
@@ -110,7 +111,7 @@ for rel in paginas:
 
 # llms.txt
 llms = Path("llms.txt").read_text(encoding="utf-8")
-if "R$ 997" not in llms:
+if "R$ 1.997" not in llms:
     problemas.append("llms.txt: sem a tabela de precos")
 
 # sitemap x arquivos
