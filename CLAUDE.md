@@ -489,6 +489,80 @@ decisao do Renan. Nao foi problema tecnico — a linha funcionava e estava confe
 Heredoc do PowerShell (`@'...'@`) **nao funciona na ferramenta Bash** — o `@` entra literalmente
 na mensagem do commit. Para commit com varias linhas no Bash, usar `git commit -F - <<'EOF'`.
 
+## Rodada de 10/08/2026: reposicionamento de preco + Pacote Presenca Lite (publicada — commit f0d4ff7)
+
+Mudanca comercial, nao de SEO. Nenhuma URL foi criada nem removida — **sitemap segue com 305 URLs**.
+
+| Pacote | Antes | Agora |
+|---|---|---|
+| **Presenca Lite** (NOVO, 1o da fila) | — | **R$ 1.997** pagamento unico |
+| Presenca | R$ 997 | **R$ 2.497** pagamento unico |
+| Crescimento | R$ 1.497/mes | **R$ 2.997/mes** |
+| Dominacao | R$ 2.497/mes | **R$ 4.997/mes** |
+
+O Lite e para quem **ja tem site** e so precisa do Google Meu Negocio: GMN otimizado, 10 fotos,
+avaliacoes organizadas, **"Perfil entregue em 7 dias uteis"** e garantia de 30 dias. O item veio
+escrito como "Site entregue" no pedido; foi trocado para "Perfil" com o OK do Renan — prometer
+site num pacote que nao entrega site gera cobranca depois.
+
+O pedido original tambem mandava mexer em selos, FAQ, garantia e copy de ROI; uma segunda parte
+do mesmo pedido cancelou tudo isso ("apenas precos + pacote novo"). Valeu a segunda. O preco do
+Lite veio divergente (1.497 x 1.997) e o Renan confirmou **R$ 1.997**.
+
+### O que mudou, alem do numero
+- 232 paginas com a tabela (home, nichos, 199 cidades, hub, `/blog/quanto-custa-consultoria-seo-local/`).
+- Titles/descriptions/og/twitter com "a partir de R$ 997" -> "R$ 1.997"; `priceRange`; schema
+  `Offer`; `llms.txt`; `<select>` e o mapa `VALOR` do formulario da home.
+- **"Tres formas de comecar"** -> "Quatro formas", e "qual dos tres" -> "dos quatro". Nao era
+  pedido, mas o texto contradizia os 4 cartoes na tela.
+- **CSS**: `.pacotes-grid` era `repeat(3, 1fr)` fixo. Com o 4o cartao a grade **estourava o
+  container** (colunas de 303/297/287/315px em 1366px). Agora 1 coluna / 2x2 em 760px / 4 em
+  1080px, e **`minmax(0, 1fr)`** — com `1fr` puro a coluna nao encolhe abaixo do conteudo.
+  Conferido no navegador em 390, 820 e 1366px: sem estouro horizontal.
+
+### Dois defeitos de propagacao corrigidos de passagem (valem para sempre)
+1. **`aplicar-conversao.py` so INSERIA `offers` no schema quando a pagina nao tinha nenhum.**
+   Ou seja: mexer no `rcb_pacotes.py` nunca chegava ao schema de quem ja tinha preco — so ao
+   texto visivel. Agora sobrescreve. Sintoma que denunciaria: preco novo na tela e preco velho
+   na ficha do Google.
+2. **A injecao de schema so rodava em pagina "comercial"**, entao
+   `/blog/quanto-custa-consultoria-seo-local/` (apoio, mas tem tabela) ficava com preco velho no
+   JSON-LD. Agora a condicao e "e comercial **ou** tem a tabela".
+3. **`/consultoria-seo/palmas/`** (a orfa que o gerador nao produz) estava fora dos dois
+   caminhos e ia congelar no preco antigo. Virou excecao explicita no `aplicar-conversao.py`.
+
+### Script novo
+`scripts/atualizar-precos-2026-08-10.py` — cuida do que fica **fora** do bloco
+`RCB:PACOTES`: title, meta, FAQ escrita a mao, `priceRange` e `llms.txt`. Faz trocas de frase
+inteira (da mais longa para a mais curta) e, no fim, **varre o site atras de preco antigo que
+tenha sobrado** e reclama. Atencao ao escrever esse tipo de varredura: `997.00` casa dentro de
+`1997.00`, e `R$ 2.497` deixou de ser preco velho (virou o Presenca) — as bordas do regex sao
+o que impede falso positivo e falso negativo.
+
+**Ordem correta de execucao daqui em diante:**
+```
+python scripts/aplicar-conversao.py
+python scripts/gerar-paginas-cidades.py
+python scripts/atualizar-precos-2026-08-10.py
+python scripts/conferir-conversao.py
+```
+
+### Publicacao (10/08/2026)
+- Commit `f0d4ff7` -> `origin main` (239 arquivos). Cloudflare publicou em ~1 min.
+- **As 305 URLs do sitemap conferidas uma a uma: todas HTTP 200.** Amostra conferida por
+  conteudo (home, nichos, cidades, hub, contato, cases): preco novo no ar, nenhum "R$ 997".
+- **IndexNow enviado ao Bing com as 305 URLs — aceito (HTTP 200).** Mesma chave
+  `19341b29c6054af601879d85a34d62c5`. **Nunca gerar chave nova.** Foram as 305 porque o preco
+  mudou em praticamente todas.
+- Logo depois do deploy, `/seo-para-clinicas/` ainda respondeu com o HTML antigo por alguns
+  segundos. Era propagacao, nao falha — reconferir antes de concluir que algo deu errado.
+
+### Pendencias
+- Falta o Renan reenviar o `sitemap.xml` no Search Console (**305 URLs, nenhuma nova**).
+- CNPJ e razao social no rodape continuam faltando (item aberto desde 09/08).
+- **Off-page continua sendo a prioridade no 1.** Preco mais alto so piora a conta se o funil
+  continuar vazio: posicao media 38,9. Backlinks, diretorios, LinkedIn e posts de case.
+
 ## Como trabalhar neste projeto
 
 - Renan não é técnico: sempre explicar em português simples, passo a passo, sem jargão sem explicar.
