@@ -348,6 +348,101 @@ HTML de uma cidade à mão não adianta: a regeração sobrescreve.
   melhor quem chega, mas chega pouca gente. Backlinks, diretórios, LinkedIn e posts de case
   são o que enche o funil — trabalho manual do Renan.
 
+## Rodada de 09/08/2026 (2a leva): auditoria de conversao e correcao dos defeitos de montagem
+
+Auditoria completa da home (copy, funil, conversao, preco, SEO, performance) medida no site no ar.
+Nota geral 73/100. Publicada nos commits `3a7e77b` e `b284769`.
+
+### Os tres defeitos que ninguem tinha visto - todos na home, todos da mesma origem
+A home foi reescrita a mao em 09/08 **e** continuou na lista de alvos do `aplicar-conversao.py`.
+Resultado: o script injetava uma segunda copia de tudo o que a home ja tinha.
+
+1. **Tabela de precos duplicada** - dois `id="pacotes"` na mesma pagina, com botoes que faziam
+   coisas diferentes (a de cima ia para `#falar`, a de baixo abria o WhatsApp). No GA4 os dois
+   disparavam o mesmo evento.
+2. **Barra fixa de CTA duplicada** - a copia injetada caiu dentro de `<div class="hero-actions">`.
+   Como um ancestral cria bloco de contencao, ela ignorava `bottom: 0` e aparecia **flutuando no
+   meio da apresentacao** no celular, em 663 px em vez de 770 px.
+3. **O aviso de cookies cobria a barra de CTA** - banner com 139 px e camada 9999 contra barra de
+   74 px na camada 940, ambos no rodape. Atingia **todo visitante novo**, ou seja, todo mundo que
+   vem do Google. Corrigido com `body.tem-cta-mobile .cookie-banner { bottom: 4.9rem; }` (o aviso
+   empilha em cima da barra, os dois clicaveis). Conferido com teste de clique real, nao so por CSS.
+
+### O que mais mudou na home
+- H1 de 90 para 52 caracteres ("Seu cliente procura no Google e acha seu concorrente."). No celular
+  caiu de 6 para 4 linhas (223 para 149 px) e o botao principal subiu de 611 px para 507 px.
+- Saiu o paragrafo que repetia o subtitulo; entrou a linha da UVP (`.hero-uvp`).
+- **Nova ordem do funil:** precos -> conta de retorno -> garantia -> resultados -> nichos -> como
+  funciona -> local -> formulario -> FAQ -> apoio. A garantia estava 5.000 px depois do preco.
+- Bloco novo **"Faz sentido pagar isso?"** (`.roi-section`) com a conta de retorno.
+- Depoimentos ganharam **2 cartoes de resultado com numero** (`.resultado-card`), puxados de /cases/.
+- FAQ: entraram "E caro?" e "Nao da para fazer sozinho?" (no texto e no `FAQPage`).
+- `title` de 70 para 58 caracteres; preco de entrada na meta description.
+- Chamada no rodape (`.footer-cta`) - **so na home**, o resto do site nao tem.
+
+### Erro de fato no pedido, corrigido antes de publicar
+O pedido mandava criar um cartao "312 avaliacoes - organizadas no perfil do cliente". **As 312
+avaliacoes sao da Richesse, uma CONCORRENTE** que a Docevidade superou; a Docevidade tem 4. O
+cartao publicado usa o numero verdadeiro, que e mais forte: "1o lugar no Google Maps para
+'macarrons Goiania' - com 4 avaliacoes, a frente de concorrentes que tinham 47 e 312".
+**Sempre conferir numero de case contra a pagina de origem antes de publicar.**
+
+### Schema Review - com ressalva importante
+Os 3 depoimentos reais foram marcados como `Review` + `AggregateRating` no no `Service`.
+**Nao crie expectativa de estrelinha na busca:** desde 2019 o Google nao exibe review rich result
+para avaliacao que a propria empresa publica sobre si (self-serving, `LocalBusiness`/`Organization`).
+Serve para IA/GEO e para o entendimento da entidade, nao para estrela na SERP.
+Os 3 depoimentos foram **mantidos visiveis** (o pedido era deixar 1): marcar review que nao esta
+visivel na pagina e violacao da politica de dados estruturados.
+
+### Mudancas nos scripts - leia antes de mexer em preco
+1. **A home saiu da lista de alvos do `aplicar-conversao.py`.** Era a origem da duplicacao. A home
+   tem tabela, barra e menu proprios, escritos a mao.
+2. **`aplicar-conversao.py` agora ATUALIZA bloco ja existente.** Antes ele pulava toda pagina que
+   ja tivesse `RCB:PACOTES:INICIO` - ou seja, **mexer no `rcb_pacotes.py` nao chegava em pagina
+   nenhuma ja feita**. A instrucao que estava escrita aqui no CLAUDE.md nao funcionava de verdade.
+   Agora funciona: mudou preco -> `python scripts/aplicar-conversao.py` propaga.
+3. **Mas ele NAO toca em `consultoria-seo/*`.** O gerador escreve o nome da cidade dentro da
+   mensagem do WhatsApp ("Tenho um negocio **em Anapolis**"); reescrever de fora apagava isso.
+   Quem atualiza preco nas cidades e o `gerar-paginas-cidades.py`. **Ordem: rode os dois.**
+4. **O flag `comercial` so decide quem GANHA a tabela, nao quem a mantem em dia.**
+   `/blog/quanto-custa-consultoria-seo-local/` tem a tabela e nao e "comercial" - ficou sem o selo
+   de garantia na primeira publicacao e foi corrigido no commit seguinte.
+5. **`FECHOS`** (no `aplicar-conversao.py`): a ultima frase da linha de apoio da tabela, quando a
+   pagina fala na lingua do nicho ("...que a sua clinica pode dar agora"). Saiu do HTML e virou
+   dado no script - antes a regeracao apagava. Hoje sao 4 paginas.
+6. `rcb_pacotes.py` ganhou `FECHO_PADRAO` e o parametro `fecho` em `bloco_pacotes()`, e passou a
+   fechar os tres cartoes com `<li class="pacote-garantia">Garantia de 30 dias</li>`.
+
+**Teste que vale sempre:** rodar `aplicar-conversao.py` duas vezes seguidas. A segunda tem que
+dizer "paginas alteradas: 0". Se alterar, alguma coisa esta sendo sobrescrita.
+
+### Efeito colateral registrado
+Em 5 paginas o `data-page` do GA4 foi normalizado para bater com a URL
+(`seo-dentistas` -> `seo-para-dentistas`, `blog-quanto-custa` -> `blog-quanto-custa-consultoria-seo-local`,
+e semelhantes em clinicas, estetica e comercios). Muda o rotulo do evento no relatorio, nada mais.
+
+### Publicacao (09/08/2026)
+- `3a7e77b` (234 arquivos) e `b284769` (o artigo do blog) -> `origin main`. Cloudflare publicou em
+  ~1 min cada. **As 232 URLs com HTML alterado foram conferidas uma a uma: todas HTTP 200.**
+- **IndexNow enviado ao Bing com as 232 URLs - aceito (HTTP 200).** Mesma chave
+  `19341b29c6054af601879d85a34d62c5`. **Nunca gerar chave nova.** Foram so as 232 com HTML
+  alterado (nao as 305 do sitemap): as outras mudaram apenas de CSS.
+- Cuidado ao conferir o site por script: **o Cloudflare devolve 403 para o user-agent padrao do
+  `urllib` do Python.** Use `curl` ou mande um user-agent de navegador. Tambem da para pegar
+  resposta em cache logo depois do deploy - reconferir antes de concluir que algo falhou.
+
+### Pendencias
+- **CNPJ e razao social no rodape: falta o numero.** E o unico item da auditoria nao executado.
+  Nao foi colocado texto de espera no lugar - CNPJ falso no ar e pior que CNPJ nenhum.
+- Chamada no rodape existe so na home; propagar para o resto do site e opcional.
+- Nao foi criado pacote de entrada abaixo de R$ 997: a pesquisa de concorrentes mostrou que em
+  Goiania os projetos comecam por volta de R$ 2.500/mes e quase ninguem publica preco - o R$ 997
+  ja e a entrada mais barata e mais transparente do mercado local.
+- **Off-page continua sendo a prioridade no 1.** A auditoria foi clara: com posicao media 38,9 e
+  8 cliques em 3 meses, melhorar a conversao de quem quase nao chega nao muda o faturamento.
+  Backlinks, diretorios, LinkedIn e posts de case sao o que enche o funil.
+
 ## Como trabalhar neste projeto
 
 - Renan não é técnico: sempre explicar em português simples, passo a passo, sem jargão sem explicar.
