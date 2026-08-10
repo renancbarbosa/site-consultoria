@@ -453,7 +453,7 @@ O texto era, como ultimo elemento do `<footer>`:
 > Atendimento presencial em Goiania e regiao. Consultoria individual — nao e agencia.
 
 Linha do tempo: entrou nas 305 paginas (`eec4c54`) → saiu da home por repetir informacao que o
-rodape dela ja dava (`55a1609`) → saiu das outras 304 (`3ec97a3`). Motivo da retirada final:
+rodape dela ja dava (`55a1609`) → saiu das outras 304 (`378e9cd`). Motivo da retirada final:
 decisao do Renan. Nao foi problema tecnico — a linha funcionava e estava conferida no ar.
 
 ### O que voltou ao normal
