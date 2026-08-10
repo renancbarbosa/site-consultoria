@@ -446,7 +446,7 @@ e semelhantes em clinicas, estetica e comercios). Muda o rotulo do evento no rel
 ## Rodada de 10/08/2026: linha de confianca no rodape (publicada — commit eec4c54)
 
 Mudanca pequena e isolada, so no rodape. Texto acrescentado como ultimo elemento do `<footer>`
-das **305 paginas** que tem rodape:
+das **304 paginas** com rodape (todas menos a home — ver "tirada da home" abaixo):
 
 > Atendimento presencial em Goiania e regiao. Consultoria individual — nao e agencia.
 
@@ -474,10 +474,14 @@ celular a barra fixa de CTA nao cobre a linha** (linha termina em 636 px, barra 
   `19341b29c6054af601879d85a34d62c5`. **Nunca gerar chave nova.** Foram todas porque o rodape
   mudou em todas; nenhuma URL nova foi criada.
 
+### Tirada da home (decisao do Renan, mesmo dia)
+A home **nao tem** a linha. Motivo: o rodape dela ja traz "Atendimento presencial: Goiania/GO,
+Aparecida de Goiania/GO, Trindade/GO, Senador Canedo/GO" logo acima — a linha repetia a mesma
+informacao duas vezes seguidas. **Ao mexer no rodape daqui em diante, nao reinserir na home.**
+Nenhum script do repositorio insere a linha (a insercao foi feita por script temporario, fora do
+versionamento); os geradores so alcancam cidades e paginas novas, nunca a home.
+
 ### Pendente / em aberto
-- **Na home a linha fica redundante:** o rodapé dela já traz "Atendimento presencial: Goiânia/GO,
-  Aparecida de Goiânia/GO, Trindade/GO, Senador Canedo/GO" logo acima. Renan foi avisado e pode
-  pedir para tirar so da home.
 - CNPJ e razao social no rodape continuam faltando (item da auditoria de 09/08 ainda nao feito).
 
 ### Armadilha de ferramenta (nao e do projeto)
