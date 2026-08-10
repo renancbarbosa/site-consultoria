@@ -1844,17 +1844,6 @@ section {
   color: var(--text-muted);
 }
 
-/* Linha de confiança — último item do rodapé, nas duas variantes
-   (.footer no site inteiro e .site-footer na home). */
-.rodape-confianca {
-  font-size: 0.8rem;
-  color: #8b93a3;
-  text-align: center;
-  margin: 0;
-  padding: 14px 20px 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-}
-
 /* ============================================================
    AUDIENCE SELECTOR (HOME)
    ============================================================ */

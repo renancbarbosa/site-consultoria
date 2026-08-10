@@ -443,46 +443,47 @@ e semelhantes em clinicas, estetica e comercios). Muda o rotulo do evento no rel
   8 cliques em 3 meses, melhorar a conversao de quem quase nao chega nao muda o faturamento.
   Backlinks, diretorios, LinkedIn e posts de case sao o que enche o funil.
 
-## Rodada de 10/08/2026: linha de confianca no rodape (publicada — commit eec4c54)
+## Rodada de 10/08/2026: linha de confianca no rodape — ADICIONADA E DESFEITA no mesmo dia
 
-Mudanca pequena e isolada, so no rodape. Texto acrescentado como ultimo elemento do `<footer>`
-das **304 paginas** com rodape (todas menos a home — ver "tirada da home" abaixo):
+**Estado atual do rodape: sem a linha, em pagina nenhuma.** O rodape esta byte a byte igual ao
+que era em `f7574c2` (conferido com `git diff`). Registro aqui so para nao se refazer sem querer.
+
+O texto era, como ultimo elemento do `<footer>`:
 
 > Atendimento presencial em Goiania e regiao. Consultoria individual — nao e agencia.
 
-- Classe `.rodape-confianca`, estilo no `styles.css` (0,8rem, `#8b93a3`, centralizado, borda
-  superior sutil). **O pedido original trazia `border-top: 1px solid #eee`** — trocado de
-  proposito: o rodape do site e escuro e essa borda quase branca viraria um risco forte
-  atravessando o rodape. Renan foi avisado.
-- Inserida **antes do ultimo `</footer>`** do arquivo. Detalhe que importa: a home tem
-  `<footer>` aninhado dentro dos cartoes de depoimento, entao mirar no *ultimo* e obrigatorio.
-- Fica como irma do `.footer-bottom` (nao dentro dele) — `.footer-bottom-inner` e flex com
-  `space-between` e a linha viraria mais uma coluna da fileira.
-- **Os dois geradores foram ensinados** (`gerar-paginas-cidades.py` e `rcb_base.py`), senao a
-  proxima regeracao das 199 cidades apagaria a linha. Cidades regeradas para confirmar.
-- **Fora, de proposito:** `404.html` (nao tem rodape nenhum) e
-  `diagnostico-presenca-digital/exemplo/` (monta o HTML por JavaScript, `noindex`).
+Linha do tempo: entrou nas 305 paginas (`eec4c54`) → saiu da home por repetir informacao que o
+rodape dela ja dava (`55a1609`) → saiu das outras 304 (`3ec97a3`). Motivo da retirada final:
+decisao do Renan. Nao foi problema tecnico — a linha funcionava e estava conferida no ar.
 
-Conferencia feita: `conferir-conversao.py` sem problemas; diff conferido linha a linha (nada
-alem do rodape mudou nas 305 paginas); site aberto no navegador em desktop e celular. **No
-celular a barra fixa de CTA nao cobre a linha** (linha termina em 636 px, barra comeca em
-770 px, e `elementFromPoint` confirma que a linha esta clicavel).
+### O que voltou ao normal
+- 305 paginas HTML, `styles.css` (regra `.rodape-confianca` removida) e os dois geradores
+  (`gerar-paginas-cidades.py`, `rcb_base.py`, que tinham sido ensinados a embutir a linha).
+- Nenhum vestigio de `rodape-confianca` sobrou em HTML, CSS ou script.
+- **IndexNow reenviado ao Bing com as 305 URLs — aceito (HTTP 200).** Mesma chave
+  `19341b29c6054af601879d85a34d62c5`. **Nunca gerar chave nova.** Nenhuma URL foi criada nem
+  removida em nenhum momento desta rodada; so mudou HTML dentro delas.
 
-- Publicado em `origin main`; Cloudflare publicou em ~1 min. Conferidas no ar: home, cases,
-  Anapolis, dentistas, um artigo, contato e o `styles.css` — HTTP 200 com a linha.
-- **IndexNow enviado ao Bing com as 305 URLs do sitemap — aceito (HTTP 200).** Mesma chave
-  `19341b29c6054af601879d85a34d62c5`. **Nunca gerar chave nova.** Foram todas porque o rodape
-  mudou em todas; nenhuma URL nova foi criada.
-
-### Tirada da home (decisao do Renan, mesmo dia)
-A home **nao tem** a linha. Motivo: o rodape dela ja traz "Atendimento presencial: Goiania/GO,
-Aparecida de Goiania/GO, Trindade/GO, Senador Canedo/GO" logo acima — a linha repetia a mesma
-informacao duas vezes seguidas. **Ao mexer no rodape daqui em diante, nao reinserir na home.**
-Nenhum script do repositorio insere a linha (a insercao foi feita por script temporario, fora do
-versionamento); os geradores so alcancam cidades e paginas novas, nunca a home.
+### O que vale guardar, se um dia voltar o assunto
+1. **A home tem `<footer>` aninhado** dentro dos cartoes de depoimento. Qualquer script que mexa
+   no rodape por texto precisa mirar no **ultimo** `</footer>` do arquivo, nunca no primeiro.
+2. **Nao pendurar nada dentro de `.footer-bottom-inner`**: e flex com `space-between`, entao um
+   paragrafo novo vira mais uma coluna da fileira em vez de uma linha propria.
+3. **O rodape do site e escuro.** `border-top: 1px solid #eee` (que veio no pedido) vira um risco
+   quase branco atravessando o rodape; o tom que combina e algo como
+   `rgba(255,255,255,0.06)`.
+4. **No celular a barra fixa de CTA nao atrapalha** um elemento no fim do rodape: o `body` tem
+   208 px de `padding-bottom`, e a linha ficava ~130 px acima da barra (conferido com clique real
+   via `elementFromPoint`, nao so no olho).
+5. **Ao remover por regex, cuidado com o `\s*` antes do `</footer>`**: ele engole a quebra de
+   linha original e junta duas linhas que eram separadas. Aconteceu em 72 arquivos; foi visto no
+   `git diff` contra o commit anterior e corrigido com `git checkout` desses arquivos.
+6. `404.html` nao tem rodape nenhum, e `diagnostico-presenca-digital/exemplo/` monta o HTML por
+   JavaScript — os dois ficam de fora de qualquer mexida em rodape.
 
 ### Pendente / em aberto
 - CNPJ e razao social no rodape continuam faltando (item da auditoria de 09/08 ainda nao feito).
+  Renan ainda nao passou o numero; **nao por CNPJ de mentira no ar**.
 
 ### Armadilha de ferramenta (nao e do projeto)
 Heredoc do PowerShell (`@'...'@`) **nao funciona na ferramenta Bash** — o `@` entra literalmente
