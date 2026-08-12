@@ -3746,7 +3746,12 @@ section {
 .wform-privacidade a { color: var(--gold-light); text-decoration: underline; text-underline-offset: 2px; }
 .wform-erro { margin: 0; min-height: 0; color: #ff9b9b; font-size: 0.88rem; text-align: center; }
 .wform-erro:empty { display: none; }
-.wform-hp { position: absolute; left: -9999px; }
+/* Armadilha anti-robo do formulario. display:none (e nao apenas left:-9999px)
+   porque campo so tirado da tela CONTINUA sendo anunciado por leitor de tela:
+   um visitante cego podia marcar a caixinha e ter o proprio contato descartado
+   como spam pelo Web3Forms. E o que a documentacao deles recomenda. O campo
+   continua sendo enviado no formulario — display:none nao desativa campo. */
+.wform-hp { display: none; }
 .wform-ok {
   padding: clamp(1.6rem, 5vw, 2.9rem);
   text-align: center;

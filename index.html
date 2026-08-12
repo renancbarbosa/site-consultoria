@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K644KXR38G"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -17,8 +18,6 @@
     gtag('js', new Date());
     gtag('config', 'G-K644KXR38G', { 'anonymize_ip': true });
   </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0D1B2A">
   <title>Site e Google Meu Negócio para Clínicas | Goiânia — RCBSEO</title>
   <meta name="description" content="Apareça no Google quando seu cliente procura. Sites e Google Meu Negócio para clínicas, dentistas e comércios locais. Preço a partir de R$ 1.997.">
@@ -54,6 +53,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
   <link rel="stylesheet" href="/styles.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K644KXR38G"></script>
 
   <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -827,7 +827,11 @@
             <input type="hidden" name="from_name" value="Site RCB Consultoria">
             <input type="hidden" name="Resumo" id="rcbResumoEmail" value="">
             <input type="hidden" name="Pagina de origem" id="rcbPaginaOrigem" value="">
-            <input type="checkbox" name="botcheck" class="wform-hp" tabindex="-1" autocomplete="off">
+            <!-- Armadilha anti-robo do Web3Forms. aria-hidden + display:none (no
+                 .wform-hp) escondem de leitor de tela: so tirar da tela com
+                 left:-9999px nao esconde, e um visitante cego podia marcar o
+                 campo sem querer e ter o proprio contato descartado como spam. -->
+            <input type="checkbox" name="botcheck" class="wform-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
             <div class="wform-linha">
               <label for="rcbNome">

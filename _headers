@@ -1,3 +1,51 @@
+# ============================================================================
+# Seguranca — vale para TODAS as URLs. Adicionado em 11/08/2026 (auditoria).
+# ============================================================================
+# Nada aqui muda a aparencia nem o conteudo do site: sao instrucoes que o
+# servidor manda junto com a pagina, dizendo ao navegador o que NAO permitir.
+/*
+  # Ninguem pode colocar o site dentro de um <iframe> em outro dominio. Impede
+  # o golpe de sobrepor um site falso ao verdadeiro para roubar clique.
+  # Nao afeta o mapa do Google na pagina de contato: la o site EMBUTE o Google,
+  # e este header trata de quem embute o site.
+  X-Frame-Options: DENY
+
+  # Navegador obedece o tipo de arquivo que o servidor declara, em vez de
+  # adivinhar pelo conteudo. Impede que um arquivo disfarcado vire script.
+  X-Content-Type-Options: nosniff
+
+  # Ao sair do site por um link, manda so o dominio de origem (nao o endereco
+  # completo da pagina) — e nada quando sai de HTTPS para HTTP.
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # Desliga recursos que o site nao usa. Conferido em 11/08/2026: nao ha
+  # nenhuma chamada a geolocalizacao, microfone ou camera em HTML nem em JS.
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+  # Por 1 ano, navegadores so acessam o site (e subdominios) por HTTPS.
+  # SEM o token "preload" de proposito: preload inscreve o dominio numa lista
+  # embutida dentro dos navegadores, e sair dela leva meses. Decisao do Renan
+  # em 11/08/2026 — validar a infraestrutura e os subdominios futuros antes.
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+  # CSP parcial. So diretivas CONFERIDAS neste site em 11/08/2026:
+  #   object-src 'none'      - nao existe <object> nem <embed> em pagina nenhuma
+  #   base-uri 'self'        - nao existe <base>; impede sequestro de link relativo
+  #   frame-ancestors 'none' - versao moderna do X-Frame-Options acima
+  #   form-action 'self'     - os 2 formularios do site nao tem action; enviam por JS
+  Content-Security-Policy: object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'
+
+# TODO (etapa posterior): CSP completa, com script-src e style-src.
+# Por que nao agora: as 307 paginas tem <script> e <style> escritos direto no
+# HTML, e o site nao tem etapa de build para gerar as chaves ("nonce") que
+# autorizariam cada bloco. A unica forma de ligar script-src hoje seria com
+# 'unsafe-inline', que autoriza qualquer script embutido — ou seja, desliga
+# justamente a protecao que a diretiva existe para dar. Fazer direito exige
+# tirar os scripts embutidos para arquivos .js proprios. Dominios que a CSP
+# completa precisaria liberar: googletagmanager.com, google-analytics.com,
+# static.cloudflareinsights.com, fonts.googleapis.com, fonts.gstatic.com,
+# api.web3forms.com (envio do formulario) e google.com (mapa do contato).
+
 # Regras de cache do Cloudflare Pages
 # Revisado em 08/08/2026.
 # IMPORTANTE: nao definimos cache para HTML, CSS ou JS de proposito.
