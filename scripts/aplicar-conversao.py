@@ -139,11 +139,14 @@ def aplicar(rel, negocio, comercial):
     # O hub e as 199 cidades sao donos do proprio bloco: o gerador escreve neles
     # o nome da cidade dentro da mensagem do WhatsApp ("...um negocio em Anapolis").
     # Reescrever daqui apagaria isso. Quem atualiza preco la e o gerar-paginas-cidades.py.
-    # /consultoria-seo/palmas/ e a excecao: esta no disco mas o gerador nao a
-    # produz (residuo de colisao de slug). Se ela ficar de fora dos dois, o
-    # preco dela congela. Por isso o bloco dela e atualizado daqui.
-    do_gerador = (rel.startswith("consultoria-seo/")
-                  and rel != "consultoria-seo/palmas/index.html")
+    # ATE 12/08/2026 /consultoria-seo/palmas/ era excecao: estava no disco mas o
+    # gerador nao a produzia (colisao de slug Palmas/TO x Palmas/PR), entao o
+    # preco dela era atualizado daqui. A colisao foi resolvida em
+    # rcb_cidades.SLUG_CANONICO e o gerador passou a produzi-la -- inclusive
+    # como pagina piloto, com estrutura propria. Manter a excecao agora
+    # INJETARIA UM SEGUNDO bloco de precos nela, que foi exatamente o defeito
+    # da home em 09/08/2026. Hoje TODO o /consultoria-seo/ e do gerador.
+    do_gerador = rel.startswith("consultoria-seo/")
 
     # 4a. Ja tem a tabela: troca o bloco inteiro pelo atual. Sem isso, mexer no
     # rcb_pacotes.py (preco, itens, garantia) nao chegaria nas paginas que ja

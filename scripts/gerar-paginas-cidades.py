@@ -40,6 +40,8 @@ from urllib.parse import quote
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from rcb_pacotes import bloco_cta_mobile, bloco_pacotes, ofertas_json_compacto
+from rcb_cidades import INDEXAVEIS, PILOTO, SLUG_CANONICO, eh_indexavel
+from conteudo.cidades_piloto import PILOTOS
 
 DADOS = r"C:/Users/renan/SITE-DADOS/data/cidades"
 RAIZ = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
@@ -176,7 +178,15 @@ def carregar_cidades():
     for s, lista in vistos.items():
         if len(lista) > 1:
             for c in lista:
-                c["slug"] = f"{c['slug']}-{c['uf'].lower()}"
+                # Colisao entre estados. Por padrao vira `slug-uf`, MAS quando a
+                # URL ja publicada pertence comprovadamente a uma das cidades, o
+                # mapa SLUG_CANONICO manda. Caso real: /consultoria-seo/palmas/
+                # sempre foi Palmas/TO (titulo, schema e numeros publicados sao
+                # de TO); sem este mapa as duas viravam palmas-to e palmas-pr,
+                # nenhuma casava com a pasta publicada e a pagina ficava orfa da
+                # geracao, congelada no conteudo de 15/07/2026.
+                fixo = SLUG_CANONICO.get((s, c["uf"]))
+                c["slug"] = fixo if fixo else f"{c['slug']}-{c['uf'].lower()}"
 
     # Por padrão, atualiza apenas URLs já publicadas. Isso impede que uma nova
     # carga de dados coloque centenas de páginas no ar sem revisão editorial.
@@ -192,7 +202,14 @@ def carregar_cidades():
     return sorted(cidades, key=lambda c: -c["empresas_ativas"])
 
 
-def head_comum(titulo, desc, canonical, schema_json):
+def head_comum(titulo, desc, canonical, schema_json, indexavel=True):
+    # Poda de 12/08/2026: as cidades fora de rcb_cidades.INDEXAVEIS saem do
+    # indice por meta robots. NAO usar nofollow (os links continuam valendo
+    # para o leitor e para o rastreamento), NAO bloquear no robots.txt e NAO
+    # redirecionar: o Google precisa RASTREAR a pagina para ver o noindex.
+    # Bloquear no robots.txt faria o efeito contrario -- a URL ficaria no
+    # indice sem o Google nunca ler a tag.
+    robots = "index, follow" if indexavel else "noindex, follow"
     return f"""<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -218,7 +235,7 @@ def head_comum(titulo, desc, canonical, schema_json):
   <title>{titulo}</title>
   <meta name="description" content="{desc}">
   <meta name="author" content="Renan Carvalho Barbosa">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="{robots}">
   <link rel="canonical" href="{canonical}">
   <link rel="alternate" hreflang="pt-BR" href="{canonical}">
   <meta property="og:type" content="website">
@@ -533,7 +550,152 @@ def pagina_cidade(c, vizinhas):
 """
     flutuante = f"""{barra_mobile}  <a href="{whats_url}" class="whatsapp-float" data-event="cta_click" data-location="whatsapp_flutuante" data-page="cidade-{slug}" target="_blank" rel="noopener noreferrer" aria-label="Chamar no WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
 """
-    return head_comum(titulo, desc, canonical, schema) + "\n" + corpo + flutuante + rodape(f"cidade-{slug}")
+    return (head_comum(titulo, desc, canonical, schema, eh_indexavel(slug))
+            + "\n" + corpo + flutuante + rodape(f"cidade-{slug}"))
+
+
+def pagina_cidade_piloto(c, vizinhas):
+    """Pagina de cidade com conteudo local proprio (Rio, Campinas, Palmas).
+
+    Estrutura DIFERENTE do template das demais: hero proprio, secoes escritas
+    para a praca, FAQ propria. So o involucro (head, navbar, precos, rodape) e
+    compartilhado -- e isso e proposital: preco e navegacao precisam ser iguais
+    no site inteiro.
+    """
+    slug = c["slug"]
+    cidade = c["cidade"]
+    uf = c["uf"]
+    estado = ESTADOS.get(uf, uf)
+    canonical = f"{BASE_URL}/consultoria-seo/{slug}/"
+    ref = c.get("data_referencia", c.get("snapshot", ""))
+    gerado_em = c.get("gerado_em", ref)
+
+    ramos = [(rotulo_cnae(r["nome"]), r["abertas_90d"]) for r in c.get("ramos_top", [])[:6]]
+    bairros = [(limpar_bairro(b["bairro"]), b["abertas_90d"]) for b in c.get("bairros_top", [])[:4]]
+    bairros_lista = "<ul class=\"audit-list\">" + "".join(
+        f"<li><strong>{nome}</strong>: {n_br(qtd)} novas empresas em 90 dias</li>"
+        for nome, qtd in bairros
+    ) + "</ul>" if bairros else ""
+
+    ctx = {
+        "cidade": cidade,
+        "uf": uf,
+        "estado": estado,
+        "ativas": n_br(c["empresas_ativas"]),
+        "n90": n_br(c["abertas_90d"]),
+        "n12": n_br(c["abertas_12m"]),
+        "ref": ref,
+        "ramos_html": "\n".join(
+            f'            <li>{nome} — <strong>{n_br(qtd)}</strong> novas em 90 dias</li>'
+            for nome, qtd in ramos
+        ),
+        "bairros_lista": bairros_lista,
+        "link_gmn": link(slug, "/google-perfil-empresa/"),
+        "link_consultoria": link(slug, "/consultoria-seo-local/"),
+        "link_cases": link(slug, "/cases/"),
+    }
+
+    p = PILOTOS[slug](ctx)
+
+    whats_url = f"https://wa.me/{WHATS}?text={quote(p['whats'])}"
+
+    faq_schema = ",".join(
+        '{"@type":"Question","name":"%s","acceptedAnswer":{"@type":"Answer","text":"%s"}}'
+        % (q.replace('"', "'"), a.replace('"', "'"))
+        for q, a in p["faq"]
+    )
+
+    schema = (
+        '{"@context":"https://schema.org","@graph":['
+        '{"@type":"WebPage","url":"%s","name":"%s","description":"%s","inLanguage":"pt-BR","dateModified":"%s"},'
+        '{"@type":"BreadcrumbList","itemListElement":['
+        '{"@type":"ListItem","position":1,"name":"Início","item":"https://rcbseo.com.br/"},'
+        '{"@type":"ListItem","position":2,"name":"Consultoria de SEO por cidade","item":"https://rcbseo.com.br/consultoria-seo/"},'
+        '{"@type":"ListItem","position":3,"name":"%s","item":"%s"}]},'
+        '{"@type":"Service","serviceType":"Consultoria de SEO","name":"%s","description":"%s",'
+        '"provider":{"@type":"LocalBusiness","@id":"https://rcbseo.com.br/#business"},'
+        '"areaServed":{"@type":"City","name":"%s","containedInPlace":{"@type":"State","name":"%s"}},'
+        '"offers":' + ofertas_json_compacto() + '},'
+        '{"@type":"FAQPage","mainEntity":[%s]}]}'
+    ) % (canonical, p["titulo"], p["desc"].replace('"', "'"), gerado_em, cidade, canonical,
+         p["titulo"].split(" | ")[0], p["desc"].replace('"', "'"), cidade, estado, faq_schema)
+
+    faq_html = "\n".join(
+        f"""          <div class="faq-card">
+            <h3>{q}</h3>
+            <p>{a}</p>
+          </div>""" for q, a in p["faq"]
+    )
+
+    vizinhas_html = ""
+    if vizinhas:
+        links = " · ".join(f'<a href="/consultoria-seo/{v["slug"]}/">{v["cidade"]}</a>' for v in vizinhas)
+        vizinhas_html = f"""
+    <section class="solution-section" aria-label="Outras cidades atendidas">
+      <div class="container">
+        <p class="section-desc">Também atendo outras cidades de {estado} e região: {links}. Veja <a href="/consultoria-seo/">todas as cidades atendidas</a>.</p>
+      </div>
+    </section>"""
+
+    bloco_precos = bloco_pacotes("um negócio", f"cidade-{slug}", f" em {cidade}")
+    barra_mobile = bloco_cta_mobile(f"cidade-{slug}")
+
+    corpo = f"""<body class="tem-cta-mobile">
+{NAVBAR}
+
+  <main id="main-content">
+
+    <section class="page-hero">
+      <div class="container page-hero-grid">
+        <div>
+          <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Início</a><span>/</span><a href="/consultoria-seo/">Cidades</a><span>/</span><span>{cidade}</span></nav>
+          <div class="eyebrow">{p['eyebrow']}</div>
+          <h1 class="page-title">{p['h1']}</h1>
+          <p class="page-subtitle">{p['subtitulo']}</p>
+          <div class="page-actions">
+            <a class="btn btn-primary" href="{whats_url}" target="_blank" rel="noopener noreferrer" data-event="cta_click" data-location="hero_whatsapp" data-page="cidade-{slug}">Quero analisar minha empresa em {cidade}</a>
+            <a class="btn btn-outline" href="/cases/" data-event="cta_click" data-location="hero_secundario" data-page="cidade-{slug}">Ver resultados de clientes reais</a>
+          </div>
+        </div>
+        <aside class="page-hero-panel">
+          <h2>{p['painel_titulo']}</h2>{p['painel_html']}
+          <p class="section-desc" style="font-size:.8rem;margin-top:.75rem;">Números de empresas: <a href="https://dados.gov.br/dados/conjuntos-dados/cadastro-nacional-da-pessoa-juridica-cnpj" target="_blank" rel="noopener noreferrer">dados públicos de CNPJ</a>, referência {ref}. Página atualizada em {gerado_em}.</p>
+        </aside>
+      </div>
+    </section>
+{chr(10).join(p['secoes'])}
+
+{bloco_precos}
+    <section class="faq-section" aria-labelledby="faq-titulo">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">FAQ</div>
+          <h2 id="faq-titulo" class="section-title">Perguntas frequentes sobre SEO em {cidade}</h2>
+        </div>
+        <div class="faq-grid">
+{faq_html}
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-titulo">
+      <div class="container">
+        <div class="cta-inner">
+          <div class="section-tag">Diagnóstico gratuito</div>
+          <h2 id="cta-titulo" class="section-title">{p['cta_titulo']}</h2>
+          <p>{p['cta_texto']}</p>
+          <a class="btn btn-primary" href="{whats_url}" target="_blank" rel="noopener noreferrer" data-event="cta_click" data-location="final_whatsapp" data-page="cidade-{slug}">Quero meu diagnóstico gratuito</a>
+        </div>
+      </div>
+    </section>
+{vizinhas_html}
+  </main>
+
+"""
+    flutuante = f"""{barra_mobile}  <a href="{whats_url}" class="whatsapp-float" data-event="cta_click" data-location="whatsapp_flutuante" data-page="cidade-{slug}" target="_blank" rel="noopener noreferrer" aria-label="Chamar no WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+"""
+    return (head_comum(p["titulo"], p["desc"], canonical, schema, True)
+            + "\n" + corpo + flutuante + rodape(f"cidade-{slug}"))
 
 
 def pagina_hub(cidades):
@@ -642,24 +804,76 @@ def pagina_hub(cidades):
 
 
 def atualizar_sitemap(cidades):
+    """Sincroniza o sitemap com a decisao de 12/08/2026.
+
+    Regra: so entram no sitemap as cidades de rcb_cidades.INDEXAVEIS (mais o
+    hub). As demais sao REMOVIDAS -- pedir indexacao de pagina que carrega
+    noindex e sinal contraditorio. Elas continuam no ar, com HTTP 200 e
+    linkadas pelo hub, para que o Google as rastreie e leia a tag.
+
+    Idempotente: rodar duas vezes seguidas nao muda mais nada.
+    """
     caminho = os.path.join(RAIZ, "sitemap.xml")
     with open(caminho, encoding="utf-8") as f:
         conteudo = f.read()
 
+    prefixo = f"{BASE_URL}/consultoria-seo/"
     datas = {
-        f"{BASE_URL}/consultoria-seo/{c['slug']}/": c.get("gerado_em", c.get("data_referencia", ""))
+        f"{prefixo}{c['slug']}/": c.get("gerado_em", c.get("data_referencia", ""))
         for c in cidades
     }
-    datas[f"{BASE_URL}/consultoria-seo/"] = max(datas.values()) if datas else ""
+    hub_data = max(datas.values()) if datas else ""
 
-    for url, data in datas.items():
+    # 1. remove do sitemap toda URL de cidade que nao e indexavel
+    def manter(bloco):
+        m = re.search(r"<loc>([^<]+)</loc>", bloco)
+        if not m:
+            return True
+        url = m.group(1)
+        if not url.startswith(prefixo) or url == prefixo:
+            return True  # nao e pagina de cidade (ou e o hub): nao mexe
+        slug = url[len(prefixo):].rstrip("/")
+        return eh_indexavel(slug)
+
+    blocos = re.findall(r"[ \t]*<url>.*?</url>\n?", conteudo, flags=re.S)
+    removidos = 0
+    for bloco in blocos:
+        if not manter(bloco):
+            conteudo = conteudo.replace(bloco, "", 1)
+            removidos += 1
+
+    # 2. atualiza lastmod das que ficaram
+    for url, data in list(datas.items()) + [(prefixo, hub_data)]:
         if not data:
+            continue
+        slug = url[len(prefixo):].rstrip("/")
+        if slug and not eh_indexavel(slug):
             continue
         padrao = rf"(<loc>{re.escape(url)}</loc>\s*<lastmod>)[^<]+"
         conteudo = re.sub(padrao, lambda m: m.group(1) + data, conteudo, count=1)
 
+    # 3. garante que toda cidade indexavel esteja presente
+    presentes = set(re.findall(r"<loc>([^<]+)</loc>", conteudo))
+    faltando = []
+    for c in cidades:
+        url = f"{prefixo}{c['slug']}/"
+        if eh_indexavel(c["slug"]) and url not in presentes:
+            data = c.get("gerado_em", c.get("data_referencia", "")) or hub_data
+            faltando.append(f"""  <url>
+    <loc>{url}</loc>
+    <lastmod>{data}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>""")
+    if faltando:
+        conteudo = conteudo.replace("</urlset>", "\n".join(faltando) + "\n</urlset>")
+
     with open(caminho, "w", encoding="utf-8", newline="\n") as f:
         f.write(conteudo)
+
+    total = len(re.findall(r"<loc>", conteudo))
+    print(f"Sitemap: {removidos} URLs de cidade removidas (noindex), "
+          f"{len(faltando)} acrescentadas. Total agora: {total}.")
 
 
 def main():
@@ -671,9 +885,16 @@ def main():
         por_uf.setdefault(c["uf"], []).append(c)
 
     urls = []
+    n_piloto = n_noindex = 0
     for c in cidades:
         mesmas = [v for v in por_uf[c["uf"]] if v["slug"] != c["slug"]][:6]
-        html = pagina_cidade(c, mesmas)
+        if c["slug"] in PILOTO:
+            html = pagina_cidade_piloto(c, mesmas)
+            n_piloto += 1
+        else:
+            html = pagina_cidade(c, mesmas)
+        if not eh_indexavel(c["slug"]):
+            n_noindex += 1
         destino = os.path.join(RAIZ, "consultoria-seo", c["slug"])
         os.makedirs(destino, exist_ok=True)
         with open(os.path.join(destino, "index.html"), "w", encoding="utf-8", newline="\n") as f:
@@ -687,6 +908,9 @@ def main():
     atualizar_sitemap(cidades)
 
     print(f"Geradas {len(urls)} páginas de cidade + 1 hub em /consultoria-seo/.")
+    print(f"  piloto (conteúdo local próprio): {n_piloto}")
+    print(f"  com noindex                     : {n_noindex}")
+    print(f"  indexáveis                      : {len(urls) - n_noindex}")
     return urls
 
 

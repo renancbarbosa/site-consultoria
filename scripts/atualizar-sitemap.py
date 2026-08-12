@@ -17,6 +17,7 @@ import sys
 AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, AQUI)
 from rcb_base import RAIZ, BASE_URL  # noqa: E402
+from rcb_cidades import eh_indexavel  # noqa: E402
 
 HOJE = "2026-08-06"
 SITEMAP = os.path.join(RAIZ, "sitemap.xml")
@@ -48,7 +49,16 @@ def paginas_do_site():
                 urls.add("/" + rel[: -len("index.html")])
             else:
                 urls.add("/" + rel)
-    return urls - EXCLUIR
+
+    # Poda de 12/08/2026: as cidades com noindex NAO entram no sitemap. Sem este
+    # filtro, este script veria 199 pastas no disco e devolveria as 168 podadas
+    # para o sitemap na primeira execucao -- desfazendo a decisao em silencio.
+    podadas = {
+        u for u in urls
+        if u.startswith("/consultoria-seo/") and u != "/consultoria-seo/"
+        and not eh_indexavel(u[len("/consultoria-seo/"):].rstrip("/"))
+    }
+    return urls - EXCLUIR - podadas
 
 
 def prioridade(url):
