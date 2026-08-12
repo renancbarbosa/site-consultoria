@@ -9,6 +9,26 @@ ramos que mais crescem, bairros) para não ser página repetida.
 Uso:  python scripts/gerar-paginas-cidades.py
 Goiânia é pulada de propósito: a cidade já tem /seo-local-goiania/ e
 /consultor-seo-goiania/ — gerar outra página criaria concorrência interna.
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  EXPANSÃO SUSPENSA — decisão estratégica de 12/08/2026                    ║
+╚══════════════════════════════════════════════════════════════════════════╝
+NÃO gere cidade nova até a revisão estratégica das 199 já publicadas.
+
+Motivo (medido em 11/08/2026, relatório completo no raio-X comercial):
+  - duas cidades quaisquer são ~89,5% idênticas palavra a palavra;
+  - 63% do texto de uma página se repete em 90%+ das outras;
+  - o que muda entre uma cidade e outra é o nome, a sigla do estado e
+    quatro números.
+Isso já se encaixa na definição de página-porta do Google, e as 199 são dois
+terços do site. Publicar mais cidades agrava exatamente esse problema.
+
+Este script continua funcionando normalmente para ATUALIZAR as 199 existentes
+(preço, links, texto) — é isso que ele faz por padrão. A trava é a variável
+EXPANDIR_CIDADES: sem RCB_EXPANDIR_CIDADES=1, cidade que ainda não tem pasta
+publicada é ignorada. Não remova essa trava sem decisão editorial.
+
+Triagem das 199 para manter/reescrever/noindex: docs/triagem-cidades.md
 """
 import json
 import os
@@ -79,6 +99,57 @@ def n_br(n):
 
 def variante(slug, n):
     return int(hashlib.md5(slug.encode()).hexdigest(), 16) % n
+
+
+# ---------------------------------------------------------------------------
+# Anchors dos links internos para as money pages (arquitetura de 12/08/2026).
+#
+# Por que variar: 199 paginas com o MESMO anchor exato viram padrao obvio de
+# geracao automatica. A variacao e deterministica (hash do slug), entao a
+# regeracao devolve sempre o mesmo texto para a mesma cidade -- o anchor nao
+# fica trocando a cada build.
+#
+# Por que Goiania NAO entra aqui: linkar "consultor de SEO em Goiania" de uma
+# pagina de Recife e incoerente para o leitor e reforca o footprint. Goiania so
+# aparece nas cidades do proprio entorno (ver GO_PROXIMAS).
+# ---------------------------------------------------------------------------
+ANCHOR_VARIANTES = {
+    "/google-perfil-empresa/": [
+        "otimização do Google Perfil da Empresa",
+        "trabalho no Google Perfil da Empresa",
+        "Google Perfil da Empresa (o antigo Google Meu Negócio)",
+        "otimização do perfil no Google Meu Negócio",
+    ],
+    # ATENCAO: estas variantes entram na frase "E a mesma ___ aplicada nos
+    # atendimentos presenciais". Todas precisam ser substantivos FEMININOS, ou
+    # a concordancia quebra ("a mesma trabalho ... aplicada"). Ja aconteceu.
+    "/consultoria-seo-local/": [
+        "consultoria de SEO local",
+        "estratégia de SEO local",
+        "metodologia de SEO local",
+        "consultoria de SEO local para quem atende por região",
+    ],
+    "/cases/": [
+        "resultados reais de clientes",
+        "resultados que já entreguei",
+        "cases de clientes reais",
+        "resultados de clientes atendidos",
+    ],
+}
+
+# Cidades onde citar Goiania faz sentido geografico: Goias e o entorno do DF.
+# Fora daqui, nenhuma pagina de cidade linka para as paginas de Goiania.
+GO_PROXIMAS = {"GO", "DF"}
+
+
+def anchor(slug, destino):
+    """Texto do link para `destino`, escolhido de forma estavel pelo slug."""
+    op = ANCHOR_VARIANTES[destino]
+    return op[variante(slug + destino, len(op))]
+
+
+def link(slug, destino):
+    return f'<a href="{destino}">{anchor(slug, destino)}</a>'
 
 
 def limpar_bairro(b):
@@ -331,6 +402,29 @@ def pagina_cidade(c, vizinhas):
     bloco_precos = bloco_pacotes("um negócio", f"cidade-{slug}", f" em {cidade}")
     barra_mobile = bloco_cta_mobile(f"cidade-{slug}")
 
+    # Links internos para as money pages, em slots que ja existiam no texto.
+    # Nenhum link novo foi acrescentado ao template: os tres abaixo entram em
+    # frases que ja estavam la, e o CTA secundario do hero deixou de apontar
+    # para /diagnostico-presenca-digital/ (289 links internos, rebaixada a
+    # passo 2 do funil em 09/08) e passou a apontar para /cases/ (tinha 6).
+    link_gmn = link(slug, "/google-perfil-empresa/")
+    link_consultoria = link(slug, "/consultoria-seo-local/")
+    # /cases/ entra UMA vez por pagina, pelo botao do hero. Ele ja e o link mais
+    # visivel da pagina; repetir no texto do metodo criava duas ancoras para a
+    # mesma URL sem ganho -- o Google costuma considerar so a primeira.
+
+    # Goiania so aparece nas cidades do proprio entorno (GO e DF). Em Recife ou
+    # Blumenau, esse link seria incoerente para o leitor e so engrossaria o
+    # padrao programatico.
+    goiania_html = ""
+    if uf in GO_PROXIMAS:
+        goiania_html = (
+            f' Como {cidade} fica perto da minha base, o atendimento pode ser presencial:'
+            f' veja o trabalho de <a href="/seo-local-goiania/">SEO local em Goiânia</a>'
+            f' e quem é o <a href="/consultor-seo-goiania/">consultor de SEO em Goiânia</a>'
+            f' por trás dele.'
+        )
+
     corpo = f"""<body class="tem-cta-mobile">
 {NAVBAR}
 
@@ -345,7 +439,7 @@ def pagina_cidade(c, vizinhas):
           <p class="page-subtitle">{intro}</p>
           <div class="page-actions">
             <a class="btn btn-primary" href="{whats_url}" target="_blank" rel="noopener noreferrer" data-event="cta_click" data-location="hero_whatsapp" data-page="cidade-{slug}">Quero analisar minha empresa em {cidade}</a>
-            <a class="btn btn-outline" href="/diagnostico-presenca-digital/" data-event="cta_click" data-location="hero_secundario" data-page="cidade-{slug}">Ver o que será analisado</a>
+            <a class="btn btn-outline" href="/cases/" data-event="cta_click" data-location="hero_secundario" data-page="cidade-{slug}">Ver resultados de clientes reais</a>
           </div>
         </div>
         <aside class="page-hero-panel">
@@ -386,12 +480,12 @@ def pagina_cidade(c, vizinhas):
         <div class="section-header">
           <div class="section-tag">Como funciona</div>
           <h2 id="metodo-titulo" class="section-title">Consultoria online para {cidade}, com método testado</h2>
-          <p class="section-desc">Todo o trabalho é feito a distância, por vídeo e com acesso aos seus dados reais do Google. O método é o mesmo aplicado nos atendimentos presenciais.</p>
+          <p class="section-desc">Todo o trabalho é feito a distância, por vídeo e com acesso aos seus dados reais do Google. É a mesma {link_consultoria} aplicada nos atendimentos presenciais.</p>
         </div>
         <div class="metodo-steps">
           <div class="metodo-step"><div class="step-number">1</div><h3>Diagnóstico</h3><p>Analiso como sua empresa aparece hoje no Google e no Maps em {cidade}, e quais concorrentes aparecem na sua frente.</p></div>
           <div class="metodo-arrow" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-          <div class="metodo-step"><div class="step-number">2</div><h3>Perfil no Google</h3><p>Otimizo o Google Meu Negócio: categorias, serviços, fotos, postagens e estratégia de avaliações.</p></div>
+          <div class="metodo-step"><div class="step-number">2</div><h3>Perfil no Google</h3><p>Faço a {link_gmn}: categorias, serviços, fotos, postagens e estratégia de avaliações.</p></div>
           <div class="metodo-arrow" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
           <div class="metodo-step"><div class="step-number">3</div><h3>Site e conteúdo</h3><p>Ajusto (ou crio) as páginas do site para responder o que as pessoas de {cidade} pesquisam sobre o seu serviço.</p></div>
           <div class="metodo-arrow" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
@@ -405,7 +499,7 @@ def pagina_cidade(c, vizinhas):
         <div class="section-header">
           <div class="section-tag">Especialidades</div>
           <h2 id="nichos-cidade-titulo" class="section-title">Atendo negócios locais de {cidade} — com especialidade em saúde</h2>
-          <p class="section-desc">O nicho mais maduro da RCB é saúde: <a href="/seo-para-clinicas/">clínicas</a>, <a href="/seo-para-dentistas/">dentistas</a>, <a href="/seo-para-clinicas-de-estetica/">estética</a> e <a href="/seo-para-medicos/">médicos</a>. Também atendo <a href="/para-comercios-locais/">comércios locais</a>, <a href="/para-profissionais-liberais/">profissionais liberais</a> e <a href="/para-advogados/">advogados</a>.</p>
+          <p class="section-desc">O nicho mais maduro da RCB é saúde: <a href="/seo-para-clinicas/">clínicas</a>, <a href="/seo-para-dentistas/">dentistas</a>, <a href="/seo-para-clinicas-de-estetica/">estética</a> e <a href="/seo-para-medicos/">médicos</a>. Também atendo <a href="/para-comercios-locais/">comércios locais</a>, <a href="/para-profissionais-liberais/">profissionais liberais</a> e <a href="/para-advogados/">advogados</a>.{goiania_html}</p>
         </div>
       </div>
     </section>

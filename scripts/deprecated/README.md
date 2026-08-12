@@ -39,6 +39,26 @@ novo a partir do menu **que está no ar**, não do `rcb_base.py`.
 
 ---
 
+## `links-internos-divisao.py` — aposentado em 12/08/2026
+
+**O que fazia:** inseria um link contextual por página apontando para as páginas
+comerciais da divisão "SEO Nacional / mercados competitivos".
+
+**Por que não pode mais rodar:** os destinos dele são exatamente as URLs
+revertidas em 08/08/2026 — `/seo-nacional/`, `/consultoria-de-backlinks/`,
+`/link-building-para-nichos-competitivos/`, `/recuperacao-de-trafego-organico/`
+e `/seo-para-negocios-digitais/`. **Todas respondem 404 hoje.** Rodá-lo
+espalharia links quebrados pelo conteúdo do site — o oposto do trabalho de
+arquitetura interna feito em 12/08/2026.
+
+Mesma família do `atualizar-nav-rodape.py`: script correto para um site que não
+existe mais. Encontrado durante a rodada de concentração de autoridade.
+
+**Se a divisão voltar:** republique-a primeiro, confirme HTTP 200 nas URLs, e só
+então traga o script de volta para `scripts/`.
+
+---
+
 ## Nota sobre o `scripts/indexnow.py` (esse **não** foi aposentado)
 
 A auditoria de 11/08/2026 pediu para aposentar o `indexnow.py` junto. **Decisão
