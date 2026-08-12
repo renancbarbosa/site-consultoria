@@ -149,7 +149,10 @@ repetiria o erro que esta rodada está corrigindo.
 Registro do estado **imediatamente anterior** à mudança, para comparação futura.
 Não interpretar movimento das próximas semanas como resultado.
 
-- **Deploy:** _(preenchido após a publicação)_
+- **Deploy:** commit `c4c055a`, publicado pelo Cloudflare Pages e confirmado no ar em
+  **12/08/2026 às 16:40 UTC (13:40 em Goiânia)**. Conferido em produção: páginas
+  podadas em HTTP 200 com `noindex, follow` e fora do sitemap; indexáveis em
+  `index, follow` e dentro dele; `robots.txt` sem `Disallow`; sitemap com 137 URLs.
 - **Cluster inteiro (12/05–09/08):** 101 impressões, 0 cliques, 33 páginas com sinal.
 - **Hub `/consultoria-seo/`:** 12 impressões, posição média 25,8.
 
