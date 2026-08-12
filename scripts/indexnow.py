@@ -3,9 +3,13 @@
 Envia URLs ao IndexNow (Bing e mecanismos parceiros).
 
 Uso:
-  python scripts/indexnow.py --novas     # só as URLs da divisão de mercados competitivos
   python scripts/indexnow.py --sitemap   # todas as URLs do sitemap.xml
   python scripts/indexnow.py URL [URL…]  # URLs avulsas
+
+O modo --novas foi REMOVIDO em 11/08/2026. Ele montava a lista importando os
+módulos da divisão "SEO Nacional / mercados competitivos", revertida em
+08/08/2026 — ou seja, mandaria ao Bing ~73 URLs que hoje respondem 404.
+Se a divisão voltar um dia, veja scripts/deprecated/README.md antes de recriá-lo.
 
 IMPORTANTE: a chave abaixo já está publicada em
 https://rcbseo.com.br/19341b29c6054af601879d85a34d62c5.txt desde 23/07/2026.
@@ -31,24 +35,6 @@ CHAVE = "19341b29c6054af601879d85a34d62c5"
 KEY_LOCATION = f"{BASE_URL}/{CHAVE}.txt"
 HOST = "rcbseo.com.br"
 ENDPOINT = "https://www.bing.com/indexnow"
-
-
-def urls_da_divisao():
-    import cluster_central, cluster_iptv, cluster_bets, cluster_dominios, pagina_analise
-    import artigos_competitivo, artigos_estrategia, artigos_dominios
-    import artigos_backlinks, artigos_iptv, artigos_bets
-    import artigos_iptv_lote2, artigos_dominios_lote2, artigos_bets_lote2
-
-    urls = []
-    for m in (cluster_central, cluster_iptv, cluster_bets, cluster_dominios, pagina_analise):
-        for f in m.PAGINAS:
-            urls.append(f"{BASE_URL}/" + f()[0].replace("index.html", ""))
-    for m in (artigos_competitivo, artigos_estrategia, artigos_dominios,
-              artigos_backlinks, artigos_iptv, artigos_bets,
-              artigos_iptv_lote2, artigos_dominios_lote2, artigos_bets_lote2):
-        for a in m.ARTIGOS:
-            urls.append(f"{BASE_URL}/blog/{a['slug']}/")
-    return urls
 
 
 def urls_do_sitemap():
@@ -80,12 +66,30 @@ def main():
         return 1
 
     if args[0] == "--novas":
-        urls = urls_da_divisao()
-        rotulo = "URLs da divisão de mercados competitivos"
-    elif args[0] == "--sitemap":
+        print("ERRO: o modo --novas foi removido em 11/08/2026.\n"
+              "Ele enviaria ao Bing as URLs da divisão 'SEO Nacional', que foi\n"
+              "revertida em 08/08/2026 e hoje responde 404. Avisar o Bing sobre\n"
+              "404 faz ele rastrear e encontrar página inexistente.\n"
+              "Use --sitemap, ou passe as URLs uma a uma.")
+        return 2
+
+    if args[0] == "--sitemap":
         urls = urls_do_sitemap()
         rotulo = "URLs do sitemap"
+    elif args[0].startswith("-"):
+        print("ERRO: opção desconhecida: %s\n"
+              "Opções válidas: --sitemap, ou uma lista de URLs completas." % args[0])
+        return 2
     else:
+        # Sem esta trava, um flag digitado errado viraria "URL" e seria enviado
+        # ao Bing como se fosse endereço de página.
+        ruins = [u for u in args if not u.startswith(f"{BASE_URL}/")]
+        if ruins:
+            print("ERRO: estas não são URLs de %s:" % BASE_URL)
+            for u in ruins:
+                print("  - %s" % u)
+            print("Passe o endereço completo, ex.: %s/contato/" % BASE_URL)
+            return 2
         urls = args
         rotulo = "URLs informadas na linha de comando"
 

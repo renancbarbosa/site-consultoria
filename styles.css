@@ -258,9 +258,28 @@ section {
   transform: translateY(-2px);
 }
 
+/* Botao "Recusar" do aviso de cookies. Estava sem NENHUMA regra: o reset
+   `button { background: none; border: none }` tirava o fundo, mas a cor do texto
+   continuava a padrao do navegador (preta) sobre o azul-escuro do aviso — cerca
+   de 1,3:1, praticamente ilegivel. Corrigido em 11/08/2026. */
+.btn-secondary {
+  background: rgba(255,255,255,0.08);
+  color: var(--white);                /* 14:1 sobre o #0D1B2A do aviso */
+  border: 1px solid rgba(255,255,255,0.35);
+}
+
+.btn-secondary:hover, .btn-secondary:focus-visible {
+  background: rgba(255,255,255,0.16);
+  border-color: rgba(255,255,255,0.6);
+}
+
+/* Texto escuro, nao branco: branco sobre o verde do WhatsApp da 1,98:1 e
+   reprova em WCAG AA (minimo 4,5:1). O #0a1420 sobre #25D366 da 9,3:1, e sobre
+   o verde do hover (#20BA5A) da 7,3:1. O verde fica — quem muda e o texto,
+   entao o botao continua reconhecivel. */
 .btn-whatsapp {
   background: #25D366;
-  color: var(--white);
+  color: #0a1420;
 }
 
 .btn-whatsapp:hover, .btn-whatsapp:focus-visible {

@@ -19,6 +19,14 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 os.chdir(RAIZ)
 
+sys.path.insert(0, str(RAIZ / "scripts"))
+from rcb_pacotes import PACOTES, MARCA_INI, MARCA_FIM  # noqa: E402
+
+# Fonte unica: o que a tabela e a ficha do Google TEM que dizer. Mudou o preco
+# no rcb_pacotes.py? Esta conferencia acompanha sozinha, sem editar nada aqui.
+VALORES_ESPERADOS = {p["valor"] for p in PACOTES}   # "R$ 1.997"
+PRECOS_ESPERADOS = {p["preco"] for p in PACOTES}    # "1997.00"
+
 JARGAO = ["GMB", "on-page", "metadescri", "arquitetura de informa",
           "ticket médio", "métricas de vaidade", "escopo enxuto"]
 CONTRADICAO = ["investimento depende", "faixas de investimento",
@@ -34,6 +42,76 @@ FORA_DA_CONFERENCIA = {"diagnostico-presenca-digital/exemplo/index.html"}
 
 problemas = []
 stats = {"paginas": 0, "com_precos": 0, "com_barra": 0, "com_menu_novo": 0}
+
+
+def precos_do_bloco(html):
+    """Preco que o VISITANTE le, extraido so de dentro dos marcadores.
+
+    Procurar 'R$ 1.997' no arquivo inteiro nao serve: o FAQ e a meta description
+    tambem citam os valores, entao a tabela podia estar congelada num preco
+    velho e a conferencia dizer que estava tudo bem.
+
+    Devolve (valores, erro). Se um dos marcadores faltar, valores e None e erro
+    explica qual faltou — nunca silencia.
+    """
+    i = html.find(MARCA_INI)
+    f = html.find(MARCA_FIM)
+
+    if i == -1 and f == -1:
+        # A home escreve a tabela a mao, sem marcadores — ela saiu da lista do
+        # aplicar-conversao.py em 09/08/2026 justamente porque o script injetava
+        # uma segunda copia. Sem marcador, mas a tabela existe: confere pelos
+        # limites da secao. Nao da para deixar de fora — foi nela que duplicou.
+        s = html.find('id="pacotes"')
+        if s == -1:
+            return None, None                 # pagina sem tabela: normal
+        fim = html.find("</section>", s)
+        if fim == -1:
+            return None, 'tem id="pacotes" mas a secao nunca fecha'
+        valores = set(re.findall(r'<span class="valor">\s*([^<]+?)\s*</span>',
+                                 html[s:fim]))
+        if not valores:
+            return None, 'secao id="pacotes" sem nenhum <span class="valor">'
+        return valores, None
+
+    if i == -1:
+        return None, "tem o marcador de FIM da tabela mas nao o de INICIO"
+    if f == -1:
+        return None, "tem o marcador de INICIO da tabela mas nao o de FIM"
+    if f < i:
+        return None, "marcadores da tabela fora de ordem (FIM antes do INICIO)"
+
+    bloco = html[i:f + len(MARCA_FIM)]
+    valores = set(re.findall(r'<span class="valor">\s*([^<]+?)\s*</span>', bloco))
+    if not valores:
+        return None, "bloco da tabela existe mas nao tem nenhum <span class=\"valor\">"
+    return valores, None
+
+
+def precos_do_schema(html):
+    """Preco que o GOOGLE le: todo Offer/price do JSON-LD, em qualquer nivel.
+
+    Devolve (precos, erros). JSON-LD quebrado entra em erros — nao e engolido.
+    """
+    precos, erros = set(), []
+
+    def caminhar(no):
+        if isinstance(no, dict):
+            if no.get("@type") == "Offer" and "price" in no:
+                precos.add(str(no["price"]))
+            for v in no.values():
+                caminhar(v)
+        elif isinstance(no, list):
+            for v in no:
+                caminhar(v)
+
+    for i, b in enumerate(re.findall(r'<script type="application/ld\+json">(.*?)</script>',
+                                     html, re.S)):
+        try:
+            caminhar(json.loads(b))
+        except ValueError as e:
+            erros.append("JSON-LD %d ilegivel ao procurar preco (%s)" % (i, str(e)[:60]))
+    return precos, erros
 
 paginas = sorted(f.replace(os.sep, "/") for f in glob.glob("**/index.html", recursive=True)
                  if "node_modules" not in f)
@@ -73,18 +151,47 @@ for rel in paginas:
         if not any(Path(c).exists() for c in (alvo, alvo + "/index.html", alvo + ".html")):
             problemas.append("%s: link quebrado -> %s" % (rel, l))
 
-    # preco coerente entre texto e ficha do Google
-    # So paginas com a TABELA de pacotes precisam dos tres valores nos dois
-    # lugares. Citar "a partir de R$ 1.997" no meio de um texto e legitimo.
-    tem_tabela = "RCB:PACOTES:INICIO" in h
-    if tem_tabela:
+    # preco coerente entre a TABELA na tela e a ficha do Google (JSON-LD)
+    # So paginas com a tabela precisam dos valores nos dois lugares. Citar
+    # "a partir de R$ 1.997" no meio de um texto qualquer e legitimo.
+    valores_tela, erro_bloco = precos_do_bloco(h)
+    precos_schema, erros_schema = precos_do_schema(h)
+    tem_tabela = valores_tela is not None or erro_bloco is not None
+
+    if erro_bloco:
+        problemas.append("%s: %s" % (rel, erro_bloco))
+    for e in erros_schema:
+        problemas.append("%s: %s" % (rel, e))
+
+    if valores_tela is not None:
         stats["com_precos"] += 1
-        for v in ("R$ 1.997", "R$ 2.497", "R$ 2.997", "R$ 4.997",
-                  "1997.00", "2497.00", "2997.00", "4997.00"):
-            if v not in h:
-                problemas.append("%s: tem a tabela mas falta o valor %s" % (rel, v))
-    elif "1997.00" in h and "R$ 1.997" not in h:
-        problemas.append("%s: preco no schema sem preco no texto" % rel)
+
+        if valores_tela != VALORES_ESPERADOS:
+            faltando = sorted(VALORES_ESPERADOS - valores_tela)
+            sobrando = sorted(valores_tela - VALORES_ESPERADOS)
+            problemas.append(
+                "%s: tabela na tela fora do rcb_pacotes.py | esperado: %s | achado: %s%s%s"
+                % (rel, sorted(VALORES_ESPERADOS), sorted(valores_tela),
+                   " | falta: %s" % faltando if faltando else "",
+                   " | sobra (preco velho?): %s" % sobrando if sobrando else ""))
+
+        if not precos_schema:
+            problemas.append("%s: tem a tabela na tela mas nenhum Offer/price no JSON-LD"
+                             % rel)
+        elif precos_schema != PRECOS_ESPERADOS:
+            faltando = sorted(PRECOS_ESPERADOS - precos_schema)
+            sobrando = sorted(precos_schema - PRECOS_ESPERADOS)
+            problemas.append(
+                "%s: preco do JSON-LD fora do rcb_pacotes.py | esperado: %s | achado: %s%s%s"
+                % (rel, sorted(PRECOS_ESPERADOS), sorted(precos_schema),
+                   " | falta: %s" % faltando if faltando else "",
+                   " | sobra (preco velho?): %s" % sobrando if sobrando else ""))
+
+    elif precos_schema and not tem_tabela:
+        # Preco na ficha do Google sem tabela na tela: o Google mostraria um
+        # valor que o visitante nao ve em lugar nenhum.
+        problemas.append("%s: preco no JSON-LD (%s) sem tabela de precos na pagina"
+                         % (rel, sorted(precos_schema)))
 
     # barra do celular e menu novo
     if rel not in SEM_NAVBAR:
