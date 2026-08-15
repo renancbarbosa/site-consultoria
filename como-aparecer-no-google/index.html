@@ -220,12 +220,49 @@
         </div>
         <div class="problem-grid">
           <div class="problem-card"><h3>A empresa nem está cadastrada</h3><p>O Google não adivinha que você existe. Sem o cadastro gratuito no Google (o perfil que aparece no Maps), sua empresa está fora do mapa — literalmente.</p></div>
-          <div class="problem-card"><h3>Perfil criado e abandonado</h3><p>Cadastro feito às pressas, sem fotos, sem horário, com categoria errada. O Google mostra quem tem o perfil mais completo e ativo — não quem chegou primeiro.</p></div>
+          <div class="problem-card"><h3>Perfil criado e abandonado</h3><p>Cadastro feito às pressas, sem fotos, sem horário e com categoria errada dificulta a decisão do cliente e pode reduzir a relevância para a busca certa.</p></div>
           <div class="problem-card"><h3>Sem site, ou com site de fachada</h3><p>O mapa não aparece em toda pesquisa. Quem não tem site perde as buscas em que só aparecem sites — e perde o cliente que quer comparar antes de ligar.</p></div>
           <div class="problem-card"><h3>Site sem página por serviço</h3><p>O cliente pesquisa o serviço específico ("conserto de ar-condicionado", "clareamento dental"). Se o seu site só tem uma página genérica, o Google não tem o que mostrar.</p></div>
-          <div class="problem-card"><h3>Poucas avaliações (ou nenhuma resposta)</h3><p>Avaliações são o boca a boca do Google. Concorrente com 40 avaliações respondidas passa na frente de quem tem 3 — mesmo atendendo pior.</p></div>
-          <div class="problem-card"><h3>Pressa</h3><p>Aparecer bem no Google é construção: leva de 2 a 6 meses. Quem desiste no primeiro mês (ou acredita em promessa de resultado em uma semana) fica no ciclo eterno do anúncio pago.</p></div>
+          <div class="problem-card"><h3>Poucas avaliações (ou nenhuma resposta)</h3><p>Avaliações são o boca a boca do Google. Mais avaliações reais e notas positivas podem ajudar o destaque local, mas não substituem categoria, distância, site e relevância.</p></div>
+          <div class="problem-card"><h3>Pressa</h3><p>Aparecer bem no Google é construção. Nos projetos que acompanho, os primeiros movimentos costumam surgir antes da consolidação; o prazo muda conforme concorrência, ponto de partida e cidade.</p></div>
         </div>
+        <p class="seo-source-note">O próprio Google resume o ranking local em três fatores: <strong>relevância, distância e destaque</strong>. <a href="https://support.google.com/business/answer/7091?hl=pt-BR" target="_blank" rel="noopener noreferrer">Veja a explicação oficial</a>.</p>
+      </div>
+    </section>
+
+    <section class="seo-check-section" aria-labelledby="seo-check-title">
+      <div class="container seo-check-grid">
+        <div>
+          <div class="section-tag">Ferramenta gratuita</div>
+          <h2 id="seo-check-title" class="section-title">Teste rápido: sua empresa está pronta para aparecer no Google?</h2>
+          <p>Marque apenas o que você consegue confirmar hoje. O teste roda no seu navegador, não envia seus dados e aponta qual camada merece atenção primeiro.</p>
+          <div class="case-callout-stat" aria-label="Base dos resultados documentados pela RCB">
+            <div class="stat-item"><span class="stat-number">1.969</span><span class="stat-label">visualizações de perfil</span></div>
+            <div class="stat-item"><span class="stat-number">252</span><span class="stat-label">rotas solicitadas</span></div>
+            <div class="stat-item"><span class="stat-number">4,1</span><span class="stat-label">posição média em outro projeto</span></div>
+          </div>
+          <p class="seo-source-note">São resultados de dois projetos diferentes, documentados com capturas. <a href="/cases/">Veja os dados, o contexto e as limitações dos cases</a>.</p>
+        </div>
+        <form class="seo-check" id="seo-check" aria-describedby="seo-check-help">
+          <p id="seo-check-help" class="seo-check-help">Cada “sim” vale um ponto. O resultado é uma triagem, não uma promessa de posição.</p>
+          <fieldset>
+            <legend>Base local</legend>
+            <label><input type="checkbox" name="item" value="perfil"><span>O perfil da empresa está verificado</span></label>
+            <label><input type="checkbox" name="item" value="categoria"><span>A categoria principal descreve o serviço central</span></label>
+            <label><input type="checkbox" name="item" value="dados"><span>Telefone, horário e endereço estão corretos</span></label>
+            <label><input type="checkbox" name="item" value="avaliacoes"><span>Há avaliações reais e respostas específicas</span></label>
+          </fieldset>
+          <fieldset>
+            <legend>Site e medição</legend>
+            <label><input type="checkbox" name="item" value="indexado"><span>O site aparece ao pesquisar <code>site:seudominio.com.br</code></span></label>
+            <label><input type="checkbox" name="item" value="servicos"><span>Cada serviço importante tem uma página própria</span></label>
+            <label><input type="checkbox" name="item" value="mobile"><span>O site funciona bem no celular e tem contato visível</span></label>
+            <label><input type="checkbox" name="item" value="medicao"><span>Cliques, ligações ou WhatsApp são medidos</span></label>
+          </fieldset>
+          <button class="btn btn-primary" type="submit">Calcular meu diagnóstico</button>
+          <div class="seo-check-result" id="seo-check-result" tabindex="-1" aria-live="polite" hidden></div>
+          <noscript><p class="seo-check-noscript">Sem JavaScript, use as oito perguntas como checklist manual. Até 3 “sim”: arrume a base; de 4 a 6: feche as lacunas; de 7 a 8: investigue concorrência, intenção e conversão.</p></noscript>
+        </form>
       </div>
     </section>
 
@@ -236,7 +273,7 @@
           <h2 id="solucao-titulo" class="section-title">Os três passos para aparecer no Google</h2>
           <p><strong>Passo 1 — Cadastre e complete o perfil da empresa no Google.</strong> É gratuito e é o que coloca sua empresa no Google Maps. Categoria certa, endereço, horário, fotos reais e telefone. Veja o serviço de <a href="/google-perfil-empresa/">otimização do Google Perfil da Empresa</a> ou o passo a passo no blog: <a href="/blog/como-aparecer-no-google-maps/">como aparecer no Google Maps</a>.</p>
           <p><strong>Passo 2 — Tenha um site com uma página para cada serviço.</strong> É o site que disputa as pesquisas fora do mapa. Cada serviço que você presta merece uma página própria, que responde as dúvidas de quem pesquisa. Entenda o que é um <a href="/site-otimizado-para-seo/">site otimizado para SEO</a>.</p>
-          <p><strong>Passo 3 — Junte avaliações e responda todas.</strong> Peça avaliação a cada cliente satisfeito (sem oferecer brinde em troca — o Google pune) e responda todas, inclusive as negativas. Isso tem nome técnico — SEO, otimização para os mecanismos de busca —, mas o efeito é simples: quem procura, encontra você.</p>
+          <p><strong>Passo 3 — Junte avaliações e responda todas.</strong> Peça avaliações honestas a clientes atendidos, sem recompensa ou seleção artificial de opiniões, e responda inclusive as negativas. Incentivos e avaliações falsas violam as políticas do Google e podem ser removidos. Isso tem nome técnico — SEO, otimização para os mecanismos de busca —, mas o efeito é simples: facilitar que a pessoa certa encontre e escolha sua empresa.</p>
         </div>
         <div class="diagnostic-card">
           <h3>Checklist rápido</h3>
@@ -244,7 +281,7 @@
             <li><strong>Perfil no Google:</strong> criado, verificado e completo, com fotos e categoria certa.</li>
             <li><strong>Site:</strong> uma página por serviço, com WhatsApp fácil de achar.</li>
             <li><strong>Avaliações:</strong> pedidas a cada cliente e todas respondidas.</li>
-            <li><strong>Constância:</strong> 2 a 6 meses de trabalho antes de julgar o resultado.</li>
+            <li><strong>Constância:</strong> acompanhe impressões, posição e contatos por ciclos; o prazo varia conforme o mercado.</li>
           </ul>
         </div>
       </div>
@@ -254,8 +291,18 @@
       <div class="container">
         <div class="section-header">
           <div class="section-tag">Continue por aqui</div>
-          <h2 id="aprofunde-titulo" class="section-title">Cada situação tem um caminho</h2>
-          <p class="section-desc">Empresa pequena competindo com grandes? Veja <a href="/seo-para-pequenas-empresas/">SEO para pequenas empresas</a>. Tem clínica ou consultório? Veja <a href="/como-atrair-mais-pacientes/">como atrair mais pacientes</a>. Comércio de rua? Veja <a href="/para-comercios-locais/">SEO para comércio local</a>. Quer entender por que o site não aparece? Leia <a href="/blog/por-que-minha-empresa-nao-aparece-no-google/">por que minha empresa não aparece no Google</a>.</p>
+          <h2 id="aprofunde-titulo" class="section-title">O que você quer resolver no Google?</h2>
+          <p class="section-desc">As pessoas descrevem o mesmo problema de formas diferentes. Escolha a situação mais parecida com a sua para ir direto ao conteúdo certo:</p>
+          <ul class="check-list">
+            <li><strong>“Quero colocar minha empresa no Google”:</strong> siga o <a href="/blog/como-colocar-minha-empresa-no-google/">tutorial de cadastro, reivindicação e verificação</a>.</li>
+            <li><strong>“Quero divulgar minha empresa no Google”:</strong> compare <a href="/blog/como-divulgar-minha-empresa-no-google/">Maps, site, SEO e anúncios</a>.</li>
+            <li><strong>“Minha empresa não aparece no Google”:</strong> veja <a href="/blog/por-que-minha-empresa-nao-aparece-no-google/">as causas mais comuns e como diagnosticar</a>.</li>
+            <li><strong>“Quero aparecer no Google Maps”:</strong> siga o <a href="/blog/como-aparecer-no-google-maps/">passo a passo para aparecer no mapa</a>.</li>
+            <li><strong>“Meu Google Meu Negócio não aparece”:</strong> confira <a href="/blog/google-meu-negocio-nao-aparece/">problemas de verificação, suspensão, categoria e relevância</a>.</li>
+            <li><strong>“Meu site não aparece no Google”:</strong> entenda <a href="/blog/por-que-meu-site-nao-aparece-no-google/">indexação, conteúdo e falhas técnicas</a>.</li>
+            <li><strong>“Quero melhorar meu posicionamento no Google”:</strong> veja <a href="/blog/como-melhorar-posicionamento-empresa-google/">o que realmente ajuda uma empresa a subir</a>.</li>
+            <li><strong>“Tenho uma empresa pequena”:</strong> conheça a estratégia de <a href="/seo-para-pequenas-empresas/">SEO para pequenas empresas</a>.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -387,6 +434,7 @@
   <a href="https://wa.me/5562991161040?text=Ol%C3%A1%2C%20Renan.%20Quero%20fazer%20minha%20empresa%20aparecer%20no%20Google." class="whatsapp-float" data-event="cta_click" data-location="whatsapp_flutuante" data-page="como-aparecer-google" target="_blank" rel="noopener noreferrer" aria-label="Chamar no WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
   <footer class="footer" role="contentinfo"><div class="container footer-cols"><div class="footer-col footer-col-identity"><span class="logo-text">RCB</span><strong class="footer-name">Renan Carvalho Barbosa</strong><span class="footer-cargo">Consultor de SEO Local e Google Meu Negócio</span><p class="footer-bio">Com base em Goiânia e atendimento online para clínicas e negócios locais em todo o Brasil.</p></div><div class="footer-col"><h4 class="footer-col-title">Serviços</h4><nav class="footer-col-nav"><a href="/consultoria-seo-local/">Consultoria SEO Local</a><a href="/consultoria-seo/">Consultoria SEO por cidade</a><a href="/diagnostico-presenca-digital/">Diagnóstico de Presença Digital</a><a href="/auditoria-seo/">Auditoria de SEO</a><a href="/google-perfil-empresa/">Google Perfil da Empresa</a><a href="/site-otimizado-para-seo/">Site otimizado para SEO</a><a href="/acompanhamento-seo/">Acompanhamento de SEO</a></nav></div><div class="footer-col"><h4 class="footer-col-title">Nichos</h4><nav class="footer-col-nav"><a href="/seo-para-clinicas/">Clínicas</a><a href="/seo-para-dentistas/">Dentistas</a><a href="/seo-para-clinicas-de-estetica/">Estética</a><a href="/seo-para-medicos/">Médicos</a><a href="/para-advogados/">Advogados</a></nav></div><div class="footer-col"><h4 class="footer-col-title">Contato</h4><div class="footer-col-contact"><a href="/contato/">Página de contato</a><a href="https://wa.me/5562991161040" target="_blank" rel="noopener noreferrer">WhatsApp: (62) 99116-1040</a><a href="mailto:contato@rcbseo.com.br">contato@rcbseo.com.br</a><span>Rua 18-A, nº 256 — Goiânia - GO, CEP 74070-060</span></div></div></div><div class="footer-bottom"><div class="container footer-bottom-inner"><p>&copy; <span id="anoAtual"></span> Renan Carvalho Barbosa. Todos os direitos reservados.</p><a href="/privacidade/" class="footer-privacy">Política de Privacidade</a><a href="/cookies/" class="footer-privacy" style="margin-left:1rem;">Política de Cookies</a></div></div></footer>
   <script src="/script.js" defer></script>
+  <script src="/assets/js/diagnostico-google.js" defer></script>
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "958c755428354df69e95c4366389faca"}'></script>
   <script defer src="/assets/js/cookie-consent.js"></script>
   <div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-banner-title" aria-describedby="cookie-banner-desc" hidden>

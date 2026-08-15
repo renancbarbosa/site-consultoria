@@ -13,6 +13,7 @@ from rcb_base import (
     BASE_URL, WHATS, head_comum, NAVBAR, rodape, grafo, schema_blogposting,
     schema_breadcrumb, schema_faq, tempo_leitura, contar_palavras, esc, whats_link,
 )
+from rcb_pacotes import bloco_cta_mobile, nav_ver_precos
 
 MESES = ("janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho",
          "agosto", "setembro", "outubro", "novembro", "dezembro")
@@ -65,8 +66,11 @@ def render_artigo(a):
     trilha_schema.append((a["h1"], canonical))
 
     faq = a.get("faq", [])
+    imagem = a.get("imagem")
+    imagem_abs = BASE_URL + imagem["src"] if imagem else None
     schema = grafo(
-        schema_blogposting(canonical, a["h1"], a["desc"], data_pub, data_mod),
+        schema_blogposting(canonical, a["h1"], a["desc"], data_pub, data_mod,
+                           imagem_abs or "https://rcbseo.com.br/assets/img/og-rcb-1200x628.png"),
         schema_breadcrumb(trilha_schema),
         schema_faq(faq) if faq else "",
     )
@@ -115,15 +119,29 @@ def render_artigo(a):
 """
 
     head = head_comum(a["title"], a["desc"], canonical, schema, og_type="article")
+    page_id = f"blog-{slug}"
+    navbar = NAVBAR.replace(
+        '<li><a href="/diagnostico-presenca-digital/" class="nav-link nav-cta">Diagnóstico gratuito</a></li>',
+        nav_ver_precos(page_id, "/#pacotes"),
+    )
+    if imagem:
+        capa = (f'<figure class="artigo-capa-media">'
+                f'<img src="{imagem["src"]}" alt="{esc(imagem["alt"])}" '
+                f'width="{imagem["width"]}" height="{imagem["height"]}" '
+                f'fetchpriority="high" decoding="async">'
+                f'<figcaption class="artigo-capa-caption">{imagem["legenda"]}</figcaption>'
+                f'</figure>')
+    else:
+        capa = '<div class="artigo-capa-placeholder" aria-hidden="true"></div>'
 
     html = f"""{head}
-<body data-page="artigo-{slug}">
-{NAVBAR}
+<body class="tem-cta-mobile" data-page="artigo-{slug}">
+{navbar}
 
   <main id="main-content">
 
     <section class="artigo-hero" aria-labelledby="artigo-h1">
-      <div class="artigo-capa-placeholder" aria-hidden="true"></div>
+      {capa}
       <div class="artigo-header">
         <nav class="artigo-breadcrumb" aria-label="Caminho do artigo">
           {trilha_html}
@@ -156,6 +174,6 @@ def render_artigo(a):
 
   </main>
 
-{rodape()}"""
+{rodape(bloco_cta_mobile(page_id, "/#pacotes"))}"""
 
     return f"blog/{slug}/index.html", html

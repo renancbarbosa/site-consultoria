@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Como colocar uma empresa no Google em quatro etapas</title>
+  <desc id="desc">Fluxo visual: pesquisar a ficha, criar ou reivindicar, verificar o negócio e completar o perfil.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0d1b2a"/><stop offset="1" stop-color="#142f45"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000" flood-opacity=".25"/></filter>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <circle cx="1040" cy="90" r="210" fill="#c9a84c" opacity=".07"/>
+  <circle cx="130" cy="630" r="260" fill="#4c9bc9" opacity=".06"/>
+  <text x="80" y="100" fill="#dfc06e" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="700" letter-spacing="3">GOOGLE PERFIL DA EMPRESA</text>
+  <text x="80" y="154" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="42" font-weight="800">Do cadastro à ficha pronta</text>
+  <path d="M230 350H970" stroke="#c9a84c" stroke-width="5" stroke-linecap="round" opacity=".55"/>
+  <g font-family="Inter,Arial,sans-serif" filter="url(#shadow)">
+    <g transform="translate(72 230)">
+      <rect width="230" height="250" rx="22" fill="#13283a" stroke="#c9a84c" stroke-opacity=".4"/>
+      <circle cx="45" cy="46" r="23" fill="#c9a84c"/><text x="45" y="54" text-anchor="middle" fill="#0d1b2a" font-size="23" font-weight="800">1</text>
+      <path d="M95 76a34 34 0 1 1 24-10l25 25" fill="none" stroke="#dfc06e" stroke-width="8" stroke-linecap="round"/>
+      <text x="24" y="148" fill="#fff" font-size="24" font-weight="700">Pesquise primeiro</text>
+      <text x="24" y="183" fill="#b9c5cf" font-size="18">Nome, telefone e</text><text x="24" y="209" fill="#b9c5cf" font-size="18">endereço no Maps</text>
+    </g>
+    <g transform="translate(348 230)">
+      <rect width="230" height="250" rx="22" fill="#13283a" stroke="#c9a84c" stroke-opacity=".4"/>
+      <circle cx="45" cy="46" r="23" fill="#c9a84c"/><text x="45" y="54" text-anchor="middle" fill="#0d1b2a" font-size="23" font-weight="800">2</text>
+      <path d="M115 43v70M80 78h70" stroke="#dfc06e" stroke-width="9" stroke-linecap="round"/>
+      <text x="24" y="148" fill="#fff" font-size="24" font-weight="700">Crie ou reivindique</text>
+      <text x="24" y="183" fill="#b9c5cf" font-size="18">Uma ficha correta,</text><text x="24" y="209" fill="#b9c5cf" font-size="18">sem duplicidade</text>
+    </g>
+    <g transform="translate(624 230)">
+      <rect width="230" height="250" rx="22" fill="#13283a" stroke="#c9a84c" stroke-opacity=".4"/>
+      <circle cx="45" cy="46" r="23" fill="#c9a84c"/><text x="45" y="54" text-anchor="middle" fill="#0d1b2a" font-size="23" font-weight="800">3</text>
+      <path d="M115 35l48 20v37c0 34-21 57-48 70-27-13-48-36-48-70V55z" fill="none" stroke="#dfc06e" stroke-width="7"/><path d="M91 91l17 17 34-39" fill="none" stroke="#dfc06e" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="24" y="178" fill="#fff" font-size="24" font-weight="700">Verifique</text>
+      <text x="24" y="213" fill="#b9c5cf" font-size="18">Comprove a operação real</text>
+    </g>
+    <g transform="translate(900 230)">
+      <rect width="230" height="250" rx="22" fill="#172f3c" stroke="#dfc06e" stroke-width="2"/>
+      <circle cx="45" cy="46" r="23" fill="#dfc06e"/><text x="45" y="54" text-anchor="middle" fill="#0d1b2a" font-size="23" font-weight="800">4</text>
+      <rect x="69" y="42" width="92" height="112" rx="12" fill="none" stroke="#dfc06e" stroke-width="7"/><path d="M88 72h54M88 98h54M88 124h36" stroke="#dfc06e" stroke-width="6" stroke-linecap="round"/>
+      <text x="24" y="178" fill="#fff" font-size="24" font-weight="700">Complete o perfil</text>
+      <text x="24" y="213" fill="#b9c5cf" font-size="18">Categoria, dados e fotos</text>
+    </g>
+  </g>
+  <rect x="80" y="535" width="1040" height="70" rx="16" fill="#c9a84c" opacity=".12" stroke="#c9a84c" stroke-opacity=".35"/>
+  <text x="600" y="579" text-anchor="middle" fill="#f4e4b2" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="700">Cadastrar torna a empresa elegível. Posicionar exige relevância, distância e destaque.</text>
+</svg>

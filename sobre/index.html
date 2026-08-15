@@ -56,12 +56,14 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "WebPage",
+        "@type": "ProfilePage",
         "@id": "https://rcbseo.com.br/sobre/#webpage",
         "url": "https://rcbseo.com.br/sobre/",
         "name": "Sobre Renan Carvalho Barbosa | Consultor de SEO Local em Goiânia",
         "description": "Consultor de SEO Local em Goiânia para clínicas, dentistas e profissionais de saúde. Formação em Direito e TI, 9 anos como empresário.",
-        "inLanguage": "pt-BR"
+        "inLanguage": "pt-BR",
+        "isPartOf": {"@id": "https://rcbseo.com.br/#website"},
+        "mainEntity": {"@id": "https://rcbseo.com.br/#renan"}
       },
       {
         "@type": "BreadcrumbList",
@@ -85,11 +87,7 @@
           {"@type": "EducationalOrganization", "name": "UNIVERSO"},
           {"@type": "EducationalOrganization", "name": "FIAP — Faculdade de Informática e Administração Paulista"}
         ],
-        "worksFor": {
-          "@type": "Organization",
-          "name": "RCB Consultoria de SEO",
-          "url": "https://rcbseo.com.br/"
-        },
+        "worksFor": {"@id": "https://rcbseo.com.br/#business"},
         "knowsAbout": ["SEO Local", "Google Business Profile", "Marketing digital para clínicas", "Comunicação em saúde"],
         "areaServed": [
           {"@type": "City", "name": "Goiânia"},

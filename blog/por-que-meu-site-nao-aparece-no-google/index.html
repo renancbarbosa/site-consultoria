@@ -65,7 +65,7 @@
     "articleSection": "Auditoria e indexação",
     "keywords": ["meu site não aparece no Google", "site não indexado", "indexação Google", "site não rankeia"],
     "datePublished": "2026-06-23T11:00:00-03:00",
-    "dateModified": "2026-06-23T11:00:00-03:00",
+    "dateModified": "2026-08-15T11:00:00-03:00",
     "author": { "@type": "Person", "@id": "https://rcbseo.com.br/#renan", "name": "Renan Carvalho Barbosa", "url": "https://rcbseo.com.br/sobre/", "sameAs": ["https://www.linkedin.com/in/renan-carvalho-barbosa"] },
     "publisher": { "@type": "Organization", "name": "RCB Consultoria", "url": "https://rcbseo.com.br/", "logo": { "@type": "ImageObject", "url": "https://rcbseo.com.br/assets/img/logo-rcb-seo-local.png" } },
     "image": { "@type": "ImageObject", "url": "https://rcbseo.com.br/assets/img/og-rcb-1200x628.png", "width": 1200, "height": 628 },
@@ -93,7 +93,7 @@
     "@type": "FAQPage",
     "@id": "https://rcbseo.com.br/blog/por-que-meu-site-nao-aparece-no-google/#faq",
     "mainEntity": [
-      { "@type": "Question", "name": "Como sei se meu site está indexado no Google?", "acceptedAnswer": { "@type": "Answer", "text": "Digite no Google: site:seudominio.com.br (sem espaço depois dos dois pontos). O Google mostra as páginas do seu site que ele tem no índice. Se aparecer 'nenhum resultado', o site não está indexado. Para uma visão completa, o Google Search Console mostra exatamente quais páginas foram indexadas e quais ficaram de fora, com o motivo." } },
+      { "@type": "Question", "name": "Como sei se meu site está indexado no Google?", "acceptedAnswer": { "@type": "Answer", "text": "A busca site:seudominio.com.br serve como teste rápido, mas não é uma contagem completa. Para confirmar uma página específica, use a Inspeção de URL do Google Search Console, que informa se a URL está no índice e aponta possíveis impedimentos." } },
       { "@type": "Question", "name": "Meu site é novo. Quanto tempo até aparecer no Google?", "acceptedAnswer": { "@type": "Answer", "text": "Pode levar de alguns dias a algumas semanas até o Google rastrear e indexar um site novo. O processo acelera quando você cadastra o site no Search Console, envia o sitemap e garante que não há bloqueios técnicos. Aparecer bem posicionado, porém, é outro estágio: depende de conteúdo, estrutura e concorrência." } },
       { "@type": "Question", "name": "Site feito no Wix, Instagram ou linktree conta como ter site?", "acceptedAnswer": { "@type": "Answer", "text": "Um perfil de Instagram ou um linktree não substituem um site indexável: têm pouca capacidade de ranquear nas buscas por serviço. Construtores como Wix podem gerar sites indexáveis, desde que bem configurados (páginas de serviço, textos reais, performance e indexação ativa). O que importa não é a ferramenta, e sim se o resultado é um site que o Google entende e mostra." } }
     ]
@@ -177,7 +177,7 @@
           <span class="byline-separator" aria-hidden="true">·</span>
           <time datetime="2026-06-23" class="byline-date">23 de junho de 2026</time>
           <span class="byline-separator" aria-hidden="true">·</span>
-          <span class="byline-reading-time">9 min de leitura</span>
+          <span class="byline-reading-time">6 min de leitura</span>
         </div>
       </div>
     </section>
@@ -188,6 +188,23 @@
         <p>Você pagou por um site, ele está no ar, abre normalmente quando você digita o endereço — mas, quando pesquisa pelo seu serviço no Google, ele simplesmente não aparece. Essa é uma queixa frequente de donos de negócio, e quase sempre tem explicação técnica, não azar.</p>
 
         <p>Neste artigo eu explico, sem jargão, a diferença entre "estar no ar" e "estar no Google", as causas mais comuns de um site invisível e como você mesmo pode começar a diagnosticar o problema antes de chamar alguém.</p>
+
+        <p>Se o problema envolve a presença inteira da empresa — site, mapa e avaliações — use primeiro o <a href="/como-aparecer-no-google/" class="artigo-link">guia de como aparecer no Google</a>. Aqui vamos aprofundar apenas o que pode impedir o site de aparecer.</p>
+
+        <div class="artigo-cta-box" aria-label="Resumo do diagnóstico">
+          <p><strong>Resposta rápida:</strong> se nenhuma página aparece, investigue rastreamento e indexação. Se o site aparece quando você pesquisa a marca, mas não aparece pelo serviço, o problema costuma ser de relevância, conteúdo ou autoridade — não de cadastro no Google. O Google Search Console é a ferramenta certa para separar um caso do outro.</p>
+        </div>
+
+        <div class="case-table-wrap">
+          <table class="case-table">
+            <thead><tr><th>O que você encontra</th><th>Diagnóstico mais provável</th><th>Primeiro teste</th></tr></thead>
+            <tbody>
+              <tr><td>Nenhuma página do domínio</td><td>bloqueio ou falta de indexação</td><td>Inspeção de URL e relatório de indexação</td></tr>
+              <tr><td>A marca aparece, mas o serviço não</td><td>falta de relevância ou posição</td><td>consultas e páginas no Search Console</td></tr>
+              <tr><td>Algumas páginas aparecem, uma importante não</td><td>problema específico de URL, canonical ou conteúdo</td><td>inspecionar exatamente essa URL</td></tr>
+            </tbody>
+          </table>
+        </div>
 
         <h2>Meu site não aparece no Google: estar no ar não é estar indexado</h2>
 
@@ -220,13 +237,13 @@
           <p><a href="/diagnostico-presenca-digital/" class="artigo-link">Solicite um diagnóstico de presença digital gratuito</a> e eu verifico se o seu site está indexado, o que está travando e por onde começar — antes de qualquer proposta.</p>
         </div>
 
-        <h2>Como diagnosticar você mesmo</h2>
+        <h2>Site não aparece no Google: faça estes testes na ordem</h2>
 
         <p>Dá para fazer uma checagem inicial sem ser técnico:</p>
 
         <ul>
-          <li><strong>Teste o índice:</strong> busque no Google <code>site:seudominio.com.br</code>. Se aparecerem páginas, o site está indexado (ainda que mal posicionado). Se vier "nenhum resultado", está fora do índice — esse é o problema número um.</li>
-          <li><strong>Cadastre no Google Search Console:</strong> é a ferramenta gratuita oficial do Google. Ela mostra quais páginas foram indexadas, quais foram recusadas e o motivo. É o raio-X do site. Esse tema rende um artigo só dele, mas o essencial é: sem Search Console, você está no escuro.</li>
+          <li><strong>Faça um teste rápido:</strong> busque no Google <code>site:seudominio.com.br</code>. Se aparecerem páginas, há URLs conhecidas pelo Google. Se não aparecer nada, trate isso como um alerta, não como prova final: o operador <code>site:</code> não fornece uma lista completa.</li>
+          <li><strong>Cadastre no Google Search Console:</strong> é a ferramenta gratuita oficial do Google. Ela mostra páginas indexadas, páginas excluídas e possíveis motivos. Consulte a <a href="https://support.google.com/webmasters/answer/9012289?hl=pt-BR" class="artigo-link" target="_blank" rel="noopener noreferrer">documentação da Inspeção de URL</a> para fazer a verificação página por página.</li>
           <li><strong>Inspecione uma URL:</strong> dentro do Search Console, a ferramenta de inspeção diz, página por página, se ela está no Google e o que impede, quando é o caso.</li>
         </ul>
 
@@ -265,7 +282,7 @@
           <div class="artigo-faq-list">
             <div class="artigo-faq-item">
               <h3>Como sei se meu site está indexado no Google?</h3>
-              <p>Digite no Google: <code>site:seudominio.com.br</code> (sem espaço depois dos dois pontos). O Google mostra as páginas do seu site que ele tem no índice. Se aparecer "nenhum resultado", o site não está indexado. Para uma visão completa, o Google Search Console mostra exatamente quais páginas foram indexadas e quais ficaram de fora, com o motivo.</p>
+              <p>A busca <code>site:seudominio.com.br</code> serve como teste rápido, mas não é uma contagem completa. Para confirmar uma página específica, use a Inspeção de URL do Google Search Console, que informa se a URL está no índice e aponta possíveis impedimentos.</p>
             </div>
             <div class="artigo-faq-item">
               <h3>Meu site é novo. Quanto tempo até aparecer no Google?</h3>

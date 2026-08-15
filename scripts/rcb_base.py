@@ -305,18 +305,24 @@ def schema_service(nome, descricao, canonical, tipo="Consultoria de SEO"):
 
 
 def schema_webpage(canonical, nome, desc, data_mod):
-    return ('{"@type":"WebPage","url":"%s","name":"%s","description":"%s","inLanguage":"pt-BR",'
-            '"dateModified":"%s","isPartOf":{"@type":"WebSite","url":"https://rcbseo.com.br/",'
-            '"name":"RCB Consultoria"}}' % (canonical, sesc(nome), sesc(desc), data_mod))
+    return ('{"@type":"WebPage","@id":"%s#webpage","url":"%s","name":"%s",'
+            '"description":"%s","inLanguage":"pt-BR","dateModified":"%s",'
+            '"isPartOf":{"@type":"WebSite","@id":"https://rcbseo.com.br/#website",'
+            '"url":"https://rcbseo.com.br/","name":"RCB Consultoria"},'
+            '"about":{"@id":"https://rcbseo.com.br/#business"}}'
+            % (canonical, canonical, sesc(nome), sesc(desc), data_mod))
 
 
-def schema_blogposting(canonical, titulo, desc, data_pub, data_mod):
-    return ('{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"%s"},'
+def schema_blogposting(canonical, titulo, desc, data_pub, data_mod, imagem=OG_IMG):
+    return ('{"@type":"BlogPosting","@id":"%s#article",'
+            '"mainEntityOfPage":{"@type":"WebPage","@id":"%s#webpage"},'
             '"headline":"%s","description":"%s","image":"%s","datePublished":"%s","dateModified":"%s",'
             '"inLanguage":"pt-BR",'
-            '"author":{"@type":"Person","name":"Renan Carvalho Barbosa","url":"https://rcbseo.com.br/sobre/"},'
-            '"publisher":{"@type":"Organization","name":"RCB Consultoria","url":"https://rcbseo.com.br/"}}'
-            % (canonical, sesc(titulo), sesc(desc), OG_IMG, data_pub, data_mod))
+            '"author":{"@type":"Person","@id":"https://rcbseo.com.br/#renan",'
+            '"name":"Renan Carvalho Barbosa","url":"https://rcbseo.com.br/sobre/"},'
+            '"publisher":{"@type":"Organization","@id":"https://rcbseo.com.br/#business",'
+            '"name":"RCB Consultoria","url":"https://rcbseo.com.br/"}}'
+            % (canonical, canonical, sesc(titulo), sesc(desc), imagem, data_pub, data_mod))
 
 
 def grafo(*blocos):

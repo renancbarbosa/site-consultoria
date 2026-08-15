@@ -3993,3 +3993,79 @@ section {
   font-weight: 600;
   max-width: 40ch;
 }
+
+/* ===========================================================================
+   Artigos gerados: estilos globais e imagens editoriais
+   ========================================================================== */
+.artigo-hero { background: var(--navy); padding-top: 80px; }
+.artigo-capa-placeholder {
+  width: 100%; height: 420px; position: relative; overflow: hidden;
+  background: linear-gradient(135deg, var(--navy-light) 0%, #162a3a 40%, #0d2218 100%);
+}
+.artigo-capa-placeholder::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 50%, rgba(201,168,76,.12), transparent 60%); }
+.artigo-capa-placeholder::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 40%, var(--navy)); }
+.artigo-capa-media { margin: 0; background: #0d1b2a; border-bottom: 1px solid rgba(201,168,76,.18); }
+.artigo-capa-media img { display: block; width: 100%; height: auto; max-height: 560px; object-fit: contain; }
+.artigo-capa-caption { max-width: 720px; margin: 0 auto; padding: .8rem 20px 0; color: var(--text-muted); font-size: .82rem; line-height: 1.5; }
+.artigo-header { max-width: 720px; margin: 0 auto; padding: 36px 20px 56px; }
+.artigo-breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 18px; font-size: .78rem; color: var(--text-muted); }
+.artigo-breadcrumb a { color: var(--text-muted); transition: color var(--transition); }
+.artigo-breadcrumb a:hover { color: var(--gold); }
+.artigo-breadcrumb span { color: var(--gray-500); }
+.artigo-cat { display: inline-block; margin-bottom: 20px; padding: 5px 14px; color: var(--gold); background: rgba(201,168,76,.08); border: 1px solid rgba(201,168,76,.2); border-radius: 100px; font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.artigo-header h1 { margin-bottom: 20px; color: var(--white); font-size: clamp(1.6rem,3.5vw,2.5rem); font-weight: 800; line-height: 1.2; }
+.artigo-body { padding-bottom: 96px; background: var(--navy-mid); }
+.artigo-container { max-width: 720px; margin: 0 auto; padding: 0 20px; color: var(--text-main); font-size: 18px; line-height: 1.7; }
+.artigo-container p { margin-bottom: 26px; }
+.artigo-container h2 { margin: 60px 0 26px; padding-top: 10px; color: var(--gold); border-top: 1px solid rgba(201,168,76,.15); font-size: clamp(1.2rem,2.5vw,1.55rem); font-weight: 700; line-height: 1.3; }
+.artigo-container h3 { margin: 34px 0 14px; color: var(--white); font-size: 1.05rem; font-weight: 700; line-height: 1.35; }
+.artigo-container strong { color: var(--white); font-weight: 700; }
+.artigo-container code { padding: 2px 7px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1); border-radius: 5px; font-size: .92em; }
+.artigo-container ul, .artigo-container ol { margin: 0 0 26px 1.4em; line-height: 1.7; }
+.artigo-container li { margin-bottom: 10px; }
+.artigo-faq { margin: 56px 0 42px; padding-top: 10px; border-top: 1px solid rgba(201,168,76,.15); }
+.artigo-faq h2 { margin-top: 0; padding-top: 0; border-top: 0; }
+.artigo-faq-list { display: flex; flex-direction: column; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.artigo-faq-item { padding: 22px 24px; background: rgba(255,255,255,.035); border: 1px solid rgba(255,255,255,.07); border-radius: var(--radius-md); }
+.artigo-faq-item h3 { margin: 0 0 10px; color: var(--white); font-size: 1rem; line-height: 1.35; }
+.artigo-faq-item p { margin-bottom: 0; color: var(--text-muted); font-size: .95rem; line-height: 1.65; }
+.artigo-link { color: var(--gold); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; transition: color var(--transition); }
+.artigo-link:hover { color: var(--gold-light); }
+.artigo-cta-box { margin: 40px 0; padding: 28px; background: rgba(201,168,76,.06); border: 1px solid rgba(201,168,76,.18); border-radius: var(--radius-md); }
+.artigo-cta-box p { margin-bottom: 16px; color: var(--text-main); }
+.artigo-cta-box p:last-child { margin-bottom: 0; }
+.artigo-cta-wrap { margin: 40px 0 10px; }
+.artigo-cta-btn { display: inline-flex; align-items: center; gap: 12px; padding: 18px 32px; color: var(--navy); background: var(--gold); border-radius: var(--radius-md); font-size: 1rem; font-weight: 700; line-height: 1.3; transition: background var(--transition),transform var(--transition),box-shadow var(--transition); }
+.artigo-cta-btn:hover { background: var(--gold-light); box-shadow: 0 8px 24px rgba(201,168,76,.3); transform: translateY(-2px); }
+.artigo-cta-btn svg { flex-shrink: 0; }
+.artigo-voltar { max-width: 720px; margin: 0 auto; padding: 48px 20px 0; }
+.artigo-voltar a { display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: .875rem; transition: color var(--transition); }
+.artigo-voltar a:hover { color: var(--gold); }
+
+/* Ferramenta própria: diagnóstico rápido na página "Como aparecer no Google". */
+.seo-source-note { margin: 1.4rem 0 0; color: var(--text-muted); font-size: .9rem; line-height: 1.65; }
+.seo-source-note a { color: var(--gold-light); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.seo-check-section { padding: 5rem 0; background: linear-gradient(180deg,rgba(201,168,76,.055),rgba(10,20,32,.25)); border-block: 1px solid rgba(201,168,76,.18); }
+.seo-check-grid { display: grid; gap: 2rem; align-items: start; }
+.seo-check { padding: clamp(1.3rem,3vw,2rem); background: var(--navy-mid); border: 1px solid rgba(201,168,76,.28); border-radius: var(--radius-lg); box-shadow: var(--shadow-card); }
+.seo-check-help { margin: 0 0 1.2rem; color: var(--text-muted); font-size: .9rem; }
+.seo-check fieldset { margin: 0 0 1.2rem; padding: 0; border: 0; }
+.seo-check legend { margin-bottom: .75rem; color: var(--gold-light); font-size: .82rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.seo-check label { display: grid; grid-template-columns: 1.25rem 1fr; gap: .7rem; align-items: start; margin-bottom: .65rem; padding: .78rem .85rem; color: var(--text-main); background: rgba(255,255,255,.025); border: 1px solid rgba(255,255,255,.07); border-radius: var(--radius-sm); cursor: pointer; line-height: 1.45; }
+.seo-check label:hover { border-color: rgba(201,168,76,.35); }
+.seo-check input { width: 1.1rem; height: 1.1rem; margin-top: .15rem; accent-color: var(--gold); }
+.seo-check code { overflow-wrap: anywhere; color: var(--white); }
+.seo-check .btn { width: 100%; justify-content: center; }
+.seo-check-result { margin-top: 1.2rem; padding: 1.15rem; color: var(--text-main); background: rgba(201,168,76,.08); border: 1px solid rgba(201,168,76,.32); border-radius: var(--radius-sm); }
+.seo-check-result strong { display: block; color: var(--gold-light); font-size: 1.05rem; }
+.seo-check-result p { margin: .65rem 0 0; line-height: 1.55; }
+.seo-check-result a { color: var(--gold-light); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.seo-check-noscript { margin-top: 1rem; color: var(--text-muted); }
+
+@media (min-width: 900px) { .seo-check-grid { grid-template-columns: minmax(0,.9fr) minmax(420px,1.1fr); gap: 3rem; } }
+@media (max-width: 640px) {
+  .artigo-capa-placeholder { height: 240px; }
+  .artigo-container { font-size: 16px; }
+  .artigo-capa-caption { font-size: .76rem; }
+  .seo-check-section { padding: 3.5rem 0; }
+}
