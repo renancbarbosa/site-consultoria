@@ -75,7 +75,10 @@ def render_artigo(a):
         schema_faq(faq) if faq else "",
     )
 
-    corpo = a["corpo"]
+    # Blocos escritos com strings multilinha costumam terminar com espaços da
+    # indentação antes do fechamento. Remover aqui evita whitespace inválido em
+    # todo artigo novo sem alterar o conteúdo visível.
+    corpo = a["corpo"].rstrip()
     minutos = tempo_leitura(corpo)
 
     faq_html = ""

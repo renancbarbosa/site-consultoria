@@ -19,8 +19,28 @@ sys.path.insert(0, AQUI)
 from rcb_base import RAIZ, BASE_URL  # noqa: E402
 from rcb_cidades import eh_indexavel  # noqa: E402
 
-HOJE = "2026-08-06"
+HOJE = "2026-08-15"
 SITEMAP = os.path.join(RAIZ, "sitemap.xml")
+
+# URLs cujo conteúdo mudou nesta rodada. Manter a lista explícita evita o erro
+# antigo de usar a data do deploy em todas as páginas do site e, ao mesmo tempo,
+# impede que uma URL realmente revisada continue com lastmod obsoleto.
+ATUALIZADAS = {
+    "/blog/como-aparecer-no-google-maps/",
+    "/blog/",
+    "/blog/como-aparecer-nas-buscas-perto-de-mim/",
+    "/blog/como-aparecer-no-google-sem-pagar/",
+    "/blog/dominio-caiu-o-que-fazer/",
+    "/blog/por-que-minha-empresa-nao-aparece-no-google/",
+    "/blog/seo-para-empresas-locais/",
+    "/blog/vale-a-pena-seo-para-pequena-empresa/",
+    "/cases/",
+    "/como-aparecer-no-google/",
+    "/para-comercios-locais/",
+    "/seo-para-clinicas-de-estetica/",
+    "/seo-para-pequenas-empresas/",
+    "/sobre/",
+}
 
 EXCLUIR = {"/404.html", "/diagnostico-presenca-digital/exemplo/"}
 
@@ -78,7 +98,16 @@ def main():
     novas = sorted(do_site - existentes_rel)
     sumiram = sorted(existentes_rel - do_site)
 
-    if not novas and not sumiram:
+    atualizados = 0
+    for url in ATUALIZADAS:
+        absoluta = BASE_URL + url
+        padrao = rf"(<loc>{re.escape(absoluta)}</loc>\s*<lastmod>)[^<]+"
+        novo_xml, n = re.subn(padrao, lambda m: m.group(1) + HOJE, xml, count=1)
+        if n and novo_xml != xml:
+            atualizados += 1
+        xml = novo_xml
+
+    if not novas and not sumiram and not atualizados:
         print("Sitemap já está em dia.")
         return
 
@@ -99,7 +128,7 @@ def main():
         f.write(xml)
 
     total = len(re.findall(r"<loc>", xml))
-    print(f"Sitemap atualizado: +{len(novas)} URLs (total: {total}).")
+    print(f"Sitemap atualizado: +{len(novas)} URLs, {atualizados} lastmod corrigidos (total: {total}).")
     comerciais = [u for u in novas if not u.startswith("/blog/")]
     artigos = [u for u in novas if u.startswith("/blog/")]
     print(f"  páginas comerciais: {len(comerciais)}")

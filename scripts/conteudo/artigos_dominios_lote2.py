@@ -291,7 +291,8 @@ ARTIGOS.append({
              "hospedagem, cadastro — e o que fazer em cada uma."),
     "cat": CAT,
     "data": DATA,
-    "trilha_extra": ("/migracao-de-dominio-seo/", "Migração de domínio"),
+    "atualizado": "2026-08-15",
+    "trilha_extra": ("/auditoria-seo/", "Auditoria de SEO"),
     "corpo": f"""
         <p>Site fora do ar é urgência, e urgência faz gente agir antes de entender. Neste caso a pressa
         custa caro: <strong>a causa determina completamente o que fazer</strong>, e algumas reações
@@ -341,7 +342,10 @@ ARTIGOS.append({
         <p>É a causa que mais aparece, e a que tem o relógio correndo. Depois do vencimento existe um
         período em que o titular ainda consegue renovar. Passado esse prazo, o domínio pode ser liberado
         para registro por qualquer pessoa — e aí a recuperação deixa de ser uma questão de pagar a
-        renovação.</p>
+        renovação. Para domínios .br, consulte o
+        <a class="artigo-link" href="https://registro.br/tecnologia/ferramentas/whois/" target="_blank" rel="noopener noreferrer">WHOIS do Registro.br</a>
+        e, quando for o caso, o calendário do
+        <a class="artigo-link" href="https://registro.br/dominio/processo-de-liberacao" target="_blank" rel="noopener noreferrer">processo oficial de liberação</a>.</p>
 
         <p>O que fazer, na ordem:</p>
 
@@ -386,9 +390,9 @@ ARTIGOS.append({
         </ul>
 
         <p>É um recomeço com vantagem — você tem o conteúdo e sabe o que funcionava —, mas é um recomeço.
-        O processo de reconstrução se aproxima do descrito em
-        {link('/migracao-de-dominio-seo/', 'migração de domínio')}, sem a parte que mais protege, que são
-        os redirecionamentos.</p>
+        A primeira entrega deve ser um inventário do que ainda existe: conteúdo, URLs antigas, links,
+        cadastros e acessos. Uma {link('/auditoria-seo/', 'auditoria de SEO')} organiza esse recomeço e evita
+        publicar o novo site sem saber quais ativos ainda podem ser recuperados.</p>
 
         <h2>Prevenção: cinco minutos que evitam o problema</h2>
 
@@ -424,5 +428,5 @@ ARTIGOS.append({
     "cta": ("Site fora do ar ou tráfego perdido depois de um problema de domínio? Na análise do projeto eu "
             "identifico a causa, o que dá para recuperar e em que ordem agir — antes de mexer no que não "
             "precisa ser mexido.",
-            ANALISE, "Solicitar análise do projeto"),
+            "/diagnostico-presenca-digital/", "Solicitar diagnóstico do projeto"),
 })

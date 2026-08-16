@@ -28,7 +28,10 @@ PILOTO = {
     "palmas",          # Palmas/TO: únicas consultas de intenção local pura do cluster
 }
 
-# Continuam indexáveis e no sitemap, mas CONGELADAS: sem reescrita nesta rodada.
+# Continuam indexáveis e no sitemap. Receberam uma camada local diferenciada em
+# 15/08/2026, baseada nos dados públicos já usados pelo gerador (sem inventar
+# unidade, equipe, case ou presença física). O nome CONGELADAS foi preservado
+# para não quebrar os imports e a decisão registrada em 12/08.
 # São as maiores praças (grupo A da triagem) mais duas com sinal acima do ruído.
 # Prazo: sem impressão até meados de outubro/2026, descem para noindex.
 CONGELADAS = {

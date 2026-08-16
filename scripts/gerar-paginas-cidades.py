@@ -48,6 +48,7 @@ RAIZ = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 BASE_URL = "https://rcbseo.com.br"
 WHATS = "5562991161040"
 EXPANDIR_CIDADES = os.environ.get("RCB_EXPANDIR_CIDADES") == "1"
+ATUALIZADO_INDEXAVEIS = "2026-08-15"
 
 ESTADOS = {
     "AC": "Acre", "AL": "Alagoas", "AP": "Amapá", "AM": "Amazonas",
@@ -304,6 +305,143 @@ CTAS = [
 ]
 
 
+TITULOS_LEITURA_LOCAL = [
+    "O retrato de {cidade} antes de escolher palavras-chave",
+    "O que os números locais mudam na estratégia",
+    "Uma leitura prática do mercado de {cidade}",
+    "Onde a disputa local começa em {cidade}",
+    "Dados de {cidade} que merecem virar decisão",
+    "Antes do conteúdo: o contexto comercial de {cidade}",
+    "Como transformar dados de {cidade} em prioridade",
+    "O recorte local que uma página genérica não mostra",
+]
+
+
+def bloco_leitura_indexavel(c):
+    """Cria ganho de informação verificável apenas nas 28 antigas congeladas.
+
+    A camada usa exclusivamente o snapshot de CNPJ que já alimenta a página.
+    Não presume demanda de busca, escritório local, clientes ou equipe na cidade.
+    """
+    slug = c["slug"]
+    if slug not in INDEXAVEIS or slug in PILOTO:
+        return ""
+
+    cidade = c["cidade"]
+    ativas = int(c.get("empresas_ativas", 0) or 0)
+    abertas_90d = int(c.get("abertas_90d", 0) or 0)
+    abertas_12m = int(c.get("abertas_12m", 0) or 0)
+    abertas_mes = int(c.get("abertas_mes", 0) or 0)
+    variacao = float(c.get("variacao_mes_anterior_pct", 0) or 0)
+    ramos = c.get("ramos_top", [])
+    bairros = c.get("bairros_top", [])
+    ramo1 = ramos[0] if ramos else {"nome": "serviços locais", "abertas_90d": 0}
+    ramo2 = ramos[1] if len(ramos) > 1 else ramo1
+    bairro1 = bairros[0] if bairros else {"bairro": "área central", "abertas_90d": 0}
+    bairro2 = bairros[1] if len(bairros) > 1 else bairro1
+    taxa_mil = round((abertas_90d / ativas * 1000), 1) if ativas else 0
+    fatia_lider = round((int(ramo1.get("abertas_90d", 0)) / abertas_90d * 100), 1) if abertas_90d else 0
+
+    nome_ramo1 = rotulo_cnae(ramo1.get("nome", "serviços locais"))
+    nome_ramo2 = rotulo_cnae(ramo2.get("nome", "serviços locais"))
+    nome_bairro1 = limpar_bairro(bairro1.get("bairro", "área central"))
+    nome_bairro2 = limpar_bairro(bairro2.get("bairro", "área central"))
+    modo = variante(slug + "-leitura-local", 8)
+    titulo = TITULOS_LEITURA_LOCAL[modo].format(cidade=cidade)
+
+    r1 = n_br(ramo1.get("abertas_90d", 0))
+    r2 = n_br(ramo2.get("abertas_90d", 0))
+    b1 = n_br(bairro1.get("abertas_90d", 0))
+    b2 = n_br(bairro2.get("abertas_90d", 0))
+
+    # Oito leituras escritas com estruturas diferentes. Não é rotação de
+    # adjetivo: cada modo ensina uma forma distinta de transformar os mesmos
+    # dados verificáveis em hipótese de SEO a ser confirmada no projeto.
+    narrativas = [
+        [
+            f"{cidade} tem {n_br(ativas)} empresas ativas no recorte. Em 90 dias surgiram <strong>{n_br(abertas_90d)}</strong> novos registros — {n_br(taxa_mil)} para cada mil empresas já abertas. O número dá escala ao mercado cadastral, mas ainda não diz quantas pessoas pesquisam um serviço no Google.",
+            f"A liderança ficou com {nome_ramo1}: {r1} aberturas, ou {n_br(fatia_lider)}% do total recente. {nome_ramo2} veio depois, com {r2}. Para uma estratégia, isso vira uma lista de segmentos a investigar, não uma autorização para criar páginas sem cliente, oferta ou prova.",
+            f"A distribuição também merece lupa. {nome_bairro1} aparece com {b1} registros e {nome_bairro2} com {b2}. O teste útil é medir a visibilidade a partir desses pontos e comparar a composição do mapa; repetir os bairros no texto não altera a distância real.",
+            f"O mês fechou com {n_br(abertas_mes)} aberturas, variação de {n_br(variacao)}% sobre o anterior. Em 12 meses foram {n_br(abertas_12m)}. A página registra esse contexto e deixa a promessa de lado: demanda, clique e contato só entram depois de medidos.",
+        ],
+        [
+            f"Começo pelo segmento, porque uma cidade grande demais vira uma abstração. Em {cidade}, {nome_ramo1} somou <strong>{r1} novos CNPJs</strong> em 90 dias; {nome_ramo2}, {r2}. O primeiro representa {n_br(fatia_lider)}% das {n_br(abertas_90d)} aberturas registradas.",
+            f"Esse dado ajuda a formular perguntas. Há mais concorrentes publicando? O pacote local é dominado por redes, profissionais ou empresas antigas? Quais serviços aparecem nas consultas? A resposta vem do Maps e do Search Console do negócio — não da tabela de CNPJ sozinha.",
+            f"No território, {nome_bairro1} concentrou {b1} aberturas informadas e {nome_bairro2}, {b2}. São pontos de observação para uma grade de busca. Só devem aparecer como área atendida quando a operação realmente chega até lá.",
+            f"A base inteira reúne {n_br(ativas)} empresas. O ritmo recente foi de {n_br(taxa_mil)} aberturas por mil ativas em 90 dias, com {n_br(abertas_mes)} no último mês. É contexto competitivo mensurável; posição orgânica continua sendo outra medição.",
+        ],
+        [
+            f"Uma estratégia local para {cidade} não deveria começar com uma lista de palavras-chave. Deveria começar com um mapa. Os cadastros recentes apontam {nome_bairro1} ({b1} aberturas) e {nome_bairro2} ({b2}) como dois pontos que merecem observação.",
+            f"Observar não é criar uma falsa unidade. É pesquisar o serviço a partir de locais reais, anotar quais empresas entram no mapa e conferir se distância, categoria e reputação mudam o cenário. A página não afirma atendimento em bairro que não foi confirmado pelo negócio.",
+            f"No recorte econômico, foram {n_br(abertas_90d)} aberturas em 90 dias diante de {n_br(ativas)} empresas ativas. A razão de {n_br(taxa_mil)} por mil ajuda a dimensionar renovação cadastral, sem confundir abertura de empresa com procura no Google.",
+            f"{nome_ramo1} liderou com {r1} registros; {nome_ramo2} teve {r2}. Junto ao total anual de {n_br(abertas_12m)}, esses dados dizem onde vale investigar primeiro. Quem decide a página final são oferta, evidência e intenção de busca.",
+        ],
+        [
+            f"O dado mais recente de {cidade} é {n_br(abertas_mes)} novas empresas no mês. A variação foi de <strong>{n_br(variacao)}%</strong> em relação ao anterior. Oscilação mensal pede cautela; por isso a leitura também olha {n_br(abertas_90d)} aberturas no trimestre e {n_br(abertas_12m)} no ano.",
+            f"Quando esse volume é comparado às {n_br(ativas)} empresas ativas, chega-se a {n_br(taxa_mil)} novos cadastros por mil em 90 dias. É uma métrica de ritmo da base, não uma previsão de tráfego e muito menos de vendas.",
+            f"Nos ramos, {nome_ramo1} registrou {r1} aberturas e {nome_ramo2}, {r2}. A concentração do líder foi de {n_br(fatia_lider)}%. Uma consultoria pode usar isso para selecionar amostras de concorrentes; produzir conteúdo antes dessa checagem seria inverter a ordem.",
+            f"{nome_bairro1} e {nome_bairro2} aparecem com {b1} e {b2} cadastros. Se o negócio atende esses locais, vale medir; se não atende, os nomes ficam fora da oferta. SEO local não transforma alcance desejado em presença física.",
+        ],
+        [
+            f"Nos últimos 90 dias, a base de {cidade} ganhou {n_br(abertas_90d)} registros. Diante das {n_br(ativas)} empresas ativas, são {n_br(taxa_mil)} aberturas por mil. Para quem já está no mercado, o dado sugere renovação competitiva que precisa ser acompanhada, não temida.",
+            f"Dois grupos ajudam a montar a amostra: {nome_ramo1}, com {r1} aberturas, e {nome_ramo2}, com {r2}. O líder responde por {n_br(fatia_lider)}% do total recente. A análise seguinte é manual: títulos, páginas, avaliações, categorias e facilidade de contato dos resultados visíveis.",
+            f"O componente geográfico começa em {nome_bairro1} ({b1}) e {nome_bairro2} ({b2}). Esses números mostram onde empresas foram cadastradas; não mostram onde o cliente estava nem qual resultado ele clicou.",
+            f"Com {n_br(abertas_mes)} aberturas no mês e {n_br(abertas_12m)} no ano, há dados suficientes para evitar uma página vazia. Ainda faltam os dados decisivos do projeto: consultas, impressões, posição por região e conversões.",
+        ],
+        [
+            f"A melhor utilidade dos dados de {cidade} é desenhar uma medição. A cidade reúne {n_br(ativas)} empresas ativas e recebeu {n_br(abertas_90d)} registros em 90 dias. Isso equivale a {n_br(taxa_mil)} por mil — uma linha de base objetiva para o contexto cadastral.",
+            f"Para o recorte por atividade, começaria com {nome_ramo1} ({r1} aberturas) e {nome_ramo2} ({r2}). O primeiro concentra {n_br(fatia_lider)}% das aberturas. Depois, separaria buscas de marca, serviço, problema e preço para não misturar intenções.",
+            f"Na leitura espacial, {nome_bairro1} tem {b1} registros recentes e {nome_bairro2}, {b2}. Uma grade local pode comparar os resultados nesses pontos, desde que a empresa confirme que atende a região. Nome de bairro não é palavra para espalhar; é coordenada para testar.",
+            f"O movimento mensal foi de {n_br(abertas_mes)}, com variação de {n_br(variacao)}%. O acumulado de 12 meses chegou a {n_br(abertas_12m)}. A estratégia só avança quando esse contexto encontra os dados do próprio negócio.",
+        ],
+        [
+            f"Em {cidade}, o mapa de conteúdo deve nascer da oferta, mas os dados ajudam a escolher a ordem. Foram {n_br(abertas_90d)} aberturas em 90 dias e {n_br(abertas_12m)} em 12 meses, sobre uma base de {n_br(ativas)} empresas ativas.",
+            f"{nome_ramo1} aparece na frente, com {r1} registros; {nome_ramo2} soma {r2}. A fatia do primeiro é de {n_br(fatia_lider)}%. Se a empresa vende para um desses mercados, vale cruzar a informação com as consultas existentes antes de escrever uma nova landing page.",
+            f"{nome_bairro1}, com {b1} aberturas, e {nome_bairro2}, com {b2}, podem orientar exemplos e testes de cobertura. Eles não devem gerar duas cópias da mesma página. Uma URL forte por intenção é preferível a uma coleção de portas de entrada quase iguais.",
+            f"O último mês adicionou {n_br(abertas_mes)} cadastros e variou {n_br(variacao)}%. Esse ritmo é informação de apoio. O conteúdo principal continua precisando responder serviço, processo, prova, atendimento e próxima ação em linguagem direta.",
+        ],
+        [
+            f"A pergunta comercial em {cidade} não é “quantas vezes repetir a cidade?”. É “qual combinação de perfil, página e reputação vence em cada ponto?”. A base traz {n_br(ativas)} empresas ativas e {n_br(abertas_90d)} novas em 90 dias para enquadrar a concorrência.",
+            f"O ritmo equivale a {n_br(taxa_mil)} cadastros por mil empresas. No mês foram {n_br(abertas_mes)}, com variação de {n_br(variacao)}%; em 12 meses, {n_br(abertas_12m)}. Nenhum desses números substitui uma consulta de busca, mas todos tornam o diagnóstico menos genérico.",
+            f"{nome_ramo1} liderou as aberturas com {r1} ({n_br(fatia_lider)}% do período), seguido por {nome_ramo2}, com {r2}. Esses segmentos servem para observar padrões de página e perfil, não para afirmar que são os mais pesquisados.",
+            f"Na camada geográfica, {nome_bairro1} registra {b1} aberturas e {nome_bairro2}, {b2}. A empresa só disputa esses pontos de forma legítima quando existe atendimento real; o restante é medição e planejamento, não alegação de presença.",
+        ],
+    ]
+    paragrafos = "\n          ".join(f"<p>{p}</p>" for p in narrativas[modo])
+
+    enfoques = [
+        "validar quais serviços realmente geram impressão no Search Console antes de abrir outra URL",
+        "comparar categoria, avaliações, páginas e conversão dos concorrentes que aparecem no mapa",
+        "dar uma página própria somente aos serviços que têm oferta, prova e capacidade de atendimento",
+        "medir separadamente busca pela marca, busca pelo serviço e ações de contato",
+        "ligar o Perfil da Empresa à página mais específica para cada serviço prioritário",
+        "revisar o que o cliente encontra no celular antes de ampliar a produção de conteúdo",
+        "usar bairros como recorte de medição, nunca como endereço ou unidade inventada",
+        "concentrar autoridade nas páginas que já recebem sinais antes de multiplicar variações",
+    ]
+    plano = enfoques[modo]
+
+    return f"""
+    <section class="solution-section" aria-labelledby="leitura-local-{slug}">
+      <div class="container split-grid">
+        <div class="split-copy">
+          <div class="section-tag">Leitura local verificável</div>
+          <h2 id="leitura-local-{slug}" class="section-title">{titulo}</h2>
+          {paragrafos}
+        </div>
+        <aside class="diagnostic-card">
+          <h3>Primeira decisão para {cidade}</h3>
+          <p>{plano.capitalize()}.</p>
+          <ul class="check-list">
+            <li><strong>Dado disponível:</strong> empresas, aberturas, ramos e bairros do CNPJ.</li>
+            <li><strong>Dado ainda necessário:</strong> consultas, posição, cliques e contatos do negócio.</li>
+            <li><strong>Limite da leitura:</strong> abertura de CNPJ não comprova procura no Google.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>"""
+
+
 def pagina_cidade(c, vizinhas):
     cidade = c["cidade"]
     uf = c["uf"]
@@ -315,7 +453,7 @@ def pagina_cidade(c, vizinhas):
     n12 = n_br(c["abertas_12m"])
     nmes = n_br(c["abertas_mes"])
     ref = c.get("data_referencia", c.get("snapshot", ""))
-    gerado_em = c.get("gerado_em", ref)
+    gerado_em = ATUALIZADO_INDEXAVEIS if eh_indexavel(slug) else c.get("gerado_em", ref)
     variacao = float(c.get("variacao_mes_anterior_pct", 0) or 0)
     porte = c.get("porte", {})
 
@@ -344,6 +482,7 @@ def pagina_cidade(c, vizinhas):
 
     intro = INTROS[variante(slug, len(INTROS))].format(cidade=cidade)
     cta = CTAS[variante(slug + "x", len(CTAS))].format(cidade=cidade)
+    leitura_indexavel = bloco_leitura_indexavel(c)
 
     whats_msg = quote(f"Olá, Renan. Tenho uma empresa em {cidade}/{uf} e quero um diagnóstico gratuito para aparecer melhor no Google.")
     whats_url = f"https://wa.me/{WHATS}?text={whats_msg}"
@@ -470,7 +609,7 @@ def pagina_cidade(c, vizinhas):
           <p class="section-desc" style="font-size:.8rem;margin-top:.75rem;">Fonte: <a href="https://dados.gov.br/dados/conjuntos-dados/cadastro-nacional-da-pessoa-juridica-cnpj" target="_blank" rel="noopener noreferrer">dados públicos de CNPJ da Receita Federal</a>, referência {ref}. Página atualizada em {gerado_em}.</p>
         </aside>
       </div>
-    </section>
+    </section>{leitura_indexavel}
 
     <section class="solution-section" aria-labelledby="concorrencia-titulo">
       <div class="container split-grid">
@@ -568,7 +707,7 @@ def pagina_cidade_piloto(c, vizinhas):
     estado = ESTADOS.get(uf, uf)
     canonical = f"{BASE_URL}/consultoria-seo/{slug}/"
     ref = c.get("data_referencia", c.get("snapshot", ""))
-    gerado_em = c.get("gerado_em", ref)
+    gerado_em = ATUALIZADO_INDEXAVEIS
 
     ramos = [(rotulo_cnae(r["nome"]), r["abertas_90d"]) for r in c.get("ramos_top", [])[:6]]
     bairros = [(limpar_bairro(b["bairro"]), b["abertas_90d"]) for b in c.get("bairros_top", [])[:4]]

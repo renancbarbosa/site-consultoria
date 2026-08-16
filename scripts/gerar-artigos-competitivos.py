@@ -14,6 +14,7 @@ Validações que impedem publicar artigo ruim:
   - slug único entre todos os módulos
 """
 import os
+import re
 import sys
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
@@ -49,6 +50,25 @@ MODULOS = [
 # (medido em 06/08/2026, n=67). O piso abaixo fica um pouco acima do menor
 # artigo existente, para impedir texto raso sem exigir enchimento.
 MIN_PALAVRAS = 620
+ALVO_SLUG = os.environ.get("RCB_ARTIGO_SLUG", "").strip()
+
+
+def remover_navegacao_ainda_nao_publicada(html):
+    """Evita reintroduzir no menu URLs nacionais removidas do site publicado."""
+    html = re.sub(
+        r'<li class="nav-nicho-group"><button[^>]*>SEO Nacional.*?</div></li>',
+        "",
+        html,
+        count=1,
+        flags=re.S,
+    )
+    return re.sub(
+        r'<div class="footer-col"><h4 class="footer-col-title">SEO Nacional</h4>.*?</nav></div>',
+        "",
+        html,
+        count=1,
+        flags=re.S,
+    )
 
 
 def main():
@@ -63,10 +83,13 @@ def main():
         print(f"[{nome}]")
         for a in modulo.ARTIGOS:
             slug = a["slug"]
+            if ALVO_SLUG and slug != ALVO_SLUG:
+                continue
             assert slug not in vistos, f"slug duplicado: {slug}"
             vistos.add(slug)
 
             caminho, html = render_artigo(a)
+            html = remover_navegacao_ainda_nao_publicada(html)
 
             corpo = html.split('<article class="artigo-body">')[-1].split("</article>")[0]
             n = contar_palavras(corpo)

@@ -313,6 +313,10 @@ ARTIGOS = [
         <p>Sem comprar mídia, você ainda pode construir presença. O custo aparece em tempo, produção e
         manutenção, não em cada clique. A ordem mais eficiente costuma ser:</p>
 
+        <p>Se esse é o seu objetivo principal, use também o roteiro completo de
+        {link('/blog/como-aparecer-no-google-sem-pagar/', 'como aparecer no Google sem pagar por anúncios')}.
+        Ele separa cadastro gratuito, indexação, páginas de serviço, conteúdo e medição.</p>
+
         <ol>
           <li>criar ou reivindicar o perfil e concluir a verificação;</li>
           <li>preencher dados, serviços, fotos e horário;</li>
@@ -384,6 +388,317 @@ ARTIGOS = [
              "Anúncios podem gerar exposição assim que a campanha é aprovada e ativada; perfil e SEO constroem resultado de forma gradual. O prazo varia conforme concorrência, região, qualidade da base e consistência da execução."),
         ],
         "cta": ("Quer saber se o próximo investimento deveria ir para perfil, site, conteúdo ou anúncios? Eu avalio a presença atual e mostro onde está o maior gargalo antes de propor qualquer serviço.",
+                "/diagnostico-presenca-digital/", "Solicitar diagnóstico gratuito"),
+    },
+    {
+        "slug": "como-aparecer-nas-buscas-perto-de-mim",
+        "h1": "Como aparecer nas buscas “perto de mim” no Google",
+        "title": "Como aparecer nas buscas perto de mim no Google | RCB",
+        "desc": ("Entenda como aparecer nas buscas perto de mim: ajuste Perfil da Empresa, site, "
+                 "localização, serviços e avaliações sem inventar endereço ou cidade."),
+        "cat": "SEO local",
+        "data": DATA,
+        "trilha_extra": ("/como-aparecer-no-google/", "Aparecer no Google"),
+        "corpo": f"""
+        <p>Para aparecer quando alguém pesquisa <strong>“perto de mim”</strong>, sua empresa precisa deixar
+        claro o que faz, onde atende e por que é uma opção confiável naquela região. Não existe um campo
+        secreto para preencher com essa frase. O resultado nasce da combinação entre Google Perfil da
+        Empresa, localização de quem pesquisa, página do serviço e sinais reais de reputação.</p>
+
+        {caixa('<p><strong>Resposta direta:</strong> verifique o Perfil da Empresa, use a categoria que '
+               'representa o serviço principal, mantenha endereço ou área atendida corretos, descreva os '
+               'serviços no perfil e no site e conquiste avaliações de clientes reais. O Google explica '
+               'que os resultados locais se baseiam principalmente em relevância, distância e destaque. '
+               'Não é possível comprar uma posição orgânica melhor no mapa.</p>')}
+
+        <p>Essa divisão não é opinião de mercado. A própria documentação do Google lista
+        <a class="artigo-link" href="https://support.google.com/business/answer/7091?hl=pt-BR"
+        target="_blank" rel="noopener noreferrer">relevância, distância e destaque como os principais fatores locais</a>
+        e informa que não há como solicitar ou pagar por uma classificação local orgânica melhor.</p>
+
+        <p>A expressão muda — “aberto perto de mim”, “empresa próxima”, “serviço aqui perto” —, mas a
+        intenção costuma ser a mesma: a pessoa quer resolver algo agora e prefere uma opção que faça
+        sentido para a localização dela. É uma busca mais próxima da decisão do que uma pesquisa ampla
+        sobre o assunto.</p>
+
+        <p>Este guia trata dessa intenção. Se o seu perfil ainda nem foi criado ou verificado, comece pelo
+        passo a passo de {link('/blog/como-colocar-minha-empresa-no-google/', 'como colocar sua empresa no Google')}.
+        Se a dúvida é sobre a ficha aparecer no mapa, veja também {link('/blog/como-aparecer-no-google-maps/', 'como aparecer no Google Maps')}.</p>
+
+        <h2>O que o Google entende por “perto”</h2>
+
+        <p>“Perto” não é uma distância fixa igual para todos os negócios. O Google considera a posição da
+        pessoa ou, quando ela não compartilha a localização, as informações disponíveis sobre onde ela
+        está. O raio aceitável também muda conforme o serviço. É comum alguém atravessar a cidade para uma
+        consulta especializada; para comprar pão, a expectativa de proximidade costuma ser outra.</p>
+
+        <p>Isso explica por que duas pessoas podem fazer a mesma busca e ver empresas diferentes. Também
+        explica por que testar apenas do computador do estabelecimento dá uma leitura incompleta. Você
+        precisa observar bairros e pontos reais da área atendida, sem concluir que uma posição vista em um
+        endereço representa a cidade inteira.</p>
+
+        {tabela(
+            ["Sinal", "O que ele ajuda o Google a entender", "Como trabalhar"],
+            [
+                ["Categoria principal", "qual é o negócio central", "escolher a categoria mais específica e verdadeira"],
+                ["Endereço ou área de serviço", "onde existe atendimento real", "manter os dados corretos e dentro das regras"],
+                ["Serviços e páginas", "para quais necessidades a empresa é relevante", "descrever cada serviço importante com clareza"],
+                ["Avaliações", "experiência e destaque percebido", "pedir opiniões honestas após atendimentos reais"],
+                ["Site e menções", "relação entre marca, serviço e local", "usar páginas úteis e dados consistentes"],
+            ],
+            nota="Nenhum item isolado garante o bloco local. A combinação muda conforme busca, localização e concorrência."
+        )}
+
+        <h2>1. Arrume a base do Perfil da Empresa</h2>
+
+        <p>Abra o perfil e confira o básico como se você fosse um cliente que nunca ouviu falar da marca:
+        nome real, categoria, telefone, horário, site e endereço ou área de atendimento. Uma informação
+        errada não é detalhe. Ela pode impedir o contato e ainda deixar menos clara a correspondência entre
+        a empresa e a pesquisa.</p>
+
+        <p>Não acrescente bairro, cidade ou serviço ao nome apenas para repetir palavras-chave. O nome deve
+        acompanhar a marca usada no mundo real. Uma ficha inflada pode até parecer “agressiva”, mas cria
+        risco de edição, suspensão e perda de confiança. A força deve vir da cobertura correta dos campos,
+        das páginas e das provas, não de um nome inventado.</p>
+
+        <h2>2. Transforme cada serviço importante em uma resposta concreta</h2>
+
+        <p>Uma empresa que oferece dez serviços, mas resume tudo em “soluções completas”, dificulta o
+        entendimento. Liste os serviços no perfil e crie no site uma página realmente útil para cada linha
+        comercial prioritária. Explique para quem serve, qual problema resolve, como funciona, onde há
+        atendimento e como pedir orçamento.</p>
+
+        <p>Essa organização também melhora a conversão. Quem procura “conserto de ar-condicionado perto de
+        mim” não quer aterrissar em uma página genérica sobre climatização. Quer confirmar rapidamente se a
+        empresa faz aquele reparo, atende a região e pode ser acionada.</p>
+
+        <h2>3. Mostre a região sem fabricar páginas-porta</h2>
+
+        <p>É válido informar cidades e bairros realmente atendidos. O problema começa quando se publica a
+        mesma página dezenas de vezes, trocando somente o nome do lugar, ou quando se afirma ter unidade
+        onde não existe operação. Além de frustrar o cliente, isso cria páginas sem valor próprio.</p>
+
+        <p>Uma página local boa contém evidência local: forma de atendimento, limites da área, prazo ou
+        logística quando isso for relevante, trabalhos reais, perguntas específicas e dados que ajudem a
+        decidir. Se não há informação suficiente para diferenciar uma cidade, é melhor fortalecer a página
+        principal do serviço e explicar nela a cobertura verdadeira.</p>
+
+        <h2>4. Construa avaliações que ajudem uma pessoa a escolher</h2>
+
+        <p>Peça a avaliação depois de um atendimento concluído, por um caminho simples e sem oferecer
+        prêmio. Responda de forma individual, inclusive quando a mensagem for curta. A avaliação existe
+        primeiro para o próximo cliente; o valor para o posicionamento vem junto com essa prova pública de
+        que a empresa atende pessoas reais.</p>
+
+        <p>Não entregue um texto pronto para todo mundo copiar. Além de soar artificial, uma sequência de
+        comentários iguais não explica o que a empresa fez bem. O cliente pode mencionar espontaneamente o
+        serviço e a experiência que teve, com as palavras dele.</p>
+
+        <h2>5. Confira se site, perfil e contato contam a mesma história</h2>
+
+        <p>Telefone diferente, endereço antigo, horários conflitantes e páginas que falam de serviços que o
+        perfil não mostra criam ruído. Faça uma revisão simples em todos os pontos controlados pela empresa.
+        Depois, teste o clique no telefone, no WhatsApp e no site pelo celular.</p>
+
+        <p>Para comércio e atendimento local, a página de {link('/para-comercios-locais/', 'SEO para negócios locais')}
+        mostra como perfil, site e reputação trabalham juntos. Ela é o destino comercial deste assunto; este
+        artigo existe para explicar a dúvida “perto de mim” sem transformar a resposta em uma propaganda.</p>
+
+        <h2>Como medir uma busca que muda por localização</h2>
+
+        <p>Não use uma busca manual isolada como relatório. Registre um conjunto de termos ligados aos
+        serviços, acompanhe as ações do Perfil da Empresa e compare os contatos recebidos. No site, observe
+        consultas e páginas no Search Console, além de ligações, formulários e cliques no WhatsApp.</p>
+
+        <ul>
+          <li>se a empresa aparece pelo nome, mas não pelo serviço, falta relevância para a intenção;</li>
+          <li>se aparece perto do endereço e some em outros bairros, a distância pesa naquele cenário;</li>
+          <li>se aparece, recebe visualização e ninguém clica, reveja fotos, avaliações, horário e proposta;</li>
+          <li>se o clique chega e não vira contato, o problema pode estar na página ou no atendimento.</li>
+        </ul>
+
+        <h2>Plano de ação para esta semana</h2>
+
+        <ol>
+          <li>pesquise e elimine fichas duplicadas antes de criar qualquer coisa;</li>
+          <li>confira categoria principal, endereço ou área, telefone, horário e site;</li>
+          <li>liste os três serviços que mais trazem receita e veja se cada um está explicado;</li>
+          <li>adicione fotos atuais e organize um pedido de avaliação pós-atendimento;</li>
+          <li>teste a empresa em alguns pontos reais da área atendida, registrando data e local;</li>
+          <li>meça ações de contato durante algumas semanas antes de mudar tudo de novo.</li>
+        </ol>
+        """,
+        "faq": [
+            ("Preciso escrever “perto de mim” no nome da empresa?",
+             "Não. Use o nome real da empresa. A proximidade é calculada a partir da localização de quem pesquisa e dos dados corretos do negócio; acrescentar a expressão ao nome pode contrariar as diretrizes do perfil."),
+            ("Uma empresa sem endereço aberto ao público pode aparecer?",
+             "Pode, quando é uma empresa elegível de área de atendimento e visita o cliente. Nesse caso, configure a área atendida e oculte o endereço residencial, seguindo as regras do Google."),
+            ("Avaliação com nome do serviço ajuda?",
+             "O mais importante é que a avaliação seja real e espontânea. Não dê um texto pronto. Oriente apenas o cliente a contar, com as palavras dele, como foi a experiência."),
+            ("Devo criar uma página para cada bairro?",
+             "Somente se cada página tiver utilidade e evidência próprias. Copiar o mesmo texto e trocar o bairro cria páginas fracas. Na maioria dos casos, uma página forte por serviço e uma cobertura regional clara são uma base melhor."),
+        ],
+        "cta": ("Sua empresa existe no mapa, mas some quando o cliente busca o serviço perto dele? Eu verifico perfil, site, área atendida e concorrentes para mostrar onde a visibilidade está travando.",
+                "/diagnostico-presenca-digital/", "Solicitar diagnóstico gratuito"),
+    },
+    {
+        "slug": "como-aparecer-no-google-sem-pagar",
+        "h1": "Como aparecer no Google sem pagar por anúncios",
+        "title": "Como aparecer no Google sem pagar por anúncios | RCB",
+        "desc": ("Veja como aparecer no Google sem pagar por anúncios: Perfil da Empresa gratuito, "
+                 "site indexável, páginas de serviço, conteúdo e medição."),
+        "cat": "Aparecer no Google",
+        "data": DATA,
+        "trilha_extra": ("/como-aparecer-no-google/", "Aparecer no Google"),
+        "corpo": f"""
+        <p>Dá para aparecer no Google sem comprar anúncios. Para um negócio local, o caminho gratuito passa
+        por um Perfil da Empresa verificado, um site que o Google consiga rastrear e páginas que respondam
+        ao que o cliente procura. Você não paga por clique, mas precisa investir trabalho e consistência.</p>
+
+        {caixa('<p><strong>Em termos simples:</strong> crie ou reivindique o Perfil da Empresa sem custo, '
+               'publique páginas úteis no site, facilite o rastreamento, conquiste avaliações verdadeiras '
+               'e acompanhe as consultas no Search Console. Google Ads compra exposição; não é uma taxa '
+               'obrigatória para entrar nos resultados orgânicos ou no Maps.</p>')}
+
+        <p>Essa distinção evita duas frustrações comuns. A primeira é achar que o cadastro gratuito garante
+        o primeiro lugar. A segunda é pensar que, sem dinheiro para mídia, não há nada a fazer. Nem uma
+        coisa nem outra é verdade: existe um caminho orgânico, só que ele leva tempo e depende da qualidade
+        da execução.</p>
+
+        <p>Se você ainda está decidindo entre os canais, leia {link('/blog/como-divulgar-minha-empresa-no-google/', 'como divulgar sua empresa no Google')}.
+        Aqui o recorte é mais específico: o que fazer quando a meta é construir visibilidade sem pagar por
+        anúncios.</p>
+
+        <h2>O que é gratuito — e o que continua tendo custo</h2>
+
+        {tabela(
+            ["Frente", "Há cobrança do Google por clique?", "Custo real"],
+            [
+                ["Perfil da Empresa", "não", "tempo para configurar, verificar e manter"],
+                ["Google Maps orgânico", "não", "relevância local, reputação e consistência"],
+                ["Resultados orgânicos do site", "não", "site, conteúdo, ajustes técnicos e acompanhamento"],
+                ["Google Ads", "sim, conforme campanha", "mídia, configuração, página e medição"],
+            ],
+            nota="Gratuito significa sem cobrança por exposição orgânica ou clique; não significa resultado automático nem trabalho zero."
+        )}
+
+        <p>O Google informa que
+        <a class="artigo-link" href="https://support.google.com/business/answer/7039811?hl=pt-BR"
+        target="_blank" rel="noopener noreferrer">criar e gerenciar um Perfil da Empresa não tem custo financeiro</a>.
+        Também não cobra para rastrear ou indexar uma página que atende aos
+        <a class="artigo-link" href="https://developers.google.com/search/docs/essentials/technical?hl=pt-br"
+        target="_blank" rel="noopener noreferrer">requisitos técnicos da Pesquisa</a>. Ainda assim, criação do site,
+        fotografia, redação, manutenção e consultoria podem ser feitos pela própria empresa ou contratados.
+        O custo muda de mídia para operação.</p>
+
+        <h2>1. Coloque a empresa no Maps sem pagar</h2>
+
+        <p>Pesquise primeiro o nome, telefone e endereço no Google Maps. Se já existir uma ficha, solicite a
+        propriedade; se não existir, crie o perfil e siga a verificação mostrada pelo Google. Duplicar a
+        empresa porque você não encontrou o acesso antigo costuma piorar o problema.</p>
+
+        <p>Depois da verificação, preencha os campos de forma completa e honesta. Categoria, horário,
+        telefone, área de atendimento, serviços e fotos reais ajudam o cliente e dão contexto ao sistema.
+        O tutorial detalhado está em {link('/blog/como-colocar-minha-empresa-no-google/', 'como colocar uma empresa no Google')}.</p>
+
+        <h2>2. Confira se o site pode entrar no índice</h2>
+
+        <p>Um site publicado não entra automaticamente em todas as buscas. Ele precisa responder com status
+        correto, permitir o acesso do Googlebot, ter conteúdo indexável e não carregar uma instrução
+        <code>noindex</code>. O sitemap ajuda o Google a descobrir URLs, mas não garante indexação nem melhora
+        posição sozinho.</p>
+
+        <p>Faça uma busca por <code>site:seudominio.com.br</code> como triagem e confirme as páginas mais
+        importantes na inspeção de URL do Search Console. Se nada aparecer, siga o diagnóstico de
+        {link('/blog/por-que-meu-site-nao-aparece-no-google/', 'site que não aparece no Google')} antes de publicar dezenas de textos.</p>
+
+        <h2>3. Crie páginas para o serviço que a pessoa procura</h2>
+
+        <p>A página inicial raramente consegue explicar todos os serviços com profundidade. Escolha primeiro
+        as ofertas que geram receita e crie uma página para cada intenção comercial importante. O título,
+        a introdução e os subtítulos precisam responder com clareza: o que é, para quem serve, como funciona,
+        onde atende, quais provas existem e como falar com a empresa.</p>
+
+        <p>Não abra cinco URLs para sinônimos da mesma pergunta. “Conserto de geladeira” e “assistência para
+        refrigerador”, por exemplo, podem pertencer à mesma intenção. Uma página completa costuma ser mais
+        forte do que várias versões curtas competindo entre si.</p>
+
+        <h2>4. Publique conteúdo que resolva uma dúvida anterior à compra</h2>
+
+        <p>Artigo funciona quando aproxima uma dúvida real de um serviço real. Liste as perguntas que chegam
+        no WhatsApp, as objeções ouvidas em orçamento e os erros que o cliente comete antes de contratar.
+        Depois responda com exemplos, limites, passos e critérios de decisão.</p>
+
+        <p>Ao final, a ligação com a página comercial precisa ser natural. Quem termina um guia sobre
+        indexação pode querer uma auditoria; quem lê sobre presença local pode precisar de
+        {link('/consultoria-seo-local/', 'consultoria de SEO local')}. O link deve ajudar a próxima decisão,
+        não existir apenas para repetir uma palavra-chave.</p>
+
+        <h2>5. Use avaliações, fotos e casos como prova</h2>
+
+        <p>Resultados gratuitos ainda disputam atenção. Fotos atuais, avaliações legítimas, respostas úteis
+        e casos documentados ajudam uma pessoa a escolher entre empresas que oferecem algo parecido. Não
+        compre avaliações e não publique números que você não consegue demonstrar.</p>
+
+        <p>No site da RCB, por exemplo, números são ligados aos registros apresentados na
+        {link('/cases/', 'página de cases')}. Essa é a diferença entre prova e decoração: o leitor consegue
+        entender o período, a métrica e o que realmente mudou.</p>
+
+        <h2>6. Faça a linkagem interna trabalhar a seu favor</h2>
+
+        <p>Uma página órfã depende de o Google encontrá-la apenas no sitemap. Ligue guias relacionados entre
+        si e, principalmente, conecte artigos informativos às páginas de serviço adequadas. Use textos de
+        link variados e descritivos, sem transformar cada parágrafo em uma lista de palavras-chave.</p>
+
+        <p>Um caminho simples para este tema é: {link('/como-aparecer-no-google/', 'guia principal para aparecer no Google')},
+        cadastro do perfil, diagnóstico de páginas que não aparecem e páginas comerciais por serviço. Assim,
+        cada URL tem um papel, e a arquitetura mostra quais são os conteúdos centrais.</p>
+
+        <h2>7. Meça antes de concluir que não funcionou</h2>
+
+        <p>No Search Console, acompanhe impressões, consultas, páginas e posição média. No Perfil da Empresa,
+        observe visualizações e ações disponíveis, como cliques, ligações e rotas. No site, registre envio de
+        formulário e clique no WhatsApp. Sem isso, uma alta de visibilidade pode passar despercebida — ou uma
+        página pode receber visitas sem gerar nenhum contato.</p>
+
+        <p>Compare períodos equivalentes e anote a data das mudanças. SEO não reage como um interruptor. O
+        rastreamento, a indexação e a reavaliação levam tempo, e a concorrência não fica parada enquanto você
+        trabalha.</p>
+
+        <h2>Plano orgânico de 30 dias</h2>
+
+        <ol>
+          <li><strong>Semana 1:</strong> reivindique o perfil, corrija os dados e teste todos os contatos.</li>
+          <li><strong>Semana 2:</strong> instale Search Console e Analytics, revise indexação e sitemap.</li>
+          <li><strong>Semana 3:</strong> melhore uma página comercial prioritária e publique uma resposta útil.</li>
+          <li><strong>Semana 4:</strong> ligue as páginas, peça avaliações reais e registre o ponto de partida.</li>
+        </ol>
+
+        <p>Em 30 dias, a meta não é prometer o topo. É deixar uma base rastreável, compreensível e mensurável.
+        A partir daí, os dados mostram se o gargalo está na indexação, relevância, contexto local, reputação
+        ou conversão.</p>
+
+        <h2>Quando anúncios ainda podem fazer sentido</h2>
+
+        <p>Não pagar anúncios é uma escolha válida, mas não precisa virar regra ideológica. Mídia pode ajudar
+        em lançamento, oferta urgente ou teste de demanda. O ponto é não confundir os canais: Ads compra
+        exposição enquanto há orçamento; SEO constrói páginas e sinais que continuam existindo.</p>
+
+        <p>Se o orçamento é curto, arrume primeiro o destino do clique. Pagar para enviar gente a uma página
+        lenta, genérica ou sem contato apenas acelera o desperdício. Uma base orgânica boa também melhora a
+        experiência de quem chega por anúncio depois.</p>
+        """,
+        "faq": [
+            ("O Google cobra para colocar uma empresa no Maps?",
+             "Não. Criar ou reivindicar um Perfil da Empresa elegível é gratuito. Pode haver custo se você contratar alguém para configurar, produzir fotos ou manter o perfil."),
+            ("Preciso pagar para o Google indexar meu site?",
+             "Não. O Google não cobra para rastrear ou indexar páginas. A página precisa estar acessível, funcionar e ter conteúdo indexável; mesmo assim, a indexação não é garantida."),
+            ("Sem anúncio eu consigo ficar em primeiro?",
+             "É possível aparecer organicamente, mas ninguém pode garantir a primeira posição. O resultado depende da busca, concorrência, localização, qualidade da página e outros sinais."),
+            ("Quanto tempo leva para aparecer sem pagar?",
+             "Não existe prazo fixo. Perfil verificado e busca pela marca podem reagir antes; páginas novas e termos competitivos podem levar mais tempo para rastreamento, indexação e ganho de posição."),
+        ],
+        "cta": ("Quer descobrir o que dá para fazer com a estrutura que você já tem, antes de gastar com anúncio? Eu reviso perfil, site, indexação e páginas prioritárias e mostro a ordem de ataque.",
                 "/diagnostico-presenca-digital/", "Solicitar diagnóstico gratuito"),
     },
 ]

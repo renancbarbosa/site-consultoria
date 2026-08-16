@@ -332,8 +332,8 @@ def palmas(ctx):
     return {
         "titulo": "SEO Local em Palmas (TO) e Google Perfil da Empresa | RCB",
         "desc": (
-            "SEO local em Palmas (TO): o endereço de quadra confunde o Google e tira sua "
-            "empresa do Maps. Perfil da Empresa configurado direito. Online, a partir de R$ 1.997."
+            "SEO local em Palmas (TO): endereço de quadra pode confundir o Google Maps. "
+            "Perfil da Empresa configurado corretamente. Online, a partir de R$ 1.997."
         ),
         "eyebrow": "Palmas · TO",
         "h1": "SEO local em Palmas (TO): comece pelo endereço que o Google não entende",
