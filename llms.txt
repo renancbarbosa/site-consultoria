@@ -56,6 +56,7 @@ Os valores abaixo são fechados e estão publicados no site em https://rcbseo.co
 - Como aparecer no Google Maps: https://rcbseo.com.br/blog/como-aparecer-no-google-maps/ — O que decide o ranqueamento no Maps e o passo a passo para aparecer melhor.
 - Como colocar minha empresa no Google: https://rcbseo.com.br/blog/como-colocar-minha-empresa-no-google/ — Passo a passo para criar ou reivindicar o perfil, verificar o negócio e aparecer na Busca e no Maps.
 - Como divulgar minha empresa no Google: https://rcbseo.com.br/blog/como-divulgar-minha-empresa-no-google/ — Comparação prática entre Perfil da Empresa, site, SEO e Google Ads, com plano de 30 dias.
+- Como divulgar minha empresa em Goiânia: https://rcbseo.com.br/blog/como-divulgar-minha-empresa-em-goiania/ — Plano local para comércio, clínica, escritório e prestador aparecerem no Google, Maps e WhatsApp em Goiânia e região.
 - Como aparecer nas buscas perto de mim: https://rcbseo.com.br/blog/como-aparecer-nas-buscas-perto-de-mim/ — Relevância, distância, destaque e ações concretas para disputar buscas locais sem inventar endereço.
 - Como aparecer no Google sem pagar por anúncios: https://rcbseo.com.br/blog/como-aparecer-no-google-sem-pagar/ — Plano orgânico com Perfil da Empresa, site indexável, conteúdo, links e medição.
 - Domínio caiu: o que fazer: https://rcbseo.com.br/blog/dominio-caiu-o-que-fazer/ — Diagnóstico de registro, DNS, hospedagem e perda de controle antes de trocar o domínio.
@@ -65,6 +66,7 @@ Os valores abaixo são fechados e estão publicados no site em https://rcbseo.co
 - Google Meu Negócio não aparece: o que pode ser?: https://rcbseo.com.br/blog/google-meu-negocio-nao-aparece/ — Causas de um perfil não aparecer no Maps (verificação, suspensão, categoria, distância) e como resolver.
 - Como saber se meu site está indexado no Google: https://rcbseo.com.br/blog/como-saber-se-meu-site-esta-indexado/ — Comando site:, Search Console, sitemap, canonical e noindex para verificar a indexação.
 - Quanto custa SEO local: https://rcbseo.com.br/blog/quanto-custa-consultoria-seo-local/ — Fatores que definem o preço do SEO local e quando o investimento faz sentido.
+- Quanto custa otimizar o Google Meu Negócio: https://rcbseo.com.br/blog/quanto-custa-otimizar-google-meu-negocio/ — O que é gratuito, o que entra no serviço profissional, preços publicados pela RCB e como estimar retorno.
 - Como receber mais orçamentos pelo WhatsApp usando o site: https://rcbseo.com.br/blog/como-receber-orcamentos-whatsapp-site/ — Como transformar o site em gerador de orçamentos: CTAs, botão de WhatsApp, páginas de serviço e confiança.
 - SEO local demora quanto tempo: https://rcbseo.com.br/blog/quanto-tempo-demora-seo-local/ — Os fatores que definem o prazo do SEO local, sem promessa de data fixa.
 - Erros que impedem uma empresa local de aparecer no Google: https://rcbseo.com.br/blog/erros-que-impedem-empresa-aparecer-no-google/ — Checklist dos erros mais comuns e a correção inicial de cada um.

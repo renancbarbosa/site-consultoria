@@ -13,6 +13,7 @@ from rcb_artigo import render_artigo            # noqa: E402
 from artigos_visibilidade_google import ARTIGOS  # noqa: E402
 
 MIN_PALAVRAS = 1000
+ALVO_SLUG = os.environ.get("RCB_ARTIGO_SLUG", "").strip()
 
 
 def remover_navegacao_ainda_nao_publicada(html):
@@ -35,8 +36,11 @@ def remover_navegacao_ainda_nao_publicada(html):
 
 def main():
     vistos = set()
+    gerados = 0
     for artigo in ARTIGOS:
         slug = artigo["slug"]
+        if ALVO_SLUG and slug != ALVO_SLUG:
+            continue
         assert slug not in vistos, f"slug duplicado: {slug}"
         vistos.add(slug)
 
@@ -51,6 +55,10 @@ def main():
 
         escrever(caminho, html)
         print(f"ok  {slug}  {palavras} palavras")
+        gerados += 1
+
+    if ALVO_SLUG and not gerados:
+        raise SystemExit(f"slug não encontrado: {ALVO_SLUG}")
 
 
 if __name__ == "__main__":

@@ -27,6 +27,12 @@ SITEMAP = os.path.join(RAIZ, "sitemap.xml")
 # impede que uma URL realmente revisada continue com lastmod obsoleto.
 ATUALIZADAS = {
     "/blog/como-aparecer-no-google-maps/",
+    "/blog/como-divulgar-minha-empresa-em-goiania/",
+    "/blog/como-divulgar-minha-empresa-no-google/",
+    "/blog/como-receber-orcamentos-whatsapp-site/",
+    "/blog/quanto-custa-otimizar-google-meu-negocio/",
+    "/blog/quanto-tempo-demora-seo-local/",
+    "/blog/quanto-tempo-leva-seo-local-clinicas/",
     "/blog/",
     "/blog/como-aparecer-nas-buscas-perto-de-mim/",
     "/blog/como-aparecer-no-google-sem-pagar/",
@@ -37,6 +43,8 @@ ATUALIZADAS = {
     "/cases/",
     "/como-aparecer-no-google/",
     "/para-comercios-locais/",
+    "/google-perfil-empresa/",
+    "/seo-local-goiania/",
     "/seo-para-clinicas-de-estetica/",
     "/seo-para-pequenas-empresas/",
     "/sobre/",

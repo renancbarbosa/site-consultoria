@@ -221,6 +221,10 @@ ARTIGOS = [
         {link('/blog/como-colocar-minha-empresa-no-google/', 'como colocar sua empresa no Google')}. Aqui a
         intenção é outra: escolher como promover a empresa depois que a base existe.</p>
 
+        <p>Quem atende a capital e a região metropolitana pode seguir a versão local deste plano em
+        {link('/blog/como-divulgar-minha-empresa-em-goiania/', 'como divulgar uma empresa em Goiânia')},
+        com exemplos de bairro, Maps, páginas de serviço e medição de contatos.</p>
+
         <h2>As 3 formas principais de divulgar uma empresa no Google</h2>
 
         {tabela(
@@ -699,6 +703,300 @@ ARTIGOS = [
              "Não existe prazo fixo. Perfil verificado e busca pela marca podem reagir antes; páginas novas e termos competitivos podem levar mais tempo para rastreamento, indexação e ganho de posição."),
         ],
         "cta": ("Quer descobrir o que dá para fazer com a estrutura que você já tem, antes de gastar com anúncio? Eu reviso perfil, site, indexação e páginas prioritárias e mostro a ordem de ataque.",
+                "/diagnostico-presenca-digital/", "Solicitar diagnóstico gratuito"),
+    },
+    {
+        "slug": "quanto-custa-otimizar-google-meu-negocio",
+        "h1": "Quanto custa otimizar o Google Meu Negócio?",
+        "title": "Quanto custa otimizar o Google Meu Negócio? | RCB",
+        "desc": ("Quanto custa otimizar o Google Meu Negócio? Veja o que é gratuito, preços da RCB, "
+                 "o que entra no serviço e como calcular se o investimento se paga."),
+        "cat": "Preço e contratação",
+        "data": DATA,
+        "trilha_extra": ("/google-perfil-empresa/", "Google Perfil da Empresa"),
+        "corpo": f"""
+        <p><strong>O Google não cobra para criar ou manter um Perfil da Empresa.</strong> O custo aparece quando
+        o dono contrata alguém para diagnosticar, configurar, produzir fotos, corrigir problemas e acompanhar
+        o posicionamento. Na RCB, a otimização profissional do perfil começa em <strong>R$ 1.997, em pagamento
+        único</strong>. Quando o trabalho também inclui site, conteúdo e acompanhamento, o escopo e o preço mudam.</p>
+
+        {caixa('<p><strong>Resposta direta:</strong> cadastrar a empresa é gratuito. O Pacote Presença Lite da '
+               'RCB custa R$ 1.997 e inclui configuração e otimização do perfil, publicação de dez fotos, '
+               'organização de avaliações e entrega prevista em sete dias úteis. Esse prazo é de execução; '
+               'não é promessa de primeira posição.</p>')}
+
+        <p>Esta não é uma estimativa inventada para preencher artigo. A consulta “quanto custa otimizar Google
+        Meu Negócio” já gerou <strong>21 impressões no Search Console da própria RCB</strong> no recorte analisado.
+        Isso mostra uma dúvida de compra concreta: a pessoa já entendeu que o perfil precisa de trabalho e quer
+        saber quanto terá de investir.</p>
+
+        <h2>O Perfil da Empresa é gratuito. Então pelo que você paga?</h2>
+
+        <p>O perfil continua gratuito mesmo quando um profissional administra a ficha. O pagamento remunera o
+        trabalho feito ao redor dela: leitura do cenário, correções, organização de informações e produção do
+        material necessário. O próprio Google confirma que
+        <a class="artigo-link" href="https://support.google.com/business/answer/7039811?hl=pt-BR"
+        target="_blank" rel="noopener noreferrer">criar e gerenciar um Perfil da Empresa não tem custo</a>.</p>
+
+        <p>Uma comparação simples ajuda. Abrir uma conta bancária pode ser gratuito; organizar fluxo de caixa
+        com um contador é um serviço. No Google ocorre algo parecido: a ferramenta é gratuita, mas acertar
+        categoria, serviços, fotos, avaliações, página de destino e medição exige tempo e responsabilidade.</p>
+
+        <h2>Preços da RCB para Google Meu Negócio</h2>
+
+        {tabela(
+            ["Pacote", "Investimento", "Quando faz sentido"],
+            [
+                ["Presença Lite", "R$ 1.997, uma vez", "Já existe site, mas o perfil está incompleto ou abandonado"],
+                ["Presença", "R$ 2.497, uma vez", "A empresa precisa de perfil organizado e site de até cinco páginas"],
+                ["Crescimento", "R$ 2.997/mês, mínimo de 3 meses", "Já existe uma base e é preciso trabalhar conteúdo, avaliações e ajustes mensais"],
+                ["Dominação", "R$ 4.997/mês, mínimo de 3 meses", "Há vários serviços, concorrência forte e necessidade de acompanhamento mais intenso"],
+            ],
+            nota="Valores publicados pela RCB em 15 de agosto de 2026. Confira a página comercial antes de contratar, pois escopo e preços podem ser atualizados."
+        )}
+
+        <p>Os detalhes e os botões de contratação ficam na página de
+        {link('/google-perfil-empresa/#pacotes', 'otimização do Google Perfil da Empresa')}. O diagnóstico
+        inicial serve justamente para evitar que alguém compre um pacote maior sem necessidade.</p>
+
+        <h2>O que precisa estar incluído em uma otimização séria?</h2>
+
+        <ul>
+          <li><strong>auditoria do perfil atual:</strong> propriedade, verificação, possíveis duplicidades e campos incorretos;</li>
+          <li><strong>categoria principal e categorias adicionais:</strong> escolhidas pelo serviço real, não por uma lista aleatória;</li>
+          <li><strong>serviços, descrição, horários e área atendida:</strong> preenchidos de acordo com a operação;</li>
+          <li><strong>fotos reais:</strong> fachada, ambiente, equipe, produtos ou execução do serviço;</li>
+          <li><strong>avaliações:</strong> processo legítimo de pedido e respostas úteis, sem compra de depoimentos;</li>
+          <li><strong>ligação com o site:</strong> página coerente com o que foi prometido no perfil;</li>
+          <li><strong>medição:</strong> registro do ponto de partida e acompanhamento das ações disponíveis.</li>
+        </ul>
+
+        <p>Se a proposta diz apenas “colocamos palavras-chave no perfil”, pergunte o que será entregue de verdade.
+        Repetir serviço no nome da empresa, criar endereço falso ou comprar avaliações pode até parecer uma
+        solução rápida, mas cria risco de suspensão e não constrói um ativo confiável.</p>
+
+        <h2>Quando R$ 1.997 se paga?</h2>
+
+        <p>A conta depende da margem que sobra em cada novo cliente, não do faturamento bruto. Divida o valor do
+        investimento pela margem de contribuição média de uma venda. O resultado mostra aproximadamente quantos
+        novos clientes seriam necessários para cobrir o custo.</p>
+
+        {tabela(
+            ["Margem por novo cliente", "Clientes para cobrir R$ 1.997", "Leitura prática"],
+            [
+                ["R$ 200", "10 clientes", "Negócio de ticket menor depende de mais volume"],
+                ["R$ 500", "4 clientes", "Quatro vendas adicionais cobrem aproximadamente o investimento"],
+                ["R$ 1.000", "2 clientes", "Dois clientes já se aproximam do ponto de equilíbrio"],
+                ["R$ 2.000", "1 cliente", "Uma contratação pode cobrir o valor inicial"],
+            ],
+            nota="Exemplo aritmético simplificado: investimento ÷ margem por cliente, arredondado para cima. Não é previsão de vendas nem promessa de retorno."
+        )}
+
+        <p>Para um restaurante, salão ou loja, a conta pode precisar considerar recompra. Para clínica,
+        escritório ou prestador de serviço, um único cliente pode ter valor maior. O importante é usar números
+        do próprio negócio. Visibilidade sem margem e sem capacidade de atendimento não paga projeto nenhum.</p>
+
+        <h2>Otimização pontual ou acompanhamento mensal?</h2>
+
+        <p>A otimização pontual faz sentido quando o problema é estrutural: perfil incompleto, informações
+        inconsistentes, fotos ruins ou ausência de uma página básica. Acompanhamento mensal passa a fazer sentido
+        quando a empresa disputa buscas concorridas, oferece vários serviços ou precisa publicar e ajustar o site
+        com base nos dados.</p>
+
+        <p>Não transforme manutenção em ritual vazio. Postar por postar não garante posição. O trabalho mensal
+        deve responder a alguma evidência: consulta nova no Search Console, serviço sem página, avaliação sem
+        resposta, concorrente ocupando determinada busca ou contato que chega sem qualidade.</p>
+
+        <h2>Como comparar dois orçamentos sem olhar apenas o preço</h2>
+
+        <ol>
+          <li>Peça a lista exata do que será entregue e o que fica fora.</li>
+          <li>Confirme se fotos, site, redação e acompanhamento estão incluídos.</li>
+          <li>Pergunte quem terá a propriedade da conta e dos arquivos.</li>
+          <li>Desconfie de garantia de topo, prazo fixo de ranking ou avaliações vendidas em lote.</li>
+          <li>Veja se existe medição antes e depois, não apenas captura de tela de uma busca isolada.</li>
+        </ol>
+
+        <p>Preço baixo para preencher meia dúzia de campos pode sair caro se for necessário refazer tudo.
+        Por outro lado, uma empresa com um problema simples não precisa começar em gestão mensal. Um diagnóstico
+        honesto separa correção pontual de estratégia contínua.</p>
+
+        <h2>Antes de pagar, faça estas três verificações</h2>
+
+        <p>Pesquise a empresa pelo nome no Maps, confira se você controla a ficha correta e teste telefone,
+        horário, rota e site. Depois compare a categoria principal com o serviço que mais gera receita. Por fim,
+        pesquise o serviço em diferentes pontos da região, sem concluir que uma única busca representa toda a
+        cidade.</p>
+
+        <p>Se o perfil nem aparece pelo nome, siga primeiro o diagnóstico de
+        {link('/blog/por-que-minha-empresa-nao-aparece-no-google/', 'empresa que não aparece no Google')}.
+        Se ele aparece, mas está mal preenchido, use o
+        {link('/blog/como-otimizar-google-perfil-empresa/', 'checklist de otimização do perfil')}.</p>
+        """,
+        "faq": [
+            ("O Google cobra para cadastrar uma empresa?",
+             "Não. Criar, reivindicar e gerenciar um Perfil da Empresa elegível é gratuito. O custo existe quando você contrata configuração, fotos, site, consultoria ou acompanhamento."),
+            ("Quanto custa a otimização na RCB?",
+             "O trabalho começa em R$ 1.997 no Pacote Presença Lite, em pagamento único. Há opções que também incluem site e acompanhamento mensal, conforme a necessidade."),
+            ("Pagar a otimização garante ficar em primeiro?",
+             "Não. O pagamento remunera o trabalho executado; não compra posição orgânica. O Google considera relevância, distância, destaque e outros sinais, e ninguém controla o resultado exato."),
+            ("Preciso contratar manutenção todos os meses?",
+             "Nem sempre. Um perfil com problema pontual pode começar por uma correção única. Acompanhamento é mais útil quando há concorrência, vários serviços e necessidade de ajustes contínuos."),
+        ],
+        "cta": ("Quer saber qual pacote faz sentido sem comprar no escuro? Eu reviso seu perfil e digo se o problema pede uma correção pontual, site ou acompanhamento.",
+                "/diagnostico-presenca-digital/", "Solicitar diagnóstico gratuito"),
+    },
+    {
+        "slug": "como-divulgar-minha-empresa-em-goiania",
+        "h1": "Como divulgar minha empresa em Goiânia e aparecer no Google",
+        "title": "Como divulgar minha empresa em Goiânia no Google | RCB",
+        "desc": ("Como divulgar sua empresa em Goiânia: organize Google Maps, site, bairros, avaliações e "
+                 "WhatsApp para ser encontrado por clientes da região."),
+        "cat": "Goiânia e região",
+        "data": DATA,
+        "trilha_extra": ("/seo-local-goiania/", "SEO local em Goiânia"),
+        "corpo": f"""
+        <p>Para divulgar uma empresa em Goiânia, comece por quem já está procurando o que você vende. Isso
+        significa organizar o <strong>Google Maps, as páginas do site e o caminho até o WhatsApp</strong> antes
+        de espalhar anúncios e postagens sem saber o que gera contato.</p>
+
+        {caixa('<p><strong>Plano direto:</strong> confirme a ficha correta no Google, descreva os serviços que '
+               'realmente vende, crie páginas para as buscas importantes, mostre onde atende em Goiânia e '
+               'região e meça ligações, rotas, formulários e cliques no WhatsApp. Divulgação local começa '
+               'com clareza, não com quantidade de postagem.</p>')}
+
+        <p>Quem administra loja, salão, oficina, restaurante, clínica ou escritório raramente procura “SEO
+        local” no primeiro momento. A frase costuma ser mais simples: “como colocar minha empresa no Google”,
+        “como divulgar meu comércio” ou “por que minha empresa não aparece no Maps”. Esta página foi escrita
+        para essa conversa, sem exigir que o dono aprenda o vocabulário técnico antes de resolver o problema.</p>
+
+        <h2>Onde uma empresa de Goiânia precisa aparecer?</h2>
+
+        <p>Não existe um único resultado chamado “Google”. Uma busca local pode exibir anúncios, mapa, páginas
+        orgânicas, imagens e vídeos. Para a maioria dos comércios e prestadores, três pontos merecem prioridade:
+        o Perfil da Empresa no Maps, uma página própria que explique o serviço e um contato que funcione no celular.</p>
+
+        {tabela(
+            ["O que o cliente pesquisa", "Onde você precisa estar forte", "Próxima ação"],
+            [
+                ["produto ou serviço perto de mim", "Google Maps e Perfil da Empresa", "categoria, localização, avaliações e fotos reais"],
+                ["serviço + Goiânia ou bairro", "página de serviço no site", "responder oferta, região, prova e contato"],
+                ["nome da empresa", "perfil, site e dados consistentes", "corrigir telefone, horário e endereço"],
+                ["preço, prazo ou como funciona", "artigo ou seção específica", "dar resposta objetiva e conduzir ao orçamento"],
+            ],
+            nota="Os exemplos representam intenções de busca. Não são promessa de volume nem de posição."
+        )}
+
+        <h2>1. Coloque a empresa no Google Maps do jeito certo</h2>
+
+        <p>Pesquise primeiro nome, telefone e endereço. Se já existe uma ficha legítima, reivindique o acesso;
+        não crie outra. Depois confira categoria, horário, telefone, site, área atendida, serviços e fotos. O guia
+        de {link('/blog/como-colocar-minha-empresa-no-google/', 'como colocar uma empresa no Google')} mostra o
+        cadastro passo a passo.</p>
+
+        <p>Se o cliente visita o estabelecimento, o endereço precisa corresponder a uma operação real. Se você
+        atende na casa do cliente, configure área de serviço e oculte endereço residencial quando for o caso.
+        Endereço emprestado e nome carregado de palavras-chave podem criar um problema maior que a falta de posição.</p>
+
+        <h2>2. Escolha as buscas que têm relação com receita</h2>
+
+        <p>Liste os serviços que realmente geram venda e escreva como um cliente leigo pediria cada um. Uma
+        oficina pode receber “mecânico perto de mim” e “troca de embreagem em Goiânia”. Um salão pode disputar
+        “cabeleireiro no Setor Bueno” e “salão perto de mim”. A página não precisa repetir cinquenta variações;
+        precisa responder bem à intenção central.</p>
+
+        <p>Comece por três a cinco ofertas prioritárias. Para cada uma, confirme se existe uma página com título
+        claro, descrição do serviço, região atendida, fotos ou prova, dúvidas comuns e botão de contato. A home
+        sozinha raramente explica tudo com profundidade suficiente.</p>
+
+        <h2>3. Trabalhe Goiânia, bairros e cidades vizinhas com realidade</h2>
+
+        <p>Goiânia, Aparecida de Goiânia, Trindade, Senador Canedo, Goianira e Nerópolis não são palavras para
+        trocar mecanicamente num texto. Distância, operação, concorrência e capacidade de atendimento mudam.
+        Uma página local só faz sentido quando a empresa realmente atende aquela região e consegue acrescentar
+        informação própria.</p>
+
+        <p>Dentro de Goiânia, o comportamento também varia. Uma busca feita no Setor Marista pode entregar mapa
+        diferente da mesma busca feita no Jardim América. Por isso, não use uma pesquisa no seu próprio celular
+        como prova definitiva de posição. Consulte o
+        {link('/blog/como-aparecer-no-google-maps/', 'guia de posicionamento no Google Maps')} para entender
+        relevância, distância e destaque.</p>
+
+        <h2>4. Faça o site levar a pessoa até o orçamento</h2>
+
+        <p>Ser encontrado e não gerar conversa não resolve. No celular, o visitante precisa entender em poucos
+        segundos o que a empresa faz, onde atende e qual é o próximo passo. Um botão de WhatsApp visível ajuda,
+        mas precisa estar acompanhado de uma página que responda à dúvida.</p>
+
+        <p>Use uma mensagem inicial específica, como “Olá, quero orçamento para [serviço] em [bairro]”. Isso
+        reduz o esforço do cliente e ajuda a empresa a identificar de onde veio a conversa. O artigo sobre
+        {link('/blog/como-receber-orcamentos-whatsapp-site/', 'receber mais orçamentos pelo WhatsApp')} traz um
+        checklist de conversão para o site.</p>
+
+        <h2>5. Use avaliações e fotos como prova, não como enfeite</h2>
+
+        <p>Peça avaliação a clientes reais depois do atendimento e responda de forma útil. Não compre pacotes de
+        avaliações e não ofereça recompensa condicionada a nota positiva. Fotos devem mostrar o que a pessoa
+        encontrará: fachada, ambiente, equipe, produto ou execução do serviço.</p>
+
+        <p>Para comércio local, a foto da entrada pode evitar que o cliente erre o acesso. Para serviço em
+        domicílio, imagens do trabalho ajudam a reduzir insegurança. Para clínica, fotos precisam respeitar
+        consentimento, regras profissionais e privacidade.</p>
+
+        <h2>6. Meça quais bairros, serviços e páginas trazem contato</h2>
+
+        <p>No Search Console, acompanhe consultas e páginas. No Perfil da Empresa, observe as métricas que o
+        Google disponibilizar. No site, registre cliques no WhatsApp, ligações e formulários. Anote quando uma
+        página foi publicada ou alterada; sem uma linha do tempo, toda melhora parece acaso.</p>
+
+        {tabela(
+            ["Sinal", "O que ele sugere", "Decisão possível"],
+            [
+                ["impressões sobem, posição ainda baixa", "o Google começou a testar a página", "melhorar resposta, links e prova antes de trocar a URL"],
+                ["posição melhora, não há clique", "snippet ou intenção podem estar fracos", "revisar título e descrição sem prometer demais"],
+                ["há clique, mas não há contato", "o gargalo está na conversão", "melhorar oferta, confiança e CTA"],
+                ["um serviço gera contatos melhores", "há aderência comercial", "aprofundar página e conteúdos relacionados"],
+            ]
+        )}
+
+        <h2>O que não fazer para divulgar sua empresa em Goiânia</h2>
+
+        <ul>
+          <li>criar uma página quase igual para cada bairro, sem informação própria;</li>
+          <li>inventar endereço em uma cidade onde a empresa não opera;</li>
+          <li>repetir “Goiânia” em toda frase até o texto ficar artificial;</li>
+          <li>comprar avaliações, seguidores ou cadastros em massa;</li>
+          <li>publicar dezenas de artigos sem ligar nenhum deles aos serviços;</li>
+          <li>medir sucesso apenas pesquisando o próprio nome no próprio celular.</li>
+        </ul>
+
+        <h2>Plano de 30 dias para um comércio local</h2>
+
+        <ol>
+          <li><strong>Dias 1 a 5:</strong> corrigir ficha, telefone, horário, endereço, categorias e acesso.</li>
+          <li><strong>Dias 6 a 10:</strong> definir três serviços prioritários e revisar as páginas correspondentes.</li>
+          <li><strong>Dias 11 a 15:</strong> produzir fotos reais e criar um processo simples de avaliações.</li>
+          <li><strong>Dias 16 a 20:</strong> revisar WhatsApp, formulários e mensagens de contato.</li>
+          <li><strong>Dias 21 a 30:</strong> medir o ponto de partida, ligar conteúdos e decidir a próxima página.</li>
+        </ol>
+
+        <p>Esse plano não promete liderança em um mês. Ele remove problemas básicos e cria dados para uma decisão
+        melhor. Se você quer uma execução presencial em Goiânia e região, veja como funciona o
+        {link('/seo-local-goiania/', 'trabalho de SEO local em Goiânia')}. Para lojas, salões, oficinas,
+        restaurantes e outros estabelecimentos, a página de
+        {link('/para-comercios-locais/', 'SEO para comércio local')} mostra os formatos e preços.</p>
+        """,
+        "faq": [
+            ("Como divulgar minha empresa em Goiânia de graça?",
+             "Comece reivindicando o Perfil da Empresa, corrigindo dados, publicando fotos reais, pedindo avaliações legítimas e criando páginas úteis no site. A ferramenta do Google é gratuita; execução profissional e produção de conteúdo podem ter custo."),
+            ("Preciso criar uma página para cada bairro de Goiânia?",
+             "Não. Crie uma página de bairro apenas quando houver atendimento real e informação própria. Para a maioria das empresas, páginas fortes por serviço e uma boa página local são um começo melhor."),
+            ("Posso atender Aparecida de Goiânia com a mesma página?",
+             "Pode mencionar a região atendida quando isso for verdadeiro. Uma URL exclusiva só faz sentido se a operação e o conteúdo justificarem uma página realmente diferente."),
+            ("Quanto tempo leva para começar a aparecer?",
+             "Não há prazo fixo. Correções de perfil podem ser percebidas antes; páginas novas dependem de rastreamento, indexação, concorrência e qualidade. Meça impressões e contatos por período."),
+        ],
+        "cta": ("Quer saber o que está impedindo clientes de Goiânia de encontrar e chamar sua empresa? Eu reviso perfil, site, buscas e caminho até o WhatsApp.",
                 "/diagnostico-presenca-digital/", "Solicitar diagnóstico gratuito"),
     },
 ]
