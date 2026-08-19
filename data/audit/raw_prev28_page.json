@@ -1,0 +1,792 @@
+{
+  "site": "https://rcbseo.com.br/",
+  "request": {
+    "startDate": "2026-06-23",
+    "endDate": "2026-07-20",
+    "dimensions": [
+      "page"
+    ],
+    "type": "web",
+    "rowLimit": 25000,
+    "dataState": "final"
+  },
+  "rows": [
+    {
+      "keys": [
+        "https://rcbseo.com.br/"
+      ],
+      "clicks": 5,
+      "impressions": 88,
+      "ctr": 0.056818181818181816,
+      "position": 4.75
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/como-saber-se-meu-site-esta-indexado/"
+      ],
+      "clicks": 1,
+      "impressions": 70,
+      "ctr": 0.014285714285714285,
+      "position": 8.5
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/quanto-tempo-leva-seo-local-clinicas/"
+      ],
+      "clicks": 1,
+      "impressions": 14,
+      "ctr": 0.07142857142857142,
+      "position": 55.714285714285715
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/consultoria-seo-local/"
+      ],
+      "clicks": 1,
+      "impressions": 14,
+      "ctr": 0.07142857142857142,
+      "position": 31.642857142857142
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/diagnostico-presenca-digital/"
+      ],
+      "clicks": 1,
+      "impressions": 9,
+      "ctr": 0.1111111111111111,
+      "position": 25.22222222222222
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/acompanhamento-seo/"
+      ],
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 6.333333333333333
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/auditoria-seo/"
+      ],
+      "clicks": 0,
+      "impressions": 13,
+      "ctr": 0,
+      "position": 30.923076923076923
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/automacao-de-processos/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 4.75
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/checklist-presenca-digital-empresa-local/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/clinica-de-estetica-nao-aparece-no-google/"
+      ],
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 4.833333333333334
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/como-aparecer-google-clinica-estetica-goiania/"
+      ],
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 5.555555555555555
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/como-aparecer-no-google-maps/"
+      ],
+      "clicks": 0,
+      "impressions": 161,
+      "ctr": 0,
+      "position": 62.62732919254658
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/como-melhorar-posicionamento-empresa-google/"
+      ],
+      "clicks": 0,
+      "impressions": 37,
+      "ctr": 0,
+      "position": 31
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/como-otimizar-google-perfil-empresa/"
+      ],
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 73.66666666666667
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/como-receber-orcamentos-whatsapp-site/"
+      ],
+      "clicks": 0,
+      "impressions": 14,
+      "ctr": 0,
+      "position": 13.785714285714286
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/como-responder-avaliacoes-google-clinica/"
+      ],
+      "clicks": 0,
+      "impressions": 39,
+      "ctr": 0,
+      "position": 6.769230769230769
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/como-saber-se-consultor-google-meu-negocio-e-bom/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 5.5
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/consultor-seo-ou-agencia-de-marketing-digital/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/erros-no-whatsapp-que-perdem-orcamento/"
+      ],
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 8.833333333333332
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/erros-que-impedem-empresa-aparecer-no-google/"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 7.75
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/google-meu-negocio-nao-aparece/"
+      ],
+      "clicks": 0,
+      "impressions": 39,
+      "ctr": 0,
+      "position": 13.128205128205128
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/google-meu-negocio-para-clinicas-passo-a-passo/"
+      ],
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/google-perfil-atrapalhando-resultados/"
+      ],
+      "clicks": 0,
+      "impressions": 14,
+      "ctr": 0,
+      "position": 9.214285714285714
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/o-que-analisar-antes-de-contratar-seo/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/o-que-e-diagnostico-presenca-digital/"
+      ],
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 6.8
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/o-que-e-seo-local/"
+      ],
+      "clicks": 0,
+      "impressions": 80,
+      "ctr": 0,
+      "position": 39.3375
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/paginas-que-empresa-local-precisa-no-site/"
+      ],
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 24
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/por-que-meu-site-nao-aparece-no-google/"
+      ],
+      "clicks": 0,
+      "impressions": 43,
+      "ctr": 0,
+      "position": 10.930232558139535
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/por-que-minha-clinica-odontologica-nao-aparece-no-google/"
+      ],
+      "clicks": 0,
+      "impressions": 19,
+      "ctr": 0,
+      "position": 6.947368421052632
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/por-que-minha-empresa-nao-aparece-no-google/"
+      ],
+      "clicks": 0,
+      "impressions": 93,
+      "ctr": 0,
+      "position": 10.010752688172044
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/quanto-custa-consultoria-seo-local/"
+      ],
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 54.25
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/quanto-custa-manter-site-otimizado-seo/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/quanto-tempo-demora-seo-local/"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 21.666666666666668
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/seo-ou-trafego-pago-empresa-local/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 55
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/seo-para-clinicas-por-que-aparecer-no-google-vale-mais-que-indicacao/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 81
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/seo-para-contadores/"
+      ],
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 20.875
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/seo-para-manutencao-e-reformas/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/seo-para-prestadores-de-servico/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/seo-para-profissionais-liberais/"
+      ],
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 11.428571428571429
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/site-ou-instagram-para-empresa-local/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 6.5
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/site-wix-wordpress-ou-site-otimizado-seo/"
+      ],
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/blog/vale-a-pena-seo-para-pequena-empresa/"
+      ],
+      "clicks": 0,
+      "impressions": 109,
+      "ctr": 0,
+      "position": 57.944954128440365
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/cases/"
+      ],
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 5.777777777777778
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/como-aparecer-no-google/"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 80.5
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/como-atrair-mais-pacientes/"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 65.66666666666667
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/consultor-seo-goiania/"
+      ],
+      "clicks": 0,
+      "impressions": 15,
+      "ctr": 0,
+      "position": 17.533333333333335
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/consultoria-seo/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 35
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/consultoria-seo/campinas/"
+      ],
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 65
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/consultoria-seo/cuiaba/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/consultoria-seo/duque-de-caxias/"
+      ],
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 85.6
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/consultoria-seo/florianopolis/"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 50
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/consultoria-seo/franca/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 47
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/consultoria-seo/itabuna/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/consultoria-seo/itajai/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 45
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/consultoria-seo/mogi-das-cruzes/"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 48.666666666666664
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/consultoria-seo/mossoro/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/consultoria-seo/novo-hamburgo/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/consultoria-seo/palmas/"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 41.333333333333336
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/consultoria-seo/ribeirao-preto/"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 64.66666666666666
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/consultoria-seo/salvador/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 44
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/consultoria-seo/sao-bernardo-do-campo/"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 58.666666666666664
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/consultoria-seo/sao-jose-dos-pinhais/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 13
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/consultoria-seo/teresopolis/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/contato/"
+      ],
+      "clicks": 0,
+      "impressions": 18,
+      "ctr": 0,
+      "position": 17.444444444444443
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/diagnostico-gratuito/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 8.5
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/google-meu-negocio-para-clinicas/"
+      ],
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 42.42857142857143
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/google-perfil-empresa/"
+      ],
+      "clicks": 0,
+      "impressions": 107,
+      "ctr": 0,
+      "position": 79.83177570093459
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/guia-seo-local/"
+      ],
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 18.75
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/marketing-para-advogados/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/marketing-para-clinicas/"
+      ],
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/para-advogados/"
+      ],
+      "clicks": 0,
+      "impressions": 19,
+      "ctr": 0,
+      "position": 53.94736842105263
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/para-comercios-locais/"
+      ],
+      "clicks": 0,
+      "impressions": 67,
+      "ctr": 0,
+      "position": 51.656716417910445
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/para-profissionais-liberais/"
+      ],
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 29.11111111111111
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/privacidade/"
+      ],
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 6.166666666666667
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/seo-local-goiania/"
+      ],
+      "clicks": 0,
+      "impressions": 27,
+      "ctr": 0,
+      "position": 38.55555555555556
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/seo-para-clinicas-de-emagrecimento/"
+      ],
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 69.28571428571429
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/seo-para-clinicas-de-estetica/"
+      ],
+      "clicks": 0,
+      "impressions": 129,
+      "ctr": 0,
+      "position": 42.248062015503876
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/seo-para-clinicas/"
+      ],
+      "clicks": 0,
+      "impressions": 156,
+      "ctr": 0,
+      "position": 70.97435897435898
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/seo-para-contadores/"
+      ],
+      "clicks": 0,
+      "impressions": 17,
+      "ctr": 0,
+      "position": 74.58823529411765
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/seo-para-dentistas/"
+      ],
+      "clicks": 0,
+      "impressions": 42,
+      "ctr": 0,
+      "position": 35.26190476190476
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/seo-para-medicos/"
+      ],
+      "clicks": 0,
+      "impressions": 14,
+      "ctr": 0,
+      "position": 17.285714285714285
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/seo-para-pequenas-empresas/"
+      ],
+      "clicks": 0,
+      "impressions": 25,
+      "ctr": 0,
+      "position": 34.04
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/seo-para-psicologos/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/site-otimizado-para-seo/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "keys": [
+        "https://rcbseo.com.br/sobre/"
+      ],
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 5.571428571428571
+    }
+  ],
+  "calls": 1,
+  "rowsFetched": 86,
+  "rowsReturned": 86
+}
