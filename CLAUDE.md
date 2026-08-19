@@ -563,6 +563,94 @@ python scripts/conferir-conversao.py
 - **Off-page continua sendo a prioridade no 1.** Preco mais alto so piora a conta se o funil
   continuar vazio: posicao media 38,9. Backlinks, diretorios, LinkedIn e posts de case.
 
+## Rodada de 18/08/2026: auditoria de crescimento com dados reais (publicada — `bcebcc1`)
+
+Relatório completo: `docs/RCB_GROWTH_AUDIT_2026-08-18.md`. Planilhas e JSON brutos do
+Search Console: `data/audit/`. Baseline da rodada: `c02a985`.
+
+### Search Console — como puxar os dados (funciona, já autenticado)
+CLI `seo` v0.2.33, conta `renancb@gmail.com`, escopo de leitura. Token expira em ~1h:
+`seo auth refresh`. Propriedade correta: `https://rcbseo.com.br/`.
+```
+seo gsc-query --site "https://rcbseo.com.br/" --start-date AAAA-MM-DD --end-date AAAA-MM-DD \
+  --dimensions query,page --limit 25000 --json --refresh > saida.json
+```
+**Não existe comando de reenvio de sitemap nem de "pedir indexação"** — a API do Search
+Console não oferece isso; é só pela interface, manual.
+
+### Números medidos (90 dias, 20/05 a 17/08/2026)
+4.179 impressões · 21 cliques · posição média 35,3 · 175 URLs com impressão.
+Comparando os dois períodos de 28 dias: impressões +26%, posição 39,2 → 33,9, URLs com
+impressão 86 → 148. As rodadas anteriores estão funcionando, devagar.
+
+### Achados que mudam decisão
+1. **`/consultor-seo-goiania/` apareceu em 4º orgânico** numa checagem pontual de SERP
+   (18/08, `gl=br`, `pws=0`, IP fora de Goiânia) — mas rendeu só **47 impressões em 90
+   dias**. A página se sai bem; a busca é que quase não existe.
+   ⚠️ **4ª posição (observação pontual) e posição média 16,5 (Search Console, média
+   ponderada de todas as consultas) NÃO são a mesma métrica.** Não comparar as duas.
+2. **Comparação de 6 páginas:** mais palavras e mais links internos **não** acompanharam
+   melhor desempenho nesta amostra — a melhor colocada é a mais curta (1.285 palavras) e
+   a com menos links (15), enquanto `/google-perfil-empresa/` tem 244 links e está em
+   77,6. **Isso não prova que conteúdo/link interno/schema sejam irrelevantes** (podem ser
+   necessários e não suficientes); prova só que, isolados, não explicaram a diferença.
+   Menor concorrência da consulta é a hipótese mais plausível, não causa demonstrada.
+3. **Backlink NÃO é conclusão comprovada de gargalo.** É hipótese importante, a avaliar
+   junto com intenção de busca, CTR, arquitetura, relevância e concorrência.
+4. **1.359 impressões e ZERO clique** nas páginas nacionais de nicho (posições 43 a 93).
+5. **602 impressões de 1ª página e 1 clique** em 6 páginas (posições 7,2 a 12,8) — a maior
+   oportunidade do site, e é trabalho de title/description, não de backlink.
+6. **4 canibalizações medidas**, duas com sinal invertido (o artigo ganha da página de
+   venda): `seo para contabilidade` e `consultoria seo local`.
+
+### O que foi publicado
+- **`/criacao-de-sites-goiania/` (URL nova).** Motivo: "criação de site(s) Goiânia"
+  ~500/mês cada variante, CPC ref. R$ 17,61, e **zero impressão** porque não havia página.
+  Gerador: `scripts/gerar-criacao-sites-goiania.py` (idempotente, clona só o esqueleto de
+  `/consultor-seo-goiania/`). Links internos: `scripts/ligar-criacao-sites.py` (9 links,
+  âncoras variadas). Sitemap 144 → **145**.
+- **CTA deixou de ser o diagnóstico gratuito** (`scripts/cta-whatsapp-2026-08-18.py`):
+  63 botões viraram WhatsApp em 36 arquivos + 70 textos padronizados em 68 arquivos.
+  O gerador de cidades foi ensinado **antes** de regerar. `/diagnostico-presenca-digital/`
+  **continua no ar** (24 impressões, posição 16,7) e não é órfã: 313 links de menu.
+- **Home deixou de ser "SEO para clínicas"**: title/description/og/twitter, e os 4 cartões
+  viraram comércios, prestadores, profissionais liberais e clínicas. Os 8 nichos que
+  saíram dos cartões ganharam a linha `.nichos-extra` para não perder link da home.
+
+### PÁGINA PROTEGIDA — regra que continua valendo
+`/consultor-seo-goiania/` **não pode ser alterada sem autorização explícita**: URL, title,
+H1, headings, canonical, schema, conteúdo, template, links internos recebidos.
+Nesta rodada ficou **byte a byte idêntica** (mesmo blob git; em produção, mesmo sha256
+depois de normalizar CRLF). Ela **ganhou** 3 links (a página nova a linka) e não perdeu
+nenhum. **Os 2 botões de "diagnóstico gratuito" dela seguem lá de propósito.**
+**Não colocar "Criação de sites" no menu** sem autorização — o menu é sitewide e
+reescreveria o `<nav>` dela.
+
+### Publicação
+- `c02a985..bcebcc1` → `origin main`. Cloudflare publicou em ~15 s.
+- Conferidas em produção: home, página nova, protegida, sitemap, cidades, hub — todas 200.
+  Mobile 390 px conferido com clique real (`elementFromPoint`): a barra fixa está no
+  rodapé e o aviso de cookies **não** a cobre.
+- **IndexNow enviado com 136 URLs — aceito (HTTP 200).** Chave
+  `19341b29c6054af601879d85a34d62c5`, a de sempre. **Nunca gerar outra.** Foram só as
+  URLs **alteradas E indexáveis**: das 305 páginas com HTML alterado, 169 são cidades em
+  `noindex` e ficaram de fora de propósito. Todas as 136 confirmadas em 200 antes do envio.
+
+### Armadilha nova
+Ao gerar lista de URLs com Python no Windows e consumir no Bash: `io.open(...,"w")` grava
+`\r\n`, o `\r` entra na URL e o **curl devolve `000` para tudo** — parece site fora do ar,
+mas é a quebra de linha. Use `newline=""` ao gravar ou `tr -d '\r'` ao ler. E `while read`
+pula a última linha se o arquivo não terminar em quebra de linha.
+
+### Pendências
+- **Renan:** reenviar `sitemap.xml` (145 URLs, 1 nova) e pedir indexação de
+  `/criacao-de-sites-goiania/` no Search Console. `seo url-inspect` confirmou em 18/08:
+  "URL is unknown to Google" — normal, publicada minutos antes.
+- Reescrever title/description das 6 páginas QUASE LÁ (maior retorno por esforço).
+- Resolver as 2 canibalizações de sinal invertido.
+- CNPJ e razão social no rodapé (aberto desde 09/08).
+- Avaliar a página nova com dados em **60–90 dias** (por volta de meados de outubro/2026).
+
 ## Como trabalhar neste projeto
 
 - Renan não é técnico: sempre explicar em português simples, passo a passo, sem jargão sem explicar.
