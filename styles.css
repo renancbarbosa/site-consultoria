@@ -1210,6 +1210,18 @@ section {
   gap: 20px;
 }
 
+/* Linha de nichos secundarios sob a grade da home. Existe para os nichos que
+   sairam dos cartoes (dentistas, estetica, medicos...) nao perderem o link
+   interno vindo da home - eles continuam com impressao no Search Console. */
+.nichos-extra {
+  margin: 24px auto 0;
+  max-width: 760px;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.72);
+}
+
 .problem-card,
 .cluster-card {
   background: linear-gradient(158deg, rgba(22,46,76,0.6) 0%, rgba(14,28,48,0.72) 100%);
