@@ -300,8 +300,8 @@ INTROS = [
 ]
 
 CTAS = [
-    "Quer saber por que sua empresa em {cidade} não aparece no Google — e o que fazer para mudar isso? Peça um diagnóstico gratuito. Você recebe uma análise inicial do seu perfil no Google, do seu site e dos concorrentes que aparecem na sua frente.",
-    "O primeiro passo não custa nada: um diagnóstico gratuito da presença da sua empresa em {cidade} no Google. Você descobre o que está travando sua visibilidade e o que priorizar — antes de qualquer proposta.",
+    "Quer saber por que sua empresa em {cidade} não aparece no Google — e o que fazer para mudar isso? Me chame no WhatsApp e me diga o que você vende. Eu procuro como se fosse seu cliente e te mostro quem está aparecendo no seu lugar.",
+    "Me mande uma mensagem contando o que a sua empresa faz em {cidade}. Eu olho seu perfil no Google, seu site e os concorrentes que aparecem na sua frente, e digo com franqueza o que priorizar — antes de qualquer proposta.",
 ]
 
 
@@ -484,7 +484,7 @@ def pagina_cidade(c, vizinhas):
     cta = CTAS[variante(slug + "x", len(CTAS))].format(cidade=cidade)
     leitura_indexavel = bloco_leitura_indexavel(c)
 
-    whats_msg = quote(f"Olá, Renan. Tenho uma empresa em {cidade}/{uf} e quero um diagnóstico gratuito para aparecer melhor no Google.")
+    whats_msg = quote(f"Olá, Renan. Tenho uma empresa em {cidade}/{uf} e quero saber como faço para aparecer melhor no Google.")
     whats_url = f"https://wa.me/{WHATS}?text={whats_msg}"
 
     faq = [
@@ -676,10 +676,10 @@ def pagina_cidade(c, vizinhas):
     <section class="cta-band" aria-labelledby="cta-titulo">
       <div class="container">
         <div class="cta-inner">
-          <div class="section-tag">Diagnóstico gratuito</div>
+          <div class="section-tag">Fale comigo</div>
           <h2 id="cta-titulo" class="section-title">Quer aparecer no Google em {cidade}?</h2>
           <p>{cta}</p>
-          <a class="btn btn-primary" href="{whats_url}" target="_blank" rel="noopener noreferrer" data-event="cta_click" data-location="final_whatsapp" data-page="cidade-{slug}">Quero meu diagnóstico gratuito</a>
+          <a class="btn btn-primary" href="{whats_url}" target="_blank" rel="noopener noreferrer" data-event="cta_click" data-location="final_whatsapp" data-page="cidade-{slug}">Falar no WhatsApp</a>
         </div>
       </div>
     </section>
@@ -820,10 +820,10 @@ def pagina_cidade_piloto(c, vizinhas):
     <section class="cta-band" aria-labelledby="cta-titulo">
       <div class="container">
         <div class="cta-inner">
-          <div class="section-tag">Diagnóstico gratuito</div>
+          <div class="section-tag">Fale comigo</div>
           <h2 id="cta-titulo" class="section-title">{p['cta_titulo']}</h2>
           <p>{p['cta_texto']}</p>
-          <a class="btn btn-primary" href="{whats_url}" target="_blank" rel="noopener noreferrer" data-event="cta_click" data-location="final_whatsapp" data-page="cidade-{slug}">Quero meu diagnóstico gratuito</a>
+          <a class="btn btn-primary" href="{whats_url}" target="_blank" rel="noopener noreferrer" data-event="cta_click" data-location="final_whatsapp" data-page="cidade-{slug}">Falar no WhatsApp</a>
         </div>
       </div>
     </section>
@@ -908,7 +908,7 @@ def pagina_hub(cidades):
           <h1 class="page-title">Consultoria de SEO por cidade: apareça no Google onde seus clientes estão</h1>
           <p class="page-subtitle">A RCB atende empresas de todo o Brasil com consultoria online de SEO e Google Meu Negócio — o mesmo método do atendimento presencial em Goiânia, por vídeo e com acesso aos seus dados reais do Google. Escolha a sua cidade abaixo e veja os números do seu mercado: quantas empresas existem, quantas abriram nos últimos meses e em quais ramos a concorrência mais cresce.</p>
           <div class="page-actions">
-            <a class="btn btn-primary" href="/diagnostico-presenca-digital/" data-event="cta_click" data-location="hero" data-page="hub-cidades">Solicitar diagnóstico gratuito</a>
+            <a class="btn btn-primary" href="https://wa.me/{WHATS}?text={quote('Olá, Renan! Vi seu site e quero saber como faço para minha empresa aparecer no Google.')}" target="_blank" rel="noopener noreferrer" data-event="cta_click" data-location="hero" data-page="hub-cidades">Falar no WhatsApp</a>
           </div>
         </div>
         <aside class="page-hero-panel">
