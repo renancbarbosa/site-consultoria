@@ -21,10 +21,13 @@ inteiro é 0,5%.
 
 Três descobertas mudam a estratégia:
 
-1. **A página vencedora vence uma busca que quase ninguém faz.**
-   `/consultor-seo-goiania/` está em **4º lugar orgânico** — confirmado na SERP. Mas
-   rendeu **47 impressões em 90 dias**. Ganhar essa disputa não gera negócio; o que ela
-   prova é *que tipo* de disputa a RCB consegue ganhar hoje.
+1. **A página mais bem colocada disputa uma busca que quase ninguém faz.**
+   `/consultor-seo-goiania/` apareceu em **4ª posição orgânica numa consulta pontual de
+   SERP** feita em 18/08/2026 para o termo exato "consultor seo goiania". Ainda assim,
+   rendeu **47 impressões em 90 dias**. Ganhar essa disputa específica não gera negócio;
+   o que ela sugere é *que tipo* de disputa a RCB parece conseguir ganhar hoje.
+   ⚠️ Ver a ressalva metodológica logo abaixo: **4ª posição e posição média 16,5 não são
+   a mesma métrica e não devem ser comparadas.**
 
 2. **65% das impressões vêm de páginas que nunca vão gerar clique.** As páginas
    nacionais de nicho de saúde somam mais de 1.000 impressões em posições 43 a 93, com
@@ -35,9 +38,35 @@ Três descobertas mudam a estratégia:
    R$ 17,61 — e **zero impressão** no Search Console, porque não existia página.
    Foi criada nesta rodada.
 
-O gargalo continua sendo autoridade externa. Mas dentro do que dá para fazer no site,
-a correção mais valiosa era parar de disputar SERP nacional de nicho e ocupar a SERP
-local que a RCB comprovadamente consegue ganhar.
+Autoridade externa (backlinks) é uma **hipótese forte** de gargalo, mas não a única — e
+não foi provada aqui. Dentro do que dá para fazer no site, a aposta desta rodada foi
+deixar de disputar SERP nacional de nicho e ocupar a SERP local onde a RCB **aparenta**
+ter mais chance.
+
+---
+
+## Ressalva metodológica — leia antes das tabelas
+
+Este relatório mistura duas fontes que **não são comparáveis entre si**, e vale deixar
+explícito para ninguém tirar conclusão errada depois:
+
+1. **"4ª posição" é uma observação pontual de SERP.** Foi uma busca única, feita em
+   18/08/2026, de um IP fora de Goiânia, com `gl=br` e `pws=0`, para o termo exato
+   "consultor seo goiania". É uma fotografia de um instante, de um lugar, de uma
+   consulta. Pode variar por dia, por cidade, por dispositivo e por histórico do usuário.
+
+2. **"Posição média 16,5" é outra coisa.** É a média que o Search Console calcula
+   ponderando **todas** as impressões da página em **todas** as consultas dos 90 dias —
+   inclusive consultas ruins, consultas em que a página apareceu na posição 60, e
+   consultas que o Google não mostra por privacidade.
+
+**As duas não se contradizem e não se confirmam.** Uma página pode estar em 4º numa
+consulta e ter média 16,5 porque aparece mal em dezenas de outras. Nenhum número deste
+relatório deve ser lido como "a página subiu de 16,5 para 4".
+
+Da mesma forma, **causalidade não foi estabelecida em nenhum ponto**. Os padrões abaixo
+são correlações observadas numa amostra pequena (6 páginas, um domínio, um período).
+Estão escritos como hipóteses de trabalho, não como leis.
 
 ---
 
@@ -103,9 +132,14 @@ página não ranqueia. Por isso a SERP foi conferida ao vivo:
 > 6. michelferreira.com.br · 7. agathosagencia.com.br · 8. brainstormmarketingdigital.com.br ·
 > 9. pulse62.com
 
-**A alegação se confirma** — 4º lugar de fora de Goiânia; de dentro da cidade pode ser
-melhor, o que explica a percepção de 2º/3º. E o Search Console também está certo: a
-consulta praticamente não é feita. **A página ranqueia; a busca é que quase não existe.**
+**A alegação se sustenta nesta observação** — 4º lugar numa busca pontual, feita de fora
+de Goiânia; de dentro da cidade pode ser melhor, o que explicaria a percepção de 2º/3º.
+E o Search Console não contradiz isso: a consulta praticamente não é feita. **A página
+aparece bem colocada nessa consulta específica; a busca é que quase não existe.**
+
+Vale repetir: uma única checagem de SERP não é medição de ranking. Para afirmar posição
+com segurança seria preciso acompanhar a mesma consulta ao longo de dias, de Goiânia, em
+celular e desktop.
 
 ### Anatomia da página
 
@@ -133,34 +167,48 @@ consulta praticamente não é feita. **A página ranqueia; a busca é que quase 
 | `/google-perfil-empresa/` (fracassa) | 1.329 | **244** | 9/22 | 0 | 77,6 | 0 |
 | `/seo-para-clinicas/` (fracassa) | **2.951** | **228** | 16/35 | 6 | 69,5 | 0 |
 
-### F. O padrão encontrado — e o que ele NÃO é
+### F. O que a amostra mostra — e o que ela não permite afirmar
 
-A tabela desmonta as explicações fáceis:
+**O que está medido (fatos da amostra de 6 páginas):**
 
-- **Não é tamanho.** A vencedora é a mais curta. A pior colocada (`/seo-para-clinicas/`,
-  posição 69,5) é a mais longa, com 2,3× mais texto.
-- **Não é link interno.** A vencedora tem 15 links; `/google-perfil-empresa/` tem 244 e
-  está em 77,6. **Link interno não venceu SERP nacional em nenhum caso deste site.**
-- **Não é schema.** Todas têm o mesmo conjunto, e as fracassadas até têm mais tipos.
-- **Não é estrutura de headings.** As fracassadas têm mais H2 e H3.
+- **Mais palavras não acompanharam melhor desempenho.** A melhor colocada é a mais curta
+  (1.285 palavras); a pior colocada (`/seo-para-clinicas/`, 69,5) é a mais longa (2.951).
+- **Mais links internos não acompanharam melhor desempenho.** A melhor colocada tem 15
+  links; `/google-perfil-empresa/` tem 244 e está em 77,6.
+- **Schema e estrutura de headings não separam os grupos.** Todas têm conjunto
+  equivalente de schema, e as piores colocadas até têm mais H2 e H3.
 
-O que a vencedora tem de diferente:
+**O que isso NÃO prova.** Nada disso demonstra que conteúdo, link interno ou schema sejam
+irrelevantes. A leitura correta é mais modesta: **isoladamente, e nesta amostra, nenhuma
+dessas variáveis explicou a diferença de desempenho.** É perfeitamente possível que elas
+sejam necessárias e não suficientes — ou que estejam mal aplicadas nas páginas fracas
+(intenção errada, texto que não responde à consulta, arquitetura que dilui). Seis páginas
+de um único domínio não sustentam conclusão causal.
 
-1. **Correspondência exata entre a consulta e o H1/title**, curtos, sem subtítulo
-   explicativo grudado.
-2. **Densidade geográfica real** — 18 menções a Goiânia, contra 0 a 6 nas fracassadas.
-3. **Entidade nomeada** — pessoa real com nome no title, `Person` + `LocalBusiness` +
-   endereço verificável.
-4. **E, acima de tudo: concorrência fraca.** A SERP de "consultor seo goiania" é
-   disputada por agências locais pequenas. A de "seo para clínicas de estética" é
-   disputada por gente com backlink de verdade.
+**Hipóteses de trabalho, em ordem de plausibilidade:**
 
-> **A regra replicável:** com quase zero autoridade externa, a RCB só ganha SERP onde a
-> concorrência também é fraca — ou seja, **local + correspondência exata**. Nenhuma
-> quantidade de texto, link interno ou schema compensou a falta de backlink nas SERPs
-> nacionais. Isso está medido seis vezes na tabela acima.
+1. **Nível de concorrência da consulta.** É a hipótese mais provável para o desempenho de
+   `/consultor-seo-goiania/`: a SERP de "consultor seo goiania" é disputada por agências
+   locais pequenas, enquanto a de "seo para clínicas de estética" reúne concorrentes
+   maiores. Provável contribuição — não causa isolada demonstrada.
+2. **Correspondência exata entre consulta e H1/title**, curtos e sem subtítulo grudado.
+3. **Densidade geográfica** — 18 menções a Goiânia, contra 0 a 6 nas piores colocadas.
+4. **Entidade nomeada** — pessoa real no title, `Person` + `LocalBusiness` + endereço
+   verificável.
+5. **Autoridade externa (backlinks).** Hipótese importante, **não testada aqui**: não há
+   ferramenta de backlink nesta máquina, então a diferença de perfil de links entre a RCB
+   e os concorrentes é suposição, não medição.
 
-Foi exatamente esse molde que a página nova de criação de sites seguiu.
+**Fatores que ainda não foram avaliados e podem pesar tanto quanto os acima:** intenção
+de busca de cada página (a página responde mesmo o que a pessoa perguntou?), CTR
+(há 602 impressões de primeira página com 1 clique — isso é sintoma de algo), arquitetura
+e relevância tópica do site como um todo. Qualquer conclusão sobre "o gargalo" precisa
+considerar esse conjunto, não só backlink.
+
+> **Aposta desta rodada (não regra comprovada):** o padrão sugere que, no estágio atual, a
+> RCB tem mais chance em SERP local de menor concorrência com correspondência exata do que
+> em SERP nacional de nicho. A página nova de criação de sites foi construída seguindo esse
+> molde — é uma aposta a ser verificada com dados em 60–90 dias, não uma certeza.
 
 ## G. Páginas quase chegando (QUASE LÁ)
 
@@ -178,7 +226,7 @@ Todas com posição de primeira página ou perto, e **zero clique**:
 **Este é o grupo de maior retorno por esforço do site inteiro.** Seis páginas na
 primeira página ou colada nela, somando 602 impressões e **um único clique**. Não é
 problema de posição — é de título e descrição não responderem à pergunta que a pessoa
-fez. Corrigir isso não depende de backlink.
+fez. Corrigir isso é trabalho de CTR e independe de conseguir backlink.
 
 ## H. Páginas fracassadas
 
@@ -191,9 +239,12 @@ fez. Corrigir isso não depende de backlink.
 | `/como-aparecer-no-google/` | 149 | 58,5 | 0 |
 | `/seo-para-contadores/` | 140 | 65,2 | 0 |
 
-Somadas: **1.359 impressões, zero clique.** São consultas nacionais de nicho, e o site
-não tem autoridade para disputá-las. Não é defeito de texto — foi tentado texto (rodada
-de 08/08), links internos (rodada de 12/08) e preço (09 e 10/08). Nada moveu.
+Somadas: **1.359 impressões, zero clique.** São consultas nacionais de nicho, onde o site
+não consegue chegar perto do topo. O que se pode afirmar com segurança: **texto (rodada
+de 08/08), links internos (12/08) e preço (09 e 10/08) já foram tentados nessas páginas e
+não moveram a posição.** O que *ainda não* se pode afirmar é a causa — autoridade externa
+é a hipótese mais citada, mas intenção de busca e relevância tópica do domínio inteiro
+para esses temas também são explicações plausíveis e não foram isoladas.
 
 **Sem sinal:** 20 artigos do blog e duas páginas comerciais (`/conteudo-para-seo/`,
 `/site-para-clinica/`) com zero impressão em 90 dias. Vários são recentes (15/08), então
@@ -272,8 +323,9 @@ Três frentes, com prioridade nesta ordem:
    da autoridade da RCB. Toda energia de conteúdo novo deveria ir para cá.
 2. **Dor em linguagem leiga (o que já tem atenção).** O cluster de "não apareço no
    Google". Trabalho de CTR e de caminho até a venda, não de volume de artigo.
-3. **Nichos nacionais (o que só volta com backlink).** Congelar produção. As páginas
-   ficam no ar, mas não recebem mais esforço até haver autoridade externa.
+3. **Nichos nacionais (onde três tentativas já não moveram nada).** Congelar produção.
+   As páginas ficam no ar, mas não recebem mais esforço até que algo mude no quadro —
+   seja autoridade externa, seja uma revisão de intenção de busca dessas páginas.
 
 Por segmento de cliente, a home passou a falar com comércios, prestadores de serviço,
 profissionais liberais e clínicas — nessa ordem — em vez de três recortes de saúde.
@@ -319,7 +371,9 @@ Por ordem de retorno sobre esforço:
    são artigos que não levam a nenhuma página de venda.
 4. **Trocar o CTA da página protegida.** Ela ainda tem 2 botões de "diagnóstico
    gratuito" — a oferta que não converte. **Depende da sua autorização** (item T).
-5. **Off-page.** Continua sendo o teto de tudo. Nada no site resolve posição média 35.
+5. **Off-page.** Segue como a hipótese de gargalo mais citada e a mais barata de testar —
+   mas deve ser perseguida **junto** com CTR, intenção e arquitetura, não no lugar delas.
+   Item 1 desta lista, por exemplo, pode melhorar tráfego sem nenhum backlink novo.
 6. **CNPJ e razão social no rodapé** — pendente desde 09/08, esperando o número.
 
 ## P. Riscos
@@ -336,7 +390,12 @@ Por ordem de retorno sobre esforço:
   adversário duro em SERP local, e o domínio tem quase zero backlink. Prazo honesto para
   avaliar: 60 a 90 dias.
 - **O que este trabalho não resolve:** o funil continua quase vazio. Melhorar conversão
-  de quem quase não chega não muda faturamento.
+  de quem quase não chega não muda faturamento por si só.
+- **Risco de conclusão precipitada:** o maior risco deste relatório é ele ser lido como
+  prova de que "conteúdo e link interno não importam" ou de que "só falta backlink".
+  Nenhuma das duas coisas foi demonstrada. A amostra é pequena, é de um único domínio e
+  de um único período, e variáveis importantes (intenção, CTR, relevância tópica,
+  concorrência) não foram isoladas umas das outras.
 
 ## Q. Testes executados
 
