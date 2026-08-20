@@ -242,7 +242,7 @@ def rodape(scripts_extra=""):
             '<div class="footer-col footer-col-identity"><span class="logo-text">RCB</span>'
             '<strong class="footer-name">Renan Carvalho Barbosa</strong>'
             '<span class="footer-cargo">Consultor de SEO Local e Google Meu Negócio</span>'
-            '<p class="footer-bio">Com base em Goiânia e atendimento online para clínicas e negócios locais em todo o Brasil.</p></div>'
+            '<p class="footer-bio">Atendimento presencial em Goiânia, Aparecida de Goiânia e Anápolis. Consultoria estratégica online para clínicas e empresas locais em todo o Brasil.</p></div>'
             '<div class="footer-col"><h4 class="footer-col-title">Serviços</h4><nav class="footer-col-nav">'
             '<a href="/consultoria-seo-local/">Consultoria SEO Local</a>'
             '<a href="/consultoria-seo/">Consultoria SEO por cidade</a>'

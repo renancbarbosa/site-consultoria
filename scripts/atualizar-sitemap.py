@@ -34,6 +34,8 @@ ATUALIZADAS = {
     "/blog/quanto-tempo-demora-seo-local/",
     "/blog/quanto-tempo-leva-seo-local-clinicas/",
     "/blog/",
+    "/consultoria-seo/anapolis/",
+    "/consultoria-seo/aparecida-de-goiania/",
     "/blog/como-aparecer-nas-buscas-perto-de-mim/",
     "/blog/como-aparecer-no-google-sem-pagar/",
     "/blog/dominio-caiu-o-que-fazer/",
