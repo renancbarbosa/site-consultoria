@@ -19,7 +19,7 @@ sys.path.insert(0, AQUI)
 from rcb_base import RAIZ, BASE_URL  # noqa: E402
 from rcb_cidades import eh_indexavel  # noqa: E402
 
-HOJE = "2026-08-15"
+HOJE = "2026-08-20"
 SITEMAP = os.path.join(RAIZ, "sitemap.xml")
 
 # URLs cujo conteúdo mudou nesta rodada. Manter a lista explícita evita o erro

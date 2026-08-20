@@ -3,6 +3,7 @@
 > Consultoria especializada em SEO Local, Google Meu Negócio (Google Business Profile), sites otimizados e automação de processos para clínicas, dentistas, estética, médicos, advogados e comércios locais em Goiânia e região, com atendimento online em todo o Brasil. Fundada por Renan Carvalho Barbosa.
 
 ## Sobre
+- Documentação Completa para LLMs: https://rcbseo.com.br/llms-full.txt
 - Fundador: Renan Carvalho Barbosa, consultor de SEO Local e Google Meu Negócio.
 - Atendimento: presencial em Goiânia e região metropolitana; online no restante do Brasil.
 - Endereço: Rua 18-A, nº 256, Goiânia - GO, CEP 74070-060.
