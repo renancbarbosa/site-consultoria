@@ -9,7 +9,9 @@
      - Nada aqui envia dado para lugar nenhum. É tudo desenho na tela.
      - A conversa do primeiro cenário já vem escrita no HTML pelo gerador.
        Se o JavaScript não rodar, o visitante ainda lê a conversa inteira.
-     - Quem pediu menos movimento no sistema vê tudo de uma vez, parado.
+     - Quem pediu menos movimento no sistema vê a mesma conversa acontecer,
+       só mais rápida e sem a bolha de "digitando". Quem desliga as animações
+       não está pedindo para pular o conteúdo.
      - Roda dentro de uma IIFE: nenhum nome vaza para o escopo global.
        (Já derrubamos o /script.js uma vez por colisão de nome em
        /para-comercios-locais/. Não repetir.)
@@ -120,20 +122,26 @@
 
       var mensagens = cenario.mensagens || [];
 
-      // Sem animação: tudo de uma vez.
-      if (semMovimento) {
-        mensagens.forEach(function (m) { thread.appendChild(balao(m)); });
-        aoFim();
-        return;
-      }
-
+      // Quem pediu menos movimento no sistema CONTINUA vendo a conversa
+      // acontecer — só mais rápida e sem a bolha de "digitando", que é
+      // movimento puro. O CSS já desliga as animações de entrada e dos
+      // pontinhos (@media prefers-reduced-motion no agentes-ia.css), então
+      // nada aqui precisa despejar a conversa toda de uma vez.
+      // Despejar de uma vez quebrava as duas coisas que a seção promete:
+      // a conversa já aparecia pronta e o "Ver a conversa de novo" repintava
+      // instantaneamente, parecendo um botão morto.
       var acumulado = 0;
       mensagens.forEach(function (msg, i) {
         var ehAgente = msg.de === "agente";
-        var pausa = msg.espera != null ? msg.espera : (i === 0 ? 250 : 900);
+        var pausa;
+        if (semMovimento) {
+          pausa = i === 0 ? 120 : 320;
+        } else {
+          pausa = msg.espera != null ? msg.espera : (i === 0 ? 250 : 900);
+        }
         acumulado += pausa;
 
-        if (ehAgente) {
+        if (ehAgente && !semMovimento) {
           var tempoDigitando = Math.min(1500, 380 + String(msg.texto || "").length * 11);
           var marcaDigitando = acumulado;
           relogios.push(setTimeout(function () {
@@ -173,8 +181,16 @@
     }
 
     /* só começa quando o celular aparece na tela — senão a conversa
-       termina antes de o visitante chegar nela */
+       termina antes de o visitante chegar nela.
+       Observa a TELA DO CELULAR, não a seção inteira: a seção é mais alta que
+       a tela do visitante, e "35% da seção visível" pode nunca acontecer num
+       celular pequeno — a conversa ficaria parada para sempre. */
     if ("IntersectionObserver" in window) {
+      /* O HTML já traz a conversa inteira montada — é o que o visitante sem
+         JavaScript lê. Com JavaScript vivo ela não pode ficar à mostra: quem
+         rolava até aqui via a conversa PRONTA e só depois ela sumia e começava
+         do zero. Esvaziar agora deixa o celular em branco até a hora certa. */
+      thread.innerHTML = "";
       var jaComecou = false;
       var obs = new IntersectionObserver(function (entradas) {
         entradas.forEach(function (e) {
@@ -185,7 +201,7 @@
           }
         });
       }, { threshold: 0.35 });
-      obs.observe(raiz);
+      obs.observe(thread);
     } else {
       tocar(0);
     }

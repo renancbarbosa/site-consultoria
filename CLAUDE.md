@@ -772,6 +772,83 @@ receberam só o item de menu. Precisam ser refeitas.
 - Dois commits, um push só: o conserto separado da novidade, para dar para desfazer um sem
   o outro.
 
+## Rodada de 08/09/2026 (2ª leva): demo do WhatsApp consertada + 2 artigos do blog refeitos
+
+### A demo de conversa não funcionava para parte dos visitantes
+
+Relato do Renan: "já entra toda a conversa de uma vez, clico em ver a conversa
+de novo e ele não faz nada". Duas causas somadas, as duas no
+`assets/js/agentes-ia.js`:
+
+1. **O atalho do `prefers-reduced-motion`.** Quem tem "efeitos de animação"
+   desligado no Windows (ou "reduzir movimento" no celular) caía num ramo que
+   despejava a conversa inteira de uma vez e retornava. Isso quebrava as duas
+   coisas que a seção promete: a conversa aparecia pronta, e "Ver a conversa de
+   novo" repintava tudo no mesmo instante — indistinguível de um botão morto.
+   **O CSS já cuidava da preferência** (`@media (prefers-reduced-motion)` no
+   `agentes-ia.css` desliga `.wa-linha` e `.wa-ponto`), então o JS estava
+   fazendo de novo, e de um jeito destrutivo. Agora quem pediu menos movimento
+   vê **a mesma conversa acontecer**, só mais rápida (120ms/320ms) e sem a bolha
+   de "digitando", que é movimento puro. Reduzir movimento não é pedir para
+   pular o conteúdo.
+2. **O HTML já vinha com a conversa inteira montada.** É o fallback para quem
+   não tem JavaScript — e deve continuar existindo. Mas com o JS vivo ela ficava
+   à mostra: quem rolava até ali via a conversa **pronta**, e só depois ela
+   sumia e começava do zero. Agora o `montarDemo` esvazia o celular assim que
+   assume o controle, deixando-o em branco até o gatilho.
+
+**Corrigido de passagem:** o `IntersectionObserver` observava a seção inteira
+(`[data-wa-demo]`) com `threshold: 0.35`. A seção é mais alta que a tela (1.049px
+contra 844px), então em celular pequeno "35% da seção visível" pode nunca
+acontecer — e a conversa ficaria parada para sempre. Passou a observar a **tela
+do celular** (`[data-wa-thread]`, 389px), que é o que o comentário do código já
+dizia que ele deveria observar.
+
+**Como testar isto de novo** (o caso do Renan não reproduz num Chrome comum):
+navegue com um `initScript` que force `matchMedia('...reduced-motion...')` a
+devolver `matches: true`, e conte os filhos de `[data-wa-thread]` ao longo do
+tempo. Medido depois da correção, nos dois cenários e nas três páginas: celular
+começa em 0, conversa cresce (0→2→4→5→6→7→9), replay reinicia e cresce de novo,
+troca de cenário reinicia. A calculadora continua reagindo.
+
+Observação não corrigida: no ritmo normal a conversa leva **cerca de 11 segundos**
+até a última mensagem. É a proposta ("ritmo real de uma conversa") e não foi
+alterada — mas é longo, e vale decidir se encurta.
+
+### Os 2 artigos truncados do blog
+
+`/blog/como-escolher-consultoria-seo-goiania/` e `/blog/seo-para-clinicas-vale-a-pena/`
+estavam **cortados no meio** desde antes: terminavam logo depois da caixa de CTA,
+sem `</div>` do `artigo-container`, sem `</article>`, `</main>`, rodapé, barra de
+CTA no celular, WhatsApp flutuante, `script.js`, aviso de cookies, `</body>` nem
+`</html>`. Eram os dois únicos assim no site — e **estavam no sitemap e no índice
+do blog, com `index, follow`**: o Google recebia os dois como páginas normais.
+
+Reconstruídos a partir de `blog/o-que-e-seo-local/index.html`. Dois defeitos
+extras apareceram no caminho e foram corrigidos junto:
+
+1. **`data-page` era de outro artigo** (`blog-quanto-tempo-demora-seo-local`) nos
+   dois. Foram criados por copiar/colar e o rótulo nunca foi ajustado — os
+   cliques deles eram contados no GA4 no nome do artigo errado.
+2. **O CTA ainda apontava para o diagnóstico gratuito.** Eram os **únicos 2 dos
+   76 artigos** ainda assim: os outros 74 viraram WhatsApp em 18/08 e estes
+   ficaram de fora justamente por estarem quebrados. Agora seguem o padrão.
+
+Conferido: tags balanceadas (parser de pilha, não contagem), JSON-LD válido,
+rodapé com a coluna Agentes de IA, e os 4 botões da faixa inferior (barra de CTA
+e aviso de cookies) clicáveis de verdade por `elementFromPoint`, com o banner
+aberto. O conferidor do projeto caiu de 13 para 5 problemas — os 5 restantes são
+avisos de jargão no texto, pré-existentes.
+
+### Achado registrado, NÃO corrigido
+Nos 74 artigos do blog a barra de CTA do celular foi injetada **dentro de
+`<div class="artigo-cta-wrap">`**, no meio do texto, em vez de no fim do `<body>`.
+Medido: ela ainda funciona (fica em `position: fixed` colada no rodapé da tela,
+porque nenhum ancestral cria bloco de contenção ali) — diferente do que
+aconteceu na home em 09/08, onde um ancestral quebrava o `bottom: 0`. É feio no
+HTML, não é defeito visual. Nos 2 artigos refeitos ela ficou no lugar certo,
+depois do `</footer>`.
+
 ## Como trabalhar neste projeto
 
 - Renan não é técnico: sempre explicar em português simples, passo a passo, sem jargão sem explicar.
