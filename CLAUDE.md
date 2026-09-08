@@ -651,6 +651,127 @@ pula a última linha se o arquivo não terminar em quebra de linha.
 - CNPJ e razão social no rodapé (aberto desde 09/08).
 - Avaliar a página nova com dados em **60–90 dias** (por volta de meados de outubro/2026).
 
+## Rodada de 08/09/2026: conserto de 198 páginas corrompidas + linha "Agentes de IA"
+
+Duas coisas na mesma publicação: um conserto urgente e a estreia de uma linha nova de serviço.
+
+### 🔴 O estrago: 198 páginas ficaram ilegíveis no ar por 19 dias
+
+O commit `9bfb637` (20/08/2026, "otimizacao agressiva GEO") gravou 198 arquivos com **um
+caractere `á` (U+00E1) inserido antes de cada caractere do arquivo**. O começo virou
+`á<á!áDáOáCáTáYáPáE` em vez de `<!DOCTYPE`. O navegador não reconhece isso como HTML: a
+página renderiza como texto cru, sem layout, sem menu, sem CTA.
+
+Atingiu o hub `/consultoria-seo/` + 197 cidades — **30 delas indexáveis e no sitemap**
+(Brasília, Curitiba, BH, Campinas, Florianópolis...). As outras 168 já estavam em `noindex`.
+Anápolis e Aparecida escaparam (foram editadas à mão depois).
+
+**Não foi detectado por 19 dias.** O `conferir-conversao.py` não pegou porque lê os arquivos
+com `errors='replace'` e as tags continuavam "presentes" na contagem. Nenhum script do
+projeto checava se o arquivo **começa** com `<!DOCTYPE`.
+
+**Conserto:** `scripts/corrigir-encoding-cidades.py` (novo). O texto verdadeiro estava
+inteiro nos caracteres de índice ímpar. O script só toca no arquivo se **todos** os
+caracteres de índice par forem `á` **e** o resultado começar com `<!DOCTYPE` — qualquer
+coisa fora do padrão é listada e não tocada. Rode sem argumento para relatar, com
+`--aplicar` para gravar.
+
+Conferido depois: 200 páginas com DOCTYPE, `<html>/<head>/<body>` balanceados, title, H1,
+navbar, rodapé e JSON-LD válido; zero caractere de substituição. Diff contra a última
+versão boa (`23ddf8a`): **1 linha por página**, exatamente a melhoria de rodapé que o
+commit GEO trazia — ou seja, a otimização foi preservada, só a corrupção saiu.
+
+**Como o script gravou errado, não ficou provado.** O `apply_aggresive_geo*.py` versionado
+abre e grava em UTF-8 corretamente; provavelmente foi um comando ad-hoc no terminal.
+**Regra nova: depois de qualquer script que reescreva HTML em massa, conferir que os
+arquivos ainda começam com `<!DOCTYPE`.**
+
+### ⚠️ O gerador de cidades está DEFASADO — não regenerar sem sincronizar antes
+
+Descoberto ao testar: `python scripts/gerar-paginas-cidades.py` hoje **apaga** o trabalho
+manual de 20/08. Medido com backup e comparação byte a byte:
+
+- `consultoria-seo/anapolis/` perde **5.601 caracteres**
+- `consultoria-seo/aparecida-de-goiania/` perde **5.006 caracteres**
+- as outras 189 perdem ~58 caracteres cada (o rodapé melhorado do commit GEO)
+
+O gerador nunca foi atualizado com as edições de `9bfb637`. Nesta rodada as páginas foram
+**restauradas do backup** depois do teste. **Antes de regenerar cidades, alguém precisa
+levar o conteúdo GEO de Anápolis e Aparecida para dentro do gerador.**
+
+### A linha nova: Agentes de IA no WhatsApp (3 URLs)
+
+Vitrine de um serviço que **ainda não tem fábrica montada** — decisão do Renan de 08/09:
+primeiro a página, com simulação fiel, para medir procura antes de investir no produto
+(n8n, banco, painel).
+
+| URL | Público |
+|---|---|
+| `/agentes-de-ia/` | vitrine da linha |
+| `/agente-de-ia-para-clinicas/` | clínicas e consultórios |
+| `/recuperacao-de-vendas-whatsapp/` | lojas online e infoprodutores |
+
+Política editorial da linha — **não afrouxar**:
+1. **Sem preço na tela.** Linha nova, cada projeto é diferente → orçamento pelo WhatsApp.
+   Os `R$` que aparecem são só da calculadora, com números do próprio visitante.
+2. **Nenhum resultado prometido.** O "1 em cada 10" é declarado como conta de exemplo.
+3. **Depoimentos são reais e de consultoria**, com legenda dizendo isso. A demo do WhatsApp
+   traz o selo "Demonstração — conversa simulada".
+
+Geração: `scripts/gerar-agentes-ia.py` + `scripts/rcb_agentes.py` (conteúdo escrito à mão
+dentro do módulo, o script só monta o invólucro). Front: `assets/css/agentes-ia.css` e
+`assets/js/agentes-ia.js` (demo de conversa em ritmo real + calculadora).
+
+### Ligação com o resto do site — `scripts/menu-agentes-ia.py` (novo)
+
+Era a peça que faltava: sem ela as 3 páginas ficavam órfãs. **318 páginas** ganharam o
+dropdown "Agentes de IA" no menu (entre "Consultor SEO" e "Blog") e a coluna "Agentes de IA"
+no rodapé.
+
+Trabalha por **inserção com marcador** (`<!--RCB:AGENTES-NAV-->`, `<!--RCB:AGENTES-FOOTER-->`),
+nunca substituindo o bloco inteiro — cada página tem seu próprio `data-page` no menu e sua
+própria bio no rodapé. Idempotente: a 2ª execução diz "alteradas: 0".
+
+Três formatos de rodapé convivem no site e os três são tratados: `footer-cols` em linha
+única (maioria), `footer-cols` indentado (72 artigos do blog, coluna "Contato Direto") e
+`footer-grid` (só a home, com `<h4>` sem classe e `<ul><li>`).
+
+Os geradores foram ensinados (`rcb_base.py` e `gerar-paginas-cidades.py`) para não
+desfazerem numa regeração futura.
+
+### PÁGINA PROTEGIDA — o que mudou nela
+`/consultor-seo-goiania/` recebeu **exatamente 2 inserções** (o item de menu e a coluna de
+rodapé) e nada mais — conferido no `git diff`. Título, H1, canonical, schema e conteúdo
+intactos. O Renan autorizou explicitamente tocar o menu dela nesta rodada.
+
+### Três defeitos de menu corrigidos de passagem (medidos no navegador)
+1. **O hambúrguer só entrava em 640px**, mas o menu horizontal precisa de **867px** para
+   caber. Entre 641 e ~860px o "Ver preços" já saía da tela **antes** desta rodada (medido:
+   em 700px o menu terminava em 744px numa tela de 700). O item novo piorou (831px). O
+   breakpoint do menu passou para **900px** — só o trecho do nav foi movido para
+   `@media (max-width: 900px)`, o resto do bloco mobile continua em 640px.
+2. **Faixa 901–1100px**: menu apertado (gap 2px, fonte 0.82rem) para caber sem hambúrguer.
+3. **O menu mobile aberto não rolava.** Com `justify-content: center` e 24 itens, o conteúdo
+   (1.041px) passava da tela (844px) e era **cortado no topo e embaixo**, sem como rolar —
+   "Ver preços" ficava inalcançável no celular. Já era assim antes; os 3 itens novos
+   pioraram. Agora é `flex-start` + `overflow-y: auto` + `padding: 88px 0 40px`. Testado com
+   clique real (`elementFromPoint`): o último item responde.
+
+CSS dos rodapés: os dois grids passaram de 4 para **5 colunas**, com `minmax(0, 1fr)` (com
+`1fr` puro a coluna não encolhe abaixo do conteúdo). A regra `.footer-col:nth-child(4)
+{ grid-column: 2 / 4 }` em 1100px foi removida — com 5 colunas ela esticava a coluna errada.
+
+### Achado pré-existente NÃO corrigido (fora do escopo)
+`/blog/como-escolher-consultoria-seo-goiania/` e `/blog/seo-para-clinicas-vale-a-pena/`
+estão **truncadas no git desde antes desta rodada**: terminam no meio, sem `</main>`,
+`</article>`, `</footer>`, `</body>` nem `</html>`. Não têm rodapé nenhum — por isso
+receberam só o item de menu. Precisam ser refeitas.
+
+### Publicação
+- Sitemap: 147 → **150 URLs**.
+- Dois commits, um push só: o conserto separado da novidade, para dar para desfazer um sem
+  o outro.
+
 ## Como trabalhar neste projeto
 
 - Renan não é técnico: sempre explicar em português simples, passo a passo, sem jargão sem explicar.

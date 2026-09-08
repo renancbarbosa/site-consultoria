@@ -1,0 +1,775 @@
+/* ==========================================================================
+   agentes-ia.css — componentes visuais da linha "Agentes de IA"
+   Carregado SÓ nas páginas da linha nova (3 comerciais + artigos de apoio).
+   Não entra no styles.css global para não pesar as outras 300 páginas.
+
+   Depende das variáveis de /styles.css (--navy, --gold, --text-main...).
+   Tema do site é escuro; o "celular" por dentro é claro de propósito —
+   é o que faz ele parecer um telefone de verdade em cima do fundo navy.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Selo de demonstração — obrigatório em toda simulação.
+   Ninguém pode confundir isto com print de cliente real.
+   -------------------------------------------------------------------------- */
+.selo-demo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--gold);
+  background: rgba(201, 168, 76, 0.09);
+  border: 1px solid rgba(201, 168, 76, 0.28);
+  border-radius: 999px;
+  padding: 6px 13px;
+  line-height: 1.3;
+}
+.selo-demo::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex: none;
+}
+.selo-demo--bloco {
+  display: flex;
+  margin: 18px auto 0;
+  max-width: max-content;
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   2. Bloco da demonstração de WhatsApp
+   Layout: no desktop, explicação à esquerda e celular à direita.
+   No celular, empilha (celular primeiro — é o que prende a atenção).
+   -------------------------------------------------------------------------- */
+.wa-demo {
+  display: grid;
+  gap: 34px;
+  align-items: start;
+}
+/* dentro de artigo do blog a coluna tem 720px: empilhar é mais legível */
+.wa-demo--coluna { justify-items: center; }
+.wa-demo--coluna .wa-demo-copy { width: 100%; }
+
+@media (min-width: 900px) {
+  .wa-demo:not(.wa-demo--coluna) {
+    grid-template-columns: 1fr minmax(0, 340px);
+    gap: 54px;
+  }
+  .wa-demo--espelhado:not(.wa-demo--coluna) { grid-template-columns: minmax(0, 340px) 1fr; }
+  .wa-demo--espelhado .wa-demo-copy { order: 2; }
+  .wa-demo--espelhado .wa-demo-device { order: 1; }
+}
+
+.wa-demo-copy p {
+  color: var(--text-muted);
+  line-height: 1.72;
+  margin: 0 0 16px;
+}
+.wa-demo-copy p strong { color: var(--text-main); }
+
+/* Botões que trocam o cenário da conversa */
+.wa-cenarios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.wa-cenario-btn {
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  padding: 9px 15px;
+  cursor: pointer;
+  transition: color var(--transition), background var(--transition),
+              border-color var(--transition);
+  text-align: left;
+}
+.wa-cenario-btn:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.wa-cenario-btn[aria-selected="true"] {
+  color: var(--navy);
+  background: var(--gold);
+  border-color: var(--gold);
+}
+.wa-cenario-btn:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 2px;
+}
+
+.wa-cenario-nota {
+  margin: 16px 0 0;
+  padding: 14px 16px;
+  border-left: 2px solid var(--gold);
+  background: rgba(255, 255, 255, 0.028);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+.wa-cenario-nota strong { color: var(--text-main); }
+
+/* --------------------------------------------------------------------------
+   3. O aparelho
+   -------------------------------------------------------------------------- */
+.wa-demo-device {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.wa-phone {
+  width: 100%;
+  max-width: 330px;
+  background: #0f1115;
+  border-radius: 36px;
+  padding: 9px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.5),
+              0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+  position: relative;
+}
+.wa-phone-tela {
+  background: #efeae2;
+  border-radius: 28px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 520px;
+}
+
+/* barrinha superior do aparelho (alto-falante) */
+.wa-phone::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 54px;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  z-index: 3;
+}
+
+/* Cabeçalho verde do aplicativo */
+.wa-topo {
+  background: #075e54;
+  color: #fff;
+  padding: 26px 14px 11px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  flex: none;
+}
+.wa-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #d9d2c9;
+  color: #4a5b57;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  flex: none;
+}
+.wa-topo-id { min-width: 0; }
+.wa-topo-nome {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.wa-topo-status {
+  display: block;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.3;
+}
+
+/* Área da conversa */
+.wa-thread {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px 11px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  /* trama discreta, no espírito do papel de parede do aplicativo */
+  background-color: #efeae2;
+  background-image:
+    radial-gradient(circle at 12% 22%, rgba(0, 0, 0, 0.028) 0 2px, transparent 2px),
+    radial-gradient(circle at 68% 58%, rgba(0, 0, 0, 0.024) 0 3px, transparent 3px),
+    radial-gradient(circle at 38% 82%, rgba(0, 0, 0, 0.02) 0 2px, transparent 2px);
+  background-size: 118px 118px, 156px 156px, 92px 92px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.18) transparent;
+}
+.wa-thread::-webkit-scrollbar { width: 5px; }
+.wa-thread::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: 999px;
+}
+
+/* Etiqueta de data no topo da conversa */
+.wa-dia {
+  align-self: center;
+  /* empurra a conversa para a base, como no aplicativo de verdade.
+     Quando as mensagens passam da altura da tela isto vira 0 sozinho,
+     sem o bug de topo cortado que 'justify-content: flex-end' causa. */
+  margin-top: auto;
+  background: rgba(255, 255, 255, 0.92);
+  color: #54656f;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 4px 11px;
+  border-radius: 7px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06);
+  margin-bottom: 3px;
+}
+
+/* Balões */
+.wa-linha {
+  display: flex;
+  max-width: 100%;
+  animation: wa-entra 0.26s ease both;
+}
+.wa-linha--recebida { justify-content: flex-start; }
+.wa-linha--enviada { justify-content: flex-end; }
+
+@keyframes wa-entra {
+  from { opacity: 0; transform: translateY(7px) scale(0.985); }
+  to { opacity: 1; transform: none; }
+}
+
+.wa-balao {
+  max-width: 84%;
+  padding: 6px 9px 5px;
+  border-radius: 8px;
+  font-size: 0.815rem;
+  line-height: 1.45;
+  color: #111b21;
+  box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13);
+  position: relative;
+  word-wrap: break-word;
+}
+.wa-linha--recebida .wa-balao {
+  background: #fff;
+  border-top-left-radius: 2px;
+}
+.wa-linha--enviada .wa-balao {
+  background: #d9fdd3;
+  border-top-right-radius: 2px;
+}
+.wa-balao p { margin: 0 0 5px; }
+.wa-balao p:last-of-type { margin-bottom: 0; }
+.wa-balao strong { font-weight: 600; }
+
+.wa-meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 3px;
+  font-size: 0.62rem;
+  color: #667781;
+  margin-top: 2px;
+  line-height: 1;
+  white-space: nowrap;
+}
+.wa-check { color: #53bdeb; flex: none; }
+
+/* Opções que o agente oferece (viram "botões" dentro do balão) */
+.wa-opcoes {
+  list-style: none;
+  margin: 7px 0 2px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.wa-opcoes li {
+  background: rgba(0, 0, 0, 0.045);
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+/* "digitando…" */
+.wa-digitando .wa-balao {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 11px 12px;
+}
+.wa-ponto {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #9aa5ab;
+  animation: wa-pulsa 1.25s infinite ease-in-out;
+}
+.wa-ponto:nth-child(2) { animation-delay: 0.18s; }
+.wa-ponto:nth-child(3) { animation-delay: 0.36s; }
+@keyframes wa-pulsa {
+  0%, 60%, 100% { opacity: 0.32; transform: translateY(0); }
+  30% { opacity: 1; transform: translateY(-3px); }
+}
+
+/* Barra de digitação de baixo (decorativa) */
+.wa-barra-inferior {
+  flex: none;
+  background: #f0f2f5;
+  padding: 8px 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+.wa-campo {
+  flex: 1;
+  background: #fff;
+  border-radius: 999px;
+  padding: 8px 13px;
+  font-size: 0.76rem;
+  color: #8696a0;
+}
+.wa-enviar {
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  background: #00a884;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  color: #fff;
+}
+
+/* Rodapé do aparelho: repetir + legenda de cores */
+.wa-controles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px 16px;
+}
+.wa-replay {
+  font: inherit;
+  font-size: 0.79rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  padding: 7px 14px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  transition: color var(--transition), border-color var(--transition);
+}
+.wa-replay:hover { color: var(--text-main); border-color: rgba(255, 255, 255, 0.3); }
+.wa-replay:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 2px; }
+
+.wa-legenda {
+  display: flex;
+  gap: 14px;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+.wa-legenda span { display: inline-flex; align-items: center; gap: 6px; }
+.wa-legenda i {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  flex: none;
+}
+.wa-legenda .wa-cor-cliente { background: #fff; }
+.wa-legenda .wa-cor-agente { background: #a9e79c; }
+
+/* --------------------------------------------------------------------------
+   4. Fluxo em linguagem de gente ("o que acontece por trás")
+   -------------------------------------------------------------------------- */
+.fluxo {
+  display: grid;
+  gap: 14px;
+  margin-top: 34px;
+  counter-reset: fluxo;
+}
+@media (min-width: 760px) { .fluxo { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1060px) { .fluxo { grid-template-columns: repeat(4, 1fr); } }
+
+.fluxo-passo {
+  background: rgba(255, 255, 255, 0.032);
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-radius: var(--radius-md);
+  padding: 22px 20px;
+  position: relative;
+  counter-increment: fluxo;
+}
+.fluxo-passo::before {
+  content: counter(fluxo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(201, 168, 76, 0.14);
+  border: 1px solid rgba(201, 168, 76, 0.42);
+  color: var(--gold);
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+/* seta ligando um passo ao outro, só onde a linha continua */
+@media (min-width: 1060px) {
+  .fluxo-passo:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 37px;
+    right: -11px;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid rgba(201, 168, 76, 0.45);
+    border-right: 2px solid rgba(201, 168, 76, 0.45);
+    transform: rotate(45deg);
+  }
+}
+.fluxo-passo h3 {
+  font-size: 1.02rem;
+  color: var(--text-main);
+  margin: 0 0 9px;
+  line-height: 1.35;
+}
+.fluxo-passo p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.66;
+}
+.fluxo-passo .fluxo-tempo {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* --------------------------------------------------------------------------
+   5. Calculadora (faltas na clínica / carrinho abandonado)
+   -------------------------------------------------------------------------- */
+.calc {
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: var(--radius-lg);
+  padding: 30px 26px;
+  display: grid;
+  gap: 26px;
+}
+@media (min-width: 880px) {
+  .calc { grid-template-columns: 1fr minmax(0, 300px); align-items: center; gap: 44px; }
+}
+.calc-campos { display: grid; gap: 20px; }
+.calc-campo label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 9px;
+}
+.calc-valor-atual {
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+}
+.calc-campo input[type="range"] {
+  width: 100%;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.13);
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+.calc-campo input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 3px solid var(--navy);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  cursor: grab;
+}
+.calc-campo input[type="range"]::-moz-range-thumb {
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 3px solid var(--navy);
+  cursor: grab;
+}
+.calc-campo input[type="range"]:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 4px;
+}
+.calc-escala {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+.calc-resultado {
+  background: rgba(13, 27, 42, 0.55);
+  border: 1px solid rgba(201, 168, 76, 0.24);
+  border-radius: var(--radius-md);
+  padding: 24px 22px;
+  text-align: center;
+}
+.calc-resultado-rotulo {
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+.calc-resultado-numero {
+  display: block;
+  font-size: clamp(2rem, 6vw, 2.65rem);
+  font-weight: 800;
+  line-height: 1.05;
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+.calc-resultado-obs {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.calc-rodape {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  padding-top: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   6. Linha do tempo (carrinho abandonado)
+   -------------------------------------------------------------------------- */
+.linha-tempo {
+  list-style: none;
+  margin: 34px 0 0;
+  padding: 0 0 0 30px;
+  position: relative;
+}
+.linha-tempo::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(180deg,
+    rgba(201, 168, 76, 0.55), rgba(201, 168, 76, 0.1));
+}
+.linha-tempo li {
+  position: relative;
+  padding: 0 0 26px;
+}
+.linha-tempo li:last-child { padding-bottom: 0; }
+.linha-tempo li::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--navy);
+  border: 2px solid var(--gold);
+}
+.linha-tempo li.linha-tempo--fim::before {
+  background: var(--gold);
+  box-shadow: 0 0 0 4px rgba(201, 168, 76, 0.18);
+}
+.linha-tempo-hora {
+  display: block;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 5px;
+}
+.linha-tempo h3 {
+  font-size: 1rem;
+  color: var(--text-main);
+  margin: 0 0 6px;
+}
+.linha-tempo p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.68;
+}
+
+/* --------------------------------------------------------------------------
+   7. Mockup do relatório mensal
+   -------------------------------------------------------------------------- */
+.painel {
+  background: #101f31;
+  border: 1px solid rgba(255, 255, 255, 0.085);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+.painel-topo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 18px;
+  background: rgba(0, 0, 0, 0.22);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.painel-bolinhas { display: flex; gap: 6px; flex: none; }
+.painel-bolinhas i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+}
+.painel-titulo {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-left: 6px;
+}
+.painel-corpo { padding: 24px 20px; }
+.painel-numeros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+  gap: 14px;
+}
+.painel-num {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+  padding: 17px 15px;
+}
+.painel-num strong {
+  display: block;
+  font-size: 1.72rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+.painel-num strong.eh-bom { color: #6fd08c; }
+.painel-num span {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+/* gráfico de barras puramente ilustrativo */
+.painel-grafico {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 92px;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+.painel-grafico i {
+  flex: 1;
+  background: linear-gradient(180deg, rgba(201, 168, 76, 0.85), rgba(201, 168, 76, 0.22));
+  border-radius: 3px 3px 0 0;
+  min-height: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   8. Comparativo "hoje / com o agente"
+   -------------------------------------------------------------------------- */
+.antes-depois {
+  display: grid;
+  gap: 16px;
+  margin-top: 30px;
+}
+@media (min-width: 780px) { .antes-depois { grid-template-columns: 1fr 1fr; } }
+.ad-col {
+  border-radius: var(--radius-md);
+  padding: 24px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  background: rgba(255, 255, 255, 0.026);
+}
+.ad-col--depois {
+  border-color: rgba(201, 168, 76, 0.3);
+  background: rgba(201, 168, 76, 0.055);
+}
+.ad-col h3 {
+  font-size: 1.04rem;
+  margin: 0 0 15px;
+  color: var(--text-main);
+}
+.ad-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 11px; }
+.ad-col li {
+  display: flex;
+  gap: 10px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+.ad-col li::before {
+  content: "×";
+  color: #d98b8b;
+  font-weight: 700;
+  flex: none;
+  width: 15px;
+  text-align: center;
+}
+.ad-col--depois li::before { content: "✓"; color: #6fd08c; }
+
+/* --------------------------------------------------------------------------
+   9. Acessibilidade — quem pediu menos movimento vê tudo, parado.
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .wa-linha { animation: none; }
+  .wa-ponto { animation: none; opacity: 0.55; }
+}
