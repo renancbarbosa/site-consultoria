@@ -2,7 +2,7 @@
 import glob
 
 old_bio = '<p class="footer-bio">Com base em Goiânia e atendimento online para clínicas e negócios locais em todo o Brasil.</p>'
-new_bio = '<p class="footer-bio">Atendimento presencial em Goiânia, Aparecida de Goiânia e Anápolis. Consultoria estratégica online para clínicas e empresas locais em todo o Brasil.</p>'
+new_bio = '<p class="footer-bio">Atendimento presencial em Goiânia e Aparecida de Goiânia. Consultoria estratégica online para clínicas e empresas locais em todo o Brasil.</p>'
 
 count = 0
 for filepath in glob.iglob('**/*.html', recursive=True):

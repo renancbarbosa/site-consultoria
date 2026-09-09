@@ -40,7 +40,7 @@ from urllib.parse import quote
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from rcb_pacotes import bloco_cta_mobile, bloco_pacotes, ofertas_json_compacto
-from rcb_cidades import INDEXAVEIS, PILOTO, SLUG_CANONICO, eh_indexavel
+from rcb_cidades import INDEXAVEIS, PILOTO, PRESENCIAL, SLUG_CANONICO, eh_indexavel
 from conteudo.cidades_piloto import PILOTOS
 
 DADOS = r"C:/Users/renan/SITE-DADOS/data/cidades"
@@ -273,7 +273,7 @@ NAVBAR = """  <a class="skip-link" href="#main-content">Pular para o conteúdo p
 
 
 def rodape(pagina):
-    return """  <footer class="footer" role="contentinfo"><div class="container footer-cols"><div class="footer-col footer-col-identity"><span class="logo-text">RCB</span><strong class="footer-name">Renan Carvalho Barbosa</strong><span class="footer-cargo">Consultor de SEO Local e Google Meu Negócio</span><p class="footer-bio">Com base em Goiânia e atendimento online para clínicas e negócios locais em todo o Brasil.</p></div><div class="footer-col"><h4 class="footer-col-title">Serviços</h4><nav class="footer-col-nav"><a href="/consultoria-seo-local/">Consultoria SEO Local</a><a href="/consultoria-seo/">Consultoria SEO por cidade</a><a href="/diagnostico-presenca-digital/">Diagnóstico de Presença Digital</a><a href="/auditoria-seo/">Auditoria de SEO</a><a href="/google-perfil-empresa/">Google Perfil da Empresa</a><a href="/site-otimizado-para-seo/">Site otimizado para SEO</a><a href="/acompanhamento-seo/">Acompanhamento de SEO</a></nav></div><div class="footer-col"><h4 class="footer-col-title">Nichos</h4><nav class="footer-col-nav"><a href="/seo-para-clinicas/">Clínicas</a><a href="/seo-para-dentistas/">Dentistas</a><a href="/seo-para-clinicas-de-estetica/">Estética</a><a href="/seo-para-medicos/">Médicos</a><a href="/para-advogados/">Advogados</a></nav></div><!--RCB:AGENTES-FOOTER--><div class="footer-col"><h4 class="footer-col-title">Agentes de IA</h4><nav class="footer-col-nav"><a href="/agentes-de-ia/">Agentes de IA no WhatsApp</a><a href="/agente-de-ia-para-clinicas/">Agente de IA para clínicas</a><a href="/recuperacao-de-vendas-whatsapp/">Recuperação de vendas no WhatsApp</a></nav></div><!--/RCB:AGENTES-FOOTER--><div class="footer-col"><h4 class="footer-col-title">Contato</h4><div class="footer-col-contact"><a href="/contato/">Página de contato</a><a href="https://wa.me/""" + WHATS + """\" target="_blank" rel="noopener noreferrer">WhatsApp: (62) 99116-1040</a><a href="mailto:contato@rcbseo.com.br">contato@rcbseo.com.br</a><span>Rua 18-A, nº 256 — Goiânia - GO, CEP 74070-060</span></div></div></div><div class="footer-bottom"><div class="container footer-bottom-inner"><p>&copy; <span id="anoAtual"></span> Renan Carvalho Barbosa. Todos os direitos reservados.</p><a href="/privacidade/" class="footer-privacy">Política de Privacidade</a><a href="/cookies/" class="footer-privacy" style="margin-left:1rem;">Política de Cookies</a></div></div></footer>
+    return """  <footer class="footer" role="contentinfo"><div class="container footer-cols"><div class="footer-col footer-col-identity"><span class="logo-text">RCB</span><strong class="footer-name">Renan Carvalho Barbosa</strong><span class="footer-cargo">Consultor de SEO Local e Google Meu Negócio</span><p class="footer-bio">Atendimento presencial em Goiânia e Aparecida de Goiânia. Consultoria estratégica online para clínicas e empresas locais em todo o Brasil.</p></div><div class="footer-col"><h3 class="footer-col-title">Serviços</h3><nav class="footer-col-nav"><a href="/consultoria-seo-local/">Consultoria SEO Local</a><a href="/consultoria-seo/">Consultoria SEO por cidade</a><a href="/diagnostico-presenca-digital/">Diagnóstico de Presença Digital</a><a href="/auditoria-seo/">Auditoria de SEO</a><a href="/google-perfil-empresa/">Google Perfil da Empresa</a><a href="/site-otimizado-para-seo/">Site otimizado para SEO</a><a href="/acompanhamento-seo/">Acompanhamento de SEO</a></nav></div><div class="footer-col"><h3 class="footer-col-title">Nichos</h3><nav class="footer-col-nav"><a href="/seo-para-clinicas/">Clínicas</a><a href="/seo-para-dentistas/">Dentistas</a><a href="/seo-para-clinicas-de-estetica/">Estética</a><a href="/seo-para-medicos/">Médicos</a><a href="/para-advogados/">Advogados</a></nav></div><!--RCB:AGENTES-FOOTER--><div class="footer-col"><h3 class="footer-col-title">Agentes de IA</h3><nav class="footer-col-nav"><a href="/agentes-de-ia/">Agentes de IA no WhatsApp</a><a href="/agente-de-ia-para-clinicas/">Agente de IA para clínicas</a><a href="/recuperacao-de-vendas-whatsapp/">Recuperação de vendas no WhatsApp</a></nav></div><!--/RCB:AGENTES-FOOTER--><div class="footer-col"><h3 class="footer-col-title">Contato</h3><div class="footer-col-contact"><a href="/contato/">Página de contato</a><a href="https://wa.me/""" + WHATS + """\" target="_blank" rel="noopener noreferrer">WhatsApp: (62) 99116-1040</a><a href="mailto:contato@rcbseo.com.br">contato@rcbseo.com.br</a><span>Rua 18-A, nº 256 — Goiânia - GO, CEP 74070-060</span></div></div></div><div class="footer-bottom"><div class="container footer-bottom-inner"><p>&copy; <span id="anoAtual"></span> Renan Carvalho Barbosa. Todos os direitos reservados.</p><a href="/privacidade/" class="footer-privacy">Política de Privacidade</a><a href="/cookies/" class="footer-privacy" style="margin-left:1rem;">Política de Cookies</a></div></div></footer>
   <script src="/script.js" defer></script>
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "958c755428354df69e95c4366389faca"}'></script>
   <script defer src="/assets/js/cookie-consent.js"></script>
@@ -460,8 +460,13 @@ def pagina_cidade(c, vizinhas):
     titulo = f"Consultoria de SEO em {cidade} ({uf}) | Apareça no Google | RCB"
     if len(titulo) > 65:
         titulo = f"Consultoria de SEO em {cidade} ({uf}) | RCB"
-    desc = (f"Sua empresa em {cidade} não aparece no Google? Consultoria online de SEO: "
-            f"Google Meu Negócio, site e conteúdo. Diagnóstico gratuito.")
+    presencial = slug in PRESENCIAL
+    if presencial:
+        desc = (f"Sua empresa em {cidade} não aparece no Google? Consultoria de SEO com "
+                f"atendimento presencial: Google Meu Negócio, site e conteúdo.")
+    else:
+        desc = (f"Sua empresa em {cidade} não aparece no Google? Consultoria online de SEO: "
+                f"Google Meu Negócio, site e conteúdo. Diagnóstico gratuito.")
 
     ramos = [(rotulo_cnae(r["nome"]), r["abertas_90d"]) for r in c.get("ramos_top", [])[:6]]
     bairros = [(limpar_bairro(b["bairro"]), b["abertas_90d"]) for b in c.get("bairros_top", [])[:4]]
@@ -488,8 +493,11 @@ def pagina_cidade(c, vizinhas):
     whats_url = f"https://wa.me/{WHATS}?text={whats_msg}"
 
     faq = [
-        (f"Vocês atendem empresas de {cidade} mesmo estando em Goiânia?",
-         f"Sim. O atendimento para {cidade} é 100% online: reuniões por vídeo, análise dos seus dados reais do Google e implementação guiada passo a passo. O método é o mesmo do atendimento presencial — o Google funciona igual em qualquer cidade do Brasil."),
+        ((f"Você atende empresas de {cidade} presencialmente?",
+          f"Sim. {cidade} está na área de atendimento presencial: eu vou até a empresa para auditoria do espaço, sessão de fotos e treinamento da equipe para pedido e gestão de avaliações. O acompanhamento depois é por vídeo, com relatório simples de entender.")
+         if presencial else
+         (f"Vocês atendem empresas de {cidade} mesmo estando em Goiânia?",
+          f"Sim. O atendimento para {cidade} é 100% online: reuniões por vídeo, análise dos seus dados reais do Google e implementação guiada passo a passo. O método é o mesmo do atendimento presencial — o Google funciona igual em qualquer cidade do Brasil.")),
         (f"Minha empresa em {cidade} é pequena. SEO vale a pena para mim?",
          f"Vale, principalmente por isso: a disputa no Google acontece no seu bairro e na sua região, não contra o Brasil inteiro. Mesmo em uma cidade com {ativas} empresas ativas, quem aparece bem no Maps da própria região captura os clientes que estão pesquisando agora."),
         ("Quanto tempo demora para aparecer no Google?",
@@ -565,6 +573,21 @@ def pagina_cidade(c, vizinhas):
     # passo 2 do funil em 09/08) e passou a apontar para /cases/ (tinha 6).
     link_gmn = link(slug, "/google-perfil-empresa/")
     link_consultoria = link(slug, "/consultoria-seo-local/")
+
+    # Cidade presencial (rcb_cidades.PRESENCIAL) troca a seção "Como funciona":
+    # dizer "todo o trabalho é feito a distância" numa cidade que o Renan visita
+    # joga fora o único diferencial que nenhuma agência de fora consegue copiar.
+    if presencial:
+        metodo_titulo = f"Consultoria de SEO em {cidade}, presencial e com método testado"
+        metodo_desc = (f"Em {cidade} eu atendo presencialmente: visita à empresa, auditoria do "
+                       f"espaço, fotos e treinamento da equipe para pedir e responder avaliações. "
+                       f"O acompanhamento depois é por vídeo, com acesso aos seus dados reais do "
+                       f"Google. É a mesma {link_consultoria} aplicada em Goiânia.")
+    else:
+        metodo_titulo = f"Consultoria online para {cidade}, com método testado"
+        metodo_desc = (f"Todo o trabalho é feito a distância, por vídeo e com acesso aos seus "
+                       f"dados reais do Google. É a mesma {link_consultoria} aplicada nos "
+                       f"atendimentos presenciais.")
     # /cases/ entra UMA vez por pagina, pelo botao do hero. Ele ja e o link mais
     # visivel da pagina; repetir no texto do metodo criava duas ancoras para a
     # mesma URL sem ganho -- o Google costuma considerar so a primeira.
@@ -635,8 +658,8 @@ def pagina_cidade(c, vizinhas):
       <div class="container">
         <div class="section-header">
           <div class="section-tag">Como funciona</div>
-          <h2 id="metodo-titulo" class="section-title">Consultoria online para {cidade}, com método testado</h2>
-          <p class="section-desc">Todo o trabalho é feito a distância, por vídeo e com acesso aos seus dados reais do Google. É a mesma {link_consultoria} aplicada nos atendimentos presenciais.</p>
+          <h2 id="metodo-titulo" class="section-title">{metodo_titulo}</h2>
+          <p class="section-desc">{metodo_desc}</p>
         </div>
         <div class="metodo-steps">
           <div class="metodo-step"><div class="step-number">1</div><h3>Diagnóstico</h3><p>Analiso como sua empresa aparece hoje no Google e no Maps em {cidade}, e quais concorrentes aparecem na sua frente.</p></div>

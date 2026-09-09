@@ -219,7 +219,7 @@ FOOTER_NACIONAL_ITENS = [
 ]
 
 FOOTER_COL_NACIONAL = (
-    '<h4 class="footer-col-title">SEO Nacional</h4><nav class="footer-col-nav">'
+    '<h3 class="footer-col-title">SEO Nacional</h3><nav class="footer-col-nav">'
     + "".join(f'<a href="{u}">{t}</a>' for u, t in FOOTER_NACIONAL_ITENS)
     + '</nav>'
 )
@@ -243,8 +243,8 @@ def rodape(scripts_extra=""):
             '<div class="footer-col footer-col-identity"><span class="logo-text">RCB</span>'
             '<strong class="footer-name">Renan Carvalho Barbosa</strong>'
             '<span class="footer-cargo">Consultor de SEO Local e Google Meu Negócio</span>'
-            '<p class="footer-bio">Atendimento presencial em Goiânia, Aparecida de Goiânia e Anápolis. Consultoria estratégica online para clínicas e empresas locais em todo o Brasil.</p></div>'
-            '<div class="footer-col"><h4 class="footer-col-title">Serviços</h4><nav class="footer-col-nav">'
+            '<p class="footer-bio">Atendimento presencial em Goiânia e Aparecida de Goiânia. Consultoria estratégica online para clínicas e empresas locais em todo o Brasil.</p></div>'
+            '<div class="footer-col"><h3 class="footer-col-title">Serviços</h3><nav class="footer-col-nav">'
             '<a href="/consultoria-seo-local/">Consultoria SEO Local</a>'
             '<a href="/consultoria-seo/">Consultoria SEO por cidade</a>'
             '<a href="/diagnostico-presenca-digital/">Diagnóstico de Presença Digital</a>'
@@ -253,12 +253,12 @@ def rodape(scripts_extra=""):
             '<a href="/site-otimizado-para-seo/">Site otimizado para SEO</a>'
             '<a href="/acompanhamento-seo/">Acompanhamento de SEO</a></nav></div>'
             '<div class="footer-col">' + FOOTER_COL_NACIONAL + '</div>'
-            '<div class="footer-col"><h4 class="footer-col-title">Nichos</h4><nav class="footer-col-nav">'
+            '<div class="footer-col"><h3 class="footer-col-title">Nichos</h3><nav class="footer-col-nav">'
             '<a href="/seo-para-clinicas/">Clínicas</a><a href="/seo-para-dentistas/">Dentistas</a>'
             '<a href="/seo-para-clinicas-de-estetica/">Estética</a><a href="/seo-para-medicos/">Médicos</a>'
             '<a href="/para-advogados/">Advogados</a></nav></div>'
-            '<!--RCB:AGENTES-FOOTER--><div class="footer-col"><h4 class="footer-col-title">Agentes de IA</h4><nav class="footer-col-nav"><a href="/agentes-de-ia/">Agentes de IA no WhatsApp</a><a href="/agente-de-ia-para-clinicas/">Agente de IA para clínicas</a><a href="/recuperacao-de-vendas-whatsapp/">Recuperação de vendas no WhatsApp</a></nav></div><!--/RCB:AGENTES-FOOTER-->'
-            '<div class="footer-col"><h4 class="footer-col-title">Contato</h4><div class="footer-col-contact">'
+            '<!--RCB:AGENTES-FOOTER--><div class="footer-col"><h3 class="footer-col-title">Agentes de IA</h3><nav class="footer-col-nav"><a href="/agentes-de-ia/">Agentes de IA no WhatsApp</a><a href="/agente-de-ia-para-clinicas/">Agente de IA para clínicas</a><a href="/recuperacao-de-vendas-whatsapp/">Recuperação de vendas no WhatsApp</a></nav></div><!--/RCB:AGENTES-FOOTER-->'
+            '<div class="footer-col"><h3 class="footer-col-title">Contato</h3><div class="footer-col-contact">'
             '<a href="/contato/">Página de contato</a>'
             f'<a href="https://wa.me/{WHATS}" target="_blank" rel="noopener noreferrer">WhatsApp: (62) 99116-1040</a>'
             '<a href="mailto:contato@rcbseo.com.br">contato@rcbseo.com.br</a>'

@@ -65,6 +65,14 @@ CONGELADAS = {
     "vitoria",
 }
 
+# Cidades onde o atendimento e PRESENCIAL (Renan vai ate a empresa), confirmado
+# pelo Renan em 09/09/2026. Bate com o FAQ de /seo-local-goiania/.
+# Goiania nao entra aqui porque nao e gerada por este script (tem pagina propria).
+# ATENCAO: Anapolis NAO e presencial - so consultoria online.
+PRESENCIAL = {
+    "aparecida-de-goiania",
+}
+
 INDEXAVEIS = PILOTO | CONGELADAS
 
 # Slug publicado -> (cidade, UF) que a URL realmente representa.
