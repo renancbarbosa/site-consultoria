@@ -221,6 +221,21 @@ llms = Path("llms.txt").read_text(encoding="utf-8")
 if "R$ 1.997" not in llms:
     problemas.append("llms.txt: sem a tabela de precos")
 
+# CSS minificado em dia?
+# styles.css e a FONTE que se edita; styles.min.css e o que o site serve.
+# Se alguem editar a fonte e esquecer de regerar, o site continua servindo o CSS
+# velho e ninguem percebe. Este check existe para isso nao passar batido.
+if Path("styles.min.css").exists():
+    import importlib.util as _il
+    _spec = _il.spec_from_file_location("_aud", "scripts/auditoria-2026-09-08.py")
+    _aud = _il.module_from_spec(_spec)
+    _spec.loader.exec_module(_aud)
+    if _aud.minificar(Path("styles.css").read_text(encoding="utf-8")) != \
+            Path("styles.min.css").read_text(encoding="utf-8"):
+        problemas.append(
+            "styles.min.css DESATUALIZADO em relacao ao styles.css "
+            "-> rode: python scripts/auditoria-2026-09-08.py --css")
+
 # sitemap x arquivos
 mapa = Path("sitemap.xml").read_text(encoding="utf-8")
 urls = re.findall(r"<loc>https://rcbseo\.com\.br/(.*?)</loc>", mapa)

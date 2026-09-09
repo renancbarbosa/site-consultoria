@@ -849,6 +849,113 @@ aconteceu na home em 09/08, onde um ancestral quebrava o `bottom: 0`. É feio no
 HTML, não é defeito visual. Nos 2 artigos refeitos ela ficou no lugar certo,
 depois do `</footer>`.
 
+## Rodada de 08/09/2026 (3ª leva): auditoria SEO/GEO/AIO executada
+
+Relatório com os 100 pontos: `docs/AUDITORIA_SEO_GEO_AIO_2026-09-08.md`.
+**Nota medida antes: 78,5/100.** Executados todos os itens que dependem de código.
+
+### Três coisas do pedido que NÃO foram feitas — e o motivo
+O pedido veio de um prompt genérico de auditoria. Três ações dele foram recusadas:
+1. **Publicar "Pesquisa: analisamos 500 sites de Goiânia, 73%…"** — os números não existem.
+   Dado inventado apresentado como pesquisa própria destrói a autoridade que a auditoria
+   inteira tenta construir.
+2. **"Reduza no-show em 40%", "aumente vendas em 70%"** — contradiz a política da linha de
+   Agentes de IA (nenhum resultado prometido) e é promessa sobre o que o Renan não controla.
+3. **Editar a Wikipedia citando a RCB** — conflito de interesse nas regras deles; dá reversão.
+
+E o **Share of Model (item 27, 5 pontos) não pôde ser medido**: não há acesso a ChatGPT,
+Perplexity ou Gemini a partir daqui. O protocolo com 20 prompts está no relatório para o
+Renan rodar. Isso puxa a nota para baixo sem ser falha do site — sem esse item a base seria
+95 pontos.
+
+### O achado que muda uma decisão de negócio
+As **três consultas mais bem posicionadas do site inteiro** apontam para páginas que hoje
+respondem 404 — a divisão de mercados competitivos revertida em 08/08:
+
+| Consulta | Impressões (28d) | Posição |
+|---|---|---|
+| `link building para bets` | 52 | **22,2** |
+| `migração de domínios` | 33 | **24,5** |
+| `recuperação de nome de domínio registrado por terceiros` | 31 | **27,6** |
+| `leilão de domínios registro br` | 2 | **3,0** — e rendeu 1 dos 14 cliques |
+
+Para comparar: "aparecer no google" está em 49,8 e "seo para advogados" em 60,2.
+**Não é recomendação de republicar bets/IPTV** — a decisão foi de marca. Mas o recorte
+"domínios" (migração, recuperação, leilão) não tem ligação com bets nem IPTV, não carrega
+risco jurídico, e é onde estão a melhor posição e o único clique de cauda longa do site.
+Texto preservado em `scripts/conteudo/`, histórico em `2507c42`.
+
+### O que foi aplicado (4 scripts novos, todos idempotentes)
+
+| Script | O que fez |
+|---|---|
+| `auditoria-2026-09-08.py` | 2 descriptions encurtadas; rodapé de `<h4>` para `<h3>` em 318 páginas; `dateModified` em 37; foto do autor em 77 artigos; gera e propaga o `styles.min.css` |
+| `ligar-orfas-2026-09-08.py` | páginas com menos de 3 links internos: **36 → 10** |
+| `answer-first-2026-09-08.py` | aberturas com mais de 70 palavras: **39 → 0** |
+| `fontes-oficiais-2026-09-08.py` | páginas citando fonte de autoridade: **40 → 133** |
+
+Medido antes → depois (páginas indexáveis, fora as 168 cidades em noindex):
+
+| | antes | depois |
+|---|---|---|
+| descriptions acima de 160 | 2 | **0** |
+| aberturas com mais de 70 palavras | 39 | **0** |
+| recebem menos de 3 links internos | 36 | **10** |
+| sem `dateModified` | 38 | **1** (`/sobre/`) |
+| sem fonte de autoridade | 110 | **17** |
+| imagens sem width/height | 7 | **0** |
+| artigos com foto do autor | 0 | **77** |
+
+### Performance: o que era o problema e o que foi feito
+LCP de **4,3s e 5,2s** em duas medições (limite 2,5s) — único bloco técnico reprovado.
+
+- **Imagem do topo:** era 1122×1402 px servida inteira, mas aparece em 288px no celular
+  (3,9× maior que o necessário). Agora tem `srcset` de 4 larguras (300/480/600/960) em webp
+  e jpg, mais `<link rel="preload" as="image" imagesrcset>`. **No celular: 72 KB → 12 KB.**
+- **CSS:** `styles.css` travava a pintura por 586 ms. Agora o site serve `styles.min.css`
+  (96,4 KB → 72,5 KB; **18,2 → 13,8 KB comprimido**).
+
+> ⚠️ **`styles.css` continua sendo o arquivo que se edita.** O `.min` é gerado. Mexeu no
+> `styles.css`? Rode `python scripts/auditoria-2026-09-08.py --css`. O
+> `conferir-conversao.py` ganhou uma checagem que **acusa** se os dois saírem de sincronia —
+> testada de propósito, editando o CSS e conferindo que o alarme dispara.
+
+### Armadilha de medição que quase virou correção errada
+As duas execuções do Lighthouse deram **performance 57 e 75**, e **CLS 0,391 e 0,029**. O
+navegador real, com rede e processador lentos e sem estado salvo, deu **CLS 0**. Ou seja: o
+0,391 era ruído da medição simulada. **Uma medição só teria levado a "consertar" um problema
+inexistente.** Rodar o Lighthouse duas vezes antes de agir.
+
+### Decisões de execução que valem manter
+1. **A quebra answer-first não reescreveu texto.** As 39 aberturas já respondiam — a resposta
+   vinha grudada no contexto dentro do mesmo parágrafo. O script só quebra em dois numa
+   fronteira de frase. Nenhuma palavra foi adicionada, removida ou trocada.
+2. **O link de fonte oficial só entra em texto corrido.** Ficam de fora hero, rodapé, menu,
+   tabela de preços, barra de CTA, cartão de resultado, breadcrumb e rótulo — e todos os
+   blocos com marcador `RCB:`, porque link ali seria apagado na próxima regeração.
+3. **Rodapé em `<h3>`, não `<h4>`:** medido nas 318 páginas, o último heading antes do rodapé
+   é h2 (243) ou h3 (75), nunca h1 — então h3 não pula nível em lugar nenhum. O CSS
+   `.footer-col h4` virou `.footer-col h3`.
+4. **`.artigo-relacionados h2` precisa de especificidade extra** (`.artigo-body` antes): os
+   artigos antigos trazem um `<style>` inline que vem depois da folha e venceria o empate.
+
+### Bug que eu mesmo introduzi e corrigi
+Ao editar `fontes-oficiais-2026-09-08.py` por heredoc, as sequências `\b` e `\1` da regex
+viraram **bytes de controle literais** (0x08 e 0x01) — a regex `</\1>` virou `</>`, que nunca
+casa, e headings e links deixaram de ser excluídos silenciosamente. **Heredoc do Bash come
+barra invertida mesmo com o delimitador entre aspas.** Para escrever regex em arquivo, usar
+a ferramenta de escrita ou montar a barra com `chr(92)`.
+
+### Pendências que continuam com o Renan
+- **Autoridade externa é o item que trava a nota** (peso 4, nota 1): o `sameAs` do site tem um
+  único perfil, o LinkedIn. Diretórios, Bing Places, Apple Business Connect, LinkedIn de
+  empresa e guest posts. Nenhuma linha de código resolve.
+- Reenviar o `sitemap.xml` no Search Console (150 URLs).
+- Rodar o protocolo de Share of Model do relatório.
+- `/sobre/` é a única página sem `dateModified` (não tem nó de schema que aceite data).
+- 10 páginas ainda recebem menos de 3 links internos: não há doador com afinidade de tema
+  que já não as linke.
+
 ## Como trabalhar neste projeto
 
 - Renan não é técnico: sempre explicar em português simples, passo a passo, sem jargão sem explicar.

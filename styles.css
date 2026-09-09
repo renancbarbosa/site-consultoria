@@ -2634,7 +2634,7 @@ section {
   padding-bottom: 48px;
 }
 
-.footer-col h4 {
+.footer-col h3 {
   color: #C9A84C;
   font-size: 0.875rem;
   font-weight: 600;
@@ -3547,6 +3547,83 @@ section {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+/* Foto do autor na assinatura dos artigos (E-E-A-T: quem escreveu tem rosto).
+   width/height no HTML + tamanho fixo aqui para nao empurrar layout ao carregar. */
+/* Bloco "Leia tambem" no fim dos artigos (liga as paginas que quase nao
+   recebiam link interno) e a linha de cidades da pagina nacional. */
+.artigo-relacionados {
+  margin: 44px 0 8px;
+  padding: 24px 26px;
+  background: rgba(255,255,255,0.035);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-md);
+}
+
+/* especificidade maior de proposito: os artigos antigos trazem um <style>
+   inline com .artigo-container h2 (margem grande + borda no topo) que vem
+   DEPOIS da folha e venceria o empate. */
+.artigo-body .artigo-relacionados h2,
+.artigo-relacionados h2 {
+  font-size: 1rem;
+  color: var(--gold);
+  margin: 0 0 12px;
+  padding: 0;
+  border: 0;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.artigo-relacionados ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.artigo-relacionados li {
+  margin-bottom: 8px;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.artigo-relacionados li:last-child { margin-bottom: 0; }
+
+.artigo-relacionados a {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.artigo-relacionados a:hover { color: var(--gold-light); }
+
+.hub-extra {
+  max-width: 900px;
+  margin: 0 auto 48px;
+  padding: 0 20px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.hub-extra a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+
+.byline-foto {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  border: 1px solid rgba(201,168,76,0.35);
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.article-byline {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
 .byline-separator {
   opacity: 0.4;
 }

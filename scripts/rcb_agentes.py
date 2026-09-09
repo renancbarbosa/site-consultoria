@@ -512,8 +512,8 @@ def montar_pagina(destino, slug, url, title, desc, og_title, og_desc, schema, co
 
     # folha de estilo propria da linha, logo depois da global
     if CSS not in head:
-        head = head.replace('<link rel="stylesheet" href="/styles.css">',
-                            '<link rel="stylesheet" href="/styles.css">\n  ' + CSS, 1)
+        head = head.replace('<link rel="stylesheet" href="/styles.min.css">',
+                            '<link rel="stylesheet" href="/styles.min.css">\n  ' + CSS, 1)
 
     # o rotulo do GA4 tem que bater com a URL. Troca qualquer data-page herdado
     # do doador (comercial ou artigo) pelo slug desta pagina.
