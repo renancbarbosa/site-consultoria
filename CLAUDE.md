@@ -1018,6 +1018,13 @@ GMN/SEO. **Não** oferece social media.
   (só menu e rodapé).
 - Tráfego pago: a página deixa claro que a verba é paga direto ao Google/Meta e que **não inclui social media**.
 
+### Artigos de nicho ligados aos anúncios (4 URLs, sitemap 154 → 158)
+- `/blog/como-conseguir-clientes-energia-solar/`, `/blog/site-para-empresa-de-energia-solar/`,
+  `/blog/trafego-pago-para-clinicas/` (cita Res. CFM 2.336/2023 e CFO), `/blog/quanto-investir-em-trafego-pago/`.
+- Conteúdo: `scripts/conteudo/artigos_nichos_anuncios.py`; o `gerar-artigos-sites.py` monta as duas listas
+  (preço + nichos) e exige no mínimo 1.000 palavras por artigo.
+- Energia solar era brecha total no blog (zero páginas) e é onde o concorrente posta no GMN.
+
 ### Próximos passos combinados
-- Depois: artigos por nicho (energia solar, clínicas etc.) e postagens no Perfil da Empresa.
+- Depois: mais artigos por nicho (energia solar, clínicas etc.) e postagens no Perfil da Empresa.
 - Concorrente analisado: Máximos Digital — ganha por **42 avaliações no Maps** (RCB tem 3), não pelo site.

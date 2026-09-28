@@ -332,6 +332,8 @@ PAGINAS = [
              "parte orgânica ao mesmo tempo."),
         ],
         "relacionados": [
+            ("/blog/quanto-investir-em-trafego-pago/", "Quanto investir em tráfego pago", "Como calcular a verba a partir do valor do seu cliente."),
+            ("/blog/trafego-pago-para-clinicas/", "Tráfego pago para clínicas", "Google Ads e Meta Ads dentro das regras do CFM e do CFO."),
             ("/criacao-de-landing-page-goiania/", "Criação de landing page", "A página que transforma o clique do anúncio em conversa."),
             ("/google-perfil-empresa/", "Google Perfil da Empresa", "A parte que traz cliente de graça, sem pagar por clique."),
             ("/criacao-de-sites-goiania/", "Criação de sites em Goiânia", "O site que sustenta o anúncio e aparece no Google."),

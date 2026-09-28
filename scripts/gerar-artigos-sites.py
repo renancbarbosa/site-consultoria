@@ -10,7 +10,10 @@ sys.path.insert(0, os.path.join(AQUI, "conteudo"))
 
 from rcb_base import escrever, contar_palavras  # noqa: E402
 from rcb_artigo import render_artigo            # noqa: E402
-from artigos_sites_orcamento import ARTIGOS  # noqa: E402
+from artigos_sites_orcamento import ARTIGOS as _PRECO  # noqa: E402
+from artigos_nichos_anuncios import ARTIGOS as _NICHOS  # noqa: E402
+
+ARTIGOS = _PRECO + _NICHOS
 
 MIN_PALAVRAS = 1000
 ALVO_SLUG = os.environ.get("RCB_ARTIGO_SLUG", "").strip()
