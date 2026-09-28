@@ -13,10 +13,10 @@
 
 ## Preços (tabela pública, sem orçamento sob consulta)
 Os valores abaixo são fechados e estão publicados no site em https://rcbseo.com.br/#pacotes. Pagamento por Pix, combinado pelo WhatsApp. Não há gateway de pagamento no site.
-- Pacote Presença Lite — R$ 1.997, pagamento único: para quem já tem site. Google Meu Negócio configurado e otimizado, 10 fotos profissionais no perfil, avaliações organizadas e respostas configuradas. Perfil entregue em 7 dias úteis.
-- Pacote Presença — R$ 2.497, pagamento único: site completo de até 5 páginas (início, serviços, sobre, contato e localização), Google Meu Negócio configurado e otimizado, 10 fotos profissionais no perfil, avaliações organizadas e respostas configuradas. Site entregue em 7 dias úteis.
-- Pacote Crescimento — R$ 2.997 por mês, mínimo de 3 meses: tudo do Presença, mais 2 textos novos por mês no site, gestão de avaliações no Google, relatório mensal de quantas pessoas encontraram o negócio e ajustes mensais no site.
-- Pacote Dominação — R$ 4.997 por mês, mínimo de 3 meses: tudo do Crescimento, mais 4 textos novos por mês, uma página dedicada para cada serviço oferecido, monitoramento mensal de 3 concorrentes diretos e prioridade no atendimento.
+- Pacote Presença Lite — pagamento único: para quem já tem site. Google Meu Negócio configurado e otimizado, 10 fotos profissionais no perfil, avaliações organizadas e respostas configuradas. Perfil entregue em 7 dias úteis.
+- Pacote Presença — pagamento único: site completo de até 5 páginas (início, serviços, sobre, contato e localização), Google Meu Negócio configurado e otimizado, 10 fotos profissionais no perfil, avaliações organizadas e respostas configuradas. Site entregue em 7 dias úteis.
+- Pacote Crescimento — mensal, mínimo de 3 meses: tudo do Presença, mais 2 textos novos por mês no site, gestão de avaliações no Google, relatório mensal de quantas pessoas encontraram o negócio e ajustes mensais no site.
+- Pacote Dominação — mensal, mínimo de 3 meses: tudo do Crescimento, mais 4 textos novos por mês, uma página dedicada para cada serviço oferecido, monitoramento mensal de 3 concorrentes diretos e prioridade no atendimento.
 - Garantia: se em 30 dias o cliente não notar diferença na presença no Google, o trabalho é refeito sem custo adicional.
 - Antes de contratar, a análise do Google e do site do interessado é gratuita e sem compromisso.
 - Prazos honestos: o perfil no Google Maps costuma melhorar em semanas; o site leva de 3 a 6 meses para firmar nas buscas. Não há promessa de primeira posição.
@@ -67,7 +67,7 @@ Os valores abaixo são fechados e estão publicados no site em https://rcbseo.co
 - Google Meu Negócio não aparece: o que pode ser?: https://rcbseo.com.br/blog/google-meu-negocio-nao-aparece/ — Causas de um perfil não aparecer no Maps (verificação, suspensão, categoria, distância) e como resolver.
 - Como saber se meu site está indexado no Google: https://rcbseo.com.br/blog/como-saber-se-meu-site-esta-indexado/ — Comando site:, Search Console, sitemap, canonical e noindex para verificar a indexação.
 - Quanto custa SEO local: https://rcbseo.com.br/blog/quanto-custa-consultoria-seo-local/ — Fatores que definem o preço do SEO local e quando o investimento faz sentido.
-- Quanto custa otimizar o Google Meu Negócio: https://rcbseo.com.br/blog/quanto-custa-otimizar-google-meu-negocio/ — O que é gratuito, o que entra no serviço profissional, preços publicados pela RCB e como estimar retorno.
+- Quanto custa otimizar o Google Meu Negócio: https://rcbseo.com.br/blog/quanto-custa-otimizar-google-meu-negocio/ — O que é gratuito, o que entra no serviço profissional, o que muda o valor e como estimar retorno.
 - Como receber mais orçamentos pelo WhatsApp usando o site: https://rcbseo.com.br/blog/como-receber-orcamentos-whatsapp-site/ — Como transformar o site em gerador de orçamentos: CTAs, botão de WhatsApp, páginas de serviço e confiança.
 - SEO local demora quanto tempo: https://rcbseo.com.br/blog/quanto-tempo-demora-seo-local/ — Os fatores que definem o prazo do SEO local, sem promessa de data fixa.
 - Erros que impedem uma empresa local de aparecer no Google: https://rcbseo.com.br/blog/erros-que-impedem-empresa-aparecer-no-google/ — Checklist dos erros mais comuns e a correção inicial de cada um.

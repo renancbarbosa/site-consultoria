@@ -720,8 +720,8 @@ ARTIGOS = [
         o posicionamento. Na RCB, a otimização profissional do perfil começa em <strong>R$ 1.997, em pagamento
         único</strong>. Quando o trabalho também inclui site, conteúdo e acompanhamento, o escopo e o preço mudam.</p>
 
-        {caixa('<p><strong>Resposta direta:</strong> cadastrar a empresa é gratuito. O Pacote Presença Lite da '
-               'RCB custa R$ 1.997 e inclui configuração e otimização do perfil, publicação de dez fotos, '
+        {caixa('<p><strong>Resposta direta:</strong> cadastrar a empresa é gratuito. Na RCB, a otimização tem orçamento '
+               'sob medida e grátis, e inclui configuração e otimização do perfil, publicação de dez fotos, '
                'organização de avaliações e entrega prevista em sete dias úteis. Esse prazo é de execução; '
                'não é promessa de primeira posição.</p>')}
 
@@ -747,10 +747,10 @@ ARTIGOS = [
         {tabela(
             ["Pacote", "Investimento", "Quando faz sentido"],
             [
-                ["Presença Lite", "R$ 1.997, uma vez", "Já existe site, mas o perfil está incompleto ou abandonado"],
-                ["Presença", "R$ 2.497, uma vez", "A empresa precisa de perfil organizado e site de até cinco páginas"],
-                ["Crescimento", "R$ 2.997/mês, mínimo de 3 meses", "Já existe uma base e é preciso trabalhar conteúdo, avaliações e ajustes mensais"],
-                ["Dominação", "R$ 4.997/mês, mínimo de 3 meses", "Há vários serviços, concorrência forte e necessidade de acompanhamento mais intenso"],
+                ["Presença Lite", "Sob medida, pagamento único", "Já existe site, mas o perfil está incompleto ou abandonado"],
+                ["Presença", "Sob medida, pagamento único", "A empresa precisa de perfil organizado e site de até cinco páginas"],
+                ["Crescimento", "Sob medida, mensal (mínimo de 3 meses)", "Já existe uma base e é preciso trabalhar conteúdo, avaliações e ajustes mensais"],
+                ["Dominação", "Sob medida, mensal (mínimo de 3 meses)", "Há vários serviços, concorrência forte e necessidade de acompanhamento mais intenso"],
             ],
             nota="Valores publicados pela RCB em 15 de agosto de 2026. Confira a página comercial antes de contratar, pois escopo e preços podem ser atualizados."
         )}
@@ -775,14 +775,14 @@ ARTIGOS = [
         Repetir serviço no nome da empresa, criar endereço falso ou comprar avaliações pode até parecer uma
         solução rápida, mas cria risco de suspensão e não constrói um ativo confiável.</p>
 
-        <h2>Quando R$ 1.997 se paga?</h2>
+        <h2>Quando o investimento se paga?</h2>
 
         <p>A conta depende da margem que sobra em cada novo cliente, não do faturamento bruto. Divida o valor do
         investimento pela margem de contribuição média de uma venda. O resultado mostra aproximadamente quantos
         novos clientes seriam necessários para cobrir o custo.</p>
 
         {tabela(
-            ["Margem por novo cliente", "Clientes para cobrir R$ 1.997", "Leitura prática"],
+            ["Margem por novo cliente", "Clientes para cobrir R$ 2 mil (exemplo)", "Leitura prática"],
             [
                 ["R$ 200", "10 clientes", "Negócio de ticket menor depende de mais volume"],
                 ["R$ 500", "4 clientes", "Quatro vendas adicionais cobrem aproximadamente o investimento"],
@@ -837,7 +837,7 @@ ARTIGOS = [
             ("O Google cobra para cadastrar uma empresa?",
              "Não. Criar, reivindicar e gerenciar um Perfil da Empresa elegível é gratuito. O custo existe quando você contrata configuração, fotos, site, consultoria ou acompanhamento."),
             ("Quanto custa a otimização na RCB?",
-             "O trabalho começa em R$ 1.997 no Pacote Presença Lite, em pagamento único. Há opções que também incluem site e acompanhamento mensal, conforme a necessidade."),
+             "O valor é sob medida e o orçamento é grátis, em até 24 horas pelo WhatsApp. Há opções que também incluem site e acompanhamento mensal, conforme a necessidade."),
             ("Pagar a otimização garante ficar em primeiro?",
              "Não. O pagamento remunera o trabalho executado; não compra posição orgânica. O Google considera relevância, distância, destaque e outros sinais, e ninguém controla o resultado exato."),
             ("Preciso contratar manutenção todos os meses?",

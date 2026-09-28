@@ -9,6 +9,8 @@ erradas agora que o preco esta publicado.
 
 Idempotente: nao duplica pergunta ja existente.
 """
+import sys as _sys
+_sys.exit("DESATIVADO em 28/09/2026: este script escreve PRECO no site, e o site nao mostra mais preco (decisao do Renan). Ver scripts/remover-precos-2026-09-28.py.")
 import html as html_mod
 import json
 import re

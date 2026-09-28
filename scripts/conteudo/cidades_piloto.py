@@ -32,7 +32,7 @@ def rio_de_janeiro(ctx):
         "titulo": "Consultoria de SEO no Rio de Janeiro (RJ) | RCB",
         "desc": (
             "Consultoria de SEO no Rio de Janeiro: no Maps, quem decide é a zona, "
-            "não a cidade. Google Perfil da Empresa, site e conteúdo. Online, a partir de R$ 1.997."
+            "não a cidade. Google Perfil da Empresa, site e conteúdo. Online, com orçamento grátis."
         ),
         "eyebrow": "Rio de Janeiro · RJ",
         "h1": "Consultoria de SEO no Rio de Janeiro: quem aparece na busca da sua zona leva o cliente",
@@ -197,7 +197,7 @@ def campinas(ctx):
         "titulo": "Consultoria de SEO em Campinas (SP) | RCB",
         "desc": (
             "Consultoria de SEO em Campinas: seu cliente pode estar em Valinhos ou Sumaré. "
-            "Perfil no Google, site e conteúdo para a RMC. Online, a partir de R$ 1.997."
+            "Perfil no Google, site e conteúdo para a RMC. Online, com orçamento grátis."
         ),
         "eyebrow": "Campinas · SP",
         "h1": "Consultoria de SEO em Campinas: apareça para toda a região, não só para o município",
@@ -309,7 +309,7 @@ def campinas(ctx):
             ("Meu concorrente em Campinas já faz SEO. Ainda vale começar agora?",
              "Vale, mas com expectativa correta. Campinas é polo de tecnologia e a régua local é mais alta que a média do interior — é provável que seus concorrentes já tenham site decente e perfil organizado. Nesse cenário, ganho não vem de uma tacada, vem de constância: perfil sempre atualizado, avaliações pedidas de forma sistemática e páginas que respondem o que o cliente pergunta. Quem faz isso por seis meses seguidos passa quem fez tudo em um mês e abandonou."),
             ("Quanto custa a consultoria de SEO para uma empresa de Campinas?",
-             "O mesmo dos demais atendimentos, sem taxa por distância, porque o trabalho é online: a partir de R$ 1.997 no pacote de entrada, que arruma o Google Perfil da Empresa de quem já tem site. Os quatro pacotes, com o que cada um inclui, estão nesta mesma página. Pagamento por Pix, combinado no WhatsApp, e garantia de 30 dias."),
+             "O mesmo dos demais atendimentos, sem taxa por distância, porque o trabalho é online: o orçamento é sob medida e grátis, e o pacote de entrada, que arruma o Google Perfil da Empresa de quem já tem site, costuma sair mais em conta do que se imagina. Os quatro pacotes, com o que cada um inclui, estão nesta mesma página. Pagamento por Pix, combinado no WhatsApp, e garantia de 30 dias."),
         ],
         "cta_titulo": "Quer aparecer no Google em Campinas e na região?",
         "cta_texto": (
@@ -333,7 +333,7 @@ def palmas(ctx):
         "titulo": "SEO Local em Palmas (TO) e Google Perfil da Empresa | RCB",
         "desc": (
             "SEO local em Palmas (TO): endereço de quadra pode confundir o Google Maps. "
-            "Perfil da Empresa configurado corretamente. Online, a partir de R$ 1.997."
+            "Perfil da Empresa configurado corretamente. Online, com orçamento grátis."
         ),
         "eyebrow": "Palmas · TO",
         "h1": "SEO local em Palmas (TO): comece pelo endereço que o Google não entende",

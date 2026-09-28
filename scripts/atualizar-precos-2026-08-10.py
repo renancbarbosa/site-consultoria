@@ -22,6 +22,8 @@ Ordem certa de execucao:
 Idempotente: as frases antigas somem depois da primeira passada, entao rodar de
 novo nao muda nada.
 """
+import sys as _sys
+_sys.exit("DESATIVADO em 28/09/2026: este script escreve PRECO no site, e o site nao mostra mais preco (decisao do Renan). Ver scripts/remover-precos-2026-09-28.py.")
 import re
 import sys
 from pathlib import Path

@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Fonte unica dos pacotes com preco (rodada de conversao de 09/08/2026).
+Fonte unica dos pacotes (rodada de conversao de 09/08/2026).
+
+DESDE 28/09/2026 O SITE NAO MOSTRA PRECO NENHUM (decisao do Renan). Os pacotes
+continuam descrevendo o que cada um entrega, mas o valor sai sob medida no
+WhatsApp. Os campos de valor foram removidos de proposito; o
+conferir-conversao.py acusa qualquer preco da RCB que reapareca.
 
 Quem usa:
   - aplicar-conversao.py       (aplica nas paginas escritas a mao)
@@ -23,16 +28,13 @@ MARCA_CTA = "<!-- RCB:CTA-MOBILE -->"
 
 # 2a frase da linha de apoio da tabela. Paginas de nicho trocam por uma versao
 # na lingua delas (ver FECHOS no aplicar-conversao.py).
-FECHO_PADRAO = "Pagamento por Pix pelo WhatsApp."
+FECHO_PADRAO = "Me conte o seu caso no WhatsApp e receba o orçamento em até 24 horas."
 
 PACOTES = [
     {
         "id": "presenca-lite",
         "nome": "Pacote Presença Lite",
         "para": "Para quem já tem site, mas o Google Meu Negócio está largado.",
-        "valor": "R$ 1.997",
-        "periodo": "",
-        "condicao": "Pagamento único",
         "itens": [
             ("Google Meu Negócio configurado e otimizado", False),
             ("10 fotos profissionais publicadas no seu perfil", False),
@@ -40,16 +42,11 @@ PACOTES = [
             ("Perfil entregue em 7 dias úteis", True),
         ],
         "botao": "Quero arrumar meu Google",
-        "preco": "1997.00",
-        "mensal": False,
     },
     {
         "id": "presenca",
         "nome": "Pacote Presença",
         "para": "Para quem ainda não tem nada no ar, ou tem e está abandonado.",
-        "valor": "R$ 2.497",
-        "periodo": "",
-        "condicao": "Pagamento único",
         "itens": [
             ("Site completo com até 5 páginas: início, serviços, sobre, contato e localização", False),
             ("Google Meu Negócio configurado e otimizado", False),
@@ -58,16 +55,11 @@ PACOTES = [
             ("Site entregue em 7 dias úteis", True),
         ],
         "botao": "Quero aparecer no Google",
-        "preco": "2497.00",
-        "mensal": False,
     },
     {
         "id": "crescimento",
         "nome": "Pacote Crescimento",
         "para": "Para quem já tem o básico e quer subir de posição todo mês.",
-        "valor": "R$ 2.997",
-        "periodo": "/mês",
-        "condicao": "Mínimo de 3 meses",
         "itens": [
             ("Tudo do Pacote Presença", True),
             ("2 textos novos por mês no seu site", False),
@@ -76,16 +68,11 @@ PACOTES = [
             ("Ajustes no site todo mês, conforme o que os números mostram", False),
         ],
         "botao": "Quero crescer no Google",
-        "preco": "2997.00",
-        "mensal": True,
     },
     {
         "id": "dominacao",
         "nome": "Pacote Dominação",
         "para": "Para quem quer ser o primeiro resultado da cidade no seu ramo.",
-        "valor": "R$ 4.997",
-        "periodo": "/mês",
-        "condicao": "Mínimo de 3 meses",
         "itens": [
             ("Tudo do Pacote Crescimento", True),
             ("4 textos novos por mês", False),
@@ -94,8 +81,6 @@ PACOTES = [
             ("Prioridade no atendimento: sua mensagem passa na frente", False),
         ],
         "botao": "Quero dominar minha cidade",
-        "preco": "4997.00",
-        "mensal": True,
     },
 ]
 
@@ -120,27 +105,25 @@ def bloco_pacotes(negocio, data_page, onde="", fecho=FECHO_PADRAO):
         # A garantia fecha os tres cartoes: e o argumento que derruba o medo de
         # pagar, e antes dela so aparecia la embaixo, longe do preco.
         itens += '\n              <li class="pacote-garantia">Garantia de 30 dias</li>'
-        periodo = ('<span class="periodo">%s</span>' % p["periodo"]) if p["periodo"] else ""
         selo = '\n            <span class="pacote-selo">Mais escolhido</span>' if p["id"] == "crescimento" else ""
         destaque = " destaque" if p["id"] == "crescimento" else ""
-        msg = ("Olá! Tenho %s%s e quero o %s (%s%s). Pode me explicar como funciona?"
-               % (negocio, onde, p["nome"], p["valor"], p["periodo"]))
+        msg = ("Olá! Tenho %s%s e quero um orçamento do %s. Pode me explicar como funciona?"
+               % (negocio, onde, p["nome"]))
         cards.append(
             '\n          <article class="pacote-card%s">%s'
             '\n            <h3 class="pacote-nome">%s</h3>'
             '\n            <p class="pacote-para">%s</p>'
-            '\n            <div class="pacote-preco"><span class="valor">%s</span>%s</div>'
-            '\n            <p class="pacote-condicao">%s</p>'
+            '\n            <p class="pacote-condicao">Valor sob medida para o tamanho do seu negócio</p>'
             '\n            <ul class="pacote-lista">%s'
             '\n            </ul>'
             '\n            <a href="%s" class="btn btn-primary btn-full" target="_blank" rel="noopener noreferrer" '
             'data-event="cta_click" data-location="pacote_%s" data-page="%s">%s</a>'
             '\n          </article>\n'
-            % (destaque, selo, p["nome"], p["para"], p["valor"], periodo,
-               p["condicao"], itens, wa(msg), p["id"], data_page, p["botao"])
+            % (destaque, selo, p["nome"], p["para"],
+               itens, wa(msg), p["id"], data_page, p["botao"])
         )
 
-    duvida = ("Olá! Tenho %s%s e vi seus pacotes no site, mas não sei qual escolher. "
+    duvida = ("Olá! Tenho %s%s e quero um orçamento, mas não sei qual pacote escolher. "
               "Pode olhar meu Google e me dizer?" % (negocio, onde))
 
     return (
@@ -148,17 +131,18 @@ def bloco_pacotes(negocio, data_page, onde="", fecho=FECHO_PADRAO):
         '    <section class="pacotes-section" id="pacotes" aria-labelledby="pacotes-titulo">\n'
         '      <div class="container">\n'
         '        <div class="section-header">\n'
-        '          <div class="section-tag">Preços</div>\n'
-        '          <h2 id="pacotes-titulo" class="section-title">Quanto custa e o que está incluído</h2>\n'
-        '          <p class="section-desc">Preço fechado, na tela, sem "solicite um orçamento". '
+        '          <div class="section-tag">Orçamento grátis</div>\n'
+        '          <h2 id="pacotes-titulo" class="section-title">Escolha por onde começar — o valor sai sob medida</h2>\n'
+        '          <p class="section-desc">Cada negócio tem um tamanho, e o investimento acompanha: '
+        'pode sair bem mais em conta do que você imagina. '
         '%s</p>\n'
         '        </div>\n'
         '        <div class="pacotes-grid">\n%s        </div>\n'
         '        <p class="pacotes-nota"><strong>Não sabe qual escolher?</strong> '
         '<a href="%s" target="_blank" rel="noopener noreferrer" data-event="cta_click" '
         'data-location="pacotes_duvida" data-page="%s">Me chame no WhatsApp</a> e me conte do seu negócio. '
-        'Eu olho seu Google antes de você pagar qualquer coisa e digo com franqueza qual dos quatro faz '
-        'sentido — inclusive se a resposta for o mais barato.</p>\n'
+        'Eu olho seu Google antes de você investir qualquer coisa e digo com franqueza qual dos quatro faz '
+        'sentido — inclusive se a resposta for o mais simples.</p>\n'
         '      </div>\n'
         '    </section>\n'
         '    %s\n' % (MARCA_INI, fecho, "".join(cards), wa(duvida), data_page, MARCA_FIM)
@@ -168,12 +152,12 @@ def bloco_pacotes(negocio, data_page, onde="", fecho=FECHO_PADRAO):
 def bloco_cta_mobile(data_page, ancora="#pacotes"):
     """Barra fixa no rodape do celular. ancora = '#pacotes' na propria pagina,
     ou '/#pacotes' quando a pagina nao tem tabela de precos."""
-    msg = "Olá! Vi seu site e quero saber como faço para aparecer no Google."
+    msg = "Olá! Vi seu site e quero um orçamento para aparecer no Google."
     return (
         '  %s\n'
         '  <div class="cta-mobile" aria-label="Ações rápidas">\n'
         '    <a href="%s" class="btn btn-outline" data-event="cta_click" '
-        'data-location="cta_mobile_precos" data-page="%s">Ver preços</a>\n'
+        'data-location="cta_mobile_precos" data-page="%s">Orçamento grátis</a>\n'
         '    <a href="%s" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" '
         'data-event="cta_click" data-location="cta_mobile_whatsapp" data-page="%s">Falar no WhatsApp</a>\n'
         '  </div>\n\n' % (MARCA_CTA, ancora, data_page, wa(msg), data_page)
@@ -181,36 +165,12 @@ def bloco_cta_mobile(data_page, ancora="#pacotes"):
 
 
 def ofertas():
-    """Lista de Offer para colar no no Service do JSON-LD."""
-    saida = []
-    for p in PACOTES:
-        o = {
-            "@type": "Offer",
-            "name": p["nome"],
-            "price": p["preco"],
-            "priceCurrency": "BRL",
-            "availability": "https://schema.org/InStock",
-        }
-        if p["mensal"]:
-            o["priceSpecification"] = {
-                "@type": "UnitPriceSpecification",
-                "price": p["preco"],
-                "priceCurrency": "BRL",
-                "unitCode": "MON",
-                "billingDuration": 1,
-                "billingIncrement": 1,
-            }
-        saida.append(o)
-    return saida
-
-
-def ofertas_json_compacto():
-    """Mesmo conteudo de ofertas(), em texto, para gerador que monta JSON a mao."""
-    import json
-    return json.dumps(ofertas(), ensure_ascii=False, separators=(",", ":"))
+    """Desde 28/09/2026: nenhuma Offer com preco. Lista vazia; quem monta o
+    JSON-LD deve OMITIR a chave "offers"."""
+    return []
 
 
 # Item do menu que substituiu "Diagnostico gratuito".
 def nav_ver_precos(data_page, ancora="#pacotes"):
     return ('<li><a href="%s" class="nav-link nav-cta" data-event="cta_click" '
-            'data-location="navbar" data-page="%s">Ver preços</a></li>' % (ancora, data_page))
+            'data-location="navbar" data-page="%s">Orçamento grátis</a></li>' % (ancora, data_page))

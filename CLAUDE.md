@@ -963,3 +963,49 @@ a ferramenta de escrita ou montar a barra com `chr(92)`.
 - HTML é estático e escrito à mão (sem build step) — cada página tem seu próprio `<head>` com meta tags e schema JSON-LD duplicados; ao editar textos/títulos, é preciso editar title, meta description, og:title, og:description, twitter:title, twitter:description E o schema JSON-LD todos manualmente (não há fonte única).
 - CSS/JS globais: `/styles.css`, `/script.js`. Navbar e footer são blocos HTML repetidos em cada página (copiar/colar ao criar página nova — ver `scripts/gerar-paginas-cidades.py` para o padrão `NAVBAR`/`rodape()` reutilizável em Python).
 - gtag/GA4 já configurado com consent mode; eventos de conversão seguem padrão `data-event="cta_click" data-location="..." data-page="..."`.
+
+## Rodada de 28/09/2026: SITE SEM PREÇO + criação de sites / "quanto custa"
+
+### ⚠️ Regra nova do Renan — vale para tudo daqui em diante
+**Nenhum preço da RCB em lugar nenhum do site.** Nem tabela, nem "a partir de", nem `Offer`/`price`/
+`priceRange` no JSON-LD, nem title/description. Tudo é copy persuasiva ("valor sob medida, depende do
+tamanho, pode sair mais em conta do que você imagina") levando ao **WhatsApp com mensagem pronta**.
+Substitui a política de preço público de 09/08. Faixas de **mercado** ("site custa de R$ 100/mês a
+R$ 10 mil+") são permitidas. Oferta só com o que o Renan entrega de verdade (orçamento grátis em 24h,
+análise do Google do concorrente, GMN junto com o site) — nunca desconto ou prazo inventado.
+Serviços que a RCB passa a oferecer: site, landing page, loja virtual, tráfego pago (Google Ads/Meta Ads),
+GMN/SEO. **Não** oferece social media.
+
+### Como ficou a mecânica
+- `scripts/rcb_pacotes.py`: os 4 pacotes continuam (descrevem o que cada um entrega), **sem campos de
+  valor**. `ofertas()` devolve `[]`. Menu e barra do celular: "Ver preços" → **"Orçamento grátis"**.
+- `scripts/aplicar-conversao.py`: o passo 5 agora **remove** `offers`/`priceRange` do JSON-LD (antes
+  forçava). `CONTRADICOES = []` de propósito.
+- `scripts/gerar-paginas-cidades.py`: não escreve mais `offers` nem "Ver preços".
+- **`scripts/remover-precos-2026-09-28.py`** (novo): troca o bloco das cidades, rótulos e ~35 frases
+  com preço; varre o site e os módulos de conteúdo e **lista qualquer preço da RCB que sobrar**.
+  Idempotente (2ª execução: "alterados: 0", "sobrou: 0").
+- **`scripts/conferir-conversao.py` inverteu a regra**: agora ACUSA preço na tabela, no JSON-LD, no texto
+  e no `llms.txt`. Rodar antes de publicar.
+- Travados com `sys.exit` (reescreviam preço): `atualizar-precos-2026-08-10.py`, `faq-precos-nichos.py`,
+  `gerar-criacao-sites-goiania.py` (este também está defasado em relação ao HTML).
+- A home tem tabela própria (sem marcadores): editada à mão. O `VALOR` no JS do formulário é só o valor
+  de conversão do GA4 — não aparece para o visitante.
+- Página protegida `/consultor-seo-goiania/`: teve **só as frases de preço** trocadas (autorização:
+  "não quero mais preço em nada no meu site").
+
+### Criação de sites / "quanto custa" (publicado: `ea13204`, `c0d4a70`)
+- `/criacao-de-sites-goiania/`: title "Criação de Sites em Goiânia | Quanto Custa + Orçamento Grátis",
+  seção de faixas de mercado + 4 cartões de orçamento (site, site com SEO, landing page, loja virtual),
+  cada um com mensagem própria no WhatsApp; âncora `#orcamento`. Estava na posição ~26 (GSC, 30 dias).
+- `/blog/quanto-custa-um-site/` (novo, busca nacional; a local é da página acima). Gerador:
+  `scripts/gerar-artigos-sites.py` + `conteudo/artigos_sites_orcamento.py`. Sitemap: **151 URLs**.
+- `styles.css` ganhou estilo de `.cards-grid/.feature-card/.visual-card/.steps-list`, que estavam **sem
+  CSS desde a publicação** (criação de sites e as 3 páginas de Agentes de IA).
+- Filtro "SEO Nacional" do `gerar-artigos-visibilidade-google.py` procura `<h4>` no rodapé, que virou
+  `<h3>` em 08/09: se regerar, os links da divisão revertida voltam. Corrigido só no gerador novo.
+
+### Próximos passos combinados
+- Etapa 3: páginas de landing page, gestão de tráfego pago (Google Ads/Meta Ads) e loja virtual.
+- Depois: artigos por nicho (energia solar, clínicas etc.) e postagens no Perfil da Empresa.
+- Concorrente analisado: Máximos Digital — ganha por **42 avaliações no Maps** (RCB tem 3), não pelo site.

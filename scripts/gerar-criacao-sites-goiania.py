@@ -15,6 +15,8 @@ O molde (head/nav/rodape) vem de /consultor-seo-goiania/, que e a pagina vencedo
 dominio. O texto e proprio. A pagina vencedora NAO e alterada por este script.
 Idempotente: sobrescreve o arquivo de destino.
 """
+import sys as _sys
+_sys.exit("DESATIVADO em 28/09/2026: este script escreve PRECO no site, e o site nao mostra mais preco (decisao do Renan). Ver scripts/remover-precos-2026-09-28.py.")
 import io
 import json
 import os

@@ -20,17 +20,28 @@ RAIZ = Path(__file__).resolve().parent.parent
 os.chdir(RAIZ)
 
 sys.path.insert(0, str(RAIZ / "scripts"))
-from rcb_pacotes import PACOTES, MARCA_INI, MARCA_FIM  # noqa: E402
+from rcb_pacotes import MARCA_INI, MARCA_FIM  # noqa: E402
 
-# Fonte unica: o que a tabela e a ficha do Google TEM que dizer. Mudou o preco
-# no rcb_pacotes.py? Esta conferencia acompanha sozinha, sem editar nada aqui.
-VALORES_ESPERADOS = {p["valor"] for p in PACOTES}   # "R$ 1.997"
-PRECOS_ESPERADOS = {p["preco"] for p in PACOTES}    # "1997.00"
+# Desde 28/09/2026 o site NAO mostra preco da RCB (decisao do Renan). A regra
+# se inverteu: antes esta conferencia exigia os valores na tabela e na ficha do
+# Google; agora ela ACUSA qualquer valor da RCB que apareca. Faixas de mercado
+# ("site custa de R$ 100/mes a R$ 10 mil") sao permitidas e nao casam aqui.
+# Mesmo padrao do scripts/remover-precos-2026-09-28.py.
+PRECO_RCB = re.compile(
+    r'R\$\s?(?:1\.997|2\.497|2\.997|4\.997|997|1\.497)(?![\d.,])'
+    r'|(?<![\d.])(?:1997|2497|2997|4997)\.00'
+    r'|a partir de R\$'
+    r'|"priceRange"|"offers"\s*:'
+    r'|(?<!um )[Pp]reço (?:fechado|publicado|está (?:na tela|publicado))'
+    r'|[Pp]agamento por Pix pelo WhatsApp\.<'
+    r'|class="valor"'
+)
 
 JARGAO = ["GMB", "on-page", "metadescri", "arquitetura de informa",
           "ticket médio", "métricas de vaidade", "escopo enxuto"]
-CONTRADICAO = ["investimento depende", "faixas de investimento",
-               "proposta personalizada", "não existe preço de tabela"]
+# Ate 28/09/2026 estas frases "contradiziam o preco publicado". Hoje o site e
+# sem preco e elas sao o discurso certo: lista vazia de proposito.
+CONTRADICAO = []
 
 SEM_NAVBAR = {"404.html", "diagnostico-presenca-digital/exemplo/index.html",
               "privacidade/index.html", "cookies/index.html"}
@@ -70,9 +81,7 @@ def precos_do_bloco(html):
             return None, 'tem id="pacotes" mas a secao nunca fecha'
         valores = set(re.findall(r'<span class="valor">\s*([^<]+?)\s*</span>',
                                  html[s:fim]))
-        if not valores:
-            return None, 'secao id="pacotes" sem nenhum <span class="valor">'
-        return valores, None
+        return valores, None                  # vazio = certo (sem preco)
 
     if i == -1:
         return None, "tem o marcador de FIM da tabela mas nao o de INICIO"
@@ -83,9 +92,7 @@ def precos_do_bloco(html):
 
     bloco = html[i:f + len(MARCA_FIM)]
     valores = set(re.findall(r'<span class="valor">\s*([^<]+?)\s*</span>', bloco))
-    if not valores:
-        return None, "bloco da tabela existe mas nao tem nenhum <span class=\"valor\">"
-    return valores, None
+    return valores, None                      # vazio = certo (sem preco)
 
 
 def precos_do_schema(html):
@@ -97,8 +104,10 @@ def precos_do_schema(html):
 
     def caminhar(no):
         if isinstance(no, dict):
-            if no.get("@type") == "Offer" and "price" in no:
+            if "price" in no:
                 precos.add(str(no["price"]))
+            if "priceRange" in no:
+                precos.add("priceRange " + str(no["priceRange"]))
             for v in no.values():
                 caminhar(v)
         elif isinstance(no, list):
@@ -151,12 +160,10 @@ for rel in paginas:
         if not any(Path(c).exists() for c in (alvo, alvo + "/index.html", alvo + ".html")):
             problemas.append("%s: link quebrado -> %s" % (rel, l))
 
-    # preco coerente entre a TABELA na tela e a ficha do Google (JSON-LD)
-    # So paginas com a tabela precisam dos valores nos dois lugares. Citar
-    # "a partir de R$ 1.997" no meio de um texto qualquer e legitimo.
+    # SEM PRECO (desde 28/09/2026): tabela sem valor, ficha do Google sem
+    # price/priceRange e nenhuma mencao a preco da RCB na pagina.
     valores_tela, erro_bloco = precos_do_bloco(h)
     precos_schema, erros_schema = precos_do_schema(h)
-    tem_tabela = valores_tela is not None or erro_bloco is not None
 
     if erro_bloco:
         problemas.append("%s: %s" % (rel, erro_bloco))
@@ -165,33 +172,15 @@ for rel in paginas:
 
     if valores_tela is not None:
         stats["com_precos"] += 1
-
-        if valores_tela != VALORES_ESPERADOS:
-            faltando = sorted(VALORES_ESPERADOS - valores_tela)
-            sobrando = sorted(valores_tela - VALORES_ESPERADOS)
-            problemas.append(
-                "%s: tabela na tela fora do rcb_pacotes.py | esperado: %s | achado: %s%s%s"
-                % (rel, sorted(VALORES_ESPERADOS), sorted(valores_tela),
-                   " | falta: %s" % faltando if faltando else "",
-                   " | sobra (preco velho?): %s" % sobrando if sobrando else ""))
-
-        if not precos_schema:
-            problemas.append("%s: tem a tabela na tela mas nenhum Offer/price no JSON-LD"
-                             % rel)
-        elif precos_schema != PRECOS_ESPERADOS:
-            faltando = sorted(PRECOS_ESPERADOS - precos_schema)
-            sobrando = sorted(precos_schema - PRECOS_ESPERADOS)
-            problemas.append(
-                "%s: preco do JSON-LD fora do rcb_pacotes.py | esperado: %s | achado: %s%s%s"
-                % (rel, sorted(PRECOS_ESPERADOS), sorted(precos_schema),
-                   " | falta: %s" % faltando if faltando else "",
-                   " | sobra (preco velho?): %s" % sobrando if sobrando else ""))
-
-    elif precos_schema and not tem_tabela:
-        # Preco na ficha do Google sem tabela na tela: o Google mostraria um
-        # valor que o visitante nao ve em lugar nenhum.
-        problemas.append("%s: preco no JSON-LD (%s) sem tabela de precos na pagina"
+        if valores_tela:
+            problemas.append("%s: tabela de pacotes mostrando preco %s"
+                             % (rel, sorted(valores_tela)))
+    if precos_schema:
+        problemas.append("%s: preco na ficha do Google (JSON-LD): %s"
                          % (rel, sorted(precos_schema)))
+    m_preco = PRECO_RCB.search(h)
+    if m_preco:
+        problemas.append("%s: preco da RCB no texto ('%s')" % (rel, m_preco.group(0)))
 
     # barra do celular e menu novo
     if rel not in SEM_NAVBAR:
@@ -199,7 +188,7 @@ for rel in paginas:
             stats["com_barra"] += 1
         else:
             problemas.append("%s: sem barra de CTA no celular" % rel)
-        if ">Ver preços<" in h:
+        if ">Orçamento grátis<" in h:
             stats["com_menu_novo"] += 1
         elif "nav-cta" in h:
             problemas.append("%s: menu ainda com o botao antigo" % rel)
@@ -218,8 +207,8 @@ for rel in paginas:
 
 # llms.txt
 llms = Path("llms.txt").read_text(encoding="utf-8")
-if "R$ 1.997" not in llms:
-    problemas.append("llms.txt: sem a tabela de precos")
+if PRECO_RCB.search(llms):
+    problemas.append("llms.txt: cita preco da RCB ('%s')" % PRECO_RCB.search(llms).group(0))
 
 # CSS minificado em dia?
 # styles.css e a FONTE que se edita; styles.min.css e o que o site serve.
@@ -245,7 +234,7 @@ for u in urls:
         problemas.append("sitemap: aponta para pagina que nao existe -> /%s" % u)
 
 print("paginas conferidas      :", stats["paginas"])
-print("com tabela de precos    :", stats["com_precos"])
+print("com tabela de pacotes   :", stats["com_precos"])
 print("com barra no celular    :", stats["com_barra"])
 print("com o menu novo         :", stats["com_menu_novo"])
 print("URLs no sitemap         :", len(urls))

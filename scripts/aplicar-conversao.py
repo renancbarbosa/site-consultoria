@@ -25,7 +25,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from rcb_pacotes import (
     FECHO_PADRAO, MARCA_CTA, MARCA_FIM, MARCA_INI, bloco_cta_mobile, bloco_pacotes,
-    nav_ver_precos, ofertas,
+    nav_ver_precos,
 )
 
 # Paginas que falam na lingua do nicho no fim da linha de apoio da tabela.
@@ -87,19 +87,10 @@ APOIO_FIXAS = [
 # Nem o menu nem a barra: pagina legal sem navbar, ou demo noindex.
 IGNORADAS = {"diagnostico-presenca-digital/exemplo", "404"}
 
-# Frases que contradizem o preco publicado -> texto novo.
-CONTRADICOES = [
-    ("Em vez de pacote pronto, eu começo com um diagnóstico: avalio a sua presença hoje no Google, mostro o que está travando o resultado e proponho um plano com faixas de investimento compatíveis com a realidade da sua clínica.",
-     "O preço está publicado aqui na página: R$ 1.997 ou R$ 2.497 em pagamento único, ou R$ 2.997 e R$ 4.997 por mês. Antes de você pagar qualquer coisa eu olho seu Google de graça e digo com franqueza qual dos quatro faz sentido."),
-    ("Para ter uma ideia do investimento no seu caso, <a href=\"/diagnostico-presenca-digital/\">solicite um diagnóstico gratuito</a> e eu te retorno com uma proposta personalizada.",
-     "Ficou em dúvida sobre qual pacote escolher? Me chame no WhatsApp que eu olho seu caso e te digo, sem compromisso."),
-    ("O investimento depende do momento, da concorrência e do escopo. O diagnóstico gratuito ajuda a entender se faz sentido agora.",
-     "Cabe sim, e o preço está publicado nesta página: R$ 1.997 no Presença Lite, R$ 2.497 no Pacote Presença, R$ 2.997 por mês no Crescimento e R$ 4.997 por mês no Dominação."),
-    ("não existe preço de tabela — existe escopo",
-     "hoje eu trabalho com preço de tabela, publicado no site"),
-    ("Não existe preço de tabela — existe escopo",
-     "Hoje eu trabalho com preço de tabela, publicado no site"),
-]
+# Ate 28/09/2026 esta lista trocava frases "sem tabela" por frases COM preco.
+# Desde entao o site nao mostra preco (decisao do Renan) e a lista ficou vazia
+# de proposito: as frases com valor sao limpas pelo remover-precos-2026-09-28.py.
+CONTRADICOES = []
 
 NAV_ANTIGO = '<li><a href="/diagnostico-presenca-digital/" class="nav-link nav-cta">Diagnóstico gratuito</a></li>'
 
@@ -183,49 +174,31 @@ def aplicar(rel, negocio, comercial):
                     feito.append("precos (antes de %s)" % alvo.strip()[:26])
                     break
 
-    # 5. precos na ficha do Google ---------------------------------------
-    # Nao basta ser "comercial": /blog/quanto-custa-consultoria-seo-local/ mostra
-    # a tabela e e pagina de apoio. Quem mostra preco tem que ter preco no schema.
-    if comercial or MARCA_INI in h:
-        def injeta(m):
-            try:
-                dados = json.loads(m.group(1))
-            except ValueError:
-                return m.group(0)
-            nos = dados.get("@graph") if isinstance(dados, dict) and "@graph" in dados else [dados]
-            mudou = False
-            for no in nos:
-                # Sobrescreve sempre: se so inserisse quando falta, mudar preco
-                # no rcb_pacotes.py nunca chegaria a quem ja tem "offers".
-                if isinstance(no, dict) and no.get("@type") == "Service":
-                    novas = ofertas()
-                    if no.get("offers") != novas:
-                        no["offers"] = novas
+    # 5. ficha do Google SEM preco ------------------------------------------
+    # Desde 28/09/2026: remove "offers" e "priceRange" de qualquer no do JSON-LD.
+    # (Antes este passo FORCAVA os precos do rcb_pacotes.py na ficha.)
+    def limpa(m):
+        try:
+            dados = json.loads(m.group(1))
+        except ValueError:
+            return m.group(0)
+        nos = dados.get("@graph") if isinstance(dados, dict) and "@graph" in dados else [dados]
+        mudou = False
+        for no in nos:
+            if isinstance(no, dict):
+                for chave in ("offers", "priceRange"):
+                    if chave in no:
+                        del no[chave]
                         mudou = True
-            # Pagina sem no Service nenhum: cria um, senao o preco aparece para
-            # o visitante mas nao para o Google.
-            if not mudou and isinstance(dados, dict) and "@graph" in dados:
-                tem_service = any(isinstance(n, dict) and n.get("@type") == "Service" for n in nos)
-                if not tem_service:
-                    nos.append({
-                        "@type": "Service",
-                        "serviceType": "Consultoria de SEO",
-                        "name": "Site e Google Meu Negócio para negócios locais",
-                        "provider": {"@type": "LocalBusiness",
-                                     "@id": "https://rcbseo.com.br/#business"},
-                        "areaServed": {"@type": "Country", "name": "Brasil"},
-                        "offers": ofertas(),
-                    })
-                    mudou = True
-            if not mudou:
-                return m.group(0)
-            return ('<script type="application/ld+json">'
-                    + json.dumps(dados, ensure_ascii=False, indent=2) + "</script>")
+        if not mudou:
+            return m.group(0)
+        return ('<script type="application/ld+json">'
+                + json.dumps(dados, ensure_ascii=False, indent=2) + "</script>")
 
-        antes = h
-        h = re.sub(r'<script type="application/ld\+json">(.*?)</script>', injeta, h, flags=re.S)
-        if h != antes:
-            feito.append("schema")
+    antes = h
+    h = re.sub(r'<script type="application/ld\+json">(.*?)</script>', limpa, h, flags=re.S)
+    if h != antes:
+        feito.append("schema (preco removido)")
 
     # 6. frases que contradizem o preco ----------------------------------
     n_contra = 0
