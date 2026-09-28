@@ -1005,7 +1005,19 @@ GMN/SEO. **Não** oferece social media.
 - Filtro "SEO Nacional" do `gerar-artigos-visibilidade-google.py` procura `<h4>` no rodapé, que virou
   `<h3>` em 08/09: se regerar, os links da divisão revertida voltam. Corrigido só no gerador novo.
 
+### Etapa 3: linha "Sites e Anúncios" (3 URLs novas, sitemap 151 → 154)
+- `/criacao-de-landing-page-goiania/`, `/gestao-de-trafego-pago-goiania/` (Google Ads e Meta Ads como H2
+  próprios), `/criacao-de-loja-virtual-goiania/`. Sem preço; 4 cartões de orçamento → WhatsApp cada.
+- Conteúdo: `scripts/conteudo/servicos_marketing.py`. Gerador: `scripts/gerar-servicos-marketing.py`, que
+  **copia o esqueleto da página viva `/criacao-de-sites-goiania/`** (o `rcb_base.py` está defasado: menu com
+  "Diagnóstico gratuito", coluna "SEO Nacional" da divisão revertida, sem barra do celular). Idempotente.
+- Menu: os 4 serviços entraram **dentro do dropdown "Serviços"**, não como item novo no topo (o menu do
+  computador está no limite de largura). Rodapé: mesmos links na coluna Serviços/Navegação.
+  `scripts/menu-sites-anuncios.py` (marcadores `RCB:SITES-NAV` / `RCB:SITES-FOOTER`, idempotente;
+  `--geradores` ensina `rcb_base.py` e `gerar-paginas-cidades.py`). 322 páginas, incluindo a protegida
+  (só menu e rodapé).
+- Tráfego pago: a página deixa claro que a verba é paga direto ao Google/Meta e que **não inclui social media**.
+
 ### Próximos passos combinados
-- Etapa 3: páginas de landing page, gestão de tráfego pago (Google Ads/Meta Ads) e loja virtual.
 - Depois: artigos por nicho (energia solar, clínicas etc.) e postagens no Perfil da Empresa.
 - Concorrente analisado: Máximos Digital — ganha por **42 avaliações no Maps** (RCB tem 3), não pelo site.

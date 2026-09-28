@@ -129,11 +129,13 @@ ARTIGOS = [
         <p><strong>Landing page</strong> é uma página única, feita para uma oferta só, geralmente para receber quem
         clica num anúncio. Por ser uma página, costuma custar menos que um site completo — mas o texto precisa
         ser muito bem escrito, porque cada clique do anúncio é pago. Landing page ruim faz o anúncio
-        parecer caro.</p>
+        parecer caro. Veja como funciona a
+        {link('/criacao-de-landing-page-goiania/', 'criação de landing page')}.</p>
 
         <p><strong>Loja virtual</strong> é o projeto com maior variação de preço. Uma loja com vinte produtos e uma
         com dois mil são trabalhos diferentes. Entram na conta: cadastro dos produtos, fotos, formas de
-        pagamento, cálculo de frete e as páginas de produto pensadas para aparecer no Google.</p>
+        pagamento, cálculo de frete e as páginas de produto pensadas para aparecer no Google. Veja como funciona a
+        {link('/criacao-de-loja-virtual-goiania/', 'criação de loja virtual')}.</p>
 
         <h2>Como pedir um orçamento de site e comparar direito</h2>
 

@@ -31,6 +31,7 @@ PRECO_RCB = re.compile(
     r'R\$\s?(?:1\.997|2\.497|2\.997|4\.997|997|1\.497)(?![\d.,])'
     r'|(?<![\d.])(?:1997|2497|2997|4997)\.00'
     r'|a partir de R\$'
+    r'|tabela pública|valores abaixo são fechados'
     r'|"priceRange"|"offers"\s*:'
     r'|(?<!um )[Pp]reço (?:fechado|publicado|está (?:na tela|publicado))'
     r'|[Pp]agamento por Pix pelo WhatsApp\.<'

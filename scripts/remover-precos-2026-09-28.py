@@ -119,10 +119,10 @@ FRASES = [
     ("No meu caso o preço é fechado e está publicado no site: a partir de R$ 1.997 em pagamento único.",
      "No meu caso o orçamento é sob medida e grátis — e costuma sair mais em conta do que se imagina."),
     # llms.txt
-    ("## Preços (tabela pública, sem orçamento sob consulta)\n"
-     "Os valores abaixo são fechados e estão publicados no site em https://rcbseo.com.br/#pacotes. "
+    # (uma troca por linha: o llms.txt usa quebra de linha do Windows)
+    ("## Preços (tabela pública, sem orçamento sob consulta)", "## Pacotes (orçamento sob medida)"),
+    ("Os valores abaixo são fechados e estão publicados no site em https://rcbseo.com.br/#pacotes. "
      "Pagamento por Pix, combinado pelo WhatsApp. Não há gateway de pagamento no site.",
-     "## Pacotes (orçamento sob medida)\n"
      "A RCB não publica preço: cada projeto tem orçamento sob medida, grátis, enviado em até 24 horas pelo "
      "WhatsApp (+55 62 99116-1040). Os pacotes descrevem o que cada formato entrega. Pagamento por Pix, "
      "combinado pelo WhatsApp."),
@@ -138,6 +138,7 @@ PRECO_RCB = re.compile(
     r'R\$\s?(?:1\.997|2\.497|2\.997|4\.997|997|1\.497)(?![\d.,])'
     r'|(?<![\d.])(?:1997|2497|2997|4997)\.00'
     r'|a partir de R\$'
+    r'|tabela pública|valores abaixo são fechados'
     r'|"priceRange"|"offers"\s*:'
     r'|(?<!um )[Pp]reço (?:fechado|publicado|está (?:na tela|publicado))'  # "nao mostram um preco fechado" e legitimo
     r'|[Pp]agamento por Pix pelo WhatsApp\.<'   # fecho antigo da tabela (Pix em si nao e preco)
