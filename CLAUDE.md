@@ -1025,6 +1025,21 @@ GMN/SEO. **Não** oferece social media.
   (preço + nichos) e exige no mínimo 1.000 palavras por artigo.
 - Energia solar era brecha total no blog (zero páginas) e é onde o concorrente posta no GMN.
 
+### On-page "agressivo dentro das regras" (pedido do Renan: "quase um black hat" — recusado o black hat)
+- **Não fazer, nunca:** avaliação falsa/troca/paga, palavra-chave no nome do GMN, endereço falso, páginas
+  copiadas trocando cidade, PBN, texto escondido, urgência falsa. Risco maior: suspensão do GMN.
+- `scripts/titulos-ctr-2026-09-28.py`: 10 páginas entre a 3ª e a 17ª posição com ZERO clique em 28 dias
+  ganharam title/description novos (fonte dos artigos gerados ajustada à mão).
+- 8 páginas "serviço + nicho" (`conteudo/servicos_nichos.py`, mesmo gerador): site para dentista/
+  advogado/contador/estética; tráfego pago para dentistas/advogados/energia solar/imobiliárias.
+  Ligadas por `scripts/ligar-servicos-nichos.py` (bloco antes do FAQ das páginas de SEO por nicho,
+  marcador `RCB:SERVICOS-NICHO`). Sitemap 158 → **166**. O gerador agora barra title > 65 e desc > 160.
+- Home: seção "Sites e anúncios" antes da conta de retorno (marcador `RCB:HOME-SITES-ANUNCIOS`).
+- `gerar-artigos-visibilidade-google.py`: filtro "SEO Nacional" corrigido para aceitar `<h3>`.
+  **Não regerar esse gerador sem necessidade** — rodei por engano nesta rodada e desfiz com git.
+- NÃO criados de propósito: artigos "quanto custa landing page/loja/gestão" (as páginas de serviço já
+  têm a seção "Quanto custa"; um artigo à parte brigaria com elas).
+
 ### Próximos passos combinados
 - Depois: mais artigos por nicho (energia solar, clínicas etc.) e postagens no Perfil da Empresa.
 - Concorrente analisado: Máximos Digital — ganha por **42 avaliações no Maps** (RCB tem 3), não pelo site.

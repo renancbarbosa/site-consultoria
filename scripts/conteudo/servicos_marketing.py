@@ -332,6 +332,10 @@ PAGINAS = [
              "parte orgânica ao mesmo tempo."),
         ],
         "relacionados": [
+            ("/trafego-pago-para-dentistas/", "Tráfego pago para dentistas", "Google Ads e Meta Ads dentro das regras do CFO."),
+            ("/trafego-pago-para-advogados/", "Tráfego pago para advogados", "Google Ads dentro do Provimento 205/2021 da OAB."),
+            ("/trafego-pago-para-energia-solar/", "Tráfego pago para energia solar", "Pedidos de orçamento sem clique de curioso."),
+            ("/trafego-pago-para-imobiliarias/", "Tráfego pago para imobiliárias", "Leads próprios sem depender de portal."),
             ("/blog/quanto-investir-em-trafego-pago/", "Quanto investir em tráfego pago", "Como calcular a verba a partir do valor do seu cliente."),
             ("/blog/trafego-pago-para-clinicas/", "Tráfego pago para clínicas", "Google Ads e Meta Ads dentro das regras do CFM e do CFO."),
             ("/criacao-de-landing-page-goiania/", "Criação de landing page", "A página que transforma o clique do anúncio em conversa."),

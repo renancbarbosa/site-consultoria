@@ -187,9 +187,9 @@ ARTIGOS = [
     {
         "slug": "como-divulgar-minha-empresa-no-google",
         "h1": "Como divulgar minha empresa no Google",
-        "title": "Como divulgar minha empresa no Google: guia prático | RCB",
-        "desc": ("Como divulgar sua empresa no Google com Perfil da Empresa, site, SEO e anúncios. "
-                 "Compare os canais e siga um plano prático de 30 dias."),
+        "title": "Como Divulgar Minha Empresa no Google (Grátis e Pago): Guia",
+        "desc": ("Como divulgar sua empresa no Google: o que fazer de graça, quando vale anunciar e um "
+                 "plano de 30 dias para aparecer na busca e no Maps."),
         "cat": "Aparecer no Google",
         "data": DATA,
         "imagem": {
@@ -708,9 +708,9 @@ ARTIGOS = [
     {
         "slug": "quanto-custa-otimizar-google-meu-negocio",
         "h1": "Quanto custa otimizar o Google Meu Negócio?",
-        "title": "Quanto custa otimizar o Google Meu Negócio? | RCB",
-        "desc": ("Quanto custa otimizar o Google Meu Negócio? Veja o que é gratuito, preços da RCB, "
-                 "o que entra no serviço e como calcular se o investimento se paga."),
+        "title": "Quanto Custa Otimizar o Google Meu Negócio? O que é Grátis",
+        "desc": ("Quanto custa otimizar o Google Meu Negócio: o que você faz de graça, o que vale pagar e "
+                 "como saber se o investimento volta. Sem enrolação."),
         "cat": "Preço e contratação",
         "data": DATA,
         "trilha_extra": ("/google-perfil-empresa/", "Google Perfil da Empresa"),

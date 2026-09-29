@@ -31,7 +31,10 @@ from urllib.parse import quote
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(AQUI, "conteudo"))
-from servicos_marketing import PAGINAS  # noqa: E402
+from servicos_marketing import PAGINAS as _GERAIS  # noqa: E402
+from servicos_nichos import PAGINAS as _NICHOS  # noqa: E402  (serviço + nicho, 28/09/2026)
+
+PAGINAS = _GERAIS + _NICHOS
 
 RAIZ = os.path.dirname(AQUI)
 BASE = "https://rcbseo.com.br"
@@ -348,6 +351,7 @@ def main():
     for p in PAGINAS:
         h = montar(modelo, p)
         assert h.startswith("<!DOCTYPE") and h.count("<h1") == 1, p["slug"]
+        assert len(p["title"]) <= 65 and len(p["desc"]) <= 160, (p["slug"], len(p["title"]), len(p["desc"]))
         assert "R$ 1.997" not in h and '"price"' not in h and "priceRange" not in h, p["slug"]
         assert 'data-page="%s"' % MODELO not in h, p["slug"]  # medicao do GA4 nao pode herdar o modelo
         destino = os.path.join(RAIZ, p["slug"], "index.html")

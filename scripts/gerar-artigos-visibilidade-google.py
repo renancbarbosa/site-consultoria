@@ -26,7 +26,7 @@ def remover_navegacao_ainda_nao_publicada(html):
         flags=re.S,
     )
     return re.sub(
-        r'<div class="footer-col"><h4 class="footer-col-title">SEO Nacional</h4>.*?</nav></div>',
+        r'<div class="footer-col"><h[34] class="footer-col-title">SEO Nacional</h[34]>.*?</nav></div>',
         "",
         html,
         count=1,

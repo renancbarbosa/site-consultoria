@@ -112,8 +112,8 @@ ARTIGOS = [
         <p>Se a sua empresa ainda depende só de indicação, comece pelo que traz resultado mais rápido: Perfil da
         Empresa organizado e um anúncio no Google bem feito para a sua cidade, levando para uma página específica.
         Em paralelo, construa o site com as páginas certas — é ele que vai trazer cliente de graça daqui a alguns
-        meses. Se você quer ajuda com a parte dos anúncios, veja como funciona a
-        {link('/gestao-de-trafego-pago-goiania/', 'gestão de tráfego pago')}.</p>
+        meses. Se você quer ajuda com a parte dos anúncios, veja como funciona o
+        {link('/trafego-pago-para-energia-solar/', 'tráfego pago para energia solar')}.</p>
 """,
         "faq": [
             ("Qual a melhor forma de conseguir clientes de energia solar?",
@@ -345,7 +345,8 @@ ARTIGOS = [
         <p>O anúncio traz paciente enquanto você paga. O {link('/seo-para-clinicas/', 'trabalho no Google orgânico')}
         e no Perfil da Empresa continua trazendo paciente depois. Clínicas que fazem os dois dependem menos da
         verba de anúncio com o passar dos meses. Se você quer ajuda com as campanhas, veja como funciona a
-        {link('/gestao-de-trafego-pago-goiania/', 'gestão de tráfego pago')}.</p>
+        {link('/gestao-de-trafego-pago-goiania/', 'gestão de tráfego pago')} — e, para consultório
+        odontológico, o {link('/trafego-pago-para-dentistas/', 'tráfego pago para dentistas')}.</p>
 """,
         "faq": [
             ("Clínica pode anunciar no Google e no Instagram?",
