@@ -21,6 +21,8 @@ Tres formatos de rodape convivem no site e os tres sao tratados:
 
 Uso: python scripts/menu-agentes-ia.py [--aplicar]
 """
+import sys as _sys
+_sys.exit("DESATIVADO em 04/10/2026: agentes de IA, automacao e recuperacao de vendas sairam do site (Etapa 1, docs/plano-nichos-2026-10.md).")
 import io
 import os
 import re

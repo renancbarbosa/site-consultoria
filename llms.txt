@@ -2,7 +2,7 @@
 
 Também conhecida como: RCB Consultoria, RCB SEO Local, RCBSEO.
 
-> Consultoria especializada em SEO Local, Google Meu Negócio (Google Business Profile), sites otimizados e automação de processos para clínicas, dentistas, estética, médicos, advogados e comércios locais em Goiânia e região, com atendimento online em todo o Brasil. Fundada por Renan Carvalho Barbosa.
+> Consultoria de SEO, Google Meu Negócio (Google Business Profile), sites e landing pages, tráfego pago no Google Ads e SEO para YouTube para clínicas, dentistas, estética, médicos, advogados e comércios locais em Goiânia e região, com atendimento online em todo o Brasil. Fundada por Renan Carvalho Barbosa.
 
 ## Sobre
 - Documentação Completa para LLMs: https://rcbseo.com.br/llms-full.txt
@@ -21,6 +21,13 @@ A RCB não publica preço: cada projeto tem orçamento sob medida, grátis, envi
 - Pacote Dominação — mensal, mínimo de 3 meses: tudo do Crescimento, mais 4 textos novos por mês, uma página dedicada para cada serviço oferecido, monitoramento mensal de 3 concorrentes diretos e prioridade no atendimento.
 - Antes de contratar, a análise do Google e do site do interessado é gratuita e sem compromisso.
 - Prazos honestos: o perfil no Google Maps costuma melhorar em semanas; o site leva de 3 a 6 meses para firmar nas buscas. Não há promessa de primeira posição.
+
+## Os 4 serviços
+Mensagem central: trazer clientes pelo Google — anúncio para o resultado rápido, SEO para o resultado duradouro, site e landing page para converter. Público: donos de negócio. Cada projeto tem orçamento individual e grátis pelo WhatsApp em até 24 horas; não há garantia de posição.
+- SEO e Google Meu Negócio: https://rcbseo.com.br/consultoria-seo-local/ e https://rcbseo.com.br/google-perfil-empresa/ — aparecer no mapa e nas buscas do Google sem pagar por clique.
+- Sites e landing pages para anúncios: https://rcbseo.com.br/criacao-de-landing-page-goiania/ e https://rcbseo.com.br/criacao-de-sites-goiania/ — página rápida no celular, botão de WhatsApp e medição de conversão.
+- Tráfego pago empresarial (Google Ads): https://rcbseo.com.br/gestao-de-trafego-pago-goiania/ — anúncio na rede de pesquisa do Google, sempre com landing page e medição; Meta Ads só como complemento.
+- SEO para YouTube: página própria em preparação — título, descrição, capítulos, transcrição e miniatura para o vídeo ser encontrado no YouTube e no Google.
 
 ## Serviços
 - Criação de sites em Goiânia: https://rcbseo.com.br/criacao-de-sites-goiania/ — Site próprio feito para aparecer no Google, com orçamento sob medida.
@@ -41,7 +48,6 @@ A RCB não publica preço: cada projeto tem orçamento sob medida, grátis, envi
 - Acompanhamento de SEO: https://rcbseo.com.br/acompanhamento-seo/ — Acompanhamento mensal com ajustes contínuos, relatórios e novos conteúdos, sem promessa de ranking garantido.
 - Google Meu Negócio para clínicas: https://rcbseo.com.br/google-meu-negocio-para-clinicas/ — Otimização do Perfil da Empresa no Google para clínicas.
 - Site para clínica: https://rcbseo.com.br/site-para-clinica/ — Sites otimizados e rápidos para clínicas converterem visitas em contatos.
-- Automação de processos: https://rcbseo.com.br/automacao-de-processos/ — Automação de atendimento e processos (n8n) para negócios locais.
 - SEO para advogados: https://rcbseo.com.br/para-advogados/ — SEO local e presença digital para advogados e escritórios, dentro das normas da OAB.
 - Marketing para advogados: https://rcbseo.com.br/marketing-para-advogados/ — Explicação em linguagem simples de como advogados são encontrados no Google dentro das normas da OAB.
 - SEO para contadores: https://rcbseo.com.br/seo-para-contadores/ — Escritórios de contabilidade encontrados por empresas e MEIs no Google.

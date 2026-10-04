@@ -9,3 +9,10 @@
 /diagnostico-gratuito /diagnostico-presenca-digital/ 301
 /diagnostico-gratuito/exemplo/ /diagnostico-presenca-digital/exemplo/ 301
 /diagnostico-gratuito/* /diagnostico-presenca-digital/:splat 301
+# Etapa 1 (04/10/2026): agentes de IA e recuperacao de vendas sairam do site
+/agentes-de-ia/ / 301
+/agentes-de-ia / 301
+/agente-de-ia-para-clinicas/ /seo-para-clinicas/ 301
+/agente-de-ia-para-clinicas /seo-para-clinicas/ 301
+/recuperacao-de-vendas-whatsapp/ / 301
+/recuperacao-de-vendas-whatsapp / 301

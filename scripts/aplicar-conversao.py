@@ -80,7 +80,7 @@ COMERCIAIS = {
 
 # Paginas que nao levam tabela de preco, so o menu e a barra do celular.
 APOIO_FIXAS = [
-    "blog", "guia-seo-local", "sobre", "automacao-de-processos",
+    "blog", "guia-seo-local", "sobre",
     "privacidade", "cookies",
 ]
 

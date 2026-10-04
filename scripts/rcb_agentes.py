@@ -27,6 +27,8 @@ REGRAS QUE NAO PODEM SER AFROUXADAS (decididas com o Renan em 08/09/2026):
 
 A pagina /consultor-seo-goiania/ e apenas LIDA como molde. Nunca escrita.
 """
+import sys as _sys
+_sys.exit("DESATIVADO em 04/10/2026: agentes de IA, automacao e recuperacao de vendas sairam do site (Etapa 1, docs/plano-nichos-2026-10.md).")
 import io
 import json
 import os

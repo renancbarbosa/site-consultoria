@@ -1952,7 +1952,7 @@ section {
    ============================================================ */
 .footer-cols {
   display: grid;
-  grid-template-columns: 1.4fr minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: 1.4fr minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
   gap: 40px;
   padding: 56px 20px;
 }
@@ -2476,7 +2476,7 @@ section {
 /* Menu vira hamburguer em 900px, nao em 640px. O menu horizontal precisa
    de 867px para caber; abaixo disso "Ver precos" saia da tela (defeito que
    ja existia em telas de 641 a 800px e piorou com o item "Agentes de IA"). */
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .nav-toggle { display: flex; }
 
   .nav-menu {
@@ -2629,7 +2629,7 @@ section {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.6fr minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: 1.6fr minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
   gap: 40px;
   padding-bottom: 48px;
 }
@@ -2764,7 +2764,12 @@ section {
 /* Menu apertado na faixa entre o desktop cheio e o hamburguer (901-1100px).
    Sem isso, o item "Agentes de IA" empurra "Ver precos" para fora da tela:
    o hamburguer so entra em 640px. */
-@media (min-width: 901px) and (max-width: 1100px) {
+/* Etapa 1 (04/10/2026): menu de 4 servicos. Rotulos numa linha so; hamburguer ate 1000px
+   (medido no navegador: o menu horizontal precisa de ~990px). */
+.nav-menu > li > .nav-link,
+.nav-dropdown-toggle { white-space: nowrap; }
+
+@media (min-width: 1001px) and (max-width: 1100px) {
   .nav-menu { gap: 2px; }
   .nav-link,
   .nav-dropdown-toggle { padding: 8px 8px; font-size: 0.82rem; }

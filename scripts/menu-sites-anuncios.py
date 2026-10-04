@@ -14,6 +14,8 @@ Inserção com marcador (<!--RCB:SITES-NAV-->, <!--RCB:SITES-FOOTER-->): idempot
 a 2ª execução diz "alteradas: 0". Nunca substitui o bloco inteiro de menu/rodapé.
 Autorização do Renan para tocar o menu de /consultor-seo-goiania/: 28/09/2026.
 """
+import sys as _sys
+_sys.exit("DESATIVADO em 04/10/2026: agentes de IA, automacao e recuperacao de vendas sairam do site (Etapa 1, docs/plano-nichos-2026-10.md). O menu e o rodape agora vem de scripts/rcb_menu.py.")
 import io
 import re
 import sys

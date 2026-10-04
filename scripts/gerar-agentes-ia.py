@@ -20,6 +20,8 @@ Idempotente: sobrescreve os tres arquivos a cada execucao.
 Depois de rodar: python scripts/menu-agentes-ia.py (propaga menu e rodape)
                  python scripts/atualizar-sitemap.py
 """
+import sys as _sys
+_sys.exit("DESATIVADO em 04/10/2026: agentes de IA, automacao e recuperacao de vendas sairam do site (Etapa 1, docs/plano-nichos-2026-10.md).")
 import os
 import sys
 
