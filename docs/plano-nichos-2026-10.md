@@ -12,8 +12,8 @@
 | 0 | Diagnóstico e mapa (só leitura) | **concluída** (plano + linha de base em `bbc8f4f`) |
 | 1 | Limpeza de foco (agentes de IA, IPTV/apostas 410, home/menu/rodapé/ficha/llms nos 4 serviços) | **publicada** 04/10/2026 (`90d3bc3`; 410 e 301 conferidos no ar; IndexNow 162 + 32 URLs aceito) |
 | 2 | Landing page para anúncios (urgente) + modelo demonstrativo | **publicada** 04/10/2026 (`5f0e869`; página, 301 e modelo conferidos no ar; IndexNow 163 URLs aceito) |
-| 3 | Tráfego pago empresarial (reorganizar as 7 páginas) | **aguardando "pode publicar"** (prévia local, 04/10/2026) |
-| 4 | Energia solar (marketing completo) | pendente |
+| 3 | Tráfego pago empresarial (reorganizar as 7 páginas) | **publicada** 04/10/2026 (`0e619b73`; principal, 301 e 4 nichos conferidos no ar; IndexNow 163 URLs aceito) |
+| 4 | Energia solar (marketing completo) | **em andamento** |
 | 5 | SEO para YouTube | pendente |
 | 6 | Limpeza empresarial | pendente |
 | 7 | Fortalecer estética e pequenas empresas | pendente |
@@ -76,6 +76,8 @@ arquivo `_redirects` da raiz. Não usar meta refresh.
 - Marca oficial "RCB SEO"; dados só em `data/marca.json`.
 - 168 cidades noindex excluídas; ficam as 31 indexáveis.
 - Perfil do Google não será renomeado agora — não lembrar de novo.
+- Fidelidade (decisão do Renan, 04/10/2026, vale para todos os serviços): "Não existe fidelidade. Para cancelar, basta avisar com 30 dias de antecedência. As demais condições vão por escrito junto com o orçamento." Script `scripts/fidelidade-2026-10-04.py`. Nunca mais escrever "compromisso de 3 meses" ou "fidelidade mínima".
+- Etapa 3: regra do COFECI em imobiliárias aprovada; frase "bacharel em Direito" em advogados aprovada.
 - Etapa 1: menu com "SEO e Google" (aprovado); "SEO para YouTube" fora do menu até a Etapa 5 (`MOSTRAR_YOUTUBE` em `rcb_menu.py`); cartão da home sem link até lá.
 - Etapa 0 respondida: agentes de IA redirecionar/excluir; tráfego pago, landing e loja ficam; IPTV e apostas 410; domínios fora; advocacia principal = /marketing-para-advogados/ (Etapa 8).
 
