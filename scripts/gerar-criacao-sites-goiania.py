@@ -80,7 +80,7 @@ def schema():
             {"@type": "WebPage", "@id": URL + "#webpage", "url": URL, "name": TITLE,
              "description": DESC, "inLanguage": "pt-BR",
              "isPartOf": {"@type": "WebSite", "@id": "https://rcbseo.com.br/#website",
-                          "name": "RCB Consultoria", "url": "https://rcbseo.com.br/"},
+                          "name": "RCB SEO", "url": "https://rcbseo.com.br/"},
              "breadcrumb": {"@id": URL + "#breadcrumb"}},
             {"@type": "BreadcrumbList", "@id": URL + "#breadcrumb", "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": u"Início",
@@ -92,7 +92,7 @@ def schema():
              "url": "https://rcbseo.com.br/consultor-seo-goiania/",
              "worksFor": {"@id": "https://rcbseo.com.br/#localbusiness"}},
             {"@type": "LocalBusiness", "@id": "https://rcbseo.com.br/#localbusiness",
-             "name": "RCB Consultoria", "url": "https://rcbseo.com.br/",
+             "name": "RCB SEO", "url": "https://rcbseo.com.br/",
              "telephone": "+5562991161040", "priceRange": "R$ 1.997 - R$ 4.997",
              "address": {"@type": "PostalAddress", "streetAddress": "Rua 18-A, 256",
                          "addressLocality": u"Goiânia", "addressRegion": "GO",

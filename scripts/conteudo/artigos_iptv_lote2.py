@@ -37,7 +37,7 @@ ARTIGOS = []
 ARTIGOS.append({
     "slug": "iptv-primeira-pagina-3-4-meses",
     "h1": "É possível colocar IPTV na primeira página em três ou quatro meses?",
-    "title": "IPTV na primeira página em 3 ou 4 meses? | RCB",
+    "title": "IPTV na primeira página em 3 ou 4 meses? | RCB SEO",
     "desc": ("Depende inteiramente de qual termo. Um modelo de faixas para saber quais buscas são "
              "viáveis nesse prazo e quais não são, sem promessa de calendário."),
     "cat": CAT,
@@ -184,7 +184,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "backlinks-para-iptv-funcionam",
     "h1": "Backlinks para IPTV funcionam?",
-    "title": "Backlinks para IPTV funcionam? O que rende e o que não | RCB",
+    "title": "Backlinks para IPTV funcionam? O que rende e o que não | RCB SEO",
     "desc": ("Funcionam, mas nem todo tipo de veículo rende igual neste nicho. A leitura de "
              "eficácia por tipo de fonte, e onde a verba costuma ser desperdiçada."),
     "cat": CAT,
@@ -325,7 +325,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "seo-nacional-para-iptv-o-que-muda",
     "h1": "SEO nacional para IPTV: o que muda?",
-    "title": "SEO nacional para IPTV: o que muda na disputa | RCB",
+    "title": "SEO nacional para IPTV: o que muda na disputa | RCB SEO",
     "desc": ("Sem mapa e sem proximidade, a disputa por IPTV é nacional desde o primeiro dia. O que "
              "isso muda na estratégia, no prazo e na forma de medir o progresso."),
     "cat": CAT,

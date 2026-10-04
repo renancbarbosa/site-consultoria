@@ -29,7 +29,7 @@ ARTIGOS = []
 ARTIGOS.append({
     "slug": "dominio-expirado-ainda-funciona-para-seo",
     "h1": "Domínio expirado ainda funciona para SEO?",
-    "title": "Domínio expirado ainda funciona para SEO? | RCB",
+    "title": "Domínio expirado ainda funciona para SEO? | RCB SEO",
     "desc": ("O que um domínio com histórico realmente entrega hoje, em que casos ajuda de verdade "
              "e quando ele custa mais caro que começar do zero."),
     "cat": CAT,
@@ -152,7 +152,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "dominio-expirado-com-backlinks-vale-a-pena",
     "h1": "Domínio expirado com backlinks vale a pena?",
-    "title": "Domínio expirado com backlinks vale a pena? | RCB",
+    "title": "Domínio expirado com backlinks vale a pena? | RCB SEO",
     "desc": ("Ter backlinks não é o mesmo que ter autoridade útil. Como avaliar se o perfil de links "
              "de um domínio à venda vale o preço pedido."),
     "cat": CAT,
@@ -249,7 +249,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "como-saber-se-dominio-expirado-foi-usado-para-spam",
     "h1": "Como saber se um domínio expirado foi usado para spam",
-    "title": "Como saber se um domínio expirado teve spam | RCB",
+    "title": "Como saber se um domínio expirado teve spam | RCB SEO",
     "desc": ("Os sinais que denunciam um domínio comprometido e como verificá-los com fontes "
              "públicas, antes de gastar dinheiro na compra."),
     "cat": CAT,
@@ -365,7 +365,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "dominio-premium-ou-dominio-expirado",
     "h1": "Domínio premium ou domínio expirado: qual escolher?",
-    "title": "Domínio premium ou expirado: qual escolher? | RCB",
+    "title": "Domínio premium ou expirado: qual escolher? | RCB SEO",
     "desc": ("São produtos diferentes: um vende nome, o outro vende histórico. Entenda o que cada "
              "um entrega e qual faz sentido para o seu projeto."),
     "cat": CAT,
@@ -476,7 +476,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "como-analisar-historico-de-dominio-expirado",
     "h1": "Como analisar o histórico de um domínio expirado",
-    "title": "Como analisar o histórico de um domínio expirado | RCB",
+    "title": "Como analisar o histórico de um domínio expirado | RCB SEO",
     "desc": ("O passo a passo de verificação antes de comprar: histórico de conteúdo, perfil de "
              "links, âncoras, relevância temática e reputação do nome."),
     "cat": CAT,
@@ -606,7 +606,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "como-migrar-site-para-outro-dominio",
     "h1": "Como migrar um site para outro domínio",
-    "title": "Como migrar um site para outro domínio sem quebrar | RCB",
+    "title": "Como migrar um site para outro domínio sem quebrar | RCB SEO",
     "desc": ("O processo completo de migração de domínio: inventário, mapa de redirecionamento, "
              "virada e monitoramento — com os erros que mais causam perda."),
     "cat": CAT,
@@ -755,7 +755,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "trocar-de-dominio-faz-perder-posicoes",
     "h1": "Trocar de domínio faz perder posições?",
-    "title": "Trocar de domínio faz perder posições no Google? | RCB",
+    "title": "Trocar de domínio faz perder posições no Google? | RCB SEO",
     "desc": ("O que realmente acontece com o ranqueamento em uma troca de domínio, quanto costuma "
              "durar a oscilação e o que separa perda temporária de perda permanente."),
     "cat": CAT,
@@ -874,7 +874,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "como-recuperar-trafego-organico-apos-queda",
     "h1": "Como recuperar tráfego orgânico após uma queda",
-    "title": "Como recuperar tráfego orgânico após uma queda | RCB",
+    "title": "Como recuperar tráfego orgânico após uma queda | RCB SEO",
     "desc": ("O diagnóstico diferencial de uma queda de tráfego: como identificar a causa antes de "
              "mexer no site e por que a pressa costuma atrasar a recuperação."),
     "cat": CAT,

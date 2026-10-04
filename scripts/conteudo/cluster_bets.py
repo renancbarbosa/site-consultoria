@@ -44,7 +44,7 @@ NOTA_REGULATORIA = """<h3>Sobre a parte regulatória</h3>
 def c1_seo_para_bets():
     slug = "seo-para-bets"
     canonical = f"{BASE_URL}/{slug}/"
-    titulo = "SEO para bets: projeto para o setor de apostas | RCB"
+    titulo = "SEO para bets: projeto para o setor de apostas | RCB SEO"
     desc = ("SEO para casas de apostas, portais e operadores: conteúdo, autoridade e execução técnica "
             "para disputa nacional, com comunicação responsável.")
     page_id = "seo-bets"
@@ -270,7 +270,7 @@ def c1_seo_para_bets():
 def c2_igaming():
     slug = "seo-para-igaming"
     canonical = f"{BASE_URL}/{slug}/"
-    titulo = "SEO para iGaming no Brasil: B2B e expansão | RCB"
+    titulo = "SEO para iGaming no Brasil: B2B e expansão | RCB SEO"
     desc = ("SEO para plataformas, provedores e fornecedores de iGaming que vendem para operadores "
             "ou entram no mercado brasileiro. Localização em português.")
     page_id = "igaming"
@@ -431,7 +431,7 @@ def c2_igaming():
 def c3_afiliados():
     slug = "seo-para-afiliados-de-apostas"
     canonical = f"{BASE_URL}/{slug}/"
-    titulo = "SEO para afiliados de apostas: portais e reviews | RCB"
+    titulo = "SEO para afiliados de apostas: portais e reviews | RCB SEO"
     desc = ("Arquitetura de portal de afiliado: categorias, reviews, comparativos, bônus e "
             "rastreamento. Como competir nacionalmente por tráfego orgânico.")
     page_id = "afiliados-apostas"
@@ -595,7 +595,7 @@ def c3_afiliados():
 def c4_criacao_site_afiliado():
     slug = "criacao-de-site-para-afiliado-de-bet"
     canonical = f"{BASE_URL}/{slug}/"
-    titulo = "Criação de site para afiliado de bet | RCB Consultoria"
+    titulo = "Criação de site para afiliado de bet | RCB SEO"
     desc = ("Site de afiliado construído para escalar: estrutura de conteúdo, comparativos, tabelas, "
             "filtros e CTAs. Preparado para SEO desde o início.")
     page_id = "site-afiliado-bet"
@@ -753,7 +753,7 @@ def c4_criacao_site_afiliado():
 def c5_link_building_bets():
     slug = "link-building-para-bets"
     canonical = f"{BASE_URL}/{slug}/"
-    titulo = "Link building para bets e iGaming | RCB Consultoria"
+    titulo = "Link building para bets e iGaming | RCB SEO"
     desc = ("Construção de autoridade em um dos nichos mais disputados: relevância, análise de risco, "
             "ritmo controlado e acompanhamento dos domínios de referência.")
     page_id = "link-building-bets"
@@ -910,7 +910,7 @@ def c5_link_building_bets():
 def c6_jogos_online():
     slug = "seo-para-jogos-online"
     canonical = f"{BASE_URL}/{slug}/"
-    titulo = "SEO para jogos online e portais de games | RCB"
+    titulo = "SEO para jogos online e portais de games | RCB SEO"
     desc = ("Aquisição orgânica para plataformas de jogos, portais e apps: ciclo de lançamento, "
             "conteúdo de comunidade e disputa nacional por tráfego.")
     page_id = "jogos-online"

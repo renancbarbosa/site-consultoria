@@ -34,7 +34,7 @@ ARTIGOS = []
 ARTIGOS.append({
     "slug": "quanto-custa-chegar-primeira-pagina",
     "h1": "Quanto custa chegar à primeira página do Google?",
-    "title": "Quanto custa chegar à primeira página do Google? | RCB",
+    "title": "Quanto custa chegar à primeira página do Google? | RCB SEO",
     "desc": ("Por que não existe preço de tabela para primeira página, quais fatores formam o custo "
              "real de um projeto e como estimar o investimento do seu caso."),
     "cat": CAT,
@@ -160,7 +160,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "e-possivel-garantir-primeira-pagina",
     "h1": "É possível garantir primeira página no Google?",
-    "title": "É possível garantir primeira página no Google? | RCB",
+    "title": "É possível garantir primeira página no Google? | RCB SEO",
     "desc": ("Por que nenhum fornecedor pode garantir posição no Google, como identificar promessa "
              "vazia e o que dá para assumir de verdade em um projeto de SEO."),
     "cat": CAT,
@@ -274,7 +274,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "o-que-e-seo-agressivo",
     "h1": "O que é SEO agressivo?",
-    "title": "O que é SEO agressivo? Intensidade × risco | RCB",
+    "title": "O que é SEO agressivo? Intensidade × risco | RCB SEO",
     "desc": ("SEO agressivo descreve duas coisas muito diferentes: execução intensa e técnicas de "
              "risco. Entenda a diferença antes de contratar."),
     "cat": CAT,
@@ -384,7 +384,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "seo-agressivo-funciona-em-nichos-concorridos",
     "h1": "SEO agressivo funciona em nichos concorridos?",
-    "title": "SEO agressivo funciona em nicho concorrido? | RCB",
+    "title": "SEO agressivo funciona em nicho concorrido? | RCB SEO",
     "desc": ("Em mercados disputados, intensidade de execução é quase obrigatória — mas ela resolve "
              "certos gargalos e não resolve outros. Entenda quais."),
     "cat": CAT,
@@ -490,7 +490,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "o-que-e-black-hat-seo",
     "h1": "O que é black hat SEO?",
-    "title": "O que é black hat SEO? Técnicas e riscos | RCB",
+    "title": "O que é black hat SEO? Técnicas e riscos | RCB SEO",
     "desc": ("O que o mercado chama de black hat, por que essas técnicas ainda circulam e o que "
              "costuma acontecer com quem depende delas."),
     "cat": CAT,
@@ -606,7 +606,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "black-hat-gray-hat-white-hat-diferenca",
     "h1": "Black hat, gray hat e white hat: qual é a diferença?",
-    "title": "Black hat, gray hat e white hat: a diferença | RCB",
+    "title": "Black hat, gray hat e white hat: a diferença | RCB SEO",
     "desc": ("As três categorias de prática em SEO, onde fica a fronteira entre elas e por que a "
              "zona cinzenta é a que mais confunde quem contrata."),
     "cat": CAT,
@@ -718,7 +718,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "o-que-e-pbn-e-como-funciona",
     "h1": "O que é PBN e como ela funciona?",
-    "title": "O que é PBN (rede privada de blogs)? | RCB Consultoria",
+    "title": "O que é PBN (rede privada de blogs)? | RCB SEO",
     "desc": ("O que é uma rede privada de sites, por que ela foi criada, como costuma ser montada "
              "e quais os riscos para quem depende dela."),
     "cat": CAT,
@@ -831,7 +831,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "pbn-ainda-funciona-para-seo",
     "h1": "PBN ainda funciona para SEO?",
-    "title": "PBN ainda funciona para SEO em 2026? | RCB Consultoria",
+    "title": "PBN ainda funciona para SEO em 2026? | RCB SEO",
     "desc": ("Por que a pergunta certa não é se PBN funciona, e sim por quanto tempo, a que custo "
              "e com qual risco para o domínio que você quer manter."),
     "cat": CAT,

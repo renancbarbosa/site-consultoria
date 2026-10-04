@@ -31,7 +31,7 @@ ANALISE = "/analise-de-projeto/"
 def d1_analise_dominios():
     slug = "analise-de-dominios-expirados"
     canonical = f"{BASE_URL}/{slug}/"
-    titulo = "Análise de domínios expirados antes de comprar | RCB"
+    titulo = "Análise de domínios expirados antes de comprar | RCB SEO"
     desc = ("Triagem e análise de domínios expirados: histórico, perfil de links, relevância e risco. "
             "Recomendação objetiva antes de você comprar.")
     page_id = "analise-dominios"
@@ -230,7 +230,7 @@ def d1_analise_dominios():
 def d2_migracao_dominio():
     slug = "migracao-de-dominio-seo"
     canonical = f"{BASE_URL}/{slug}/"
-    titulo = "Migração de domínio e SEO: como trocar sem perder | RCB"
+    titulo = "Migração de domínio e SEO: como trocar sem perder | RCB SEO"
     desc = ("Troca de domínio, rebrand ou consolidação de sites com processo técnico controlado: "
             "redirecionamentos, sitemap, monitoramento e recuperação.")
     page_id = "migracao-dominio"
@@ -406,7 +406,7 @@ def d2_migracao_dominio():
 def d3_link_building():
     slug = "link-building-para-nichos-competitivos"
     canonical = f"{BASE_URL}/{slug}/"
-    titulo = "Link building para nichos competitivos | RCB Consultoria"
+    titulo = "Link building para nichos competitivos | RCB SEO"
     desc = ("Metodologia de construção de autoridade para projetos nacionais: critério de relevância, "
             "ritmo controlado, análise de risco e relatórios verificáveis.")
     page_id = "link-building"
@@ -572,7 +572,7 @@ def d3_link_building():
 def d4_consultoria_backlinks():
     slug = "consultoria-de-backlinks"
     canonical = f"{BASE_URL}/{slug}/"
-    titulo = "Consultoria de backlinks: auditoria de perfil | RCB"
+    titulo = "Consultoria de backlinks: auditoria de perfil | RCB SEO"
     desc = ("Auditoria do perfil de links do seu site: fontes de risco, oportunidades, comparação com "
             "concorrentes e plano de prioridade.")
     page_id = "consultoria-backlinks"
@@ -736,7 +736,7 @@ def d4_consultoria_backlinks():
 def d5_recuperacao():
     slug = "recuperacao-de-trafego-organico"
     canonical = f"{BASE_URL}/{slug}/"
-    titulo = "Recuperação de tráfego orgânico após queda | RCB"
+    titulo = "Recuperação de tráfego orgânico após queda | RCB SEO"
     desc = ("Perdeu posições no Google? Diagnóstico diferencial da causa — atualização, migração, "
             "técnico ou conteúdo — e plano de recuperação.")
     page_id = "recuperacao-trafego"

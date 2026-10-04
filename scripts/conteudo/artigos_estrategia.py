@@ -22,7 +22,7 @@ ARTIGOS = []
 ARTIGOS.append({
     "slug": "seo-local-ou-seo-nacional-diferenca",
     "h1": "SEO local ou SEO nacional: qual é a diferença?",
-    "title": "SEO local ou SEO nacional: qual é a diferença? | RCB",
+    "title": "SEO local ou SEO nacional: qual é a diferença? | RCB SEO",
     "desc": ("Os dois não são o mesmo serviço em tamanhos diferentes. Entenda o que muda na disputa, "
              "no prazo e no custo — e descubra qual é o seu caso."),
     "cat": CAT,
@@ -156,7 +156,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "como-funciona-projeto-de-seo-para-nichos-competitivos",
     "h1": "Como funciona um projeto de SEO para nichos competitivos?",
-    "title": "Como funciona um projeto de SEO competitivo | RCB",
+    "title": "Como funciona um projeto de SEO competitivo | RCB SEO",
     "desc": ("As fases de um projeto em mercado disputado, o que é entregue em cada uma e por que a "
              "ordem das etapas muda o resultado final."),
     "cat": CAT,
@@ -285,7 +285,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "conteudo-ou-backlinks-onde-investir-primeiro",
     "h1": "Conteúdo ou backlinks: onde investir primeiro?",
-    "title": "Conteúdo ou backlinks: onde investir primeiro? | RCB",
+    "title": "Conteúdo ou backlinks: onde investir primeiro? | RCB SEO",
     "desc": ("A ordem de investimento que evita desperdício nos primeiros meses de um projeto — e "
              "como identificar qual dos dois é o seu gargalo real."),
     "cat": CAT,
@@ -404,7 +404,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "por-que-alguns-projetos-de-seo-precisam-de-mais-investimento",
     "h1": "Por que alguns projetos de SEO precisam de mais investimento?",
-    "title": "Por que alguns projetos de SEO custam muito mais | RCB",
+    "title": "Por que alguns projetos de SEO custam muito mais | RCB SEO",
     "desc": ("O que faz o mesmo serviço custar valores tão diferentes entre nichos — e por que "
              "investir abaixo do patamar do mercado costuma não entregar resultado nenhum."),
     "cat": CAT,

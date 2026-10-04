@@ -65,7 +65,7 @@ def criterio_card(variacao):
 def b1_seo_para_iptv():
     slug = "seo-para-iptv"
     canonical = f"{BASE_URL}/{slug}/"
-    titulo = "SEO para IPTV: projeto completo e disputa nacional | RCB"
+    titulo = "SEO para IPTV: projeto completo e disputa nacional | RCB SEO"
     desc = ("Projeto de SEO para IPTV do zero: marca, site, conteúdo, autoridade e acompanhamento. "
             "Para operações com direito sobre o conteúdo distribuído.")
     page_id = "seo-iptv"
@@ -367,7 +367,7 @@ def b1_seo_para_iptv():
 def b2_criacao_site_iptv():
     slug = "criacao-de-site-para-iptv"
     canonical = f"{BASE_URL}/{slug}/"
-    titulo = "Criação de site para IPTV: estrutura e conversão | RCB"
+    titulo = "Criação de site para IPTV: estrutura e conversão | RCB SEO"
     desc = ("Site para IPTV construído do zero: marca, planos, WhatsApp, velocidade e estrutura "
             "preparada para SEO e crescimento desde a primeira página.")
     page_id = "criacao-site-iptv"
@@ -540,7 +540,7 @@ def b2_criacao_site_iptv():
 def b3_revendedor():
     slug = "seo-para-revendedor-iptv"
     canonical = f"{BASE_URL}/{slug}/"
-    titulo = "SEO para revendedor de IPTV: estrutura própria | RCB"
+    titulo = "SEO para revendedor de IPTV: estrutura própria | RCB SEO"
     desc = ("Revendedor que depende só de rede social não constrói ativo. Site próprio, páginas de "
             "plano e captação de contatos pelo Google, com escopo proporcional.")
     page_id = "revendedor-iptv"
@@ -689,7 +689,7 @@ def b3_revendedor():
 def b4_link_building_iptv():
     slug = "link-building-para-iptv"
     canonical = f"{BASE_URL}/{slug}/"
-    titulo = "Link building para IPTV: autoridade com critério | RCB"
+    titulo = "Link building para IPTV: autoridade com critério | RCB SEO"
     desc = ("Construção de autoridade para projetos de IPTV: relevância temática, avaliação de risco "
             "e ritmo controlado. Sem promessa de backlinks ilimitados.")
     page_id = "link-building-iptv"
@@ -855,7 +855,7 @@ def b4_link_building_iptv():
 def b5_dominio_expirado_iptv():
     slug = "dominio-expirado-para-iptv"
     canonical = f"{BASE_URL}/{slug}/"
-    titulo = "Domínio expirado para IPTV: vale a pena? | RCB Consultoria"
+    titulo = "Domínio expirado para IPTV: vale a pena? | RCB SEO"
     desc = ("Domínio novo ou expirado para IPTV: o que o histórico realmente entrega, o que é mito "
             "e como avaliar o risco antes de comprar.")
     page_id = "dominio-expirado-iptv"
@@ -1013,7 +1013,7 @@ def b5_dominio_expirado_iptv():
 def b6_streaming():
     slug = "seo-para-streaming-e-tv-online"
     canonical = f"{BASE_URL}/{slug}/"
-    titulo = "SEO para streaming e TV online | RCB Consultoria"
+    titulo = "SEO para streaming e TV online | RCB SEO"
     desc = ("Aquisição orgânica para plataformas de streaming, TV online e serviços por assinatura: "
             "catálogo, lançamentos, retenção e disputa nacional.")
     page_id = "streaming-tv-online"

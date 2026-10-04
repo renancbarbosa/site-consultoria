@@ -360,7 +360,7 @@ PAGINAS = [
     _trafego(
         "trafego-pago-para-dentistas", "dentistas",
         "Tráfego pago para dentistas",
-        "Tráfego Pago para Dentistas: Google Ads e Meta Ads | RCB",
+        "Tráfego Pago para Dentistas: Google Ads e Meta Ads | RCB SEO",
         ("Tráfego pago para dentistas: Google Ads e Meta Ads para encher a agenda de implante e ortodontia, dentro das regras do CFO. Orçamento grátis em 24h."),
         ("O paciente de implante, lente ou aparelho pesquisa no Google e decide em poucos cliques. Eu monto e acompanho "
          "os anúncios do seu consultório no Google e no Instagram para que esse paciente chame você no WhatsApp — "
@@ -427,7 +427,7 @@ PAGINAS = [
     _trafego(
         "trafego-pago-para-advogados", "advogados",
         "Tráfego pago para advogados",
-        "Tráfego Pago para Advogados: Google Ads Dentro da OAB | RCB",
+        "Tráfego Pago para Advogados: Google Ads Dentro da OAB | RCB SEO",
         ("Tráfego pago para advogados: Google Ads e Meta Ads dentro do Provimento 205/2021 da OAB, com consultor "
          "formado em Direito. Orçamento grátis em 24h."),
         ("Quem tem um problema jurídico pesquisa no Google: \"advogado trabalhista\", \"divórcio\", \"aposentadoria "
@@ -495,7 +495,7 @@ PAGINAS = [
     _trafego(
         "trafego-pago-para-energia-solar", "energia solar",
         "Tráfego pago para energia solar",
-        "Tráfego Pago para Energia Solar: Google Ads e Meta Ads | RCB",
+        "Tráfego Pago para Energia Solar: Google Ads e Meta Ads | RCB SEO",
         ("Tráfego pago para energia solar: Google Ads e Meta Ads para gerar pedidos de orçamento na sua região, sem pagar clique de curioso. Orçamento em 24h."),
         ("Quem pesquisa \"orçamento energia solar\" já decidiu instalar — só falta escolher quem. Eu monto e "
          "acompanho os anúncios da sua integradora no Google e no Instagram para que esse cliente peça orçamento "

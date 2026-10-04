@@ -1,0 +1,30 @@
+{
+  "_sobre": "Ficha unica da marca (04/10/2026). Fonte unica de nome, contato, coordenadas e links. Scripts leem por scripts/rcb_marca.py. Sem CNPJ: nao ha legalName nem taxID. Sem preco e sem garantia no site.",
+  "nome": "RCB SEO",
+  "nomes_alternativos": ["RCB Consultoria", "RCB SEO Local", "RCBSEO"],
+  "url": "https://rcbseo.com.br/",
+  "id_empresa": "https://rcbseo.com.br/#business",
+  "id_site": "https://rcbseo.com.br/#website",
+  "fundador": {
+    "nome": "Renan Carvalho Barbosa",
+    "id": "https://rcbseo.com.br/#renan",
+    "sameAs": ["https://www.linkedin.com/in/renan-carvalho-barbosa"]
+  },
+  "telefone": "+5562991161040",
+  "email": "contato@rcbseo.com.br",
+  "endereco": {
+    "streetAddress": "Rua 18-A, nº 256",
+    "postalCode": "74070-060",
+    "addressLocality": "Goiânia",
+    "addressRegion": "GO",
+    "addressCountry": "BR"
+  },
+  "geo": {"latitude": -16.6729448, "longitude": -49.2695683},
+  "perfil_google": "https://www.google.com/maps?cid=740760530295214944",
+  "mapa_embed": "https://www.google.com/maps?cid=740760530295214944&output=embed",
+  "sameAs": [
+    "https://www.google.com/maps?cid=740760530295214944",
+    "https://www.instagram.com/rcbseo"
+  ],
+  "linkedin_empresa": null
+}

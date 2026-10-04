@@ -42,7 +42,7 @@ ARTIGOS = []
 ARTIGOS.append({
     "slug": "seo-para-afiliados-como-estruturar-projeto",
     "h1": "SEO para afiliados de bets: como estruturar o projeto?",
-    "title": "SEO para afiliados de bets: como estruturar o projeto | RCB",
+    "title": "SEO para afiliados de bets: como estruturar o projeto | RCB SEO",
     "desc": ("A sequência de execução de um portal de afiliado, fase por fase: o que construir "
              "primeiro, o que deixar para depois e onde a maioria inverte a ordem."),
     "cat": CAT,
@@ -182,7 +182,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "link-building-para-bets-o-que-avaliar",
     "h1": "Link building para bets: o que avaliar?",
-    "title": "Link building para bets: o que avaliar nas propostas | RCB",
+    "title": "Link building para bets: o que avaliar nas propostas | RCB SEO",
     "desc": ("Este é um dos mercados de venda de links mais ativos e mais caros do país. Como "
              "julgar as propostas que chegam antes de gastar."),
     "cat": CAT,
@@ -314,7 +314,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "conteudo-autoridade-conversao-sites-de-apostas",
     "h1": "Conteúdo, autoridade e conversão em sites de apostas",
-    "title": "Conteúdo, autoridade e conversão em sites de apostas | RCB",
+    "title": "Conteúdo, autoridade e conversão em sites de apostas | RCB SEO",
     "desc": ("As três frentes não funcionam separadas. Como elas se conectam, quais métricas ligam "
              "uma à outra e onde o desequilíbrio entre elas trava o projeto."),
     "cat": CAT,
@@ -438,7 +438,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "site-de-afiliado-competir-nacionalmente",
     "h1": "O que um site de afiliado precisa para competir nacionalmente?",
-    "title": "O que um site de afiliado precisa para competir | RCB",
+    "title": "O que um site de afiliado precisa para competir | RCB SEO",
     "desc": ("Onde um portal pequeno ganha de um grande e onde não adianta tentar. A leitura de "
              "porte que define onde concentrar esforço."),
     "cat": CAT,

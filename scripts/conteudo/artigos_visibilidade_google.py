@@ -9,7 +9,7 @@ ARTIGOS = [
     {
         "slug": "como-colocar-minha-empresa-no-google",
         "h1": "Como colocar minha empresa no Google: passo a passo",
-        "title": "Como colocar minha empresa no Google: passo a passo | RCB",
+        "title": "Como colocar minha empresa no Google: passo a passo | RCB SEO",
         "desc": ("Como colocar sua empresa no Google de graça: veja como criar ou reivindicar o perfil, "
                  "verificar o negócio e aparecer na Busca e no Maps."),
         "cat": "Google Perfil da Empresa",
@@ -397,7 +397,7 @@ ARTIGOS = [
     {
         "slug": "como-aparecer-nas-buscas-perto-de-mim",
         "h1": "Como aparecer nas buscas “perto de mim” no Google",
-        "title": "Como aparecer nas buscas perto de mim no Google | RCB",
+        "title": "Como aparecer nas buscas perto de mim no Google | RCB SEO",
         "desc": ("Entenda como aparecer nas buscas perto de mim: ajuste Perfil da Empresa, site, "
                  "localização, serviços e avaliações sem inventar endereço ou cidade."),
         "cat": "SEO local",
@@ -548,7 +548,7 @@ ARTIGOS = [
     {
         "slug": "como-aparecer-no-google-sem-pagar",
         "h1": "Como aparecer no Google sem pagar por anúncios",
-        "title": "Como aparecer no Google sem pagar por anúncios | RCB",
+        "title": "Como aparecer no Google sem pagar por anúncios | RCB SEO",
         "desc": ("Veja como aparecer no Google sem pagar por anúncios: Perfil da Empresa gratuito, "
                  "site indexável, páginas de serviço, conteúdo e medição."),
         "cat": "Aparecer no Google",
@@ -849,7 +849,7 @@ ARTIGOS = [
     {
         "slug": "como-divulgar-minha-empresa-em-goiania",
         "h1": "Como divulgar minha empresa em Goiânia e aparecer no Google",
-        "title": "Como divulgar minha empresa em Goiânia no Google | RCB",
+        "title": "Como divulgar minha empresa em Goiânia no Google | RCB SEO",
         "desc": ("Como divulgar sua empresa em Goiânia: organize Google Maps, site, bairros, avaliações e "
                  "WhatsApp para ser encontrado por clientes da região."),
         "cat": "Goiânia e região",

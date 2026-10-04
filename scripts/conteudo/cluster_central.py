@@ -30,7 +30,7 @@ ANALISE = "/analise-de-projeto/"
 def a1_mercados_competitivos():
     slug = "seo-para-mercados-competitivos"
     canonical = f"{BASE_URL}/{slug}/"
-    titulo = "SEO para mercados competitivos | Projeto nacional | RCB"
+    titulo = "SEO para mercados competitivos | Projeto nacional | RCB SEO"
     desc = ("Projeto completo de SEO para nichos de alta concorrência: site, conteúdo, "
             "autoridade e acompanhamento. Disputa nacional. Peça a análise do projeto.")
     page_id = "mercados-competitivos"
@@ -336,7 +336,7 @@ def a1_mercados_competitivos():
 def a2_seo_nacional():
     slug = "seo-nacional"
     canonical = f"{BASE_URL}/{slug}/"
-    titulo = "SEO nacional: apareça em todo o Brasil | RCB Consultoria"
+    titulo = "SEO nacional: apareça em todo o Brasil | RCB SEO"
     desc = ("SEO nacional para empresas que disputam buscas em todo o Brasil. A diferença para o "
             "SEO local, o prazo real e como o projeto é estruturado.")
     page_id = "seo-nacional"
@@ -717,7 +717,7 @@ def a3_nichos_competitivos():
 def a4_seo_agressivo():
     slug = "seo-agressivo"
     canonical = f"{BASE_URL}/{slug}/"
-    titulo = "SEO agressivo: o que é, o que funciona e os limites | RCB"
+    titulo = "SEO agressivo: o que é, o que funciona e os limites | RCB SEO"
     desc = ("O que o mercado chama de SEO agressivo: execução intensa de conteúdo, arquitetura e "
             "autoridade. Sem spam e sem promessa de primeira página garantida.")
     page_id = "seo-agressivo"
@@ -925,7 +925,7 @@ def a4_seo_agressivo():
 def a5_negocios_digitais():
     slug = "seo-para-negocios-digitais"
     canonical = f"{BASE_URL}/{slug}/"
-    titulo = "SEO para negócios digitais e plataformas | RCB Consultoria"
+    titulo = "SEO para negócios digitais e plataformas | RCB SEO"
     desc = ("SEO para produtos digitais, plataformas e negócios por assinatura: aquisição orgânica, "
             "arquitetura de conteúdo e autoridade para operações nacionais.")
     page_id = "negocios-digitais"

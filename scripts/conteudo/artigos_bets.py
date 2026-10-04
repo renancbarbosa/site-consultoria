@@ -36,7 +36,7 @@ ARTIGOS = []
 ARTIGOS.append({
     "slug": "quanto-custa-seo-para-sites-de-apostas",
     "h1": "Quanto custa SEO para sites de apostas?",
-    "title": "Quanto custa SEO para sites de apostas? | RCB",
+    "title": "Quanto custa SEO para sites de apostas? | RCB SEO",
     "desc": ("Por que este é um dos nichos mais caros do país para disputar organicamente e quais "
              "fatores formam o custo de um projeto no setor."),
     "cat": CAT,
@@ -142,7 +142,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "quanto-tempo-para-posicionar-uma-bet",
     "h1": "Quanto tempo demora para posicionar uma bet?",
-    "title": "Quanto tempo demora para posicionar uma bet? | RCB",
+    "title": "Quanto tempo demora para posicionar uma bet? | RCB SEO",
     "desc": ("O horizonte realista de um projeto no setor de apostas, o que aparece primeiro e por "
              "que autoridade é o principal fator de prazo."),
     "cat": CAT,
@@ -278,7 +278,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "como-funciona-seo-para-igaming",
     "h1": "Como funciona SEO para iGaming?",
-    "title": "Como funciona SEO para iGaming (B2B)? | RCB",
+    "title": "Como funciona SEO para iGaming (B2B)? | RCB SEO",
     "desc": ("A disputa B2B do setor: poucas buscas, ciclo de decisão longo e valor por contato "
              "alto. Como estruturar conteúdo para quem vende a operadores."),
     "cat": CAT,
@@ -383,7 +383,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "como-criar-site-para-afiliado-de-apostas",
     "h1": "Como criar um site para afiliado de apostas",
-    "title": "Como criar um site para afiliado de apostas | RCB",
+    "title": "Como criar um site para afiliado de apostas | RCB SEO",
     "desc": ("As decisões de arquitetura que precisam ser tomadas antes da primeira página, para o "
              "portal chegar a centenas de conteúdos sem virar bagunça."),
     "cat": CAT,
@@ -501,7 +501,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "como-criar-paginas-de-avaliacao-de-casas-de-apostas",
     "h1": "Como criar páginas de avaliação de casas de apostas",
-    "title": "Como criar páginas de avaliação de casas de apostas | RCB",
+    "title": "Como criar páginas de avaliação de casas de apostas | RCB SEO",
     "desc": ("O que separa uma página de review que sustenta posição de uma que some: critério "
              "explícito, informação própria e estrutura para comparação."),
     "cat": CAT,
@@ -610,7 +610,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "seo-para-cassino-online-desafios",
     "h1": "SEO para cassino online: principais desafios",
-    "title": "SEO para cassino online: principais desafios | RCB",
+    "title": "SEO para cassino online: principais desafios | RCB SEO",
     "desc": ("O que muda na arquitetura de conteúdo quando o foco é cassino e jogos de mesa, e por "
              "que ela é diferente da de apostas esportivas."),
     "cat": CAT,
@@ -715,7 +715,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "como-posicionar-portal-de-jogos-online",
     "h1": "Como posicionar um portal de jogos online",
-    "title": "Como posicionar um portal de jogos online | RCB",
+    "title": "Como posicionar um portal de jogos online | RCB SEO",
     "desc": ("Por que a cauda longa carrega este nicho, como aproveitar o pico de lançamento e o "
              "caminho para disputar termos amplos depois."),
     "cat": CAT,
@@ -825,7 +825,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "seo-no-brasil-para-empresas-estrangeiras-de-igaming",
     "h1": "SEO no Brasil para empresas estrangeiras de iGaming",
-    "title": "SEO no Brasil para empresas estrangeiras de iGaming | RCB",
+    "title": "SEO no Brasil para empresas estrangeiras de iGaming | RCB SEO",
     "desc": ("Por que traduzir o site não resolve, o que localização de verdade exige e como "
              "estruturar presença orgânica em português para o mercado brasileiro."),
     "cat": CAT,

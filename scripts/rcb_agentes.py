@@ -35,6 +35,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import rcb_pacotes as P
+import rcb_marca as M  # ficha unica da marca (data/marca.json)
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOADOR = os.path.join(RAIZ, "consultor-seo-goiania", "index.html")
@@ -538,6 +539,7 @@ def montar_pagina(destino, slug, url, title, desc, og_title, og_desc, schema, co
     pasta = os.path.dirname(destino)
     if pasta:
         os.makedirs(pasta, exist_ok=True)
+    html = M.texto_html(html)
     with io.open(destino, "w", encoding="utf-8", newline="") as f:
         f.write(html)
     return len(html)
@@ -547,14 +549,7 @@ def montar_pagina(destino, slug, url, title, desc, og_title, og_desc, schema, co
 # 10. Schema
 # ---------------------------------------------------------------------------
 
-LOCALBUSINESS = {
-    "@type": "LocalBusiness", "@id": "https://rcbseo.com.br/#localbusiness",
-    "name": "RCB Consultoria", "url": "https://rcbseo.com.br/",
-    "telephone": "+5562991161040",
-    "address": {"@type": "PostalAddress", "streetAddress": "Rua 18-A, 256",
-                "addressLocality": u"Goiânia", "addressRegion": "GO",
-                "postalCode": "74070-060", "addressCountry": "BR"},
-}
+LOCALBUSINESS = M.no_empresa()  # nome, contato, geo e links vem de data/marca.json
 
 
 def schema_pagina(url, title, desc, trilha, servico=None, faq=None):
@@ -566,8 +561,7 @@ def schema_pagina(url, title, desc, trilha, servico=None, faq=None):
     grafo = [
         {"@type": "WebPage", "@id": url + "#webpage", "url": url, "name": title,
          "description": desc, "inLanguage": "pt-BR",
-         "isPartOf": {"@type": "WebSite", "@id": "https://rcbseo.com.br/#website",
-                      "name": "RCB Consultoria", "url": "https://rcbseo.com.br/"},
+         "isPartOf": M.site(),
          "breadcrumb": {"@id": url + "#breadcrumb"}},
         {"@type": "BreadcrumbList", "@id": url + "#breadcrumb",
          "itemListElement": [
@@ -577,7 +571,7 @@ def schema_pagina(url, title, desc, trilha, servico=None, faq=None):
          "name": "Renan Carvalho Barbosa",
          "jobTitle": u"Consultor de SEO local e automação",
          "url": "https://rcbseo.com.br/consultor-seo-goiania/",
-         "worksFor": {"@id": "https://rcbseo.com.br/#localbusiness"}},
+         "worksFor": {"@id": M.ID_EMPRESA}},
         dict(LOCALBUSINESS),
     ]
     if servico:

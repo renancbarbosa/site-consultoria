@@ -40,6 +40,9 @@ from urllib.parse import quote
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from rcb_pacotes import bloco_cta_mobile, bloco_pacotes
+import rcb_marca as M  # ficha unica da marca (data/marca.json)
+# cidades com trafego no Search Console (04/10/2026): titulo original, sem marca se nao couber
+TITULO_SEM_MARCA = {"joinville"}
 from rcb_cidades import INDEXAVEIS, PILOTO, PRESENCIAL, SLUG_CANONICO, eh_indexavel
 from conteudo.cidades_piloto import PILOTOS
 
@@ -241,7 +244,7 @@ def head_comum(titulo, desc, canonical, schema_json, indexavel=True):
   <link rel="alternate" hreflang="pt-BR" href="{canonical}">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:site_name" content="RCB Consultoria">
+  <meta property="og:site_name" content="{M.NOME}">
   <meta property="og:title" content="{titulo}">
   <meta property="og:description" content="{desc}">
   <meta property="og:url" content="{canonical}">
@@ -457,9 +460,11 @@ def pagina_cidade(c, vizinhas):
     variacao = float(c.get("variacao_mes_anterior_pct", 0) or 0)
     porte = c.get("porte", {})
 
-    titulo = f"Consultoria de SEO em {cidade} ({uf}) | Apareça no Google | RCB"
-    if len(titulo) > 65:
-        titulo = f"Consultoria de SEO em {cidade} ({uf}) | RCB"
+    titulo = f"Consultoria de SEO em {cidade} ({uf}) | Apareça no Google | {M.NOME}"
+    if len(titulo) > 65 and slug in TITULO_SEM_MARCA:
+        titulo = f"Consultoria de SEO em {cidade} ({uf}) | Apareça no Google"
+    elif len(titulo) > 65:
+        titulo = f"Consultoria de SEO em {cidade} ({uf}) | {M.NOME}"
     presencial = slug in PRESENCIAL
     if presencial:
         desc = (f"Sua empresa em {cidade} não aparece no Google? Consultoria de SEO com "
@@ -862,7 +867,7 @@ def pagina_cidade_piloto(c, vizinhas):
 
 def pagina_hub(cidades):
     canonical = f"{BASE_URL}/consultoria-seo/"
-    titulo = "Consultoria de SEO por Cidade | Todo o Brasil | RCB"
+    titulo = f"Consultoria de SEO por Cidade | Todo o Brasil | {M.NOME}"
     desc = ("Consultoria de SEO e Google Meu Negócio com atendimento online para as maiores cidades do Brasil. "
             "Escolha a sua cidade e veja os dados do mercado local.")
 
@@ -1030,6 +1035,7 @@ def atualizar_sitemap(cidades):
     if faltando:
         conteudo = conteudo.replace("</urlset>", "\n".join(faltando) + "\n</urlset>")
 
+    conteudo = M.texto_html(conteudo)
     with open(caminho, "w", encoding="utf-8", newline="\n") as f:
         f.write(conteudo)
 
@@ -1060,12 +1066,12 @@ def main():
         destino = os.path.join(RAIZ, "consultoria-seo", c["slug"])
         os.makedirs(destino, exist_ok=True)
         with open(os.path.join(destino, "index.html"), "w", encoding="utf-8", newline="\n") as f:
-            f.write(html)
+            f.write(M.texto_html(html))
         urls.append(f"{BASE_URL}/consultoria-seo/{c['slug']}/")
 
     hub = pagina_hub(cidades)
     with open(os.path.join(RAIZ, "consultoria-seo", "index.html"), "w", encoding="utf-8", newline="\n") as f:
-        f.write(hub)
+        f.write(M.texto_html(hub))
 
     atualizar_sitemap(cidades)
 

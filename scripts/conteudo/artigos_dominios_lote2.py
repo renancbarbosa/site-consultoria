@@ -34,7 +34,7 @@ ARTIGOS = []
 ARTIGOS.append({
     "slug": "como-escolher-dominio-expirado-com-autoridade",
     "h1": "Como escolher um domínio expirado com autoridade",
-    "title": "Como escolher um domínio expirado com autoridade | RCB",
+    "title": "Como escolher um domínio expirado com autoridade | RCB SEO",
     "desc": ("Você tem três ou quatro candidatos e precisa decidir qual comprar. Os critérios de "
              "comparação, em ordem de peso, e o teto de preço de cada um."),
     "cat": CAT,
@@ -165,7 +165,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "o-que-acontece-com-seo-ao-trocar-dominio",
     "h1": "O que acontece com o SEO quando o domínio é trocado?",
-    "title": "O que acontece com o SEO ao trocar de domínio | RCB",
+    "title": "O que acontece com o SEO ao trocar de domínio | RCB SEO",
     "desc": ("A mecânica da troca: o que é reavaliado, o que atravessa pelos redirecionamentos e o "
              "que se perde de qualquer forma."),
     "cat": CAT,
@@ -286,7 +286,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "dominio-caiu-o-que-fazer",
     "h1": "Domínio caiu: o que fazer com o site e o SEO?",
-    "title": "Domínio caiu: o que fazer com o site e o SEO | RCB",
+    "title": "Domínio caiu: o que fazer com o site e o SEO | RCB SEO",
     "desc": ("Antes de agir, descubra por que caiu. O diagnóstico das causas — registro, DNS, "
              "hospedagem, cadastro — e o que fazer em cada uma."),
     "cat": CAT,

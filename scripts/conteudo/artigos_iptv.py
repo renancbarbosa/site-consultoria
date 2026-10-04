@@ -35,7 +35,7 @@ ARTIGOS = []
 ARTIGOS.append({
     "slug": "quanto-custa-seo-para-iptv",
     "h1": "Quanto custa SEO para IPTV?",
-    "title": "Quanto custa SEO para IPTV? O que forma o preço | RCB",
+    "title": "Quanto custa SEO para IPTV? O que forma o preço | RCB SEO",
     "desc": ("Por que não existe valor de tabela para um projeto de IPTV, quais fatores formam o "
              "custo e como estimar o investimento antes de pedir orçamento."),
     "cat": CAT,
@@ -144,7 +144,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "quanto-tempo-posicionar-site-iptv",
     "h1": "Quanto tempo demora para posicionar um site de IPTV?",
-    "title": "Quanto tempo demora para posicionar um site de IPTV? | RCB",
+    "title": "Quanto tempo demora para posicionar um site de IPTV? | RCB SEO",
     "desc": ("Os fatores que realmente mexem no prazo de um projeto no nicho, o que costuma "
              "aparecer primeiro e por que nenhum prazo é garantido."),
     "cat": CAT,
@@ -261,7 +261,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "como-criar-site-para-iptv-do-zero",
     "h1": "Como criar um site para IPTV do zero",
-    "title": "Como criar um site para IPTV do zero | RCB Consultoria",
+    "title": "Como criar um site para IPTV do zero | RCB SEO",
     "desc": ("As decisões que precisam ser tomadas antes da primeira página: marca, domínio, "
              "estrutura, conversão e o que preparar para o site crescer sem reforma."),
     "cat": CAT,
@@ -386,7 +386,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "dominio-novo-ou-expirado-para-iptv",
     "h1": "Domínio novo ou domínio expirado para IPTV?",
-    "title": "Domínio novo ou expirado para IPTV? | RCB Consultoria",
+    "title": "Domínio novo ou expirado para IPTV? | RCB SEO",
     "desc": ("A comparação honesta entre começar do zero e comprar histórico neste nicho — o que "
              "cada opção entrega e quando uma delas é claramente melhor."),
     "cat": CAT,
@@ -486,7 +486,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "quanto-investir-backlinks-iptv",
     "h1": "Quanto investir em backlinks para um projeto de IPTV?",
-    "title": "Quanto investir em backlinks para IPTV? | RCB",
+    "title": "Quanto investir em backlinks para IPTV? | RCB SEO",
     "desc": ("Como dimensionar a verba de autoridade dentro do projeto, por que este nicho é mais "
              "caro nessa frente e o que não fazer com o orçamento."),
     "cat": CAT,
@@ -593,7 +593,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "estruturar-site-iptv-para-gerar-contatos",
     "h1": "Como estruturar um site de IPTV para gerar contatos",
-    "title": "Como estruturar um site de IPTV para gerar contatos | RCB",
+    "title": "Como estruturar um site de IPTV para gerar contatos | RCB SEO",
     "desc": ("O que separa um site que recebe visita de um que gera conversa: clareza de oferta, "
              "comparação, objeções respondidas e contato sem atrito."),
     "cat": CAT,
@@ -703,7 +703,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "site-para-revendedor-iptv-o-que-precisa-ter",
     "h1": "Site para revendedor de IPTV: o que precisa ter",
-    "title": "Site para revendedor de IPTV: o que precisa ter | RCB",
+    "title": "Site para revendedor de IPTV: o que precisa ter | RCB SEO",
     "desc": ("O mínimo que um revendedor autorizado precisa para deixar de depender só de rede "
              "social e começar a captar pelo Google."),
     "cat": CAT,

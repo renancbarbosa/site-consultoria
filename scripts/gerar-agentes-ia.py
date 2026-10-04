@@ -26,6 +26,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import rcb_agentes as A
 import rcb_pacotes as P
+import rcb_marca as M  # ficha unica da marca (data/marca.json)
 
 RAIZ = A.RAIZ
 BASE = "https://rcbseo.com.br"
@@ -111,7 +112,7 @@ NOTA_DEPO = (u"Estes depoimentos são de clientes de consultoria de SEO e Google
 
 SLUG1 = "agentes-de-ia"
 URL1 = BASE + "/agentes-de-ia/"
-TITLE1 = u"Agentes de IA no WhatsApp para Empresas | RCB Consultoria"
+TITLE1 = M.titulo(u"Agentes de IA no WhatsApp para Empresas | RCB")
 DESC1 = (u"Agentes de IA no WhatsApp respondem, agendam e recuperam vendas 24 horas "
          u"por dia. Veja uma conversa simulada e entenda o que dá para automatizar "
          u"no seu negócio.")
@@ -339,7 +340,7 @@ def pagina1():
         "description": (u"Implantação de agentes de inteligência artificial no WhatsApp "
                         u"para atendimento, agendamento e recuperação de vendas, com "
                         u"passagem para atendimento humano quando o assunto exige."),
-        "provider": {"@id": "https://rcbseo.com.br/#localbusiness"},
+        "provider": {"@id": M.ID_EMPRESA},
         "areaServed": {"@type": "Country", "name": "Brasil"},
     }
     schema = A.schema_pagina(URL1, TITLE1, DESC1,
@@ -648,7 +649,7 @@ def pagina2():
         "description": (u"Agente de inteligência artificial que atende no WhatsApp da "
                         u"clínica, agenda e remarca consultas, envia confirmação de "
                         u"véspera e encaminha urgências para a equipe humana."),
-        "provider": {"@id": "https://rcbseo.com.br/#localbusiness"},
+        "provider": {"@id": M.ID_EMPRESA},
         "audience": {"@type": "Audience", "audienceType": u"Clínicas e consultórios"},
         "areaServed": {"@type": "Country", "name": "Brasil"},
     }
@@ -671,7 +672,7 @@ def pagina2():
 
 SLUG3 = "recuperacao-de-vendas-whatsapp"
 URL3 = BASE + "/recuperacao-de-vendas-whatsapp/"
-TITLE3 = u"Recuperação de Carrinho Abandonado no WhatsApp | RCB"
+TITLE3 = M.titulo(u"Recuperação de Carrinho Abandonado no WhatsApp | RCB")
 DESC3 = (u"Recuperação de carrinho abandonado no WhatsApp: quem chegou no pagamento e "
          u"desistiu recebe uma mensagem, tira a dúvida e volta para a compra. "
          u"Veja a conversa funcionando.")
@@ -937,7 +938,7 @@ def pagina3():
                         u"WhatsApp com quem abandonou o checkout, responde a dúvida que "
                         u"travou a compra, devolve o link do carrinho e atua como suporte "
                         u"depois da venda."),
-        "provider": {"@id": "https://rcbseo.com.br/#localbusiness"},
+        "provider": {"@id": M.ID_EMPRESA},
         "audience": {"@type": "Audience",
                      "audienceType": u"Infoprodutores e lojas online"},
         "areaServed": {"@type": "Country", "name": "Brasil"},

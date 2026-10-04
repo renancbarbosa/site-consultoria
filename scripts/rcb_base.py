@@ -19,6 +19,10 @@ import os
 import re
 from urllib.parse import quote
 
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import rcb_marca as M  # ficha unica da marca (data/marca.json)
+
 RAIZ = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 BASE_URL = "https://rcbseo.com.br"
 WHATS = "5562991161040"
@@ -68,6 +72,7 @@ def head_comum(titulo, desc, canonical, schema_json, og_type="website", extra_he
     Cabeçalho idêntico ao padrão do site: gtag com consent mode, metas sociais,
     favicons, fontes com carregamento diferido, styles.css e schema JSON-LD.
     """
+    titulo = M.titulo(titulo)
     assert len(titulo) <= 65, f"Title longo demais ({len(titulo)}): {titulo}"
     assert len(desc) <= 160, f"Description longa demais ({len(desc)}): {desc}"
     t, d = esc(titulo), esc(desc)
@@ -101,7 +106,7 @@ def head_comum(titulo, desc, canonical, schema_json, og_type="website", extra_he
   <link rel="alternate" hreflang="pt-BR" href="{canonical}">
   <meta property="og:type" content="{og_type}">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:site_name" content="RCB Consultoria">
+  <meta property="og:site_name" content="{M.NOME}">
   <meta property="og:title" content="{t}">
   <meta property="og:description" content="{d}">
   <meta property="og:url" content="{canonical}">
@@ -305,18 +310,18 @@ def schema_faq(faq):
 def schema_service(nome, descricao, canonical, tipo="Consultoria de SEO"):
     return ('{"@type":"Service","serviceType":"%s","name":"%s","description":"%s","url":"%s",'
             '"provider":{"@type":"ProfessionalService","@id":"https://rcbseo.com.br/#business",'
-            '"name":"RCB Consultoria","url":"https://rcbseo.com.br/"},'
+            '"name":"%s","url":"https://rcbseo.com.br/"},'
             '"areaServed":{"@type":"Country","name":"Brasil"}}'
-            % (sesc(tipo), sesc(nome), sesc(descricao), canonical))
+            % (sesc(tipo), sesc(nome), sesc(descricao), canonical, sesc(M.NOME)))
 
 
 def schema_webpage(canonical, nome, desc, data_mod):
     return ('{"@type":"WebPage","@id":"%s#webpage","url":"%s","name":"%s",'
             '"description":"%s","inLanguage":"pt-BR","dateModified":"%s",'
             '"isPartOf":{"@type":"WebSite","@id":"https://rcbseo.com.br/#website",'
-            '"url":"https://rcbseo.com.br/","name":"RCB Consultoria"},'
+            '"url":"https://rcbseo.com.br/","name":"%s"},'
             '"about":{"@id":"https://rcbseo.com.br/#business"}}'
-            % (canonical, canonical, sesc(nome), sesc(desc), data_mod))
+            % (canonical, canonical, sesc(M.titulo(nome)), sesc(desc), data_mod, sesc(M.NOME)))
 
 
 def schema_blogposting(canonical, titulo, desc, data_pub, data_mod, imagem=OG_IMG):
@@ -327,8 +332,8 @@ def schema_blogposting(canonical, titulo, desc, data_pub, data_mod, imagem=OG_IM
             '"author":{"@type":"Person","@id":"https://rcbseo.com.br/#renan",'
             '"name":"Renan Carvalho Barbosa","url":"https://rcbseo.com.br/sobre/"},'
             '"publisher":{"@type":"Organization","@id":"https://rcbseo.com.br/#business",'
-            '"name":"RCB Consultoria","url":"https://rcbseo.com.br/"}}'
-            % (canonical, canonical, sesc(titulo), sesc(desc), imagem, data_pub, data_mod))
+            '"name":"%s","url":"https://rcbseo.com.br/"}}'
+            % (canonical, canonical, sesc(titulo), sesc(desc), imagem, data_pub, data_mod, sesc(M.NOME)))
 
 
 def grafo(*blocos):
@@ -556,6 +561,7 @@ def escrever(caminho_rel, html):
     """Escreve garantindo a pasta. caminho_rel é relativo à raiz do site."""
     destino = os.path.join(RAIZ, caminho_rel)
     os.makedirs(os.path.dirname(destino), exist_ok=True)
+    html = M.texto_html(html)  # nome antigo da marca nunca volta numa regeracao
     with open(destino, "w", encoding="utf-8", newline="\n") as f:
         f.write(html)
     return destino

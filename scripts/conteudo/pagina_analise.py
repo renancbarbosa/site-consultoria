@@ -55,7 +55,7 @@ def _bloco(titulo, descricao, campos_html, grid=True):
 def e1_analise_de_projeto():
     slug = "analise-de-projeto"
     canonical = f"{BASE_URL}/{slug}/"
-    titulo = "Análise de projeto de SEO nacional | RCB Consultoria"
+    titulo = "Análise de projeto de SEO nacional | RCB SEO"
     desc = ("Formulário de qualificação para projetos de SEO em mercados competitivos: segmento, "
             "objetivo, prazo e faixa de investimento. Resposta em até 24h úteis.")
     page_id = "analise-projeto"

@@ -29,7 +29,7 @@ dicionário que o gerador renderiza.
 # ---------------------------------------------------------------------------
 def rio_de_janeiro(ctx):
     return {
-        "titulo": "Consultoria de SEO no Rio de Janeiro (RJ) | RCB",
+        "titulo": "Consultoria de SEO no Rio de Janeiro (RJ) | RCB SEO",
         "desc": (
             "Consultoria de SEO no Rio de Janeiro: no Maps, quem decide é a zona, "
             "não a cidade. Google Perfil da Empresa, site e conteúdo. Online, com orçamento grátis."
@@ -194,7 +194,7 @@ def rio_de_janeiro(ctx):
 # ---------------------------------------------------------------------------
 def campinas(ctx):
     return {
-        "titulo": "Consultoria de SEO em Campinas (SP) | RCB",
+        "titulo": "Consultoria de SEO em Campinas (SP) | RCB SEO",
         "desc": (
             "Consultoria de SEO em Campinas: seu cliente pode estar em Valinhos ou Sumaré. "
             "Perfil no Google, site e conteúdo para a RMC. Online, com orçamento grátis."
@@ -330,7 +330,7 @@ def campinas(ctx):
 # ---------------------------------------------------------------------------
 def palmas(ctx):
     return {
-        "titulo": "SEO Local em Palmas (TO) e Google Perfil da Empresa | RCB",
+        "titulo": "SEO Local em Palmas (TO) e Google Perfil da Empresa | RCB SEO",
         "desc": (
             "SEO local em Palmas (TO): endereço de quadra pode confundir o Google Maps. "
             "Perfil da Empresa configurado corretamente. Online, com orçamento grátis."

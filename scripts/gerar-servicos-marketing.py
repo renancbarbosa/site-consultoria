@@ -31,6 +31,8 @@ from urllib.parse import quote
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(AQUI, "conteudo"))
+sys.path.insert(0, AQUI)
+import rcb_marca as M  # ficha unica da marca (data/marca.json)
 from servicos_marketing import PAGINAS as _GERAIS  # noqa: E402
 from servicos_nichos import PAGINAS as _NICHOS  # noqa: E402  (serviço + nicho, 28/09/2026)
 
@@ -290,19 +292,16 @@ def schema(p):
     g = [
         {"@type": "WebPage", "@id": url + "#webpage", "url": url, "name": p["title"], "description": p["desc"],
          "dateModified": DATA, "inLanguage": "pt-BR",
-         "isPartOf": {"@type": "WebSite", "@id": BASE + "/#website", "name": "RCB Consultoria", "url": BASE + "/"},
+         "isPartOf": M.site(),
          "breadcrumb": {"@id": url + "#breadcrumb"}},
         {"@type": "BreadcrumbList", "@id": url + "#breadcrumb", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Início", "item": BASE + "/"},
             {"@type": "ListItem", "position": 2, "name": p["trilha"], "item": url}]},
         {"@type": "Service", "@id": url + "#service", "name": p["trilha"], "serviceType": p["servico"],
-         "description": p["desc"], "provider": {"@id": BASE + "/#localbusiness"},
+         "description": p["desc"], "provider": {"@id": M.ID_EMPRESA},
          "areaServed": [{"@type": "City", "name": "Goiânia", "addressRegion": "GO", "addressCountry": "BR"},
                         {"@type": "Country", "name": "Brasil"}]},
-        {"@type": "LocalBusiness", "@id": BASE + "/#localbusiness", "name": "RCB Consultoria", "url": BASE + "/",
-         "telephone": "+5562991161040",
-         "address": {"@type": "PostalAddress", "streetAddress": "Rua 18-A, 256", "addressLocality": "Goiânia",
-                     "addressRegion": "GO", "postalCode": "74070-060", "addressCountry": "BR"}},
+        M.no_empresa(),
         {"@type": "FAQPage", "@id": url + "#faq", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in p["faq"]]},
     ]
@@ -349,6 +348,7 @@ def main():
     modelo = io.open(os.path.join(RAIZ, MODELO, "index.html"), encoding="utf-8").read()
     assert modelo.startswith("<!DOCTYPE"), "modelo corrompido"
     for p in PAGINAS:
+        p = dict(p, title=M.titulo(p["title"]))
         h = montar(modelo, p)
         assert h.startswith("<!DOCTYPE") and h.count("<h1") == 1, p["slug"]
         assert len(p["title"]) <= 65 and len(p["desc"]) <= 160, (p["slug"], len(p["title"]), len(p["desc"]))
@@ -356,6 +356,7 @@ def main():
         assert 'data-page="%s"' % MODELO not in h, p["slug"]  # medicao do GA4 nao pode herdar o modelo
         destino = os.path.join(RAIZ, p["slug"], "index.html")
         os.makedirs(os.path.dirname(destino), exist_ok=True)
+        h = M.texto_html(h)
         io.open(destino, "w", encoding="utf-8", newline="\n").write(h)
         miolo = h.split('<main id="main-content">')[1].split("</main>")[0]
         print("ok  /%s/  %d palavras" % (p["slug"], len(re.sub(r"<[^>]+>", " ", miolo).split())))

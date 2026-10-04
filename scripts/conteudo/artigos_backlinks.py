@@ -26,7 +26,7 @@ ARTIGOS = []
 ARTIGOS.append({
     "slug": "comprar-backlinks-ajuda-no-posicionamento",
     "h1": "Comprar backlinks ajuda no posicionamento?",
-    "title": "Comprar backlinks ajuda no posicionamento? | RCB",
+    "title": "Comprar backlinks ajuda no posicionamento? | RCB SEO",
     "desc": ("O que realmente acontece quando se compra links, por que a maior parte do que se vende "
              "entrega pouco e qual é a alternativa que sustenta posição."),
     "cat": CAT,
@@ -140,7 +140,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "quanto-custa-um-backlink-de-qualidade",
     "h1": "Quanto custa um backlink de qualidade?",
-    "title": "Quanto custa um backlink de qualidade? | RCB Consultoria",
+    "title": "Quanto custa um backlink de qualidade? | RCB SEO",
     "desc": ("O que forma o preço de um link, por que a variação é tão grande entre nichos e como "
              "comparar ofertas sem olhar só o valor."),
     "cat": CAT,
@@ -250,7 +250,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "como-avaliar-qualidade-de-um-backlink",
     "h1": "Como avaliar a qualidade de um backlink",
-    "title": "Como avaliar a qualidade de um backlink | RCB",
+    "title": "Como avaliar a qualidade de um backlink | RCB SEO",
     "desc": ("Os critérios práticos para julgar uma oportunidade de link antes de aceitar — e por "
              "que a métrica de autoridade é o pior deles isoladamente."),
     "cat": CAT,
@@ -373,7 +373,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "quantos-backlinks-um-site-precisa",
     "h1": "Quantos backlinks um site precisa?",
-    "title": "Quantos backlinks um site precisa? | RCB Consultoria",
+    "title": "Quantos backlinks um site precisa? | RCB SEO",
     "desc": ("Por que não existe número mágico, como calcular a referência comparativa do seu caso "
              "e o que importa mais que a quantidade."),
     "cat": CAT,
@@ -480,7 +480,7 @@ ARTIGOS.append({
 ARTIGOS.append({
     "slug": "como-analisar-backlinks-dos-concorrentes",
     "h1": "Como analisar os backlinks dos concorrentes",
-    "title": "Como analisar os backlinks dos concorrentes | RCB",
+    "title": "Como analisar os backlinks dos concorrentes | RCB SEO",
     "desc": ("O método para descobrir de onde vem a autoridade de quem está à frente e transformar "
              "isso em um plano de oportunidades acessíveis."),
     "cat": CAT,
