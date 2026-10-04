@@ -749,8 +749,8 @@ ARTIGOS = [
             [
                 ["Presença Lite", "Sob medida, pagamento único", "Já existe site, mas o perfil está incompleto ou abandonado"],
                 ["Presença", "Sob medida, pagamento único", "A empresa precisa de perfil organizado e site de até cinco páginas"],
-                ["Crescimento", "Sob medida, mensal (mínimo de 3 meses)", "Já existe uma base e é preciso trabalhar conteúdo, avaliações e ajustes mensais"],
-                ["Dominação", "Sob medida, mensal (mínimo de 3 meses)", "Há vários serviços, concorrência forte e necessidade de acompanhamento mais intenso"],
+                ["Crescimento", "Sob medida, mensal (sem fidelidade)", "Já existe uma base e é preciso trabalhar conteúdo, avaliações e ajustes mensais"],
+                ["Dominação", "Sob medida, mensal (sem fidelidade)", "Há vários serviços, concorrência forte e necessidade de acompanhamento mais intenso"],
             ],
             nota="Valores publicados pela RCB em 15 de agosto de 2026. Confira a página comercial antes de contratar, pois escopo e preços podem ser atualizados."
         )}

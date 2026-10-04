@@ -34,7 +34,7 @@ ARTIGOS = [
                  "integradoras venderem mais sem depender só de indicação."),
         "cat": "Energia solar",
         "data": DATA,
-        "trilha_extra": ("/gestao-de-trafego-pago-goiania/", "Tráfego pago"),
+        "trilha_extra": ("/gestao-de-trafego-pago/", "Tráfego pago"),
         "corpo": f"""
         <p>Para conseguir clientes de energia solar hoje, a integradora precisa estar onde o cliente pesquisa
         antes de pedir orçamento: no <strong>Google Maps</strong>, num <strong>site que explica o sistema na
@@ -262,7 +262,7 @@ ARTIGOS = [
                  "regras do CFM e do CFO, sem queimar verba e sem risco ao registro."),
         "cat": "Clínicas",
         "data": DATA,
-        "trilha_extra": ("/gestao-de-trafego-pago-goiania/", "Tráfego pago"),
+        "trilha_extra": ("/gestao-de-trafego-pago/", "Tráfego pago"),
         "corpo": f"""
         <p>Tráfego pago para clínicas funciona quando junta três coisas: <strong>anúncio no Google para quem já
         procura o tratamento</strong>, <strong>anúncio no Instagram para gerar demanda na sua região</strong> e
@@ -345,7 +345,7 @@ ARTIGOS = [
         <p>O anúncio traz paciente enquanto você paga. O {link('/seo-para-clinicas/', 'trabalho no Google orgânico')}
         e no Perfil da Empresa continua trazendo paciente depois. Clínicas que fazem os dois dependem menos da
         verba de anúncio com o passar dos meses. Se você quer ajuda com as campanhas, veja como funciona a
-        {link('/gestao-de-trafego-pago-goiania/', 'gestão de tráfego pago')} — e, para consultório
+        {link('/gestao-de-trafego-pago/', 'gestão de tráfego pago')} — e, para consultório
         odontológico, o {link('/trafego-pago-para-dentistas/', 'tráfego pago para dentistas')}.</p>
 """,
         "faq": [
@@ -378,7 +378,7 @@ ARTIGOS = [
                  "valor do seu cliente, e quanto tempo esperar para julgar."),
         "cat": "Tráfego pago",
         "data": DATA,
-        "trilha_extra": ("/gestao-de-trafego-pago-goiania/", "Tráfego pago"),
+        "trilha_extra": ("/gestao-de-trafego-pago/", "Tráfego pago"),
         "corpo": f"""
         <p>Não existe um valor certo de investimento em tráfego pago que sirva para todo mundo. A verba ideal é
         calculada de trás para frente: <strong>quanto vale um cliente para você</strong>, <strong>quanto custa um
@@ -457,7 +457,7 @@ ARTIGOS = [
         começo é medição: quantas conversas vieram, de qual campanha e quanto custou cada uma.</p>
 
         <p>Se você quer ajuda para calcular a verba do seu caso e montar a primeira campanha, veja como funciona a
-        {link('/gestao-de-trafego-pago-goiania/', 'gestão de tráfego pago')}. E se ainda está decidindo entre anúncio
+        {link('/gestao-de-trafego-pago/', 'gestão de tráfego pago')}. E se ainda está decidindo entre anúncio
         e Google orgânico, leia {link('/blog/seo-ou-trafego-pago-empresa-local/', 'SEO ou tráfego pago para empresa local')}.</p>
 """,
         "faq": [

@@ -126,16 +126,16 @@ def main():
     a = RAIZ / "scripts" / "conteudo" / "artigos_nichos_anuncios.py"
     if troca_unica(a,
                    "meses. Se você quer ajuda com a parte dos anúncios, veja como funciona a\n"
-                   "        {link('/gestao-de-trafego-pago-goiania/', 'gestão de tráfego pago')}.</p>",
+                   "        {link('/gestao-de-trafego-pago/', 'gestão de tráfego pago')}.</p>",
                    "meses. Se você quer ajuda com a parte dos anúncios, veja como funciona o\n"
                    "        {link('/trafego-pago-para-energia-solar/', 'tráfego pago para energia solar')}.</p>",
                    "{link('/trafego-pago-para-energia-solar/', 'tráfego pago para energia solar')}.</p>"):
         feito.append("artigo energia solar")
     if troca_unica(a,
                    "verba de anúncio com o passar dos meses. Se você quer ajuda com as campanhas, veja como funciona a\n"
-                   "        {link('/gestao-de-trafego-pago-goiania/', 'gestão de tráfego pago')}.</p>",
+                   "        {link('/gestao-de-trafego-pago/', 'gestão de tráfego pago')}.</p>",
                    "verba de anúncio com o passar dos meses. Se você quer ajuda com as campanhas, veja como funciona a\n"
-                   "        {link('/gestao-de-trafego-pago-goiania/', 'gestão de tráfego pago')} — e, para consultório\n"
+                   "        {link('/gestao-de-trafego-pago/', 'gestão de tráfego pago')} — e, para consultório\n"
                    "        odontológico, o {link('/trafego-pago-para-dentistas/', 'tráfego pago para dentistas')}.</p>",
                    "{link('/trafego-pago-para-dentistas/', 'tráfego pago para dentistas')}.</p>"):
         feito.append("artigo clinicas")

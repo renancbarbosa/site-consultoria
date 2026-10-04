@@ -20,7 +20,7 @@ MOSTRAR_YOUTUBE = False
 # destino provisorio de itens cuja pagina chega numa etapa futura
 PROVISORIO = {
     "seo_youtube": "/conteudo-para-seo/",                 # Etapa 5 cria a pagina propria
-    "trafego": "/gestao-de-trafego-pago-goiania/",         # Etapa 3 cria a pagina nacional
+    "trafego": "/gestao-de-trafego-pago/",         # Etapa 3 cria a pagina nacional
     "landing": "/criacao-de-landing-page/",        # Etapa 2 decide a pagina nacional
 }
 

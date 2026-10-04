@@ -3,7 +3,7 @@
 Conteúdo das páginas de serviço da linha "Sites e Anúncios" (28/09/2026).
 
   /criacao-de-landing-page/   (nacional desde 04/10/2026; 301 da antiga de Goiania)
-  /gestao-de-trafego-pago-goiania/   (Google Ads + Meta Ads)
+  /gestao-de-trafego-pago/   (nacional desde 04/10/2026; 301 da antiga de Goiania)
   /criacao-de-loja-virtual-goiania/
 
 Regras do Renan para estas páginas:
@@ -243,7 +243,7 @@ PAGINAS = [
              "quiser seguir com outra pessoa, a página continua sendo sua."),
         ],
         "relacionados": [
-            ("/gestao-de-trafego-pago-goiania/", "Gestão de tráfego pago",
+            ("/gestao-de-trafego-pago/", "Gestão de tráfego pago",
              "Anúncio na pesquisa do Google para levar gente até a sua landing page."),
             ("/criacao-de-sites-goiania/", "Criação de sites",
              "Quando a empresa quer aparecer no Google de graça, por vários serviços."),
@@ -259,177 +259,212 @@ PAGINAS = [
     # TRÁFEGO PAGO (Google Ads + Meta Ads)
     # =====================================================================
     {
-        "slug": "gestao-de-trafego-pago-goiania",
-        "title": "Gestão de Tráfego Pago em Goiânia | Google Ads e Meta Ads",
-        "desc": ("Gestão de tráfego pago em Goiânia: Google Ads e Meta Ads para a sua empresa ser encontrada hoje "
-                 "por quem procura o que você vende. Orçamento grátis em 24h."),
-        "trilha": "Gestão de tráfego pago em Goiânia",
+        # Etapa 3 do plano de nichos (04/10/2026): pagina NACIONAL, com 301 de
+        # /gestao-de-trafego-pago/ (0 impressao em 28 dias). Google Ads (rede de
+        # pesquisa) em primeiro lugar; Meta Ads so como complemento; sempre com landing page
+        # e medicao. Regra de honestidade: sem case, cliente ou numero inventado.
+        "slug": "gestao-de-trafego-pago",
+        "nacional": True,
+        "data": "2026-10-04",
+        "publico": "Empresas e profissionais que querem clientes pelo Google Ads",
+        "title": "Gestão de Tráfego Pago para Empresas (Google Ads) | RCB SEO",
+        "desc": ("Gestão de tráfego pago para empresas: anúncio na pesquisa do Google para quem já procura o seu "
+                 "serviço, com landing page e medição. Orçamento grátis em 24h."),
+        "trilha": "Gestão de tráfego pago",
         "servico": "Gestão de tráfego pago",
-        "eyebrow": "Google Ads e Meta Ads",
-        "h1": "Gestão de tráfego pago em Goiânia",
-        "sub": ("Aparecer no Google de graça leva meses. O anúncio coloca a sua empresa na frente do cliente hoje. "
-                "Eu monto e acompanho as suas campanhas no Google Ads e no Meta Ads para cada real de anúncio "
-                "virar conversa no seu WhatsApp — não só clique."),
-        "cta_hero": "Quero anunciar do jeito certo",
-        "msg": "Olá, Renan! Quero um orçamento de gestão de tráfego pago.",
-        "pills": ["Orçamento em até 24h", "Google Ads e Meta Ads", "Verba no seu cartão"],
-        "painel_h2": "O que a gestão de tráfego pago inclui",
+        "eyebrow": "Google Ads para empresas de todo o Brasil",
+        "h1": "Gestão de tráfego pago para empresas no Google Ads",
+        "sub": ("Gestão de tráfego pago é o trabalho de montar, acompanhar e ajustar os seus anúncios no Google para "
+                "que eles tragam contatos — e não só cliques. Eu cuido da campanha na pesquisa do Google, da página "
+                "que recebe o clique e da medição de cada conversa. A verba é paga direto ao Google, no seu cartão; "
+                "o orçamento da gestão é grátis e sai em até 24 horas pelo WhatsApp."),
+        "cta_hero": "Quero orçamento de Google Ads",
+        "msg": "Olá, Renan! Quero um orçamento de gestão de Google Ads para a minha empresa.",
+        "pills": ["Orçamento em até 24h", "Anúncio na pesquisa do Google", "Verba no seu cartão"],
+        "painel_h2": "O que a gestão inclui",
         "painel": [
-            "Campanhas criadas do zero ou organizadas.",
-            "Palavras e públicos escolhidos pelo seu cliente real.",
-            "Anúncios escritos para gerar conversa.",
-            "Página certa para cada campanha.",
-            "Ajustes contínuos: o que não traz contato sai.",
-            "Relatório claro de quantas conversas vieram.",
+            "Pesquisa do que o seu cliente digita no Google.",
+            "Campanha na rede de pesquisa, separada por serviço.",
+            "Palavras negativas para não pagar clique errado.",
+            "Landing page ligada a cada anúncio.",
+            "Conversões medidas no Google Ads e no GA4.",
+            "Relatório simples de contatos e custo por contato.",
         ],
+        "faq_titulo": "Perguntas frequentes sobre gestão de tráfego pago",
         "secoes": [
+            ("texto", {
+                "tag": "Pesquisa x impulsionar",
+                "titulo": "Qual a diferença entre anunciar no Google e impulsionar post no Instagram?",
+                "ps": [
+                    "Quando alguém digita no Google \"desentupidora 24 horas\" ou \"contador para MEI\", essa pessoa já "
+                    "está procurando o serviço. Na "
+                    "<a href=\"https://support.google.com/google-ads/answer/1722047?hl=pt-BR\" target=\"_blank\" "
+                    "rel=\"noopener noreferrer\">rede de pesquisa do Google</a>, o seu anúncio aparece perto dos "
+                    "resultados exatamente nesse momento — é o cliente que vai atrás de você.",
+                    "Impulsionar um post funciona ao contrário: interrompe quem está rolando o feed, pensando em outra "
+                    "coisa. Serve para tornar a marca conhecida, mas raramente traz o cliente que precisa resolver "
+                    "algo hoje. Por isso o foco aqui é o anúncio na pesquisa; Instagram e Facebook entram como "
+                    "complemento, quando fazem sentido para o seu negócio.",
+                ],
+            }),
             ("split", {
                 "tag": "O problema",
-                "titulo": "Anunciar é fácil. Anunciar sem queimar dinheiro, não.",
+                "titulo": "Por que tanta empresa anuncia no Google e o WhatsApp não toca?",
                 "ps": [
-                    "O botão \"impulsionar\" do Instagram e a campanha automática do Google foram feitos para "
-                    "gastar a sua verba — não para trazer o seu cliente. Sem ajuste, o anúncio aparece para "
-                    "curioso, para gente de outra cidade e para quem nunca vai comprar.",
-                    "Gestão de tráfego pago é o trabalho de escolher com cuidado quem vê o anúncio, o que ele diz e "
-                    "para onde leva — e de cortar toda semana o que está gastando sem trazer conversa.",
-                    "O anúncio e o Google orgânico não brigam: o anúncio traz cliente hoje, enquanto o seu "
-                    "<a href=\"/google-perfil-empresa/\">Perfil da Empresa</a> e o seu site constroem a parte que "
-                    "continua trazendo cliente de graça depois.",
+                    "Quase sempre o problema não é o Google Ads em si, mas a montagem. Campanha aberta para qualquer "
+                    "busca parecida, anúncio que leva para a página inicial do site e ninguém medindo o que vira "
+                    "contato: o dinheiro sai todo dia e ninguém sabe dizer o que trouxe cliente.",
+                    "No Google Ads, na forma mais comum, "
+                    "<a href=\"https://support.google.com/google-ads/answer/116495?hl=pt-BR\" target=\"_blank\" "
+                    "rel=\"noopener noreferrer\">você paga a cada clique</a>. Então cada clique de quem procurava "
+                    "emprego, curso ou algo de graça é verba jogada fora — e isso dá para cortar.",
                 ],
-                "card_titulo": "Sinais de que o anúncio está queimando verba",
+                "card_titulo": "Sinais de que a campanha precisa de gestão",
                 "card": [
-                    "<strong>Muito alcance, pouca mensagem.</strong> Gente vendo, ninguém chamando.",
-                    "<strong>Anúncio só no \"impulsionar\".</strong> Sem público nem objetivo definidos.",
-                    "<strong>Ninguém sabe o que deu certo.</strong> Sem medir, não dá para melhorar.",
-                ],
-            }),
-            ("texto", {
-                "tag": "Google Ads",
-                "titulo": "Google Ads em Goiânia: apareça para quem já está procurando",
-                "ps": [
-                    "No Google Ads o seu anúncio aparece para quem digitou exatamente o que você vende: \"dentista "
-                    "em Goiânia\", \"energia solar preço\", \"advogado trabalhista perto de mim\". É a pessoa com "
-                    "a necessidade na mão — por isso costuma ser o anúncio que mais vira venda para negócio local.",
-                    "O trabalho começa pela lista de buscas certas e, tão importante quanto, pela lista das "
-                    "buscas que <strong>não</strong> podem acionar o seu anúncio. Sem essa limpeza, você paga "
-                    "clique de quem procura emprego, curso grátis ou outra cidade.",
-                    "Depois vêm o texto do anúncio, a região de entrega — bairro, raio, cidade — e a "
-                    "<a href=\"/criacao-de-landing-page/\">página que recebe o clique</a>. Anúncio bom "
-                    "caindo em página ruim continua sendo dinheiro perdido.",
-                ],
-            }),
-            ("texto", {
-                "tag": "Meta Ads",
-                "titulo": "Meta Ads: anúncios no Instagram e no Facebook",
-                "ps": [
-                    "No Instagram e no Facebook a pessoa não está procurando você — ela está rolando o feed. O "
-                    "anúncio precisa interromper, despertar interesse e mostrar por que vale a pena chamar agora. "
-                    "É o canal certo para gerar demanda, apresentar uma oferta nova e alcançar quem mora perto.",
-                    "A campanha é montada com objetivo de conversa no WhatsApp, público definido por região, "
-                    "idade e interesse, e criativos testados lado a lado. O que não traz mensagem é pausado; o "
-                    "que traz ganha mais verba.",
-                    "Para deixar claro: eu cuido dos anúncios, não do seu perfil. Postagem diária, stories e "
-                    "gestão de redes sociais não fazem parte do serviço.",
+                    "Muitos cliques e poucas conversas.",
+                    "Anúncio aparecendo para buscas que não têm nada a ver.",
+                    "Clique caindo na página inicial do site.",
+                    "Nenhum relatório de quantos contatos vieram.",
+                    "Campanha ligada no automático há meses.",
                 ],
             }),
             ("cards", {
                 "tag": "O que está incluído",
-                "titulo": "O que entra na gestão de tráfego pago",
+                "titulo": "O que entra na gestão de Google Ads?",
+                "desc": "Tudo o que separa um anúncio que gasta de um anúncio que traz contato.",
                 "itens": [
-                    ("Diagnóstico da conta", "Se você já anuncia, eu olho o que está gastando sem retorno antes "
-                     "de mexer em qualquer coisa."),
-                    ("Estrutura das campanhas", "Campanhas separadas por serviço e por objetivo, para saber o que "
-                     "funciona e o que não funciona."),
-                    ("Anúncios escritos", "Textos e ideias de criativo pensados para gerar conversa, não curtida."),
-                    ("Página de destino", "A página certa para cada campanha. Se não existir, a gente cria."),
-                    ("Otimização contínua", "Ajuste de palavras, públicos, horários e verba conforme o que os "
-                     "números mostram."),
-                    ("Relatório que se entende", "Quantas conversas vieram e quanto custou cada uma, sem gráfico "
-                     "bonito para esconder resultado."),
+                    ("Pesquisa de palavras",
+                     "Levantamento do que o seu cliente realmente digita no Google, serviço por serviço, e na sua "
+                     "região de atendimento."),
+                    ("Palavras negativas",
+                     "Bloqueio das buscas que não interessam — \"grátis\", \"curso\", \"vaga\" —, usando as "
+                     "<a href=\"https://support.google.com/google-ads/answer/2453972?hl=pt-BR\" target=\"_blank\" "
+                     "rel=\"noopener noreferrer\">palavras-chave negativas</a> do próprio Google Ads."),
+                    ("Anúncios escritos para a sua oferta",
+                     "Textos que falam do seu serviço e da sua região, sem promessa que você não pode cumprir."),
+                    ("Landing page para cada campanha",
+                     "O clique cai numa página feita para aquele serviço, com WhatsApp. Se você ainda não tem, eu "
+                     "crio a <a href=\"/criacao-de-landing-page/\">landing page para anúncios</a>."),
+                    ("Medição de conversões",
+                     "Cada toque no WhatsApp e cada formulário registrado como conversão, com a "
+                     "<a href=\"https://support.google.com/google-ads/answer/1722022?hl=pt-BR\" target=\"_blank\" "
+                     "rel=\"noopener noreferrer\">medição do próprio Google Ads</a> e o GA4."),
+                    ("Relatório que você entende",
+                     "Quantos contatos vieram, quanto custou cada um e o que vou ajustar no mês seguinte."),
                 ],
             }),
-            ("faixas", {
-                "titulo": "Quanto custa a gestão de tráfego pago?",
-                "desc": ("São dois valores diferentes, e é bom separar desde o começo. A <strong>verba do "
-                         "anúncio</strong> é paga direto ao Google ou ao Meta, no seu cartão — você decide quanto. "
-                         "A <strong>gestão</strong> é o trabalho de montar e acompanhar as campanhas, e o valor "
-                         "depende de quantas campanhas, canais e serviços entram no projeto."),
+            ("texto", {
+                "tag": "Anúncio + SEO",
+                "titulo": "Por que anúncio no Google e SEO funcionam melhor juntos?",
+                "ps": [
+                    "O anúncio é a torneira: abre hoje e traz cliente enquanto você paga. O SEO é a construção: leva "
+                    "meses, mas depois traz contato sem custo por clique. Quem usa só anúncio fica refém da verba; "
+                    "quem usa só SEO espera demais pelo primeiro resultado.",
+                    "Juntos, um ajuda o outro. O anúncio mostra rápido quais buscas trazem cliente de verdade, e essas "
+                    "buscas viram as páginas que o "
+                    "<a href=\"/consultoria-seo-local/\">trabalho de SEO e Google Meu Negócio</a> vai fortalecer. "
+                    "Com o tempo, você depende menos do anúncio para encher a agenda.",
+                ],
+            }),
+            ("passos", {
+                "titulo": "Como funciona a gestão, do diagnóstico ao relatório?",
                 "itens": [
-                    ("Verba do anúncio", "Definida por você e paga direto à plataforma. Dá para começar pequeno "
-                     "e aumentar conforme as conversas chegam."),
-                    ("Gestão de um canal", "Google Ads ou Meta Ads. O mais comum para quem está começando a "
-                     "anunciar com um ou dois serviços."),
-                    ("Gestão de Google + Meta", "Os dois canais trabalhando juntos: Google para quem procura, "
-                     "Instagram para gerar demanda."),
+                    ("Conversa e diagnóstico",
+                     "Você me conta o que vende e onde atende. Se já anuncia, eu olho a conta antes de propor algo."),
+                    ("Plano por escrito",
+                     "Em até 24 horas: campanhas, serviços, sugestão de verba e o valor da gestão."),
+                    ("Montagem",
+                     "Palavras, negativas, anúncios, landing page e medição configurados antes de gastar o primeiro real."),
+                    ("Ajuste contínuo",
+                     "Corte do que gasta sem trazer contato e reforço do que funciona."),
+                    ("Relatório mensal",
+                     "Contatos, custo por contato e os próximos passos, em linguagem simples."),
+                ],
+            }),
+            ("texto", {
+                "tag": "Verba e gestão",
+                "titulo": "Quanto investir em Google Ads e quanto custa a gestão?",
+                "ps": [
+                    "São dois valores diferentes. A verba é o que você paga ao Google pelos cliques, direto no seu "
+                    "cartão, sem passar por mim. A gestão é o meu trabalho de montar, ajustar e medir as campanhas.",
+                    "A verba certa depende de quanto vale um cliente para a sua empresa e de quanto custa o clique no "
+                    "seu ramo e na sua região. Dá para começar com um ou dois serviços e aumentar quando os contatos "
+                    "chegarem. Para fazer essa conta com calma, veja o guia "
+                    "<a href=\"/blog/quanto-investir-em-trafego-pago/\">quanto investir em tráfego pago</a>. O "
+                    "orçamento da gestão é individual, grátis e sai em até 24 horas.",
                 ],
             }),
             ("orcamento", {
-                "titulo": "Seus anúncios sob medida: quanto fica o seu projeto?",
-                "desc": ("Escolha por onde quer começar e me chame no WhatsApp. Em até 24 horas você recebe o "
-                         "valor da gestão e uma sugestão de verba inicial para o seu caso."),
+                "titulo": "Por onde a sua empresa quer começar no Google Ads?",
+                "desc": "Escolha o ponto de partida. Em até 24 horas você recebe o plano e o valor da gestão.",
+                "destaque": 0,
                 "itens": [
-                    ("Google Ads", "Para aparecer para quem já está procurando o que você vende.",
-                     ["Buscas certas e buscas bloqueadas", "Anúncio por região e bairro", "Contatos medidos"],
-                     "Olá, Renan! Quero um orçamento de gestão de Google Ads.", "Orçamento de Google Ads"),
-                    ("Meta Ads", "Para anunciar no Instagram e no Facebook para quem mora perto.",
-                     ["Campanha de conversa no WhatsApp", "Públicos por região e interesse", "Criativos testados"],
-                     "Olá, Renan! Quero um orçamento de anúncios no Instagram e Facebook.", "Orçamento de Meta Ads"),
-                    ("Google + Meta", "Para quem quer os dois canais trabalhando juntos.",
-                     ["Tudo do Google Ads e do Meta Ads", "Verba distribuída pelo que funciona", "Um relatório só"],
-                     "Olá, Renan! Quero um orçamento de Google Ads e Meta Ads juntos.", "Quero os dois canais"),
-                    ("Já anuncio e não funciona", "Para quem já investe e não vê o WhatsApp tocar.",
-                     ["Diagnóstico da conta atual", "Corte do que gasta sem retorno", "Plano de ajuste"],
-                     "Olá, Renan! Já anuncio e não está trazendo cliente. Pode olhar minhas campanhas?", "Olhar meus anúncios"),
+                    ("Começar a anunciar no Google", "Para quem nunca anunciou ou quer começar do jeito certo.",
+                     ["Pesquisa de palavras e negativas", "Campanha na rede de pesquisa", "Conversões medidas"],
+                     "Olá, Renan! Quero começar a anunciar no Google Ads.", "Pedir orçamento"),
+                    ("Já anuncio e não funciona", "Para quem gasta todo mês e não vê o WhatsApp tocar.",
+                     ["Diagnóstico da conta", "Corte do que gasta sem retorno", "Plano de ajuste"],
+                     "Olá, Renan! Já anuncio no Google e não está trazendo cliente. Pode olhar?", "Olhar meus anúncios"),
+                    ("Anúncio + landing page", "Para quem não tem uma página certa para receber o clique.",
+                     ["Gestão de Google Ads", "Landing page para o anúncio", "Medição de ponta a ponta"],
+                     "Olá, Renan! Quero gestão de Google Ads com landing page.", "Pedir orçamento"),
                 ],
-                "destaque": 3,
             }),
-            ("passos", {
-                "titulo": "Como começa a gestão dos seus anúncios",
-                "itens": [
-                    ("1. Me conte o negócio", "No WhatsApp: o que você vende, onde atende e se já anuncia."),
-                    ("2. Montamos o plano", "Canal, campanhas, verba inicial e a página que recebe o clique."),
-                    ("3. Anúncio no ar e acompanhado", "Ajustes contínuos e relatório de quantas conversas vieram."),
+            ("texto", {
+                "tag": "Para quem",
+                "titulo": "Para quais empresas a gestão de tráfego pago faz sentido?",
+                "ps": [
+                    "Faz sentido para quem vende um serviço que as pessoas procuram no Google quando precisam: "
+                    "empresas de serviço local, profissionais liberais, clínicas, escritórios, comércio que vende "
+                    "na região. Cada ramo tem suas regras e seus cuidados — veja como funciona para "
+                    "<a href=\"/trafego-pago-para-energia-solar/\">empresas de energia solar</a>, "
+                    "<a href=\"/trafego-pago-para-dentistas/\">dentistas</a>, "
+                    "<a href=\"/trafego-pago-para-advogados/\">advogados</a> e "
+                    "<a href=\"/trafego-pago-para-imobiliarias/\">imobiliárias</a>.",
+                    "Faz menos sentido quando a margem de cada venda é tão pequena que não paga o clique, ou quando "
+                    "ninguém pesquisa o que você vende. Nesses casos eu digo isso no diagnóstico, antes de você "
+                    "investir.",
                 ],
             }),
         ],
         "faq": [
+            ("O que faz um gestor de tráfego pago?",
+             "Monta as campanhas, escolhe as palavras e as negativas, escreve os anúncios, liga cada anúncio à "
+             "página certa, configura a medição de conversões e ajusta tudo com base no que traz contato."),
+            ("A verba do anúncio fica com você?",
+             "Não. A verba é paga direto ao Google, no cartão da sua empresa. Eu cobro só a gestão, que é o "
+             "trabalho de montar e acompanhar as campanhas."),
+            ("Vocês anunciam no Instagram e no Facebook também?",
+             "Sim, como complemento. O foco é o anúncio na pesquisa do Google, que pega quem já procura o seu "
+             "serviço. Meta Ads entra quando faz sentido para o seu negócio, sempre com página e medição."),
+            ("Preciso ter site para anunciar no Google?",
+             "Precisa de uma página para receber o clique. Pode ser o site, se ele tiver a página do serviço, ou "
+             "uma landing page feita para o anúncio — que eu também crio."),
+            ("Em quanto tempo os anúncios trazem contato?",
+             "Os primeiros contatos podem vir logo que a campanha entra no ar, mas as primeiras semanas são de "
+             "ajuste. O que dá para garantir desde o começo é a medição: você vê quantos contatos vieram e quanto "
+             "custou cada um."),
             ("Quanto custa a gestão de tráfego pago?",
-             "São dois valores separados: a verba do anúncio, paga direto ao Google ou ao Meta no seu cartão, e a "
-             "gestão, que é o trabalho de montar e acompanhar as campanhas. O valor da gestão depende de quantos "
-             "canais e serviços entram no projeto. O orçamento é grátis e sai em até 24 horas pelo WhatsApp."),
-            ("Quanto eu preciso investir em anúncio para começar?",
-             "Dá para começar pequeno e aumentar conforme as conversas chegam. A verba ideal depende da sua cidade, "
-             "da concorrência no seu ramo e de quanto vale um cliente para você — é isso que eu olho antes de "
-             "sugerir um valor."),
-            ("Google Ads ou Meta Ads: qual é melhor para mim?",
-             "Google Ads aparece para quem já está procurando o serviço, e costuma converter mais para negócio "
-             "local. Meta Ads alcança quem ainda não está procurando, e é bom para gerar demanda e divulgar oferta. "
-             "Muitas empresas usam os dois, cada um com o seu papel."),
-            ("Vocês garantem resultado?",
-             "Ninguém sério garante número de clientes, porque o resultado depende também da oferta, do preço e do "
-             "atendimento. O que eu garanto é o trabalho: campanha bem montada, verba cortada onde não dá retorno "
-             "e relatório claro do que aconteceu."),
-            ("Vocês cuidam do meu Instagram também?",
-             "Não. A gestão é dos anúncios. Postagens do dia a dia, stories e gestão de redes sociais não fazem "
-             "parte do serviço."),
-            ("Tráfego pago substitui aparecer no Google de graça?",
-             "Não, eles se completam. O anúncio traz cliente enquanto você paga; o Perfil da Empresa e o site bem "
-             "feitos continuam trazendo cliente de graça depois. O ideal é começar pelo anúncio e construir a "
-             "parte orgânica ao mesmo tempo."),
+             "Depende de quantos serviços e campanhas entram e do que precisa ser montado, como landing page e "
+             "medição. O orçamento é individual, grátis e sai em até 24 horas pelo WhatsApp."),
+            ("Vocês atendem empresas de outras cidades?",
+             "Sim. A gestão de Google Ads é feita online para empresas de todo o Brasil. Em Goiânia também dá para "
+             "conversar pessoalmente."),
+            ("Existe fidelidade ou contrato longo?",
+             "Não existe fidelidade. Para cancelar, basta avisar com 30 dias de antecedência. As demais condições "
+             "vão por escrito junto com o orçamento. A conta do Google Ads fica no nome da sua empresa."),
         ],
         "relacionados": [
-            ("/trafego-pago-para-dentistas/", "Tráfego pago para dentistas", "Google Ads e Meta Ads dentro das regras do CFO."),
-            ("/trafego-pago-para-advogados/", "Tráfego pago para advogados", "Google Ads dentro do Provimento 205/2021 da OAB."),
-            ("/trafego-pago-para-energia-solar/", "Tráfego pago para energia solar", "Pedidos de orçamento sem clique de curioso."),
-            ("/trafego-pago-para-imobiliarias/", "Tráfego pago para imobiliárias", "Leads próprios sem depender de portal."),
-            ("/blog/quanto-investir-em-trafego-pago/", "Quanto investir em tráfego pago", "Como calcular a verba a partir do valor do seu cliente."),
-            ("/blog/trafego-pago-para-clinicas/", "Tráfego pago para clínicas", "Google Ads e Meta Ads dentro das regras do CFM e do CFO."),
-            ("/criacao-de-landing-page/", "Criação de landing page", "A página que transforma o clique do anúncio em conversa."),
-            ("/google-perfil-empresa/", "Google Perfil da Empresa", "A parte que traz cliente de graça, sem pagar por clique."),
-            ("/criacao-de-sites-goiania/", "Criação de sites em Goiânia", "O site que sustenta o anúncio e aparece no Google."),
+            ("/criacao-de-landing-page/", "Landing page para anúncios",
+             "A página que transforma o clique do anúncio em conversa."),
+            ("/blog/quanto-investir-em-trafego-pago/", "Quanto investir em tráfego pago?",
+             "Como calcular a verba a partir do valor do seu cliente."),
+            ("/blog/seo-ou-trafego-pago-empresa-local/", "SEO ou tráfego pago?",
+             "O que faz mais sentido para a empresa local em cada momento."),
         ],
-        "cta_final": ("Me conte o que você vende. Eu te digo por onde começar a anunciar.",
-                      "Sem compromisso: se você já anuncia, eu olho as suas campanhas; se ainda não, eu te digo qual canal faz mais sentido."),
+        "cta_final": ("Me conte o que você vende. Eu te digo se o Google Ads faz sentido para você.",
+                      "Sem compromisso: se você já anuncia, eu olho a conta; se não, te mostro por onde começar sem "
+                      "queimar verba."),
     },
 
     # =====================================================================
@@ -561,7 +596,7 @@ PAGINAS = [
              "receber anúncio."),
         ],
         "relacionados": [
-            ("/gestao-de-trafego-pago-goiania/", "Gestão de tráfego pago", "Google Ads e Meta Ads para levar comprador até a sua loja."),
+            ("/gestao-de-trafego-pago/", "Gestão de tráfego pago", "Google Ads e Meta Ads para levar comprador até a sua loja."),
             ("/criacao-de-sites-goiania/", "Criação de sites em Goiânia", "Quando o que você precisa é de site institucional, não de loja."),
             ("/blog/quanto-custa-um-site/", "Quanto custa um site", "As faixas de preço do mercado, incluindo loja virtual."),
         ],

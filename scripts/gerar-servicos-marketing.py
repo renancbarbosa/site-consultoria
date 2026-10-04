@@ -3,7 +3,7 @@
 Gera as páginas de serviço da linha "Sites e Anúncios" (28/09/2026):
 
   /criacao-de-landing-page/
-  /gestao-de-trafego-pago-goiania/
+  /gestao-de-trafego-pago/
   /criacao-de-loja-virtual-goiania/
 
 Conteúdo: scripts/conteudo/servicos_marketing.py (escrito à mão).

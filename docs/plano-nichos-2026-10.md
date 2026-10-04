@@ -12,7 +12,7 @@
 | 0 | Diagnóstico e mapa (só leitura) | **concluída** (plano + linha de base em `bbc8f4f`) |
 | 1 | Limpeza de foco (agentes de IA, IPTV/apostas 410, home/menu/rodapé/ficha/llms nos 4 serviços) | **publicada** 04/10/2026 (`90d3bc3`; 410 e 301 conferidos no ar; IndexNow 162 + 32 URLs aceito) |
 | 2 | Landing page para anúncios (urgente) + modelo demonstrativo | **publicada** 04/10/2026 (`5f0e869`; página, 301 e modelo conferidos no ar; IndexNow 163 URLs aceito) |
-| 3 | Tráfego pago empresarial (reorganizar as 7 páginas) | **em andamento** |
+| 3 | Tráfego pago empresarial (reorganizar as 7 páginas) | **aguardando "pode publicar"** (prévia local, 04/10/2026) |
 | 4 | Energia solar (marketing completo) | pendente |
 | 5 | SEO para YouTube | pendente |
 | 6 | Limpeza empresarial | pendente |
@@ -58,6 +58,19 @@ arquivo `_redirects` da raiz. Não usar meta refresh.
 - Menu, rodapé, home e llms.txt apontam para o endereço novo (`PROVISORIO["landing"]`).
 - Prazo (decisão do Renan): "primeira versão em até 5 dias úteis depois de receber as informações da empresa (textos, fotos e logo)". Modelo usa o WhatsApp do Renan (aprovado).
 - ATENÇÃO ao regerar: `gerar-servicos-marketing.py` reescreve as 11 páginas; restaurar as outras do git apaga mudanças locais ainda não commitadas nelas (aconteceu com o link da landing em /gestao-de-trafego-pago-goiania/). Rodar `foco-etapa1-2026-10-04.py` e conferir links depois.
+
+## Etapa 3 — o que foi feito (prévia local, 04/10/2026)
+- Decisão do Renan: página **nacional** `/gestao-de-trafego-pago/` ("Gestão de Tráfego Pago para
+  Empresas (Google Ads)"), com 301 de `/gestao-de-trafego-pago-goiania/` (0 impressão em 28 dias).
+- 4 páginas de nicho (advogados, dentistas, energia solar, imobiliárias): texto próprio por nicho em
+  `TRAFEGO_EXTRA`/`_EXTRA2` (`scripts/conteudo/servicos_nichos.py`), Google Ads primeiro e Meta como
+  complemento, fonte oficial de cada uma (OAB Provimento 205/2021, CFO-196/2019, COFECI 458/1995,
+  Lei 14.300/2022 + CDC art. 37) e link para a página de SEO do nicho. Semelhança entre elas:
+  de 51–56% para 34–39%.
+- Imobiliárias: saiu a menção a "políticas de habitação do Google e do Meta" (não confirmada para o
+  Brasil); entrou a regra verificada do COFECI (CRECI no anúncio).
+- `/blog/seo-ou-trafego-pago-empresa-local/`: corrigida a frase "não vendo gestão de tráfego pago"
+  (contradizia o serviço novo) e incluído link para a página principal.
 
 ## Decisões anteriores (04/10/2026)
 - Marca oficial "RCB SEO"; dados só em `data/marca.json`.

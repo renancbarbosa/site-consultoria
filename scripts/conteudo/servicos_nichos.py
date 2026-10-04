@@ -67,7 +67,7 @@ def _site(slug, nicho, nicho_pl, h1, desc, sub, dor_titulo, dor_ps, dor_card, en
 
 def _trafego(slug, nicho, h1, title, desc, sub, dor_titulo, dor_ps, dor_card, regras_titulo, regras_ps, entra, orc,
              faq, rel, msg, cta_final, painel):
-    return {
+    d = {
         "slug": slug,
         "title": title,
         "desc": desc,
@@ -114,10 +114,333 @@ def _trafego(slug, nicho, h1, title, desc, sub, dor_titulo, dor_ps, dor_card, re
         "relacionados": rel,
         "cta_final": cta_final,
     }
+    return _aplica_extra(d)
+
+
+def _aplica_extra(d):
+    """Etapa 3 (04/10/2026): troca os blocos repetidos pelo texto proprio do nicho (TRAFEGO_EXTRA)."""
+    x = TRAFEGO_EXTRA.get(d["slug"])
+    if not x:
+        return d
+    for k in ("title", "desc", "eyebrow", "pills", "faq_titulo", "publico", "relacionados", "cta_hero", "painel_h2"):
+        if k in x:
+            d[k] = x[k]
+    d["nacional"] = True
+    d["data"] = "2026-10-04"
+    novas = []
+    for tipo, s in d["secoes"]:
+        s = dict(s)
+        if tipo == "split":
+            s["card_titulo"] = x.get("card_titulo", s["card_titulo"])
+            s["tag"] = x.get("split_tag", s["tag"])
+        elif tipo == "texto" and s.get("tag") == "Regras e cuidados":
+            s["ps"] = x.get("regras_ps", s["ps"])
+            s["titulo"] = x.get("regras_titulo", s["titulo"])
+            s["tag"] = x.get("regras_tag", s["tag"])
+        elif tipo == "cards":
+            s["titulo"] = x.get("entra_titulo", s["titulo"])
+            s["tag"] = x.get("entra_tag", s["tag"])
+        elif tipo == "faixas" and "quanto_ps" in x:
+            tipo, s = "texto", {"tag": "Quanto investir", "titulo": x["quanto_titulo"], "ps": x["quanto_ps"]}
+        elif tipo == "orcamento":
+            s["titulo"] = x.get("orc_titulo", s["titulo"])
+            s["desc"] = x.get("orc_desc", s["desc"])
+            s["itens"] = x.get("orc", s["itens"])
+        elif tipo == "passos" and "passos" in x:
+            s = {"titulo": x["passos_titulo"], "itens": x["passos"]}
+        novas.append((tipo, s))
+    d["secoes"] = novas
+    return d
 
 
 def _o(nome, para, itens, msg, botao):
     return (nome, para, itens, msg, botao)
+
+
+# ---------------------------------------------------------------------------
+# Etapa 3 do plano de nichos (04/10/2026): texto PROPRIO de cada nicho no lugar
+# dos blocos que eram iguais nas 4 paginas (semelhanca medida: 51-56%, meta < 40%).
+# Google Ads em primeiro lugar; Meta Ads so como complemento. Fontes oficiais
+# conferidas em 04/10/2026. _trafego() usa estas chaves quando existem.
+# ---------------------------------------------------------------------------
+_OAB = "https://www.oab.org.br/leisnormas/legislacao/provimentos/205-2021"
+_CFO = "https://website.cfo.org.br/resolucao-cfo-196-2019/"
+_COFECI = "https://intranet.cofeci.gov.br/arquivos/legislacao/resolucao_0458_95_nova.pdf"
+_L14300 = "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14300.htm"
+_CDC = "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+
+
+def _a(url, txt):
+    return '<a href="%s" target="_blank" rel="noopener noreferrer">%s</a>' % (url, txt)
+
+
+TRAFEGO_EXTRA = {
+    "trafego-pago-para-dentistas": {
+        "title": "Tráfego Pago para Dentistas: Google Ads Dentro do CFO | RCB SEO",
+        "desc": ("Tráfego pago para dentistas: Google Ads por tratamento, dentro das regras do CFO, levando o "
+                 "paciente para o WhatsApp do consultório. Orçamento grátis em 24h."),
+        "publico": "Dentistas, consultórios e clínicas odontológicas",
+        "eyebrow": "Google Ads para consultórios odontológicos",
+        "pills": ["Orçamento em até 24h", "Campanha por tratamento", "Dentro das regras do CFO"],
+        "card_titulo": "Sinais de que a verba do consultório está indo embora",
+        "regras_ps": [
+            "A " + _a(_CFO, "Resolução CFO-196/2019") + " liberou, com regras, a divulgação de selfies e de imagens "
+            "de diagnóstico e de conclusão do tratamento — sempre com autorização escrita do paciente e com o nome "
+            "e o número de inscrição do dentista na imagem. A mesma resolução mantém proibidas expressões de "
+            "sensacionalismo, autopromoção, mercantilização da odontologia e promessa de resultado.",
+            "Na prática, isso muda o texto do anúncio: sai \"sorriso perfeito garantido\" e \"avaliação grátis\" como "
+            "isca; entra a informação do tratamento, a região de atendimento e o convite para conversar. Imagem de "
+            "antes e depois só do próprio profissional, com o termo assinado; clínica como pessoa jurídica não pode "
+            "divulgar esse tipo de imagem, segundo o próprio CFO.",
+            "Isso não enfraquece o anúncio. Quem pesquisa implante ou alinhador compara com calma, e confia mais em "
+            "quem explica do que em quem promete.",
+        ],
+        "quanto_titulo": "Quanto um consultório precisa investir em Google Ads?",
+        "quanto_ps": [
+            "A conta começa pelo tratamento, não pelo anúncio. Um implante ou um tratamento ortodôntico vale muito "
+            "mais para o consultório do que uma limpeza, então aguenta um clique mais caro e merece campanha "
+            "própria. Por isso a verba é dividida por tratamento: você enxerga quanto custou cada conversa de "
+            "implante e cada conversa de aparelho.",
+            "São dois valores separados: a verba, que você paga direto ao Google no seu cartão, e a gestão, que é o "
+            "trabalho de montar, ajustar e medir. Dá para começar com um ou dois tratamentos e ampliar quando a "
+            "agenda responder. O orçamento da gestão é grátis e sai em até 24 horas.",
+        ],
+        "orc_titulo": "Por qual tratamento o seu consultório quer começar?",
+        "orc_desc": "Escolha o ponto de partida. Em até 24 horas você recebe o valor da gestão e uma sugestão de verba por tratamento.",
+        "passos_titulo": "Como o anúncio do seu consultório sai do papel",
+        "passos": [
+            ("Escolha dos tratamentos", "Você me diz quais tratamentos quer encher na agenda e de onde vêm os seus pacientes."),
+            ("Revisão das regras do CFO", "Texto e imagens conferidos antes de ir ao ar: sem promessa, sem preço como isca."),
+            ("Página do tratamento", "Cada campanha leva para a página daquele tratamento, com o WhatsApp da recepção."),
+            ("Medição por tratamento", "Relatório de quantas conversas cada tratamento trouxe e quanto custou cada uma."),
+        ],
+        "faq_titulo": "Perguntas frequentes sobre Google Ads para dentistas",
+        "relacionados": [
+            ("/seo-para-dentistas/", "SEO para dentistas", "Aparecer no Google e no Maps sem pagar por clique."),
+            ("/gestao-de-trafego-pago/", "Gestão de tráfego pago para empresas", "Como funciona a gestão de Google Ads da RCB SEO."),
+            ("/criacao-de-site-para-dentista/", "Criação de site para dentista", "O site com página por tratamento."),
+        ],
+    },
+    "trafego-pago-para-advogados": {
+        "desc": ("Tráfego pago para advogados: Google Ads por área de atuação, dentro do Provimento 205/2021 da OAB, "
+                 "com informação e sem captação. Orçamento grátis em 24h."),
+        "publico": "Advogados e escritórios de advocacia",
+        "eyebrow": "Google Ads para escritórios de advocacia",
+        "pills": ["Orçamento em até 24h", "Campanha por área do Direito", "Dentro do Provimento 205/2021"],
+        "card_titulo": "Sinais de que o anúncio do escritório está mal montado",
+        "regras_ps": [
+            "O " + _a(_OAB, "Provimento 205/2021 do Conselho Federal da OAB") + " admite anúncios, pagos ou não, na "
+            "publicidade da advocacia (art. 4º), desde que não haja mercantilização, captação de clientela ou "
+            "emprego excessivo de recursos financeiros. O mesmo provimento proíbe a promessa de resultado e o uso de "
+            "casos concretos para oferecer serviço (art. 6º).",
+            "No Google Ads, isso significa anúncio informativo: a área do Direito, a região, o formato de "
+            "atendimento e um convite para tirar dúvidas. Nada de \"ganhe sua causa\", \"indenização garantida\" ou "
+            "\"o melhor advogado da cidade\". A página que recebe o clique segue a mesma linha: explica o tema e "
+            "identifica o profissional com o número da OAB.",
+            "Quem monta a campanha conhece essas regras: o Renan é bacharel em Direito, o que ajuda a separar o que "
+            "é informação do que pode ser lido como captação. A conferência final do texto continua sendo do "
+            "advogado responsável.",
+        ],
+        "quanto_titulo": "Quanto um escritório precisa investir em Google Ads?",
+        "quanto_ps": [
+            "Cada área do Direito tem um custo de clique diferente, e um cliente de direito empresarial costuma "
+            "valer mais que uma consulta avulsa. Por isso a verba é separada por área de atuação: você vê quanto "
+            "custou cada contato de previdenciário, trabalhista ou família, e decide onde colocar mais.",
+            "A verba é paga direto ao Google, no cartão do escritório; a gestão é o trabalho de montar, revisar o "
+            "texto dentro das regras da OAB e medir. Dá para começar com uma área e crescer conforme os contatos "
+            "chegam. O orçamento da gestão é grátis e sai em até 24 horas.",
+        ],
+        "orc_titulo": "Por qual área do escritório faz sentido começar a anunciar?",
+        "orc_desc": "Escolha o ponto de partida. Em até 24 horas você recebe o valor da gestão e uma sugestão de verba por área.",
+        "passos_titulo": "Como o anúncio do escritório é montado dentro das regras",
+        "passos": [
+            ("Áreas e região", "Você me conta as áreas que quer divulgar e onde o escritório atende."),
+            ("Texto informativo", "Anúncio e página escritos para informar, sem promessa de resultado nem caso concreto."),
+            ("Revisão do advogado", "Você confere e aprova cada texto antes de a campanha entrar no ar."),
+            ("Contatos medidos", "Relatório de quantos contatos cada área trouxe, para ajustar a verba."),
+        ],
+        "faq_titulo": "Perguntas frequentes sobre Google Ads para advogados",
+        "relacionados": [
+            ("/marketing-para-advogados/", "Marketing para advogados", "O caminho completo dentro das normas da OAB."),
+            ("/gestao-de-trafego-pago/", "Gestão de tráfego pago para empresas", "Como funciona a gestão de Google Ads da RCB SEO."),
+            ("/criacao-de-site-para-advogado/", "Criação de site para advogado", "O site por área de atuação."),
+        ],
+    },
+    "trafego-pago-para-energia-solar": {
+        "title": "Tráfego Pago para Energia Solar: Google Ads | RCB SEO",
+        "desc": ("Tráfego pago para empresas de energia solar: Google Ads para quem pesquisa orçamento na sua região, "
+                 "com landing page e medição. Orçamento grátis em 24h."),
+        "publico": "Empresas integradoras de energia solar",
+        "eyebrow": "Google Ads para integradores de energia solar",
+        "pills": ["Orçamento em até 24h", "Anúncio por cidade atendida", "Landing page e medição"],
+        "card_titulo": "Sinais de que o integrador está pagando clique de curioso",
+        "regras_titulo": "Como anunciar energia solar sem prometer o que não pode cumprir?",
+        "regras_ps": [
+            "A geração de energia em casa e na empresa tem marco legal próprio: a " + _a(_L14300, "Lei 14.300/2022") +
+            ", que criou as regras da micro e minigeração distribuída e do sistema de compensação de energia. "
+            "Ela é o pano de fundo das dúvidas de quem pesquisa: compensação, conexão com a distribuidora, prazos.",
+            "Por isso o anúncio precisa de cuidado com promessa. Frases como \"conta de luz zerada\" ou um percentual "
+            "fixo de economia para todo mundo podem virar publicidade enganosa, que o " + _a(_CDC, "Código de Defesa "
+            "do Consumidor") + " proíbe no art. 37. A economia real depende do consumo, do telhado e da região de "
+            "cada cliente.",
+            "O anúncio que funciona fala o que o integrador faz de verdade — análise da conta, visita, projeto, "
+            "instalação e acompanhamento da conexão — e leva a pessoa para pedir a simulação pelo WhatsApp.",
+        ],
+        "quanto_titulo": "Quanto um integrador solar precisa investir em Google Ads?",
+        "quanto_ps": [
+            "Energia solar é um anúncio disputado e com venda de valor alto, então o que importa é quanto custa "
+            "cada pedido de orçamento qualificado — não o clique. A verba é dividida por cidade atendida e por tipo "
+            "de cliente (residencial, comercial, rural), porque cada um pesquisa de um jeito e fecha num prazo "
+            "diferente.",
+            "A verba vai direto para o Google, no seu cartão; a gestão é o trabalho de montar, cortar as buscas que "
+            "não viram orçamento e medir. Em geral vale começar pelas cidades onde a equipe já instala e ampliar "
+            "depois. O orçamento da gestão é grátis e sai em até 24 horas.",
+        ],
+        "orc_titulo": "Por onde a sua empresa de energia solar quer começar?",
+        "orc_desc": "Escolha o ponto de partida. Em até 24 horas você recebe o valor da gestão e uma sugestão de verba por cidade.",
+        "passos_titulo": "Como o anúncio do integrador vira pedido de simulação",
+        "passos": [
+            ("Cidades e tipo de cliente", "Você me diz onde instala e se o foco é casa, comércio ou propriedade rural."),
+            ("Buscas certas", "Campanha para quem pesquisa instalação e orçamento; fora quem procura curso, vaga ou peça."),
+            ("Página da simulação", "O clique cai numa landing page que pede a conta de luz e abre o WhatsApp."),
+            ("Pedidos medidos", "Relatório de quantas simulações vieram por cidade e quanto custou cada uma."),
+        ],
+        "faq_titulo": "Perguntas frequentes sobre Google Ads para energia solar",
+        "relacionados": [
+            ("/blog/como-conseguir-clientes-energia-solar/", "Como conseguir clientes de energia solar", "Maps, site e anúncios juntos."),
+            ("/gestao-de-trafego-pago/", "Gestão de tráfego pago para empresas", "Como funciona a gestão de Google Ads da RCB SEO."),
+            ("/criacao-de-landing-page/", "Landing page para anúncios", "A página que recebe o clique e pede a simulação."),
+        ],
+    },
+    "trafego-pago-para-imobiliarias": {
+        "desc": ("Tráfego pago para imobiliárias: Google Ads por bairro e tipo de imóvel, dentro das regras do COFECI, "
+                 "para gerar leads próprios. Orçamento grátis em 24h."),
+        "publico": "Imobiliárias e corretores de imóveis",
+        "eyebrow": "Google Ads para imobiliárias e corretores",
+        "pills": ["Orçamento em até 24h", "Anúncio por bairro e imóvel", "Com o CRECI no anúncio"],
+        "card_titulo": "Sinais de que a imobiliária está pagando lead que não vira visita",
+        "regras_titulo": "Quais regras do COFECI valem para o anúncio de imóveis?",
+        "regras_ps": [
+            "A " + _a(_COFECI, "Resolução COFECI nº 458/1995") + " determina que os anúncios tragam o número de "
+            "inscrição no CRECI — com a letra \"J\" quando é imobiliária — e que só anuncie publicamente quem tem "
+            "contrato escrito de intermediação do imóvel. Em loteamentos e condomínios, o número do registro ou da "
+            "incorporação também vai em destaque.",
+            "No Google Ads e na página que recebe o clique, isso vira rotina de montagem: CRECI visível, imóvel "
+            "anunciado só com autorização e informação verdadeira de preço, metragem e localização — o que também "
+            "protege a imobiliária perante o Código de Defesa do Consumidor.",
+            "Respeitar essas regras não atrasa a campanha; evita que um anúncio bom seja tirado do ar ou vire "
+            "problema com o conselho.",
+        ],
+        "quanto_titulo": "Quanto uma imobiliária precisa investir em Google Ads?",
+        "quanto_ps": [
+            "Venda, locação e captação de imóveis são três campanhas diferentes, com custo de clique e valor de "
+            "lead diferentes. Uma venda de imóvel de alto padrão justifica um clique caro; uma locação pede verba "
+            "mais enxuta e volume. Por isso a verba é separada por objetivo e por região.",
+            "A verba é paga direto ao Google, no cartão da imobiliária, sem dividir o lead com portal; a gestão é o "
+            "trabalho de montar, ajustar e medir. Dá para começar pelos bairros onde a imobiliária tem mais "
+            "carteira. O orçamento da gestão é grátis e sai em até 24 horas.",
+        ],
+        "orc_titulo": "Qual objetivo a sua imobiliária quer atacar primeiro?",
+        "orc_desc": "Escolha o ponto de partida. Em até 24 horas você recebe o valor da gestão e uma sugestão de verba por objetivo.",
+        "passos_titulo": "Como a imobiliária passa a gerar lead próprio",
+        "passos": [
+            ("Objetivo e bairros", "Venda, locação ou captação de imóveis, e as regiões onde a imobiliária atua."),
+            ("Anúncio dentro das regras", "CRECI no anúncio e só imóveis com autorização de intermediação."),
+            ("Página do imóvel ou da região", "O clique cai na página certa, com WhatsApp do corretor de plantão."),
+            ("Leads medidos", "Relatório de quantos contatos vieram por objetivo e por bairro."),
+        ],
+        "faq_titulo": "Perguntas frequentes sobre Google Ads para imobiliárias",
+        "relacionados": [
+            ("/seo-para-imobiliarias/", "SEO para imobiliárias", "Leads próprios pelo Google sem pagar por clique."),
+            ("/gestao-de-trafego-pago/", "Gestão de tráfego pago para empresas", "Como funciona a gestão de Google Ads da RCB SEO."),
+            ("/blog/como-gerar-leads-imobiliaria-sem-portais/", "Leads sem depender de portal", "O caminho completo para a imobiliária."),
+        ],
+    },
+}
+
+
+# Etapa 3, ajuste fino: rotulos e cartoes de orcamento proprios de cada nicho
+# (com eles a semelhanca entre as 4 paginas ficava entre 38% e 42%).
+_EXTRA2 = {
+    "trafego-pago-para-dentistas": {
+        "cta_hero": "Quero pacientes pelo Google Ads",
+        "painel_h2": "O que entra nos anúncios do consultório",
+        "split_tag": "Agenda e anúncio",
+        "regras_tag": "CFO e publicidade",
+        "entra_tag": "Na prática",
+        "entra_titulo": "Como os anúncios do consultório são montados?",
+        "orc": [
+            ("Um tratamento no Google", "Para começar pelo tratamento que mais pesa na agenda.",
+             ["Campanha só daquele tratamento", "Página do tratamento com WhatsApp", "Conversas medidas"],
+             "Olá, Renan! Sou dentista e quero anunciar um tratamento no Google.", "Começar por um tratamento"),
+            ("Vários tratamentos separados", "Para o consultório que oferece implante, ortodontia e estética.",
+             ["Uma campanha por tratamento", "Verba dividida pelo que dá retorno", "Relatório por tratamento"],
+             "Olá, Renan! Sou dentista e quero anunciar vários tratamentos.", "Orçamento por tratamento"),
+            ("Revisar o anúncio que já existe", "Para quem já paga o Google e só recebe avaliação que não fecha.",
+             ["Leitura da conta atual", "Ajuste de texto às regras do CFO", "Corte de buscas de curioso"],
+             "Olá, Renan! Sou dentista, já anuncio e quero revisar a campanha.", "Revisar minha campanha"),
+        ],
+    },
+    "trafego-pago-para-advogados": {
+        "cta_hero": "Quero anunciar dentro da OAB",
+        "painel_h2": "O que entra nos anúncios do escritório",
+        "split_tag": "Captação x informação",
+        "regras_tag": "Provimento 205/2021",
+        "entra_tag": "Montagem",
+        "entra_titulo": "Como a campanha do escritório é organizada?",
+        "orc": [
+            ("Uma área do Direito", "Para testar o Google Ads com a área que mais traz cliente.",
+             ["Campanha informativa da área", "Página explicativa com número da OAB", "Contatos medidos"],
+             "Olá, Renan! Sou advogado e quero anunciar uma área de atuação.", "Começar por uma área"),
+            ("Escritório com várias áreas", "Para separar trabalhista, família, previdenciário e as demais.",
+             ["Campanha por área", "Textos revisados dentro do provimento", "Verba por área"],
+             "Olá, Renan! Tenho um escritório com várias áreas e quero anunciar.", "Orçamento por área"),
+            ("Conferir anúncio atual", "Para quem já anuncia e tem dúvida se está dentro das regras.",
+             ["Leitura dos anúncios ativos", "Ajuste ao Provimento 205/2021", "Plano de melhoria"],
+             "Olá, Renan! Sou advogado e quero conferir meus anúncios atuais.", "Conferir meus anúncios"),
+        ],
+    },
+    "trafego-pago-para-energia-solar": {
+        "cta_hero": "Quero pedidos de simulação",
+        "painel_h2": "O que entra nos anúncios do integrador",
+        "split_tag": "Concorrência",
+        "regras_tag": "Lei e promessa",
+        "entra_tag": "Estrutura",
+        "entra_titulo": "Como a campanha do integrador solar é estruturada?",
+        "orc": [
+            ("Cidades onde já instalo", "Para começar onde a equipe chega sem custo extra de deslocamento.",
+             ["Campanha por cidade", "Landing page de simulação", "Pedidos medidos por cidade"],
+             "Olá, Renan! Tenho empresa de energia solar e quero anunciar nas cidades onde instalo.", "Começar pelas minhas cidades"),
+            ("Residencial e comercial separados", "Para quem atende casa, comércio e propriedade rural.",
+             ["Campanha por tipo de cliente", "Texto para cada perfil", "Verba onde fecha mais"],
+             "Olá, Renan! Quero anunciar energia solar separando residencial e comercial.", "Separar por tipo de cliente"),
+            ("Melhorar o anúncio atual", "Para quem já anuncia e recebe pedido de curioso.",
+             ["Leitura da conta", "Negativas para curso, vaga e peças", "Página de simulação revisada"],
+             "Olá, Renan! Já anuncio energia solar e recebo muito curioso. Pode olhar?", "Melhorar meu anúncio"),
+        ],
+    },
+    "trafego-pago-para-imobiliarias": {
+        "cta_hero": "Quero lead próprio pelo Google",
+        "painel_h2": "O que entra nos anúncios da imobiliária",
+        "split_tag": "Portal x lead próprio",
+        "regras_tag": "COFECI e anúncio",
+        "entra_tag": "Funcionamento",
+        "entra_titulo": "Como a imobiliária anuncia sem depender de portal?",
+        "orc": [
+            ("Venda em bairros-chave", "Para os bairros onde a imobiliária tem mais carteira.",
+             ["Campanha por bairro", "Página da região com os imóveis", "Leads medidos por bairro"],
+             "Olá, Renan! Tenho imobiliária e quero anunciar venda por bairro.", "Anunciar venda por bairro"),
+            ("Locação com volume", "Para encher a agenda de visitas de aluguel.",
+             ["Campanha de locação", "Página com filtros simples", "Contato direto com o corretor"],
+             "Olá, Renan! Quero anunciar imóveis para locação no Google.", "Anunciar locação"),
+            ("Captação de proprietários", "Para aumentar a carteira com quem quer vender ou alugar.",
+             ["Campanha para proprietários", "Página de avaliação do imóvel", "Pedidos de captação medidos"],
+             "Olá, Renan! Quero captar imóveis de proprietários pelo Google.", "Captar proprietários"),
+        ],
+    },
+}
+for _slug, _x in _EXTRA2.items():
+    TRAFEGO_EXTRA[_slug].update(_x)
 
 
 PAGINAS = [
@@ -289,7 +612,7 @@ PAGINAS = [
          ("Vocês fazem anúncio para contabilidade?",
           "Sim. A RCB faz a gestão de Google Ads e Meta Ads, com foco em buscas como abertura de empresa e troca de contador.")],
         [("/seo-para-contadores/", "SEO para contadores", "Aparecer no Google e no Maps sem pagar por clique."),
-         ("/gestao-de-trafego-pago-goiania/", "Gestão de tráfego pago", "Google Ads e Meta Ads para captar empresas."),
+         ("/gestao-de-trafego-pago/", "Gestão de tráfego pago", "Google Ads e Meta Ads para captar empresas."),
          ("/criacao-de-sites-goiania/", "Criação de sites em Goiânia", "Como funciona a criação de sites da RCB.")],
         "Olá, Renan! Tenho escritório de contabilidade e quero um orçamento de site.",
         ("Me conte os serviços do seu escritório. Eu te digo como o site deve ser.",
@@ -415,7 +738,7 @@ PAGINAS = [
           "cobrar desde o começo é medição: quantas conversas e de qual tratamento.")],
         [("/criacao-de-site-para-dentista/", "Criação de site para dentista", "O site com página por tratamento."),
          ("/blog/trafego-pago-para-clinicas/", "Tráfego pago para clínicas", "As regras e os cuidados em detalhe."),
-         ("/gestao-de-trafego-pago-goiania/", "Gestão de tráfego pago", "Como funciona a gestão de anúncios da RCB.")],
+         ("/gestao-de-trafego-pago/", "Gestão de tráfego pago", "Como funciona a gestão de anúncios da RCB.")],
         "Olá, Renan! Sou dentista e quero um orçamento de tráfego pago.",
         ("Me conte os tratamentos que você quer encher na agenda.",
          "Sem compromisso: se você já anuncia, eu olho as campanhas; se não, te digo por onde começar."),
@@ -483,7 +806,7 @@ PAGINAS = [
           "previdenciário, família — costumam responder bem, mas a campanha separada por área mostra na prática.")],
         [("/criacao-de-site-para-advogado/", "Criação de site para advogado", "O site por área de atuação."),
          ("/marketing-para-advogados/", "Marketing para advogados", "O caminho completo dentro das normas da OAB."),
-         ("/gestao-de-trafego-pago-goiania/", "Gestão de tráfego pago", "Como funciona a gestão de anúncios da RCB.")],
+         ("/gestao-de-trafego-pago/", "Gestão de tráfego pago", "Como funciona a gestão de anúncios da RCB.")],
         "Olá, Renan! Sou advogado e quero um orçamento de tráfego pago.",
         ("Me conte as áreas do seu escritório. Eu te digo como anunciar dentro da OAB.",
          "Sem compromisso e com sigilo: se você já anuncia, eu olho as campanhas; se não, te digo por onde começar."),
@@ -548,7 +871,7 @@ PAGINAS = [
           "filtram o curioso antes da conversa.")],
         [("/blog/como-conseguir-clientes-energia-solar/", "Como conseguir clientes de energia solar", "Maps, site e anúncios juntos."),
          ("/blog/site-para-empresa-de-energia-solar/", "Site para empresa de energia solar", "O que o site precisa ter."),
-         ("/gestao-de-trafego-pago-goiania/", "Gestão de tráfego pago", "Como funciona a gestão de anúncios da RCB.")],
+         ("/gestao-de-trafego-pago/", "Gestão de tráfego pago", "Como funciona a gestão de anúncios da RCB.")],
         "Olá, Renan! Tenho empresa de energia solar e quero um orçamento de tráfego pago.",
         ("Me conte as cidades onde você instala. Eu te digo como encher a agenda de visitas.",
          "Sem compromisso: se você já anuncia, eu olho as campanhas; se não, te digo por onde começar."),
@@ -613,7 +936,7 @@ PAGINAS = [
           "sem esse cuidado costuma ser reprovada ou limitada.")],
         [("/blog/como-gerar-leads-imobiliaria-sem-portais/", "Leads sem depender de portal", "O caminho completo para a imobiliária."),
          ("/seo-para-imobiliarias/", "SEO para imobiliárias", "Aparecer no Google e no Maps sem pagar por clique."),
-         ("/gestao-de-trafego-pago-goiania/", "Gestão de tráfego pago", "Como funciona a gestão de anúncios da RCB.")],
+         ("/gestao-de-trafego-pago/", "Gestão de tráfego pago", "Como funciona a gestão de anúncios da RCB.")],
         "Olá, Renan! Tenho uma imobiliária e quero um orçamento de tráfego pago.",
         ("Me conte onde a sua imobiliária atua. Eu te digo como gerar lead próprio.",
          "Sem compromisso: se você já anuncia, eu olho as campanhas; se não, te digo por onde começar."),
