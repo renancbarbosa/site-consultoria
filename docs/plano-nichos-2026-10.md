@@ -11,8 +11,8 @@
 | — | Marca RCB SEO + exclusão das 168 cidades noindex | **publicada** 04/10/2026 (`f27d12c`, `5487081`; IndexNow 166 + 168 URLs aceito) |
 | 0 | Diagnóstico e mapa (só leitura) | **concluída** (plano + linha de base em `bbc8f4f`) |
 | 1 | Limpeza de foco (agentes de IA, IPTV/apostas 410, home/menu/rodapé/ficha/llms nos 4 serviços) | **publicada** 04/10/2026 (`90d3bc3`; 410 e 301 conferidos no ar; IndexNow 162 + 32 URLs aceito) |
-| 2 | Landing page para anúncios (urgente) + modelo demonstrativo | **aguardando "pode publicar"** (prévia local, 04/10/2026) |
-| 3 | Tráfego pago empresarial (reorganizar as 7 páginas) | pendente |
+| 2 | Landing page para anúncios (urgente) + modelo demonstrativo | **publicada** 04/10/2026 (`5f0e869`; página, 301 e modelo conferidos no ar; IndexNow 163 URLs aceito) |
+| 3 | Tráfego pago empresarial (reorganizar as 7 páginas) | **em andamento** |
 | 4 | Energia solar (marketing completo) | pendente |
 | 5 | SEO para YouTube | pendente |
 | 6 | Limpeza empresarial | pendente |
@@ -56,6 +56,8 @@ arquivo `_redirects` da raiz. Não usar meta refresh.
   botões de WhatsApp levam ao WhatsApp da RCB SEO, formulário só demonstrativo.
   Fora do `conferir-conversao.py` (lista FORA_DA_CONFERENCIA).
 - Menu, rodapé, home e llms.txt apontam para o endereço novo (`PROVISORIO["landing"]`).
+- Prazo (decisão do Renan): "primeira versão em até 5 dias úteis depois de receber as informações da empresa (textos, fotos e logo)". Modelo usa o WhatsApp do Renan (aprovado).
+- ATENÇÃO ao regerar: `gerar-servicos-marketing.py` reescreve as 11 páginas; restaurar as outras do git apaga mudanças locais ainda não commitadas nelas (aconteceu com o link da landing em /gestao-de-trafego-pago-goiania/). Rodar `foco-etapa1-2026-10-04.py` e conferir links depois.
 
 ## Decisões anteriores (04/10/2026)
 - Marca oficial "RCB SEO"; dados só em `data/marca.json`.
