@@ -99,16 +99,16 @@ observação. São o grupo A da triagem (maiores praças) mais `brusque` e
 `anapolis`, `aparecida-de-goiania`, `balneario-camboriu`, `belo-horizonte`, `brasilia`, `brusque`, `campo-grande`, `contagem`, `cuiaba`, `curitiba`, `florianopolis`, `guarulhos`, `joinville`, `londrina`, `luziania`, `maringa`, `mogi-das-cruzes`, `niteroi`, `petrolina`, `porto-alegre`, `presidente-prudente`, `ribeirao-preto`, `rio-verde`, `sao-bernardo-do-campo`, `sao-paulo`, `sorocaba`, `uberlandia`, `vitoria`
 <!-- RCB:CIDADES-CONGELADAS:FIM -->
 
-## As 168 com `noindex`
+## As 168 com `noindex` — EXCLUÍDAS em 04/10/2026 (ver adendo no fim)
 
 Uma delas merece nota: **`duque-de-caxias` tinha 5 impressões** e mesmo assim
 desceu. Motivo: ranqueava para `consultoria seo rio de janeiro` (pos. 87) e
 `consultor seo rj` (pos. 83) — as mesmas consultas de `/rio-de-janeiro/`, e atrás
 dela. Duas páginas nossas disputando a mesma SERP. A decisão foi concentrar.
 
-<!-- RCB:CIDADES-NOINDEX:INICIO -->
+<!-- RCB:CIDADES-EXCLUIDAS:INICIO -->
 `alvorada`, `americana`, `ananindeua`, `angra-dos-reis`, `aracaju`, `aracatuba`, `araguaina`, `arapiraca`, `arapongas`, `araraquara`, `araras`, `araucaria`, `atibaia`, `barra-mansa`, `barretos`, `barueri`, `bauru`, `belem`, `belford-roxo`, `bento-goncalves`, `betim`, `birigui`, `blumenau`, `boa-vista`, `botucatu`, `braganca-paulista`, `cabo-frio`, `cachoeirinha`, `cachoeiro-de-itapemirim`, `camacari`, `camboriu`, `campina-grande`, `campos-dos-goytacazes`, `canoas`, `caraguatatuba`, `carapicuiba`, `cariacica`, `caruaru`, `cascavel`, `caucaia`, `caxias-do-sul`, `chapeco`, `colombo`, `cotia`, `criciuma`, `diadema`, `divinopolis`, `dourados`, `duque-de-caxias`, `embu-das-artes`, `erechim`, `fazenda-rio-grande`, `feira-de-santana`, `fortaleza`, `foz-do-iguacu`, `franca`, `governador-valadares`, `gravatai`, `guarapari`, `guarapuava`, `guaruja`, `hortolandia`, `imperatriz`, `indaiatuba`, `ipatinga`, `itaborai`, `itabuna`, `itajai`, `itapema`, `itapetininga`, `itapevi`, `itaquaquecetuba`, `itu`, `jaboatao-dos-guararapes`, `jacarei`, `jaragua-do-sul`, `joao-pessoa`, `juazeiro-do-norte`, `juiz-de-fora`, `jundiai`, `lages`, `lauro-de-freitas`, `limeira`, `linhares`, `macae`, `macapa`, `maceio`, `mage`, `manaus`, `maraba`, `marica`, `marilia`, `maua`, `mogi-guacu`, `montes-claros`, `mossoro`, `natal`, `nova-friburgo`, `nova-iguacu`, `nova-lima`, `novo-hamburgo`, `olinda`, `osasco`, `palhoca`, `parauapebas`, `parnamirim`, `passo-fundo`, `patos-de-minas`, `paulista`, `pelotas`, `petropolis`, `pindamonhangaba`, `pinhais`, `piracicaba`, `pocos-de-caldas`, `ponta-grossa`, `porto-seguro`, `porto-velho`, `pouso-alegre`, `praia-grande`, `recife`, `ribeirao-das-neves`, `rio-branco`, `rio-claro`, `rio-das-ostras`, `rio-grande`, `rondonopolis`, `salvador`, `santa-barbara-d-oeste`, `santa-cruz-do-sul`, `santa-luzia`, `santa-maria`, `santana-de-parnaiba`, `santarem`, `santo-andre`, `santos`, `sao-caetano-do-sul`, `sao-carlos`, `sao-goncalo`, `sao-joao-de-meriti`, `sao-jose`, `sao-jose-do-rio-preto`, `sao-jose-dos-campos`, `sao-jose-dos-pinhais`, `sao-leopoldo`, `sao-luis`, `sao-vicente`, `serra`, `sertaozinho`, `sete-lagoas`, `sinop`, `sorriso`, `sumare`, `suzano`, `taboao-da-serra`, `taubate`, `teresina`, `teresopolis`, `toledo`, `tubarao`, `uberaba`, `valinhos`, `varginha`, `varzea-grande`, `viamao`, `vila-velha`, `vitoria-da-conquista`, `volta-redonda`
-<!-- RCB:CIDADES-NOINDEX:FIM -->
+<!-- RCB:CIDADES-EXCLUIDAS:FIM -->
 
 ## Autoridade interna recalculada
 
@@ -135,11 +135,11 @@ repetiria o erro que esta rodada está corrigindo.
 
 `python scripts/testar-cidades.py` — falha (código 1) se:
 
-1. página da lista noindex estiver sem a meta robots;
+1. alguma das 168 excluídas voltar a existir (ou qualquer pasta fora das 31 indexáveis aparecer);
 2. página indexável estiver com noindex;
 3. página noindex aparecer no sitemap;
 4. página indexável faltar no sitemap;
-5. cidade nova aparecer sem autorização (total diferente de 199, ou slug indexável sem pasta);
+5. cidade nova aparecer sem autorização (total diferente das 31 indexáveis, ou slug indexável sem pasta);
 6. a colisão Palmas/TO x Palmas/PR voltar;
 7. as listas deste documento divergirem de `rcb_cidades.py`;
 8. o `robots.txt` passar a bloquear `/consultoria-seo/`.
@@ -172,3 +172,41 @@ Meados de **outubro/2026** (60 dias). Duas perguntas:
 
 **A prioridade número 1 continua sendo off-page.** Esta rodada não muda isso: o
 site teve 16 cliques em 90 dias, 7 deles na home. O funil está vazio na entrada.
+
+## Adendo de 04/10/2026 — as 168 páginas `noindex` foram EXCLUÍDAS
+
+**Decisão do Renan.** As 168 páginas de cidade que estavam com `noindex` desde
+12/08/2026 foram apagadas do site. As **31 indexáveis** (as 28 antes chamadas de
+congeladas + os 3 pilotos) **ficam como estão**, com `index, follow` e no sitemap.
+
+**Números (Search Console, 13/08 a 01/10/2026, conferidos em 04/10):**
+
+| Grupo | Cliques | Impressões | Páginas com impressão |
+|---|---:|---:|---:|
+| 168 com `noindex` | **0** | 66 | 45 |
+| 31 indexáveis | **0** | 59 | 17 |
+| Hub `/consultoria-seo/` | **0** | 60 | 1 |
+
+**Motivo:** zero clique em quase dois meses, e as 168 multiplicavam o trabalho de
+qualquer mudança no site (marca, preço, menu, rodapé — cada rodada precisava tratar
+mais 168 arquivos).
+
+**O que foi feito** (`scripts/excluir-cidades-noindex-2026-10-04.py`):
+- as 168 pastas saíram de `/consultoria-seo/` (a lista está no bloco
+  `RCB:CIDADES-EXCLUIDAS` acima, conferida contra `rcb_cidades.INDEXAVEIS` antes de apagar);
+- todo link interno para elas saiu: os itens do hub (estado ou região sem cidade
+  some) e a frase "Também atendo outras cidades de…" das páginas indexáveis;
+- `llms.txt`: o hub agora diz 31 cidades;
+- o sitemap já não tinha nenhuma delas (desde 12/08) e continua sem;
+- o gerador (`gerar-paginas-cidades.py`) só produz cidades de `INDEXAVEIS`, e o
+  `testar-cidades.py` falha se qualquer pasta fora dessa lista reaparecer.
+
+**As URLs passam a responder 404.** Não foi criado redirect: elas já estavam fora do
+índice por `noindex` e sem tráfego. O Google tira as que ainda conhece em algumas
+semanas.
+
+**Reversível:** as páginas continuam no histórico do git (commit anterior à exclusão)
+e o gerador sabe recriá-las se uma cidade voltar para `INDEXAVEIS`.
+
+A próxima revisão de meados de outubro/2026 continua valendo para as 31: as que
+seguirem em zero passam a ser candidatas à mesma exclusão.

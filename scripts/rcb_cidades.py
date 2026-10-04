@@ -11,9 +11,12 @@ Quem depende deste arquivo:
 NÃO duplicar estas listas em outro lugar. Se uma cidade mudar de estado, muda AQUI.
 
 Regra: quem está em INDEXAVEIS recebe `index, follow` e entra no sitemap.
-Todo o resto de /consultoria-seo/<slug>/ recebe `noindex` e fica FORA do sitemap
-— mas continua respondendo HTTP 200, sem bloqueio no robots.txt e sem redirect,
-para que o Google rastreie, encontre o noindex e retire a página do índice.
+
+ATUALIZAÇÃO 04/10/2026: as 168 cidades que estavam fora de INDEXAVEIS (em `noindex`
+desde 12/08) foram EXCLUÍDAS do site — 0 cliques de 13/08 a 01/10/2026. Hoje só
+existem as 31 de INDEXAVEIS. O gerador não cria nenhuma cidade fora desta lista e
+o testar-cidades.py falha se alguma reaparecer. A lista das excluídas fica no
+bloco RCB:CIDADES-EXCLUIDAS de docs/decisao-cidades-2026-08-12.md.
 
 Base da decisão: Search Console 12/05–09/08/2026 (páginas criadas em 15/07/2026,
 portanto 25 dias de exposição). 199 páginas, 33 com impressão, 0 cliques.

@@ -203,6 +203,10 @@ def carregar_cidades():
         antes = len(cidades)
         cidades = [c for c in cidades if c["slug"] in publicados]
         print(f"Expansão protegida: {antes - len(cidades)} cidades novas ficaram fora da geração.")
+    # Exclusao de 04/10/2026: so existem as cidades de rcb_cidades.INDEXAVEIS. As 168
+    # que estavam em noindex foram apagadas e NAO podem ser recriadas por aqui —
+    # nem com EXPANDIR_CIDADES. Cidade nova = decisao editorial + rcb_cidades.py.
+    cidades = [c for c in cidades if eh_indexavel(c["slug"])]
     return sorted(cidades, key=lambda c: -c["empresas_ativas"])
 
 
