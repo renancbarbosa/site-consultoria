@@ -102,9 +102,6 @@ def bloco_pacotes(negocio, data_page, onde="", fecho=FECHO_PADRAO):
             '\n              <li%s>%s</li>' % (' class="destaque-item"' if d else "", t)
             for t, d in p["itens"]
         )
-        # A garantia fecha os tres cartoes: e o argumento que derruba o medo de
-        # pagar, e antes dela so aparecia la embaixo, longe do preco.
-        itens += '\n              <li class="pacote-garantia">Garantia de 30 dias</li>'
         selo = '\n            <span class="pacote-selo">Mais escolhido</span>' if p["id"] == "crescimento" else ""
         destaque = " destaque" if p["id"] == "crescimento" else ""
         msg = ("Olá! Tenho %s%s e quero um orçamento do %s. Pode me explicar como funciona?"

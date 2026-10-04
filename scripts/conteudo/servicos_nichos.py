@@ -28,7 +28,7 @@ def _site(slug, nicho, nicho_pl, h1, desc, sub, dor_titulo, dor_ps, dor_card, en
         "sub": sub,
         "cta_hero": "Quero o orçamento do meu site",
         "msg": msg,
-        "pills": ["Orçamento em até 24h", "Feito para %s" % nicho_pl, "Garantia de 30 dias"],
+        "pills": ["Orçamento em até 24h", "Feito para %s" % nicho_pl, "Prazo por escrito"],
         "painel_h2": "O que vem no site para %s" % nicho,
         "painel": painel,
         "secoes": [

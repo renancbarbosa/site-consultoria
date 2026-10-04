@@ -129,7 +129,7 @@ HERO = u"""  <main id="main-content">
             <a class="btn btn-primary" href="%(wa)s" target="_blank" rel="noopener noreferrer" data-event="cta_click" data-location="hero" data-page="%(slug)s">Quero um site que traga clientes</a>
             <a class="btn btn-outline" href="#pacotes" data-event="cta_click" data-location="hero_precos" data-page="%(slug)s">Ver preços</a>
           </div>
-          <div class="pill-row"><span class="pill">Pronto em 7 dias úteis</span><span class="pill">Preço fechado na tela</span><span class="pill">Garantia de 30 dias</span></div>
+          <div class="pill-row"><span class="pill">Pronto em 7 dias úteis</span><span class="pill">Preço fechado na tela</span><span class="pill">Prazo por escrito</span></div>
         </div>
         <aside class="page-hero-panel">
           <h2>O que vem junto com o site</h2>

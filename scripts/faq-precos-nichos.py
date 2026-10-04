@@ -49,11 +49,6 @@ def perguntas(negocio, pronome):
             "fotos. Se você não tiver fotos boas, eu aviso antes e a gente resolve isso primeiro — "
             "foto ruim derruba o resultado.",
         ),
-        (
-            "Como funciona a garantia de 30 dias?",
-            "Se em 30 dias você não notar diferença na presença %s no Google, eu refaço tudo sem "
-            "custo adicional. Você me diz o que não mudou e eu volto ao trabalho." % negocio,
-        ),
     ]
 
 

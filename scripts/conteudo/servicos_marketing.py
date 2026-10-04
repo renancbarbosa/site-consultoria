@@ -34,7 +34,7 @@ PAGINAS = [
                 "e leva a pessoa direto para a conversa com você no WhatsApp."),
         "cta_hero": "Quero minha landing page",
         "msg": "Olá, Renan! Quero um orçamento de landing page.",
-        "pills": ["Orçamento em até 24h", "Feita para anúncio", "Garantia de 30 dias"],
+        "pills": ["Orçamento em até 24h", "Feita para anúncio", "Prazo por escrito"],
         "painel_h2": "O que vem na sua landing page",
         "painel": [
             "Uma oferta só, sem distração.",
@@ -363,7 +363,7 @@ PAGINAS = [
                 "pagamento e frete funcionando — e com as páginas de produto pensadas para aparecer no Google."),
         "cta_hero": "Quero minha loja virtual",
         "msg": "Olá, Renan! Quero um orçamento de loja virtual.",
-        "pills": ["Orçamento em até 24h", "Pagamento e frete prontos", "Garantia de 30 dias"],
+        "pills": ["Orçamento em até 24h", "Pagamento e frete prontos", "Prazo por escrito"],
         "painel_h2": "O que vem na sua loja virtual",
         "painel": [
             "Catálogo organizado por categoria.",
