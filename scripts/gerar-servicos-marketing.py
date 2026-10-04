@@ -2,7 +2,7 @@
 """
 Gera as páginas de serviço da linha "Sites e Anúncios" (28/09/2026):
 
-  /criacao-de-landing-page-goiania/
+  /criacao-de-landing-page/
   /gestao-de-trafego-pago-goiania/
   /criacao-de-loja-virtual-goiania/
 
@@ -59,6 +59,32 @@ def cta(href, txt, loc, slug, classe="btn btn-primary"):
 
 
 # ---------------------------------------------------------------- seções
+def autor_data(p):
+    """Linha 'Por Renan ... | Atualizado em ...' (opcional: so quem tem p['data'])."""
+    if not p.get("data"):
+        return ""
+    a, m, d = p["data"].split("-")
+    return ('\n          <p class="page-byline">Por <a href="/sobre/">Renan Carvalho Barbosa</a> · '
+            'Atualizado em <time datetime="%s">%s/%s/%s</time></p>' % (p["data"], d, m, a))
+
+
+def s_chamada(d, slug):
+    """Faixa com um link de destaque (ex.: modelo demonstrativo)."""
+    return """
+    <section class="solution-section alt-bg">
+      <div class="container">
+        <div class="split-copy" style="max-width:860px;margin:0 auto;text-align:center">
+          <div class="section-tag">%s</div>
+          <h2 class="section-title">%s</h2>%s
+          <div class="page-actions" style="justify-content:center;margin-top:1.5rem">
+            <a class="btn btn-outline" href="%s" data-event="cta_click" data-location="chamada" data-page="%s">%s</a>
+          </div>
+        </div>
+      </div>
+    </section>
+""" % (e(d["tag"]), e(d["titulo"]), "".join("\n          <p>%s</p>" % x for x in d["ps"]), d["link"], slug, e(d["botao"]))
+
+
 def s_hero(p):
     slug = p["slug"]
     return """    <section class="page-hero">
@@ -67,7 +93,7 @@ def s_hero(p):
           <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Início</a><span>/</span><span>%s</span></nav>
           <div class="eyebrow">%s</div>
           <h1 class="page-title">%s</h1>
-          <p class="page-subtitle">%s</p>
+          <p class="page-subtitle">%s</p>%s
           <div class="page-actions">
             %s
             <a class="btn btn-outline" href="#orcamento" data-event="cta_click" data-location="hero_orcamento" data-page="%s">Quanto custa?</a>
@@ -81,7 +107,7 @@ def s_hero(p):
         </aside>
       </div>
     </section>
-""" % (e(p["trilha"]), e(p["eyebrow"]), e(p["h1"]), e(p["sub"]),
+""" % (e(p["trilha"]), e(p["eyebrow"]), e(p["h1"]), e(p["sub"]), autor_data(p),
        cta(wa(p["msg"]), e(p["cta_hero"]), "hero", slug), slug,
        "".join('<span class="pill">%s</span>' % e(x) for x in p["pills"]),
        e(p["painel_h2"]), "".join("\n            <li>%s</li>" % e(x) for x in p["painel"]))
@@ -225,13 +251,13 @@ def s_faq(p):
       <div class="container">
         <div class="section-header">
           <div class="section-tag">Dúvidas</div>
-          <h2 id="faq-titulo" class="section-title">Perguntas frequentes sobre %s em Goiânia</h2>
+          <h2 id="faq-titulo" class="section-title">%s</h2>
         </div>
         <div class="faq-list">%s
         </div>
       </div>
     </section>
-""" % (e(p["servico"].lower()), itens)
+""" % (e(p.get("faq_titulo") or "Perguntas frequentes sobre %s em Goiânia" % p["servico"].lower()), itens)
 
 
 def s_relacionados(p):
@@ -280,6 +306,8 @@ def corpo(p):
             partes.append(s_orcamento(d, slug))
         elif tipo == "passos":
             partes.append(s_passos(d, slug, p["msg"]))
+        elif tipo == "chamada":
+            partes.append(s_chamada(d, slug))
         else:
             raise ValueError("tipo de seção desconhecido: %s" % tipo)
     partes += [s_faq(p), s_relacionados(p), s_cta_final(p)]
@@ -287,20 +315,30 @@ def corpo(p):
 
 
 # ---------------------------------------------------------------- schema
+def servico_no(p, url):
+    n = {"@type": "Service", "@id": url + "#service", "name": p["trilha"], "serviceType": p["servico"],
+         "description": p["desc"], "provider": {"@id": M.ID_EMPRESA},
+         "areaServed": ([{"@type": "Country", "name": "Brasil"}] if p.get("nacional") else
+                        [{"@type": "City", "name": "Goiânia", "addressRegion": "GO", "addressCountry": "BR"},
+                         {"@type": "Country", "name": "Brasil"}])}
+    if p.get("publico"):
+        n["audience"] = {"@type": "BusinessAudience", "audienceType": p["publico"]}
+    return n
+
+
 def schema(p):
     url = "%s/%s/" % (BASE, p["slug"])
     g = [
         {"@type": "WebPage", "@id": url + "#webpage", "url": url, "name": p["title"], "description": p["desc"],
-         "dateModified": DATA, "inLanguage": "pt-BR",
+         "dateModified": p.get("data", DATA), "inLanguage": "pt-BR",
          "isPartOf": M.site(),
+         **({"author": {"@type": "Person", "@id": "https://rcbseo.com.br/#renan", "name": "Renan Carvalho Barbosa"},
+             "datePublished": p.get("publicado", p["data"])} if p.get("data") else {}),
          "breadcrumb": {"@id": url + "#breadcrumb"}},
         {"@type": "BreadcrumbList", "@id": url + "#breadcrumb", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Início", "item": BASE + "/"},
             {"@type": "ListItem", "position": 2, "name": p["trilha"], "item": url}]},
-        {"@type": "Service", "@id": url + "#service", "name": p["trilha"], "serviceType": p["servico"],
-         "description": p["desc"], "provider": {"@id": M.ID_EMPRESA},
-         "areaServed": [{"@type": "City", "name": "Goiânia", "addressRegion": "GO", "addressCountry": "BR"},
-                        {"@type": "Country", "name": "Brasil"}]},
+        servico_no(p, url),
         M.no_empresa(),
         {"@type": "FAQPage", "@id": url + "#faq", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in p["faq"]]},

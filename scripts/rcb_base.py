@@ -164,7 +164,7 @@ NAV_MENU = (
     + _CHEVRON +
     '</button><div class="nav-dropdown-menu" role="menu">'
     '<!--RCB:SITES-NAV--><a href="/criacao-de-sites-goiania/" class="nav-dropdown-item" role="menuitem">Criação de sites</a>'
-    '<a href="/criacao-de-landing-page-goiania/" class="nav-dropdown-item" role="menuitem">Landing page</a>'
+    '<a href="/criacao-de-landing-page/" class="nav-dropdown-item" role="menuitem">Landing page</a>'
     '<a href="/gestao-de-trafego-pago-goiania/" class="nav-dropdown-item" role="menuitem">Tráfego pago (Google e Meta Ads)</a>'
     '<a href="/criacao-de-loja-virtual-goiania/" class="nav-dropdown-item" role="menuitem">Loja virtual</a><!--/RCB:SITES-NAV-->'
     '<a href="/consultoria-seo-local/" class="nav-dropdown-item" role="menuitem">Consultoria SEO Local</a>'
@@ -254,7 +254,7 @@ def rodape(scripts_extra=""):
             '<strong class="footer-name">Renan Carvalho Barbosa</strong>'
             '<span class="footer-cargo">Consultor de SEO Local e Google Meu Negócio</span>'
             '<p class="footer-bio">Atendimento presencial em Goiânia e Aparecida de Goiânia. Consultoria estratégica online para clínicas e empresas locais em todo o Brasil.</p></div>'
-            '<div class="footer-col"><h3 class="footer-col-title">Serviços</h3><nav class="footer-col-nav"><!--RCB:SITES-FOOTER--><a href="/criacao-de-sites-goiania/">Criação de sites</a><a href="/criacao-de-landing-page-goiania/">Landing page</a><a href="/gestao-de-trafego-pago-goiania/">Tráfego pago (Google e Meta Ads)</a><a href="/criacao-de-loja-virtual-goiania/">Loja virtual</a><!--/RCB:SITES-FOOTER-->'
+            '<div class="footer-col"><h3 class="footer-col-title">Serviços</h3><nav class="footer-col-nav"><!--RCB:SITES-FOOTER--><a href="/criacao-de-sites-goiania/">Criação de sites</a><a href="/criacao-de-landing-page/">Landing page</a><a href="/gestao-de-trafego-pago-goiania/">Tráfego pago (Google e Meta Ads)</a><a href="/criacao-de-loja-virtual-goiania/">Loja virtual</a><!--/RCB:SITES-FOOTER-->'
             '<a href="/consultoria-seo-local/">Consultoria SEO Local</a>'
             '<a href="/consultoria-seo/">Consultoria SEO por cidade</a>'
             '<a href="/diagnostico-presenca-digital/">Diagnóstico de Presença Digital</a>'

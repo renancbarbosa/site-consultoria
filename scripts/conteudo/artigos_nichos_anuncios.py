@@ -80,7 +80,7 @@ ARTIGOS = [
           comprar.</li>
           <li><strong>Mandar o clique para a página certa:</strong> quem clicou em "energia solar para
           fazenda" precisa cair numa página rural, não na página inicial. Uma
-          {link('/criacao-de-landing-page-goiania/', 'landing page')} por tipo de cliente costuma mudar o
+          {link('/criacao-de-landing-page/', 'landing page')} por tipo de cliente costuma mudar o
           resultado.</li>
         </ul>
 
@@ -315,7 +315,7 @@ ARTIGOS = [
         <p>Anúncio de clínica levando para a página inicial desperdiça verba. O paciente que clicou em "implante"
         precisa cair numa página sobre implante: o que é, para quem é indicado, como é o tratamento, quem é o
         profissional, onde fica a clínica e um botão de WhatsApp. Uma
-        {link('/criacao-de-landing-page-goiania/', 'landing page por tratamento')} costuma ser a mudança que mais
+        {link('/criacao-de-landing-page/', 'landing page por tratamento')} costuma ser a mudança que mais
         melhora o resultado de quem já anuncia.</p>
 
         {tabela(
@@ -412,7 +412,7 @@ ARTIGOS = [
             "Exemplo: 100 cliques custam R$ 300, geram 8 conversas e cerca de 1 a 2 clientes. Com lucro de R$ 800 "
             "por cliente, a conta fecha. Com os seus números reais, o resultado pode ser outro.")}
         <p>Se a conta não fecha no papel, aumentar a verba não resolve. O caminho é melhorar a taxa de conversa —
-        com uma {link('/criacao-de-landing-page-goiania/', 'página melhor')} e resposta mais rápida no WhatsApp — ou
+        com uma {link('/criacao-de-landing-page/', 'página melhor')} e resposta mais rápida no WhatsApp — ou
         escolher buscas mais próximas da compra.</p>
 
         <h2>O que faz o custo do clique subir ou descer</h2>

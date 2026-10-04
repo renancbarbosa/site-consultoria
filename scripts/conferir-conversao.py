@@ -50,7 +50,10 @@ SEM_NAVBAR = {"404.html", "diagnostico-presenca-digital/exemplo/index.html",
 # Demo do relatorio de diagnostico: o HTML dela e montado por JavaScript, entao
 # contar tag aberta/fechada no arquivo nao faz sentido. E noindex e fora do
 # sitemap de proposito - ver CLAUDE.md.
-FORA_DA_CONFERENCIA = {"diagnostico-presenca-digital/exemplo/index.html"}
+# Paginas de demonstracao (noindex): tem estrutura propria, de proposito.
+# modelos/landing-page-energia-solar: modelo de landing page de empresa ficticia (Etapa 2, 04/10/2026).
+FORA_DA_CONFERENCIA = {"diagnostico-presenca-digital/exemplo/index.html",
+                       "modelos/landing-page-energia-solar/index.html"}
 
 problemas = []
 stats = {"paginas": 0, "com_precos": 0, "com_barra": 0, "com_menu_novo": 0}

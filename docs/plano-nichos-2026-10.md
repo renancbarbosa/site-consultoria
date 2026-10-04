@@ -11,7 +11,7 @@
 | — | Marca RCB SEO + exclusão das 168 cidades noindex | **publicada** 04/10/2026 (`f27d12c`, `5487081`; IndexNow 166 + 168 URLs aceito) |
 | 0 | Diagnóstico e mapa (só leitura) | **concluída** (plano + linha de base em `bbc8f4f`) |
 | 1 | Limpeza de foco (agentes de IA, IPTV/apostas 410, home/menu/rodapé/ficha/llms nos 4 serviços) | **publicada** 04/10/2026 (`90d3bc3`; 410 e 301 conferidos no ar; IndexNow 162 + 32 URLs aceito) |
-| 2 | Landing page para anúncios (urgente) + modelo demonstrativo | **em andamento** |
+| 2 | Landing page para anúncios (urgente) + modelo demonstrativo | **aguardando "pode publicar"** (prévia local, 04/10/2026) |
 | 3 | Tráfego pago empresarial (reorganizar as 7 páginas) | pendente |
 | 4 | Energia solar (marketing completo) | pendente |
 | 5 | SEO para YouTube | pendente |
@@ -43,6 +43,19 @@ arquivo `_redirects` da raiz. Não usar meta refresh.
 - Provisórios até a etapa de cada um: "SEO para YouTube" → `/conteudo-para-seo/` (Etapa 5);
   "Tráfego Pago" → `/gestao-de-trafego-pago-goiania/` (Etapa 3); landing page →
   `/criacao-de-landing-page-goiania/` (Etapa 2).
+
+## Etapa 2 — o que foi feito (prévia local, 04/10/2026)
+- Decisão do Renan: a página de Goiânia virou **nacional** em `/criacao-de-landing-page/`,
+  com 301 de `/criacao-de-landing-page-goiania/` (1 impressão em 28 dias, posição 104).
+- Conteúdo em `scripts/conteudo/servicos_marketing.py`; gerador `gerar-servicos-marketing.py`
+  ganhou campos opcionais (só para quem usa): `data` (autor + data visíveis e no schema),
+  `nacional` (areaServed Brasil), `publico` (audience BusinessAudience), `faq_titulo` e a
+  seção `chamada`. As outras 10 páginas do gerador não mudaram (restauradas e conferidas).
+- Modelo demonstrativo: `/modelos/landing-page-energia-solar/` — "Sua Empresa Solar"
+  (fictícia), noindex, fora do sitemap, faixa "Modelo demonstrativo — empresa fictícia",
+  botões de WhatsApp levam ao WhatsApp da RCB SEO, formulário só demonstrativo.
+  Fora do `conferir-conversao.py` (lista FORA_DA_CONFERENCIA).
+- Menu, rodapé, home e llms.txt apontam para o endereço novo (`PROVISORIO["landing"]`).
 
 ## Decisões anteriores (04/10/2026)
 - Marca oficial "RCB SEO"; dados só em `data/marca.json`.

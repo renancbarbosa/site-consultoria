@@ -27,7 +27,7 @@ PULAR = ("node_modules", ".git", "docs", "data", "scripts", ".playwright-mcp", "
 
 ITENS = [
     ("/criacao-de-sites-goiania/", "Criação de sites"),
-    ("/criacao-de-landing-page-goiania/", "Landing page"),
+    ("/criacao-de-landing-page/", "Landing page"),
     ("/gestao-de-trafego-pago-goiania/", "Tráfego pago (Google e Meta Ads)"),
     ("/criacao-de-loja-virtual-goiania/", "Loja virtual"),
 ]

@@ -21,7 +21,7 @@ MOSTRAR_YOUTUBE = False
 PROVISORIO = {
     "seo_youtube": "/conteudo-para-seo/",                 # Etapa 5 cria a pagina propria
     "trafego": "/gestao-de-trafego-pago-goiania/",         # Etapa 3 cria a pagina nacional
-    "landing": "/criacao-de-landing-page-goiania/",        # Etapa 2 decide a pagina nacional
+    "landing": "/criacao-de-landing-page/",        # Etapa 2 decide a pagina nacional
 }
 
 _CHEVRON = ('<svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" '

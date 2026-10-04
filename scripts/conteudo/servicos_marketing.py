@@ -2,7 +2,7 @@
 """
 Conteúdo das páginas de serviço da linha "Sites e Anúncios" (28/09/2026).
 
-  /criacao-de-landing-page-goiania/
+  /criacao-de-landing-page/   (nacional desde 04/10/2026; 301 da antiga de Goiania)
   /gestao-de-trafego-pago-goiania/   (Google Ads + Meta Ads)
   /criacao-de-loja-virtual-goiania/
 
@@ -21,152 +21,238 @@ PAGINAS = [
     # LANDING PAGE
     # =====================================================================
     {
-        "slug": "criacao-de-landing-page-goiania",
-        "title": "Criação de Landing Page em Goiânia | Orçamento Grátis",
-        "desc": ("Criação de landing page em Goiânia que transforma clique de anúncio em conversa no "
-                 "WhatsApp. Página rápida, texto que vende e orçamento grátis em 24h."),
-        "trilha": "Criação de landing page em Goiânia",
+        # Etapa 2 do plano de nichos (04/10/2026): virou pagina NACIONAL, com 301 de
+        # /criacao-de-landing-page/ (1 impressao em 28 dias, posicao 104).
+        # Regra de honestidade: sem portfolio, cliente ou numero inventado; o exemplo
+        # e o modelo demonstrativo de empresa ficticia (/modelos/landing-page-energia-solar/).
+        "slug": "criacao-de-landing-page",
+        "nacional": True,
+        "data": "2026-10-04",
+        "publico": "Empresas e profissionais que anunciam ou querem anunciar no Google Ads",
+        "title": "Criação de Landing Page para Anúncios (Google Ads) | RCB SEO",
+        "desc": ("Criação de landing page para anúncios no Google Ads: rápida no celular, com WhatsApp, "
+                 "formulário com LGPD e medição de conversão. Orçamento grátis em 24h."),
+        "trilha": "Criação de landing page",
         "servico": "Criação de landing page",
-        "eyebrow": "Goiânia e todo o Brasil",
-        "h1": "Criação de landing page em Goiânia",
-        "sub": ("Você paga por cada clique do anúncio. Se a pessoa cai numa página lenta, confusa ou genérica, "
-                "ela volta para o Google e o dinheiro vai junto. Eu crio a landing page que recebe esse clique "
-                "e leva a pessoa direto para a conversa com você no WhatsApp."),
-        "cta_hero": "Quero minha landing page",
-        "msg": "Olá, Renan! Quero um orçamento de landing page.",
-        "pills": ["Orçamento em até 24h", "Feita para anúncio", "Prazo por escrito"],
-        "painel_h2": "O que vem na sua landing page",
+        "eyebrow": "Para empresas de todo o Brasil",
+        "h1": "Criação de landing page para anúncios no Google",
+        "sub": ("Landing page é uma página única, feita para receber quem clicou no seu anúncio e transformar "
+                "esse clique em contato. Eu crio a sua do zero: rápida no celular, com uma oferta só, botão de "
+                "WhatsApp, formulário com aviso de LGPD e medição de cada conversão no Google Ads e no GA4. "
+                "O orçamento é grátis e sai em até 24 horas pelo WhatsApp."),
+        "cta_hero": "Quero orçamento da minha landing page",
+        "msg": "Olá, Renan! Quero um orçamento de landing page para anúncio.",
+        "pills": ["Orçamento em até 24h", "Feita para Google Ads", "Prazo por escrito"],
+        "painel_h2": "O que está incluído",
         "painel": [
-            "Uma oferta só, sem distração.",
-            "Texto escrito para convencer quem chega do anúncio.",
+            "Página rápida no celular, testada antes da entrega.",
             "Botão de WhatsApp com mensagem pronta.",
-            "Rápida no celular, onde está quase todo clique.",
-            "Pronta para Google Ads e Meta Ads.",
-            "Registro de cada contato que chegou.",
+            "Formulário com aviso de LGPD.",
+            "Medição de conversão no Google Ads e no GA4.",
+            "Pixel da Meta, quando você também anuncia lá.",
+            "Domínio e hospedagem orientados por mim.",
         ],
+        "faq_titulo": "Perguntas frequentes sobre criação de landing page",
         "secoes": [
-            ("split", {
-                "tag": "O problema",
-                "titulo": "Anúncio bom caindo em página ruim é dinheiro jogado fora",
+            ("texto", {
+                "tag": "Em palavras simples",
+                "titulo": "O que é uma landing page e por que ela não é um site?",
                 "ps": [
-                    "A cena é comum em Goiânia: a empresa começa a anunciar, os cliques chegam, o relatório mostra "
-                    "gente entrando — e o WhatsApp continua quieto. Quase nunca o culpado é o anúncio. É a página "
-                    "que recebe o clique.",
-                    "Mandar o anúncio para a página inicial do site é o erro mais caro. Ali a pessoa encontra dez "
-                    "assuntos, menu, blog, fotos da equipe — e nenhuma resposta direta para o que ela clicou. Ela "
-                    "não procura; ela volta.",
-                    "A landing page existe para o contrário: uma página, uma oferta, um próximo passo. Quem clicou "
-                    "em \"implante dentário\" lê sobre implante e vê o botão para falar com você. Só isso.",
+                    "Um site é como uma loja inteira: tem várias portas, vários corredores e serve para quem "
+                    "quer conhecer a empresa com calma. A landing page (em português, “página de destino”) é "
+                    "um balcão só, montado para uma pessoa que já chegou interessada numa oferta específica.",
+                    "Ela tem um assunto, uma promessa e um convite: falar com você. Não tem menu levando para "
+                    "o blog, nem cinco serviços competindo pela atenção. Quem clicou no anúncio de “instalação "
+                    "de energia solar” cai numa página que fala só disso — e encontra o botão do WhatsApp sem "
+                    "precisar procurar.",
+                    "Por isso ela é a peça que fica entre o anúncio e a conversa. O anúncio traz a pessoa; a "
+                    "landing page decide se essa visita vira contato ou volta para o Google.",
                 ],
-                "card_titulo": "Sinais de que a sua página está perdendo gente",
+            }),
+            ("split", {
+                "tag": "O desperdício",
+                "titulo": "Por que anunciar sem landing page queima dinheiro?",
+                "ps": [
+                    "No Google Ads, na forma mais comum de anunciar, "
+                    "<a href=\"https://support.google.com/google-ads/answer/116495?hl=pt-BR\" target=\"_blank\" "
+                    "rel=\"noopener noreferrer\">você paga a cada clique no anúncio</a>, segundo a própria ajuda "
+                    "do Google. O clique é cobrado mesmo que a pessoa desista três segundos depois, porque a "
+                    "página demorou a abrir ou não respondia o que ela procurava.",
+                    "Tem um segundo custo, menos visível. O Google dá a cada palavra-chave um "
+                    "<a href=\"https://support.google.com/google-ads/answer/6167118?hl=pt-BR\" target=\"_blank\" "
+                    "rel=\"noopener noreferrer\">Índice de qualidade</a>, que compara o seu anúncio e a sua página "
+                    "de destino com os de outros anunciantes. Página fraca puxa esse índice para baixo.",
+                    "Mandar o anúncio para a página inicial do site, para o Instagram ou para um link de "
+                    "WhatsApp solto costuma ser o caminho mais caro: a pessoa chega sem direção e sai sem falar "
+                    "com ninguém.",
+                ],
+                "card_titulo": "Onde o clique costuma se perder",
                 "card": [
-                    "<strong>Muitos cliques, poucas mensagens.</strong> O anúncio funciona; a página não.",
-                    "<strong>O anúncio leva para a página inicial.</strong> A pessoa não acha o que clicou.",
-                    "<strong>Demora para abrir no celular.</strong> Cada segundo a mais é gente indo embora.",
+                    "Página que demora a abrir no celular.",
+                    "Texto genérico, que serve para qualquer empresa.",
+                    "Vários caminhos e nenhum convite claro.",
+                    "Formulário longo pedindo dado demais.",
+                    "Sem medição: ninguém sabe qual anúncio trouxe o cliente.",
                 ],
             }),
             ("cards", {
-                "tag": "O que está incluído",
-                "titulo": "O que entra na criação da sua landing page",
-                "desc": "Não é um modelo pronto com a sua logo em cima. É uma página pensada para uma oferta e um público.",
+                "tag": "O que vem na página",
+                "titulo": "O que está incluído na sua landing page?",
+                "desc": "Tudo o que a página precisa para receber o clique do anúncio e devolver um contato.",
                 "itens": [
-                    ("Texto que vende", "Título que responde ao anúncio, benefícios na língua do seu cliente, "
-                     "respostas às dúvidas que travam a decisão e chamada clara para a ação."),
-                    ("Uma oferta, um caminho", "Sem menu e sem distração. A pessoa só tem uma coisa para fazer: "
-                     "falar com você."),
-                    ("WhatsApp com mensagem pronta", "O botão já abre a conversa com o assunto escrito. Você sabe "
-                     "de qual campanha a pessoa veio antes de responder."),
-                    ("Rápida no celular", "Página leve, sem excesso de efeito. Quase todo clique de anúncio vem do "
-                     "celular, muitas vezes com internet ruim."),
-                    ("Pronta para anúncio", "Estrutura preparada para Google Ads e Meta Ads, com a página certa "
-                     "para cada campanha em vez de uma página para tudo."),
-                    ("Contatos medidos", "Cada clique no WhatsApp fica registrado. Você enxerga quanto cada "
-                     "campanha trouxe de conversa, e não só de clique."),
+                    ("Página rápida no celular",
+                     "Quase todo clique de anúncio vem do celular. Antes de entregar, eu meço a velocidade com o "
+                     "<a href=\"https://pagespeed.web.dev/\" target=\"_blank\" rel=\"noopener noreferrer\">PageSpeed "
+                     "Insights</a>, a ferramenta gratuita do Google, e corrijo o que estiver pesando."),
+                    ("Botão de WhatsApp com mensagem pronta",
+                     "A pessoa toca no botão e a conversa já abre com um texto inicial, dizendo de qual anúncio "
+                     "ela veio. Você responde sabendo o que ela quer."),
+                    ("Formulário com aviso de LGPD",
+                     "Para quem prefere deixar o contato. O formulário pede só o necessário e avisa como os dados "
+                     "serão usados, como pede a "
+                     "<a href=\"https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm\" "
+                     "target=\"_blank\" rel=\"noopener noreferrer\">Lei Geral de Proteção de Dados (Lei 13.709/2018)</a>."),
+                    ("Medição de conversão no Google Ads e no GA4",
+                     "Cada toque no WhatsApp e cada formulário enviado é registrado como conversão — o "
+                     "<a href=\"https://support.google.com/google-ads/answer/1722022?hl=pt-BR\" target=\"_blank\" "
+                     "rel=\"noopener noreferrer\">recurso de medição do próprio Google Ads</a>. Assim dá para saber "
+                     "qual anúncio e qual palavra trazem cliente."),
+                    ("Pixel da Meta, quando houver",
+                     "Se você também anuncia no Instagram ou no Facebook, a página recebe o pixel da Meta para "
+                     "medir esses contatos do mesmo jeito."),
+                    ("Domínio e hospedagem orientados",
+                     "Eu explico o que contratar, em nome de quem fica e como apontar o endereço. A página e o "
+                     "domínio ficam no seu nome, não no meu."),
                 ],
             }),
-            ("cards", {
-                "tag": "Para quem",
-                "titulo": "Quando uma landing page faz mais sentido do que um site",
-                "itens": [
-                    ("Você vai anunciar", "Campanha no Google ou no Instagram precisa de uma página que converta. "
-                     "É o uso mais comum — e o que mais dá retorno."),
-                    ("Você tem um serviço carro-chefe", "Implante, harmonização, planejamento tributário, "
-                     "energia solar: um serviço que merece página própria e uma oferta clara."),
-                    ("Você tem um lançamento ou evento", "Curso, turma nova, promoção de temporada. Página com "
-                     "começo, meio e fim, que depois pode ser reaproveitada."),
+            ("texto", {
+                "tag": "Prazo",
+                "titulo": "Quanto tempo leva para a landing page ficar pronta?",
+                "ps": [
+                    "A primeira versão da sua landing page fica pronta em até 5 dias úteis depois que eu recebo "
+                    "as informações da empresa: os textos (ou as informações para eu escrever), as fotos e o logo. "
+                    "O prazo também vai por escrito junto com o orçamento.",
+                    "Os 5 dias úteis começam a contar quando tudo chega completo. O que mais atrasa costuma ser a "
+                    "espera por fotos, dados e aprovações — por isso eu aviso logo no começo exatamente o que vou "
+                    "precisar. Depois da primeira versão, você revisa e eu faço os ajustes antes de a página ir ao ar.",
                 ],
             }),
-            ("faixas", {
+            ("passos", {
+                "titulo": "Como funciona, do primeiro contato até a página no ar?",
+                "itens": [
+                    ("Você me conta a oferta",
+                     "Pelo WhatsApp: o que você vende, para quem, em que região e se já anuncia ou vai começar."),
+                    ("Orçamento e prazo por escrito",
+                     "Em até 24 horas você recebe o que entra na página, o prazo e o valor do seu projeto."),
+                    ("Texto e montagem",
+                     "Com textos, fotos e logo em mãos, a primeira versão fica pronta em até 5 dias úteis para você aprovar."),
+                    ("Medição e testes",
+                     "Configuro as conversões no Google Ads e no GA4 e testo velocidade, botão e formulário."),
+                    ("Página no ar, ligada ao anúncio",
+                     "A página entra no ar no seu domínio, pronta para receber o tráfego da campanha."),
+                ],
+            }),
+            ("texto", {
+                "tag": "Orçamento",
                 "titulo": "Quanto custa uma landing page?",
-                "desc": ("Depende do tamanho da oferta, de quem escreve o texto e do que a página precisa fazer. "
-                         "No mercado, uma landing page vai de algumas centenas de reais a alguns milhares — e a "
-                         "diferença costuma estar no texto, que é o que convence."),
-                "itens": [
-                    ("Modelo pronto", "Algumas centenas de reais. Página montada sobre um modelo, texto genérico. "
-                     "Serve para testar, raramente para escalar anúncio."),
-                    ("Página sob medida", "Faixa de alguns milhares de reais. Texto escrito para o seu público, "
-                     "estrutura pensada para a sua oferta e medição de contatos."),
-                    ("Várias páginas para campanhas", "Projeto maior: uma página por serviço ou por público, "
-                     "cada campanha com a sua. É o que separa quem anuncia de quem anuncia com lucro."),
+                "ps": [
+                    "Não existe preço de tabela, porque duas landing pages podem ter trabalhos bem diferentes. "
+                    "O que define o orçamento é: quantas seções a página precisa ter para explicar a oferta; "
+                    "quem escreve o texto; se há fotos prontas ou se é preciso organizar imagens; quantas "
+                    "integrações entram (WhatsApp, formulário, planilha ou sistema da empresa); e quanto de "
+                    "medição precisa ser configurado.",
+                    "Também conta o que acontece depois: se você vai cuidar do anúncio ou se quer que eu cuide "
+                    "da campanha no Google Ads junto com a página. O orçamento é individual, grátis e chega "
+                    "pelo WhatsApp em até 24 horas.",
                 ],
             }),
             ("orcamento", {
-                "titulo": "Sua landing page sob medida: quanto fica o seu projeto?",
-                "desc": ("Escolha o tipo de página e me chame no WhatsApp. Em até 24 horas você recebe o valor "
-                         "exato — e, de brinde, eu olho como estão os anúncios dos seus concorrentes."),
+                "titulo": "Qual landing page faz sentido para o seu anúncio?",
+                "desc": "Escolha o ponto de partida mais parecido com o seu momento. O orçamento é grátis.",
+                "destaque": 1,
                 "itens": [
-                    ("Página para anúncio no Google", "Para quem vai aparecer quando o cliente pesquisa o serviço.",
-                     ["Texto que responde à busca", "Botão de WhatsApp com mensagem pronta", "Rápida no celular"],
-                     "Olá, Renan! Quero um orçamento de landing page para anúncio no Google.", "Orçamento da minha página"),
-                    ("Página para Instagram e Facebook", "Para quem anuncia para quem ainda não conhece o serviço.",
-                     ["Oferta clara logo no topo", "Prova e respostas às objeções", "Pronta para Meta Ads"],
-                     "Olá, Renan! Quero um orçamento de landing page para anúncio no Instagram.", "Quero vender pelo Instagram"),
-                    ("Página do serviço carro-chefe", "Para o serviço que mais dá dinheiro ganhar página própria.",
-                     ["Uma oferta, um caminho", "Serve para anúncio e para o Google", "Contatos medidos"],
-                     "Olá, Renan! Quero uma landing page para o meu serviço principal.", "Orçamento do meu serviço"),
-                    ("Página + gestão do anúncio", "Para quem quer a página e a campanha no mesmo lugar.",
-                     ["Página e anúncio pensados juntos", "Google Ads ou Meta Ads", "Acompanhamento dos contatos"],
-                     "Olá, Renan! Quero um orçamento de landing page com gestão de anúncios.", "Quero página + anúncio"),
+                    ("Landing page de captação", "Para quem quer receber contatos pelo WhatsApp e formulário.",
+                     ["Uma oferta, texto e montagem", "Botão de WhatsApp e formulário com LGPD",
+                      "Teste de velocidade no celular"],
+                     "Olá, Renan! Quero orçamento de uma landing page de captação.", "Pedir orçamento"),
+                    ("Landing page com medição completa", "Para quem já anuncia e não sabe o que traz cliente.",
+                     ["Tudo da landing page de captação", "Conversões no Google Ads e no GA4",
+                      "Pixel da Meta, se você anuncia lá"],
+                     "Olá, Renan! Já anuncio e quero uma landing page com medição completa.", "Pedir orçamento"),
+                    ("Landing page + Google Ads", "Para quem vai começar a anunciar e quer tudo em um lugar só.",
+                     ["Landing page com medição completa", "Campanha na pesquisa do Google",
+                      "Acompanhamento do que gera contato"],
+                     "Olá, Renan! Quero landing page e gestão de Google Ads.", "Pedir orçamento"),
                 ],
-                "destaque": 3,
             }),
-            ("passos", {
-                "titulo": "Como é criar a sua landing page",
-                "itens": [
-                    ("1. Me conte a oferta", "No WhatsApp: o que você vende, para quem e onde vai anunciar. Sem formulário longo."),
-                    ("2. Eu escrevo e monto", "Texto e página prontos para você conferir antes de publicar."),
-                    ("3. Publicamos e medimos", "Página no ar, ligada ao anúncio, com cada contato registrado."),
+            ("chamada", {
+                "tag": "Exemplo",
+                "titulo": "Quer ver como fica uma landing page pronta?",
+                "ps": [
+                    "Montei um modelo demonstrativo para uma empresa fictícia de energia solar. Não é cliente "
+                    "real: serve para você ver a estrutura, o ritmo do texto e como o botão de WhatsApp aparece "
+                    "no celular.",
+                ],
+                "link": "/modelos/landing-page-energia-solar/",
+                "botao": "Ver o modelo demonstrativo",
+            }),
+            ("texto", {
+                "tag": "Landing page ou site",
+                "titulo": "Quando faz mais sentido uma landing page do que um site completo?",
+                "ps": [
+                    "A landing page é a melhor escolha quando você vai anunciar uma oferta específica e quer "
+                    "contato rápido: um serviço principal, uma promoção, um lançamento, uma campanha de "
+                    "temporada. Ela é focada justamente para não dispersar quem chega pelo anúncio.",
+                    "O site completo faz mais sentido quando a empresa quer ser encontrada no Google sem pagar "
+                    "por clique, ao longo do tempo, por vários serviços. Muita empresa usa os dois: o site para "
+                    "aparecer na busca de graça e a landing page para receber o tráfego pago. Se for o seu caso, "
+                    "veja também a <a href=\"/criacao-de-sites-goiania/\">criação de sites</a>.",
                 ],
             }),
         ],
         "faq": [
-            ("Quanto custa criar uma landing page?",
-             "Depende do tamanho da oferta, de quem escreve o texto e do que a página precisa fazer. No mercado, "
-             "vai de algumas centenas de reais, em modelo pronto, a alguns milhares, em página sob medida. Na RCB "
-             "o orçamento é grátis e sai em até 24 horas pelo WhatsApp."),
-            ("Qual a diferença entre landing page e site?",
-             "O site apresenta a empresa inteira e tem várias páginas. A landing page tem um objetivo só — "
-             "geralmente receber quem clicou num anúncio e levar para o contato. Muitas empresas precisam dos "
-             "dois: o site para ser encontrado no Google e a landing page para as campanhas."),
-            ("Landing page funciona sem anúncio?",
-             "Funciona, principalmente quando é a página de um serviço específico e está bem escrita para o Google. "
-             "Mas o uso mais comum é com anúncio, porque é onde cada clique custa dinheiro e a conversão pesa mais."),
             ("Em quanto tempo a landing page fica pronta?",
-             "Em geral, poucos dias depois de você me mandar as informações da oferta. O que costuma atrasar não é "
-             "a montagem, é o material — fotos, depoimentos e detalhes do serviço."),
-            ("Vocês cuidam do anúncio também?",
-             "Sim. A RCB faz a gestão de tráfego pago no Google Ads e no Meta Ads. Quando a página e o anúncio são "
-             "pensados juntos, a mensagem do anúncio continua na página e a conversa chega mais qualificada."),
-            ("A página é minha depois de pronta?",
-             "É. O domínio e o conteúdo ficam no seu nome. Se um dia você trocar de fornecedor, leva tudo junto."),
+             "A primeira versão fica pronta em até 5 dias úteis depois que eu recebo as informações da empresa: "
+             "textos, fotos e logo. Depois você revisa e eu ajusto antes de a página ir ao ar."),
+            ("Landing page funciona sem anúncio?",
+             "Funciona, mas foi feita para receber tráfego que você leva até ela: anúncio, link no WhatsApp, "
+             "QR code, e-mail. Sozinha, sem ninguém mandando gente para lá, ela recebe pouca visita, porque não "
+             "tem o conteúdo amplo que o Google costuma mostrar na busca gratuita."),
+            ("Preciso ter site se eu tiver uma landing page?",
+             "Não é obrigatório para anunciar. Mas, se você quer também aparecer no Google sem pagar por clique, "
+             "o site com conteúdo é o caminho. Muitas empresas usam a landing page para o anúncio e o site para "
+             "a busca gratuita."),
+            ("Você também cria e cuida do anúncio no Google Ads?",
+             "Sim. Posso entregar só a página ou a página junto com a campanha na pesquisa do Google, com "
+             "acompanhamento do que gera contato. O orçamento sai separado para você escolher."),
+            ("Posso usar a mesma landing page no Instagram e no Facebook?",
+             "Pode. Quando você também anuncia na Meta, eu instalo o pixel da Meta na página para medir esses "
+             "contatos. A página continua a mesma; muda só a origem do clique."),
+            ("O que é medição de conversão?",
+             "É o registro automático de cada contato que veio do anúncio: o toque no botão do WhatsApp ou o "
+             "envio do formulário. Com isso dá para ver qual anúncio e qual palavra pesquisada trazem cliente, "
+             "e cortar o que só gasta."),
+            ("Quanto custa uma landing page?",
+             "Depende do número de seções, de quem escreve o texto, das fotos, das integrações e da medição que "
+             "precisa ser configurada. O orçamento é individual, grátis e chega pelo WhatsApp em até 24 horas."),
+            ("Você tem exemplos de landing page?",
+             "Tenho um modelo demonstrativo, feito para uma empresa fictícia de energia solar, para você ver "
+             "como a página fica no celular. Ele está marcado como modelo: não é um cliente real."),
+            ("A página e o domínio ficam no meu nome?",
+             "Sim. Eu oriento a contratação do domínio e da hospedagem em nome da sua empresa. Se um dia você "
+             "quiser seguir com outra pessoa, a página continua sendo sua."),
         ],
         "relacionados": [
-            ("/gestao-de-trafego-pago-goiania/", "Gestão de tráfego pago", "Google Ads e Meta Ads para levar gente até a sua página."),
-            ("/criacao-de-sites-goiania/", "Criação de sites em Goiânia", "Quando a empresa precisa do site completo, não só de uma página."),
-            ("/blog/quanto-custa-um-site/", "Quanto custa um site", "As faixas de preço do mercado e o que muda o valor."),
+            ("/gestao-de-trafego-pago-goiania/", "Gestão de tráfego pago",
+             "Anúncio na pesquisa do Google para levar gente até a sua landing page."),
+            ("/criacao-de-sites-goiania/", "Criação de sites",
+             "Quando a empresa quer aparecer no Google de graça, por vários serviços."),
+            ("/blog/quanto-investir-em-trafego-pago/", "Quanto investir em tráfego pago?",
+             "Como calcular a verba do anúncio a partir do valor do seu cliente."),
         ],
         "cta_final": ("Me conte a sua oferta. Eu te digo como transformar clique em conversa.",
-                      "Sem compromisso: você me diz o que vende e onde vai anunciar, e eu te mostro o caminho mais curto até o WhatsApp."),
+                      "Sem compromisso: você me diz o que vende e onde vai anunciar, e eu te mostro o caminho mais "
+                      "curto até o seu WhatsApp."),
     },
 
     # =====================================================================
@@ -228,7 +314,7 @@ PAGINAS = [
                     "buscas que <strong>não</strong> podem acionar o seu anúncio. Sem essa limpeza, você paga "
                     "clique de quem procura emprego, curso grátis ou outra cidade.",
                     "Depois vêm o texto do anúncio, a região de entrega — bairro, raio, cidade — e a "
-                    "<a href=\"/criacao-de-landing-page-goiania/\">página que recebe o clique</a>. Anúncio bom "
+                    "<a href=\"/criacao-de-landing-page/\">página que recebe o clique</a>. Anúncio bom "
                     "caindo em página ruim continua sendo dinheiro perdido.",
                 ],
             }),
@@ -338,7 +424,7 @@ PAGINAS = [
             ("/trafego-pago-para-imobiliarias/", "Tráfego pago para imobiliárias", "Leads próprios sem depender de portal."),
             ("/blog/quanto-investir-em-trafego-pago/", "Quanto investir em tráfego pago", "Como calcular a verba a partir do valor do seu cliente."),
             ("/blog/trafego-pago-para-clinicas/", "Tráfego pago para clínicas", "Google Ads e Meta Ads dentro das regras do CFM e do CFO."),
-            ("/criacao-de-landing-page-goiania/", "Criação de landing page", "A página que transforma o clique do anúncio em conversa."),
+            ("/criacao-de-landing-page/", "Criação de landing page", "A página que transforma o clique do anúncio em conversa."),
             ("/google-perfil-empresa/", "Google Perfil da Empresa", "A parte que traz cliente de graça, sem pagar por clique."),
             ("/criacao-de-sites-goiania/", "Criação de sites em Goiânia", "O site que sustenta o anúncio e aparece no Google."),
         ],
