@@ -10,8 +10,8 @@
 |---|---|---|
 | — | Marca RCB SEO + exclusão das 168 cidades noindex | **publicada** 04/10/2026 (`f27d12c`, `5487081`; IndexNow 166 + 168 URLs aceito) |
 | 0 | Diagnóstico e mapa (só leitura) | **concluída** (plano + linha de base em `bbc8f4f`) |
-| 1 | Limpeza de foco (agentes de IA, IPTV/apostas 410, home/menu/rodapé/ficha/llms nos 4 serviços) | **aguardando aprovação** (prévia local pronta em 04/10/2026; ver nota abaixo) |
-| 2 | Landing page para anúncios (urgente) + modelo demonstrativo | pendente |
+| 1 | Limpeza de foco (agentes de IA, IPTV/apostas 410, home/menu/rodapé/ficha/llms nos 4 serviços) | **publicada** 04/10/2026 (`90d3bc3`; 410 e 301 conferidos no ar; IndexNow 162 + 32 URLs aceito) |
+| 2 | Landing page para anúncios (urgente) + modelo demonstrativo | **em andamento** |
 | 3 | Tráfego pago empresarial (reorganizar as 7 páginas) | pendente |
 | 4 | Energia solar (marketing completo) | pendente |
 | 5 | SEO para YouTube | pendente |
@@ -48,6 +48,7 @@ arquivo `_redirects` da raiz. Não usar meta refresh.
 - Marca oficial "RCB SEO"; dados só em `data/marca.json`.
 - 168 cidades noindex excluídas; ficam as 31 indexáveis.
 - Perfil do Google não será renomeado agora — não lembrar de novo.
+- Etapa 1: menu com "SEO e Google" (aprovado); "SEO para YouTube" fora do menu até a Etapa 5 (`MOSTRAR_YOUTUBE` em `rcb_menu.py`); cartão da home sem link até lá.
 - Etapa 0 respondida: agentes de IA redirecionar/excluir; tráfego pago, landing e loja ficam; IPTV e apostas 410; domínios fora; advocacia principal = /marketing-para-advogados/ (Etapa 8).
 
 ---
