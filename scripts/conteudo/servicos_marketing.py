@@ -2,6 +2,7 @@
 """
 Conteúdo das páginas de serviço da linha "Sites e Anúncios" (28/09/2026).
 
+  /marketing-para-energia-solar/   (Etapa 4, 04/10/2026: pagina principal do nicho)
   /criacao-de-landing-page/   (nacional desde 04/10/2026; 301 da antiga de Goiania)
   /gestao-de-trafego-pago/   (nacional desde 04/10/2026; 301 da antiga de Goiania)
   /criacao-de-loja-virtual-goiania/
@@ -602,5 +603,199 @@ PAGINAS = [
         ],
         "cta_final": ("Me conte o que você vende. Eu te digo como levar isso para a internet.",
                       "Sem compromisso: você me diz quantos produtos tem e como vende hoje, e eu te mostro o caminho."),
+    },
+    {
+        # Etapa 4 do plano de nichos (04/10/2026): pagina principal do nicho ENERGIA SOLAR.
+        # Publico: o DONO da integradora (regra de ouro). Buscas do cliente final so no meio,
+        # entre aspas, como argumento. Fontes conferidas: Lei 14.300/2022, CDC art. 37,
+        # ANEEL (bandeiras tarifarias), IBGE/Concla (CNAE 4321-5/00) e CNPJ publico (jun/2026).
+        "slug": "marketing-para-energia-solar",
+        "nacional": True,
+        "data": "2026-10-04",
+        "publico": "Empresas integradoras de energia solar",
+        "title": "Marketing para Energia Solar: SEO, Google e Anúncios | RCB SEO",
+        "desc": ("Marketing para empresas de energia solar: Google Meu Negócio, site, SEO e Google Ads para o "
+                 "integrador receber pedidos de orçamento. Orçamento grátis em 24h."),
+        "trilha": "Marketing para energia solar",
+        "servico": "Marketing para empresas de energia solar",
+        "eyebrow": "Para integradores de energia solar de todo o Brasil",
+        "h1": "Marketing e SEO para empresas de energia solar",
+        "sub": ("Marketing para energia solar é fazer a sua empresa aparecer quando alguém da sua região pesquisa como "
+                "reduzir a conta de luz — e transformar essa busca em pedido de simulação no seu WhatsApp. Eu cuido "
+                "das quatro frentes que trazem esse cliente: Google Meu Negócio, site com SEO, anúncio no Google e "
+                "landing page. O orçamento é grátis e sai em até 24 horas."),
+        "cta_hero": "Quero mais pedidos de orçamento",
+        "msg": "Olá, Renan! Tenho uma empresa de energia solar e quero mais pedidos de orçamento pelo Google.",
+        "pills": ["Orçamento em até 24h", "Feito para integradores", "Prazo por escrito"],
+        "painel_h2": "As quatro frentes",
+        "painel": [
+            "Google Meu Negócio para aparecer no mapa da sua região.",
+            "Site com uma página por tipo de cliente e cidade.",
+            "Google Ads para quem já pesquisa instalação.",
+            "Landing page que pede a conta de luz e abre o WhatsApp.",
+            "Medição de cada pedido de simulação.",
+            "Texto dentro do que a lei e o consumidor permitem.",
+        ],
+        "faq_titulo": "Perguntas frequentes sobre marketing para energia solar",
+        "secoes": [
+            ("split", {
+                "tag": "O cenário",
+                "titulo": "Por que tanta empresa de energia solar depende só de indicação?",
+                "ps": [
+                    "Muita integradora começou vendendo para conhecidos e cresceu na base da indicação. Funciona — até "
+                    "a agenda esvaziar num mês e não haver nenhum outro canal trazendo cliente. Enquanto isso, o "
+                    "concorrente que aparece no Google recebe o pedido de quem nunca ouviu falar de nenhum dos dois.",
+                    "E a concorrência é grande. O IBGE classifica a instalação de painéis solares fotovoltaicos em "
+                    "prédios dentro do "
+                    "<a href=\"https://cnae.ibge.gov.br/?subclasse=4321500&amp;tipo=cnae&amp;versao=10&amp;view=subclasse\" "
+                    "target=\"_blank\" rel=\"noopener noreferrer\">CNAE 4321-5/00 (Instalação e manutenção elétrica)</a>. "
+                    "Pelos dados públicos de CNPJ de junho de 2026, esse código reúne 328.524 empresas ativas e teve "
+                    "17.358 aberturas em 90 dias. Nem todas são de energia solar — o código inclui eletricistas em geral "
+                    "—, mas o número mostra com quanta gente o integrador disputa a atenção de quem procura.",
+                ],
+                "card_titulo": "Sinais de que falta marketing na integradora",
+                "card": [
+                    "Mês bom e mês fraco sem explicação.",
+                    "Perfil do Google sem fotos de obra nem avaliações.",
+                    "Site com uma página só, igual a todos.",
+                    "Anúncio que traz curioso e pedido de peça avulsa.",
+                    "Ninguém sabe de onde veio o último cliente.",
+                ],
+            }),
+            ("texto", {
+                "tag": "Como o cliente procura",
+                "titulo": "O que o cliente do integrador pesquisa no Google antes de pedir orçamento?",
+                "ps": [
+                    "O seu cliente quase nunca começa digitando o nome técnico do serviço. Ele pesquisa a dor: "
+                    "\"como diminuir a conta de luz\", \"energia solar vale a pena\", \"quanto custa energia solar para "
+                    "casa\" e, mais perto da decisão, \"energia solar perto de mim\" ou o nome da cidade.",
+                    "Por isso o marketing do integrador precisa estar nos dois momentos: no começo, com conteúdo que "
+                    "explica economia, conexão com a distribuidora e prazos, sem prometer conta zerada; e no fim, com o "
+                    "perfil no mapa, a página da cidade e o anúncio aparecendo para quem já quer a simulação.",
+                    "Esse conteúdo educativo também responde às dúvidas que o próprio cliente traz para a visita — o "
+                    "que poupa tempo do vendedor e aumenta a confiança antes do orçamento.",
+                ],
+            }),
+            ("cards", {
+                "tag": "As frentes",
+                "titulo": "O que entra no marketing de uma empresa de energia solar?",
+                "desc": "Quatro frentes que se ajudam. Dá para começar por uma e somar as outras depois.",
+                "itens": [
+                    ("Google Meu Negócio",
+                     "Perfil completo, com fotos de obras feitas (com autorização do cliente), serviços, cidades "
+                     "atendidas e avaliações respondidas. É o que aparece no mapa quando alguém procura instalador "
+                     "na região. Veja como funciona a <a href=\"/google-perfil-empresa/\">otimização do Google "
+                     "Perfil da Empresa</a>."),
+                    ("Site com SEO",
+                     "Uma página para cada tipo de cliente — residencial, comercial, rural — e para as cidades que "
+                     "você atende, com respostas para as dúvidas reais. Detalhes em "
+                     "<a href=\"/blog/site-para-empresa-de-energia-solar/\">site para empresa de energia solar</a>."),
+                    ("Google Ads",
+                     "Anúncio na pesquisa do Google para quem já procura instalação na sua região, com as buscas de "
+                     "curso, vaga e peça bloqueadas. Veja o "
+                     "<a href=\"/trafego-pago-para-energia-solar/\">tráfego pago para energia solar</a>."),
+                    ("Landing page de simulação",
+                     "A página que recebe o clique do anúncio, pede a conta de luz e abre o WhatsApp. Existe um "
+                     "<a href=\"/modelos/landing-page-energia-solar/\">modelo demonstrativo</a> para você ver como fica."),
+                    ("Medição dos pedidos",
+                     "Cada pedido de simulação registrado, por cidade e por canal, para você saber o que traz cliente."),
+                    ("Conteúdo que educa",
+                     "Textos que explicam economia, prazos e conexão sem promessa exagerada — e que viram argumento "
+                     "de venda na visita."),
+                ],
+            }),
+            ("texto", {
+                "tag": "Lei e promessa",
+                "titulo": "O que a lei muda no marketing de energia solar?",
+                "ps": [
+                    "A geração de energia em casa e na empresa tem marco legal próprio: a "
+                    "<a href=\"https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14300.htm\" "
+                    "target=\"_blank\" rel=\"noopener noreferrer\">Lei 14.300/2022</a>, que instituiu as regras da "
+                    "micro e minigeração distribuída e do sistema de compensação de energia. É ela que está por trás das "
+                    "perguntas que o seu cliente faz sobre compensação e conexão com a distribuidora — e um bom "
+                    "conteúdo explica isso em palavras simples.",
+                    "O outro cuidado é a promessa. Frases como \"conta de luz zerada\" ou um percentual fixo de economia "
+                    "para todo mundo podem ser lidas como publicidade enganosa, que o "
+                    "<a href=\"https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm\" target=\"_blank\" "
+                    "rel=\"noopener noreferrer\">Código de Defesa do Consumidor</a> proíbe no art. 37. O marketing que "
+                    "funciona mostra o processo, as obras reais e convida para a simulação — que é onde a economia de "
+                    "cada cliente aparece de verdade.",
+                ],
+            }),
+            ("texto", {
+                "tag": "Sazonalidade",
+                "titulo": "Existe época melhor para divulgar energia solar?",
+                "ps": [
+                    "A dúvida sobre energia solar costuma aparecer quando a conta de luz pesa. A ANEEL define todo mês a "
+                    "<a href=\"https://www.gov.br/aneel/pt-br/assuntos/tarifas/bandeiras-tarifarias\" target=\"_blank\" "
+                    "rel=\"noopener noreferrer\">bandeira tarifária</a> — verde, amarela ou vermelha —, que indica se a "
+                    "energia vai custar mais ou menos naquele período. Meses de bandeira mais cara e de calor, com "
+                    "ar-condicionado ligado, tendem a ser justamente quando muita gente para para fazer a conta — é uma "
+                    "observação de mercado, não um dado medido de buscas.",
+                    "Na prática, isso pede duas coisas: estar no Google o ano inteiro (SEO e Google Meu Negócio "
+                    "trabalham em segundo plano) e ter o anúncio pronto para aumentar a verba quando a procura subir. "
+                    "Quem só começa a divulgar quando a conta já está cara chega depois do concorrente.",
+                ],
+            }),
+            ("passos", {
+                "titulo": "Como funciona o marketing da sua integradora, do diagnóstico aos pedidos?",
+                "itens": [
+                    ("Diagnóstico", "Olho o seu perfil no Google, o site e quem aparece antes de você nas suas cidades."),
+                    ("Plano por escrito", "Em até 24 horas: as frentes para começar, o que entra e o valor de cada uma."),
+                    ("Base no Google", "Perfil do Google Meu Negócio e páginas do site por tipo de cliente e cidade."),
+                    ("Anúncio e landing page", "Quando fizer sentido, campanha no Google com página de simulação."),
+                    ("Medição", "Relatório de pedidos de simulação por canal e por cidade."),
+                ],
+            }),
+            ("orcamento", {
+                "titulo": "Por onde a sua empresa de energia solar quer começar?",
+                "desc": "Escolha o ponto de partida. O orçamento é grátis e sai em até 24 horas pelo WhatsApp.",
+                "destaque": 1,
+                "itens": [
+                    ("Aparecer no mapa", "Para quem ainda depende de indicação e não aparece no Google.",
+                     ["Google Meu Negócio completo", "Fotos de obras e serviços", "Rotina de avaliações"],
+                     "Olá, Renan! Tenho empresa de energia solar e quero aparecer no Google Maps.", "Pedir orçamento"),
+                    ("Site + Google Meu Negócio", "Para ser encontrado nas buscas da sua região o ano inteiro.",
+                     ["Páginas por tipo de cliente e cidade", "SEO e Google Meu Negócio", "Pedidos medidos"],
+                     "Olá, Renan! Quero site e Google Meu Negócio para a minha empresa de energia solar.", "Pedir orçamento"),
+                    ("Anúncio + landing page", "Para encher a agenda de simulações agora.",
+                     ["Google Ads por cidade", "Landing page de simulação", "Medição de cada pedido"],
+                     "Olá, Renan! Quero Google Ads com landing page para energia solar.", "Pedir orçamento"),
+                ],
+            }),
+        ],
+        "faq": [
+            ("Marketing para energia solar funciona para empresa pequena?",
+             "Funciona, e costuma pesar mais para a pequena, porque o cliente decide por quem aparece e passa "
+             "confiança na região dele. Dá para começar pelo Google Meu Negócio e somar site e anúncio depois."),
+            ("O que traz cliente mais rápido: SEO ou anúncio?",
+             "O anúncio no Google traz pedidos mais rápido, enquanto você paga. O SEO e o Google Meu Negócio levam "
+             "meses para firmar, mas depois trazem pedido sem custo por clique. O ideal é usar os dois juntos."),
+            ("Posso prometer economia na conta de luz no anúncio?",
+             "Com cuidado. Prometer conta zerada ou um percentual igual para todo mundo pode ser publicidade enganosa. "
+             "O mais seguro é convidar para a simulação, onde a economia de cada cliente é calculada."),
+            ("Vale a pena ter uma página para cada cidade que atendo?",
+             "Vale, desde que cada página tenha conteúdo próprio: obras feitas ali, particularidades da região e "
+             "como funciona o atendimento. Página igual trocando só o nome da cidade não ajuda."),
+            ("Vocês fazem as fotos das obras?",
+             "Eu oriento como fotografar e organizar as fotos das obras, sempre com autorização do cliente. As "
+             "fotos reais da sua equipe valem mais do que imagem de banco."),
+            ("Quanto custa o marketing para empresa de energia solar?",
+             "Depende das frentes que entram e de quantas cidades você atende. O orçamento é individual, grátis e "
+             "sai em até 24 horas pelo WhatsApp. A verba de anúncio, quando houver, é paga direto ao Google."),
+            ("Existe fidelidade?",
+             "Não existe fidelidade. Para cancelar, basta avisar com 30 dias de antecedência. As demais condições "
+             "vão por escrito junto com o orçamento."),
+        ],
+        "relacionados": [
+            ("/blog/como-conseguir-clientes-energia-solar/", "Como conseguir clientes de energia solar",
+             "Os canais que trazem pedido de orçamento, um por um."),
+            ("/blog/como-divulgar-empresa-de-energia-solar/", "Como divulgar empresa de energia solar",
+             "Ideias práticas de divulgação para integradores."),
+            ("/trafego-pago-para-energia-solar/", "Tráfego pago para energia solar",
+             "Google Ads por cidade, com landing page e medição."),
+        ],
+        "cta_final": ("Me conte as cidades onde você instala. Eu te digo por onde começar.",
+                      "Sem compromisso: eu olho como a sua empresa aparece hoje no Google e quem aparece antes de você."),
     },
 ]

@@ -34,16 +34,21 @@ ARTIGOS = [
                  "integradoras venderem mais sem depender só de indicação."),
         "cat": "Energia solar",
         "data": DATA,
-        "trilha_extra": ("/gestao-de-trafego-pago/", "Tráfego pago"),
+        "atualizado": "2026-10-04",
+        "trilha_extra": ("/marketing-para-energia-solar/", "Marketing para energia solar"),
         "corpo": f"""
         <p>Para conseguir clientes de energia solar hoje, a integradora precisa estar onde o cliente pesquisa
         antes de pedir orçamento: no <strong>Google Maps</strong>, num <strong>site que explica o sistema na
         língua dele</strong> e em <strong>anúncios no Google e no Instagram</strong> bem segmentados por região.
         Indicação continua importante, mas sozinha ela não enche a agenda de visitas técnicas.</p>
 
-        <p>O mercado de energia solar ficou mais disputado. Em muitas cidades existem dezenas de integradoras
-        oferecendo o mesmo kit, e o cliente compara três ou quatro orçamentos antes de fechar. Quem aparece
-        primeiro, passa confiança e responde rápido sai na frente — mesmo sem ser o mais barato.</p>
+        <p>O mercado de energia solar ficou mais disputado. O IBGE classifica a instalação de painéis solares em
+        prédios dentro do
+        <a href="https://cnae.ibge.gov.br/?subclasse=4321500&amp;tipo=cnae&amp;versao=10&amp;view=subclasse" target="_blank" rel="noopener noreferrer">CNAE 4321-5/00</a>
+        (Instalação e manutenção elétrica), que tinha 328.524 empresas ativas e 17.358 aberturas em 90 dias pelos
+        dados públicos de CNPJ de junho de 2026 — nem todas de energia solar, porque o código inclui eletricistas
+        em geral. O cliente compara vários orçamentos antes de fechar, e quem aparece primeiro, passa confiança e
+        responde rápido sai na frente — mesmo sem ser o mais barato.</p>
 
         {caixa('<p><strong>Resposta rápida:</strong> organize o Perfil da Empresa no Google com fotos de '
                'instalações reais e avaliações; tenha um site com páginas separadas para residencial, comercial e '
@@ -108,12 +113,23 @@ ARTIGOS = [
                 ["Instagram/Facebook", "Gerar demanda na sua região", "Obras reais e objetivo de conversa"],
             ])}
 
+        <h2>6. Esteja pronto quando a conta de luz pesar</h2>
+        <p>A procura por energia solar costuma acompanhar o bolso. A ANEEL define todo mês a
+        <a href="https://www.gov.br/aneel/pt-br/assuntos/tarifas/bandeiras-tarifarias" target="_blank" rel="noopener noreferrer">bandeira tarifária</a>
+        — verde, amarela ou vermelha —, que indica se a energia vai custar mais naquele período. Meses de bandeira
+        mais cara e de calor, com ar-condicionado ligado, tendem a ser quando muita gente decide fazer a conta. Quem já está
+        no Google o ano todo e tem o anúncio pronto para aumentar a verba nesses meses recebe os pedidos primeiro;
+        quem só começa a divulgar quando a conta já subiu chega atrasado.</p>
+
         <h2>Por onde começar a conseguir clientes de energia solar</h2>
         <p>Se a sua empresa ainda depende só de indicação, comece pelo que traz resultado mais rápido: Perfil da
         Empresa organizado e um anúncio no Google bem feito para a sua cidade, levando para uma página específica.
         Em paralelo, construa o site com as páginas certas — é ele que vai trazer cliente de graça daqui a alguns
         meses. Se você quer ajuda com a parte dos anúncios, veja como funciona o
-        {link('/trafego-pago-para-energia-solar/', 'tráfego pago para energia solar')}.</p>
+        {link('/trafego-pago-para-energia-solar/', 'tráfego pago para energia solar')}. E para ver as quatro frentes
+        juntas — Google Meu Negócio, site, anúncio e landing page —, leia sobre o
+        {link('/marketing-para-energia-solar/', 'marketing para empresas de energia solar')}. Ideias práticas de
+        divulgação estão em {link('/blog/como-divulgar-empresa-de-energia-solar/', 'como divulgar empresa de energia solar')}.</p>
 """,
         "faq": [
             ("Qual a melhor forma de conseguir clientes de energia solar?",
@@ -130,6 +146,9 @@ ARTIGOS = [
             ("Instagram funciona para empresa de energia solar?",
              "Funciona para gerar demanda e mostrar obras, principalmente com anúncio segmentado por região. Mas "
              "para quem já está procurando orçamento, o Google costuma trazer contatos mais prontos para fechar."),
+            ("Existe época melhor para buscar clientes de energia solar?",
+             "A procura costuma crescer quando a conta de luz pesa — meses de calor e de bandeira tarifária mais cara. "
+             "O ideal é estar no Google o ano todo e aumentar a verba de anúncio nesses períodos."),
         ],
         "cta": ("Tem uma empresa de energia solar e quer mais pedidos de orçamento? Me conte a sua cidade e como "
                 "você vende hoje. Em até 24 horas eu te digo por onde começar — Maps, site ou anúncio.",
@@ -196,7 +215,9 @@ ARTIGOS = [
         celular e ligação com o {link('/google-perfil-empresa/', 'Perfil da Empresa no Google')}. Enquanto o site
         sobe nas buscas orgânicas — o que leva meses —, anúncios no Google levando para as páginas certas trazem
         pedidos de orçamento desde o primeiro mês. Veja
-        {link('/blog/como-conseguir-clientes-energia-solar/', 'como conseguir clientes de energia solar')}.</p>
+        {link('/blog/como-conseguir-clientes-energia-solar/', 'como conseguir clientes de energia solar')} e como
+        o site se junta ao Google Meu Negócio e ao anúncio no
+        {link('/marketing-para-energia-solar/', 'marketing para empresas de energia solar')}.</p>
 
         {tabela(
             ["Página", "Busca que ela disputa", "O que precisa mostrar"],
@@ -251,6 +272,124 @@ ARTIGOS = [
                 "os tipos de cliente. Em até 24 horas você recebe o orçamento sob medida.",
                 wa("Olá, Renan! Tenho uma empresa de energia solar e quero um orçamento de site."),
                 "Quero o site da minha integradora"),
+    },
+
+    # ------------------------------------------------------------------ energia solar: divulgar
+    # Etapa 4 do plano de nichos (04/10/2026). Busca do DONO: "como divulgar energia solar",
+    # "ideias de marketing para energia solar". Diferente do "como conseguir clientes" (canais):
+    # aqui sao ideias praticas de divulgacao. Fontes: ANEEL, CDC, LGPD.
+    {
+        "slug": "como-divulgar-empresa-de-energia-solar",
+        "h1": "Como divulgar empresa de energia solar: 10 ideias que trazem pedido de orçamento",
+        "title": "Como divulgar empresa de energia solar: 10 ideias",
+        "desc": ("Como divulgar empresa de energia solar: 10 ideias práticas para o integrador — obras reais, "
+                 "parcerias, indicação, conteúdo e anúncio no momento certo."),
+        "cat": "Energia solar",
+        "data": "2026-10-04",
+        "trilha_extra": ("/marketing-para-energia-solar/", "Marketing para energia solar"),
+        "corpo": f"""
+        <p>Para divulgar uma empresa de energia solar, o integrador precisa mostrar prova — obras reais,
+        clientes satisfeitos, processo explicado — no lugar onde o cliente da região já está olhando: o Google,
+        o WhatsApp e as pessoas em quem ele confia. As ideias abaixo são práticas, cabem no orçamento de uma
+        empresa pequena e não dependem de prometer economia que você não pode garantir.</p>
+
+        {caixa('<p><strong>Resposta rápida:</strong> publique fotos e vídeos de obras reais (com autorização), '
+               'peça avaliação na hora certa, faça parcerias com quem já fala com o seu cliente, organize a '
+               'indicação, explique as dúvidas mais comuns e anuncie no Google quando a conta de luz pesa. Tudo '
+               'levando para uma conversa no WhatsApp.</p>')}
+
+        <h2>1. Transforme cada obra entregue em vitrine</h2>
+        <p>Nada convence mais o vizinho do que a obra na rua dele. Fotografe o antes, o durante e o sistema
+        pronto, grave um vídeo curto do telhado e publique no
+        {link('/google-perfil-empresa/', 'Google Perfil da Empresa')} e nas redes — sempre com autorização
+        escrita do cliente. Foto de banco de imagem não mostra que você existe; foto da sua equipe mostra.</p>
+
+        <h2>2. Peça a avaliação no momento em que o cliente está feliz</h2>
+        <p>O melhor momento costuma ser quando o sistema é ligado ou quando chega a primeira conta já com a
+        energia compensada. Mande o link direto da avaliação pelo WhatsApp e peça que ele conte como foi a
+        instalação. Avaliação detalhada, com cidade e tipo de obra, ajuda quem está decidindo — e ajuda a sua
+        empresa a aparecer no mapa.</p>
+
+        <h2>3. Faça parceria com quem já fala com o seu cliente</h2>
+        <p>Arquitetos, engenheiros, construtoras, lojas de material elétrico e revendas agrícolas conversam todo
+        dia com quem pode instalar energia solar. Uma parceria com regras por escrito — como a indicação chega,
+        como é atendida, como cada parte é remunerada — vira um canal estável, que não depende de anúncio.</p>
+
+        <h2>4. Organize a indicação, em vez de esperar por ela</h2>
+        <p>Indicação boa não acontece por acaso. Depois da instalação, deixe com o cliente uma mensagem pronta
+        para ele encaminhar e combine, por escrito, como você agradece quem indica. O que não pode é prometer um
+        prêmio e não cumprir — isso desfaz a confiança que a obra construiu.</p>
+
+        <h2>5. Responda as dúvidas que todo cliente faz</h2>
+        <p>Funciona em dia nublado? Precisa trocar o telhado? Como fica a conta depois? E a
+        {LEI_14300}, muda o quê? Cada pergunta dessas vira um texto curto no site, um vídeo no celular ou uma
+        resposta pronta no WhatsApp. Quem explica bem chega na visita com o cliente já confiando.</p>
+
+        <h2>6. Divulgue com mais força quando a conta de luz pesa</h2>
+        <p>A ANEEL define todo mês a
+        <a href="https://www.gov.br/aneel/pt-br/assuntos/tarifas/bandeiras-tarifarias" target="_blank" rel="noopener noreferrer">bandeira tarifária</a>
+        que indica se a energia vai custar mais. Meses de bandeira mais cara e de calor tendem a ser quando muita gente
+        para para fazer a conta. Planeje para ter conteúdo pronto, perfil atualizado e verba de anúncio reservada
+        para esses períodos.</p>
+
+        <h2>7. Anuncie no Google por cidade, com uma página de simulação</h2>
+        <p>Para quem já pesquisa instalação, o anúncio na pesquisa do Google é o atalho. Separe as campanhas por
+        cidade atendida, bloqueie buscas de curso e vaga e leve o clique para uma
+        {link('/criacao-de-landing-page/', 'landing page')} que pede a conta de luz. Há um
+        {link('/modelos/landing-page-energia-solar/', 'modelo demonstrativo')} para você ver como fica. O passo a
+        passo dos anúncios está em {link('/trafego-pago-para-energia-solar/', 'tráfego pago para energia solar')}.</p>
+
+        <h2>8. Apareça onde a sua cidade se reúne</h2>
+        <p>Associação comercial, sindicato rural, cooperativa, feira de agronegócio, grupo de empresários: são
+        lugares onde uma conversa de dez minutos explicando como funciona a geração própria vale mais do que um
+        panfleto. Leve obras reais no celular e saia com contatos para visita.</p>
+
+        <h2>9. Use o WhatsApp com consentimento, não como spam</h2>
+        <p>Lista de transmissão funciona para quem pediu para receber: clientes, interessados que fizeram
+        simulação, parceiros. Mande conteúdo útil — obra nova na região, dúvida respondida — e não disparos em
+        massa para números comprados. Além de afastar o cliente, uso de dados sem base legal esbarra na
+        <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener noreferrer">LGPD (Lei 13.709/2018)</a>.</p>
+
+        <h2>10. Fale a verdade sobre economia</h2>
+        <p>"Conta de luz zerada" chama atenção, mas pode ser lida como publicidade enganosa, que o
+        <a href="https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm" target="_blank" rel="noopener noreferrer">Código de Defesa do Consumidor</a>
+        proíbe no art. 37. A divulgação que dura convida para a simulação, onde a economia real de cada cliente
+        aparece. Isso protege a empresa e atrai quem está realmente pronto para fechar.</p>
+
+        {tabela(
+            ["Ideia", "Custo", "Quando dá resultado"],
+            [
+                ["Obras reais e avaliações", "Baixo: tempo da equipe", "Semanas, e acumula"],
+                ["Parcerias e indicação", "Baixo: comissão combinada", "Meses, e fica estável"],
+                ["Conteúdo que responde dúvidas", "Baixo a médio", "Meses, pelo Google"],
+                ["Anúncio no Google com landing page", "Verba paga ao Google", "Dias, enquanto a verba roda"],
+            ])}
+
+        <h2>Por onde começar a divulgar a sua empresa de energia solar?</h2>
+        <p>Se você só pode fazer três coisas agora, comece por fotos de obras e avaliações no Google Perfil da
+        Empresa, uma parceria local e um anúncio no Google para a cidade onde você mais instala. Os canais que
+        trazem pedido de orçamento estão detalhados em
+        {link('/blog/como-conseguir-clientes-energia-solar/', 'como conseguir clientes de energia solar')}, e as
+        quatro frentes juntas em {link('/marketing-para-energia-solar/', 'marketing para empresas de energia solar')}.</p>
+""",
+        "faq": [
+            ("Qual a forma mais barata de divulgar energia solar?",
+             "Fotos de obras reais e avaliações no Google Perfil da Empresa, parcerias com quem já fala com o seu "
+             "cliente e indicação organizada. Custam mais tempo do que dinheiro e o resultado acumula."),
+            ("Posso usar foto da casa do cliente na divulgação?",
+             "Pode, com autorização dele, de preferência por escrito. Evite mostrar endereço ou detalhes que "
+             "identifiquem a casa sem permissão."),
+            ("Vale a pena divulgar energia solar no Instagram?",
+             "Vale para mostrar obras e gerar lembrança na sua região. Para quem já procura orçamento, o Google "
+             "costuma trazer pedidos mais prontos para fechar."),
+            ("Posso mandar mensagem no WhatsApp para uma lista de contatos?",
+             "Só para quem autorizou receber, como clientes e interessados que fizeram simulação. Disparo para "
+             "números comprados afasta o cliente e pode esbarrar na LGPD."),
+        ],
+        "cta": ("Tem uma empresa de energia solar e quer divulgar do jeito certo? Me conte as cidades onde você "
+                "instala. Em até 24 horas eu te digo por onde começar.",
+                wa("Olá, Renan! Tenho uma empresa de energia solar e quero divulgar melhor. Pode me ajudar?"),
+                "Quero divulgar minha empresa"),
     },
 
     # ------------------------------------------------------------------ 3

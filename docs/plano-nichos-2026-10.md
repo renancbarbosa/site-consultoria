@@ -13,7 +13,7 @@
 | 1 | Limpeza de foco (agentes de IA, IPTV/apostas 410, home/menu/rodapé/ficha/llms nos 4 serviços) | **publicada** 04/10/2026 (`90d3bc3`; 410 e 301 conferidos no ar; IndexNow 162 + 32 URLs aceito) |
 | 2 | Landing page para anúncios (urgente) + modelo demonstrativo | **publicada** 04/10/2026 (`5f0e869`; página, 301 e modelo conferidos no ar; IndexNow 163 URLs aceito) |
 | 3 | Tráfego pago empresarial (reorganizar as 7 páginas) | **publicada** 04/10/2026 (`0e619b73`; principal, 301 e 4 nichos conferidos no ar; IndexNow 163 URLs aceito) |
-| 4 | Energia solar (marketing completo) | **em andamento** |
+| 4 | Energia solar (marketing completo) | **aguardando "pode publicar"** (prévia local, 04/10/2026) |
 | 5 | SEO para YouTube | pendente |
 | 6 | Limpeza empresarial | pendente |
 | 7 | Fortalecer estética e pequenas empresas | pendente |
@@ -71,6 +71,18 @@ arquivo `_redirects` da raiz. Não usar meta refresh.
   Brasil); entrou a regra verificada do COFECI (CRECI no anúncio).
 - `/blog/seo-ou-trafego-pago-empresa-local/`: corrigida a frase "não vendo gestão de tráfego pago"
   (contradizia o serviço novo) e incluído link para a página principal.
+
+## Etapa 4 — o que foi feito (prévia local, 04/10/2026)
+- Página principal nova `/marketing-para-energia-solar/` (servicos_marketing.py): Google Meu Negócio,
+  site/SEO, Google Ads e landing page para integradores; liga com /trafego-pago-para-energia-solar/,
+  os 3 artigos e o modelo demonstrativo.
+- Artigo fortalecido `/blog/como-conseguir-clientes-energia-solar/` (frase sem fonte trocada pelo dado
+  IBGE/CNPJ; seção de sazonalidade com ANEEL; links para a principal e o artigo novo).
+- Artigo novo `/blog/como-divulgar-empresa-de-energia-solar/` (10 ideias práticas).
+- Fontes: Lei 14.300/2022, CDC art. 37, ANEEL bandeiras tarifárias, IBGE/Concla CNAE 4321-5/00
+  (inclui instalação de painéis fotovoltaicos), CNPJ público jun/2026 (328.524 ativas, 17.358
+  abertas em 90 dias — código inclui eletricistas em geral, dito na página), LGPD.
+- Sitemap 162 → 164; llms.txt ganhou a seção "## Energia solar" com links.
 
 ## Decisões anteriores (04/10/2026)
 - Marca oficial "RCB SEO"; dados só em `data/marca.json`.

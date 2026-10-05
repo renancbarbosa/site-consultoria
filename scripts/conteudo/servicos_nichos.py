@@ -309,7 +309,7 @@ TRAFEGO_EXTRA = {
         "relacionados": [
             ("/blog/como-conseguir-clientes-energia-solar/", "Como conseguir clientes de energia solar", "Maps, site e anúncios juntos."),
             ("/gestao-de-trafego-pago/", "Gestão de tráfego pago para empresas", "Como funciona a gestão de Google Ads da RCB SEO."),
-            ("/criacao-de-landing-page/", "Landing page para anúncios", "A página que recebe o clique e pede a simulação."),
+            ("/marketing-para-energia-solar/", "Marketing para energia solar", "As quatro frentes: Maps, site, anúncio e landing page."),
         ],
     },
     "trafego-pago-para-imobiliarias": {
