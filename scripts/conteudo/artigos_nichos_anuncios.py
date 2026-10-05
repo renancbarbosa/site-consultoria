@@ -1105,4 +1105,130 @@ ARTIGOS = [
                 wa("Olá, Renan! Sou advogado(a) e quero fazer o marketing do escritório dentro das regras da OAB."),
                 "Quero começar do jeito certo"),
     },
+
+    # ------------------------------------------------------------------ higienizacao: conseguir clientes
+    # Etapa 9a do plano de nichos (05/10/2026). Busca do DONO: "como conseguir clientes para higienização
+    # de estofados". Fontes: ajuda do Perfil da Empresa (area de cobertura), CDC art. 37, LGPD.
+    {
+        "slug": "como-conseguir-clientes-para-higienizacao-de-estofados",
+        "h1": "Como conseguir clientes para higienização de estofados: agenda cheia e cliente que volta",
+        "title": "Como conseguir clientes para higienização de estofados",
+        "desc": ("Como conseguir clientes para higienização de estofados: Google Maps, antes e depois, orçamento por "
+                 "foto, empresas e cliente que volta."),
+        "cat": "Higienização de estofados",
+        "data": "2026-10-05",
+        "trilha_extra": ("/marketing-para-empresa-de-higienizacao-de-estofados/",
+                         "Marketing para higienização de estofados"),
+        "corpo": f"""
+        <p>Para conseguir clientes para higienização de estofados, o caminho mais seguro é aparecer no Google Maps
+        da sua região, mostrar o antes e depois de forma organizada, responder o orçamento por foto em minutos e
+        transformar cada serviço avulso num cliente que volta. A indicação continua importante, mas é a busca no
+        Google que enche a agenda nas semanas em que ninguém indica.</p>
+
+        {caixa('<p><strong>Resposta rápida:</strong> configure o Google Meu Negócio com a área que você atende, '
+               'publique antes e depois por tipo de peça, peça avaliação logo depois do serviço, responda rápido no '
+               'WhatsApp, procure clientes empresariais (hotéis, clínicas, quem aluga por temporada) e mande um '
+               'lembrete para quem já é cliente alguns meses depois.</p>')}
+
+        <h2>1. Entenda como o seu cliente decide</h2>
+        <p>Quase ninguém pesquisa higienização de estofados por curiosidade. A pessoa derrubou café no sofá, vai
+        receber visita, o colchão está com cheiro, o bebê está chegando. Ela pesquisa no celular, abre duas ou três
+        empresas, manda a foto e fecha com quem responde primeiro e passa confiança. Tudo o que vem a seguir serve
+        para você estar nessa lista curta e ganhar a comparação.</p>
+
+        <h2>2. Apareça no Google Maps com a área que você atende</h2>
+        <p>Higienização de estofados vai até a casa do cliente. Para o Google, isso é uma empresa de serviço local:
+        a ajuda sobre
+        <a href="https://support.google.com/business/answer/9157481?hl=pt-BR" target="_blank" rel="noopener noreferrer">áreas de cobertura</a>
+        orienta mostrar a região atendida e tirar o endereço do perfil se você não recebe clientes nele. Preencha
+        a lista de serviços (sofá, colchão, tapete, cadeiras, banco de carro, impermeabilização), coloque fotos
+        reais e responda todas as avaliações. É assim que a empresa passa a aparecer quando alguém do bairro
+        pesquisa "limpeza de sofá perto de mim". Veja a
+        {link('/google-perfil-empresa/', 'otimização do Google Perfil da Empresa')}.</p>
+
+        <h2>3. Transforme o antes e depois em vitrine</h2>
+        <p>Antes e depois é o argumento mais forte desse ramo — desde que seja organizado. Fotografe na mesma
+        posição e com a mesma luz, anote o tipo de tecido e o serviço feito, e separe por categoria. Peça
+        autorização ao cliente antes de publicar e não mostre endereço, rostos nem objetos pessoais. Uma galeria
+        assim no perfil do Google e no site vale mais que qualquer frase de efeito.</p>
+
+        <h2>4. Não prometa o que nem sempre acontece</h2>
+        <p>Algumas manchas não saem por completo, e alguns tecidos pedem cuidado especial. "Remove 100% das
+        manchas" pode até atrair o clique, mas gera reclamação e avaliação ruim — e o
+        <a href="https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm" target="_blank" rel="noopener noreferrer">Código de Defesa do Consumidor (art. 37)</a>
+        proíbe publicidade que induza o consumidor a erro. Prometa o que você controla: avaliação da peça antes do
+        serviço, produto adequado ao tecido, tempo de secagem informado e cuidado com a casa do cliente.</p>
+
+        <h2>5. Facilite o orçamento por foto</h2>
+        <p>O cliente quer saber o preço antes de marcar, e a foto resolve. Coloque no site e no perfil um botão de
+        WhatsApp com mensagem pronta pedindo a foto, o tipo de peça (sofá de quantos lugares, colchão de que
+        tamanho) e o bairro. Assim o cliente manda tudo de uma vez, você responde sem precisar fazer cinco
+        perguntas e chega na frente de quem demora. Responder em minutos, e não em horas, é metade da venda.</p>
+
+        <h2>6. Tenha uma página para cada serviço</h2>
+        <p>Quem pesquisa "higienização de colchão" não quer cair numa página genérica de limpeza. Uma página para
+        sofá, outra para colchão, outra para tapete e outra para banco de carro, cada uma com fotos, o que está
+        incluído, o tempo de secagem e o botão de orçamento, ajuda o Google a mostrar a página certa para cada
+        busca — e ajuda o cliente a confiar que você faz exatamente o que ele precisa.</p>
+
+        <h2>7. Procure clientes empresariais</h2>
+        <p>Hotéis e pousadas, clínicas e consultórios com sala de espera, escritórios, escolas, salões de festa,
+        concessionárias e quem aluga imóvel por temporada têm estofados que sujam o ano todo. Esse cliente chama de
+        novo, em volume, e compara menos preço quando o serviço é bom. Uma página no site só para empresas,
+        explicando como funciona o atendimento fora do horário comercial e a nota fiscal, abre essa porta.</p>
+
+        <h2>8. Anuncie no Google para quem procura agora</h2>
+        <p>Um anúncio na pesquisa do Google coloca você na frente de quem já está procurando o serviço na sua
+        região. O cuidado principal desse ramo é bloquear as buscas que não são de cliente: curso de higienização,
+        máquina extratora, produto para limpar sofá sozinho e vaga de emprego. Sem esse filtro, boa parte da verba
+        vai embora. Veja como funciona a {link('/gestao-de-trafego-pago/', 'gestão de tráfego pago')}.</p>
+
+        <h2>9. Peça a avaliação na hora certa</h2>
+        <p>O melhor momento para pedir avaliação é quando o cliente vê o sofá limpo, antes de você ir embora ou
+        logo depois, pelo WhatsApp, com o link direto para o seu perfil. Avaliações recentes, com fotos e
+        respondidas por você, pesam na escolha de quem está comparando duas empresas no mapa. Nunca compre nem
+        troque avaliação: além de ser contra as regras do Google, um perfil suspenso apaga todo o trabalho.</p>
+
+        <h2>10. Faça o cliente voltar</h2>
+        <p>Sofá suja de novo. Guarde o contato de quem atendeu (com autorização, como pede a
+        <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener noreferrer">LGPD</a>),
+        anote o que foi limpo e mande um lembrete alguns meses depois. Ofereça também o que combina com o serviço,
+        como a impermeabilização ou a limpeza do colchão para quem só fez o sofá. Um cliente que volta custa muito
+        menos do que conquistar um novo, e é ele quem indica você para a vizinha.</p>
+
+        {tabela(
+            ["Cliente", "O que busca", "O que precisa ver"],
+            [
+                ["Casa de família", "Resolver a mancha ou o cheiro rápido", "Antes e depois, preço por foto e avaliações"],
+                ["Quem aluga por temporada", "Imóvel pronto entre um hóspede e outro", "Agenda flexível e retorno periódico"],
+                ["Hotel, clínica e escritório", "Estofados limpos sem atrapalhar o trabalho", "Atendimento fora do horário e nota fiscal"],
+            ])}
+
+        <h2>Por onde começar a conseguir clientes para higienização de estofados?</h2>
+        <p>Comece pelo perfil no Google com a área de atendimento e pelas fotos de antes e depois, porque é ali que
+        o cliente compara. Depois, organize o orçamento por foto no WhatsApp e, quando quiser pedidos mais rápido,
+        um anúncio no Google com as buscas erradas bloqueadas. As frentes juntas estão em
+        {link('/marketing-para-empresa-de-higienizacao-de-estofados/', 'marketing para empresas de higienização de estofados')}.
+        Se você também faz limpeza de condomínios e empresas, veja
+        {link('/marketing-para-empresa-de-limpeza/', 'marketing para empresa de limpeza')}.</p>
+""",
+        "faq": [
+            ("Como divulgar higienização de estofados?",
+             "Google Meu Negócio com a área que você atende, antes e depois organizado por peça, avaliações pedidas "
+             "logo depois do serviço, um site com página por serviço e, se quiser pedidos rápidos, anúncio no Google."),
+            ("Vale a pena anunciar higienização de estofados no Google?",
+             "Vale para quem pesquisa o serviço na sua região, desde que as buscas de curso, de máquina e de vaga de "
+             "emprego sejam bloqueadas."),
+            ("Higienização de estofados precisa de endereço no Google Maps?",
+             "Não. Para quem vai até o cliente, o Google orienta mostrar a área de cobertura e remover o endereço se "
+             "você não recebe clientes nele."),
+            ("Como fazer o cliente de higienização voltar?",
+             "Guarde o contato com autorização, anote o que foi limpo, mande um lembrete alguns meses depois e "
+             "ofereça serviços que combinam, como impermeabilização e limpeza de colchão."),
+        ],
+        "cta": ("Tem uma empresa de higienização de estofados e quer a agenda mais cheia? Me conte a região que você "
+                "atende e os serviços que faz. Em até 24 horas eu te digo por onde começar.",
+                wa("Olá, Renan! Tenho uma empresa de higienização de estofados e quero conseguir mais clientes."),
+                "Quero mais clientes"),
+    },
 ]

@@ -1180,6 +1180,215 @@ PAGINAS = [
                       "Sem compromisso: eu olho como a sua empresa aparece hoje no Google e quem aparece antes de você."),
     },
     {
+        # Etapa 9a do plano de nichos (05/10/2026): pagina principal do nicho HIGIENIZACAO DE ESTOFADOS.
+        # Publico: o DONO da empresa de higienizacao (regra de ouro). Fontes conferidas em 05/10/2026:
+        # ajuda do Perfil da Empresa (area de cobertura), Lei 6.360/1976 (saneantes), pagina de saneantes
+        # da Anvisa, CDC art. 37, LGPD e API de CNAE do IBGE (nao ha codigo proprio para estofados; o mais
+        # proximo descrito e o 9601-7/01, que inclui tapetes, carpetes e cortinas na casa do cliente).
+        # Sem numero de CNPJ de proposito: nao existe codigo que conte so as empresas de estofados.
+        "slug": "marketing-para-empresa-de-higienizacao-de-estofados",
+        "nacional": True,
+        "data": "2026-10-05",
+        "publico": "Empresas de higienização e limpeza de estofados, colchões e tapetes",
+        "title": "Marketing para Higienização de Estofados | RCB SEO",
+        "desc": ("Marketing para empresas de higienização de estofados: Google Meu Negócio, site, Google Ads e "
+                 "orçamento por foto para encher a agenda. Orçamento grátis em 24h."),
+        "trilha": "Marketing para higienização de estofados",
+        "servico": "Marketing para empresas de higienização de estofados",
+        "eyebrow": "Para empresas de higienização de todo o Brasil",
+        "h1": "Marketing e SEO para empresas de higienização de estofados",
+        "sub": ("Marketing para empresa de higienização de estofados é fazer quem tem um sofá manchado, um colchão "
+                "ou um banco de carro para limpar encontrar você no Google — e mandar a foto pedindo orçamento. "
+                "Eu cuido do Google Meu Negócio com a sua área de atendimento, do site com uma página por serviço e "
+                "do anúncio no Google, com foco em agenda cheia e cliente que volta. Orçamento grátis em até 24 horas."),
+        "cta_hero": "Quero a agenda mais cheia",
+        "msg": "Olá, Renan! Tenho uma empresa de higienização de estofados e quero mais clientes pelo Google.",
+        "pills": ["Orçamento em até 24h", "Foco em agenda e retorno", "Prazo por escrito"],
+        "painel_h2": "O que entra no marketing",
+        "painel": [
+            "Google Meu Negócio com área de atendimento.",
+            "Site com página para sofá, colchão, tapete e carro.",
+            "Antes e depois organizados (com autorização).",
+            "Google Ads para quem procura agora.",
+            "Orçamento por foto no WhatsApp.",
+            "Lembrete de retorno para quem já é cliente.",
+        ],
+        "faq_titulo": "Perguntas frequentes sobre marketing para higienização de estofados",
+        "secoes": [
+            ("split", {
+                "tag": "O cenário",
+                "titulo": "Por que a empresa de higienização de estofados tem semana cheia e semana vazia?",
+                "ps": [
+                    "Higienização de estofados é serviço de decisão rápida: a pessoa vê a mancha no sofá, pesquisa no "
+                    "celular, manda foto para duas ou três empresas e fecha com quem responde primeiro e passa mais "
+                    "confiança. Quem depende só de indicação e de post no Instagram fica com a agenda no sobe e desce: "
+                    "uma semana lotada, outra parada.",
+                    "É também um ramo fácil de abrir e cheio de concorrentes informais. Não existe nem um código de "
+                    "atividade só para estofados: na tabela oficial do IBGE, o mais próximo é o "
+                    "<a href=\"https://cnae.ibge.gov.br/?subclasse=9601701&amp;tipo=cnae&amp;versao=10&amp;view=subclasse\" "
+                    "target=\"_blank\" rel=\"noopener noreferrer\">9601-7/01</a>, que inclui a lavagem de tapetes, "
+                    "carpetes e cortinas \"inclusive na residência do cliente\". Para se destacar, não basta preço: "
+                    "precisa aparecer na hora da busca e provar o resultado.",
+                ],
+                "card_titulo": "Sinais de que falta marketing na sua higienização",
+                "card": [
+                    "Agenda que depende de indicação e de sorte.",
+                    "Perfil do Google sem fotos de antes e depois.",
+                    "Nenhuma página explicando cada serviço.",
+                    "Orçamento que demora e o cliente fecha com outro.",
+                    "Cliente antigo que nunca mais chamou.",
+                ],
+            }),
+            ("texto", {
+                "tag": "Antes e depois",
+                "titulo": "Por que o antes e depois é o melhor argumento da higienização de estofados?",
+                "ps": [
+                    "Poucos serviços mostram o resultado tão bem numa foto. Um sofá claro antes e depois da limpeza "
+                    "convence mais que qualquer texto — no Google Meu Negócio, no site e no anúncio. O segredo é "
+                    "organizar: mesma posição, mesma luz, tipo de tecido e de serviço anotados, e as fotos separadas "
+                    "por categoria (sofá, colchão, tapete, cadeira, banco de carro).",
+                    "Dois cuidados. Primeiro, peça autorização ao cliente antes de publicar a foto feita na casa dele, "
+                    "sem mostrar endereço nem rostos. Segundo, não prometa o que nem sempre acontece: algumas manchas "
+                    "não saem por completo, e o "
+                    "<a href=\"https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm\" target=\"_blank\" "
+                    "rel=\"noopener noreferrer\">Código de Defesa do Consumidor (art. 37)</a> proíbe publicidade que "
+                    "induza o consumidor a erro. \"Remove 100% das manchas\" gera reclamação; \"avaliação do tecido e "
+                    "da mancha antes do serviço\" gera confiança.",
+                ],
+            }),
+            ("texto", {
+                "tag": "Google Meu Negócio",
+                "titulo": "Como a higienização de estofados aparece no Google Maps se atende na casa do cliente?",
+                "ps": [
+                    "Quem vai até o cliente é, para o Google, uma empresa de serviço local. Na ajuda do Perfil da "
+                    "Empresa sobre "
+                    "<a href=\"https://support.google.com/business/answer/9157481?hl=pt-BR\" target=\"_blank\" "
+                    "rel=\"noopener noreferrer\">áreas de cobertura</a>, a orientação é mostrar a região atendida e "
+                    "tirar o endereço do perfil se você não recebe clientes nele.",
+                    "Com a área certa, a lista de serviços completa, fotos reais e avaliações respondidas, a empresa "
+                    "passa a aparecer quando alguém do bairro pesquisa \"limpeza de sofá perto de mim\" ou "
+                    "\"higienização de colchão\". Veja a "
+                    "<a href=\"/google-perfil-empresa/\">otimização do Google Perfil da Empresa</a>.",
+                ],
+            }),
+            ("cards", {
+                "tag": "As frentes",
+                "titulo": "O que entra no marketing de uma empresa de higienização de estofados?",
+                "desc": "As frentes que enchem a agenda. Dá para começar por uma e somar as outras.",
+                "itens": [
+                    ("Google Meu Negócio",
+                     "Área de atendimento, lista de serviços, fotos de antes e depois por categoria e rotina de "
+                     "pedir avaliação logo depois do serviço."),
+                    ("Site com páginas por serviço",
+                     "Sofá, colchão, tapete, cadeiras, banco de carro, impermeabilização: cada serviço com a sua "
+                     "página, fotos e um botão para mandar a foto e pedir orçamento."),
+                    ("Orçamento por foto",
+                     "Botão de WhatsApp com mensagem pronta pedindo a foto, o tipo de peça e o bairro — o cliente "
+                     "manda tudo de uma vez e você responde mais rápido."),
+                    ("Google Ads",
+                     "Anúncio na pesquisa do Google para quem procura o serviço agora, com as buscas de curso, "
+                     "máquina e emprego bloqueadas. Veja a <a href=\"/gestao-de-trafego-pago/\">gestão de tráfego "
+                     "pago</a>."),
+                    ("Clientes empresariais",
+                     "Uma página para hotéis, clínicas, escritórios e quem aluga imóvel por temporada: clientes que "
+                     "chamam de novo e em volume."),
+                    ("Medição",
+                     "Cada pedido de orçamento registrado, para saber se veio do mapa, do site ou do anúncio."),
+                ],
+            }),
+            ("texto", {
+                "tag": "Produtos",
+                "titulo": "Como falar dos produtos de limpeza para passar segurança ao cliente?",
+                "ps": [
+                    "Quem tem criança, pet ou alguém com alergia em casa pergunta o que vai ser usado no sofá. Produto "
+                    "de limpeza é saneante, e saneante está sujeito à vigilância sanitária pela "
+                    "<a href=\"https://www.planalto.gov.br/ccivil_03/leis/l6360.htm\" target=\"_blank\" "
+                    "rel=\"noopener noreferrer\">Lei 6.360/1976</a>; a "
+                    "<a href=\"https://www.gov.br/anvisa/pt-br/assuntos/saneantes\" target=\"_blank\" "
+                    "rel=\"noopener noreferrer\">Anvisa</a> explica as regras e permite consultar quais produtos "
+                    "estão regularizados.",
+                    "Usar produto regularizado e dizer isso no site, com o tempo de secagem e os cuidados depois do "
+                    "serviço, responde a dúvida antes que ela vire objeção. É o tipo de informação que diferencia uma "
+                    "empresa organizada de quem só tem a máquina.",
+                ],
+            }),
+            ("texto", {
+                "tag": "Cliente que volta",
+                "titulo": "Como fazer o cliente da higienização de estofados voltar a chamar?",
+                "ps": [
+                    "Sofá suja de novo. Quem gostou do serviço tende a chamar outra vez — se lembrar de você. Guardar "
+                    "o contato (com autorização, como pede a "
+                    "<a href=\"https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm\" "
+                    "target=\"_blank\" rel=\"noopener noreferrer\">LGPD</a>), anotar o que foi limpo e mandar um "
+                    "lembrete alguns meses depois transforma um serviço avulso numa carteira de clientes.",
+                    "O mesmo vale para o cliente empresarial: um hotel ou uma clínica que tem um calendário de limpeza "
+                    "combinado com você deixa de comparar preço toda vez. O marketing traz o primeiro contato; o "
+                    "retorno é o que faz a empresa crescer.",
+                ],
+            }),
+            ("passos", {
+                "titulo": "Como funciona o marketing da sua empresa de higienização, do diagnóstico à agenda cheia?",
+                "itens": [
+                    ("Diagnóstico", "Olho seu perfil no Google, o site e quem aparece antes de você na sua região."),
+                    ("Plano por escrito", "Em até 24 horas: as frentes para começar, o que entra e o valor de cada uma."),
+                    ("Perfil e site", "Área de atendimento, antes e depois organizados e páginas por serviço."),
+                    ("Anúncio, se fizer sentido", "Campanha no Google para quem procura o serviço agora."),
+                    ("Medição", "Relatório de pedidos de orçamento por canal."),
+                ],
+            }),
+            ("orcamento", {
+                "titulo": "Por onde a sua empresa de higienização quer começar?",
+                "desc": "Escolha o ponto de partida. O orçamento é grátis e sai em até 24 horas pelo WhatsApp.",
+                "destaque": 1,
+                "itens": [
+                    ("Aparecer no mapa da região", "Para quem ainda depende só de indicação.",
+                     ["Google Meu Negócio com área de atendimento", "Antes e depois organizados", "Rotina de avaliações"],
+                     "Olá, Renan! Tenho empresa de higienização de estofados e quero aparecer no Google Maps.",
+                     "Pedir orçamento"),
+                    ("Site com página por serviço", "Para ser encontrado em cada tipo de limpeza.",
+                     ["Sofá, colchão, tapete e carro", "Orçamento por foto", "Página para empresas"],
+                     "Olá, Renan! Quero um site para a minha empresa de higienização de estofados.",
+                     "Pedir orçamento"),
+                    ("Anúncio no Google", "Para quem quer pedidos de orçamento agora.",
+                     ["Google Ads na sua região", "Buscas de curso e emprego bloqueadas", "Medição dos pedidos"],
+                     "Olá, Renan! Quero anunciar a minha higienização de estofados no Google.",
+                     "Pedir orçamento"),
+                ],
+            }),
+        ],
+        "faq": [
+            ("Empresa de higienização de estofados precisa de site?",
+             "Ajuda muito. O site mostra o antes e depois por serviço, explica os produtos e o tempo de secagem e "
+             "aparece no Google para buscas de cada tipo de limpeza — coisas que um perfil de rede social não faz."),
+            ("Devo colocar meu endereço no Google Meu Negócio?",
+             "Só se você recebe clientes nele. Para quem vai até a casa do cliente, o Google orienta usar a área de "
+             "cobertura e remover o endereço do perfil."),
+            ("Vale a pena anunciar higienização de estofados no Google Ads?",
+             "Vale para quem pesquisa o serviço na sua região, com um cuidado: bloquear as buscas de curso, de máquina "
+             "extratora e de vaga de emprego, que são muitas nesse ramo e só gastam verba."),
+            ("Posso postar foto do sofá do cliente?",
+             "Com autorização dele, sim, e sem mostrar endereço, rostos ou objetos pessoais. Antes e depois "
+             "organizados por serviço são o melhor argumento de venda da higienização."),
+            ("Quanto custa o marketing para higienização de estofados?",
+             "Depende das frentes que entram e do tamanho da região que você atende. O orçamento é individual, grátis "
+             "e sai em até 24 horas pelo WhatsApp. A verba de anúncio, quando houver, é paga direto ao Google."),
+            ("Existe fidelidade?",
+             "Não existe fidelidade. Para cancelar, basta avisar com 30 dias de antecedência. As demais condições "
+             "vão por escrito junto com o orçamento."),
+        ],
+        "relacionados": [
+            ("/blog/como-conseguir-clientes-para-higienizacao-de-estofados/",
+             "Como conseguir clientes para higienização de estofados",
+             "Orçamento por foto, antes e depois, empresas e cliente que volta."),
+            ("/marketing-para-empresa-de-limpeza/", "Marketing para empresa de limpeza",
+             "Para quem também faz limpeza de condomínios e empresas."),
+            ("/gestao-de-trafego-pago/", "Gestão de tráfego pago",
+             "Anúncio no Google para quem procura higienização agora."),
+        ],
+        "cta_final": ("Me conte a região que você atende e os serviços que faz. Eu te digo por onde começar.",
+                      "Sem compromisso: eu olho como a sua empresa aparece hoje no Google e quem aparece antes de você."),
+    },
+    {
         # Etapa 8 do plano de nichos (05/10/2026): pagina principal de ADVOCACIA. Substitui a antiga
         # /marketing-para-advogados/ (escrita a mao, criada em 15/07/2026) e recebe o 301 de
         # /para-advogados/, que era quem aparecia para "seo para advogados" — por isso o termo SEO fica
