@@ -1060,6 +1060,6 @@ O Cloudflare Pages publica a pasta inteira do repositório. Até 05/10/2026 qual
 `/CLAUDE.md`, `/docs/...`, `/scripts/...` e até os dados brutos do Search Console em `/data/audit/...`.
 Agora `functions/_middleware.js` responde **404 (com noindex)** para `/scripts`, `/docs`, `/data`, `/reports`,
 `/.github`, `/functions` e para `CLAUDE.md`, `ROTEIRO-*.md`, `AUDITORIA-CONSULTORIA.md`, `package*.json`
-e `.gitignore`. Os mesmos caminhos estão no `_routes.json` (o middleware só roda onde ele manda).
-**Criou pasta ou arquivo de uso interno na raiz? Acrescente nos dois lugares**, senão ele vai ao ar aberto.
+e `.gitignore`. O `_routes.json` manda o middleware rodar em **todos** os endereços (`"/*"`): com uma lista de caminhos, endereço disfarçado (`/%43LAUDE.md`, `//CLAUDE.md`) escapava e o arquivo abria. O middleware decodifica e normaliza o caminho antes de comparar.
+**Criou pasta ou arquivo de uso interno na raiz? Acrescente em `PASTAS_INTERNAS`/`ARQUIVOS_INTERNOS` do middleware**, senão ele vai ao ar aberto.
 Nenhuma página do site pode usar arquivo dessas pastas (conferido: nenhuma usa).

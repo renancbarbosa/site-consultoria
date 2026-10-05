@@ -1,7 +1,10 @@
 // Responde 410 (removida de vez) para as paginas de IPTV e apostas da divisao
 // "mercados competitivos", revertida em 08/08/2026. Decisao do Renan (04/10/2026):
 // avisar o Google que nao voltam. Etapa 1 do docs/plano-nichos-2026-10.md.
-// So roda nos enderecos listados em /_routes.json; o resto do site e estatico.
+// Roda em TODOS os enderecos (/_routes.json = "/*") desde 05/10/2026: com a lista de caminhos no
+// _routes.json, um endereco disfarçado (/%43LAUDE.md, //CLAUDE.md, /d%61ta/...) escapava da lista e o
+// servidor estatico entregava o arquivo interno. Aqui o caminho e decodificado e normalizado ANTES de
+// comparar. Para qualquer outro endereco o middleware so chama context.next() (custo de milissegundos).
 const REMOVIDAS = new Set([
   "/blog/backlinks-para-iptv-funcionam",
   "/blog/como-criar-paginas-de-avaliacao-de-casas-de-apostas",
@@ -42,7 +45,7 @@ const HTML = `<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8">
 // Arquivos INTERNOS do projeto (05/10/2026): o Cloudflare Pages publica a pasta inteira do repositorio,
 // entao anotacoes, scripts e dados do Search Console estavam abertos (ex.: /CLAUDE.md, /data/audit/...).
 // Respondem 404 como se nao existissem. Nenhuma pagina do site usa nada daqui (conferido em 05/10/2026).
-// Pasta ou arquivo novo de uso interno? Acrescente aqui E no /_routes.json.
+// Pasta ou arquivo novo de uso interno? Acrescente aqui (o _routes.json ja cobre tudo com "/*").
 const PASTAS_INTERNAS = ["/scripts", "/docs", "/data", "/reports", "/.github", "/functions"];
 const ARQUIVOS_INTERNOS = new Set([
   "/CLAUDE.md",
@@ -65,11 +68,27 @@ function interno(caminho) {
   return PASTAS_INTERNAS.some((p) => caminho === p || caminho.startsWith(p + "/"));
 }
 
+// Decodifica (inclusive codificacao dupla), troca "\" por "/", junta barras repetidas e resolve "." e "..".
+function normalizar(bruto) {
+  let c = bruto;
+  for (let i = 0; i < 3; i++) {
+    let d;
+    try { d = decodeURIComponent(c); } catch (e) { break; }
+    if (d === c) break;
+    c = d;
+  }
+  const partes = [];
+  for (const seg of c.replace(/\\/g, "/").split("/")) {
+    if (seg === "" || seg === ".") continue;
+    if (seg === "..") { partes.pop(); continue; }
+    partes.push(seg);
+  }
+  return "/" + partes.join("/");
+}
+
 export async function onRequest(context) {
   const bruto = new URL(context.request.url).pathname;
-  let decodificado = bruto;
-  try { decodificado = decodeURIComponent(bruto); } catch (e) { /* endereco malformado: usa o bruto */ }
-  if (interno(decodificado.replace(/\/+$/, ""))) {
+  if (interno(normalizar(bruto))) {
     return new Response(HTML_404, {
       status: 404,
       headers: {
@@ -79,9 +98,7 @@ export async function onRequest(context) {
       },
     });
   }
-  const caminho = bruto
-    .replace(/\/index\.html$/, "")
-    .replace(/\/+$/, "");
+  const caminho = normalizar(bruto).replace(/\/index\.html$/, "");
   if (REMOVIDAS.has(caminho)) {
     return new Response(HTML, {
       status: 410,
