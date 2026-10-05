@@ -39,8 +39,47 @@ const HTML = `<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8">
 <h1>Esta página foi removida</h1><p>Este conteúdo não faz mais parte do site.</p>
 <p><a href="/">Ir para a página inicial</a></p></body></html>`;
 
+// Arquivos INTERNOS do projeto (05/10/2026): o Cloudflare Pages publica a pasta inteira do repositorio,
+// entao anotacoes, scripts e dados do Search Console estavam abertos (ex.: /CLAUDE.md, /data/audit/...).
+// Respondem 404 como se nao existissem. Nenhuma pagina do site usa nada daqui (conferido em 05/10/2026).
+// Pasta ou arquivo novo de uso interno? Acrescente aqui E no /_routes.json.
+const PASTAS_INTERNAS = ["/scripts", "/docs", "/data", "/reports", "/.github", "/functions"];
+const ARQUIVOS_INTERNOS = new Set([
+  "/CLAUDE.md",
+  "/ROTEIRO-CONTEXTO.md",
+  "/ROTEIRO-PUBLICACAO-EXTERNA.md",
+  "/AUDITORIA-CONSULTORIA.md",
+  "/package.json",
+  "/package-lock.json",
+  "/.gitignore",
+]);
+
+const HTML_404 = `<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
+<title>Página não encontrada</title></head><body style="font-family:system-ui,sans-serif;max-width:560px;margin:15vh auto;padding:0 16px;line-height:1.6">
+<h1>Página não encontrada</h1><p>O endereço que você procurou não existe neste site.</p>
+<p><a href="/">Ir para a página inicial</a></p></body></html>`;
+
+function interno(caminho) {
+  if (ARQUIVOS_INTERNOS.has(caminho)) return true;
+  return PASTAS_INTERNAS.some((p) => caminho === p || caminho.startsWith(p + "/"));
+}
+
 export async function onRequest(context) {
-  const caminho = new URL(context.request.url).pathname
+  const bruto = new URL(context.request.url).pathname;
+  let decodificado = bruto;
+  try { decodificado = decodeURIComponent(bruto); } catch (e) { /* endereco malformado: usa o bruto */ }
+  if (interno(decodificado.replace(/\/+$/, ""))) {
+    return new Response(HTML_404, {
+      status: 404,
+      headers: {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "no-store",
+        "x-robots-tag": "noindex",
+      },
+    });
+  }
+  const caminho = bruto
     .replace(/\/index\.html$/, "")
     .replace(/\/+$/, "");
   if (REMOVIDAS.has(caminho)) {

@@ -56,7 +56,26 @@
     "/seo-para-jogos-online",
     "/seo-para-jogos-online/*",
     "/seo-para-revendedor-iptv",
-    "/seo-para-revendedor-iptv/*"
+    "/seo-para-revendedor-iptv/*",
+    "/scripts",
+    "/scripts/*",
+    "/docs",
+    "/docs/*",
+    "/data",
+    "/data/*",
+    "/reports",
+    "/reports/*",
+    "/.github",
+    "/.github/*",
+    "/functions",
+    "/functions/*",
+    "/CLAUDE.md",
+    "/ROTEIRO-CONTEXTO.md",
+    "/ROTEIRO-PUBLICACAO-EXTERNA.md",
+    "/AUDITORIA-CONSULTORIA.md",
+    "/package.json",
+    "/package-lock.json",
+    "/.gitignore"
   ],
   "exclude": []
 }

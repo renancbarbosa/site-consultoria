@@ -1053,3 +1053,13 @@ GMN/SEO. **Não** oferece social media.
 ### Próximos passos combinados
 - Depois: mais artigos por nicho (energia solar, clínicas etc.) e postagens no Perfil da Empresa.
 - Concorrente analisado: Máximos Digital — ganha por **42 avaliações no Maps** (RCB tem 3), não pelo site.
+
+## Arquivos internos bloqueados no site (05/10/2026)
+
+O Cloudflare Pages publica a pasta inteira do repositório. Até 05/10/2026 qualquer pessoa abria
+`/CLAUDE.md`, `/docs/...`, `/scripts/...` e até os dados brutos do Search Console em `/data/audit/...`.
+Agora `functions/_middleware.js` responde **404 (com noindex)** para `/scripts`, `/docs`, `/data`, `/reports`,
+`/.github`, `/functions` e para `CLAUDE.md`, `ROTEIRO-*.md`, `AUDITORIA-CONSULTORIA.md`, `package*.json`
+e `.gitignore`. Os mesmos caminhos estão no `_routes.json` (o middleware só roda onde ele manda).
+**Criou pasta ou arquivo de uso interno na raiz? Acrescente nos dois lugares**, senão ele vai ao ar aberto.
+Nenhuma página do site pode usar arquivo dessas pastas (conferido: nenhuma usa).
