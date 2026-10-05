@@ -619,4 +619,239 @@ ARTIGOS = [
                 wa("Olá, Renan! Quero saber quanto investir em tráfego pago no meu negócio."),
                 "Quero calcular minha verba"),
     },
+
+    # ------------------------------------------------------------------ limpeza: conseguir clientes
+    # Etapa 6 do plano de nichos (04/10/2026). Busca do DONO: "como conseguir clientes para empresa
+    # de limpeza". Fonte: ajuda do Perfil da Empresa (area de cobertura).
+    {
+        "slug": "como-conseguir-clientes-para-empresa-de-limpeza",
+        "h1": "Como conseguir clientes para empresa de limpeza: condomínios, empresas e contrato mensal",
+        "title": "Como conseguir clientes para empresa de limpeza",
+        "desc": ("Como conseguir clientes para empresa de limpeza: onde estão os contratos mensais, como chegar a "
+                 "síndicos e empresas e a proposta que fecha o negócio."),
+        "cat": "Limpeza e terceirização",
+        "data": "2026-10-04",
+        "trilha_extra": ("/marketing-para-empresa-de-limpeza/", "Marketing para empresa de limpeza"),
+        "corpo": f"""
+        <p>Para conseguir clientes para uma empresa de limpeza, o caminho mais seguro é mirar o contrato mensal —
+        condomínios, escritórios, clínicas, lojas — e estar onde quem decide esse contrato procura: no Google, no
+        mapa da região e na indicação de quem já confia em você. Faxina avulsa ajuda no caixa, mas é o contrato
+        recorrente que dá estabilidade para a empresa crescer.</p>
+
+        {caixa('<p><strong>Resposta rápida:</strong> escolha o tipo de cliente que você quer (condomínio ou '
+               'empresa), apareça no Google Meu Negócio com a área que atende, tenha uma página para cada serviço, '
+               'responda o pedido de proposta no mesmo dia e mande uma proposta clara, com rotina, equipe e '
+               'supervisão.</p>')}
+
+        <h2>1. Decida qual cliente sustenta a sua empresa</h2>
+        <p>Condomínio, escritório e casa de família são clientes diferentes. O condomínio decide em assembleia e
+        compara propostas; a empresa decide pelo gerente administrativo e quer alguém que não dê trabalho; a casa
+        de família decide rápido, mas troca fácil. Escolher o foco muda o texto do site, do anúncio e até o
+        uniforme da equipe. Quem tenta falar com todo mundo ao mesmo tempo acaba não convencendo ninguém.</p>
+
+        <h2>2. Condomínios: chegue ao síndico e à administradora</h2>
+        <p>Em condomínio, quem pesquisa e indica costuma ser o síndico ou a administradora. Por isso vale ter uma
+        página no site só para condomínios, explicando a rotina de limpeza das áreas comuns, a supervisão e o que
+        acontece quando alguém da equipe falta. Administradoras de condomínio cuidam de vários prédios ao mesmo
+        tempo — um bom relacionamento com uma delas pode abrir mais de um contrato.</p>
+
+        <h2>3. Empresas: fale com quem resolve o problema do dia a dia</h2>
+        <p>Escritórios, clínicas, academias e lojas contratam limpeza para não ter dor de cabeça. O gerente quer
+        saber se a equipe chega no horário, se é sempre a mesma pessoa, se há supervisão e se a empresa cuida das
+        obrigações com os funcionários. Mostre isso no site e na proposta, com clareza, e você sai da disputa só
+        por preço.</p>
+
+        <h2>4. Apareça no Google Meu Negócio com a área que você atende</h2>
+        <p>Empresa de limpeza vai até o cliente. A ajuda do Google sobre
+        <a href="https://support.google.com/business/answer/9157481?hl=pt-BR" target="_blank" rel="noopener noreferrer">áreas de cobertura</a>
+        usa justamente os prestadores de serviços de limpeza como exemplo de empresa de serviço local: o perfil
+        mostra a região atendida, e o endereço deve sair se você não recebe clientes nele. Com área, serviços,
+        fotos da equipe e avaliações, a empresa passa a aparecer para quem procura no bairro. Veja a
+        {link('/google-perfil-empresa/', 'otimização do Google Perfil da Empresa')}.</p>
+
+        <h2>5. Tenha uma página para cada serviço</h2>
+        <p>Limpeza de condomínio, limpeza de escritório, limpeza pós-obra e terceirização de equipe são buscas
+        diferentes. Cada uma merece a sua página, com o que está incluído, como funciona a rotina e um botão para
+        pedir proposta. É isso que faz o Google entender o que você faz e mostrar a página certa para cada busca.</p>
+
+        <h2>6. Monte uma proposta que facilite o "sim"</h2>
+        <p>Quem compara três propostas escolhe a mais clara, não só a mais barata. Uma boa proposta de limpeza
+        traz: escopo (o que é limpo e com que frequência), quantidade de pessoas e horários, quem supervisiona,
+        como é a reposição de faltas, quem fornece os materiais, prazo para começar e as condições do contrato.
+        Para o síndico, uma versão fácil de apresentar na assembleia ajuda muito.</p>
+
+        <h2>7. Anuncie para quem já quer terceirizar</h2>
+        <p>Buscas como "terceirização de limpeza para empresas" ou "empresa de limpeza de condomínio" vêm de quem
+        está perto de decidir. Um anúncio no Google bem montado coloca você na frente dessa pessoa — com um cuidado
+        essencial: bloquear as buscas de vaga de emprego, muito comuns nesse ramo. Veja como funciona a
+        {link('/gestao-de-trafego-pago/', 'gestão de tráfego pago')}.</p>
+
+        <h2>8. Responda o pedido de proposta no mesmo dia</h2>
+        <p>Quem pede proposta de limpeza normalmente pede para mais de uma empresa. Responder rápido, marcar a
+        visita técnica e mandar a proposta no prazo combinado já coloca você na frente de boa parte da
+        concorrência.</p>
+
+        <h2>9. Cuide de quem já é cliente para ganhar o próximo</h2>
+        <p>O cliente que você já tem é a melhor fonte do próximo contrato. Um síndico satisfeito comenta com o
+        síndico do prédio vizinho; um gerente que muda de empresa leva o fornecedor de confiança junto. Para isso
+        acontecer, o serviço precisa ser visível: uma conversa curta todo mês para saber se está tudo certo, um
+        canal direto para reclamações e a resposta rápida quando algo sai do combinado.</p>
+        <p>Vale também registrar o que foi feito — um relatório simples com as rotinas cumpridas, as
+        substituições de equipe e os ajustes pedidos. Ele ajuda na renovação do contrato, mostra profissionalismo
+        para a próxima assembleia e vira argumento quando você pede uma avaliação ou uma indicação.</p>
+
+        {tabela(
+            ["Cliente", "Quem decide", "O que precisa ver"],
+            [
+                ["Condomínio", "Síndico, conselho e administradora", "Rotina, supervisão e reposição de faltas"],
+                ["Escritório e comércio", "Gerente administrativo ou dono", "Pontualidade, equipe fixa e obrigações em dia"],
+                ["Pós-obra", "Construtora ou dono do imóvel", "Prazo de entrega e acabamento"],
+            ])}
+
+        <h2>Por onde começar a conseguir clientes de limpeza?</h2>
+        <p>Comece pelo perfil no Google com a área de atendimento e por uma página para o seu cliente principal,
+        condomínio ou empresa. Depois, organize a proposta e, se quiser pedidos mais rápido, um anúncio no Google.
+        As frentes juntas estão em {link('/marketing-para-empresa-de-limpeza/', 'marketing para empresas de limpeza')},
+        e ideias práticas em {link('/blog/como-divulgar-empresa-de-limpeza/', 'como divulgar empresa de limpeza')}.</p>
+""",
+        "faq": [
+            ("Qual o melhor cliente para empresa de limpeza?",
+             "Para estabilidade, o contrato mensal: condomínios, escritórios, clínicas e lojas. Faxina avulsa ajuda no "
+             "caixa, mas troca de fornecedor com facilidade."),
+            ("Como conseguir contrato de limpeza com condomínio?",
+             "Estar no Google quando o síndico pesquisa, ter uma página para condomínios explicando rotina e "
+             "supervisão, cultivar relação com administradoras e mandar uma proposta clara para a assembleia."),
+            ("Vale a pena anunciar empresa de limpeza no Google?",
+             "Vale para quem procura terceirizar ou contratar limpeza de condomínio e escritório, desde que as buscas "
+             "de vaga de emprego sejam bloqueadas."),
+            ("O que colocar na proposta de limpeza?",
+             "Escopo e frequência, equipe e horários, supervisão, reposição de faltas, materiais, prazo para começar e "
+             "condições do contrato."),
+        ],
+        "cta": ("Tem uma empresa de limpeza e quer mais contratos mensais? Me conte as cidades que você atende e o "
+                "tipo de cliente. Em até 24 horas eu te digo por onde começar.",
+                wa("Olá, Renan! Tenho uma empresa de limpeza e quero conseguir mais clientes. Pode me ajudar?"),
+                "Quero mais clientes de limpeza"),
+    },
+
+    # ------------------------------------------------------------------ limpeza: divulgar
+    # Etapa 6 do plano de nichos (04/10/2026). Busca do DONO: "como divulgar minha empresa de limpeza".
+    {
+        "slug": "como-divulgar-empresa-de-limpeza",
+        "h1": "Como divulgar empresa de limpeza: 10 ideias para fechar mais contratos",
+        "title": "Como divulgar empresa de limpeza: 10 ideias práticas",
+        "desc": ("Como divulgar empresa de limpeza: 10 ideias práticas para o dono — equipe identificada, antes e "
+                 "depois, parcerias, avaliações e anúncio no Google."),
+        "cat": "Limpeza e terceirização",
+        "data": "2026-10-04",
+        "trilha_extra": ("/marketing-para-empresa-de-limpeza/", "Marketing para empresa de limpeza"),
+        "corpo": f"""
+        <p>Para divulgar uma empresa de limpeza, o dono precisa mostrar duas coisas que o cliente não vê antes de
+        contratar: que a equipe é de confiança e que o serviço é bem feito. As ideias abaixo fazem isso de forma
+        prática, sem depender de verba alta, e todas levam o interessado a pedir uma proposta.</p>
+
+        {caixa('<p><strong>Resposta rápida:</strong> identifique a equipe e o carro, mostre antes e depois (com '
+               'autorização), peça avaliações a clientes empresariais, faça parceria com administradoras, '
+               'imobiliárias e construtoras, tenha uma apresentação pronta para síndicos e anuncie no Google para '
+               'quem já procura terceirizar.</p>')}
+
+        <h2>1. Equipe e carro identificados</h2>
+        <p>Uniforme com o nome da empresa e carro adesivado transformam cada atendimento em propaganda no
+        condomínio e na rua. Além disso, passam segurança para quem abre a porta para a sua equipe.</p>
+
+        <h2>2. Antes e depois de verdade</h2>
+        <p>Limpeza pós-obra, limpeza pesada e higienização rendem fotos que falam sozinhas. Registre o antes e o
+        depois, peça autorização ao cliente e publique no
+        {link('/google-perfil-empresa/', 'Google Perfil da Empresa')} e no site. Foto real da sua equipe convence
+        mais que imagem de banco.</p>
+
+        <h2>3. Avaliações de clientes empresariais</h2>
+        <p>Uma avaliação no Google de um síndico ou de um gerente de escritório pesa muito para o próximo gestor que
+        está decidindo. Peça depois do primeiro mês de contrato, quando o cliente já viu a rotina funcionando, e
+        responda a todas.</p>
+
+        <h2>4. Parceria com administradoras de condomínio</h2>
+        <p>Administradoras cuidam de vários prédios e são consultadas pelos síndicos. Apresente a empresa, deixe
+        material com a forma de trabalho e combine por escrito como funciona a indicação.</p>
+        <p>A parceria só dura se a administradora não passar vergonha com a indicação. Atenda o primeiro condomínio
+        indicado com cuidado redobrado, mantenha o síndico informado e avise a administradora quando o contrato
+        começar. Um retorno simples, como "começamos segunda e está tudo certo", mostra que indicar você é seguro.</p>
+
+        <h2>5. Parceria com imobiliárias e construtoras</h2>
+        <p>Imobiliária precisa de limpeza na troca de inquilino; construtora precisa de limpeza pós-obra para
+        entregar o imóvel. Os dois são fontes de serviço recorrente para quem responde rápido e entrega no prazo.
+        Combine antes como o pedido chega, quem libera a chave e em quanto tempo o imóvel fica pronto — é essa
+        previsibilidade que faz o parceiro voltar a chamar você.</p>
+
+        <h2>6. Apresentação pronta para síndicos</h2>
+        <p>Um material curto — quem é a empresa, como funciona a rotina, supervisão, reposição de faltas e
+        contatos — facilita a vida do síndico que precisa levar a proposta para a assembleia. Quem facilita a
+        decisão costuma ser escolhido.</p>
+
+        <h2>7. Uma página para cada serviço no site</h2>
+        <p>Limpeza de condomínio, de escritório, pós-obra e terceirização de equipe são buscas diferentes no Google.
+        Cada página bem feita é uma porta de entrada a mais. As frentes juntas estão em
+        {link('/marketing-para-empresa-de-limpeza/', 'marketing para empresas de limpeza')}.</p>
+
+        <h2>8. Anúncio no Google para quem já quer terceirizar</h2>
+        <p>Para quem pesquisa "terceirização de limpeza" ou "empresa de limpeza para escritório", o anúncio na
+        pesquisa do Google coloca você na frente na hora da decisão. Bloqueie as buscas de vaga de emprego e leve o
+        clique para uma página de pedido de proposta. Detalhes na
+        {link('/gestao-de-trafego-pago/', 'gestão de tráfego pago')}.</p>
+
+        <h2>9. Associação comercial e grupos do bairro</h2>
+        <p>Associação comercial, grupos de empresários e eventos do bairro aproximam você de donos de comércio e
+        escritório — exatamente quem contrata limpeza mensal. Leve a apresentação e saia com visitas marcadas.</p>
+
+        <h2>10. WhatsApp com consentimento, não como spam</h2>
+        <p>Use a lista de transmissão para quem pediu para receber: clientes e interessados que já pediram
+        proposta. Disparo para números comprados afasta o cliente e, sem base legal para usar os dados, esbarra na
+        <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener noreferrer">LGPD (Lei 13.709/2018)</a>.</p>
+
+        <h2>O que evitar ao divulgar uma empresa de limpeza?</h2>
+        <p>Alguns atalhos parecem baratos, mas custam caro depois. O primeiro é competir só por preço: quem anuncia
+        "a limpeza mais barata da cidade" atrai o cliente que troca de fornecedor por qualquer diferença e deixa de
+        fora o síndico que procura estabilidade. Fale de rotina, supervisão e reposição de faltas, que é o que o
+        gestor quer saber.</p>
+        <p>O segundo é prometer o que a operação não sustenta, como atender qualquer bairro no mesmo dia ou montar
+        equipe para amanhã. Uma falha no primeiro mês apaga o efeito de toda a divulgação. O terceiro é usar fotos de
+        banco de imagem ou de outra empresa: o cliente percebe, e a confiança — que é exatamente o que você precisa
+        provar — vai embora.</p>
+        <p>Por fim, não espalhe a divulgação em canais demais ao mesmo tempo. É melhor manter o perfil no Google
+        atualizado, o site claro e duas parcerias ativas do que abrir dez frentes e abandonar todas no segundo
+        mês.</p>
+
+        {tabela(
+            ["Ideia", "Custo", "Melhor para"],
+            [
+                ["Equipe e carro identificados", "Baixo, uma vez", "Ser lembrado no bairro"],
+                ["Antes e depois e avaliações", "Tempo da equipe", "Convencer quem está comparando"],
+                ["Parcerias", "Comissão combinada", "Serviço recorrente"],
+                ["Anúncio no Google", "Verba paga ao Google", "Pedidos de proposta rápidos"],
+            ])}
+
+        <h2>Por onde começar a divulgar a sua empresa de limpeza?</h2>
+        <p>Se for para fazer três coisas agora: perfil no Google com fotos e avaliações, uma parceria com uma
+        administradora ou imobiliária e a apresentação pronta para síndicos. Para entender onde estão os contratos
+        mensais e como fechar, leia
+        {link('/blog/como-conseguir-clientes-para-empresa-de-limpeza/', 'como conseguir clientes para empresa de limpeza')}.</p>
+""",
+        "faq": [
+            ("Qual a forma mais barata de divulgar empresa de limpeza?",
+             "Equipe e carro identificados, fotos de antes e depois com autorização, avaliações no Google e parcerias "
+             "com administradoras e imobiliárias. Custam pouco e o resultado acumula."),
+            ("Vale a pena panfletar para divulgar limpeza?",
+             "Pode ajudar no bairro, mas o contrato mensal costuma vir de quem pesquisa no Google ou recebe indicação. "
+             "Priorize perfil no Google, site e parcerias."),
+            ("Posso postar foto do serviço feito na casa ou na empresa do cliente?",
+             "Pode, com autorização do cliente. Evite mostrar endereço, documentos ou pessoas sem permissão."),
+            ("Como divulgar para síndicos?",
+             "Com uma apresentação curta e clara, presença no Google quando ele pesquisa e relacionamento com as "
+             "administradoras de condomínio."),
+        ],
+        "cta": ("Tem uma empresa de limpeza e quer divulgar do jeito certo? Me conte as cidades que você atende. Em "
+                "até 24 horas eu te digo por onde começar.",
+                wa("Olá, Renan! Tenho uma empresa de limpeza e quero divulgar melhor. Pode me ajudar?"),
+                "Quero divulgar minha empresa"),
+    },
 ]

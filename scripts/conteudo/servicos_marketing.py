@@ -997,4 +997,186 @@ PAGINAS = [
         "cta_final": ("Me mande o link do seu canal. Eu te digo o que dá para melhorar primeiro.",
                       "Sem compromisso: eu olho os títulos, as descrições e os temas, e te mostro por onde começar."),
     },
+    {
+        # Etapa 6 do plano de nichos (04/10/2026): pagina principal do nicho LIMPEZA EMPRESARIAL E
+        # TERCEIRIZACAO. Publico: o DONO da empresa de limpeza (regra de ouro). Fontes conferidas:
+        # ajuda do Perfil da Empresa (area de cobertura), Lei 6.019/1974 (redacao da Lei 13.429/2017),
+        # IBGE/Concla CNAE 8121-4/00 e CNPJ publico (jun/2026).
+        "slug": "marketing-para-empresa-de-limpeza",
+        "nacional": True,
+        "data": "2026-10-04",
+        "publico": "Empresas de limpeza, conservação e terceirização de serviços",
+        "title": "Marketing para Empresa de Limpeza e Terceirização | RCB SEO",
+        "desc": ("Marketing para empresas de limpeza e terceirização: Google Meu Negócio, site e Google Ads para "
+                 "fechar contratos com condomínios e empresas. Orçamento em 24h."),
+        "trilha": "Marketing para empresa de limpeza",
+        "servico": "Marketing para empresas de limpeza e terceirização",
+        "eyebrow": "Para empresas de limpeza de todo o Brasil",
+        "h1": "Marketing e SEO para empresas de limpeza e terceirização",
+        "sub": ("Marketing para empresa de limpeza é fazer o síndico, o gestor de condomínio e o dono de empresa "
+                "encontrarem você quando procuram quem cuide da limpeza — e transformar essa busca num pedido de "
+                "proposta. Eu cuido do Google Meu Negócio, do site com páginas por serviço e do anúncio no Google, "
+                "com foco no que sustenta a empresa: o contrato mensal. Orçamento grátis em até 24 horas."),
+        "cta_hero": "Quero mais pedidos de proposta",
+        "msg": "Olá, Renan! Tenho uma empresa de limpeza e quero fechar mais contratos pelo Google.",
+        "pills": ["Orçamento em até 24h", "Foco em contrato mensal", "Prazo por escrito"],
+        "painel_h2": "O que entra no marketing",
+        "painel": [
+            "Google Meu Negócio com área de atendimento.",
+            "Site com página para cada tipo de serviço.",
+            "Página para condomínios e outra para empresas.",
+            "Google Ads para quem procura terceirizar.",
+            "Formulário de pedido de proposta e WhatsApp.",
+            "Medição de cada pedido recebido.",
+        ],
+        "faq_titulo": "Perguntas frequentes sobre marketing para empresa de limpeza",
+        "secoes": [
+            ("split", {
+                "tag": "O cenário",
+                "titulo": "Por que a empresa de limpeza vive de indicação e perde contrato para o concorrente?",
+                "ps": [
+                    "A maioria dos contratos de limpeza começa com alguém da administração pesquisando no Google ou "
+                    "pedindo indicação a um conhecido. Quem depende só da indicação fica sem chance quando o síndico "
+                    "novo ou o gerente de outra empresa vai direto ao Google — e encontra o concorrente.",
+                    "O mercado é disputado. Pelos dados públicos de CNPJ de junho de 2026, o código "
+                    "<a href=\"https://cnae.ibge.gov.br/?subclasse=8121400&amp;tipo=cnae&amp;versao=10&amp;view=subclasse\" "
+                    "target=\"_blank\" rel=\"noopener noreferrer\">8121-4/00 (Limpeza em prédios e em domicílios)</a> "
+                    "reunia 15.874 empresas ativas, e o de serviços combinados de apoio a edifícios (8111-7/00), mais "
+                    "18.169. Quem aparece primeiro e passa confiança chega antes à mesa de negociação.",
+                ],
+                "card_titulo": "Sinais de que falta marketing na empresa de limpeza",
+                "card": [
+                    "Contratos que entram só por indicação.",
+                    "Perfil do Google com endereço errado ou sem avaliações.",
+                    "Site com uma página só, sem separar serviços.",
+                    "Nenhum material para mandar junto com a proposta.",
+                    "Ninguém sabe de onde veio o último contrato.",
+                ],
+            }),
+            ("texto", {
+                "tag": "Contrato mensal",
+                "titulo": "Por que o marketing da empresa de limpeza precisa mirar o contrato mensal?",
+                "ps": [
+                    "Faxina avulsa paga a semana; contrato mensal paga a empresa. Um condomínio ou um escritório que "
+                    "fecha com você costuma ficar por muito tempo, se o serviço for bom — e cada contrato desses vale "
+                    "dezenas de faxinas. Por isso o marketing precisa falar com quem decide esse contrato: síndico, "
+                    "administradora de condomínio, gerente administrativo, dono de empresa.",
+                    "Isso muda tudo: as páginas do site, as palavras do anúncio e até o texto do perfil no Google. Em "
+                    "vez de \"faxina barata\", a comunicação fala de rotina, equipe uniformizada, supervisão, "
+                    "reposição de faltas e relatório — o que um gestor quer ler antes de pedir proposta.",
+                ],
+            }),
+            ("texto", {
+                "tag": "Google Meu Negócio",
+                "titulo": "Como a empresa de limpeza aparece no Google Maps se atende no endereço do cliente?",
+                "ps": [
+                    "Empresa de limpeza é o exemplo que o próprio Google usa: na ajuda do Perfil da Empresa sobre "
+                    "<a href=\"https://support.google.com/business/answer/9157481?hl=pt-BR\" target=\"_blank\" "
+                    "rel=\"noopener noreferrer\">áreas de cobertura</a>, os \"prestadores de serviços de limpeza\" "
+                    "aparecem como empresa de serviço local — que vai até o cliente. Nesse caso, o perfil mostra a "
+                    "área atendida, e o Google orienta remover o endereço se você não recebe clientes nele.",
+                    "Configurar isso certo evita dois problemas: aparecer num endereço onde ninguém atende e ficar "
+                    "fora das buscas dos bairros e cidades que você realmente cobre. Com o perfil completo — serviços, "
+                    "fotos da equipe em ação (com autorização dos clientes) e avaliações respondidas — a empresa passa "
+                    "a aparecer para quem procura na região. Veja a "
+                    "<a href=\"/google-perfil-empresa/\">otimização do Google Perfil da Empresa</a>.",
+                ],
+            }),
+            ("cards", {
+                "tag": "As frentes",
+                "titulo": "O que entra no marketing de uma empresa de limpeza?",
+                "desc": "As frentes que trazem pedido de proposta. Dá para começar por uma e somar as outras.",
+                "itens": [
+                    ("Google Meu Negócio",
+                     "Área de atendimento configurada, serviços, fotos da equipe e rotina de avaliações de clientes "
+                     "satisfeitos."),
+                    ("Site com páginas por serviço",
+                     "Limpeza de condomínio, de escritório, pós-obra, terceirização de equipe: cada serviço com a sua "
+                     "página, respondendo o que o gestor quer saber."),
+                    ("Página para condomínios",
+                     "O síndico decide em assembleia e compara propostas. A página explica rotina, supervisão e como "
+                     "funciona a reposição quando alguém falta."),
+                    ("Google Ads",
+                     "Anúncio na pesquisa do Google para quem já procura terceirizar a limpeza, com as buscas de vaga "
+                     "de emprego bloqueadas. Veja a <a href=\"/gestao-de-trafego-pago/\">gestão de tráfego pago</a>."),
+                    ("Pedido de proposta",
+                     "Formulário curto (com aviso de LGPD) e WhatsApp, pedindo o que você precisa para calcular: "
+                     "metragem, frequência, número de pessoas."),
+                    ("Medição",
+                     "Cada pedido de proposta registrado, para saber qual canal traz contrato."),
+                ],
+            }),
+            ("texto", {
+                "tag": "Terceirização",
+                "titulo": "Como falar de terceirização de limpeza sem assustar o cliente?",
+                "ps": [
+                    "Quem contrata terceirização quer segurança: saber que a empresa cumpre as obrigações com a equipe e "
+                    "que o problema trabalhista não vai cair no colo dele. A relação entre a empresa de prestação de "
+                    "serviços e quem contrata é regulada pela "
+                    "<a href=\"https://www.planalto.gov.br/ccivil_03/leis/l6019.htm\" target=\"_blank\" "
+                    "rel=\"noopener noreferrer\">Lei 6.019/1974</a>, com a redação dada pela Lei 13.429/2017.",
+                    "O marketing não substitui o contrato nem a orientação jurídica, mas pode mostrar com clareza como "
+                    "a sua empresa trabalha: registro da equipe, supervisão, substituição de faltas e documentação "
+                    "disponível para o contratante conferir. Esse tipo de transparência pesa mais na decisão do gestor "
+                    "do que qualquer promessa de preço baixo.",
+                ],
+            }),
+            ("passos", {
+                "titulo": "Como funciona o marketing da sua empresa de limpeza, do diagnóstico aos contratos?",
+                "itens": [
+                    ("Diagnóstico", "Olho seu perfil no Google, o site e quem aparece antes de você nas suas cidades."),
+                    ("Plano por escrito", "Em até 24 horas: as frentes para começar, o que entra e o valor de cada uma."),
+                    ("Perfil e site", "Área de atendimento, páginas por serviço e a página para condomínios e empresas."),
+                    ("Anúncio, se fizer sentido", "Campanha no Google para quem procura terceirizar a limpeza."),
+                    ("Medição", "Relatório de pedidos de proposta por canal."),
+                ],
+            }),
+            ("orcamento", {
+                "titulo": "Por onde a sua empresa de limpeza quer começar?",
+                "desc": "Escolha o ponto de partida. O orçamento é grátis e sai em até 24 horas pelo WhatsApp.",
+                "destaque": 1,
+                "itens": [
+                    ("Aparecer no mapa da região", "Para quem ainda depende só de indicação.",
+                     ["Google Meu Negócio com área de atendimento", "Serviços e fotos", "Rotina de avaliações"],
+                     "Olá, Renan! Tenho empresa de limpeza e quero aparecer no Google Maps.", "Pedir orçamento"),
+                    ("Site para fechar contrato", "Para ser encontrado por síndicos e empresas.",
+                     ["Páginas por serviço", "Página para condomínios", "Pedido de proposta"],
+                     "Olá, Renan! Quero um site para a minha empresa de limpeza fechar contratos.", "Pedir orçamento"),
+                    ("Anúncio no Google", "Para quem quer pedidos de proposta agora.",
+                     ["Google Ads para terceirização", "Página de pedido de proposta", "Medição dos pedidos"],
+                     "Olá, Renan! Quero anunciar a minha empresa de limpeza no Google.", "Pedir orçamento"),
+                ],
+            }),
+        ],
+        "faq": [
+            ("Empresa de limpeza precisa de site?",
+             "Para fechar contrato com condomínio e empresa, ajuda muito. O gestor costuma pesquisar antes de pedir "
+             "proposta, e um site com os serviços explicados passa a segurança que a indicação sozinha não passa."),
+            ("Devo colocar meu endereço no Google Meu Negócio?",
+             "Só se você recebe clientes nele. Para quem vai até o cliente, o Google orienta usar a área de cobertura e "
+             "remover o endereço do perfil."),
+            ("Vale a pena anunciar limpeza no Google Ads?",
+             "Vale para buscas de quem quer terceirizar ou contratar limpeza de condomínio e escritório. O cuidado é "
+             "bloquear as buscas de vaga de emprego, que são muitas nesse ramo."),
+            ("Como conseguir contrato com condomínio?",
+             "Estar no Google quando o síndico pesquisa, ter uma página que explique a rotina e a supervisão, e mandar "
+             "uma proposta clara. Os detalhes estão no artigo sobre como conseguir clientes para empresa de limpeza."),
+            ("Quanto custa o marketing para empresa de limpeza?",
+             "Depende das frentes que entram e de quantas cidades você atende. O orçamento é individual, grátis e sai "
+             "em até 24 horas pelo WhatsApp. A verba de anúncio, quando houver, é paga direto ao Google."),
+            ("Existe fidelidade?",
+             "Não existe fidelidade. Para cancelar, basta avisar com 30 dias de antecedência. As demais condições "
+             "vão por escrito junto com o orçamento."),
+        ],
+        "relacionados": [
+            ("/blog/como-conseguir-clientes-para-empresa-de-limpeza/", "Como conseguir clientes para empresa de limpeza",
+             "Condomínios, empresas e a proposta que fecha contrato."),
+            ("/blog/como-divulgar-empresa-de-limpeza/", "Como divulgar empresa de limpeza",
+             "Ideias práticas de divulgação para o dono da empresa."),
+            ("/gestao-de-trafego-pago/", "Gestão de tráfego pago",
+             "Anúncio no Google para quem procura terceirizar a limpeza."),
+        ],
+        "cta_final": ("Me conte as cidades que você atende e o tipo de cliente. Eu te digo por onde começar.",
+                      "Sem compromisso: eu olho como a sua empresa aparece hoje no Google e quem aparece antes de você."),
+    },
 ]
