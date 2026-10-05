@@ -264,6 +264,7 @@ TRAFEGO_EXTRA = {
             ("/marketing-para-advogados/", "Marketing para advogados", "O caminho completo dentro das normas da OAB."),
             ("/gestao-de-trafego-pago/", "Gestão de tráfego pago para empresas", "Como funciona a gestão de Google Ads da RCB SEO."),
             ("/criacao-de-site-para-advogado/", "Criação de site para advogado", "O site por área de atuação."),
+            ("/blog/advogado-pode-fazer-marketing/", "Advogado pode fazer marketing?", "O que o Provimento 205/2021 permite e proíbe."),
         ],
     },
     "trafego-pago-para-energia-solar": {
@@ -505,7 +506,9 @@ PAGINAS = [
     ),
 
     # ======================================================= SITE PARA ADVOGADO
-    _site(
+    # Etapa 8 (05/10/2026): liga a nova principal /marketing-para-advogados/ (301 de /para-advogados/),
+    # FAQ sem "em Goiânia" (a página atende o Brasil), autor/data e público na ficha.
+    dict(_site(
         "criacao-de-site-para-advogado", "advogado", "advogados",
         "Criação de site para advogado",
         ("Criação de site para advogado e escritório de advocacia dentro das regras da OAB: página por área de "
@@ -554,14 +557,16 @@ PAGINAS = [
          ("Vocês fazem anúncio para advogado?",
           "Sim, dentro das regras da OAB. Veja a página de tráfego pago para advogados.")],
         [("/trafego-pago-para-advogados/", "Tráfego pago para advogados", "Google Ads dentro do Provimento 205/2021."),
-         ("/para-advogados/", "SEO para advogados", "Aparecer no Google e no Maps dentro das normas."),
+         ("/marketing-para-advogados/", "Marketing e SEO para advogados", "Aparecer no Google e no Maps dentro das normas."),
+         ("/blog/como-conseguir-clientes-na-advocacia/", "Como conseguir clientes na advocacia", "Os caminhos permitidos pela OAB."),
          ("/criacao-de-sites-goiania/", "Criação de sites em Goiânia", "Como funciona a criação de sites da RCB.")],
         "Olá, Renan! Sou advogado e quero um orçamento de site.",
         ("Me conte as áreas do seu escritório. Eu te digo como o site deve ser.",
          "Sem compromisso e com sigilo: você me diz onde atua, e eu te mostro quem aparece na sua frente hoje."),
         ["Uma página por área de atuação.", "Conteúdo dentro do Provimento 205/2021.", "Revisão de quem é formado em Direito.",
          "Perfil dos advogados com OAB.", "Contato discreto pelo WhatsApp.", "Ligado ao Perfil no Google."],
-    ),
+    ), data="2026-10-05", publicado="2026-09-28", publico="Advogados e escritórios de advocacia",
+        faq_titulo="Perguntas frequentes sobre criação de site para advogado"),
 
     # ======================================================= SITE PARA CONTADOR
     _site(

@@ -24,6 +24,9 @@ def wa(texto):
 LEI_14300 = ('<a href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14300.htm" '
              'target="_blank" rel="noopener noreferrer">Lei 14.300/2022</a>')
 
+PROV_205 = ('<a href="https://www.oab.org.br/leisnormas/legislacao/provimentos/205-2021" '
+            'target="_blank" rel="noopener noreferrer">Provimento 205/2021</a>')
+
 ARTIGOS = [
     # ------------------------------------------------------------------ 1
     {
@@ -853,5 +856,253 @@ ARTIGOS = [
                 "até 24 horas eu te digo por onde começar.",
                 wa("Olá, Renan! Tenho uma empresa de limpeza e quero divulgar melhor. Pode me ajudar?"),
                 "Quero divulgar minha empresa"),
+    },
+
+    # ------------------------------------------------------------------ advocacia: conseguir clientes
+    # Etapa 8 do plano de nichos (05/10/2026). Busca do DONO: "como conseguir clientes na advocacia".
+    # Fonte unica das regras: Provimento 205/2021 do CFOAB e seu Anexo Unico (lidos em 05/10/2026).
+    # O Renan e bacharel em Direito, nao advogado.
+    {
+        "slug": "como-conseguir-clientes-na-advocacia",
+        "h1": "Como conseguir clientes na advocacia sem ferir as regras da OAB",
+        "title": "Como conseguir clientes na advocacia dentro da OAB",
+        "desc": ("Como conseguir clientes na advocacia dentro do Provimento 205/2021: Google Meu Negócio, página por "
+                 "área de atuação, conteúdo, Google Ads e indicação."),
+        "cat": "Advocacia",
+        "data": "2026-10-05",
+        "trilha_extra": ("/marketing-para-advogados/", "Marketing para advogados"),
+        "corpo": f"""
+        <p>Para conseguir clientes na advocacia sem ferir as regras da OAB, o caminho é ser encontrado por quem já
+        está procurando ajuda — e não correr atrás de quem não pediu. A pessoa com um problema jurídico pesquisa no
+        Google antes de ligar para qualquer escritório; quem aparece ali, com informação clara e sóbria, entra na
+        conversa. É o que o {PROV_205} chama de marketing de conteúdos jurídicos.</p>
+
+        {caixa('<p><strong>Resposta rápida:</strong> escolha as áreas e a região onde quer crescer, complete o '
+               'Google Meu Negócio do escritório, tenha uma página para cada área de atuação, publique conteúdo que '
+               'explica direitos sem prometer resultado, use o Google Ads só para quem já pesquisa o tema e responda '
+               'o primeiro contato no mesmo dia.</p>')}
+
+        <h2>1. Por que a indicação sozinha deixa de bastar?</h2>
+        <p>Indicação continua sendo a melhor fonte de cliente na advocacia, porque chega com confiança. O problema é
+        que ela cresce até onde a sua rede alcança — e depois para. Além disso, até o cliente indicado pesquisa o nome
+        do advogado no Google antes da primeira conversa. Se ele não encontra nada, ou encontra um perfil abandonado,
+        a indicação perde força. Aparecer bem no Google não substitui a indicação: dá a ela um lugar para pousar.</p>
+
+        <h2>2. Escolha as áreas e a região que você quer fazer crescer</h2>
+        <p>"Atuação em todas as áreas do Direito" não responde nenhuma pesquisa. Quem tem um problema procura algo
+        específico: "advogado trabalhista", "inventário extrajudicial", "revisão de aposentadoria". Escolha as duas ou
+        três áreas que você quer fazer crescer e a região onde atende. Essa decisão orienta tudo o que vem depois: o
+        perfil no Google, as páginas do site, os artigos e o anúncio.</p>
+
+        <h2>3. Complete o Google Meu Negócio do escritório</h2>
+        <p>O perfil do escritório no Google é o que aparece no mapa quando alguém pesquisa advogado na região. Nome
+        correto, endereço, horário, telefone, fotos do escritório e da equipe — que o art. 5º, § 2º, do Provimento
+        permite — e a descrição das áreas de atuação, em tom informativo. Avaliações de clientes ajudam quem pesquisa
+        a confiar; ao responder, nunca comente detalhes do caso, por causa do sigilo profissional. Veja a
+        {link('/google-perfil-empresa/', 'otimização do Google Perfil da Empresa')}.</p>
+
+        <h2>4. Tenha uma página para cada área de atuação</h2>
+        <p>Cada área merece a sua página no site, explicando em linguagem simples o que a pessoa precisa saber antes
+        de procurar um advogado: quais são os direitos, quais documentos costumam ser pedidos, quais prazos existem.
+        É isso que faz o Google mostrar a página certa para cada pesquisa. Atenção ao art. 3º, III: sem título
+        certificado ou notória especialização, a página fala em "área de atuação", não em "especialista". Veja a
+        {link('/criacao-de-site-para-advogado/', 'criação de site para advogado')}.</p>
+
+        <h2>5. Publique conteúdo que explica, não que vende</h2>
+        <p>O Anexo Único do Provimento orienta que a criação de conteúdo, palestras e artigos tenha caráter técnico
+        informativo, sem divulgação de resultados concretos, clientes, valores ou gratuidade. Na prática, funciona
+        bem: um artigo que explica "quais são os direitos de quem foi demitido sem justa causa" responde exatamente o
+        que a pessoa pesquisou e mostra que você entende do assunto, sem nenhuma frase de venda.</p>
+
+        <h2>6. Anuncie só para quem já está procurando</h2>
+        <p>O mesmo Anexo permite a aquisição de palavra-chave, a exemplo do Google Ads, quando o anúncio responde a
+        uma busca iniciada pelo potencial cliente e as palavras escolhidas respeitam a ética. Ou seja: anunciar para
+        quem pesquisou "advogado previdenciário" é possível; anúncio ostensivo em plataforma de vídeo, não. O anúncio
+        leva para a página da área, com o mesmo tom informativo. Veja
+        {link('/trafego-pago-para-advogados/', 'tráfego pago para advogados')}.</p>
+
+        <h2>7. Responda o primeiro contato no mesmo dia</h2>
+        <p>Quem tem um problema jurídico costuma falar com mais de um escritório. Responder rápido, com educação e
+        dizendo quais documentos levar para a primeira conversa já coloca você na frente. O Anexo permite usar
+        chatbot no site para responder as primeiras dúvidas ou encaminhar informações sobre a atuação do escritório —
+        desde que não afaste a pessoalidade do atendimento nem substitua a decisão do advogado.</p>
+
+        <h2>8. Cuide da rede de indicação, sem mala direta</h2>
+        <p>Relacionamento continua valendo: colegas de outras áreas que encaminham casos, contadores, corretores e
+        clientes antigos. O que o Anexo veda é o envio de cartas e comunicados a uma coletividade, a chamada mala
+        direta; comunicações para clientes e pessoas do seu relacionamento, ou que pediram para receber, são
+        possíveis, sem caráter mercantilista. Grupos de WhatsApp também são permitidos quando reúnem pessoas
+        determinadas, das relações do advogado.</p>
+
+        {tabela(
+            ["Canal", "O que o Provimento diz", "Como usar"],
+            [
+                ["Google (busca orgânica)", "Publicidade passiva: atinge quem buscou (art. 2º, VII)", "Página por área de atuação"],
+                ["Google Ads", "Permitido se responde a uma busca do potencial cliente (Anexo)", "Anúncio por área, sem promessa"],
+                ["Artigos e vídeos", "Conteúdo técnico informativo, sem resultados, clientes ou valores (Anexo)", "Explicar direitos e prazos"],
+                ["Redes sociais", "Presença permitida; impulsionar sem oferta de serviço (Anexo)", "Conteúdo educativo"],
+                ["Mala direta", "Vedado o envio a uma coletividade (Anexo)", "Só para clientes e relacionamento"],
+            ],
+            "Resumo informativo do Provimento 205/2021 e do Anexo Único. Não substitui a leitura da norma nem a "
+            "orientação da sua seccional.")}
+
+        <h2>O que não fazer para conseguir clientes na advocacia?</h2>
+        <p>Algumas táticas comuns no marketing de outros ramos são vedadas na advocacia: falar de honorários,
+        gratuidade ou desconto como forma de captar cliente (art. 3º, I); usar expressões persuasivas, de
+        autoengrandecimento ou de comparação (art. 3º, IV); prometer resultado ou usar caso concreto para oferecer
+        serviço (art. 6º); pagar para aparecer em ranking ou prêmio (art. 5º, § 1º); e ostentar bens (art. 6º,
+        parágrafo único). Fora o risco disciplinar, nenhuma delas é necessária para aparecer no Google.</p>
+
+        <h2>Por onde começar a conseguir clientes na advocacia?</h2>
+        <p>Comece pelo perfil do escritório no Google e por uma página para a área que você mais quer fazer crescer.
+        Depois, publique os primeiros artigos dessa área e, se quiser contatos mais rápido, um anúncio no Google para
+        quem pesquisa o tema. As frentes juntas estão em
+        {link('/marketing-para-advogados/', 'marketing e SEO para advogados')}, e as regras em detalhe em
+        {link('/blog/advogado-pode-fazer-marketing/', 'advogado pode fazer marketing?')}.</p>
+        <p>Uma observação: sou bacharel em Direito e consultor de SEO, não advogado. Escrevo com o Provimento aberto,
+        mas a responsabilidade pela publicidade é de quem está inscrito na OAB (art. 1º, § 1º).</p>
+""",
+        "faq": [
+            ("Qual a melhor forma de conseguir clientes na advocacia?",
+             "Combinar indicação com presença no Google: perfil do escritório completo, uma página por área de atuação "
+             "e conteúdo informativo. Assim, quem pesquisa o problema encontra você."),
+            ("Advogado pode anunciar no Google?",
+             "Pode. O Anexo Único do Provimento 205/2021 permite a aquisição de palavra-chave, como no Google Ads, "
+             "quando o anúncio responde a uma busca iniciada pelo potencial cliente e respeita a ética."),
+            ("Posso dizer no site que a primeira consulta é gratuita?",
+             "Não como forma de captar cliente: o art. 3º, I, do Provimento veda a referência a gratuidade, valores, "
+             "forma de pagamento ou descontos com esse fim."),
+            ("Advogado recém-formado consegue clientes pelo Google?",
+             "Consegue, porque a disputa acontece por área de atuação e por região. Escolher bem a área e ter páginas "
+             "claras sobre ela costuma pesar mais do que o tamanho do escritório."),
+        ],
+        "cta": ("É advogado e quer ser encontrado por quem procura a sua área? Me conte as áreas e a cidade. Em até "
+                "24 horas eu te digo por onde começar.",
+                wa("Olá, Renan! Sou advogado(a) e quero conseguir mais clientes pelo Google, dentro da OAB."),
+                "Quero ser encontrado no Google"),
+    },
+
+    # ------------------------------------------------------------------ advocacia: pode fazer marketing?
+    # Etapa 8 do plano de nichos (05/10/2026). Busca do DONO: "advogado pode fazer marketing",
+    # "provimento 205 marketing". Fonte: Provimento 205/2021 e Anexo Unico (lidos em 05/10/2026).
+    {
+        "slug": "advogado-pode-fazer-marketing",
+        "h1": "Advogado pode fazer marketing? O que o Provimento 205/2021 da OAB permite e proíbe",
+        "title": "Advogado pode fazer marketing? O que diz o Provimento 205",
+        "desc": ("Advogado pode fazer marketing? Sim, dentro do Provimento 205/2021 da OAB. Veja o que é permitido, o "
+                 "que é vedado e como fica o Google, o Instagram e o anúncio."),
+        "cat": "Advocacia",
+        "data": "2026-10-05",
+        "trilha_extra": ("/marketing-para-advogados/", "Marketing para advogados"),
+        "corpo": f"""
+        <p>Sim, advogado pode fazer marketing. O art. 1º do {PROV_205} do Conselho Federal da OAB diz, com todas as
+        letras, que "é permitido o marketing jurídico", desde que compatível com o Estatuto, o Regulamento Geral e o
+        Código de Ética. O que muda em relação a outros ramos é o tom: a publicidade do advogado precisa ser
+        informativa, discreta e sóbria, sem captar clientela nem tratar a advocacia como mercadoria.</p>
+
+        {caixa('<p><strong>Resposta rápida:</strong> pode ter site, perfil no Google, redes sociais, artigos, vídeos, '
+               'lives e até anúncio no Google para quem pesquisa o tema. Não pode falar de honorários ou gratuidade '
+               'para captar cliente, prometer resultado, usar caso concreto, se dizer especialista sem título, se '
+               'comparar com colegas nem mandar mala direta.</p>')}
+
+        <h2>O que é marketing jurídico para a OAB?</h2>
+        <p>O art. 2º do Provimento define os termos. Marketing jurídico é o uso de estratégias planejadas para
+        alcançar objetivos do exercício da advocacia (inciso I). Marketing de conteúdos jurídicos é criar e divulgar
+        conteúdo para informar o público e consolidar o nome do advogado ou do escritório (inciso II). E captação de
+        clientela é o uso de mecanismos de marketing que, de forma ativa, induzem à contratação ou estimulam o
+        litígio (inciso VIII) — é isso que fica de fora.</p>
+
+        <h2>Qual a diferença entre publicidade ativa e passiva?</h2>
+        <p>Essa distinção explica muito do que pode e do que não pode. Publicidade ativa é a que atinge um número
+        indeterminado de pessoas, mesmo que elas não tenham procurado nada (art. 2º, VI). Publicidade passiva é a que
+        atinge só quem buscou informações sobre o advogado ou o tema, ou quem concordou antes em receber (art. 2º,
+        VII). Quando alguém pesquisa "advogado de família" no Google e encontra a página do seu escritório, é desse
+        segundo tipo que se trata. O art. 6º, por exemplo, traz vedações específicas para a publicidade ativa, como
+        informar dimensões ou estrutura física do escritório.</p>
+
+        <h2>O que o advogado pode fazer no marketing?</h2>
+        <p>Pelo Provimento e pelo Anexo Único, entre outras coisas, o advogado pode:</p>
+        <ul>
+          <li>usar anúncios, pagos ou não, nos meios de comunicação não vedados pelo Código de Ética (art. 5º);</li>
+          <li>usar logomarca, identidade visual e fotos dos advogados e do escritório — mas não a logomarca nem os
+          símbolos oficiais da OAB (art. 5º, § 2º);</li>
+          <li>participar de vídeos e lives, sem usar casos concretos nem apresentar resultados (art. 5º, § 3º);</li>
+          <li>informar qualificações e títulos verdadeiros e comprováveis (art. 4º, § 1º);</li>
+          <li>estar nas redes sociais e no YouTube, respeitando o Código de Ética (Anexo);</li>
+          <li>usar chatbot no site para as primeiras dúvidas, sem afastar a pessoalidade do atendimento (Anexo).</li>
+        </ul>
+
+        <h2>O que o advogado não pode fazer no marketing?</h2>
+        <p>As vedações principais estão no art. 3º e no art. 6º, e o Anexo detalha alguns meios:</p>
+        <ul>
+          <li>falar de honorários, forma de pagamento, gratuidade ou descontos como forma de captar clientes (art. 3º, I);</li>
+          <li>divulgar informação que possa induzir a erro (art. 3º, II);</li>
+          <li>anunciar especialidade sem título certificado ou notória especialização (art. 3º, III);</li>
+          <li>usar expressões persuasivas, de autoengrandecimento ou de comparação (art. 3º, IV);</li>
+          <li>distribuir material de forma indiscriminada em locais públicos, presenciais ou virtuais (art. 3º, V);</li>
+          <li>pagar para aparecer em rankings, prêmios ou honrarias (art. 5º, § 1º);</li>
+          <li>prometer resultado ou usar caso concreto para oferecer serviço, e ostentar bens (art. 6º);</li>
+          <li>mandar mala direta para uma coletividade e usar aplicativo que responda consultas automaticamente a
+          quem não é cliente (Anexo).</li>
+        </ul>
+
+        {tabela(
+            ["Situação", "Pode?", "Onde está"],
+            [
+                ["Site com páginas por área de atuação", "Sim, com tom informativo", "Art. 1º e art. 5º"],
+                ["Anúncio no Google para quem pesquisa o tema", "Sim, se responde a uma busca do potencial cliente", "Anexo Único"],
+                ["Impulsionar post no Instagram", "Sim, se não contém oferta de serviços jurídicos", "Anexo Único"],
+                ["“Primeira consulta grátis” para atrair cliente", "Não", "Art. 3º, I"],
+                ["“Especialista em” sem título", "Não", "Art. 3º, III"],
+                ["Contar caso ganho para atrair cliente", "Não", "Art. 6º"],
+                ["Mala direta para uma lista de desconhecidos", "Não", "Anexo Único"],
+            ],
+            "Resumo informativo. Não substitui a leitura do Provimento nem a orientação da sua seccional.")}
+
+        <h2>Advogado pode impulsionar post no Instagram?</h2>
+        <p>Pode, com uma condição: o Anexo Único permite patrocínio e impulsionamento nas redes sociais "desde que não
+        se trate de publicidade contendo oferta de serviços jurídicos". Um post que explica um direito pode ser
+        impulsionado; um post que oferece o serviço do escritório, não. E o art. 4º, § 5º, veda o uso de meios ou
+        ferramentas que influam de forma fraudulenta no impulsionamento ou no alcance.</p>
+
+        <h2>E o anúncio no Google, como fica?</h2>
+        <p>O Anexo trata do tema pelo nome: a aquisição de palavra-chave, a exemplo do Google Ads, é permitida quando
+        responde a uma busca iniciada pelo potencial cliente e as palavras estão de acordo com a ética; anúncios
+        ostensivos em plataformas de vídeo são proibidos. É por isso que o anúncio de advocacia funciona melhor na
+        pesquisa do Google, ligado a uma página informativa da área. Veja como isso é montado em
+        {link('/trafego-pago-para-advogados/', 'tráfego pago para advogados')}.</p>
+
+        <h2>Quem responde se a publicidade passar do limite?</h2>
+        <p>O próprio advogado. O art. 1º, § 1º, diz que as informações divulgadas devem ser objetivas e verdadeiras e
+        são de responsabilidade exclusiva das pessoas identificadas — e, no caso de sociedade, dos sócios
+        administradores. Por isso vale escolher quem cuida do seu marketing com cuidado: agência que trata advocacia
+        como loja expõe o escritório a um risco que ela não vai assumir.</p>
+
+        <h2>Como fazer marketing jurídico na prática?</h2>
+        <p>Comece pelo que é claramente permitido e traz resultado: perfil do escritório completo no Google, uma
+        página por área de atuação e artigos que explicam direitos. O passo a passo está em
+        {link('/blog/como-conseguir-clientes-na-advocacia/', 'como conseguir clientes na advocacia')}, e as frentes
+        juntas em {link('/marketing-para-advogados/', 'marketing e SEO para advogados')}.</p>
+        <p>Sou bacharel em Direito e consultor de SEO, não advogado. Este artigo resume o texto oficial do Provimento
+        205/2021 e do Anexo Único; em caso de dúvida sobre uma situação específica, consulte a sua seccional.</p>
+""",
+        "faq": [
+            ("Advogado pode fazer marketing digital?",
+             "Pode. O art. 1º do Provimento 205/2021 permite o marketing jurídico, desde que informativo, discreto e "
+             "sóbrio, sem captação de clientela nem mercantilização."),
+            ("Advogado pode fazer anúncio pago?",
+             "Pode usar anúncios, pagos ou não, nos meios não vedados pelo Código de Ética (art. 5º). No Google Ads, o "
+             "Anexo Único exige que o anúncio responda a uma busca iniciada pelo potencial cliente."),
+            ("Advogado pode postar resultado de processo?",
+             "Não para oferecer serviço: o art. 6º veda a promessa de resultados e o uso de casos concretos, e o art. "
+             "5º, § 3º, proíbe apresentar resultados em vídeos e lives."),
+            ("Advogado pode usar a logomarca da OAB?",
+             "Não. O art. 5º, § 2º, permite logomarca e fotos do advogado e do escritório, mas veda a logomarca e os "
+             "símbolos oficiais da OAB."),
+        ],
+        "cta": ("Quer fazer o marketing do escritório dentro do Provimento 205/2021? Me conte as suas áreas e a cidade. "
+                "Em até 24 horas eu te digo por onde começar.",
+                wa("Olá, Renan! Sou advogado(a) e quero fazer o marketing do escritório dentro das regras da OAB."),
+                "Quero começar do jeito certo"),
     },
 ]

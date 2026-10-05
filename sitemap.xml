@@ -535,12 +535,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://rcbseo.com.br/para-advogados/</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://rcbseo.com.br/para-comercios-locais/</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -776,7 +770,7 @@
   </url>
   <url>
     <loc>https://rcbseo.com.br/marketing-para-advogados/</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -914,7 +908,7 @@
   </url>
   <url>
     <loc>https://rcbseo.com.br/criacao-de-site-para-advogado/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -938,7 +932,7 @@
   </url>
   <url>
     <loc>https://rcbseo.com.br/trafego-pago-para-advogados/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1005,6 +999,18 @@
   <url>
     <loc>https://rcbseo.com.br/blog/como-divulgar-empresa-de-limpeza/</loc>
     <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://rcbseo.com.br/blog/como-conseguir-clientes-na-advocacia/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://rcbseo.com.br/blog/advogado-pode-fazer-marketing/</loc>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>

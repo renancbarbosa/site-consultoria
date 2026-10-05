@@ -48,7 +48,7 @@ NICHOS = [
     ("/seo-para-dentistas/", "Dentistas"),
     ("/seo-para-clinicas-de-estetica/", "Estética"),
     ("/seo-para-medicos/", "Médicos"),
-    ("/para-advogados/", "Advogados"),
+    ("/marketing-para-advogados/", "Advogados"),
     ("/seo-para-imobiliarias/", "Imobiliárias"),
     ("/seo-para-contadores/", "Contadores"),
     ("/seo-para-veterinarios/", "Veterinários"),

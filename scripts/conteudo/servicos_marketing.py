@@ -1179,4 +1179,199 @@ PAGINAS = [
         "cta_final": ("Me conte as cidades que você atende e o tipo de cliente. Eu te digo por onde começar.",
                       "Sem compromisso: eu olho como a sua empresa aparece hoje no Google e quem aparece antes de você."),
     },
+    {
+        # Etapa 8 do plano de nichos (05/10/2026): pagina principal de ADVOCACIA. Substitui a antiga
+        # /marketing-para-advogados/ (escrita a mao, criada em 15/07/2026) e recebe o 301 de
+        # /para-advogados/, que era quem aparecia para "seo para advogados" — por isso o termo SEO fica
+        # no title, no H1 e num H2. Fonte dos fatos: Provimento 205/2021 do CFOAB (texto oficial no site
+        # da OAB), lido em 05/10/2026. O Renan e bacharel em Direito, NAO advogado: nunca escrever o contrario.
+        "slug": "marketing-para-advogados",
+        "nacional": True,
+        "data": "2026-10-05",
+        "publicado": "2026-07-15",
+        "publico": "Advogados e escritórios de advocacia",
+        "title": "Marketing e SEO para Advogados nas Normas da OAB | RCB SEO",
+        "desc": ("Marketing e SEO para advogados dentro do Provimento 205/2021 da OAB: Google Meu Negócio, site por "
+                 "área de atuação e Google Ads. Orçamento grátis em 24h."),
+        "trilha": "Marketing para advogados",
+        "servico": "Marketing jurídico e SEO para advogados",
+        "eyebrow": "Para advogados de todo o Brasil",
+        "h1": "Marketing e SEO para advogados: seja encontrado por quem procura, dentro da OAB",
+        "sub": ("Marketing para advogados é fazer o escritório aparecer quando alguém pesquisa o próprio problema no "
+                "Google — \"advogado trabalhista\", \"divórcio consensual\", \"aposentadoria negada\" — com "
+                "informação sóbria, do jeito que o Provimento 205/2021 da OAB permite. Eu cuido do Google Meu "
+                "Negócio, do site com uma página por área de atuação e, quando faz sentido, do anúncio no Google. "
+                "Sou bacharel em Direito. Orçamento grátis em até 24 horas."),
+        "cta_hero": "Quero ser encontrado no Google",
+        "msg": "Olá, Renan! Sou advogado(a) e quero que o meu escritório seja encontrado no Google dentro das normas da OAB.",
+        "pills": ["Orçamento em até 24h", "Dentro do Provimento 205/2021", "Prazo por escrito"],
+        "painel_h2": "O que entra no marketing do escritório",
+        "painel": [
+            "Google Meu Negócio do escritório completo.",
+            "Site com uma página por área de atuação.",
+            "Artigos que explicam direitos, sem captação.",
+            "Google Ads para quem já pesquisa o problema.",
+            "WhatsApp e formulário com aviso de LGPD.",
+            "Medição de cada contato recebido.",
+        ],
+        "faq_titulo": "Perguntas frequentes sobre marketing e SEO para advogados",
+        "secoes": [
+            ("split", {
+                "tag": "O cenário",
+                "titulo": "Por que é tão difícil conseguir clientes novos na advocacia?",
+                "ps": [
+                    "Loja faz promoção e clínica faz campanha; o advogado não pode. A publicidade da advocacia tem "
+                    "regra própria, e muito escritório conclui que não há nada a fazer — e fica só na indicação. "
+                    "Quando o boca a boca para de crescer, a carteira para junto.",
+                    "Enquanto isso, a pessoa com um problema jurídico pesquisa no Google antes de ligar para qualquer "
+                    "um. Até o cliente indicado procura o nome do escritório antes da primeira conversa. O que ele "
+                    "encontra — ou não encontra — pesa na decisão.",
+                ],
+                "card_titulo": "Sinais de que o escritório está invisível no Google",
+                "card": [
+                    "Clientes novos chegam só por indicação.",
+                    "Perfil no Google sem fotos, horário ou avaliações.",
+                    "Site com uma página só, \"atuação em todas as áreas\".",
+                    "Instagram com curtidas de colegas, não de clientes.",
+                    "Ninguém sabe de onde veio o último cliente.",
+                ],
+            }),
+            ("texto", {
+                "tag": "O que a OAB permite",
+                "titulo": "O que o Provimento 205/2021 da OAB permite no marketing jurídico?",
+                "ps": [
+                    "O <a href=\"https://www.oab.org.br/leisnormas/legislacao/provimentos/205-2021\" target=\"_blank\" "
+                    "rel=\"noopener noreferrer\">Provimento 205/2021</a> do Conselho Federal da OAB começa dizendo que "
+                    "o marketing jurídico é permitido (art. 1º), desde que compatível com o Código de Ética. Ele "
+                    "também define o marketing de conteúdos jurídicos: criar e divulgar conteúdo para informar o "
+                    "público e consolidar o nome do advogado ou do escritório (art. 2º, II).",
+                    "Um ponto ajuda muito quem quer aparecer no Google: o Provimento chama de publicidade passiva a "
+                    "divulgação que atinge \"somente público certo que tenha buscado informações\" sobre o anunciante "
+                    "ou o tema (art. 2º, VII). É exatamente o que acontece quando alguém pesquisa o próprio problema "
+                    "e encontra a página do seu escritório.",
+                    "O limite também está escrito: a publicidade profissional deve ser informativa, discreta e sóbria, "
+                    "sem captação de clientela nem mercantilização. O art. 3º veda, entre outras coisas, falar de "
+                    "honorários, gratuidade ou descontos como forma de captar cliente, anunciar especialidade sem "
+                    "título e usar expressões persuasivas, de autoengrandecimento ou de comparação. E o art. 6º "
+                    "proíbe prometer resultado ou usar casos concretos para oferecer serviço.",
+                    "Uma observação honesta: sou bacharel em Direito, não advogado. Este resumo não substitui a "
+                    "leitura do Provimento nem a orientação da sua seccional — mas é com ele aberto que cada página "
+                    "do escritório é escrita.",
+                ],
+            }),
+            ("texto", {
+                "tag": "SEO para advogados",
+                "titulo": "Como o SEO para advogados faz o escritório aparecer quando o cliente pesquisa?",
+                "ps": [
+                    "SEO é o trabalho de organizar o escritório no Google para que ele apareça de graça, sem pagar por "
+                    "clique, nas buscas de quem tem o problema que você resolve. Para advocacia, são três peças.",
+                    "A primeira é o <a href=\"/google-perfil-empresa/\">Google Meu Negócio</a> do escritório: nome, "
+                    "endereço, horário, fotos e áreas de atuação completos — é ele que aparece no mapa quando alguém "
+                    "procura advogado na região. A segunda é o site com uma página para cada área: trabalhista, "
+                    "família, previdenciário, cada uma respondendo o que as pessoas perguntam sobre o tema. A terceira "
+                    "é o conteúdo informativo, que o próprio Provimento chama de marketing de conteúdos jurídicos.",
+                    "O resultado não é imediato: costuma levar alguns meses para firmar, e depende da concorrência na "
+                    "sua cidade e na sua área. Em troca, não some no dia em que a verba de anúncio acaba.",
+                ],
+            }),
+            ("texto", {
+                "tag": "Anúncio",
+                "titulo": "Advogado pode anunciar no Google Ads?",
+                "ps": [
+                    "Pode, com regra. O Anexo Único do Provimento 205/2021 permite a \"aquisição de palavra-chave a "
+                    "exemplo do Google Ads\" quando o anúncio responde a uma busca iniciada pelo potencial cliente e "
+                    "as palavras escolhidas respeitam a ética — e proíbe anúncios ostensivos em plataformas de vídeo.",
+                    "Na prática, o anúncio aparece para quem pesquisou \"advogado previdenciário\" e leva para a página "
+                    "daquela área, com texto informativo e sem promessa. Já o impulsionamento nas redes sociais é "
+                    "permitido pelo mesmo Anexo desde que não contenha oferta de serviços jurídicos. Os detalhes estão "
+                    "em <a href=\"/trafego-pago-para-advogados/\">tráfego pago para advogados</a>.",
+                ],
+            }),
+            ("cards", {
+                "tag": "As frentes",
+                "titulo": "O que entra no marketing e no SEO do escritório?",
+                "desc": "As frentes que fazem o escritório ser encontrado. Dá para começar por uma e somar as outras.",
+                "itens": [
+                    ("Google Meu Negócio",
+                     "Perfil completo do escritório, com fotos (permitidas pelo art. 5º, § 2º), horário e áreas de "
+                     "atuação, para aparecer no mapa da região."),
+                    ("Site por área de atuação",
+                     "Uma página para cada área, com o que a pessoa precisa saber antes de procurar um advogado. Veja "
+                     "a <a href=\"/criacao-de-site-para-advogado/\">criação de site para advogado</a>."),
+                    ("Conteúdo informativo",
+                     "Artigos que explicam direitos e prazos em linguagem simples, sem caso concreto, valor ou "
+                     "promessa de resultado."),
+                    ("Google Ads",
+                     "Anúncio na pesquisa do Google para quem já procura a sua área, levando para a página certa."),
+                    ("Contato e LGPD",
+                     "WhatsApp e formulário curto com aviso de privacidade, para o primeiro contato chegar organizado."),
+                    ("Medição",
+                     "Cada contato registrado, para saber qual área e qual canal trazem cliente."),
+                ],
+            }),
+            ("passos", {
+                "titulo": "Como funciona o marketing do seu escritório, do diagnóstico ao relatório?",
+                "itens": [
+                    ("Diagnóstico", "Olho o perfil do escritório no Google, o site e quem aparece antes de você."),
+                    ("Plano por escrito", "Em até 24 horas: as frentes para começar, o que entra e o valor de cada uma."),
+                    ("Perfil e site", "Perfil completo e páginas por área de atuação, revisadas com o Provimento aberto."),
+                    ("Anúncio, se fizer sentido", "Campanha no Google para as áreas que você quer fazer crescer."),
+                    ("Relatório", "Contatos recebidos por área e por canal, todo mês."),
+                ],
+            }),
+            ("orcamento", {
+                "titulo": "Por onde o seu escritório quer começar?",
+                "desc": "Escolha o ponto de partida. O orçamento é grátis e sai em até 24 horas pelo WhatsApp.",
+                "destaque": 1,
+                "itens": [
+                    ("Aparecer no mapa da região", "Para quem depende só de indicação.",
+                     ["Google Meu Negócio completo", "Fotos e áreas de atuação", "Rotina de avaliações"],
+                     "Olá, Renan! Sou advogado(a) e quero que o escritório apareça no Google Maps.", "Pedir orçamento"),
+                    ("Site por área de atuação", "Para ser encontrado por quem pesquisa o problema.",
+                     ["Uma página por área", "Conteúdo informativo", "WhatsApp e formulário"],
+                     "Olá, Renan! Quero um site para o meu escritório de advocacia.", "Pedir orçamento"),
+                    ("Anúncio no Google", "Para quem quer contatos de uma área agora.",
+                     ["Google Ads por área", "Página da área de atuação", "Medição dos contatos"],
+                     "Olá, Renan! Quero anunciar o meu escritório de advocacia no Google.", "Pedir orçamento"),
+                ],
+            }),
+        ],
+        "faq": [
+            ("Advogado pode fazer marketing?",
+             "Pode. O art. 1º do Provimento 205/2021 da OAB permite o marketing jurídico, desde que compatível com o "
+             "Código de Ética: informativo, discreto e sóbrio, sem captação de clientela nem mercantilização."),
+            ("Posso divulgar que a primeira consulta é gratuita?",
+             "O art. 3º, I, do Provimento veda a referência a valores de honorários, forma de pagamento, gratuidade ou "
+             "descontos como forma de captar clientes. Por isso as páginas do escritório não falam de preço nem de "
+             "consulta grátis."),
+            ("Posso me apresentar como especialista no site?",
+             "Só se tiver título certificado ou notória especialização: o art. 3º, III, veda anunciar especialidade "
+             "sem isso. Sem título, a página fala em área de atuação."),
+            ("Funciona para advogado solo ou recém-formado?",
+             "Funciona, porque a disputa no Google acontece por área de atuação e por região, não pelo tamanho do "
+             "escritório. Um perfil completo e páginas claras por área já colocam o advogado na disputa."),
+            ("Você é advogado?",
+             "Não. Sou bacharel em Direito e consultor de SEO. Conheço o Provimento e escrevo com ele aberto, mas a "
+             "responsabilidade pela publicidade é de quem está inscrito na OAB, como diz o próprio art. 1º, § 1º."),
+            ("Quanto custa o marketing para advogados?",
+             "Depende das frentes que entram, das áreas de atuação e da concorrência na sua cidade. O orçamento é "
+             "individual, grátis e sai em até 24 horas pelo WhatsApp. A verba de anúncio, quando houver, é paga direto "
+             "ao Google."),
+            ("Existe fidelidade?",
+             "Não existe fidelidade. Para cancelar, basta avisar com 30 dias de antecedência. As demais condições "
+             "vão por escrito junto com o orçamento."),
+        ],
+        "relacionados": [
+            ("/blog/como-conseguir-clientes-na-advocacia/", "Como conseguir clientes na advocacia",
+             "Os caminhos permitidos, do perfil no Google à indicação."),
+            ("/blog/advogado-pode-fazer-marketing/", "Advogado pode fazer marketing?",
+             "O que o Provimento 205/2021 permite e o que proíbe."),
+            ("/trafego-pago-para-advogados/", "Tráfego pago para advogados",
+             "Google Ads por área de atuação, dentro da OAB."),
+            ("/criacao-de-site-para-advogado/", "Site para advogado",
+             "Uma página para cada área de atuação."),
+        ],
+        "cta_final": ("Me conte as áreas do seu escritório e a cidade. Eu te digo por onde começar.",
+                      "Sem compromisso: eu olho como o escritório aparece hoje no Google e quem aparece antes de você."),
+    },
 ]

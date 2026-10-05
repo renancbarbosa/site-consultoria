@@ -51,8 +51,7 @@ Mensagem central: trazer clientes pelo Google — anúncio para o resultado ráp
 - Acompanhamento de SEO: https://rcbseo.com.br/acompanhamento-seo/ — Acompanhamento mensal com ajustes contínuos, relatórios e novos conteúdos, sem promessa de ranking garantido.
 - Google Meu Negócio para clínicas: https://rcbseo.com.br/google-meu-negocio-para-clinicas/ — Otimização do Perfil da Empresa no Google para clínicas.
 - Site para clínica: https://rcbseo.com.br/site-para-clinica/ — Sites otimizados e rápidos para clínicas converterem visitas em contatos.
-- SEO para advogados: https://rcbseo.com.br/para-advogados/ — SEO local e presença digital para advogados e escritórios, dentro das normas da OAB.
-- Marketing para advogados: https://rcbseo.com.br/marketing-para-advogados/ — Explicação em linguagem simples de como advogados são encontrados no Google dentro das normas da OAB.
+- Marketing e SEO para advogados: https://rcbseo.com.br/marketing-para-advogados/ — Google Meu Negócio, site por área de atuação e Google Ads para escritórios, dentro do Provimento 205/2021 da OAB.
 - SEO para contadores: https://rcbseo.com.br/seo-para-contadores/ — Escritórios de contabilidade encontrados por empresas e MEIs no Google.
 - SEO para psicólogos: https://rcbseo.com.br/seo-para-psicologos/ — Psicólogos encontrados por pacientes no Google, dentro da ética do CFP.
 - SEO para veterinários e pet shops: https://rcbseo.com.br/seo-para-veterinarios/ — Clínicas veterinárias e pet shops visíveis nas buscas de urgência e rotina.
@@ -80,6 +79,14 @@ Marketing para empresas de limpeza e terceirização de serviços (o público é
 - Marketing para empresa de limpeza (página principal): https://rcbseo.com.br/marketing-para-empresa-de-limpeza/ — Google Meu Negócio com área de atendimento, site com uma página por serviço e Google Ads para fechar contratos mensais com condomínios e empresas.
 - Como conseguir clientes para empresa de limpeza: https://rcbseo.com.br/blog/como-conseguir-clientes-para-empresa-de-limpeza/ — contrato mensal, síndicos, empresas e a proposta comercial que fecha o negócio.
 - Como divulgar empresa de limpeza: https://rcbseo.com.br/blog/como-divulgar-empresa-de-limpeza/ — 10 ideias práticas de divulgação para o dono da empresa de limpeza.
+
+## Advocacia
+Marketing e SEO para advogados e escritórios de advocacia (o público é o advogado, não quem procura um advogado). Escrito com base no Provimento 205/2021 da OAB; o consultor é bacharel em Direito, não advogado.
+- Marketing e SEO para advogados (página principal): https://rcbseo.com.br/marketing-para-advogados/ — perfil do escritório no Google, página por área de atuação, conteúdo informativo e Google Ads para quem já pesquisa.
+- Tráfego pago para advogados: https://rcbseo.com.br/trafego-pago-para-advogados/ — Google Ads por área de atuação, como permite o Anexo Único do Provimento 205/2021.
+- Criação de site para advogado: https://rcbseo.com.br/criacao-de-site-para-advogado/ — uma página por área de atuação, sem promessa de resultado.
+- Como conseguir clientes na advocacia: https://rcbseo.com.br/blog/como-conseguir-clientes-na-advocacia/ — os caminhos permitidos, do perfil no Google à indicação.
+- Advogado pode fazer marketing?: https://rcbseo.com.br/blog/advogado-pode-fazer-marketing/ — o que o Provimento 205/2021 permite e o que proíbe.
 
 ## Conteúdo
 - Guia de SEO Local (índice editorial): https://rcbseo.com.br/guia-seo-local/ — Hub que organiza por tema os principais conteúdos e serviços: aparecer no Google, Google Perfil, site, conteúdo, conversão, diagnóstico, contratação, nichos e acompanhamento.

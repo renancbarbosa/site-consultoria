@@ -17,7 +17,7 @@
 | 5 | SEO para YouTube | **publicada** 04/10/2026 (`328ff9bb`; página, menu, cartão da home e rodapé conferidos no ar; IndexNow aceito) |
 | 6 | Limpeza empresarial | **publicada** 05/10/2026 (`feacb175`; 3 URLs conferidas em 200; IndexNow 4 URLs aceito) |
 | 7 | Fortalecer estética e pequenas empresas | **publicada** 05/10/2026 (`982b8134`; 9 URLs conferidas em 200 com o conteúdo novo; IndexNow 9 URLs aceito) |
-| 8 | Advocacia (juntar em /marketing-para-advogados/) | pendente |
+| 8 | Advocacia (juntar em /marketing-para-advogados/) | **prévia local pronta** 05/10/2026 (aguardando "pode publicar") |
 | 9a–9d | Serviços de rua: higienização, guincho, reformas, dedetização | pendente |
 | 10 | Hubs "Serviços" e "Nichos que atendemos" | pendente |
 | 11 | Medição (28 dias depois da Etapa 2) | pendente |
@@ -130,6 +130,30 @@ arquivo `_redirects` da raiz. Não usar meta refresh.
 - CSS: `.cluster-grid-4` (1 / 2x2 / 4 colunas), só nos 2 blocos novos; `styles.min.css` regerado.
 - Conferido: JSON-LD válido, títulos 48–63 e descrições 127–153 sem duplicar, lychee 0 erros,
   conferidor só com os 3 avisos antigos, celular 390 px e computador 1366 px sem estouro.
+
+## Etapa 8 — o que foi feito (prévia local, 05/10/2026)
+- Linha de base: /para-advogados/ tinha 60 impressões (buscas "seo para advogados", posição 48–56) e o link
+  do menu em 168 páginas; /marketing-para-advogados/ tinha 0 impressão e 2 links. Nenhum artigo de advocacia.
+- /marketing-para-advogados/ refeita como principal em `servicos_marketing.py` ("Marketing e SEO para
+  Advogados nas Normas da OAB" — "SEO" no title/H1/H2 para herdar as buscas da página antiga).
+  /para-advogados/ apagada, com 301 no `_redirects` (e /para-advogados.html aponta direto para a nova).
+- Fonte: texto oficial do Provimento 205/2021 e Anexo Único no site da OAB (lido em 05/10/2026). Pontos usados:
+  art. 1º (marketing permitido), art. 2º II/VI/VII/VIII, art. 3º I–V, art. 4º §1º e §5º, art. 5º, art. 6º;
+  Anexo: Google Ads permitido "quando responsivo a uma busca iniciada pelo potencial cliente", impulsionamento
+  sem oferta de serviço, mala direta vedada, chatbot permitido. Página e artigos dizem que o Renan é bacharel
+  em Direito, NÃO advogado.
+- NÃO trazidos da página antiga (sem como confirmar): "exclusividade por área do direito e região", "você
+  assina ciente das regras e tem documentação de respaldo", "apresentação com dados do mercado de advocacia".
+- Artigos novos: /blog/como-conseguir-clientes-na-advocacia/ (1.206 palavras) e
+  /blog/advogado-pode-fazer-marketing/ (1.138). Índice do blog (categoria "Advocacia"), sitemap 168 → 169,
+  llms.txt (seção "## Advocacia").
+- Site e tráfego para advogados ligados à principal e aos artigos; FAQ do site sem "em Goiânia".
+- `scripts/etapa8-advocacia-2026-10-05.py` trocou href="/para-advogados/" em 177 arquivos (menu, rodapés,
+  textos e os geradores rcb_base/rcb_menu/gerar-paginas-cidades). Página protegida /consultor-seo-goiania/:
+  só os 3 links "Advogados" mudaram de endereço.
+- Conferido: fichas válidas, títulos 48–63, descrições 149–159, sem duplicados, semelhança máx. 16,4%,
+  lychee 0 erros, conferidor com os 3 avisos antigos, celular 390 px sem estouro.
+- Depois de publicar: conferir no ar que /para-advogados/ responde 301 para a nova.
 
 - Decisão do Renan (05/10/2026): manter "graduado em Gestão de TI pela FIAP" no site (está se formando).
   Não perguntar de novo.
