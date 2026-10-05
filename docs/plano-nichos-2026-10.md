@@ -4,7 +4,7 @@
 > Uma etapa por vez. Ao fim de cada uma: PARAR, mostrar o relatório e esperar
 > "aprovado, siga". Nunca publicar sem "pode publicar".
 
-> **Próxima etapa (anotado em 05/10/2026): 9b — Guincho.** Página principal "Marketing para empresas de guincho" + 1 artigo "Como conseguir clientes para guincho". Mesmo modelo da 9a (servicos_marketing.py + artigos_nichos_anuncios.py, gerar-servicos-marketing.py e RCB_ARTIGO_SLUG=... gerar-artigos-sites.py; reverter as 3 páginas que o gerador mexe na ficha da empresa: loja virtual, site para contador e site para dentista).
+> **Próxima etapa (anotado em 05/10/2026): 9c — Reformas.** Página principal "Marketing para empresas de reformas" + 1 artigo "Como conseguir clientes para reformas". Mesmo modelo da 9a/9b (servicos_marketing.py + artigos_nichos_anuncios.py, gerar-servicos-marketing.py e RCB_ARTIGO_SLUG=... gerar-artigos-sites.py; reverter as 3 páginas que o gerador mexe na ficha da empresa: loja virtual, site para contador e site para dentista).
 
 ## Status das etapas (plano revisado de 04/10/2026)
 
@@ -21,7 +21,7 @@
 | 7 | Fortalecer estética e pequenas empresas | **publicada** 05/10/2026 (`982b8134`; 9 URLs conferidas em 200 com o conteúdo novo; IndexNow 9 URLs aceito) |
 | 8 | Advocacia (juntar em /marketing-para-advogados/) | **publicada** 05/10/2026 (`7360a547`; 6 URLs em 200, /para-advogados/ /para-advogados e .html em 301 para a nova; IndexNow 7 URLs aceito) |
 | 9a | Higienização de estofados | **publicada** 05/10/2026 (`b202226b`; 2 URLs novas + blog, sitemap e llms.txt em 200 com o conteúdo novo; IndexNow 3 URLs aceito) |
-| 9b | Guincho | **prévia local pronta** 05/10/2026 — aguardando "aprovado" / "pode publicar" |
+| 9b | Guincho | **publicada** 05/10/2026 (`cd4ace84`; 2 URLs novas + blog, sitemap e llms.txt em 200 com o conteúdo novo; IndexNow 3 URLs aceito) |
 | 9c–9d | Serviços de rua: reformas, dedetização | pendente |
 | 10 | Hubs "Serviços" e "Nichos que atendemos" | pendente |
 | 11 | Medição (28 dias depois da Etapa 2) | pendente |
