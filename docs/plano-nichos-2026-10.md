@@ -21,7 +21,8 @@
 | 7 | Fortalecer estética e pequenas empresas | **publicada** 05/10/2026 (`982b8134`; 9 URLs conferidas em 200 com o conteúdo novo; IndexNow 9 URLs aceito) |
 | 8 | Advocacia (juntar em /marketing-para-advogados/) | **publicada** 05/10/2026 (`7360a547`; 6 URLs em 200, /para-advogados/ /para-advogados e .html em 301 para a nova; IndexNow 7 URLs aceito) |
 | 9a | Higienização de estofados | **publicada** 05/10/2026 (`b202226b`; 2 URLs novas + blog, sitemap e llms.txt em 200 com o conteúdo novo; IndexNow 3 URLs aceito) |
-| 9b–9d | Serviços de rua: guincho, reformas, dedetização | pendente |
+| 9b | Guincho | **prévia local pronta** 05/10/2026 — aguardando "aprovado" / "pode publicar" |
+| 9c–9d | Serviços de rua: reformas, dedetização | pendente |
 | 10 | Hubs "Serviços" e "Nichos que atendemos" | pendente |
 | 11 | Medição (28 dias depois da Etapa 2) | pendente |
 
@@ -177,6 +178,24 @@ arquivo `_redirects` da raiz. Não usar meta refresh.
 - Conferido: títulos 50 e 54, descrições 158 e 134, 1 H1, fichas válidas (Service + BusinessAudience + FAQPage;
   BlogPosting + BreadcrumbList + FAQPage), sem R$, semelhança máx. 14,1% (× limpeza), lychee interno 0 erros,
   conferidor só com os 3 avisos antigos, celular 390 px sem estouro.
+
+## Etapa 9b — o que foi feito (prévia local, 05/10/2026)
+- Página nova `/marketing-para-empresa-de-guincho/` (servicos_marketing.py, 1.554 palavras) e artigo
+  `/blog/como-conseguir-clientes-para-guincho/` (artigos_nichos_anuncios.py, 1.098 palavras).
+- Ângulos: compra de urgência (aberto agora, estrelas, botão de ligar), área de atendimento e horário real no
+  Google Meu Negócio (madrugada e feriado), atender toda ligação, anúncio com recurso de ligação, bloqueio de
+  buscas de vaga/compra de caminhão/curso, oficinas/funilarias/frotas como cliente recorrente, menos
+  dependência de seguradora, não prometer tempo de chegada (CDC art. 37).
+- Fontes (conferidas em 05/10/2026): API de CNAE do IBGE 5229-0/02 (reboque, inclui auto-socorro) + CNPJ jun/2026
+  (26.721 ativas, 1.134 abertas em 90 dias); ajuda do Perfil da Empresa (área de cobertura; horário principal e
+  especial, answer/3039617); ajuda do Google Ads answer/16598240: anúncios só para chamadas sem criação desde
+  fev/2026 e sem impressões a partir de fev/2027 — substituto é anúncio responsivo com recurso de ligação.
+- Índice do blog (categoria "Guincho e reboque"), sitemap 171 → 173, llms.txt (seção nova).
+- Gerador mexeu de novo na ficha da empresa das mesmas 3 páginas (loja virtual, site para contador, site para
+  dentista): revertidas.
+- Conferido: títulos 53 e 49, descrições 156 e 154, 1 H1, fichas válidas, sem R$, semelhança máx. 12,9%
+  (× estofados), 82 links internos conferidos um a um (0 quebrados), conferidor só com os 3 avisos antigos,
+  celular 390 px sem estouro.
 
 ## Decisões anteriores (04/10/2026)
 - Marca oficial "RCB SEO"; dados só em `data/marca.json`.

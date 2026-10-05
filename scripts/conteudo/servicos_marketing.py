@@ -1389,6 +1389,209 @@ PAGINAS = [
                       "Sem compromisso: eu olho como a sua empresa aparece hoje no Google e quem aparece antes de você."),
     },
     {
+        # Etapa 9b do plano de nichos (05/10/2026): pagina principal do nicho GUINCHO / REBOQUE.
+        # Publico: o DONO da empresa de guincho (regra de ouro). Fontes conferidas em 05/10/2026: API de
+        # CNAE do IBGE (5229-0/02) + CNPJ publico jun/2026 (26.721 ativas, 1.134 abertas em 90 dias),
+        # ajuda do Perfil da Empresa (area de cobertura; horario de funcionamento) e ajuda do Google Ads
+        # sobre a transicao dos anuncios so de chamada (fim da criacao em fev/2026, sem impressoes em
+        # fev/2027) para anuncios responsivos com recursos de ligacao. CDC art. 37.
+        "slug": "marketing-para-empresa-de-guincho",
+        "nacional": True,
+        "data": "2026-10-05",
+        "publico": "Empresas de guincho, reboque e auto-socorro",
+        "title": "Marketing para Empresa de Guincho e Reboque | RCB SEO",
+        "desc": ("Marketing para empresas de guincho: Google Meu Negócio com horário certo, anúncio com botão de "
+                 "ligação e site para ser o primeiro chamado. Orçamento em 24h."),
+        "trilha": "Marketing para empresa de guincho",
+        "servico": "Marketing para empresas de guincho e reboque",
+        "eyebrow": "Para empresas de guincho de todo o Brasil",
+        "h1": "Marketing e SEO para empresas de guincho e reboque",
+        "sub": ("Marketing para empresa de guincho é fazer o motorista parado na rua achar o seu número primeiro — e "
+                "ligar. Eu cuido do Google Meu Negócio com a sua área de atendimento e horário, do anúncio no Google "
+                "com botão de ligação e do site que passa confiança em poucos segundos, com foco no que paga as "
+                "contas: telefone tocando. Orçamento grátis em até 24 horas."),
+        "cta_hero": "Quero o telefone tocando",
+        "msg": "Olá, Renan! Tenho uma empresa de guincho e quero mais chamados pelo Google.",
+        "pills": ["Orçamento em até 24h", "Foco em ligação", "Prazo por escrito"],
+        "painel_h2": "O que entra no marketing",
+        "painel": [
+            "Google Meu Negócio com área e horário certos.",
+            "Anúncio no Google com botão de ligação.",
+            "Site leve, com o telefone sempre à vista.",
+            "Página por serviço e por região atendida.",
+            "Rotina de avaliações depois do atendimento.",
+            "Medição de cada ligação recebida.",
+        ],
+        "faq_titulo": "Perguntas frequentes sobre marketing para empresa de guincho",
+        "secoes": [
+            ("split", {
+                "tag": "O cenário",
+                "titulo": "Por que a empresa de guincho perde chamado para quem aparece primeiro?",
+                "ps": [
+                    "Ninguém escolhe guincho com calma. O carro quebrou, a pessoa está no acostamento ou na garagem, "
+                    "pega o celular, pesquisa e liga para o primeiro número que parece confiável. Se não atende, liga "
+                    "para o segundo. Quem não aparece nessa tela — ou aparece com horário errado e sem avaliações — "
+                    "simplesmente não entra na disputa.",
+                    "E a disputa é grande. Pelos dados públicos de CNPJ de junho de 2026, o código "
+                    "<a href=\"https://cnae.ibge.gov.br/?subclasse=5229002&amp;tipo=cnae&amp;versao=10&amp;view=subclasse\" "
+                    "target=\"_blank\" rel=\"noopener noreferrer\">5229-0/02 (Serviços de reboque de veículos)</a> "
+                    "reunia 26.721 empresas ativas, com 1.134 abertas em apenas 90 dias. Num serviço de urgência, "
+                    "estar em primeiro na busca vale mais do que em quase qualquer outro ramo.",
+                ],
+                "card_titulo": "Sinais de que falta marketing na empresa de guincho",
+                "card": [
+                    "Chamados que dependem de seguradora e indicação.",
+                    "Perfil do Google com horário errado ou fechado.",
+                    "Poucas avaliações, ou nenhuma respondida.",
+                    "Site que demora a abrir no celular.",
+                    "Ninguém sabe quantas ligações vieram do Google.",
+                ],
+            }),
+            ("texto", {
+                "tag": "Google Meu Negócio",
+                "titulo": "Como a empresa de guincho aparece no Google Maps na hora da emergência?",
+                "ps": [
+                    "O perfil no Google é a vitrine mais importante do guincho, porque é ali que aparece o botão de "
+                    "ligar. Quem vai até o veículo é empresa de serviço local: a ajuda do Google sobre "
+                    "<a href=\"https://support.google.com/business/answer/9157481?hl=pt-BR\" target=\"_blank\" "
+                    "rel=\"noopener noreferrer\">áreas de cobertura</a> orienta mostrar a região atendida e tirar o "
+                    "endereço do perfil se você não recebe clientes no pátio.",
+                    "O horário pesa tanto quanto a área. Se você atende de madrugada, isso precisa estar no perfil; "
+                    "feriado também — o Google permite "
+                    "<a href=\"https://support.google.com/business/answer/3039617?hl=pt-BR\" target=\"_blank\" "
+                    "rel=\"noopener noreferrer\">definir o horário principal e o horário especial</a>. Um perfil que "
+                    "mostra \"fechado\" às duas da manhã perde o chamado para quem está \"aberto\". Veja a "
+                    "<a href=\"/google-perfil-empresa/\">otimização do Google Perfil da Empresa</a>.",
+                ],
+            }),
+            ("texto", {
+                "tag": "Anúncio no Google",
+                "titulo": "Anúncio de guincho no Google: por que o botão de ligação é o que importa?",
+                "ps": [
+                    "Quem pesquisa \"guincho 24 horas\" ou \"reboque perto de mim\" não quer ler: quer ligar. Por isso o "
+                    "anúncio de guincho precisa do número à vista e de um botão que liga direto. Atenção a uma mudança: "
+                    "o Google está encerrando os anúncios só para chamadas — segundo a "
+                    "<a href=\"https://support.google.com/google-ads/answer/16598240?hl=pt-BR\" target=\"_blank\" "
+                    "rel=\"noopener noreferrer\">ajuda do Google Ads</a>, desde fevereiro de 2026 não dá mais para "
+                    "criar novos, e em fevereiro de 2027 eles param de aparecer. O caminho é o anúncio responsivo de "
+                    "pesquisa com recurso de ligação.",
+                    "Os outros cuidados do ramo: mostrar o anúncio só na região que o seu caminhão alcança, nos "
+                    "horários em que alguém atende, e bloquear as buscas que não são de chamado — vaga de motorista, "
+                    "compra de caminhão-guincho, curso, tabela de frete. Veja a "
+                    "<a href=\"/gestao-de-trafego-pago/\">gestão de tráfego pago</a>.",
+                ],
+            }),
+            ("cards", {
+                "tag": "As frentes",
+                "titulo": "O que entra no marketing de uma empresa de guincho?",
+                "desc": "As frentes que fazem o telefone tocar. Dá para começar por uma e somar as outras.",
+                "itens": [
+                    ("Google Meu Negócio",
+                     "Área de atendimento, horário real (inclusive madrugada e feriado), serviços, fotos dos "
+                     "caminhões e rotina de avaliações."),
+                    ("Anúncio no Google",
+                     "Anúncio de pesquisa com botão de ligação, limitado à sua região e ao seu horário, com as buscas "
+                     "de emprego e de compra de caminhão bloqueadas."),
+                    ("Site leve",
+                     "Abre rápido no celular, com o telefone fixo no topo e o botão de WhatsApp para quem prefere "
+                     "mandar a localização."),
+                    ("Página por serviço",
+                     "Guincho leve, pesado, moto, plataforma, remoção para oficina: cada serviço com a sua página e a "
+                     "região que você cobre."),
+                    ("Avaliações",
+                     "Pedido de avaliação logo depois do atendimento, com o link direto — avaliação recente decide "
+                     "quem recebe a ligação."),
+                    ("Medição",
+                     "Cada ligação e cada mensagem registradas, para saber se o chamado veio do mapa, do site ou do "
+                     "anúncio."),
+                ],
+            }),
+            ("texto", {
+                "tag": "Além do particular",
+                "titulo": "Como o guincho consegue clientes que chamam todo mês?",
+                "ps": [
+                    "O motorista particular chama uma vez e some. Quem sustenta a agenda são os clientes que precisam "
+                    "de remoção com frequência: oficinas mecânicas, funilarias, concessionárias, lojas de carros "
+                    "usados, locadoras e frotas de empresas. Uma página no site falando com esse público — prazo, "
+                    "nota fiscal, atendimento combinado — abre uma porta que o anúncio sozinho não abre.",
+                    "Muita empresa também atende seguradoras e assistências 24 horas. Esse chamado é bem-vindo, mas "
+                    "depender só dele deixa a empresa refém de quem define o volume. O marketing próprio é o que "
+                    "garante chamados que chegam direto a você.",
+                ],
+            }),
+            ("texto", {
+                "tag": "Promessa",
+                "titulo": "Como anunciar o tempo de chegada do guincho sem prometer demais?",
+                "ps": [
+                    "\"Chegamos em 15 minutos\" funciona no anúncio e vira reclamação na avaliação quando o trânsito não "
+                    "colabora. O "
+                    "<a href=\"https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm\" target=\"_blank\" "
+                    "rel=\"noopener noreferrer\">Código de Defesa do Consumidor (art. 37)</a> proíbe publicidade que "
+                    "induza o consumidor a erro.",
+                    "Prometa o que você controla: atendimento na hora, tempo estimado informado na ligação, preço "
+                    "combinado antes de sair e acompanhamento pelo WhatsApp. É isso que gera avaliação boa — e "
+                    "avaliação boa é o que faz o próximo motorista ligar para você.",
+                ],
+            }),
+            ("passos", {
+                "titulo": "Como funciona o marketing da sua empresa de guincho, do diagnóstico ao telefone tocando?",
+                "itens": [
+                    ("Diagnóstico", "Olho seu perfil no Google, o site e quem aparece antes de você na sua região."),
+                    ("Plano por escrito", "Em até 24 horas: as frentes para começar, o que entra e o valor de cada uma."),
+                    ("Perfil e site", "Área, horário, serviços e um site que abre rápido com o telefone à vista."),
+                    ("Anúncio, se fizer sentido", "Campanha com botão de ligação, só na sua região e no seu horário."),
+                    ("Medição", "Relatório de ligações e mensagens por canal."),
+                ],
+            }),
+            ("orcamento", {
+                "titulo": "Por onde a sua empresa de guincho quer começar?",
+                "desc": "Escolha o ponto de partida. O orçamento é grátis e sai em até 24 horas pelo WhatsApp.",
+                "destaque": 1,
+                "itens": [
+                    ("Aparecer no mapa da região", "Para quem ainda depende de seguradora e indicação.",
+                     ["Google Meu Negócio com área e horário", "Serviços e fotos", "Rotina de avaliações"],
+                     "Olá, Renan! Tenho empresa de guincho e quero aparecer no Google Maps.", "Pedir orçamento"),
+                    ("Anúncio com botão de ligação", "Para quem quer chamados agora.",
+                     ["Google Ads na sua região e horário", "Buscas de emprego bloqueadas", "Medição das ligações"],
+                     "Olá, Renan! Quero anunciar a minha empresa de guincho no Google.", "Pedir orçamento"),
+                    ("Site que passa confiança", "Para ser escolhido em segundos.",
+                     ["Telefone sempre à vista", "Página por serviço", "Página para oficinas e frotas"],
+                     "Olá, Renan! Quero um site para a minha empresa de guincho.", "Pedir orçamento"),
+                ],
+            }),
+        ],
+        "faq": [
+            ("Empresa de guincho precisa de site?",
+             "Ajuda. O perfil no Google traz a maior parte das ligações, mas o site é onde a oficina, a frota e o "
+             "motorista desconfiado conferem os serviços, as regiões e as avaliações antes de ligar."),
+            ("Devo colocar o endereço do pátio no Google Meu Negócio?",
+             "Só se você recebe clientes nele. Para quem vai até o veículo, o Google orienta usar a área de cobertura e "
+             "remover o endereço do perfil."),
+            ("Vale a pena anunciar guincho no Google Ads?",
+             "Vale, porque quem pesquisa guincho quer ligar agora. O cuidado é limitar a região e o horário e bloquear "
+             "as buscas de vaga de motorista e de compra de caminhão."),
+            ("Ainda dá para fazer anúncio só de ligação?",
+             "Não para criar novos: pela ajuda do Google Ads, a criação acabou em fevereiro de 2026 e eles param de "
+             "aparecer em fevereiro de 2027. O substituto é o anúncio de pesquisa com recurso de ligação."),
+            ("Quanto custa o marketing para empresa de guincho?",
+             "Depende das frentes que entram e do tamanho da região que você atende. O orçamento é individual, grátis "
+             "e sai em até 24 horas pelo WhatsApp. A verba de anúncio, quando houver, é paga direto ao Google."),
+            ("Existe fidelidade?",
+             "Não existe fidelidade. Para cancelar, basta avisar com 30 dias de antecedência. As demais condições "
+             "vão por escrito junto com o orçamento."),
+        ],
+        "relacionados": [
+            ("/blog/como-conseguir-clientes-para-guincho/", "Como conseguir clientes para guincho",
+             "Google Maps, anúncio com ligação, oficinas, frotas e avaliações."),
+            ("/gestao-de-trafego-pago/", "Gestão de tráfego pago",
+             "Anúncio no Google para quem precisa de guincho agora."),
+            ("/google-perfil-empresa/", "Google Perfil da Empresa",
+             "Área, horário e avaliações para aparecer no mapa."),
+        ],
+        "cta_final": ("Me conte a região que você atende e o seu horário. Eu te digo por onde começar.",
+                      "Sem compromisso: eu olho como a sua empresa aparece hoje no Google e quem aparece antes de você."),
+    },
+    {
         # Etapa 8 do plano de nichos (05/10/2026): pagina principal de ADVOCACIA. Substitui a antiga
         # /marketing-para-advogados/ (escrita a mao, criada em 15/07/2026) e recebe o 301 de
         # /para-advogados/, que era quem aparecia para "seo para advogados" — por isso o termo SEO fica

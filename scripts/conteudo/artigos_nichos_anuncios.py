@@ -1231,4 +1231,128 @@ ARTIGOS = [
                 wa("Olá, Renan! Tenho uma empresa de higienização de estofados e quero conseguir mais clientes."),
                 "Quero mais clientes"),
     },
+
+    # ------------------------------------------------------------------ guincho: conseguir clientes
+    # Etapa 9b do plano de nichos (05/10/2026). Busca do DONO: "como conseguir clientes para guincho".
+    # Fontes: ajuda do Perfil da Empresa (area de cobertura, horario), ajuda do Google Ads (transicao dos
+    # anuncios so de chamada), CDC art. 37.
+    {
+        "slug": "como-conseguir-clientes-para-guincho",
+        "h1": "Como conseguir clientes para guincho: mais chamados direto, menos dependência",
+        "title": "Como conseguir clientes para guincho: 10 caminhos",
+        "desc": ("Como conseguir clientes para guincho: Google Maps com horário certo, anúncio com ligação, oficinas "
+                 "e frotas, avaliações e menos dependência de seguradora."),
+        "cat": "Guincho e reboque",
+        "data": "2026-10-05",
+        "trilha_extra": ("/marketing-para-empresa-de-guincho/", "Marketing para empresa de guincho"),
+        "corpo": f"""
+        <p>Para conseguir clientes para guincho, o caminho mais seguro é estar em primeiro quando alguém pesquisa
+        na hora da emergência — no Google Maps, com horário e área certos, e no anúncio com botão de ligação — e,
+        ao mesmo tempo, conquistar clientes que chamam todo mês, como oficinas, concessionárias e frotas. Quem
+        depende só de seguradora e indicação vive com a agenda nas mãos dos outros.</p>
+
+        {caixa('<p><strong>Resposta rápida:</strong> deixe o perfil do Google com a área que você atende e o '
+               'horário real (inclusive madrugada e feriado), atenda toda ligação, peça avaliação depois de cada '
+               'atendimento, anuncie no Google com botão de ligação só na sua região e procure oficinas, '
+               'funilarias, lojas de carros e frotas para ter chamados recorrentes.</p>')}
+
+        <h2>1. Entenda como o motorista escolhe o guincho</h2>
+        <p>Guincho é compra de urgência. O carro parou, a pessoa está nervosa, pesquisa no celular e liga para o
+        primeiro número que parece confiável. Ela não compara cinco sites nem lê textos longos: olha a posição na
+        busca, as estrelas, se está "aberto agora" e se tem um botão para ligar. Todo o seu marketing precisa
+        responder a essas quatro perguntas em poucos segundos.</p>
+
+        <h2>2. Acerte o Google Meu Negócio: área e horário</h2>
+        <p>Quem vai até o veículo é empresa de serviço local. A ajuda do Google sobre
+        <a href="https://support.google.com/business/answer/9157481?hl=pt-BR" target="_blank" rel="noopener noreferrer">áreas de cobertura</a>
+        orienta mostrar a região atendida e tirar o endereço do perfil se você não recebe clientes no pátio. O
+        horário é igualmente decisivo: se você atende de madrugada, o perfil precisa mostrar isso, e os feriados
+        também — o Google permite
+        <a href="https://support.google.com/business/answer/3039617?hl=pt-BR" target="_blank" rel="noopener noreferrer">definir o horário principal e o especial</a>.
+        Um perfil "fechado" às três da manhã entrega o chamado ao concorrente. Veja a
+        {link('/google-perfil-empresa/', 'otimização do Google Perfil da Empresa')}.</p>
+
+        <h2>3. Atenda toda ligação</h2>
+        <p>Parece óbvio, mas é onde mais chamado se perde. Quem não atende na primeira tentativa raramente recebe
+        a segunda: a pessoa já está ligando para o próximo da lista. Se você não consegue atender dirigindo,
+        combine um revezamento, um número que toca em mais de um celular ou alguém de plantão. Marketing que faz o
+        telefone tocar sem ninguém atender é dinheiro jogado fora.</p>
+
+        <h2>4. Peça avaliação depois de cada atendimento</h2>
+        <p>Entre dois guinchos no mapa, o motorista escolhe o que tem mais avaliações recentes e boas. O melhor
+        momento para pedir é logo depois de deixar o carro na oficina ou em casa, pelo WhatsApp, com o link direto
+        para o seu perfil. Responda todas, inclusive as negativas, com educação. E nunca compre nem troque
+        avaliação: além de ser contra as regras do Google, um perfil suspenso apaga todo o trabalho.</p>
+
+        <h2>5. Anuncie no Google com botão de ligação</h2>
+        <p>Quem pesquisa "guincho 24 horas" quer ligar, não ler. O anúncio precisa do número e de um botão que liga
+        direto. Uma mudança importante: pela
+        <a href="https://support.google.com/google-ads/answer/16598240?hl=pt-BR" target="_blank" rel="noopener noreferrer">ajuda do Google Ads</a>,
+        os anúncios só para chamadas não podem mais ser criados desde fevereiro de 2026 e param de aparecer em
+        fevereiro de 2027; o substituto é o anúncio de pesquisa com recurso de ligação. Limite a região ao que o
+        seu caminhão alcança e o horário ao que alguém atende. Veja a
+        {link('/gestao-de-trafego-pago/', 'gestão de tráfego pago')}.</p>
+
+        <h2>6. Bloqueie as buscas que não são de chamado</h2>
+        <p>No ramo de guincho, muita gente pesquisa coisas parecidas que não viram serviço: vaga de motorista de
+        guincho, caminhão-guincho à venda, curso, tabela de valores de seguradora, peças de plataforma. Sem
+        bloquear essas palavras no anúncio, boa parte da verba vai para quem nunca vai chamar você.</p>
+
+        <h2>7. Tenha um site leve, com o telefone sempre à vista</h2>
+        <p>O site do guincho não precisa ser grande; precisa abrir rápido no celular e mostrar o telefone sem
+        rolar a tela. Um botão de WhatsApp ajuda quem prefere mandar a localização. Uma página por serviço (leve,
+        pesado, moto, plataforma, remoção) e por região atendida faz o Google mostrar você para buscas mais
+        específicas e passa segurança para quem desconfia.</p>
+
+        <h2>8. Conquiste oficinas, funilarias e frotas</h2>
+        <p>O motorista particular chama uma vez. Oficinas mecânicas, funilarias, concessionárias, lojas de carros
+        usados, locadoras e empresas com frota precisam de remoção toda semana. Visite, deixe o contato, ofereça
+        atendimento combinado e nota fiscal, e cumpra o horário. Um bom parceiro desses vale dezenas de chamados
+        avulsos — e não depende do algoritmo de ninguém.</p>
+
+        <h2>9. Não dependa só de seguradora</h2>
+        <p>Atender seguradoras e assistências 24 horas ajuda a manter o caminhão rodando, mas quem define o volume
+        e as condições é elas. Ter chamados diretos — do Google, do site e das parcerias — é o que dá margem para
+        a empresa crescer e negociar melhor.</p>
+
+        <h2>10. Prometa só o que você cumpre</h2>
+        <p>"Chegamos em 15 minutos" atrai a ligação e gera reclamação quando o trânsito não ajuda. O
+        <a href="https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm" target="_blank" rel="noopener noreferrer">Código de Defesa do Consumidor (art. 37)</a>
+        proíbe publicidade que induza o consumidor a erro. Informe o tempo estimado na ligação, combine o preço
+        antes de sair e mande a localização do caminhão pelo WhatsApp. Esse cuidado vira avaliação boa, e avaliação
+        boa vira o próximo chamado.</p>
+
+        {tabela(
+            ["Cliente", "Como chega", "O que precisa ver"],
+            [
+                ["Motorista particular", "Busca no Google na hora da pane", "Aberto agora, avaliações e botão de ligar"],
+                ["Oficina, funilaria e concessionária", "Parceria e visita", "Pontualidade, preço combinado e nota fiscal"],
+                ["Frota de empresa e locadora", "Indicação, site e contato direto", "Atendimento combinado e cobertura da região"],
+            ])}
+
+        <h2>Por onde começar a conseguir clientes para guincho?</h2>
+        <p>Comece pelo perfil no Google com área e horário certos e pela rotina de avaliações, porque é ali que o
+        motorista decide. Depois, um anúncio com botão de ligação na sua região e, em paralelo, as visitas a
+        oficinas e frotas. As frentes juntas estão em
+        {link('/marketing-para-empresa-de-guincho/', 'marketing para empresas de guincho')}.</p>
+""",
+        "faq": [
+            ("Como divulgar empresa de guincho?",
+             "Google Meu Negócio com área e horário certos, avaliações pedidas depois de cada atendimento, anúncio no "
+             "Google com botão de ligação, site leve e parcerias com oficinas, funilarias e frotas."),
+            ("Vale a pena anunciar guincho no Google?",
+             "Vale, porque quem pesquisa quer ligar na hora. O cuidado é limitar região e horário e bloquear buscas de "
+             "vaga de motorista e de compra de caminhão."),
+            ("Guincho precisa de endereço no Google Maps?",
+             "Não. Para quem vai até o veículo, o Google orienta mostrar a área de cobertura e remover o endereço se "
+             "você não recebe clientes no pátio."),
+            ("Como depender menos da seguradora?",
+             "Somando chamados diretos: perfil no Google, anúncio, site e parcerias com oficinas, concessionárias e "
+             "empresas com frota."),
+        ],
+        "cta": ("Tem uma empresa de guincho e quer mais chamados diretos? Me conte a região que você atende e o seu "
+                "horário. Em até 24 horas eu te digo por onde começar.",
+                wa("Olá, Renan! Tenho uma empresa de guincho e quero conseguir mais clientes."),
+                "Quero mais chamados"),
+    },
 ]
