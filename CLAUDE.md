@@ -686,7 +686,17 @@ abre e grava em UTF-8 corretamente; provavelmente foi um comando ad-hoc no termi
 **Regra nova: depois de qualquer script que reescreva HTML em massa, conferir que os
 arquivos ainda começam com `<!DOCTYPE`.**
 
-### ⚠️ O gerador de cidades está DEFASADO — não regenerar sem sincronizar antes
+### ✅ (RESOLVIDO em 05/10/2026) O gerador de cidades estava defasado
+
+**Situação atual:** o gerador está em dia e pode ser rodado. Testado em 05/10/2026 numa cópia do site,
+comparando texto visível, links, ficha (JSON-LD) e cabeçalho das 32 páginas: 22 saem idênticas
+(inclusive Anápolis, Aparecida e o hub) e 10 só **ganham** links de cidades vizinhas indexáveis
+(Mogi das Cruzes, Brusque, Balneário Camboriú). A única perda era o `dateModified` do hub, que agora
+vem da constante `ATUALIZADO_HUB` no gerador. O gerador só produz as 31 cidades de
+`rcb_cidades.INDEXAVEIS` — as 168 excluídas não voltam. Ele grava a ficha numa linha só (o site
+tinha a mesma ficha indentada): diferença só de formatação.
+
+Histórico (08/09/2026), mantido para referência:
 
 Descoberto ao testar: `python scripts/gerar-paginas-cidades.py` hoje **apaga** o trabalho
 manual de 20/08. Medido com backup e comparação byte a byte:

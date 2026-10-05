@@ -53,6 +53,9 @@ BASE_URL = "https://rcbseo.com.br"
 WHATS = "5562991161040"
 EXPANDIR_CIDADES = os.environ.get("RCB_EXPANDIR_CIDADES") == "1"
 ATUALIZADO_INDEXAVEIS = "2026-08-15"
+# dateModified do hub /consultoria-seo/ (posto a mao pela auditoria de 08/09/2026; antes o gerador
+# nao escrevia e a regeracao apagava). Troque quando o conteudo do hub mudar de verdade.
+ATUALIZADO_HUB = "2026-09-08"
 
 ESTADOS = {
     "AC": "Acre", "AL": "Alagoas", "AP": "Amapá", "AM": "Amazonas",
@@ -878,7 +881,7 @@ def pagina_hub(cidades):
 
     schema = (
         '{"@context":"https://schema.org","@graph":['
-        '{"@type":"WebPage","url":"%s","name":"%s","description":"%s","inLanguage":"pt-BR"},'
+        '{"@type":"WebPage","url":"%s","name":"%s","description":"%s","inLanguage":"pt-BR","dateModified":"%s"},'
         '{"@type":"BreadcrumbList","itemListElement":['
         '{"@type":"ListItem","position":1,"name":"Início","item":"https://rcbseo.com.br/"},'
         '{"@type":"ListItem","position":2,"name":"Consultoria de SEO por cidade","item":"%s"}]},'
@@ -886,7 +889,7 @@ def pagina_hub(cidades):
         '"provider":{"@type":"LocalBusiness","@id":"https://rcbseo.com.br/#business"},'
         '"areaServed":{"@type":"Country","name":"Brasil"}'
         '}]}'
-    ) % (canonical, titulo, desc, canonical)
+    ) % (canonical, titulo, desc, ATUALIZADO_HUB, canonical)
 
     por_regiao = {}
     for c in cidades:
