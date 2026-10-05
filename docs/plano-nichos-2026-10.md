@@ -4,7 +4,7 @@
 > Uma etapa por vez. Ao fim de cada uma: PARAR, mostrar o relatório e esperar
 > "aprovado, siga". Nunca publicar sem "pode publicar".
 
-> **Próxima etapa (anotado em 05/10/2026): 9a — Higienização de estofados.** Página principal "Marketing para empresas de higienização de estofados" + 1 artigo "Como conseguir clientes para higienização de estofados". Seguir o modelo das Etapas 6 e 8 (servicos_marketing.py + artigos_nichos_anuncios.py, gerar-servicos-marketing.py e RCB_ARTIGO_SLUG=... gerar-artigos-sites.py; reverter as páginas que o gerador mexe fora do escopo).
+> **Próxima etapa (anotado em 05/10/2026): 9b — Guincho.** Página principal "Marketing para empresas de guincho" + 1 artigo "Como conseguir clientes para guincho". Mesmo modelo da 9a (servicos_marketing.py + artigos_nichos_anuncios.py, gerar-servicos-marketing.py e RCB_ARTIGO_SLUG=... gerar-artigos-sites.py; reverter as 3 páginas que o gerador mexe na ficha da empresa: loja virtual, site para contador e site para dentista).
 
 ## Status das etapas (plano revisado de 04/10/2026)
 
@@ -20,7 +20,8 @@
 | 6 | Limpeza empresarial | **publicada** 05/10/2026 (`feacb175`; 3 URLs conferidas em 200; IndexNow 4 URLs aceito) |
 | 7 | Fortalecer estética e pequenas empresas | **publicada** 05/10/2026 (`982b8134`; 9 URLs conferidas em 200 com o conteúdo novo; IndexNow 9 URLs aceito) |
 | 8 | Advocacia (juntar em /marketing-para-advogados/) | **publicada** 05/10/2026 (`7360a547`; 6 URLs em 200, /para-advogados/ /para-advogados e .html em 301 para a nova; IndexNow 7 URLs aceito) |
-| 9a–9d | Serviços de rua: higienização, guincho, reformas, dedetização | pendente |
+| 9a | Higienização de estofados | **publicada** 05/10/2026 (`b202226b`; 2 URLs novas + blog, sitemap e llms.txt em 200 com o conteúdo novo; IndexNow 3 URLs aceito) |
+| 9b–9d | Serviços de rua: guincho, reformas, dedetização | pendente |
 | 10 | Hubs "Serviços" e "Nichos que atendemos" | pendente |
 | 11 | Medição (28 dias depois da Etapa 2) | pendente |
 
@@ -159,6 +160,23 @@ arquivo `_redirects` da raiz. Não usar meta refresh.
 
 - Decisão do Renan (05/10/2026): manter "graduado em Gestão de TI pela FIAP" no site (está se formando).
   Não perguntar de novo.
+
+## Etapa 9a — o que foi feito (prévia local, 05/10/2026)
+- Página nova `/marketing-para-empresa-de-higienizacao-de-estofados/` (servicos_marketing.py) e artigo
+  `/blog/como-conseguir-clientes-para-higienizacao-de-estofados/` (artigos_nichos_anuncios.py, 1.220 palavras).
+  Ângulos: decisão rápida (orçamento por foto no WhatsApp), antes e depois organizado e com autorização,
+  não prometer "remove 100% das manchas" (CDC art. 37), produtos saneantes (Lei 6.360/1976 + página da Anvisa),
+  área de atendimento no Google Meu Negócio, clientes empresariais (hotel, clínica, aluguel por temporada),
+  cliente que volta (lembrete com LGPD), Google Ads com bloqueio de buscas de curso/máquina/emprego.
+- **Sem número de CNPJ de propósito:** a API de CNAE do IBGE (conferida em 05/10/2026) não tem código próprio
+  para estofados; o mais próximo descrito é o 9601-7/01 (lavagem de tapetes, carpetes e cortinas "inclusive na
+  residência do cliente"). Contar as empresas desse código seria contar lavanderias — por isso não há número.
+- Índice do blog (categoria "Higienização de estofados"), sitemap 169 → 171, llms.txt (seção nova).
+- O gerador mexeu na ficha da empresa de 3 páginas fora do escopo (loja virtual, site para contador, site para
+  dentista): revertidas com git.
+- Conferido: títulos 50 e 54, descrições 158 e 134, 1 H1, fichas válidas (Service + BusinessAudience + FAQPage;
+  BlogPosting + BreadcrumbList + FAQPage), sem R$, semelhança máx. 14,1% (× limpeza), lychee interno 0 erros,
+  conferidor só com os 3 avisos antigos, celular 390 px sem estouro.
 
 ## Decisões anteriores (04/10/2026)
 - Marca oficial "RCB SEO"; dados só em `data/marca.json`.
