@@ -4,7 +4,7 @@
 > Uma etapa por vez. Ao fim de cada uma: PARAR, mostrar o relatório e esperar
 > "aprovado, siga". Nunca publicar sem "pode publicar".
 
-> **Próxima etapa (anotado em 05/10/2026): publicar 9c + 9d + 10 juntas (o Renan pediu as três de uma vez) e depois só a 11 — Medição, por volta de 01/11/2026 (28 dias depois da Etapa 2).**
+> **Próxima etapa (anotado em 05/10/2026): 11 — Medição, por volta de 01/11/2026 (28 dias depois da Etapa 2). Etapas 0 a 10 publicadas.**
 
 ## Status das etapas (plano revisado de 04/10/2026)
 
@@ -22,9 +22,9 @@
 | 8 | Advocacia (juntar em /marketing-para-advogados/) | **publicada** 05/10/2026 (`7360a547`; 6 URLs em 200, /para-advogados/ /para-advogados e .html em 301 para a nova; IndexNow 7 URLs aceito) |
 | 9a | Higienização de estofados | **publicada** 05/10/2026 (`b202226b`; 2 URLs novas + blog, sitemap e llms.txt em 200 com o conteúdo novo; IndexNow 3 URLs aceito) |
 | 9b | Guincho | **publicada** 05/10/2026 (`cd4ace84`; 2 URLs novas + blog, sitemap e llms.txt em 200 com o conteúdo novo; IndexNow 3 URLs aceito) |
-| 9c | Reformas | **prévia local pronta** 05/10/2026 — aguardando "pode publicar" |
-| 9d | Dedetização | **prévia local pronta** 05/10/2026 — aguardando "pode publicar" |
-| 10 | Hubs "Serviços" e "Nichos que atendemos" | **prévia local pronta** 05/10/2026 — aguardando "pode publicar" |
+| 9c | Reformas | **publicada** 05/10/2026 (`88bc1bf4`; 2 URLs novas em 200; IndexNow do sitemap inteiro aceito) |
+| 9d | Dedetização | **publicada** 05/10/2026 (`88bc1bf4`; 2 URLs novas em 200; IndexNow do sitemap inteiro aceito) |
+| 10 | Hubs "Serviços" e "Nichos que atendemos" | **publicada** 05/10/2026 (`88bc1bf4`; /servicos/ e /nichos/ em 200, menu novo no ar, as 179 URLs do sitemap conferidas em 200; IndexNow 179 URLs aceito) |
 | 11 | Medição (28 dias depois da Etapa 2) | pendente |
 
 **Redirecionamento:** o site está no **Cloudflare Pages** (não GitHub Pages): 301 pelo
