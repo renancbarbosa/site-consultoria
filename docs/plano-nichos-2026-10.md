@@ -15,7 +15,7 @@
 | 3 | Tráfego pago empresarial (reorganizar as 7 páginas) | **publicada** 04/10/2026 (`0e619b73`; principal, 301 e 4 nichos conferidos no ar; IndexNow 163 URLs aceito) |
 | 4 | Energia solar (marketing completo) | **publicada** 04/10/2026 (`2e818aea`; página e 2 artigos conferidos no ar; IndexNow aceito) |
 | 5 | SEO para YouTube | **publicada** 04/10/2026 (`328ff9bb`; página, menu, cartão da home e rodapé conferidos no ar; IndexNow aceito) |
-| 6 | Limpeza empresarial | **em andamento** |
+| 6 | Limpeza empresarial | **publicada** 05/10/2026 (`feacb175`; 3 URLs conferidas em 200; IndexNow 4 URLs aceito) |
 | 7 | Fortalecer estética e pequenas empresas | pendente |
 | 8 | Advocacia (juntar em /marketing-para-advogados/) | pendente |
 | 9a–9d | Serviços de rua: higienização, guincho, reformas, dedetização | pendente |
@@ -92,6 +92,21 @@ arquivo `_redirects` da raiz. Não usar meta refresh.
   que "não assistem ao vídeo", por falta de fonte).
 - Menu: `MOSTRAR_YOUTUBE = True` e destino `/seo-para-youtube/` em `rcb_menu.py`; cartão da home com link;
   "SEO para YouTube" também no rodapé (lista de serviços); llms.txt e sitemap (164 → 165).
+
+## Etapa 6 — o que foi feito (prévia local, 05/10/2026)
+- Página nova `/marketing-para-empresa-de-limpeza/` (servicos_marketing.py) e artigos
+  `/blog/como-conseguir-clientes-para-empresa-de-limpeza/` e `/blog/como-divulgar-empresa-de-limpeza/`
+  (artigos_nichos_anuncios.py). Ângulos: contrato mensal, condomínios e empresas, proposta comercial,
+  Google Meu Negócio com área de atendimento (sem endereço quando o cliente não vai ao local) e
+  "terceirização de limpeza" como argumento de anúncio.
+- Fontes: ajuda do Google sobre áreas de atendimento (cita prestadores de limpeza), Lei 6.019/1974
+  (redação da Lei 13.429/2017), CNAE 8121-4/00 no IBGE e LGPD. CNPJ (fotografia jun/2026):
+  8121-4/00 = 15.874 ativas, 466 abertas em 90 dias.
+- Índice do blog (+2 cartões, categoria "Limpeza e terceirização"), sitemap (165 → 168) e llms.txt
+  (seção "Limpeza e terceirização").
+- Conferido: semelhança máx. 38,9% (página principal × energia solar; artigos 15,8% e 24,6%), títulos
+  47–59 e descrições 146–157 sem duplicar, fichas válidas (Service com BusinessAudience / BlogPosting +
+  BreadcrumbList + FAQPage), lychee 0 erros, conferidor só com os 3 avisos antigos, cidades ok.
 
 ## Decisões anteriores (04/10/2026)
 - Marca oficial "RCB SEO"; dados só em `data/marca.json`.
