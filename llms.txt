@@ -28,6 +28,8 @@ Mensagem central: trazer clientes pelo Google — anúncio para o resultado ráp
 - Sites e landing pages para anúncios: https://rcbseo.com.br/criacao-de-landing-page/ e https://rcbseo.com.br/criacao-de-sites-goiania/ — página rápida no celular, botão de WhatsApp e medição de conversão.
 - Tráfego pago empresarial (Google Ads): https://rcbseo.com.br/gestao-de-trafego-pago/ — anúncio na rede de pesquisa do Google, sempre com landing page e medição; Meta Ads só como complemento.
 - SEO para YouTube: https://rcbseo.com.br/seo-para-youtube/ — título, descrição, capítulos, transcrição e miniatura para o vídeo ser encontrado no YouTube e no Google, sem promessa de inscritos.
+- Todos os serviços (página-índice): https://rcbseo.com.br/servicos/ — os 4 serviços e as páginas de cada um, com o que muda entre SEO, anúncio e site.
+- Nichos que atendemos (página-índice): https://rcbseo.com.br/nichos/ — todas as páginas de nicho, agrupadas por ramo (saúde, escritórios, serviços no local do cliente, comércio).
 
 ## Serviços
 - Criação de sites em Goiânia: https://rcbseo.com.br/criacao-de-sites-goiania/ — Site próprio feito para aparecer no Google, com orçamento sob medida.
@@ -97,6 +99,16 @@ Marketing para empresas de higienização de estofados, colchões e tapetes (o p
 Marketing para empresas de guincho, reboque e auto-socorro (o público é o dono da empresa de guincho, não o motorista que precisa de um guincho).
 - Marketing para empresa de guincho (página principal): https://rcbseo.com.br/marketing-para-empresa-de-guincho/ — Google Meu Negócio com área e horário certos, anúncio no Google com botão de ligação, site leve e parcerias com oficinas e frotas.
 - Como conseguir clientes para guincho: https://rcbseo.com.br/blog/como-conseguir-clientes-para-guincho/ — 10 caminhos para ter mais chamados diretos e depender menos de seguradora.
+
+## Reformas
+Marketing para empresas de reformas e empreiteiras (o público é o dono da empresa de reformas, não quem vai reformar a casa).
+- Marketing para empresa de reformas (página principal): https://rcbseo.com.br/marketing-para-empresa-de-reformas/ — portfólio de obras, Google Meu Negócio, página para reforma em condomínio (NBR 16280) e Google Ads.
+- Como conseguir clientes para reformas: https://rcbseo.com.br/blog/como-conseguir-clientes-para-reformas/ — 10 caminhos para construir confiança antes da visita técnica.
+
+## Dedetização
+Marketing para dedetizadoras e empresas de controle de pragas urbanas (o público é o dono da dedetizadora). Escrito com base no texto oficial da RDC 622/2022 da Anvisa, que regula também a propaganda dessas empresas (art. 22).
+- Marketing para dedetizadora (página principal): https://rcbseo.com.br/marketing-para-dedetizadora/ — Google Meu Negócio, página por praga, página para contratos com empresas e propaganda com o número da licença.
+- Como conseguir clientes para dedetizadora: https://rcbseo.com.br/blog/como-conseguir-clientes-para-dedetizadora/ — cliente avulso, contratos com restaurantes e condomínios e as regras de propaganda da Anvisa.
 
 ## Conteúdo
 - Guia de SEO Local (índice editorial): https://rcbseo.com.br/guia-seo-local/ — Hub que organiza por tema os principais conteúdos e serviços: aparecer no Google, Google Perfil, site, conteúdo, conversão, diagnóstico, contratação, nichos e acompanhamento.

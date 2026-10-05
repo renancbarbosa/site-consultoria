@@ -149,8 +149,11 @@ def s_texto(d, slug, alt):
 
 
 def grade(itens):
+    # item = (titulo, texto) ou (titulo, texto, link) — com link, o titulo do cartao vira link (paginas-indice)
+    def titulo(it):
+        return '<a href="%s">%s</a>' % (it[2], e(it[0])) if len(it) > 2 else e(it[0])
     return "".join('\n          <article class="feature-card">\n            <h3>%s</h3>\n            <p>%s</p>\n'
-                   '          </article>' % (e(t), x) for t, x in itens)
+                   '          </article>' % (titulo(it), it[1]) for it in itens)
 
 
 def s_cards(d, slug):
@@ -328,8 +331,10 @@ def servico_no(p, url):
 
 def schema(p):
     url = "%s/%s/" % (BASE, p["slug"])
+    hub = p.get("hub")  # pagina-indice (Etapa 10): CollectionPage com a lista de links, sem no Service
     g = [
-        {"@type": "WebPage", "@id": url + "#webpage", "url": url, "name": p["title"], "description": p["desc"],
+        {"@type": "CollectionPage" if hub else "WebPage", "@id": url + "#webpage", "url": url, "name": p["title"],
+         "description": p["desc"],
          "dateModified": p.get("data", DATA), "inLanguage": "pt-BR",
          "isPartOf": M.site(),
          **({"author": {"@type": "Person", "@id": "https://rcbseo.com.br/#renan", "name": "Renan Carvalho Barbosa"},
@@ -338,7 +343,11 @@ def schema(p):
         {"@type": "BreadcrumbList", "@id": url + "#breadcrumb", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Início", "item": BASE + "/"},
             {"@type": "ListItem", "position": 2, "name": p["trilha"], "item": url}]},
-        servico_no(p, url),
+        ({"@type": "ItemList", "@id": url + "#lista", "itemListElement": [
+            {"@type": "ListItem", "position": i + 1, "name": it[0], "url": BASE + it[2]}
+            for i, it in enumerate(it for tipo, d in p["secoes"] if tipo == "cards"
+                                   for it in d["itens"] if len(it) > 2)]}
+         if hub else servico_no(p, url)),
         M.no_empresa(),
         {"@type": "FAQPage", "@id": url + "#faq", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in p["faq"]]},

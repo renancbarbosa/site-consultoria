@@ -35,14 +35,19 @@ SEO_GMN = [
     ("/acompanhamento-seo/", "Acompanhamento de SEO"),
     ("/diagnostico-presenca-digital/", "Diagnóstico de presença digital"),
     ("/consultor-seo-goiania/", "Consultor de SEO em Goiânia"),
+    ("/servicos/", "Todos os serviços"),  # pagina-indice (Etapa 10, 05/10/2026)
 ]
 SITES = [
     (PROVISORIO["landing"], "Landing page para anúncios"),
     ("/criacao-de-sites-goiania/", "Criação de sites"),
     ("/site-otimizado-para-seo/", "Site otimizado para SEO"),
     ("/criacao-de-loja-virtual-goiania/", "Loja virtual"),
+    ("/servicos/", "Todos os serviços"),
 ]
+# Etapa 10 (05/10/2026): "Todos os nichos" no topo + os 6 nichos de servico no local do cliente.
+# Com 19 itens o menu suspenso abre em 2 colunas no computador (classe nav-dropdown-2col no styles.css).
 NICHOS = [
+    ("/nichos/", "Todos os nichos"),
     ("/seo-para-pequenas-empresas/", "Pequenas empresas"),
     ("/seo-para-clinicas/", "Clínicas"),
     ("/seo-para-dentistas/", "Dentistas"),
@@ -55,6 +60,12 @@ NICHOS = [
     ("/seo-para-psicologos/", "Psicólogos"),
     ("/para-comercios-locais/", "Comércios locais"),
     ("/para-profissionais-liberais/", "Profissionais liberais"),
+    ("/marketing-para-energia-solar/", "Energia solar"),
+    ("/marketing-para-empresa-de-limpeza/", "Limpeza"),
+    ("/marketing-para-empresa-de-higienizacao-de-estofados/", "Higienização de estofados"),
+    ("/marketing-para-empresa-de-guincho/", "Guincho"),
+    ("/marketing-para-empresa-de-reformas/", "Reformas"),
+    ("/marketing-para-dedetizadora/", "Dedetização"),
 ]
 # links de servico do rodape (bloco RCB:SITES-FOOTER); o resto da coluna continua
 RODAPE_SERVICOS = [
@@ -63,6 +74,8 @@ RODAPE_SERVICOS = [
     (PROVISORIO["trafego"], "Tráfego pago (Google Ads)"),
     (PROVISORIO["seo_youtube"], "SEO para YouTube"),
     ("/criacao-de-loja-virtual-goiania/", "Loja virtual"),
+    ("/servicos/", "Todos os serviços"),
+    ("/nichos/", "Nichos que atendemos"),
 ]
 RODAPE_INSTITUCIONAL = [("/blog/", "Blog"), ("/cases/", "Cases"), ("/sobre/", "Sobre")]
 
@@ -70,11 +83,11 @@ REMOVIDAS = ("/agentes-de-ia/", "/agente-de-ia-para-clinicas/",
              "/automacao-de-processos/", "/recuperacao-de-vendas-whatsapp/")
 
 
-def _dropdown(rotulo, itens):
+def _dropdown(rotulo, itens, classe=""):
     links = "".join('<a href="%s" class="nav-dropdown-item" role="menuitem">%s</a>' % (h, t) for h, t in itens)
     return ('<li class="nav-nicho-group"><button class="nav-dropdown-toggle" aria-expanded="false" '
-            'aria-haspopup="true">%s%s</button><div class="nav-dropdown-menu" role="menu">%s</div></li>'
-            % (rotulo, _CHEVRON, links))
+            'aria-haspopup="true">%s%s</button><div class="nav-dropdown-menu%s" role="menu">%s</div></li>'
+            % (rotulo, _CHEVRON, " " + classe if classe else "", links))
 
 
 def itens_menu(cta_href="/#pacotes", data_page=""):
@@ -86,7 +99,7 @@ def itens_menu(cta_href="/#pacotes", data_page=""):
             + '<li><a href="%s" class="nav-link">Tráfego Pago</a></li>' % PROVISORIO["trafego"]
             + ('<li><a href="%s" class="nav-link">SEO para YouTube</a></li>' % PROVISORIO["seo_youtube"]
                if MOSTRAR_YOUTUBE else "")
-            + _dropdown("Nichos", NICHOS)
+            + _dropdown("Nichos", NICHOS, "nav-dropdown-2col")
             + '<li><a href="/contato/" class="nav-link">Contato</a></li>'
             + '<li><a href="%s" class="nav-link nav-cta" data-event="cta_click" data-location="navbar"%s>'
               'Orçamento grátis</a></li>' % (cta_href, dp)

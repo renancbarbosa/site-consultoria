@@ -4,7 +4,7 @@
 > Uma etapa por vez. Ao fim de cada uma: PARAR, mostrar o relatório e esperar
 > "aprovado, siga". Nunca publicar sem "pode publicar".
 
-> **Próxima etapa (anotado em 05/10/2026): 9c — Reformas.** Página principal "Marketing para empresas de reformas" + 1 artigo "Como conseguir clientes para reformas". Mesmo modelo da 9a/9b (servicos_marketing.py + artigos_nichos_anuncios.py, gerar-servicos-marketing.py e RCB_ARTIGO_SLUG=... gerar-artigos-sites.py; reverter as 3 páginas que o gerador mexe na ficha da empresa: loja virtual, site para contador e site para dentista).
+> **Próxima etapa (anotado em 05/10/2026): publicar 9c + 9d + 10 juntas (o Renan pediu as três de uma vez) e depois só a 11 — Medição, por volta de 01/11/2026 (28 dias depois da Etapa 2).**
 
 ## Status das etapas (plano revisado de 04/10/2026)
 
@@ -22,8 +22,9 @@
 | 8 | Advocacia (juntar em /marketing-para-advogados/) | **publicada** 05/10/2026 (`7360a547`; 6 URLs em 200, /para-advogados/ /para-advogados e .html em 301 para a nova; IndexNow 7 URLs aceito) |
 | 9a | Higienização de estofados | **publicada** 05/10/2026 (`b202226b`; 2 URLs novas + blog, sitemap e llms.txt em 200 com o conteúdo novo; IndexNow 3 URLs aceito) |
 | 9b | Guincho | **publicada** 05/10/2026 (`cd4ace84`; 2 URLs novas + blog, sitemap e llms.txt em 200 com o conteúdo novo; IndexNow 3 URLs aceito) |
-| 9c–9d | Serviços de rua: reformas, dedetização | pendente |
-| 10 | Hubs "Serviços" e "Nichos que atendemos" | pendente |
+| 9c | Reformas | **prévia local pronta** 05/10/2026 — aguardando "pode publicar" |
+| 9d | Dedetização | **prévia local pronta** 05/10/2026 — aguardando "pode publicar" |
+| 10 | Hubs "Serviços" e "Nichos que atendemos" | **prévia local pronta** 05/10/2026 — aguardando "pode publicar" |
 | 11 | Medição (28 dias depois da Etapa 2) | pendente |
 
 **Redirecionamento:** o site está no **Cloudflare Pages** (não GitHub Pages): 301 pelo
@@ -196,6 +197,34 @@ arquivo `_redirects` da raiz. Não usar meta refresh.
 - Conferido: títulos 53 e 49, descrições 156 e 154, 1 H1, fichas válidas, sem R$, semelhança máx. 12,9%
   (× estofados), 82 links internos conferidos um a um (0 quebrados), conferidor só com os 3 avisos antigos,
   celular 390 px sem estouro.
+
+## Etapas 9c, 9d e 10 — o que foi feito (prévia local, 05/10/2026; o Renan pediu as três de uma vez)
+- **9c Reformas:** `/marketing-para-empresa-de-reformas/` (1.405 palavras) e `/blog/como-conseguir-clientes-para-reformas/`
+  (1.134). Fontes: CNAE 4120-4/00 no IBGE ("compreende ainda as reformas") + CNPJ jun/2026 (181.131 ativas, 3.926
+  abertas em 90 dias — inclui construtoras, dito no texto); página do CAU/BR sobre a NBR 16280; Lei 6.496/1977 (ART,
+  art. 1º lido no Planalto); CDC art. 37. Ângulos: medo de obra que atrasa, portfólio com "durante", plano de reforma em
+  condomínio como argumento de venda, orçamento que filtra curiosos, imobiliárias/arquitetos como cliente recorrente.
+  O artigo antigo `/blog/seo-para-manutencao-e-reformas/` (1 impressão em 90 dias, busca diferente) ganhou 1 frase com
+  link para a página principal nova.
+- **9d Dedetização:** `/marketing-para-dedetizadora/` (1.441) e `/blog/como-conseguir-clientes-para-dedetizadora/` (1.119).
+  Fonte principal: texto oficial da RDC Anvisa 622/2022 (anvisalegis), lido em 05/10/2026 — art. 4º licença, art. 6º
+  produtos registrados, art. 7º responsável técnico, art. 19 comprovante de execução, **art. 22 propaganda** (número da
+  licença obrigatório; proibido causar temor, "Aprovado"/"Recomendado por especialista" e "seguro"/"atóxico"/"produto
+  natural" sem registro). CNAE 8122-2/00 + CNPJ jun/2026 (8.736 ativas). RDC 216/2004 NÃO citada (site fora do ar).
+- **10 Hubs:** `/servicos/` e `/nichos/` (servicos_marketing.py com `"hub": True` — ficha CollectionPage + ItemList, sem
+  nó Service; cartão com 3 campos = título vira link; cada hub tem seção #orcamento porque a barra do celular aponta
+  para ela). Menu (`rcb_menu.py`): "Todos os serviços" no fim dos dropdowns "SEO e Google" e "Sites e Landing Pages";
+  "Nichos" ganhou "Todos os nichos" + os 6 nichos de serviço no local do cliente (19 itens) e abre em **2 colunas** no
+  computador (`.nav-dropdown-2col` no styles.css, só acima de 1000 px; styles.min.css regerado). Rodapé: "Todos os
+  serviços" e "Nichos que atendemos" no bloco RCB:SITES-FOOTER. Aplicado por `scripts/etapa10-menu-2026-10-05.py`
+  (182 páginas, 179 alteradas; 2ª execução "alteradas: 0").
+- Página protegida `/consultor-seo-goiania/`: só 2 linhas mudaram (menu e rodapé), como em toda etapa de menu.
+- Gerador mexeu de novo na ficha da empresa das 3 páginas de sempre: revertidas e só o menu reaplicado nelas.
+- Índice do blog (2 cartões, categorias "Reformas" e "Dedetização"), sitemap 173 → 179, llms.txt (seções "Reformas" e
+  "Dedetização" + as 2 páginas-índice na seção "Os 4 serviços").
+- Conferido: títulos 41–63, descrições 138–158, 1 H1, fichas válidas, sem R$, semelhança máx. 15,7%, 9.148 links
+  internos do site inteiro (0 quebrados), conferidor só com os 3 avisos antigos; menu Nichos em 1024 e 1366 px dentro da
+  tela e clicável; celular 390 px sem estouro nas 6 páginas e menu do celular rolando até o último item.
 
 ## Decisões anteriores (04/10/2026)
 - Marca oficial "RCB SEO"; dados só em `data/marca.json`.

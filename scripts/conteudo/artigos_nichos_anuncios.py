@@ -1355,4 +1355,247 @@ ARTIGOS = [
                 wa("Olá, Renan! Tenho uma empresa de guincho e quero conseguir mais clientes."),
                 "Quero mais chamados"),
     },
+
+    # ------------------------------------------------------------------ reformas: conseguir clientes
+    # Etapa 9c do plano de nichos (05/10/2026). Busca do DONO: "como conseguir clientes para reformas".
+    # Fontes: pagina do CAU/BR sobre a NBR 16280, ajuda do Perfil da Empresa (area de cobertura), CDC art. 37, LGPD.
+    {
+        "slug": "como-conseguir-clientes-para-reformas",
+        "h1": "Como conseguir clientes para reformas: confiança antes da visita",
+        "title": "Como conseguir clientes para reformas: 10 caminhos",
+        "desc": ("Como conseguir clientes para reformas: portfólio de obras, Google Maps, condomínios, orçamento que "
+                 "filtra curiosos e indicação organizada."),
+        "cat": "Reformas",
+        "data": "2026-10-05",
+        "trilha_extra": ("/marketing-para-empresa-de-reformas/", "Marketing para empresa de reformas"),
+        "corpo": f"""
+        <p>Para conseguir clientes para reformas, o caminho mais seguro é construir confiança antes da visita:
+        mostrar obras reais organizadas por tipo, aparecer no Google Maps da sua região, explicar o processo com
+        clareza e transformar cada obra entregue em indicação. Reforma é uma compra cara e cheia de medo — quem
+        passa segurança fecha, quem só passa preço disputa leilão.</p>
+
+        {caixa('<p><strong>Resposta rápida:</strong> monte um portfólio com antes, durante e depois, configure o '
+               'Google Meu Negócio com a área que você atende, tenha uma página para cada tipo de reforma, use um '
+               'pedido de orçamento que filtre curiosos, ofereça a documentação que o condomínio pede e peça '
+               'avaliação e indicação na entrega de cada obra.</p>')}
+
+        <h2>1. Entenda o medo de quem vai reformar</h2>
+        <p>Quase todo mundo tem uma história de reforma que deu errado: obra que atrasou meses, orçamento que dobrou,
+        prestador que sumiu com o adiantamento. Quem pesquisa uma empresa de reformas está, antes de tudo, tentando
+        não repetir essa história. Cada ação de marketing deve responder a esse medo: mostrar obras de verdade,
+        processo claro, contrato e alguém que atende o telefone.</p>
+
+        <h2>2. Monte um portfólio que vende sozinho</h2>
+        <p>Organize as obras por tipo — banheiro, cozinha, apartamento inteiro, loja, consultório — com fotos de
+        antes, durante e depois, o prazo que a obra levou e um comentário do cliente. O "durante" é o que mais passa
+        confiança, porque mostra organização: piso protegido, obra limpa, equipe identificada. Peça autorização ao
+        cliente antes de publicar e não mostre o endereço.</p>
+
+        <h2>3. Apareça no Google Maps com a área que você atende</h2>
+        <p>Empresa de reformas vai até a obra. A ajuda do Google sobre
+        <a href="https://support.google.com/business/answer/9157481?hl=pt-BR" target="_blank" rel="noopener noreferrer">áreas de cobertura</a>
+        orienta mostrar a região atendida e tirar o endereço do perfil se você não recebe clientes nele. Preencha os
+        serviços, publique as fotos das obras e responda todas as avaliações. É assim que você aparece quando alguém
+        do bairro pesquisa "empresa de reforma perto de mim". Veja a
+        {link('/google-perfil-empresa/', 'otimização do Google Perfil da Empresa')}.</p>
+
+        <h2>4. Tenha uma página para cada tipo de reforma</h2>
+        <p>Quem vai reformar o banheiro tem dúvidas diferentes de quem vai reformar a loja. Uma página por tipo de
+        obra, com fotos daquele tipo, as etapas, o que costuma encarecer e um botão de orçamento, ajuda o Google a
+        mostrar a página certa — e ajuda o cliente a sentir que você entende exatamente a obra dele.</p>
+
+        <h2>5. Use um pedido de orçamento que filtra curiosos</h2>
+        <p>Visita técnica custa tempo e combustível. Um formulário curto (com aviso de LGPD) ou uma mensagem pronta no
+        WhatsApp pedindo tipo de obra, metragem aproximada, fotos do local, bairro e quando quer começar separa quem
+        vai reformar de quem só está pesquisando preço. Você responde rápido a quem importa e chega na visita já
+        sabendo o que vai encontrar.</p>
+
+        <h2>6. Transforme a regra do condomínio em vantagem</h2>
+        <p>Em apartamento, a reforma tem regra. A
+        <a href="https://caubr.gov.br/normadereformas/" target="_blank" rel="noopener noreferrer">NBR 16280, explicada pelo CAU</a>,
+        pede que o morador contrate um profissional habilitado que assuma a responsabilidade técnica e apresente um
+        plano de reforma antes de começar, quando a obra pode afetar a segurança do prédio. Para o morador, isso é
+        burocracia; para você, é argumento. Diga no site que cuida do plano de reforma e da documentação com o
+        responsável técnico e que conversa com o síndico.</p>
+
+        <h2>7. Anuncie no Google para quem vai reformar agora</h2>
+        <p>Um anúncio na pesquisa do Google coloca você na frente de quem já procura o serviço na sua região. Os
+        cuidados do ramo: bloquear buscas de "faça você mesmo", material de construção, vaga de pedreiro e cursos, e
+        mandar o clique para uma página com portfólio e pedido de orçamento — não para a página inicial. Veja como
+        funciona a {link('/gestao-de-trafego-pago/', 'gestão de tráfego pago')}.</p>
+
+        <h2>8. Prometa o processo, não o milagre</h2>
+        <p>"Reforma completa em 15 dias" e "o menor preço" atraem pedidos e geram briga quando a parede esconde um
+        problema. O
+        <a href="https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm" target="_blank" rel="noopener noreferrer">Código de Defesa do Consumidor (art. 37)</a>
+        proíbe publicidade que induza o consumidor a erro. Venda o que você controla: visita técnica, orçamento
+        detalhado por etapa, cronograma por escrito, contato direto com quem toca a obra e vistoria na entrega.</p>
+
+        <h2>9. Busque clientes que trazem mais de uma obra</h2>
+        <p>Imobiliárias e administradoras precisam reformar imóveis entre uma locação e outra; lojas, clínicas e
+        escritórios reformam para abrir ou mudar; arquitetos e designers de interiores precisam de quem execute bem os
+        projetos deles. Uma página no site para esse público e uma visita com o portfólio na mão abrem portas que o
+        anúncio sozinho não abre.</p>
+
+        <h2>10. Peça avaliação e indicação na entrega</h2>
+        <p>O momento da entrega, com o cliente feliz com a obra pronta, é o melhor para pedir a avaliação no Google,
+        com o link direto pelo WhatsApp, e a autorização para usar as fotos. Peça também a indicação de forma
+        concreta: "você conhece alguém do prédio que esteja pensando em reformar?". Nunca compre nem troque
+        avaliação: além de ser contra as regras do Google, um perfil suspenso apaga todo o trabalho.</p>
+
+        {tabela(
+            ["Cliente", "O que teme", "O que precisa ver"],
+            [
+                ["Morador de casa", "Obra que atrasa e orçamento que dobra", "Portfólio, cronograma e contrato"],
+                ["Morador de apartamento", "Problema com o síndico e o prédio", "Plano de reforma e responsável técnico"],
+                ["Loja, clínica e escritório", "Ficar fechado mais tempo que o previsto", "Prazo por etapa e obra fora do horário"],
+            ])}
+
+        <h2>Por onde começar a conseguir clientes para reformas?</h2>
+        <p>Comece pelo portfólio e pelo perfil no Google, porque é ali que a confiança se forma. Depois, a página por
+        tipo de reforma e o pedido de orçamento que filtra. Com isso pronto, o anúncio no Google passa a trazer
+        pedidos que fecham. As frentes juntas estão em
+        {link('/marketing-para-empresa-de-reformas/', 'marketing para empresas de reformas')}.</p>
+""",
+        "faq": [
+            ("Como divulgar empresa de reformas?",
+             "Portfólio de obras com antes, durante e depois, Google Meu Negócio com a área que você atende, página por "
+             "tipo de reforma, avaliações pedidas na entrega e, se quiser pedidos mais rápido, anúncio no Google."),
+            ("Vale a pena anunciar reformas no Google?",
+             "Vale para quem pesquisa o serviço na sua região, desde que as buscas de \"faça você mesmo\", material de "
+             "construção e vaga de emprego sejam bloqueadas e o clique caia numa página com portfólio."),
+            ("Como conseguir obras em condomínio?",
+             "Mostrando que você cuida do plano de reforma e da documentação com o responsável técnico, como pede a "
+             "NBR 16280, e mantendo uma página no site sobre reforma em apartamento."),
+            ("Como evitar orçamento que não fecha?",
+             "Pedindo antes da visita o tipo de obra, a metragem, fotos do local, o bairro e quando o cliente quer "
+             "começar. Assim a visita vai para quem vai reformar."),
+        ],
+        "cta": ("Tem uma empresa de reformas e quer mais pedidos de orçamento que fecham? Me conte a região que você "
+                "atende e os tipos de obra que faz. Em até 24 horas eu te digo por onde começar.",
+                wa("Olá, Renan! Tenho uma empresa de reformas e quero conseguir mais clientes."),
+                "Quero mais obras"),
+    },
+
+    # ------------------------------------------------------------------ dedetizacao: conseguir clientes
+    # Etapa 9d do plano de nichos (05/10/2026). Busca do DONO: "como conseguir clientes para dedetizadora".
+    # Fonte principal: texto oficial da RDC Anvisa 622/2022 (arts. 4, 6, 7, 19 e 22).
+    {
+        "slug": "como-conseguir-clientes-para-dedetizadora",
+        "h1": "Como conseguir clientes para dedetizadora: cliente avulso, contratos e propaganda na regra",
+        "title": "Como conseguir clientes para dedetizadora",
+        "desc": ("Como conseguir clientes para dedetizadora: Google Maps, contratos com restaurantes e condomínios e "
+                 "propaganda dentro da RDC 622/2022 da Anvisa."),
+        "cat": "Dedetização",
+        "data": "2026-10-05",
+        "trilha_extra": ("/marketing-para-dedetizadora/", "Marketing para dedetizadora"),
+        "corpo": f"""
+        <p>Para conseguir clientes para dedetizadora, o caminho mais seguro é trabalhar duas frentes ao mesmo tempo:
+        aparecer no Google para quem tem uma praga agora e conquistar contratos periódicos com restaurantes,
+        condomínios, escolas e indústrias. E fazer tudo isso dentro das regras de propaganda da Anvisa — o que,
+        além de proteger a empresa, passa mais confiança do que a propaganda comum do ramo.</p>
+
+        {caixa('<p><strong>Resposta rápida:</strong> deixe o Google Meu Negócio com a área que você atende e os '
+               'serviços por praga, coloque o número da licença em toda propaganda, crie uma página para clientes '
+               'empresariais, mostre o responsável técnico e o modelo de comprovante, anuncie no Google para quem '
+               'tem praga agora e peça avaliação depois de cada serviço.</p>')}
+
+        <h2>1. Conheça as regras de propaganda antes de anunciar</h2>
+        <p>A
+        <a href="https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&amp;tipo=RDC&amp;numeroAto=00000622&amp;seqAto=000&amp;valorAno=2022&amp;orgao=RDC%2FDC%2FANVISA%2FMS&amp;codTipo=&amp;desItem=&amp;desItemFim=&amp;cod_menu=9434&amp;cod_modulo=310&amp;pesquisa=true" target="_blank" rel="noopener noreferrer">RDC 622/2022 da Anvisa</a>
+        tem uma seção sobre propaganda. Pelo art. 22, toda propaganda da empresa deve trazer a identificação dela nos
+        órgãos licenciadores e o número da licença. É proibido provocar temor ou sugerir que a saúde das pessoas será
+        afetada sem o serviço; usar mensagens como "Aprovado", "Recomendado por especialista" ou "Publicidade
+        aprovada pela Vigilância Sanitária"; e usar "inócuo", "seguro", "atóxico" ou "produto natural" quando essas
+        expressões não estiverem registradas na Anvisa. Isso vale para o site, o anúncio, o panfleto e o perfil nas
+        redes.</p>
+
+        <h2>2. Transforme a regularização em argumento</h2>
+        <p>A mesma resolução diz que a empresa só pode funcionar depois de licenciada pela autoridade sanitária e
+        ambiental (art. 4º), que deve ter responsável técnico habilitado e registrado no conselho profissional
+        (art. 7º) e que só pode usar produtos registrados na Anvisa (art. 6º). Muita empresa informal não consegue
+        mostrar nada disso. Coloque a licença, o nome e o registro do responsável técnico no site e na proposta: é a
+        forma mais rápida de separar você de quem trabalha na irregularidade.</p>
+
+        <h2>3. Apareça no Google Maps com a área que você atende</h2>
+        <p>Quem vai até o cliente é empresa de serviço local. A ajuda do Google sobre
+        <a href="https://support.google.com/business/answer/9157481?hl=pt-BR" target="_blank" rel="noopener noreferrer">áreas de cobertura</a>
+        orienta mostrar a região atendida e tirar o endereço do perfil se você não recebe clientes nele. Liste os
+        serviços (dedetização, descupinização, desratização, controle de escorpiões, de pombos) e responda todas as
+        avaliações. Veja a {link('/google-perfil-empresa/', 'otimização do Google Perfil da Empresa')}.</p>
+
+        <h2>4. Tenha uma página para cada praga</h2>
+        <p>Quem tem cupim pesquisa "descupinização", não "dedetização". Uma página por praga — barata, cupim, rato,
+        escorpião, mosquito, pombo — explicando como é o serviço, quanto tempo leva, os cuidados antes e depois e o
+        prazo de assistência ajuda o Google a mostrar você na busca certa. Explique sem assustar: imagem de praga
+        gigante e frase alarmista esbarram na proibição de provocar temor.</p>
+
+        <h2>5. Conquiste clientes com contrato periódico</h2>
+        <p>Restaurantes, padarias, lanchonetes, condomínios, escolas, clínicas e indústrias precisam de controle de
+        pragas com frequência. Esse cliente sustenta a empresa nos meses fracos. Uma página no site só para ele —
+        atendimento fora do horário de funcionamento, cronograma de visitas e documentação — e uma visita comercial
+        com a proposta na mão abrem contratos que o anúncio sozinho não fecha.</p>
+
+        <h2>6. Mostre o comprovante de execução</h2>
+        <p>Pelo art. 19 da RDC 622/2022, a empresa deve entregar ao cliente um comprovante de execução do serviço com,
+        no mínimo, o nome do cliente, o endereço, a praga-alvo, a data, o prazo de assistência técnica por extenso, os
+        produtos e a concentração usados, as orientações, o responsável técnico com o registro e o telefone do centro
+        de informação toxicológica. Um modelo desse documento no site mostra ao cliente empresarial que você entrega
+        tudo certinho.</p>
+
+        <h2>7. Anuncie no Google para quem tem praga agora</h2>
+        <p>Quem pesquisa "dedetização perto de mim" quer resolver hoje. Um anúncio na pesquisa do Google, limitado à sua
+        região, coloca você na frente dessa pessoa. Bloqueie as buscas que não viram serviço: veneno para comprar,
+        receita caseira, curso de dedetizador e vaga de emprego. E coloque o número da licença no anúncio e na página
+        de destino. Veja a {link('/gestao-de-trafego-pago/', 'gestão de tráfego pago')}.</p>
+
+        <h2>8. Atenda rápido e explique os cuidados</h2>
+        <p>Quem liga com praga em casa liga para mais de uma empresa. Responder na hora, explicar como a família deve
+        se preparar e quanto tempo precisa ficar fora do ambiente, e confirmar o horário pelo WhatsApp já coloca você
+        na frente. Explicar os cuidados com clareza é também o que evita reclamação depois.</p>
+
+        <h2>9. Peça avaliação e use o prazo de assistência</h2>
+        <p>Peça a avaliação no Google depois do serviço, com o link direto. E use o prazo de assistência técnica como
+        motivo para voltar a falar com o cliente: uma mensagem perto do fim do prazo perguntando se está tudo certo
+        mostra cuidado e abre espaço para a próxima aplicação. Guarde os contatos com autorização, como pede a
+        <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener noreferrer">LGPD</a>.</p>
+
+        <h2>10. Cultive parcerias que indicam</h2>
+        <p>Administradoras de condomínio, imobiliárias, empresas de limpeza, síndicos profissionais e consultores de
+        segurança de alimentos convivem com clientes que precisam de controle de pragas. Uma parceria bem cuidada com
+        quem já tem a confiança desses clientes traz contratos que nenhum anúncio traria.</p>
+
+        {tabela(
+            ["Cliente", "Como chega", "O que precisa ver"],
+            [
+                ["Família com praga em casa", "Busca no Google na hora", "Avaliações, rapidez e cuidados explicados"],
+                ["Restaurante e indústria", "Visita, site e indicação", "Licença e comprovante"],
+                ["Condomínio e escola", "Síndico e administradora", "Cronograma e documentação"],
+            ])}
+
+        <h2>Por onde começar a conseguir clientes para dedetizadora?</h2>
+        <p>Comece revisando a propaganda que você já tem pelas regras do art. 22 e colocando a licença à vista. Depois,
+        o perfil no Google com os serviços por praga e a página para empresas. Com isso pronto, o anúncio no Google
+        passa a trazer quem tem praga agora. As frentes juntas estão em
+        {link('/marketing-para-dedetizadora/', 'marketing para dedetizadoras')}.</p>
+""",
+        "faq": [
+            ("Como divulgar uma dedetizadora?",
+             "Google Meu Negócio com a área que você atende, página por praga, página para empresas, avaliações pedidas "
+             "depois do serviço e anúncio no Google — sempre com o número da licença, como pede a RDC 622/2022."),
+            ("Dedetizadora precisa colocar o número da licença na propaganda?",
+             "Sim. O art. 22 da RDC 622/2022 da Anvisa diz que toda propaganda de empresa especializada deve conter a "
+             "identificação dela nos órgãos licenciadores e o número da licença."),
+            ("Posso dizer que a dedetização é atóxica?",
+             "Só se a expressão estiver registrada na Anvisa. O art. 22, III, da RDC 622/2022 proíbe sugerir ausência "
+             "de efeitos adversos com palavras como \"atóxico\", \"seguro\" e \"produto natural\" fora desse caso."),
+            ("Como conseguir contrato de dedetização com restaurante?",
+             "Com visita comercial, uma página para empresas no site e a documentação à vista: licença, responsável "
+             "técnico e modelo de comprovante de execução do serviço."),
+        ],
+        "cta": ("Tem uma dedetizadora e quer mais clientes e contratos, dentro das regras da Anvisa? Me conte a região que "
+                "você atende. Em até 24 horas eu te digo por onde começar.",
+                wa("Olá, Renan! Tenho uma dedetizadora e quero conseguir mais clientes."),
+                "Quero mais clientes"),
+    },
 ]

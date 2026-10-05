@@ -1592,6 +1592,683 @@ PAGINAS = [
                       "Sem compromisso: eu olho como a sua empresa aparece hoje no Google e quem aparece antes de você."),
     },
     {
+        # Etapa 9c do plano de nichos (05/10/2026): pagina principal do nicho REFORMAS.
+        # Publico: o DONO da empresa de reformas / empreiteira (regra de ouro). Fontes conferidas em
+        # 05/10/2026: API de CNAE do IBGE (4120-4/00 "compreende ainda as reformas...") + CNPJ jun/2026
+        # (181.131 ativas, 3.926 abertas em 90 dias — inclui construtoras, dito no texto), pagina do CAU/BR
+        # sobre a NBR 16280 (reforma em edificacoes), Lei 6.496/1977 (ART), ajuda do Perfil da Empresa
+        # (area de cobertura) e CDC art. 37.
+        "slug": "marketing-para-empresa-de-reformas",
+        "nacional": True,
+        "data": "2026-10-05",
+        "publico": "Empresas de reformas, empreiteiras e prestadores de serviços de obra",
+        "title": "Marketing para Empresa de Reformas | RCB SEO",
+        "desc": ("Marketing para empresas de reformas: Google Meu Negócio, site com portfólio de obras e Google Ads "
+                 "para receber pedidos de quem vai reformar. Orçamento em 24h."),
+        "trilha": "Marketing para empresa de reformas",
+        "servico": "Marketing para empresas de reformas",
+        "eyebrow": "Para empresas de reformas de todo o Brasil",
+        "h1": "Marketing e SEO para empresas de reformas",
+        "sub": ("Marketing para empresa de reformas é fazer quem vai reformar a casa, o apartamento ou a loja encontrar "
+                "você no Google — e confiar o suficiente para pedir a visita. Eu cuido do Google Meu Negócio, do site "
+                "com portfólio de obras reais e do anúncio no Google, com foco no que mais pesa nesse ramo: "
+                "confiança. Orçamento grátis em até 24 horas."),
+        "cta_hero": "Quero mais pedidos de orçamento",
+        "msg": "Olá, Renan! Tenho uma empresa de reformas e quero mais pedidos de orçamento pelo Google.",
+        "pills": ["Orçamento em até 24h", "Foco em confiança", "Prazo por escrito"],
+        "painel_h2": "O que entra no marketing",
+        "painel": [
+            "Google Meu Negócio com área de atendimento.",
+            "Site com portfólio de obras por tipo.",
+            "Página para reforma em condomínio.",
+            "Google Ads para quem vai reformar agora.",
+            "Pedido de orçamento que filtra curiosos.",
+            "Medição de cada pedido recebido.",
+        ],
+        "faq_titulo": "Perguntas frequentes sobre marketing para empresa de reformas",
+        "secoes": [
+            ("split", {
+                "tag": "O cenário",
+                "titulo": "Por que a empresa de reformas vive de indicação e ainda perde obra?",
+                "ps": [
+                    "Reforma é uma compra cara e cheia de medo. Quase todo mundo conhece alguém que teve uma obra "
+                    "atrasada, um orçamento que dobrou ou um prestador que sumiu. Por isso o cliente pede indicação — e, "
+                    "quando não tem, pesquisa no Google e compara com cuidado: fotos de obras, avaliações, tempo de "
+                    "empresa, como a proposta é apresentada.",
+                    "A concorrência é enorme. Na tabela oficial do IBGE, as reformas de edifícios entram no código "
+                    "<a href=\"https://cnae.ibge.gov.br/?subclasse=4120400&amp;tipo=cnae&amp;versao=10&amp;view=subclasse\" "
+                    "target=\"_blank\" rel=\"noopener noreferrer\">4120-4/00</a>, que pelos dados públicos de CNPJ de "
+                    "junho de 2026 reunia 181.131 empresas ativas, com 3.926 abertas em 90 dias — número que inclui "
+                    "também as construtoras. Quem mostra o próprio trabalho de forma organizada sai na frente.",
+                ],
+                "card_titulo": "Sinais de que falta marketing na empresa de reformas",
+                "card": [
+                    "Obras que entram só por indicação.",
+                    "Fotos de obras espalhadas no celular, sem uso.",
+                    "Perfil do Google sem avaliações ou desatualizado.",
+                    "Muitos pedidos de orçamento que não fecham.",
+                    "Ninguém sabe de onde veio o último cliente.",
+                ],
+            }),
+            ("texto", {
+                "tag": "Portfólio",
+                "titulo": "Por que o portfólio de obras é o melhor vendedor da empresa de reformas?",
+                "ps": [
+                    "Quem vai reformar quer ver obra pronta parecida com a dele. Um portfólio organizado por tipo — "
+                    "banheiro, cozinha, apartamento inteiro, loja, consultório —, com fotos de antes, durante e depois, "
+                    "o prazo que a obra levou e um comentário do cliente, convence mais do que qualquer anúncio.",
+                    "O \"durante\" é o que mais passa confiança, porque mostra organização: proteção do piso, obra limpa, "
+                    "equipe uniformizada. Peça autorização ao cliente antes de publicar e não mostre o endereço. No "
+                    "Google Meu Negócio, as mesmas fotos ajudam a empresa a aparecer e a ser escolhida no mapa.",
+                ],
+            }),
+            ("texto", {
+                "tag": "Condomínio",
+                "titulo": "Como usar a norma de reformas em condomínio a favor da sua empresa?",
+                "ps": [
+                    "Em prédio, a reforma tem regra. A "
+                    "<a href=\"https://caubr.gov.br/normadereformas/\" target=\"_blank\" rel=\"noopener noreferrer\">"
+                    "NBR 16280, explicada pelo CAU</a>, vale para obras que possam alterar ou comprometer a segurança "
+                    "da edificação: o morador precisa contratar um profissional habilitado que assuma a "
+                    "responsabilidade técnica e apresentar um plano de reforma antes de começar. Pela "
+                    "<a href=\"https://www.planalto.gov.br/ccivil_03/leis/l6496.htm\" target=\"_blank\" "
+                    "rel=\"noopener noreferrer\">Lei 6.496/1977</a>, obra de engenharia fica sujeita à Anotação de "
+                    "Responsabilidade Técnica (ART).",
+                    "Para o morador, isso é dor de cabeça; para a sua empresa, é argumento de venda. Uma página no site "
+                    "explicando que você cuida do plano de reforma e da documentação com o responsável técnico — e "
+                    "conversa com o síndico — tira um peso das costas do cliente e diferencia você de quem só oferece "
+                    "mão de obra.",
+                ],
+            }),
+            ("cards", {
+                "tag": "As frentes",
+                "titulo": "O que entra no marketing de uma empresa de reformas?",
+                "desc": "As frentes que trazem pedido de orçamento. Dá para começar por uma e somar as outras.",
+                "itens": [
+                    ("Google Meu Negócio",
+                     "Área de atendimento, serviços, fotos das obras e rotina de pedir avaliação na entrega da obra."),
+                    ("Site com portfólio",
+                     "Obras organizadas por tipo, com antes, durante e depois, prazo e comentário do cliente."),
+                    ("Páginas por tipo de reforma",
+                     "Banheiro, cozinha, apartamento, comercial: cada uma com a sua página, respondendo as dúvidas de "
+                     "quem vai fazer aquela obra."),
+                    ("Google Ads",
+                     "Anúncio na pesquisa do Google para quem vai reformar agora, com as buscas de \"faça você mesmo\", "
+                     "material de construção e vaga de emprego bloqueadas. Veja a "
+                     "<a href=\"/gestao-de-trafego-pago/\">gestão de tráfego pago</a>."),
+                    ("Pedido de orçamento que filtra",
+                     "Formulário (com aviso de LGPD) e WhatsApp pedindo tipo de obra, metragem, fotos, bairro e quando "
+                     "quer começar — você gasta a visita com quem vai fechar."),
+                    ("Medição",
+                     "Cada pedido de orçamento registrado, para saber qual canal traz obra fechada."),
+                ],
+            }),
+            ("texto", {
+                "tag": "Promessa",
+                "titulo": "Como anunciar prazo e preço de reforma sem criar problema depois?",
+                "ps": [
+                    "\"Reforma completa em 15 dias\" e \"o menor preço da cidade\" atraem pedido e geram briga quando a "
+                    "obra encontra um problema escondido na parede. O "
+                    "<a href=\"https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm\" target=\"_blank\" "
+                    "rel=\"noopener noreferrer\">Código de Defesa do Consumidor (art. 37)</a> proíbe publicidade que "
+                    "induza o consumidor a erro.",
+                    "O que vende melhor é mostrar o processo: visita técnica, orçamento detalhado por etapa, cronograma "
+                    "por escrito, contato direto com quem toca a obra e entrega com vistoria. Quem já se machucou numa "
+                    "reforma procura exatamente isso.",
+                ],
+            }),
+            ("passos", {
+                "titulo": "Como funciona o marketing da sua empresa de reformas, do diagnóstico às obras fechadas?",
+                "itens": [
+                    ("Diagnóstico", "Olho seu perfil no Google, o site e quem aparece antes de você na sua região."),
+                    ("Plano por escrito", "Em até 24 horas: as frentes para começar, o que entra e o valor de cada uma."),
+                    ("Perfil e portfólio", "Área de atendimento, obras organizadas e páginas por tipo de reforma."),
+                    ("Anúncio, se fizer sentido", "Campanha no Google para quem vai reformar agora."),
+                    ("Medição", "Relatório de pedidos de orçamento por canal."),
+                ],
+            }),
+            ("orcamento", {
+                "titulo": "Por onde a sua empresa de reformas quer começar?",
+                "desc": "Escolha o ponto de partida. O orçamento é grátis e sai em até 24 horas pelo WhatsApp.",
+                "destaque": 1,
+                "itens": [
+                    ("Aparecer no mapa da região", "Para quem ainda depende só de indicação.",
+                     ["Google Meu Negócio com área de atendimento", "Fotos das obras", "Rotina de avaliações"],
+                     "Olá, Renan! Tenho empresa de reformas e quero aparecer no Google Maps.", "Pedir orçamento"),
+                    ("Site com portfólio", "Para passar confiança antes da visita.",
+                     ["Obras por tipo", "Página para condomínios", "Pedido de orçamento que filtra"],
+                     "Olá, Renan! Quero um site com portfólio para a minha empresa de reformas.", "Pedir orçamento"),
+                    ("Anúncio no Google", "Para quem quer pedidos de orçamento agora.",
+                     ["Google Ads na sua região", "Buscas erradas bloqueadas", "Medição dos pedidos"],
+                     "Olá, Renan! Quero anunciar a minha empresa de reformas no Google.", "Pedir orçamento"),
+                ],
+            }),
+        ],
+        "faq": [
+            ("Empresa de reformas precisa de site?",
+             "Precisa. Reforma é compra cara e o cliente pesquisa antes de chamar. O site mostra o portfólio por tipo de "
+             "obra e explica o processo — é onde a confiança se forma antes da visita."),
+            ("Devo colocar meu endereço no Google Meu Negócio?",
+             "Só se você recebe clientes nele, como num escritório ou showroom. Para quem vai até a obra, o Google "
+             "orienta usar a área de cobertura e remover o endereço do perfil."),
+            ("Vale a pena anunciar reformas no Google Ads?",
+             "Vale para quem pesquisa o serviço na sua região, desde que as buscas de \"faça você mesmo\", material de "
+             "construção e vaga de emprego sejam bloqueadas, e que o pedido de orçamento filtre os curiosos."),
+            ("Como conseguir obras em condomínio?",
+             "Mostrando que você cuida do plano de reforma e da documentação com o responsável técnico, como pede a "
+             "NBR 16280, e mantendo uma página no site sobre reforma em apartamento."),
+            ("Quanto custa o marketing para empresa de reformas?",
+             "Depende das frentes que entram e do tamanho da região que você atende. O orçamento é individual, grátis "
+             "e sai em até 24 horas pelo WhatsApp. A verba de anúncio, quando houver, é paga direto ao Google."),
+            ("Existe fidelidade?",
+             "Não existe fidelidade. Para cancelar, basta avisar com 30 dias de antecedência. As demais condições "
+             "vão por escrito junto com o orçamento."),
+        ],
+        "relacionados": [
+            ("/blog/como-conseguir-clientes-para-reformas/", "Como conseguir clientes para reformas",
+             "Portfólio, condomínios, orçamento que filtra e indicação organizada."),
+            ("/criacao-de-sites-goiania/", "Criação de sites",
+             "Site com portfólio de obras e pedido de orçamento."),
+            ("/gestao-de-trafego-pago/", "Gestão de tráfego pago",
+             "Anúncio no Google para quem vai reformar agora."),
+        ],
+        "cta_final": ("Me conte a região que você atende e os tipos de obra que faz. Eu te digo por onde começar.",
+                      "Sem compromisso: eu olho como a sua empresa aparece hoje no Google e quem aparece antes de você."),
+    },
+    {
+        # Etapa 9d do plano de nichos (05/10/2026): pagina principal do nicho DEDETIZACAO / CONTROLE DE PRAGAS.
+        # Publico: o DONO da dedetizadora (regra de ouro). Fontes conferidas em 05/10/2026: texto oficial da
+        # RDC Anvisa 622/2022 (arts. 4, 6, 7, 19 e 22 — art. 22 regula a PROPAGANDA da empresa: numero da
+        # licenca obrigatorio; proibido causar temor, usar "Aprovado"/"Recomendado por especialista" e
+        # "seguro"/"atoxico"/"produto natural" sem registro), API de CNAE do IBGE 8122-2/00 + CNPJ jun/2026
+        # (8.736 ativas, 174 abertas em 90 dias) e ajuda do Perfil da Empresa (area de cobertura).
+        "slug": "marketing-para-dedetizadora",
+        "nacional": True,
+        "data": "2026-10-05",
+        "publico": "Empresas especializadas em controle de vetores e pragas urbanas (dedetizadoras)",
+        "title": "Marketing para Dedetizadora nas Regras da Anvisa | RCB SEO",
+        "desc": ("Marketing para dedetizadoras dentro da RDC 622/2022 da Anvisa: Google Meu Negócio, site e Google "
+                 "Ads para fechar contratos e atender quem tem praga."),
+        "trilha": "Marketing para dedetizadora",
+        "servico": "Marketing para dedetizadoras e empresas de controle de pragas",
+        "eyebrow": "Para dedetizadoras de todo o Brasil",
+        "h1": "Marketing e SEO para dedetizadoras, dentro das regras da Anvisa",
+        "sub": ("Marketing para dedetizadora é fazer quem está com barata, cupim ou rato em casa — e o restaurante que "
+                "precisa de controle de pragas o ano todo — encontrar você no Google e ligar. Eu cuido do Google Meu "
+                "Negócio, do site e do anúncio no Google, respeitando o que a RDC 622/2022 da Anvisa exige da "
+                "propaganda da sua empresa. Orçamento grátis em até 24 horas."),
+        "cta_hero": "Quero mais clientes",
+        "msg": "Olá, Renan! Tenho uma dedetizadora e quero mais clientes pelo Google.",
+        "pills": ["Orçamento em até 24h", "Dentro da RDC 622/2022", "Prazo por escrito"],
+        "painel_h2": "O que entra no marketing",
+        "painel": [
+            "Google Meu Negócio com área de atendimento.",
+            "Site com página por praga e por tipo de cliente.",
+            "Propaganda com o número da licença, como pede a Anvisa.",
+            "Google Ads para quem tem praga agora.",
+            "Página para contratos com empresas e condomínios.",
+            "Medição de cada pedido recebido.",
+        ],
+        "faq_titulo": "Perguntas frequentes sobre marketing para dedetizadora",
+        "secoes": [
+            ("split", {
+                "tag": "O cenário",
+                "titulo": "Por que a dedetizadora depende de urgência e precisa de contrato?",
+                "ps": [
+                    "A dedetização tem dois clientes muito diferentes. Um é a família que viu uma barata na cozinha ou "
+                    "cupim no armário: pesquisa no celular e chama quem aparece primeiro e passa confiança. O outro é o "
+                    "restaurante, a padaria, o condomínio, a escola, a indústria: precisa de controle de pragas com "
+                    "frequência e de documento que comprove o serviço. O primeiro enche a semana; o segundo sustenta "
+                    "a empresa.",
+                    "Pelos dados públicos de CNPJ de junho de 2026, o código "
+                    "<a href=\"https://cnae.ibge.gov.br/?subclasse=8122200&amp;tipo=cnae&amp;versao=10&amp;view=subclasse\" "
+                    "target=\"_blank\" rel=\"noopener noreferrer\">8122-2/00 (Imunização e controle de pragas "
+                    "urbanas)</a> — que inclui dedetização, desratização e descupinização — reunia 8.736 empresas "
+                    "ativas. O marketing precisa falar com os dois clientes, cada um no seu tom.",
+                ],
+                "card_titulo": "Sinais de que falta marketing na dedetizadora",
+                "card": [
+                    "Agenda que depende da época e da sorte.",
+                    "Poucos contratos fixos com empresas.",
+                    "Perfil do Google sem avaliações ou sem serviços.",
+                    "Propaganda sem o número da licença.",
+                    "Ninguém sabe de onde veio o último cliente.",
+                ],
+            }),
+            ("texto", {
+                "tag": "Regras da Anvisa",
+                "titulo": "O que a RDC 622/2022 da Anvisa exige da propaganda de dedetizadora?",
+                "ps": [
+                    "Pouca gente sabe, mas a "
+                    "<a href=\"https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&amp;tipo=RDC&amp;numeroAto=00000622&amp;seqAto=000&amp;valorAno=2022&amp;orgao=RDC%2FDC%2FANVISA%2FMS&amp;codTipo=&amp;desItem=&amp;desItemFim=&amp;cod_menu=9434&amp;cod_modulo=310&amp;pesquisa=true\" "
+                    "target=\"_blank\" rel=\"noopener noreferrer\">RDC 622/2022 da Anvisa</a> tem uma seção só sobre "
+                    "propaganda. Pelo art. 22, toda propaganda de empresa especializada deve trazer claramente a "
+                    "identificação dela nos órgãos licenciadores e o número da licença. E proíbe três coisas: provocar "
+                    "temor ou sugerir que a saúde será afetada sem o serviço; usar mensagens como \"Aprovado\", "
+                    "\"Recomendado por especialista\" ou \"Publicidade aprovada pela Vigilância Sanitária\"; e sugerir "
+                    "ausência de efeitos adversos com palavras como \"inócuo\", \"seguro\", \"atóxico\" ou \"produto "
+                    "natural\", salvo quando registradas na Anvisa.",
+                    "Na prática, isso derruba muita propaganda comum do ramo — \"dedetização atóxica\", \"seguro para "
+                    "crianças e pets\", fotos de pragas gigantes para assustar. Marketing feito dentro da regra protege a "
+                    "empresa e, de quebra, passa mais confiança: o número da licença à vista mostra que você é "
+                    "regularizado, o que quem contrata não consegue saber de quem não mostra.",
+                ],
+            }),
+            ("texto", {
+                "tag": "Confiança",
+                "titulo": "Como a dedetizadora mostra que é regularizada e ganha a confiança do cliente?",
+                "ps": [
+                    "A RDC 622/2022 diz que a empresa só pode funcionar depois de licenciada pela autoridade sanitária e "
+                    "ambiental (art. 4º), que deve ter um responsável técnico habilitado e registrado no conselho "
+                    "profissional (art. 7º) e que só pode usar produtos registrados na Anvisa (art. 6º). Tudo isso é "
+                    "argumento de venda — desde que apareça no site.",
+                    "Outro ponto forte é o comprovante de execução do serviço (art. 19), com a praga-alvo, os produtos e "
+                    "a concentração usados, o prazo de assistência técnica por extenso, o responsável técnico e o "
+                    "telefone do centro de informação toxicológica. Para o cliente empresarial, que guarda esse "
+                    "documento como prova do serviço, mostrar um modelo no site pesa na decisão.",
+                ],
+            }),
+            ("cards", {
+                "tag": "As frentes",
+                "titulo": "O que entra no marketing de uma dedetizadora?",
+                "desc": "As frentes que trazem cliente avulso e contrato. Dá para começar por uma e somar as outras.",
+                "itens": [
+                    ("Google Meu Negócio",
+                     "Área de atendimento, serviços por praga, fotos da equipe e dos veículos e rotina de avaliações."),
+                    ("Páginas por praga",
+                     "Barata, cupim, rato, escorpião, mosquito, pombo: cada praga com a sua página, explicando o "
+                     "serviço sem provocar medo, como pede a Anvisa."),
+                    ("Página para empresas",
+                     "Restaurantes, padarias, condomínios, escolas e indústrias: contrato periódico, comprovante de "
+                     "execução e atendimento fora do horário de funcionamento."),
+                    ("Google Ads",
+                     "Anúncio na pesquisa do Google para quem tem praga agora, com as buscas de veneno, receita "
+                     "caseira, curso e vaga bloqueadas. Veja a <a href=\"/gestao-de-trafego-pago/\">gestão de tráfego "
+                     "pago</a>."),
+                    ("Propaganda dentro da regra",
+                     "Número da licença em todo anúncio e página, sem as palavras e imagens que o art. 22 da RDC 622 "
+                     "proíbe."),
+                    ("Medição",
+                     "Cada ligação e pedido registrado, para saber qual canal traz cliente e qual traz contrato."),
+                ],
+            }),
+            ("texto", {
+                "tag": "Google Meu Negócio",
+                "titulo": "Como a dedetizadora aparece no Google Maps se atende no local do cliente?",
+                "ps": [
+                    "Quem vai até o cliente é empresa de serviço local. A ajuda do Google sobre "
+                    "<a href=\"https://support.google.com/business/answer/9157481?hl=pt-BR\" target=\"_blank\" "
+                    "rel=\"noopener noreferrer\">áreas de cobertura</a> orienta mostrar a região atendida e tirar o "
+                    "endereço do perfil se você não recebe clientes nele.",
+                    "Com a área certa, a lista de serviços completa e avaliações respondidas, a empresa passa a aparecer "
+                    "quando alguém pesquisa \"dedetização perto de mim\" ou \"descupinização\" no bairro. Veja a "
+                    "<a href=\"/google-perfil-empresa/\">otimização do Google Perfil da Empresa</a>.",
+                ],
+            }),
+            ("passos", {
+                "titulo": "Como funciona o marketing da sua dedetizadora, do diagnóstico aos contratos?",
+                "itens": [
+                    ("Diagnóstico", "Olho seu perfil no Google, o site e quem aparece antes de você na sua região."),
+                    ("Plano por escrito", "Em até 24 horas: as frentes para começar, o que entra e o valor de cada uma."),
+                    ("Perfil e site", "Área de atendimento, páginas por praga e a página para empresas."),
+                    ("Anúncio, se fizer sentido", "Campanha no Google para quem tem praga agora, dentro da regra."),
+                    ("Medição", "Relatório de pedidos e contratos por canal."),
+                ],
+            }),
+            ("orcamento", {
+                "titulo": "Por onde a sua dedetizadora quer começar?",
+                "desc": "Escolha o ponto de partida. O orçamento é grátis e sai em até 24 horas pelo WhatsApp.",
+                "destaque": 1,
+                "itens": [
+                    ("Aparecer no mapa da região", "Para quem ainda depende de indicação.",
+                     ["Google Meu Negócio com área de atendimento", "Serviços por praga", "Rotina de avaliações"],
+                     "Olá, Renan! Tenho uma dedetizadora e quero aparecer no Google Maps.", "Pedir orçamento"),
+                    ("Anúncio no Google", "Para quem quer chamados agora.",
+                     ["Google Ads na sua região", "Buscas erradas bloqueadas", "Anúncio com o número da licença"],
+                     "Olá, Renan! Quero anunciar a minha dedetizadora no Google.", "Pedir orçamento"),
+                    ("Site para fechar contratos", "Para conquistar empresas e condomínios.",
+                     ["Página por praga", "Página para empresas", "Licença e responsável técnico à vista"],
+                     "Olá, Renan! Quero um site para a minha dedetizadora fechar contratos.", "Pedir orçamento"),
+                ],
+            }),
+        ],
+        "faq": [
+            ("Dedetizadora pode fazer propaganda?",
+             "Pode, seguindo o art. 22 da RDC 622/2022 da Anvisa: com a identificação da empresa nos órgãos licenciadores "
+             "e o número da licença, sem provocar temor e sem palavras como \"atóxico\" ou \"seguro\" que não estejam "
+             "registradas na Anvisa."),
+            ("Posso anunciar \"dedetização atóxica\" ou \"segura para pets\"?",
+             "Pelo art. 22, III, da RDC 622/2022, expressões como \"inócuo\", \"seguro\", \"atóxico\" e \"produto "
+             "natural\" só podem ser usadas quando estiverem registradas na Anvisa."),
+            ("Dedetizadora precisa de site?",
+             "Para o cliente avulso, o perfil no Google faz boa parte do trabalho. Para fechar contrato com restaurante, "
+             "condomínio e indústria, o site com licença, responsável técnico e modelo de comprovante pesa muito."),
+            ("Vale a pena anunciar dedetização no Google Ads?",
+             "Vale para quem pesquisa o serviço na sua região, desde que as buscas de veneno, receita caseira, curso e "
+             "vaga de emprego sejam bloqueadas, e que o anúncio siga as regras de propaganda da Anvisa."),
+            ("Quanto custa o marketing para dedetizadora?",
+             "Depende das frentes que entram e do tamanho da região que você atende. O orçamento é individual, grátis "
+             "e sai em até 24 horas pelo WhatsApp. A verba de anúncio, quando houver, é paga direto ao Google."),
+            ("Existe fidelidade?",
+             "Não existe fidelidade. Para cancelar, basta avisar com 30 dias de antecedência. As demais condições "
+             "vão por escrito junto com o orçamento."),
+        ],
+        "relacionados": [
+            ("/blog/como-conseguir-clientes-para-dedetizadora/", "Como conseguir clientes para dedetizadora",
+             "Cliente avulso, contratos com empresas e propaganda dentro da regra."),
+            ("/marketing-para-empresa-de-limpeza/", "Marketing para empresa de limpeza",
+             "Para quem também atende condomínios e empresas com limpeza."),
+            ("/gestao-de-trafego-pago/", "Gestão de tráfego pago",
+             "Anúncio no Google para quem tem praga agora."),
+        ],
+        "cta_final": ("Me conte a região que você atende e os seus serviços. Eu te digo por onde começar.",
+                      "Sem compromisso: eu olho como a sua dedetizadora aparece hoje no Google e quem aparece antes de você."),
+    },
+    {
+        # Etapa 10 do plano de nichos (05/10/2026): PAGINA-INDICE dos servicos. "hub": True troca a ficha
+        # para CollectionPage + ItemList (sem no Service). Cartoes com 3 campos = titulo vira link.
+        "slug": "servicos",
+        "hub": True,
+        "nacional": True,
+        "data": "2026-10-05",
+        "title": "Serviços: SEO, Google Meu Negócio, Sites e Google Ads | RCB SEO",
+        "desc": ("Os serviços da RCB SEO para donos de negócio: SEO e Google Meu Negócio, sites e landing pages, "
+                 "Google Ads e SEO para YouTube. Orçamento grátis em 24h."),
+        "trilha": "Serviços",
+        "servico": "Serviços de marketing no Google",
+        "eyebrow": "Todos os serviços",
+        "h1": "Serviços para trazer clientes pelo Google para a sua empresa",
+        "sub": ("Estes são os serviços da RCB SEO, todos com o mesmo objetivo: fazer quem procura o que você vende "
+                "encontrar a sua empresa no Google e chamar no WhatsApp. Anúncio para o resultado rápido, SEO e "
+                "Google Meu Negócio para o resultado duradouro, site e landing page para converter. Dá para começar "
+                "por um só — o orçamento é grátis e sai em até 24 horas."),
+        "cta_hero": "Pedir orçamento grátis",
+        "msg": "Olá, Renan! Quero entender qual serviço faz mais sentido para a minha empresa.",
+        "pills": ["Orçamento em até 24h", "Sem fidelidade", "Prazo por escrito"],
+        "painel_h2": "Os 4 serviços",
+        "painel": [
+            "SEO e Google Meu Negócio.",
+            "Sites e landing pages.",
+            "Tráfego pago no Google Ads.",
+            "SEO para YouTube.",
+        ],
+        "faq_titulo": "Perguntas frequentes sobre os serviços",
+        "secoes": [
+            ("texto", {
+                "tag": "Como escolher",
+                "titulo": "Qual serviço a sua empresa precisa primeiro?",
+                "ps": [
+                    "Depende de onde o cliente se perde hoje. Se ninguém encontra a sua empresa no Google, o começo é o "
+                    "Google Meu Negócio e o SEO. Se as pessoas encontram mas não chamam, o problema costuma ser o site "
+                    "ou a falta de uma página feita para converter. Se você precisa de clientes neste mês, o anúncio no "
+                    "Google é o caminho mais rápido — desde que leve a uma landing page e tenha medição.",
+                    "Na prática, os serviços funcionam melhor juntos: o anúncio traz quem procura agora, o SEO reduz a "
+                    "dependência do anúncio com o tempo e o site transforma a visita em conversa. No orçamento eu te "
+                    "digo por onde começar no seu caso. Se preferir ver por ramo de negócio, veja os "
+                    "<a href=\"/nichos/\">nichos que atendemos</a>.",
+                ],
+            }),
+            ("cards", {
+                "tag": "SEO e Google Meu Negócio",
+                "titulo": "Como aparecer no Google e no Google Maps sem pagar por clique?",
+                "desc": "O resultado que dura: a empresa passa a aparecer para quem procura, mês após mês.",
+                "itens": [
+                    ("Consultoria de SEO local", "Estratégia para a empresa aparecer nas buscas da sua região e do "
+                     "seu ramo.", "/consultoria-seo-local/"),
+                    ("Google Meu Negócio", "Perfil completo, fotos, serviços e rotina de avaliações para aparecer no "
+                     "mapa.", "/google-perfil-empresa/"),
+                    ("Auditoria de SEO", "Raio-X do site e do perfil: o que impede a empresa de aparecer e o que "
+                     "corrigir primeiro.", "/auditoria-seo/"),
+                    ("Conteúdo para SEO", "Textos que respondem às dúvidas do seu cliente e trazem visita do Google.",
+                     "/conteudo-para-seo/"),
+                    ("Acompanhamento de SEO", "Ajustes e relatório todo mês, para o trabalho não parar depois da "
+                     "entrega.", "/acompanhamento-seo/"),
+                    ("Diagnóstico de presença digital", "Como a sua empresa aparece hoje no Google, comparada com os "
+                     "concorrentes.", "/diagnostico-presenca-digital/"),
+                ],
+            }),
+            ("cards", {
+                "tag": "Sites e landing pages",
+                "titulo": "Que tipo de site ou página a sua empresa precisa?",
+                "desc": "A página certa transforma a visita em conversa no WhatsApp.",
+                "itens": [
+                    ("Landing page para anúncios", "Página feita para o anúncio do Google converter, com medição e "
+                     "WhatsApp.", "/criacao-de-landing-page/"),
+                    ("Criação de sites", "Site institucional rápido no celular, com páginas por serviço.",
+                     "/criacao-de-sites-goiania/"),
+                    ("Site otimizado para SEO", "Site construído desde o início para aparecer no Google.",
+                     "/site-otimizado-para-seo/"),
+                    ("Loja virtual", "Loja on-line para vender pela internet, com o básico de SEO.",
+                     "/criacao-de-loja-virtual-goiania/"),
+                ],
+            }),
+            ("cards", {
+                "tag": "Tráfego pago e YouTube",
+                "titulo": "Como ter clientes rápido com anúncio e ser encontrado no YouTube?",
+                "desc": "Anúncio para quem procura agora; YouTube para quem pesquisa em vídeo.",
+                "itens": [
+                    ("Gestão de tráfego pago", "Google Ads na rede de pesquisa, com landing page e medição de "
+                     "conversão.", "/gestao-de-trafego-pago/"),
+                    ("Tráfego pago para dentistas", "Anúncio no Google dentro das regras do CFO.",
+                     "/trafego-pago-para-dentistas/"),
+                    ("Tráfego pago para advogados", "Google Ads como permite o Provimento 205/2021 da OAB.",
+                     "/trafego-pago-para-advogados/"),
+                    ("Tráfego pago para energia solar", "Anúncio para quem procura energia solar na sua região.",
+                     "/trafego-pago-para-energia-solar/"),
+                    ("Tráfego pago para imobiliárias", "Google Ads para imobiliárias, com a regra do COFECI.",
+                     "/trafego-pago-para-imobiliarias/"),
+                    ("SEO para YouTube", "Título, descrição, capítulos e transcrição para o vídeo ser encontrado.",
+                     "/seo-para-youtube/"),
+                ],
+            }),
+            ("orcamento", {
+                "titulo": "Por qual serviço a sua empresa quer começar?",
+                "desc": "Escolha o ponto de partida. O orçamento é grátis e sai em até 24 horas pelo WhatsApp.",
+                "destaque": 1,
+                "itens": [
+                    ("Aparecer no Google", "Para quem ainda não é encontrado.",
+                     ["Google Meu Negócio", "SEO do site", "Rotina de avaliações"],
+                     "Olá, Renan! Quero que a minha empresa apareça no Google.", "Pedir orçamento"),
+                    ("Clientes agora com anúncio", "Para quem precisa de resultado rápido.",
+                     ["Google Ads na rede de pesquisa", "Landing page", "Medição de conversão"],
+                     "Olá, Renan! Quero anunciar a minha empresa no Google.", "Pedir orçamento"),
+                    ("Site ou landing page", "Para quem é encontrado, mas não recebe contato.",
+                     ["Página rápida no celular", "Botão de WhatsApp", "Medição"],
+                     "Olá, Renan! Quero um site ou uma landing page para a minha empresa.", "Pedir orçamento"),
+                ],
+            }),
+        ],
+        "faq": [
+            ("Preciso contratar todos os serviços?",
+             "Não. Dá para começar por um só. No orçamento eu digo qual faz mais diferença primeiro no seu caso."),
+            ("Qual a diferença entre SEO e anúncio no Google?",
+             "O anúncio aparece enquanto você paga por clique e traz resultado rápido. O SEO faz a empresa aparecer sem "
+             "pagar por clique, mas leva meses para amadurecer. Os dois juntos funcionam melhor."),
+            ("Vocês atendem fora de Goiânia?",
+             "Sim. O atendimento presencial é em Goiânia; os serviços são feitos on-line para empresas de todo o Brasil."),
+            ("Quanto custa?",
+             "Cada orçamento é individual, grátis e sai em até 24 horas pelo WhatsApp. A verba de anúncio, quando "
+             "houver, é paga direto ao Google."),
+            ("Existe fidelidade?",
+             "Não existe fidelidade. Para cancelar, basta avisar com 30 dias de antecedência. As demais condições "
+             "vão por escrito junto com o orçamento."),
+        ],
+        "relacionados": [
+            ("/nichos/", "Nichos que atendemos", "O marketing e o SEO organizados por ramo de negócio."),
+            ("/cases/", "Cases", "Resultados reais de clientes de consultoria."),
+            ("/blog/", "Blog", "Artigos para donos de negócio sobre Google, sites e anúncios."),
+        ],
+        "cta_final": ("Me conte o que a sua empresa faz e onde atende. Eu te digo por qual serviço começar.",
+                      "Sem compromisso: eu olho como a sua empresa aparece hoje no Google e te mando o caminho."),
+    },
+    {
+        # Etapa 10 do plano de nichos (05/10/2026): PAGINA-INDICE dos nichos. Mesmo formato da /servicos/.
+        "slug": "nichos",
+        "hub": True,
+        "nacional": True,
+        "data": "2026-10-05",
+        "title": "Nichos que Atendemos: Marketing e SEO por Ramo | RCB SEO",
+        "desc": ("Marketing e SEO por ramo: clínicas, dentistas, advogados, contadores, energia solar, "
+                 "limpeza, guincho, reformas, dedetização e mais. Orçamento em 24h."),
+        "trilha": "Nichos que atendemos",
+        "servico": "Marketing e SEO por nicho",
+        "eyebrow": "Nichos que atendemos",
+        "h1": "Nichos que atendemos: marketing e SEO por ramo de negócio",
+        "sub": ("Cada ramo tem um cliente que procura de um jeito, regras próprias de propaganda e concorrentes "
+                "diferentes. Por isso o marketing de uma clínica não é igual ao de uma dedetizadora. Aqui estão os "
+                "ramos que eu atendo, cada um com a sua página explicando como o Google Meu Negócio, o site e o "
+                "anúncio funcionam naquele negócio. Não achou o seu? Me chame: o orçamento é grátis e sai em até "
+                "24 horas."),
+        "cta_hero": "Meu ramo não está aqui",
+        "msg": "Olá, Renan! Quero saber se você atende o meu ramo de negócio.",
+        "pills": ["Orçamento em até 24h", "Regras de cada ramo", "Prazo por escrito"],
+        "painel_h2": "Os grupos de nichos",
+        "painel": [
+            "Saúde e bem-estar.",
+            "Escritórios e profissionais.",
+            "Serviços no local do cliente.",
+            "Comércio e pequenas empresas.",
+            "Site e anúncio por nicho.",
+        ],
+        "faq_titulo": "Perguntas frequentes sobre os nichos que atendemos",
+        "secoes": [
+            ("texto", {
+                "tag": "Por que por nicho",
+                "titulo": "Por que o marketing muda de um ramo para outro?",
+                "ps": [
+                    "Porque o cliente procura de um jeito diferente e as regras mudam. Quem precisa de guincho liga em "
+                    "segundos; quem vai reformar compara por semanas. Dentista segue as normas do CFO, advogado o "
+                    "Provimento 205/2021 da OAB, dedetizadora a RDC 622/2022 da Anvisa. Uma página genérica não "
+                    "responde a nada disso.",
+                    "Em cada página abaixo você encontra o que funciona naquele ramo: como aparecer no Google Maps, o "
+                    "que o site precisa mostrar, os cuidados do anúncio e as perguntas que o seu cliente faz. Se "
+                    "preferir ver por tipo de serviço, veja todos os <a href=\"/servicos/\">serviços</a>.",
+                ],
+            }),
+            ("cards", {
+                "tag": "Saúde e bem-estar",
+                "titulo": "Quais nichos de saúde e bem-estar eu atendo?",
+                "itens": [
+                    ("Clínicas", "Agenda cheia com pacientes da região, dentro das regras dos conselhos.",
+                     "/seo-para-clinicas/"),
+                    ("Dentistas", "Implante, ortodontia e clínica geral, com a publicidade nas normas do CFO.",
+                     "/seo-para-dentistas/"),
+                    ("Médicos", "Consultório encontrado por especialidade, nas regras do CFM.", "/seo-para-medicos/"),
+                    ("Clínicas de estética", "Procedimentos procurados no Google, sem promessa de resultado.",
+                     "/seo-para-clinicas-de-estetica/"),
+                    ("Clínicas de emagrecimento", "Pacientes que procuram tratamento na sua cidade.",
+                     "/seo-para-clinicas-de-emagrecimento/"),
+                    ("Psicólogos", "Consultório e atendimento on-line, dentro do código de ética.",
+                     "/seo-para-psicologos/"),
+                    ("Veterinários", "Clínica veterinária e pet shop encontrados no bairro.", "/seo-para-veterinarios/"),
+                    ("Marketing para clínicas", "O caminho completo em linguagem simples, para o dono da clínica.",
+                     "/marketing-para-clinicas/"),
+                ],
+            }),
+            ("cards", {
+                "tag": "Escritórios e profissionais",
+                "titulo": "Quais escritórios e profissionais eu atendo?",
+                "itens": [
+                    ("Advogados", "Marketing e SEO nas regras do Provimento 205/2021 da OAB.",
+                     "/marketing-para-advogados/"),
+                    ("Contadores", "Escritório de contabilidade encontrado por quem abre ou troca de contador.",
+                     "/seo-para-contadores/"),
+                    ("Imobiliárias", "Captação de imóveis e clientes, com a regra do COFECI.", "/seo-para-imobiliarias/"),
+                    ("Profissionais liberais", "Quem vende o próprio trabalho e precisa ser encontrado.",
+                     "/para-profissionais-liberais/"),
+                ],
+            }),
+            ("cards", {
+                "tag": "Serviços no local do cliente",
+                "titulo": "Quais empresas que atendem no local do cliente eu atendo?",
+                "itens": [
+                    ("Energia solar", "Integradores: Google Meu Negócio, site, Google Ads e landing page.",
+                     "/marketing-para-energia-solar/"),
+                    ("Limpeza e terceirização", "Contratos mensais com condomínios e empresas.",
+                     "/marketing-para-empresa-de-limpeza/"),
+                    ("Higienização de estofados", "Orçamento por foto, antes e depois e cliente que volta.",
+                     "/marketing-para-empresa-de-higienizacao-de-estofados/"),
+                    ("Guincho e reboque", "Horário certo no Google e anúncio com botão de ligação.",
+                     "/marketing-para-empresa-de-guincho/"),
+                    ("Reformas", "Portfólio de obras, condomínios e orçamento que filtra curiosos.",
+                     "/marketing-para-empresa-de-reformas/"),
+                    ("Dedetização", "Cliente avulso e contratos, com a propaganda nas regras da Anvisa.",
+                     "/marketing-para-dedetizadora/"),
+                ],
+            }),
+            ("cards", {
+                "tag": "Comércio e pequenas empresas",
+                "titulo": "Atendo comércio e pequenas empresas?",
+                "itens": [
+                    ("Pequenas empresas", "Por onde começar quando o orçamento de marketing é curto.",
+                     "/seo-para-pequenas-empresas/"),
+                    ("Comércios locais", "Loja de bairro encontrada por quem está perto.", "/para-comercios-locais/"),
+                ],
+            }),
+            ("cards", {
+                "tag": "Site e anúncio por nicho",
+                "titulo": "Quais nichos têm página própria de site e de anúncio?",
+                "itens": [
+                    ("Site para clínica", "As páginas que o site da clínica precisa ter.", "/site-para-clinica/"),
+                    ("Site para dentista", "Site do consultório com página por tratamento.",
+                     "/criacao-de-site-para-dentista/"),
+                    ("Site para advogado", "Uma página por área de atuação, sem promessa de resultado.",
+                     "/criacao-de-site-para-advogado/"),
+                    ("Site para contador", "Site do escritório de contabilidade.", "/criacao-de-site-para-contador/"),
+                    ("Site para clínica de estética", "Site com página por procedimento.",
+                     "/criacao-de-site-para-clinica-de-estetica/"),
+                    ("Google Meu Negócio para clínicas", "O perfil da clínica completo no Google Maps.",
+                     "/google-meu-negocio-para-clinicas/"),
+                    ("Tráfego pago para dentistas", "Google Ads dentro das regras do CFO.",
+                     "/trafego-pago-para-dentistas/"),
+                    ("Tráfego pago para advogados", "Google Ads como permite a OAB.", "/trafego-pago-para-advogados/"),
+                    ("Tráfego pago para energia solar", "Anúncio para integradores.",
+                     "/trafego-pago-para-energia-solar/"),
+                    ("Tráfego pago para imobiliárias", "Google Ads com a regra do COFECI.",
+                     "/trafego-pago-para-imobiliarias/"),
+                ],
+            }),
+            ("orcamento", {
+                "titulo": "Como pedir o orçamento para o seu ramo?",
+                "desc": "Escolha o ponto de partida. O orçamento é grátis e sai em até 24 horas pelo WhatsApp.",
+                "destaque": 1,
+                "itens": [
+                    ("Meu ramo está na lista", "Para começar pelo que funciona no seu nicho.",
+                     ["Plano por escrito", "Regras do seu ramo respeitadas", "Prazo combinado"],
+                     "Olá, Renan! O meu ramo está na sua lista de nichos e quero um orçamento.", "Pedir orçamento"),
+                    ("Meu ramo não está na lista", "Para saber se o método serve para você.",
+                     ["Análise do seu Google", "Quem aparece antes de você", "Por onde começar"],
+                     "Olá, Renan! O meu ramo não está na lista. Você atende?", "Perguntar"),
+                    ("Tenho várias unidades", "Para empresas com mais de um endereço ou cidade.",
+                     ["Um perfil por unidade", "Páginas por cidade", "Medição por unidade"],
+                     "Olá, Renan! Tenho mais de uma unidade e quero aparecer no Google em todas.", "Pedir orçamento"),
+                ],
+            }),
+        ],
+        "faq": [
+            ("Você atende o meu ramo mesmo que ele não esteja na lista?",
+             "Provavelmente sim. A lista mostra os ramos com página própria; o método vale para qualquer negócio que "
+             "precisa ser encontrado no Google. Me chame no WhatsApp e eu te digo."),
+            ("Você atende o cliente final desses ramos?",
+             "Não. Eu trabalho para o dono da empresa: faço a empresa dele ser encontrada por quem procura o serviço."),
+            ("As regras de propaganda de cada profissão são respeitadas?",
+             "Sim. Cada página de nicho cita a regra que vale para ele, como as do CFO, do CFM, da OAB e da Anvisa."),
+            ("Quanto custa?",
+             "Cada orçamento é individual, grátis e sai em até 24 horas pelo WhatsApp. A verba de anúncio, quando "
+             "houver, é paga direto ao Google."),
+            ("Existe fidelidade?",
+             "Não existe fidelidade. Para cancelar, basta avisar com 30 dias de antecedência. As demais condições "
+             "vão por escrito junto com o orçamento."),
+        ],
+        "relacionados": [
+            ("/servicos/", "Todos os serviços", "SEO, Google Meu Negócio, sites, Google Ads e YouTube."),
+            ("/cases/", "Cases", "Resultados reais de clientes de consultoria."),
+            ("/blog/", "Blog", "Artigos para donos de negócio, organizados por ramo."),
+        ],
+        "cta_final": ("Me conte o seu ramo e a cidade. Eu te digo por onde começar.",
+                      "Sem compromisso: eu olho como a sua empresa aparece hoje no Google e quem aparece antes de você."),
+    },
+    {
         # Etapa 8 do plano de nichos (05/10/2026): pagina principal de ADVOCACIA. Substitui a antiga
         # /marketing-para-advogados/ (escrita a mao, criada em 15/07/2026) e recebe o 301 de
         # /para-advogados/, que era quem aparecia para "seo para advogados" — por isso o termo SEO fica

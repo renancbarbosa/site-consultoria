@@ -438,6 +438,16 @@ section {
   display: flex;
 }
 
+/* Etapa 10 (05/10/2026): menu "Nichos" com 19 itens abre em 2 colunas no computador.
+   Abaixo de 1000px o hamburguer assume e a lista volta a ser uma coluna (regra do menu mobile). */
+@media (min-width: 1001px) {
+  .nav-dropdown-menu.nav-dropdown-2col.open {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    min-width: 440px;
+  }
+}
+
 .nav-dropdown-item {
   display: block;
   padding: 10px 16px;
