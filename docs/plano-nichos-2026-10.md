@@ -4,6 +4,8 @@
 > Uma etapa por vez. Ao fim de cada uma: PARAR, mostrar o relatório e esperar
 > "aprovado, siga". Nunca publicar sem "pode publicar".
 
+> **Próxima etapa (anotado em 05/10/2026): 9a — Higienização de estofados.** Página principal "Marketing para empresas de higienização de estofados" + 1 artigo "Como conseguir clientes para higienização de estofados". Seguir o modelo das Etapas 6 e 8 (servicos_marketing.py + artigos_nichos_anuncios.py, gerar-servicos-marketing.py e RCB_ARTIGO_SLUG=... gerar-artigos-sites.py; reverter as páginas que o gerador mexe fora do escopo).
+
 ## Status das etapas (plano revisado de 04/10/2026)
 
 | Etapa | Escopo | Status |
@@ -17,7 +19,7 @@
 | 5 | SEO para YouTube | **publicada** 04/10/2026 (`328ff9bb`; página, menu, cartão da home e rodapé conferidos no ar; IndexNow aceito) |
 | 6 | Limpeza empresarial | **publicada** 05/10/2026 (`feacb175`; 3 URLs conferidas em 200; IndexNow 4 URLs aceito) |
 | 7 | Fortalecer estética e pequenas empresas | **publicada** 05/10/2026 (`982b8134`; 9 URLs conferidas em 200 com o conteúdo novo; IndexNow 9 URLs aceito) |
-| 8 | Advocacia (juntar em /marketing-para-advogados/) | **prévia local pronta** 05/10/2026 (aguardando "pode publicar") |
+| 8 | Advocacia (juntar em /marketing-para-advogados/) | **publicada** 05/10/2026 (`7360a547`; 6 URLs em 200, /para-advogados/ /para-advogados e .html em 301 para a nova; IndexNow 7 URLs aceito) |
 | 9a–9d | Serviços de rua: higienização, guincho, reformas, dedetização | pendente |
 | 10 | Hubs "Serviços" e "Nichos que atendemos" | pendente |
 | 11 | Medição (28 dias depois da Etapa 2) | pendente |
