@@ -37,6 +37,9 @@ Mensagem central: trazer clientes pelo Google — anúncio para o resultado ráp
 - SEO para clínicas: https://rcbseo.com.br/seo-para-clinicas/ — SEO local para clínicas e consultórios aparecerem no Google e no Maps.
 - SEO para dentistas: https://rcbseo.com.br/seo-para-dentistas/ — Posicionamento de clínicas odontológicas nas buscas locais.
 - SEO para clínicas de estética: https://rcbseo.com.br/seo-para-clinicas-de-estetica/ — Visibilidade no Google para clínicas e profissionais de estética.
+  - Site para clínica de estética: https://rcbseo.com.br/criacao-de-site-para-clinica-de-estetica/
+  - Checklist (clínica de estética não aparece no Google): https://rcbseo.com.br/blog/clinica-de-estetica-nao-aparece-no-google/
+  - Como atrair clientes para clínica de estética em Goiânia: https://rcbseo.com.br/blog/como-aparecer-google-clinica-estetica-goiania/
 - SEO para médicos: https://rcbseo.com.br/seo-para-medicos/ — Presença digital e autoridade para médicos e consultórios.
 - SEO para clínicas de emagrecimento: https://rcbseo.com.br/seo-para-clinicas-de-emagrecimento/ — SEO para clínicas de emagrecimento atraírem pacientes locais.
 - SEO local em Goiânia: https://rcbseo.com.br/seo-local-goiania/ — SEO local para negócios que querem ranquear em Goiânia.
@@ -54,7 +57,9 @@ Mensagem central: trazer clientes pelo Google — anúncio para o resultado ráp
 - SEO para psicólogos: https://rcbseo.com.br/seo-para-psicologos/ — Psicólogos encontrados por pacientes no Google, dentro da ética do CFP.
 - SEO para veterinários e pet shops: https://rcbseo.com.br/seo-para-veterinarios/ — Clínicas veterinárias e pet shops visíveis nas buscas de urgência e rotina.
 - SEO para imobiliárias: https://rcbseo.com.br/seo-para-imobiliarias/ — Imobiliárias e corretores gerando leads próprios sem depender só de portais.
-- SEO para pequenas empresas: https://rcbseo.com.br/seo-para-pequenas-empresas/ — Como pequenas empresas aparecem no Google sem depender de anúncios.
+- SEO para pequenas empresas: https://rcbseo.com.br/seo-para-pequenas-empresas/ — Como pequenas empresas aparecem no Google e no Maps, e quando vale juntar anúncio e landing page.
+  - Vale a pena SEO para pequena empresa?: https://rcbseo.com.br/blog/vale-a-pena-seo-para-pequena-empresa/
+  - Guia de SEO para empresas locais: https://rcbseo.com.br/blog/seo-para-empresas-locais/
 - SEO para profissionais liberais: https://rcbseo.com.br/para-profissionais-liberais/ — Posicionamento no Google para profissionais liberais.
 - SEO para comércios locais: https://rcbseo.com.br/para-comercios-locais/ — SEO local e Google Maps para comércios de bairro e região.
 - Marketing para clínicas: https://rcbseo.com.br/marketing-para-clinicas/ — Marketing para clínicas em linguagem simples: ser encontrado no Google por pacientes.
@@ -101,7 +106,7 @@ Marketing para empresas de limpeza e terceirização de serviços (o público é
 - Blog ainda vale a pena para empresa local: https://rcbseo.com.br/blog/blog-vale-a-pena-empresa-local/ — Quando o blog estratégico gera resultado para um negócio local.
 - Como criar páginas de serviço que aparecem no Google: https://rcbseo.com.br/blog/como-criar-paginas-de-servico-que-ranqueiam/ — A estrutura de uma página de serviço que ranqueia e converte.
 - Como melhorar o posicionamento da empresa no Google: https://rcbseo.com.br/blog/como-melhorar-posicionamento-empresa-google/ — As frentes que melhoram o posicionamento de um negócio local, sem promessa de primeira página.
-- Como aparecer no Google quando alguém procura clínica de estética em Goiânia: https://rcbseo.com.br/blog/como-aparecer-google-clinica-estetica-goiania/ — Guia prático para clínicas de estética ganharem visibilidade no Google e no Maps.
+- Como atrair clientes para clínica de estética em Goiânia: https://rcbseo.com.br/blog/como-aparecer-google-clinica-estetica-goiania/ — Guia prático para clínicas de estética ganharem visibilidade no Google e no Maps.
 - Por que minha clínica odontológica não aparece no Google: https://rcbseo.com.br/blog/por-que-minha-clinica-odontologica-nao-aparece-no-google/ — Causas comuns de baixa visibilidade de clínicas odontológicas e como corrigir.
 - SEO para prestadores de serviço: https://rcbseo.com.br/blog/seo-para-prestadores-de-servico/ — Como prestadores operacionais (eletricista, encanador, ar-condicionado, manutenção, chaveiro, dedetizadora) aparecem no Google na hora da necessidade.
 - Como o escritório de contabilidade aparece no Google: https://rcbseo.com.br/blog/seo-para-contadores/ — O que o empresário pesquisa, o que decide o ranqueamento e o que trava o escritório contábil.

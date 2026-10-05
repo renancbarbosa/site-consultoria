@@ -622,7 +622,9 @@ PAGINAS = [
     ),
 
     # ======================================================= SITE PARA ESTÉTICA
-    _site(
+    # Etapa 7 (05/10/2026): autor/data visíveis, público na ficha, FAQ sem "em Goiânia" (a página
+    # atende o Brasil) e relacionados com landing page e o checklist de estética.
+    dict(_site(
         "criacao-de-site-para-clinica-de-estetica", "clínica de estética", "estética",
         "Criação de site para clínica de estética",
         ("Criação de site para clínica de estética: página por procedimento, fotos reais e WhatsApp em todas as páginas. Feito para o Google. Orçamento em 24h."),
@@ -668,8 +670,12 @@ PAGINAS = [
           "Depende das regras do conselho do profissional responsável. Na dúvida, prefira conteúdo educativo e sempre "
           "com autorização da paciente."),
          ("Vocês fazem anúncio para estética?",
-          "Sim. A RCB faz a gestão de Google Ads e Meta Ads para clínicas, com cuidado com as políticas de anúncios de saúde.")],
+          "Sim. A RCB faz a gestão de Google Ads e Meta Ads para clínicas, com cuidado com as políticas de anúncios "
+          "de saúde, e monta a landing page que recebe o clique do anúncio.")],
         [("/seo-para-clinicas-de-estetica/", "SEO para clínicas de estética", "Aparecer no Google e no Maps sem pagar por clique."),
+         ("/blog/clinica-de-estetica-nao-aparece-no-google/", "Clínica de estética não aparece no Google?",
+          "O checklist para conferir o que está travando a clínica."),
+         ("/criacao-de-landing-page/", "Landing page para anúncios", "A página que recebe o clique e vira conversa no WhatsApp."),
          ("/blog/trafego-pago-para-clinicas/", "Tráfego pago para clínicas", "Google Ads e Meta Ads dentro das regras."),
          ("/criacao-de-sites-goiania/", "Criação de sites em Goiânia", "Como funciona a criação de sites da RCB.")],
         "Olá, Renan! Tenho uma clínica de estética e quero um orçamento de site.",
@@ -677,7 +683,8 @@ PAGINAS = [
          "Sem compromisso: você me diz o que atende e onde, e eu te mostro quem aparece na sua frente hoje."),
         ["Uma página por procedimento.", "Fotos reais do espaço.", "Equipe com registro profissional.",
          "WhatsApp com mensagem pronta.", "Sem promessa de resultado.", "Ligado ao seu Perfil no Google."],
-    ),
+    ), data="2026-10-05", publicado="2026-09-28", publico="Clínicas de estética e profissionais de estética",
+        faq_titulo="Perguntas frequentes sobre criação de site para clínica de estética"),
 
     # ======================================================= TRÁFEGO DENTISTAS
     _trafego(
