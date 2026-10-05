@@ -798,4 +798,203 @@ PAGINAS = [
         "cta_final": ("Me conte as cidades onde você instala. Eu te digo por onde começar.",
                       "Sem compromisso: eu olho como a sua empresa aparece hoje no Google e quem aparece antes de você."),
     },
+    {
+        # Etapa 5 do plano de nichos (04/10/2026): servico SEO PARA YOUTUBE. Publico: empresas e
+        # profissionais que querem crescer o canal. Sem prometer inscritos/visualizacoes.
+        # Fontes conferidas: "Como funciona a busca do YouTube", ajuda do YouTube (capitulos,
+        # transcricao automatica, miniatura personalizada) e Google (SEO para video).
+        "slug": "seo-para-youtube",
+        "nacional": True,
+        "data": "2026-10-04",
+        "publico": "Empresas e profissionais que usam ou querem usar o YouTube para atrair clientes",
+        "title": "SEO para YouTube: Como Fazer Seu Canal Crescer | RCB SEO",
+        "desc": ("SEO para YouTube: título, descrição, capítulos, transcrição e miniatura para o vídeo da sua "
+                 "empresa aparecer no YouTube e no Google. Orçamento grátis em 24h."),
+        "trilha": "SEO para YouTube",
+        "servico": "SEO para YouTube",
+        "eyebrow": "Para empresas e profissionais de todo o Brasil",
+        "h1": "SEO para YouTube: como fazer o canal da sua empresa crescer",
+        "sub": ("SEO para YouTube é preparar cada vídeo para ser encontrado por quem pesquisa o assunto — no próprio "
+                "YouTube e no Google. Na prática: escolher o tema pelo que o seu cliente pergunta, escrever o título e "
+                "a descrição, organizar capítulos, revisar a transcrição e acertar a miniatura. Sem promessa de "
+                "número de inscritos: o trabalho é deixar o vídeo fácil de achar e de entender. Orçamento grátis em "
+                "até 24 horas."),
+        "cta_hero": "Quero orçamento de SEO para YouTube",
+        "msg": "Olá, Renan! Quero um orçamento de SEO para o canal do YouTube da minha empresa.",
+        "pills": ["Orçamento em até 24h", "Sem promessa de inscritos", "Prazo por escrito"],
+        "painel_h2": "O que entra em cada vídeo",
+        "painel": [
+            "Tema escolhido pelo que o seu cliente pesquisa.",
+            "Título claro, com o assunto na frente.",
+            "Descrição com resumo, links e contato.",
+            "Capítulos para cada parte do vídeo.",
+            "Transcrição revisada, sem os erros da automática.",
+            "Miniatura que diz do que o vídeo trata.",
+        ],
+        "faq_titulo": "Perguntas frequentes sobre SEO para YouTube",
+        "secoes": [
+            ("texto", {
+                "tag": "Como funciona",
+                "titulo": "Como o YouTube decide quais vídeos mostrar na busca?",
+                "ps": [
+                    "Segundo a página oficial "
+                    "<a href=\"https://www.youtube.com/intl/pt-BR/howyoutubeworks/product-features/search/\" "
+                    "target=\"_blank\" rel=\"noopener noreferrer\">Como funciona a busca do YouTube</a>, o sistema olha "
+                    "três coisas: relevância (o quanto o título, as tags, a descrição e o conteúdo do vídeo combinam com "
+                    "o que foi pesquisado), engajamento (por exemplo, o tempo que as pessoas passam assistindo àquele "
+                    "vídeo para aquela busca) e qualidade (sinais de que o canal mostra experiência, autoridade e "
+                    "confiança no assunto).",
+                    "Ou seja: não existe truque. O que dá para trabalhar é deixar claro, em texto, do que o vídeo trata, "
+                    "planejar o tema para o vídeo responder de verdade o que a pessoa procurou e manter o canal coerente num "
+                    "assunto. O YouTube também afirma que não aceita pagamento por posição na busca orgânica.",
+                ],
+            }),
+            ("split", {
+                "tag": "O problema",
+                "titulo": "Por que o canal da empresa não cresce mesmo postando vídeo?",
+                "ps": [
+                    "O motivo mais comum é que o vídeo foi feito para quem já conhece a empresa, não para quem está "
+                    "pesquisando. Título com o nome do evento, descrição vazia, nenhuma pista do assunto: o YouTube não "
+                    "tem como saber para quem mostrar.",
+                    "O outro motivo é falta de foco. Um vídeo sobre promoção, outro sobre a festa da equipe, outro sobre "
+                    "um serviço: o canal não firma em nenhum assunto. Quando os vídeos respondem às perguntas que o "
+                    "cliente faz antes de comprar, cada um vira uma porta de entrada.",
+                ],
+                "card_titulo": "Sinais de vídeo difícil de encontrar",
+                "card": [
+                    "Título que só faz sentido para quem é da empresa.",
+                    "Descrição em branco ou com uma linha.",
+                    "Vídeo longo sem capítulos.",
+                    "Transcrição automática cheia de erros.",
+                    "Miniatura que não mostra o assunto.",
+                ],
+            }),
+            ("cards", {
+                "tag": "O que está incluído",
+                "titulo": "O que entra no SEO para YouTube?",
+                "desc": "Cada item ajuda o YouTube, o Google e quem assiste a entender do que o vídeo trata.",
+                "itens": [
+                    ("Pesquisa de temas",
+                     "Levantamento das perguntas que o seu cliente faz antes de contratar, para cada vídeo responder "
+                     "uma delas."),
+                    ("Título e descrição",
+                     "O assunto na frente do título e uma descrição que resume o vídeo, com links para o site e para o "
+                     "seu WhatsApp."),
+                    ("Capítulos",
+                     "O vídeo dividido em partes, com título em cada uma. Os "
+                     "<a href=\"https://support.google.com/youtube/answer/9884579?hl=pt-BR\" target=\"_blank\" "
+                     "rel=\"noopener noreferrer\">capítulos</a>, segundo o YouTube, facilitam encontrar e rever cada "
+                     "trecho."),
+                    ("Transcrição revisada",
+                     "O YouTube gera "
+                     "<a href=\"https://support.google.com/youtube/answer/6373554?hl=pt-BR\" target=\"_blank\" "
+                     "rel=\"noopener noreferrer\">transcrição automática</a>, mas avisa que ela pode errar com sotaque, "
+                     "ruído e termos técnicos. A revisão corrige nomes, serviços e termos do seu ramo."),
+                    ("Miniatura",
+                     "Uma imagem que diz do que o vídeo trata. A "
+                     "<a href=\"https://support.google.com/youtube/answer/72431?hl=pt-BR\" target=\"_blank\" "
+                     "rel=\"noopener noreferrer\">miniatura personalizada</a> exige conta verificada — eu oriento esse passo."),
+                    ("Organização do canal",
+                     "Playlists por assunto, descrição do canal e links, para quem chega por um vídeo assistir ao próximo."),
+                ],
+            }),
+            ("texto", {
+                "tag": "Google e IA",
+                "titulo": "O vídeo também precisa ser entendido pelo Google e pelas ferramentas de IA?",
+                "ps": [
+                    "Precisa. Vídeo aparece também no Google — na página de resultados, na aba de vídeos e no Discover, "
+                    "como explica o guia de "
+                    "<a href=\"https://developers.google.com/search/docs/appearance/video?hl=pt-br\" target=\"_blank\" "
+                    "rel=\"noopener noreferrer\">práticas recomendadas de SEO para vídeo</a> do próprio Google.",
+                    "Na prática, buscadores e assistentes de inteligência artificial dependem muito do texto que "
+                    "acompanha o vídeo — título, descrição, capítulos e transcrição — para entender o assunto e decidir "
+                    "quando mostrar ou citar aquele conteúdo. Um vídeo excelente com texto pobre é um vídeo difícil de "
+                    "encontrar. Por isso a transcrição revisada e a descrição bem escrita valem tanto quanto a gravação.",
+                ],
+            }),
+            ("texto", {
+                "tag": "Empresa local",
+                "titulo": "Como o YouTube ajuda uma empresa local a conseguir clientes?",
+                "ps": [
+                    "Para a empresa local, o YouTube funciona como vitrine e como resposta pronta. Um vídeo explicando "
+                    "como funciona o serviço, quanto tempo leva, como é a primeira consulta ou a visita técnica tira "
+                    "dúvidas antes de o cliente chamar no WhatsApp — e ele chega mais decidido.",
+                    "O mesmo vídeo pode ir para o site, numa página do serviço, e ajudar o "
+                    "<a href=\"/google-perfil-empresa/\">Google Perfil da Empresa</a> a mostrar quem você é. Assim o "
+                    "YouTube trabalha junto com o <a href=\"/consultoria-seo-local/\">SEO e o Google Meu Negócio</a>, em "
+                    "vez de ser um canal solto.",
+                ],
+            }),
+            ("passos", {
+                "titulo": "Como funciona o SEO do seu canal, do diagnóstico aos vídeos novos?",
+                "itens": [
+                    ("Diagnóstico do canal", "Olho os vídeos que já existem, os títulos, as descrições e o que dá para aproveitar."),
+                    ("Mapa de temas", "Lista das perguntas do seu cliente que viram vídeo, na ordem de prioridade."),
+                    ("Otimização dos vídeos antigos", "Títulos, descrições, capítulos e transcrições revistos nos que já estão no ar."),
+                    ("Cada vídeo novo", "Antes de publicar: título, descrição, capítulos, transcrição e miniatura prontos."),
+                    ("Acompanhamento", "Relatório do que as pessoas pesquisam para chegar ao canal e quais vídeos levam ao contato."),
+                ],
+            }),
+            ("texto", {
+                "tag": "Expectativa",
+                "titulo": "Quanto tempo leva e o que dá para esperar do SEO para YouTube?",
+                "ps": [
+                    "O canal cresce com constância: vídeos que respondem a perguntas reais, publicados com regularidade, "
+                    "vão sendo encontrados ao longo de meses. Um vídeo bem preparado pode continuar trazendo visita por "
+                    "muito tempo depois de publicado.",
+                    "O que não dá para prometer é número de inscritos ou de visualizações — isso depende do assunto, da "
+                    "concorrência e do próprio vídeo. O que eu entrego é cada vídeo preparado para ser encontrado — título, "
+                    "descrição, capítulos, transcrição e miniatura — e um relatório honesto do que está trazendo gente até você.",
+                ],
+            }),
+            ("orcamento", {
+                "titulo": "Por onde o seu canal quer começar?",
+                "desc": "Escolha o ponto de partida. O orçamento é grátis e sai em até 24 horas pelo WhatsApp.",
+                "destaque": 0,
+                "itens": [
+                    ("Arrumar o canal que já existe", "Para quem já tem vídeos que ninguém encontra.",
+                     ["Diagnóstico do canal", "Títulos, descrições e capítulos revistos", "Transcrições corrigidas"],
+                     "Olá, Renan! Quero arrumar o SEO do canal do YouTube que já tenho.", "Pedir orçamento"),
+                    ("Otimização de cada vídeo novo", "Para quem vai publicar com frequência.",
+                     ["Tema pelo que o cliente pesquisa", "Título, descrição e capítulos", "Miniatura orientada"],
+                     "Olá, Renan! Quero otimização para cada vídeo novo do meu canal.", "Pedir orçamento"),
+                    ("Canal + site + Google Meu Negócio", "Para usar o YouTube junto com o resto da presença no Google.",
+                     ["SEO do canal", "Vídeos nas páginas do site", "Ligação com o Google Meu Negócio"],
+                     "Olá, Renan! Quero integrar meu canal do YouTube com o site e o Google Meu Negócio.", "Pedir orçamento"),
+                ],
+            }),
+        ],
+        "faq": [
+            ("O que é SEO para YouTube?",
+             "É preparar cada vídeo para ser encontrado por quem pesquisa o assunto: tema escolhido pelo que o "
+             "cliente pergunta, título, descrição, capítulos, transcrição revisada e miniatura."),
+            ("Vocês garantem um número de inscritos ou visualizações?",
+             "Não. Ninguém controla quantas pessoas vão assistir. O trabalho é deixar o vídeo fácil de encontrar e de "
+             "entender, e mostrar em relatório o que está trazendo gente até você."),
+            ("O serviço inclui gravar e editar os vídeos?",
+             "Este serviço cuida de o seu vídeo ser encontrado: tema, título, descrição, capítulos, transcrição e "
+             "miniatura. A gravação e a edição ficam com você ou com um editor de sua confiança."),
+            ("Preciso ter muitos vídeos para começar?",
+             "Não. Dá para começar arrumando os vídeos que já existem e planejando os próximos a partir das perguntas "
+             "que o seu cliente faz."),
+            ("Preciso de conta verificada no YouTube?",
+             "Para usar miniatura personalizada, sim — é uma exigência do YouTube. Eu oriento como fazer a verificação."),
+            ("Quanto custa o SEO para YouTube?",
+             "Depende de quantos vídeos entram e se é arrumação do canal ou acompanhamento dos vídeos novos. O "
+             "orçamento é individual, grátis e sai em até 24 horas pelo WhatsApp."),
+            ("Existe fidelidade?",
+             "Não existe fidelidade. Para cancelar, basta avisar com 30 dias de antecedência. As demais condições "
+             "vão por escrito junto com o orçamento."),
+        ],
+        "relacionados": [
+            ("/consultoria-seo-local/", "SEO e Google Meu Negócio",
+             "Aparecer no Google e no mapa, junto com o canal."),
+            ("/google-perfil-empresa/", "Google Perfil da Empresa",
+             "O perfil que mostra a sua empresa no Google Maps."),
+            ("/conteudo-para-seo/", "Conteúdo para SEO",
+             "Textos que respondem às dúvidas do cliente e ajudam a escolher os temas dos vídeos."),
+        ],
+        "cta_final": ("Me mande o link do seu canal. Eu te digo o que dá para melhorar primeiro.",
+                      "Sem compromisso: eu olho os títulos, as descrições e os temas, e te mostro por onde começar."),
+    },
 ]

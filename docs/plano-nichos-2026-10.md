@@ -14,7 +14,7 @@
 | 2 | Landing page para anúncios (urgente) + modelo demonstrativo | **publicada** 04/10/2026 (`5f0e869`; página, 301 e modelo conferidos no ar; IndexNow 163 URLs aceito) |
 | 3 | Tráfego pago empresarial (reorganizar as 7 páginas) | **publicada** 04/10/2026 (`0e619b73`; principal, 301 e 4 nichos conferidos no ar; IndexNow 163 URLs aceito) |
 | 4 | Energia solar (marketing completo) | **publicada** 04/10/2026 (`2e818aea`; página e 2 artigos conferidos no ar; IndexNow aceito) |
-| 5 | SEO para YouTube | **em andamento** |
+| 5 | SEO para YouTube | **aguardando "pode publicar"** (prévia local, 04/10/2026) |
 | 6 | Limpeza empresarial | pendente |
 | 7 | Fortalecer estética e pequenas empresas | pendente |
 | 8 | Advocacia (juntar em /marketing-para-advogados/) | pendente |
@@ -83,6 +83,15 @@ arquivo `_redirects` da raiz. Não usar meta refresh.
   (inclui instalação de painéis fotovoltaicos), CNPJ público jun/2026 (328.524 ativas, 17.358
   abertas em 90 dias — código inclui eletricistas em geral, dito na página), LGPD.
 - Sitemap 162 → 164; llms.txt ganhou a seção "## Energia solar" com links.
+
+## Etapa 5 — o que foi feito (prévia local, 04/10/2026)
+- Página nova `/seo-para-youtube/` (servicos_marketing.py). Fontes: "Como funciona a busca do YouTube"
+  (relevância, engajamento, qualidade), ajuda do YouTube (capítulos, transcrição automática, miniatura
+  personalizada) e guia de SEO para vídeo do Google. Sem promessa de inscritos/visualizações.
+- Sobre IA: escrito que buscadores e IAs "dependem muito do texto que acompanha o vídeo" (sem afirmar
+  que "não assistem ao vídeo", por falta de fonte).
+- Menu: `MOSTRAR_YOUTUBE = True` e destino `/seo-para-youtube/` em `rcb_menu.py`; cartão da home com link;
+  "SEO para YouTube" também no rodapé (lista de serviços); llms.txt e sitemap (164 → 165).
 
 ## Decisões anteriores (04/10/2026)
 - Marca oficial "RCB SEO"; dados só em `data/marca.json`.

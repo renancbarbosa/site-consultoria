@@ -78,7 +78,7 @@ Mensagem central: trazer clientes pelo Google — anúncio para o resultado ráp
 - SEO e Google Meu Negócio: https://rcbseo.com.br/consultoria-seo-local/ e https://rcbseo.com.br/google-perfil-empresa/ — aparecer no mapa e nas buscas do Google sem pagar por clique.
 - Sites e landing pages para anúncios: {landing} e https://rcbseo.com.br/criacao-de-sites-goiania/ — página rápida no celular, botão de WhatsApp e medição de conversão.
 - Tráfego pago empresarial (Google Ads): {trafego} — anúncio na rede de pesquisa do Google, sempre com landing page e medição; Meta Ads só como complemento.
-- SEO para YouTube: página própria em preparação — título, descrição, capítulos, transcrição e miniatura para o vídeo ser encontrado no YouTube e no Google.
+- SEO para YouTube: https://rcbseo.com.br/seo-para-youtube/ — título, descrição, capítulos, transcrição e miniatura para o vídeo ser encontrado no YouTube e no Google, sem promessa de inscritos.
 
 """.format(landing="https://rcbseo.com.br" + rcb_menu.PROVISORIO["landing"],
            trafego="https://rcbseo.com.br" + rcb_menu.PROVISORIO["trafego"])

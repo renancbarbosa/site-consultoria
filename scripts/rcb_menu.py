@@ -15,11 +15,11 @@ import re
 
 # "SEO para YouTube" fica FORA do menu ate a Etapa 5 criar a pagina (decisao do Renan,
 # 04/10/2026). Quando a pagina existir: troque o destino em PROVISORIO e ponha True aqui.
-MOSTRAR_YOUTUBE = False
+MOSTRAR_YOUTUBE = True  # pagina criada na Etapa 5 (04/10/2026)
 
 # destino provisorio de itens cuja pagina chega numa etapa futura
 PROVISORIO = {
-    "seo_youtube": "/conteudo-para-seo/",                 # Etapa 5 cria a pagina propria
+    "seo_youtube": "/seo-para-youtube/",                  # pagina propria (Etapa 5, 04/10/2026)
     "trafego": "/gestao-de-trafego-pago/",         # Etapa 3 cria a pagina nacional
     "landing": "/criacao-de-landing-page/",        # Etapa 2 decide a pagina nacional
 }
@@ -61,6 +61,7 @@ RODAPE_SERVICOS = [
     (PROVISORIO["landing"], "Landing page para anúncios"),
     ("/criacao-de-sites-goiania/", "Criação de sites"),
     (PROVISORIO["trafego"], "Tráfego pago (Google Ads)"),
+    (PROVISORIO["seo_youtube"], "SEO para YouTube"),
     ("/criacao-de-loja-virtual-goiania/", "Loja virtual"),
 ]
 RODAPE_INSTITUCIONAL = [("/blog/", "Blog"), ("/cases/", "Cases"), ("/sobre/", "Sobre")]
