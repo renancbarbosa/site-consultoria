@@ -226,6 +226,11 @@ arquivo `_redirects` da raiz. Não usar meta refresh.
   internos do site inteiro (0 quebrados), conferidor só com os 3 avisos antigos; menu Nichos em 1024 e 1366 px dentro da
   tela e clicável; celular 390 px sem estouro nas 6 páginas e menu do celular rolando até o último item.
 
+## Ficha da empresa nas 3 páginas de serviço — resolvido (05/10/2026, `cc0c1673`)
+- Loja virtual, site para contador e site para dentista passaram a ter a ficha completa que o gerador produz
+  (igual ao resto do site: email, founder, CEP). **Não é mais preciso reverter essas 3 páginas** depois de rodar
+  `gerar-servicos-marketing.py` — se elas aparecerem alteradas de novo, é mudança real e precisa ser conferida.
+
 ## Decisões anteriores (04/10/2026)
 - Marca oficial "RCB SEO"; dados só em `data/marca.json`.
 - 168 cidades noindex excluídas; ficam as 31 indexáveis.
