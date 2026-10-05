@@ -209,10 +209,19 @@ for rel in paginas:
         if c.lower() in h.lower():
             problemas.append("%s: contradiz o preco ('%s')" % (rel, c))
 
-# llms.txt
-llms = Path("llms.txt").read_text(encoding="utf-8")
-if PRECO_RCB.search(llms):
-    problemas.append("llms.txt: cita preco da RCB ('%s')" % PRECO_RCB.search(llms).group(0))
+# llms.txt e llms-full.txt (o que as IAs leem). O llms-full.txt ficou de 19/08 a 05/10/2026 com a
+# tabela de precos, a garantia de 30 dias e o "contrato minimo de 3 meses" porque este check so
+# olhava o llms.txt. Agora olha os dois, e tambem garantia e fidelidade.
+PROIBIDO_LLMS = re.compile(r"garantia de (?:satisfa|30 dias)|contrato m[ií]nimo|fidelidade m[ií]nima|"
+                           r"RCB SEO Local|(?-i:RCBSEO)\b", re.I)  # (?-i:) = so maiusculo, nao pega rcbseo.com.br
+for nome_llms in ("llms.txt", "llms-full.txt"):
+    if not Path(nome_llms).exists():
+        continue
+    llms = Path(nome_llms).read_text(encoding="utf-8")
+    if PRECO_RCB.search(llms):
+        problemas.append("%s: cita preco da RCB ('%s')" % (nome_llms, PRECO_RCB.search(llms).group(0)))
+    if PROIBIDO_LLMS.search(llms):
+        problemas.append("%s: cita '%s' (garantia/fidelidade/nome antigo)" % (nome_llms, PROIBIDO_LLMS.search(llms).group(0)))
 
 # CSS minificado em dia?
 # styles.css e a FONTE que se edita; styles.min.css e o que o site serve.

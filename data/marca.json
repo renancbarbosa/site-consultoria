@@ -1,7 +1,7 @@
 {
   "_sobre": "Ficha unica da marca (04/10/2026). Fonte unica de nome, contato, coordenadas e links. Scripts leem por scripts/rcb_marca.py. Sem CNPJ: nao ha legalName nem taxID. Sem preco e sem garantia no site.",
   "nome": "RCB SEO",
-  "nomes_alternativos": ["RCB Consultoria", "RCB SEO Local", "RCBSEO"],
+  "nomes_alternativos": ["RCB Consultoria"],
   "url": "https://rcbseo.com.br/",
   "id_empresa": "https://rcbseo.com.br/#business",
   "id_site": "https://rcbseo.com.br/#website",

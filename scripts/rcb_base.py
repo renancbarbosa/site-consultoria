@@ -207,7 +207,7 @@ NAVBAR = ('  <a class="skip-link" href="#main-content">Pular para o conteúdo pr
           '  <nav class="navbar" id="navbar" role="navigation" aria-label="Menu principal">'
           '<div class="container nav-container">'
           '<a href="/" class="nav-logo" aria-label="Página inicial">'
-          '<span class="logo-text">RCB</span><span class="logo-sub">SEO Local</span></a>'
+          '<span class="logo-text">RCB</span><span class="logo-sub">SEO</span></a>'
           '<button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">'
           '<span></span><span></span><span></span></button>'
           + NAV_MENU + '</div></nav>')
@@ -252,7 +252,7 @@ def rodape(scripts_extra=""):
     return ('  <footer class="footer" role="contentinfo"><div class="container footer-cols">'
             '<div class="footer-col footer-col-identity"><span class="logo-text">RCB</span>'
             '<strong class="footer-name">Renan Carvalho Barbosa</strong>'
-            '<span class="footer-cargo">Consultor de SEO Local e Google Meu Negócio</span>'
+            '<span class="footer-cargo">Consultor de SEO e Google Meu Negócio</span>'
             '<p class="footer-bio">Atendimento presencial em Goiânia e Aparecida de Goiânia. Consultoria estratégica online para clínicas e empresas locais em todo o Brasil.</p></div>'
             '<div class="footer-col"><h3 class="footer-col-title">Serviços</h3><nav class="footer-col-nav"><!--RCB:SITES-FOOTER--><a href="/criacao-de-sites-goiania/">Criação de sites</a><a href="/criacao-de-landing-page/">Landing page</a><a href="/gestao-de-trafego-pago/">Tráfego pago (Google e Meta Ads)</a><a href="/criacao-de-loja-virtual-goiania/">Loja virtual</a><!--/RCB:SITES-FOOTER-->'
             '<a href="/consultoria-seo-local/">Consultoria SEO Local</a>'
