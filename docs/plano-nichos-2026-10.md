@@ -16,7 +16,7 @@
 | 4 | Energia solar (marketing completo) | **publicada** 04/10/2026 (`2e818aea`; página e 2 artigos conferidos no ar; IndexNow aceito) |
 | 5 | SEO para YouTube | **publicada** 04/10/2026 (`328ff9bb`; página, menu, cartão da home e rodapé conferidos no ar; IndexNow aceito) |
 | 6 | Limpeza empresarial | **publicada** 05/10/2026 (`feacb175`; 3 URLs conferidas em 200; IndexNow 4 URLs aceito) |
-| 7 | Fortalecer estética e pequenas empresas | pendente |
+| 7 | Fortalecer estética e pequenas empresas | **publicada** 05/10/2026 (`982b8134`; 9 URLs conferidas em 200 com o conteúdo novo; IndexNow 9 URLs aceito) |
 | 8 | Advocacia (juntar em /marketing-para-advogados/) | pendente |
 | 9a–9d | Serviços de rua: higienização, guincho, reformas, dedetização | pendente |
 | 10 | Hubs "Serviços" e "Nichos que atendemos" | pendente |
@@ -107,6 +107,32 @@ arquivo `_redirects` da raiz. Não usar meta refresh.
 - Conferido: semelhança máx. 38,9% (página principal × energia solar; artigos 15,8% e 24,6%), títulos
   47–59 e descrições 146–157 sem duplicar, fichas válidas (Service com BusinessAudience / BlogPosting +
   BreadcrumbList + FAQPage), lychee 0 erros, conferidor só com os 3 avisos antigos, cidades ok.
+
+## Etapa 7 — o que foi feito (prévia local, 05/10/2026)
+- Script `scripts/etapa7-estetica-pequenas-2026-10-05.py` (idempotente; 2ª execução "alterados: 0").
+  O mapa detalhado da Etapa 0 não estava salvo; foi reconstruído pelo Search Console (linha de base).
+- Títulos de páginas com tráfego NÃO mudaram (/seo-para-clinicas-de-estetica/ 84 impr.,
+  /seo-para-pequenas-empresas/ 136 impr. pos. 15, /para-comercios-locais/ 34 impr.).
+- Retitulado (URL mantida): /blog/como-aparecer-google-clinica-estetica-goiania/ →
+  "Como Atrair Clientes para Clínica de Estética em Goiânia" (fala com a dona). Título antigo trocado
+  também no índice do blog, em 2 artigos que o linkavam e no llms.txt. Saíram a caixa de nota interna
+  ("artigo satélite", "cluster") e 2 promessas de "próximo artigo" que nunca saiu.
+- Estética: corrigida frase falsa ("os dois cases são de estética" — são confeitaria e orquestra);
+  fontes Lei 13.643/2018 e Res. CFM 2.336/2023; público BusinessAudience; autor + data visíveis;
+  FAQ "SEO x anúncio" equilibrada (o site vende anúncio); cartões de landing page e Google Ads.
+- /criacao-de-site-para-clinica-de-estetica/: FAQ sem "em Goiânia", autor/data, público, relacionados
+  com checklist e landing page (via `servicos_nichos.py`; regerar mexe em 4 outras páginas só na ficha
+  da empresa — revertidas por estar fora do escopo).
+- Pequenas empresas: seção nova "SEO, anúncio no Google ou landing page: por onde a pequena empresa
+  começa?" (4 serviços), fonte oficial do Google sobre ranking local, tabela de equilíbrio sem valor
+  de investimento ("cada R$ 1.000"), card "refém do boleto" reescrito, botão duplicado de WhatsApp
+  virou "Ver os pacotes", autor/data e público.
+- CSS: `.cluster-grid-4` (1 / 2x2 / 4 colunas), só nos 2 blocos novos; `styles.min.css` regerado.
+- Conferido: JSON-LD válido, títulos 48–63 e descrições 127–153 sem duplicar, lychee 0 erros,
+  conferidor só com os 3 avisos antigos, celular 390 px e computador 1366 px sem estouro.
+
+- Decisão do Renan (05/10/2026): manter "graduado em Gestão de TI pela FIAP" no site (está se formando).
+  Não perguntar de novo.
 
 ## Decisões anteriores (04/10/2026)
 - Marca oficial "RCB SEO"; dados só em `data/marca.json`.
