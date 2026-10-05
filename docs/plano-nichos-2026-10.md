@@ -14,8 +14,8 @@
 | 2 | Landing page para anúncios (urgente) + modelo demonstrativo | **publicada** 04/10/2026 (`5f0e869`; página, 301 e modelo conferidos no ar; IndexNow 163 URLs aceito) |
 | 3 | Tráfego pago empresarial (reorganizar as 7 páginas) | **publicada** 04/10/2026 (`0e619b73`; principal, 301 e 4 nichos conferidos no ar; IndexNow 163 URLs aceito) |
 | 4 | Energia solar (marketing completo) | **publicada** 04/10/2026 (`2e818aea`; página e 2 artigos conferidos no ar; IndexNow aceito) |
-| 5 | SEO para YouTube | **aguardando "pode publicar"** (prévia local, 04/10/2026) |
-| 6 | Limpeza empresarial | pendente |
+| 5 | SEO para YouTube | **publicada** 04/10/2026 (`328ff9bb`; página, menu, cartão da home e rodapé conferidos no ar; IndexNow aceito) |
+| 6 | Limpeza empresarial | **em andamento** |
 | 7 | Fortalecer estética e pequenas empresas | pendente |
 | 8 | Advocacia (juntar em /marketing-para-advogados/) | pendente |
 | 9a–9d | Serviços de rua: higienização, guincho, reformas, dedetização | pendente |
@@ -98,6 +98,7 @@ arquivo `_redirects` da raiz. Não usar meta refresh.
 - 168 cidades noindex excluídas; ficam as 31 indexáveis.
 - Perfil do Google não será renomeado agora — não lembrar de novo.
 - Fidelidade (decisão do Renan, 04/10/2026, vale para todos os serviços): "Não existe fidelidade. Para cancelar, basta avisar com 30 dias de antecedência. As demais condições vão por escrito junto com o orçamento." Script `scripts/fidelidade-2026-10-04.py`. Nunca mais escrever "compromisso de 3 meses" ou "fidelidade mínima".
+- Etapa 5: o Renan NÃO faz gravação nem edição de vídeo — o serviço é só a parte de ser encontrado (tema, título, descrição, capítulos, transcrição, miniatura). Nunca sugerir produção de vídeo. Vídeo e IA: usar a versão segura ("dependem muito do texto que acompanha o vídeo").
 - Etapa 4: número de CNPJ do CNAE 4321-5/00 aprovado (com a ressalva de que inclui eletricistas); sazonalidade aprovada como observação ("costuma"/"tende a"), nunca como dado medido.
 - Etapa 3: regra do COFECI em imobiliárias aprovada; frase "bacharel em Direito" em advogados aprovada.
 - Etapa 1: menu com "SEO e Google" (aprovado); "SEO para YouTube" fora do menu até a Etapa 5 (`MOSTRAR_YOUTUBE` em `rcb_menu.py`); cartão da home sem link até lá.
