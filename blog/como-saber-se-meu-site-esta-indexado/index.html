@@ -26,7 +26,7 @@
 
   <meta property="og:type" content="article">
   <meta property="og:title" content="Como saber se meu site está indexado no Google? Guia prático">
-  <meta property="og:description" content="Como verificar se o seu site está indexado no Google com o comando site:, o Search Console, sitemap, canonical e noindex — e o que fazer quando há problema.">
+  <meta property="og:description" content="Como verificar se o seu site está indexado no Google com o comando site: o Search Console, sitemap, canonical e noindex, e o que fazer quando há problema.">
   <meta property="og:url" content="https://rcbseo.com.br/blog/como-saber-se-meu-site-esta-indexado/">
   <meta property="og:image" content="https://rcbseo.com.br/assets/img/og-rcb-1200x628.png">
   <meta property="og:image:width" content="1200">
@@ -139,8 +139,8 @@
     "@type": "FAQPage",
     "@id": "https://rcbseo.com.br/blog/como-saber-se-meu-site-esta-indexado/#faq",
     "mainEntity": [
-      { "@type": "Question", "name": "Qual a diferença entre rastreado e indexado?", "acceptedAnswer": { "@type": "Answer", "text": "Rastrear é o Google visitar a página e ler o conteúdo. Indexar é guardar essa página no índice, para que ela possa aparecer nas buscas. Uma página pode ser rastreada e mesmo assim não ser indexada — por exemplo, se o Google a considera de baixa qualidade, duplicada ou se há uma tag noindex. No Search Console, a seção de páginas mostra exatamente em que estágio cada URL está." } },
-      { "@type": "Question", "name": "O comando site: mostra todas as minhas páginas?", "acceptedAnswer": { "@type": "Answer", "text": "O comando site:seudominio.com.br dá uma boa estimativa do que está indexado, mas não é exato nem completo — o número exibido é aproximado. Para um retrato preciso, página por página, use o Google Search Console, que mostra o status real de indexação e o motivo quando uma URL fica de fora." } },
+      { "@type": "Question", "name": "Qual a diferença entre rastreado e indexado?", "acceptedAnswer": { "@type": "Answer", "text": "Rastrear é o Google visitar a página e ler o conteúdo. Indexar é guardar essa página no índice, para que ela possa aparecer nas buscas. Uma página pode ser rastreada e mesmo assim não ser indexada, por exemplo, se o Google a considera de baixa qualidade, duplicada ou se há uma tag noindex. No Search Console, a seção de páginas mostra exatamente em que estágio cada URL está." } },
+      { "@type": "Question", "name": "O comando site: mostra todas as minhas páginas?", "acceptedAnswer": { "@type": "Answer", "text": "O comando site:seudominio.com.br dá uma boa estimativa do que está indexado, mas não é exato nem completo, o número exibido é aproximado. Para um retrato preciso, página por página, use o Google Search Console, que mostra o status real de indexação e o motivo quando uma URL fica de fora." } },
       { "@type": "Question", "name": "Enviar o sitemap garante que o Google vai indexar tudo?", "acceptedAnswer": { "@type": "Answer", "text": "Não. O sitemap ajuda o Google a descobrir as suas páginas mais rápido, mas não obriga a indexação. O Google decide o que indexar com base na qualidade, na relevância e na ausência de bloqueios (como noindex ou canonical apontando para outra página). Sitemap é um convite, não uma garantia." } }
     ]
   }
@@ -193,7 +193,7 @@
 
   <nav class="navbar" id="navbar" role="navigation" aria-label="Menu principal">
     <div class="container nav-container">
-      <a href="/" class="nav-logo" aria-label="Renan Carvalho Barbosa — Página inicial">
+      <a href="/" class="nav-logo" aria-label="Renan Carvalho Barbosa, Página inicial">
         <span class="logo-text">RCB</span>
         <span class="logo-sub">SEO</span>
       </a>
@@ -231,7 +231,7 @@
     <article class="artigo-body">
       <div class="artigo-container">
 
-        <p>Antes de pensar em ranquear, todo site precisa passar por uma etapa invisível: ser <strong>indexado</strong>. Se o Google não guardou as suas páginas no índice dele, elas não aparecem em busca nenhuma — por melhor que seja o conteúdo. Felizmente, verificar se o seu site está indexado é simples e você mesmo consegue fazer. Vou te mostrar como, do jeito mais rápido ao mais completo.</p>
+        <p>Antes de pensar em ranquear (a posição em que o Google mostra a página), todo site precisa passar por uma etapa invisível: ser <strong>indexado</strong>. Se o Google não guardou as suas páginas no índice dele, elas não aparecem em busca nenhuma, por melhor que seja o conteúdo. Felizmente, verificar se o seu site está indexado (quando o Google guarda a página no catálogo dele e passa a poder mostrá-la) é simples e você mesmo consegue fazer. Vou te mostrar como, do jeito mais rápido ao mais completo.</p>
 
         <h2>O que significa um site estar indexado no Google</h2>
 
@@ -243,7 +243,7 @@
 
         <ul>
           <li>Se aparecerem várias páginas, o site está indexado (ainda que possa estar mal posicionado).</li>
-          <li>Se aparecer só a home, talvez só ela esteja indexada — as internas ficaram de fora.</li>
+          <li>Se aparecer só a home, talvez só ela esteja indexada, as internas ficaram de fora.</li>
           <li>Se vier <strong>"nenhum resultado"</strong>, o site não está indexado. Esse é o problema mais grave e mais comum.</li>
         </ul>
 
@@ -256,22 +256,22 @@
         <p>Depois de cadastrar e validar o site, dois recursos resolvem quase tudo:</p>
 
         <ul>
-          <li><strong>Relatório de páginas (indexação):</strong> mostra quantas URLs estão indexadas e quantas não estão — e, principalmente, <em>o motivo</em> de cada exclusão.</li>
+          <li><strong>Relatório de páginas (indexação):</strong> mostra quantas URLs estão indexadas e quantas não estão, e, principalmente, <em>o motivo</em> de cada exclusão.</li>
           <li><strong>Inspeção de URL:</strong> você cola o endereço de uma página e o Google diz se ela está no índice, quando foi rastreada e o que impede, quando é o caso. Dá até para pedir a indexação de uma página específica.</li>
         </ul>
 
         <h3>Descoberta, rastreada e indexada: a diferença</h3>
-        <p>No Search Console, você vai ver esses termos. Vale entender: <strong>descoberta</strong> significa que o Google sabe que a URL existe, mas ainda não rastreou; <strong>rastreada</strong> significa que ele leu, mas decidiu (por ora) não indexar; <strong>indexada</strong> é o estágio final, em que a página pode aparecer nas buscas. Páginas "rastreadas, mas não indexadas" são um sinal de alerta comum — geralmente conteúdo fino, duplicado ou de baixa prioridade.</p>
+        <p>No Search Console (a ferramenta gratuita do Google que mostra como o site aparece nas buscas), você vai ver esses termos. Vale entender: <strong>descoberta</strong> significa que o Google sabe que a URL existe, mas ainda não rastreou; <strong>rastreada</strong> significa que ele leu, mas decidiu (por ora) não indexar; <strong>indexada</strong> é o estágio final, em que a página pode aparecer nas buscas. Páginas "rastreadas, mas não indexadas" são um sinal de alerta comum, geralmente conteúdo fino, duplicado ou de baixa prioridade.</p>
 
         <div class="artigo-cta-box" aria-label="Convite para diagnóstico gratuito">
-          <p>Checou e descobriu que metade do site está fora do índice — mas não entende o porquê? Esse "porquê" é exatamente o trabalho de uma análise técnica.</p>
+          <p>Checou e descobriu que metade do site está fora do índice, mas não entende o porquê? Esse "porquê" é exatamente o trabalho de uma análise técnica.</p>
           <p><a href="/diagnostico-presenca-digital/" class="artigo-link">Solicite um diagnóstico de presença digital gratuito</a> e eu verifico o estado de indexação do seu site e aponto o que está travando, sem compromisso.</p>
         </div>
 
         <h2>O que costuma impedir a indexação</h2>
 
         <h3>Tag noindex</h3>
-        <p>Uma instrução <code>noindex</code> diz ao Google "não indexe esta página". É útil em casos específicos, mas vira problema quando sobra por engano — por exemplo, de quando o site estava em construção. É uma das causas mais frequentes e mais fáceis de corrigir.</p>
+        <p>Uma instrução <code>noindex</code> diz ao Google "não indexe esta página". É útil em casos específicos, mas vira problema quando sobra por engano, por exemplo, de quando o site estava em construção. É uma das causas mais frequentes e mais fáceis de corrigir.</p>
 
         <h3>robots.txt bloqueando</h3>
         <p>O arquivo <code>robots.txt</code> pode impedir o Google de rastrear partes do site. Se ele bloqueia o que não devia, páginas inteiras ficam invisíveis.</p>
@@ -289,7 +289,7 @@
 
         <p>Verificar a indexação e remover um <code>noindex</code> esquecido é algo que qualquer dono atento resolve. Mas quando o Search Console mostra dezenas de páginas excluídas por motivos variados, quando há canibalização ou quando a estrutura técnica é confusa, a coisa exige um olhar especializado. É aí que entra uma <a href="/auditoria-seo/" class="artigo-link">auditoria de SEO</a>: ela mapeia tudo o que impede a indexação e o ranqueamento e entrega um plano de correção priorizado.</p>
 
-        <p>Vale lembrar que indexação é o primeiro degrau. Estar indexado não garante boas posições — para isso, contam conteúdo, estrutura e a qualidade do <a href="/site-otimizado-para-seo/" class="artigo-link">site otimizado para SEO</a>. Se o seu site não aparece mesmo estando (ou devendo estar) indexado, o panorama completo está em <a href="/blog/por-que-meu-site-nao-aparece-no-google/" class="artigo-link">por que meu site não aparece no Google</a>.</p>
+        <p>Vale lembrar que indexação é o primeiro degrau. Estar indexado não garante boas posições, para isso, contam conteúdo, estrutura e a qualidade do <a href="/site-otimizado-para-seo/" class="artigo-link">site otimizado para SEO</a>. Se o seu site não aparece mesmo estando (ou devendo estar) indexado, o panorama completo está em <a href="/blog/por-que-meu-site-nao-aparece-no-google/" class="artigo-link">por que meu site não aparece no Google</a>.</p>
 
         <p>Resumindo: comece pelo comando <code>site:</code> para um diagnóstico de 10 segundos, confirme no Search Console página por página e trate os bloqueios mais comuns. Se a causa não ficar clara, é sinal de que vale uma análise técnica antes de investir em mais conteúdo.</p>
 
@@ -311,11 +311,11 @@
           <div class="artigo-faq-list">
             <div class="artigo-faq-item">
               <h3>Qual a diferença entre rastreado e indexado?</h3>
-              <p>Rastrear é o Google visitar a página e ler o conteúdo. Indexar é guardar essa página no índice, para que ela possa aparecer nas buscas. Uma página pode ser rastreada e mesmo assim não ser indexada — por exemplo, se o Google a considera de baixa qualidade, duplicada ou se há uma tag noindex. No Search Console, a seção de páginas mostra exatamente em que estágio cada URL está.</p>
+              <p>Rastrear é o Google visitar a página e ler o conteúdo. Indexar é guardar essa página no índice, para que ela possa aparecer nas buscas. Uma página pode ser rastreada e mesmo assim não ser indexada, por exemplo, se o Google a considera de baixa qualidade, duplicada ou se há uma tag noindex. No Search Console, a seção de páginas mostra exatamente em que estágio cada URL está.</p>
             </div>
             <div class="artigo-faq-item">
               <h3>O comando site: mostra todas as minhas páginas?</h3>
-              <p>O comando site:seudominio.com.br dá uma boa estimativa do que está indexado, mas não é exato nem completo — o número exibido é aproximado. Para um retrato preciso, página por página, use o Google Search Console, que mostra o status real de indexação e o motivo quando uma URL fica de fora.</p>
+              <p>O comando site:seudominio.com.br dá uma boa estimativa do que está indexado, mas não é exato nem completo, o número exibido é aproximado. Para um retrato preciso, página por página, use o Google Search Console, que mostra o status real de indexação e o motivo quando uma URL fica de fora.</p>
             </div>
             <div class="artigo-faq-item">
               <h3>Enviar o sitemap garante que o Google vai indexar tudo?</h3>
@@ -373,7 +373,7 @@
           <a href="/contato/">Página de contato</a>
           <a href="https://wa.me/5562991161040" target="_blank" rel="noopener noreferrer">WhatsApp: (62) 99116-1040</a>
           <a href="mailto:contato@rcbseo.com.br">contato@rcbseo.com.br</a>
-          <span>Rua 18-A, nº 256 — Goiânia - GO, CEP 74070-060</span>
+          <span>Rua 18-A, nº 256, Goiânia - GO, CEP 74070-060</span>
         </div>
       </div>
     </div>

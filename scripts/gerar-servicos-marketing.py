@@ -33,6 +33,7 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(AQUI, "conteudo"))
 sys.path.insert(0, AQUI)
 import rcb_marca as M  # ficha unica da marca (data/marca.json)
+import rcb_copy  # copy humana (05/10/2026)
 from servicos_marketing import PAGINAS as _GERAIS  # noqa: E402
 from servicos_nichos import PAGINAS as _NICHOS  # noqa: E402  (serviço + nicho, 28/09/2026)
 
@@ -403,7 +404,7 @@ def main():
         assert 'data-page="%s"' % MODELO not in h, p["slug"]  # medicao do GA4 nao pode herdar o modelo
         destino = os.path.join(RAIZ, p["slug"], "index.html")
         os.makedirs(os.path.dirname(destino), exist_ok=True)
-        h = M.texto_html(h)
+        h = rcb_copy.humanizar(M.texto_html(h))
         io.open(destino, "w", encoding="utf-8", newline="\n").write(h)
         miolo = h.split('<main id="main-content">')[1].split("</main>")[0]
         print("ok  /%s/  %d palavras" % (p["slug"], len(re.sub(r"<[^>]+>", " ", miolo).split())))

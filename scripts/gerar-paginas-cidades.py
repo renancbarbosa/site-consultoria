@@ -42,6 +42,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from rcb_pacotes import bloco_cta_mobile, bloco_pacotes
 import rcb_marca as M  # ficha unica da marca (data/marca.json)
 import rcb_menu  # fonte unica do menu e do rodape (Etapa 1, 04/10/2026)
+import rcb_copy  # copy humana (05/10/2026)
 # cidades com trafego no Search Console (04/10/2026): titulo original, sem marca se nao couber
 TITULO_SEM_MARCA = {"joinville"}
 from rcb_cidades import INDEXAVEIS, PILOTO, PRESENCIAL, SLUG_CANONICO, eh_indexavel
@@ -1074,12 +1075,12 @@ def main():
         destino = os.path.join(RAIZ, "consultoria-seo", c["slug"])
         os.makedirs(destino, exist_ok=True)
         with open(os.path.join(destino, "index.html"), "w", encoding="utf-8", newline="\n") as f:
-            f.write(rcb_menu.aplicar(M.texto_html(html)))
+            f.write(rcb_copy.humanizar(rcb_menu.aplicar(M.texto_html(html))))
         urls.append(f"{BASE_URL}/consultoria-seo/{c['slug']}/")
 
     hub = pagina_hub(cidades)
     with open(os.path.join(RAIZ, "consultoria-seo", "index.html"), "w", encoding="utf-8", newline="\n") as f:
-        f.write(rcb_menu.aplicar(M.texto_html(hub)))
+        f.write(rcb_copy.humanizar(rcb_menu.aplicar(M.texto_html(hub))))
 
     atualizar_sitemap(cidades)
 

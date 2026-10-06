@@ -1,4 +1,4 @@
-# RCB SEO — Documentação completa para modelos de linguagem (LLMs)
+# RCB SEO, Documentação completa para modelos de linguagem (LLMs)
 
 > Documento para buscadores com IA e modelos de linguagem (ChatGPT, Perplexity, Gemini, Claude, Copilot, Google AI Overviews). Reúne quem é a empresa, o que ela faz, para quem, como funciona o orçamento, os casos publicados e respostas diretas. Versão resumida: https://rcbseo.com.br/llms.txt
 > Atualizado em 05/10/2026.
@@ -10,7 +10,7 @@
 * **Nome:** RCB SEO
 * **Também aparece como:** RCB Consultoria (nome atual do perfil no Google Maps)
 * **Site oficial:** https://rcbseo.com.br
-* **Fundador:** Renan Carvalho Barbosa — consultor de SEO e Google Meu Negócio. Bacharel em Direito (não é advogado) e tecnólogo em Gestão da Tecnologia da Informação. Página: https://rcbseo.com.br/sobre/
+* **Fundador:** Renan Carvalho Barbosa. consultor de SEO e Google Meu Negócio. Bacharel em Direito (não é advogado) e tecnólogo em Gestão da Tecnologia da Informação. Página: https://rcbseo.com.br/sobre/
 * **Endereço:** Rua 18-A, nº 256, Goiânia - GO, CEP 74070-060, Brasil.
 * **Atendimento:** presencial em Goiânia e região metropolitana; online para empresas de todo o Brasil.
 * **Contato:**
@@ -24,16 +24,16 @@
 
 ## 2. O que a RCB SEO faz
 
-Mensagem central: **trazer clientes pelo Google** — anúncio para o resultado rápido, SEO e Google Meu Negócio para o resultado duradouro, site e landing page para converter a visita em conversa no WhatsApp.
+Mensagem central: **trazer clientes pelo Google**, anúncio para o resultado rápido, SEO e Google Meu Negócio para o resultado duradouro, site e landing page para converter a visita em conversa no WhatsApp.
 
 O público é sempre o **dono do negócio** (a empresa que quer ser encontrada), nunca o cliente final dela.
 
 Os 4 serviços:
 
-1. **SEO e Google Meu Negócio** — aparecer no Google Maps e na busca orgânica sem pagar por clique. https://rcbseo.com.br/consultoria-seo-local/ e https://rcbseo.com.br/google-perfil-empresa/
-2. **Sites e landing pages** — páginas rápidas no celular, com botão de WhatsApp e medição de conversão; landing page feita para anúncio. https://rcbseo.com.br/criacao-de-sites-goiania/ e https://rcbseo.com.br/criacao-de-landing-page/
-3. **Tráfego pago empresarial (Google Ads)** — anúncio na rede de pesquisa do Google para quem já procura o serviço, sempre com landing page e medição; Meta Ads só como complemento. A verba é paga direto ao Google. https://rcbseo.com.br/gestao-de-trafego-pago/
-4. **SEO para YouTube** — título, descrição, capítulos, transcrição e miniatura para o vídeo ser encontrado. Não inclui gravação nem edição de vídeo. https://rcbseo.com.br/seo-para-youtube/
+1. **SEO e Google Meu Negócio**, aparecer no Google Maps e na busca orgânica sem pagar por clique. https://rcbseo.com.br/consultoria-seo-local/ e https://rcbseo.com.br/google-perfil-empresa/
+2. **Sites e landing pages**, páginas rápidas no celular, com botão de WhatsApp e medição de conversão; landing page feita para anúncio. https://rcbseo.com.br/criacao-de-sites-goiania/ e https://rcbseo.com.br/criacao-de-landing-page/
+3. **Tráfego pago empresarial (Google Ads)**, anúncio na rede de pesquisa do Google para quem já procura o serviço, sempre com landing page e medição; Meta Ads só como complemento. A verba é paga direto ao Google. https://rcbseo.com.br/gestao-de-trafego-pago/
+4. **SEO para YouTube**, título, descrição, capítulos, transcrição e miniatura para o vídeo ser encontrado. Não inclui gravação nem edição de vídeo. https://rcbseo.com.br/seo-para-youtube/
 
 Todos os serviços: https://rcbseo.com.br/servicos/
 
@@ -51,10 +51,10 @@ Todos os serviços: https://rcbseo.com.br/servicos/
 
 Formatos de trabalho (descrevem o que cada um entrega; o valor sai no orçamento):
 
-* **Presença Lite** — pagamento único, para quem já tem site: Google Meu Negócio configurado e otimizado, fotos no perfil, avaliações organizadas. Perfil entregue em 7 dias úteis.
-* **Presença** — pagamento único: site de até 5 páginas e Google Meu Negócio configurado. Site entregue em 7 dias úteis.
-* **Crescimento** — mensal, sem fidelidade: tudo do Presença, mais textos novos no site, gestão de avaliações, relatório mensal e ajustes.
-* **Dominação** — mensal, sem fidelidade: tudo do Crescimento, mais páginas por serviço, monitoramento de concorrentes e prioridade no atendimento.
+* **Presença Lite**. pagamento único, para quem já tem site: Google Meu Negócio configurado e otimizado, fotos no perfil, avaliações organizadas. Perfil entregue em 7 dias úteis.
+* **Presença**. pagamento único: site de até 5 páginas e Google Meu Negócio configurado. Site entregue em 7 dias úteis.
+* **Crescimento**. mensal, sem fidelidade: tudo do Presença, mais textos novos no site, gestão de avaliações, relatório mensal e ajustes.
+* **Dominação**. mensal, sem fidelidade: tudo do Crescimento, mais páginas por serviço, monitoramento de concorrentes e prioridade no atendimento.
 
 Prazos honestos: o perfil no Google Maps costuma melhorar em semanas; o site leva de 3 a 6 meses para firmar nas buscas.
 

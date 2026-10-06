@@ -1063,3 +1063,24 @@ Agora `functions/_middleware.js` responde **404 (com noindex)** para `/scripts`,
 e `.gitignore`. O `_routes.json` manda o middleware rodar em **todos** os endereços (`"/*"`): com uma lista de caminhos, endereço disfarçado (`/%43LAUDE.md`, `//CLAUDE.md`) escapava e o arquivo abria. O middleware decodifica e normaliza o caminho antes de comparar.
 **Criou pasta ou arquivo de uso interno na raiz? Acrescente em `PASTAS_INTERNAS`/`ARQUIVOS_INTERNOS` do middleware**, senão ele vai ao ar aberto.
 Nenhuma página do site pode usar arquivo dessas pastas (conferido: nenhuma usa).
+
+## Copy humana e para leigo (05/10/2026)
+
+Pedido do Renan: texto simples, para quem não sabe o que é SEO, e **sem nenhum sinal de texto feito por IA**.
+
+- **Nenhum travessão (— ou –) no texto do site.** Fonte única das regras: `scripts/rcb_copy.py` (`humanizar()`).
+  Ela troca travessão por vírgula, dois-pontos, ponto ou parênteses; tira palavras de IA ("jornada",
+  "essencial", "alavanca", "Além disso"...); troca "lead" por "contato" e "CTA" por "botão de chamada"; e
+  explica o termo técnico **na primeira vez** que aparece no corpo da página, entre parênteses.
+- Os geradores (`rcb_base.escrever`, `gerar-servicos-marketing.py`, `gerar-paginas-cidades.py`) chamam
+  `humanizar()` ao gravar: regerar não traz travessão de volta (testado: regerar não muda nenhum arquivo).
+- Página nova escrita à mão? Rode `python scripts/copy-humana-2026-10-05.py` (idempotente).
+- `conferir-conversao.py` acusa qualquer travessão no texto visível.
+- Frases reescritas à mão (jargão de agência, topo da home, analogia da vitrine para SEO):
+  `scripts/copy-reescrita-2026-10-05.py`.
+- **"SEO" continua nos títulos e H1** (decisão do Renan: é o que o dono digita no Google). A simplificação é
+  no texto de baixo. Título, H1, H2, menu e links não recebem explicação entre parênteses.
+- **`/consultor-seo-goiania/` (protegida): só o travessão foi trocado.** `rcb_copy.PROTEGIDAS` impede
+  explicação e troca de jargão nela.
+- Ao escrever texto novo: frase curta, palavra do dia a dia, e se precisar de termo técnico, explique com
+  uma comparação do mundo real (SEO = vitrine da loja de rua; consultor independente = mecânico de confiança).

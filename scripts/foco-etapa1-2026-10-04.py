@@ -48,19 +48,21 @@ DESC_EMPRESA = ("SEO, Google Meu Negócio, sites e landing pages, gestão de tr�
                 "Atendimento presencial em Goiânia e online em todo o Brasil.")
 
 HERO_ANTIGO = re.compile(r'<p class="hero-headline"><strong>.*?</strong></p>', S)
-HERO_NOVO = ('<p class="hero-headline"><strong>Clientes pelo Google: anúncio para o resultado rápido, '
-             'SEO e Google Meu Negócio para o resultado duradouro, site e landing page para converter.</strong></p>')
+# texto do topo atualizado em 05/10/2026 (copy para leigo, sem jargao): ver scripts/copy-reescrita-2026-10-05.py
+HERO_NOVO = ('<p class="hero-headline"><strong>Eu faço a sua empresa aparecer no Google quando alguém procura o que '
+             'você vende. O anúncio traz cliente já nesta semana. O Google Maps e o site trazem cliente todo mês, '
+             'sem pagar por clique.</strong></p>')
 
 SECAO_NOVA = """<section class="cluster-section" aria-labelledby="servicos-titulo">
       <div class="container">
         <div class="section-header">
           <div class="section-tag">Serviços</div>
           <h2 id="servicos-titulo" class="section-title">Como eu trago clientes pelo Google para a sua empresa?</h2>
-          <p class="section-desc">Cada serviço resolve uma parte do caminho do cliente até o seu WhatsApp. Dá para começar por um só — o orçamento de cada um é grátis e sai em até 24 horas.</p>
+          <p class="section-desc">Cada serviço resolve uma parte do caminho do cliente até o seu WhatsApp. Dá para começar por um só: o orçamento de cada um é grátis e sai em até 24 horas.</p>
         </div>
         <div class="cluster-grid">
-          <a class="cluster-card" href="/consultoria-seo-local/"><h3>SEO e Google Meu Negócio</h3><p>Sua empresa no mapa e nas buscas do Google, trazendo cliente sem pagar por clique. É o resultado que dura.</p></a>
-          <a class="cluster-card" href="{landing}"><h3>Sites e landing pages</h3><p>A página que transforma o clique do anúncio em conversa no WhatsApp, e o site próprio que aparece no Google.</p></a>
+          <a class="cluster-card" href="/consultoria-seo-local/"><h3>SEO e Google Meu Negócio</h3><p>É como ter a vitrine na rua mais movimentada da cidade: sua empresa aparece no mapa e nas buscas do Google, e o cliente chega sem você pagar por clique. É o resultado que dura.</p></a>
+          <a class="cluster-card" href="{landing}"><h3>Sites e landing pages</h3><p>O site da sua empresa, feito para aparecer no Google, e a página de anúncio, que transforma o clique em conversa no WhatsApp.</p></a>
           <a class="cluster-card" href="{trafego}"><h3>Tráfego pago (Google Ads)</h3><p>Anúncio na pesquisa do Google para quem já está procurando o que você vende, com cada contato medido.</p></a>
           {youtube_card}
         </div>

@@ -23,6 +23,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import rcb_marca as M  # ficha unica da marca (data/marca.json)
 import rcb_menu  # fonte unica do menu e do rodape (Etapa 1, 04/10/2026)
+import rcb_copy  # copy humana: sem travessao, sem jargao solto (05/10/2026)
 
 RAIZ = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 BASE_URL = "https://rcbseo.com.br"
@@ -564,6 +565,7 @@ def escrever(caminho_rel, html):
     os.makedirs(os.path.dirname(destino), exist_ok=True)
     html = M.texto_html(html)  # nome antigo da marca nunca volta numa regeracao
     html = rcb_menu.aplicar(html)  # menu e rodape atuais (sem agentes de IA)
+    html = rcb_copy.humanizar(html)  # sem travessao e com o termo tecnico explicado
     with open(destino, "w", encoding="utf-8", newline="\n") as f:
         f.write(html)
     return destino

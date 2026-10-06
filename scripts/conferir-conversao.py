@@ -205,6 +205,11 @@ for rel in paginas:
     for j in JARGAO:
         if j.lower() in visivel.lower():
             problemas.append("%s: jargao '%s'" % (rel, j))
+    # copy humana (05/10/2026): travessao e o sinal mais forte de "texto de IA". Nenhum no texto visivel.
+    # Se aparecer, rode: python scripts/copy-humana-2026-10-05.py
+    trav = re.search(r".{0,40}[—–]|&(?:mdash|ndash);", visivel)
+    if trav:
+        problemas.append("%s: travessao no texto ('%s')" % (rel, trav.group(0).strip()[-40:]))
     for c in CONTRADICAO:
         if c.lower() in h.lower():
             problemas.append("%s: contradiz o preco ('%s')" % (rel, c))
