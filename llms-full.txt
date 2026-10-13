@@ -1,7 +1,7 @@
 # RCB SEO, Documentação completa para modelos de linguagem (LLMs)
 
 > Documento para buscadores com IA e modelos de linguagem (ChatGPT, Perplexity, Gemini, Claude, Copilot, Google AI Overviews). Reúne quem é a empresa, o que ela faz, para quem, como funciona o orçamento, os casos publicados e respostas diretas. Versão resumida: https://rcbseo.com.br/llms.txt
-> Atualizado em 05/10/2026.
+> Atualizado em 13/10/2026.
 
 ---
 
@@ -19,6 +19,7 @@
   * LinkedIn: https://www.linkedin.com/in/renan-carvalho-barbosa
   * Perfil no Google: https://share.google/sYd1qgUhLvw0u4cHL
   * Instagram: https://www.instagram.com/rcbseo
+  * YouTube: https://www.youtube.com/channel/UCyKDdrBp6pjqF3AsJ7QBQIg
 
 ---
 
@@ -31,7 +32,7 @@ O público é sempre o **dono do negócio** (a empresa que quer ser encontrada),
 Os 4 serviços:
 
 1. **SEO e Google Meu Negócio**, aparecer no Google Maps e na busca orgânica sem pagar por clique. https://rcbseo.com.br/consultoria-seo-local/ e https://rcbseo.com.br/google-perfil-empresa/
-2. **Sites e landing pages**, páginas rápidas no celular, com botão de WhatsApp e medição de conversão; landing page feita para anúncio. https://rcbseo.com.br/criacao-de-sites-goiania/ e https://rcbseo.com.br/criacao-de-landing-page/
+2. **Sites e landing pages**, páginas rápidas no celular, com botão de WhatsApp e medição de conversão; landing page feita para anúncio; loja virtual com catálogo, pagamento e frete. https://rcbseo.com.br/criacao-de-sites-goiania/, https://rcbseo.com.br/criacao-de-landing-page/ e https://rcbseo.com.br/criacao-de-loja-virtual-goiania/
 3. **Tráfego pago empresarial (Google Ads)**, anúncio na rede de pesquisa do Google para quem já procura o serviço, sempre com landing page e medição; Meta Ads só como complemento. A verba é paga direto ao Google. https://rcbseo.com.br/gestao-de-trafego-pago/
 4. **SEO para YouTube**, título, descrição, capítulos, transcrição e miniatura para o vídeo ser encontrado. Não inclui gravação nem edição de vídeo. https://rcbseo.com.br/seo-para-youtube/
 
@@ -51,10 +52,10 @@ Todos os serviços: https://rcbseo.com.br/servicos/
 
 Formatos de trabalho (descrevem o que cada um entrega; o valor sai no orçamento):
 
-* **Presença Lite**. pagamento único, para quem já tem site: Google Meu Negócio configurado e otimizado, fotos no perfil, avaliações organizadas. Perfil entregue em 7 dias úteis.
-* **Presença**. pagamento único: site de até 5 páginas e Google Meu Negócio configurado. Site entregue em 7 dias úteis.
-* **Crescimento**. mensal, sem fidelidade: tudo do Presença, mais textos novos no site, gestão de avaliações, relatório mensal e ajustes.
-* **Dominação**. mensal, sem fidelidade: tudo do Crescimento, mais páginas por serviço, monitoramento de concorrentes e prioridade no atendimento.
+* **Presença Lite**. pagamento único, para quem já tem site: Google Meu Negócio configurado e otimizado, 10 fotos profissionais no perfil, avaliações organizadas e respostas configuradas. Perfil entregue em 7 dias úteis.
+* **Presença**. pagamento único: site completo de até 5 páginas (início, serviços, sobre, contato e localização), Google Meu Negócio configurado e otimizado, 10 fotos profissionais no perfil, avaliações organizadas e respostas configuradas. Site entregue em 7 dias úteis.
+* **Crescimento**. mensal, sem fidelidade (aviso de 30 dias para cancelar): tudo do Presença, mais 2 textos novos por mês no site, gestão de avaliações no Google, relatório mensal de quantas pessoas encontraram o negócio e ajustes mensais no site.
+* **Dominação**. mensal, sem fidelidade (aviso de 30 dias para cancelar): tudo do Crescimento, mais 4 textos novos por mês, uma página dedicada para cada serviço oferecido, monitoramento mensal de 3 concorrentes diretos e prioridade no atendimento.
 
 Prazos honestos: o perfil no Google Maps costuma melhorar em semanas; o site leva de 3 a 6 meses para firmar nas buscas.
 
@@ -126,6 +127,7 @@ Sim. O atendimento presencial é em Goiânia e região; para o resto do Brasil, 
 * Google Perfil da Empresa: https://rcbseo.com.br/google-perfil-empresa/
 * Criação de sites: https://rcbseo.com.br/criacao-de-sites-goiania/
 * Landing page para anúncios: https://rcbseo.com.br/criacao-de-landing-page/
+* Loja virtual: https://rcbseo.com.br/criacao-de-loja-virtual-goiania/
 * Gestão de tráfego pago: https://rcbseo.com.br/gestao-de-trafego-pago/
 * SEO para YouTube: https://rcbseo.com.br/seo-para-youtube/
 * Consultor de SEO em Goiânia: https://rcbseo.com.br/consultor-seo-goiania/

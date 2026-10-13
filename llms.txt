@@ -5,6 +5,7 @@ Também aparece como RCB Consultoria (nome atual do perfil no Google Maps).
 > Consultoria de SEO, Google Meu Negócio (Google Business Profile), sites e landing pages, tráfego pago no Google Ads e SEO para YouTube para clínicas, dentistas, estética, médicos, advogados e comércios locais em Goiânia e região, com atendimento online em todo o Brasil. Fundada por Renan Carvalho Barbosa.
 
 ## Sobre
+- Site oficial: https://rcbseo.com.br/
 - Documentação Completa para LLMs: https://rcbseo.com.br/llms-full.txt
 - Fundador: Renan Carvalho Barbosa, consultor de SEO e Google Meu Negócio.
 - Atendimento: presencial em Goiânia e região metropolitana; online no restante do Brasil.
@@ -22,14 +23,20 @@ A RCB não publica preço: cada projeto tem orçamento sob medida, grátis, envi
 - Antes de contratar, a análise do Google e do site do interessado é gratuita e sem compromisso.
 - Prazos honestos: o perfil no Google Maps costuma melhorar em semanas; o site leva de 3 a 6 meses para firmar nas buscas. Não há promessa de primeira posição.
 
+## Casos publicados (com autorização dos clientes)
+- Docevidade Patisserie (Goiânia, confeitaria): 1º lugar no Google Maps para "macarrons Goiânia" com 4 avaliações no perfil, à frente de concorrentes com mais avaliações. Sem Google Ads.
+- Nalu Prado Eventos Musicais: o site novo chegou ao 1º lugar orgânico para "orquestra casamento" com cerca de 30 dias no ar.
+- Detalhes e números: https://rcbseo.com.br/cases/
+
 ## Os 4 serviços
 Mensagem central: trazer clientes pelo Google, anúncio para o resultado rápido, SEO para o resultado duradouro, site e landing page para converter. Público: donos de negócio. Cada projeto tem orçamento individual e grátis pelo WhatsApp em até 24 horas; não há garantia de posição.
 - SEO e Google Meu Negócio: https://rcbseo.com.br/consultoria-seo-local/ e https://rcbseo.com.br/google-perfil-empresa/. aparecer no mapa e nas buscas do Google sem pagar por clique.
 - Sites e landing pages para anúncios: https://rcbseo.com.br/criacao-de-landing-page/ e https://rcbseo.com.br/criacao-de-sites-goiania/. página rápida no celular, botão de WhatsApp e medição de conversão.
 - Tráfego pago empresarial (Google Ads): https://rcbseo.com.br/gestao-de-trafego-pago/. anúncio na rede de pesquisa do Google, sempre com landing page e medição; Meta Ads só como complemento.
-- SEO para YouTube: https://rcbseo.com.br/seo-para-youtube/. título, descrição, capítulos, transcrição e miniatura para o vídeo ser encontrado no YouTube e no Google, sem promessa de inscritos.
+- SEO para YouTube: https://rcbseo.com.br/seo-para-youtube/. título, descrição, capítulos, transcrição e miniatura para o vídeo ser encontrado no YouTube e no Google, sem promessa de inscritos. Não inclui gravação nem edição de vídeo.
 - Todos os serviços (página-índice): https://rcbseo.com.br/servicos/. os 4 serviços e as páginas de cada um, com o que muda entre SEO, anúncio e site.
 - Nichos que atendemos (página-índice): https://rcbseo.com.br/nichos/. todas as páginas de nicho, agrupadas por ramo (saúde, escritórios, serviços no local do cliente, comércio).
+- O que a RCB SEO não oferece: gestão de redes sociais (social media), agentes de IA, automação e recuperação de vendas.
 
 ## Serviços
 - Criação de sites em Goiânia: https://rcbseo.com.br/criacao-de-sites-goiania/. Site próprio feito para aparecer no Google, com orçamento sob medida.
@@ -37,14 +44,26 @@ Mensagem central: trazer clientes pelo Google, anúncio para o resultado rápido
 - Gestão de tráfego pago para empresas (Google Ads): https://rcbseo.com.br/gestao-de-trafego-pago/. Anúncio na rede de pesquisa do Google para quem já procura o serviço, com landing page e medição de conversões; Meta Ads só como complemento; verba paga direto ao Google.
 - Criação de loja virtual: https://rcbseo.com.br/criacao-de-loja-virtual-goiania/. Loja com catálogo, pagamento e frete, e páginas de produto pensadas para o Google.
 - SEO para clínicas: https://rcbseo.com.br/seo-para-clinicas/. SEO local para clínicas e consultórios aparecerem no Google e no Maps.
+  - Tráfego pago para clínicas (Google Ads e Meta Ads dentro das regras do CFM e do CFO): https://rcbseo.com.br/blog/trafego-pago-para-clinicas/
+  - Google Meu Negócio para clínicas, passo a passo: https://rcbseo.com.br/blog/google-meu-negocio-para-clinicas-passo-a-passo/
+  - Como responder avaliações no Google da clínica (sem ferir o sigilo do paciente): https://rcbseo.com.br/blog/como-responder-avaliacoes-google-clinica/
+  - SEO para clínicas vale a pena? Custos e retorno: https://rcbseo.com.br/blog/seo-para-clinicas-vale-a-pena/
+  - SEO local para clínicas: quando surgem resultados: https://rcbseo.com.br/blog/quanto-tempo-leva-seo-local-clinicas/
+  - Por que aparecer no Google vale mais que indicação: https://rcbseo.com.br/blog/seo-para-clinicas-por-que-aparecer-no-google-vale-mais-que-indicacao/
+  - Consultoria de SEO funciona para clínica pequena?: https://rcbseo.com.br/blog/consultoria-seo-funciona-para-clinica-pequena/
 - SEO para dentistas: https://rcbseo.com.br/seo-para-dentistas/. Posicionamento de clínicas odontológicas nas buscas locais.
+  - Criação de site para dentista: https://rcbseo.com.br/criacao-de-site-para-dentista/
+  - Tráfego pago para dentistas (Google Ads dentro das regras do CFO): https://rcbseo.com.br/trafego-pago-para-dentistas/
+  - Como atrair pacientes para consultório odontológico: https://rcbseo.com.br/blog/como-atrair-pacientes-consultorio-odontologico/
 - SEO para clínicas de estética: https://rcbseo.com.br/seo-para-clinicas-de-estetica/. Visibilidade no Google para clínicas e profissionais de estética.
   - Site para clínica de estética: https://rcbseo.com.br/criacao-de-site-para-clinica-de-estetica/
   - Checklist (clínica de estética não aparece no Google): https://rcbseo.com.br/blog/clinica-de-estetica-nao-aparece-no-google/
   - Como atrair clientes para clínica de estética em Goiânia: https://rcbseo.com.br/blog/como-aparecer-google-clinica-estetica-goiania/
 - SEO para médicos: https://rcbseo.com.br/seo-para-medicos/. Presença digital e autoridade para médicos e consultórios.
+  - Como médicos aparecem no Google respeitando o CFM: https://rcbseo.com.br/blog/seo-para-medicos-aparecer-no-google/
 - SEO para clínicas de emagrecimento: https://rcbseo.com.br/seo-para-clinicas-de-emagrecimento/. SEO para clínicas de emagrecimento atraírem pacientes locais.
 - SEO local em Goiânia: https://rcbseo.com.br/seo-local-goiania/. SEO local para negócios que querem ranquear em Goiânia.
+- Consultor de SEO em Goiânia: https://rcbseo.com.br/consultor-seo-goiania/. O consultor independente por trás da RCB SEO: SEO local, Google Meu Negócio e sites para negócios locais.
 - Consultoria de SEO local: https://rcbseo.com.br/consultoria-seo-local/. Consultoria estratégica de SEO local e Google Meu Negócio.
 - Auditoria de SEO: https://rcbseo.com.br/auditoria-seo/. Análise técnica e estratégica de indexação, estrutura, conteúdo e performance para entender por que um site não aparece no Google.
 - Google Perfil da Empresa: https://rcbseo.com.br/google-perfil-empresa/. Otimização do Google Perfil da Empresa (antigo Google Meu Negócio) para aparecer no Google Maps e na busca local.
@@ -55,9 +74,19 @@ Mensagem central: trazer clientes pelo Google, anúncio para o resultado rápido
 - Site para clínica: https://rcbseo.com.br/site-para-clinica/. Sites otimizados e rápidos para clínicas converterem visitas em contatos.
 - Marketing e SEO para advogados: https://rcbseo.com.br/marketing-para-advogados/. Google Meu Negócio, site por área de atuação e Google Ads para escritórios, dentro do Provimento 205/2021 da OAB.
 - SEO para contadores: https://rcbseo.com.br/seo-para-contadores/. Escritórios de contabilidade encontrados por empresas e MEIs no Google.
+  - Criação de site para contador: https://rcbseo.com.br/criacao-de-site-para-contador/
+  - Como conseguir clientes de contabilidade pelo Google: https://rcbseo.com.br/blog/como-conseguir-clientes-de-contabilidade/
+  - Marketing para escritório de contabilidade: https://rcbseo.com.br/blog/marketing-para-escritorio-de-contabilidade/
 - SEO para psicólogos: https://rcbseo.com.br/seo-para-psicologos/. Psicólogos encontrados por pacientes no Google, dentro da ética do CFP.
+  - Psicólogo pode anunciar no Google? O que o CFP permite: https://rcbseo.com.br/blog/psicologo-pode-anunciar-no-google/
+  - Como conseguir pacientes de psicologia pelo Google: https://rcbseo.com.br/blog/como-conseguir-pacientes-de-psicologia/
 - SEO para veterinários e pet shops: https://rcbseo.com.br/seo-para-veterinarios/. Clínicas veterinárias e pet shops visíveis nas buscas de urgência e rotina.
+  - Como atrair clientes para clínica veterinária: https://rcbseo.com.br/blog/como-atrair-clientes-clinica-veterinaria/
+  - Pet shop no Google: como aparecer no Maps do bairro: https://rcbseo.com.br/blog/pet-shop-como-aparecer-no-google/
 - SEO para imobiliárias: https://rcbseo.com.br/seo-para-imobiliarias/. Imobiliárias e corretores gerando leads próprios sem depender só de portais.
+  - Tráfego pago para imobiliárias (Google Ads por bairro, dentro das regras do COFECI): https://rcbseo.com.br/trafego-pago-para-imobiliarias/
+  - Como gerar leads para imobiliária sem os portais: https://rcbseo.com.br/blog/como-gerar-leads-imobiliaria-sem-portais/
+  - Google Meu Negócio para corretor de imóveis: https://rcbseo.com.br/blog/google-meu-negocio-para-corretor-de-imoveis/
 - SEO para pequenas empresas: https://rcbseo.com.br/seo-para-pequenas-empresas/. Como pequenas empresas aparecem no Google e no Maps, e quando vale juntar anúncio e landing page.
   - Vale a pena SEO para pequena empresa?: https://rcbseo.com.br/blog/vale-a-pena-seo-para-pequena-empresa/
   - Guia de SEO para empresas locais: https://rcbseo.com.br/blog/seo-para-empresas-locais/
@@ -111,6 +140,7 @@ Marketing para dedetizadoras e empresas de controle de pragas urbanas (o públic
 - Como conseguir clientes para dedetizadora: https://rcbseo.com.br/blog/como-conseguir-clientes-para-dedetizadora/. cliente avulso, contratos com restaurantes e condomínios e as regras de propaganda da Anvisa.
 
 ## Conteúdo
+- Blog (todos os artigos): https://rcbseo.com.br/blog/
 - Guia de SEO Local (índice editorial): https://rcbseo.com.br/guia-seo-local/. Hub que organiza por tema os principais conteúdos e serviços: aparecer no Google, Google Perfil, site, conteúdo, conversão, diagnóstico, contratação, nichos e acompanhamento.
 - Por que minha empresa não aparece no Google: https://rcbseo.com.br/blog/por-que-minha-empresa-nao-aparece-no-google/. Causas comuns de um negócio local ficar invisível no Google e o que fazer primeiro.
 - Como aparecer no Google Maps: https://rcbseo.com.br/blog/como-aparecer-no-google-maps/. O que decide o ranqueamento no Maps e o passo a passo para aparecer melhor.
@@ -127,6 +157,8 @@ Marketing para dedetizadoras e empresas de controle de pragas urbanas (o públic
 - Como saber se meu site está indexado no Google: https://rcbseo.com.br/blog/como-saber-se-meu-site-esta-indexado/. Comando site:, Search Console, sitemap, canonical e noindex para verificar a indexação.
 - Quanto custa SEO local: https://rcbseo.com.br/blog/quanto-custa-consultoria-seo-local/. Fatores que definem o preço do SEO local e quando o investimento faz sentido.
 - Quanto custa otimizar o Google Meu Negócio: https://rcbseo.com.br/blog/quanto-custa-otimizar-google-meu-negocio/. O que é gratuito, o que entra no serviço profissional, o que muda o valor e como estimar retorno.
+- Quanto custa um site: https://rcbseo.com.br/blog/quanto-custa-um-site/. Faixas de preço de mercado, custos escondidos e como pedir um orçamento justo.
+- Quanto investir em tráfego pago: https://rcbseo.com.br/blog/quanto-investir-em-trafego-pago/. Como calcular a verba do Google Ads e do Meta Ads a partir do valor do cliente, e quanto tempo esperar para julgar.
 - Como receber mais orçamentos pelo WhatsApp usando o site: https://rcbseo.com.br/blog/como-receber-orcamentos-whatsapp-site/. Como transformar o site em gerador de orçamentos: CTAs, botão de WhatsApp, páginas de serviço e confiança.
 - SEO local demora quanto tempo: https://rcbseo.com.br/blog/quanto-tempo-demora-seo-local/. Os fatores que definem o prazo do SEO local, sem promessa de data fixa.
 - Erros que impedem uma empresa local de aparecer no Google: https://rcbseo.com.br/blog/erros-que-impedem-empresa-aparecer-no-google/. Checklist dos erros mais comuns e a correção inicial de cada um.
@@ -143,11 +175,17 @@ Marketing para dedetizadoras e empresas de controle de pragas urbanas (o públic
 - SEO para empresas locais: https://rcbseo.com.br/blog/seo-para-empresas-locais/. Guia amplo de SEO local para comércio, serviços, escritórios e oficinas serem encontrados na própria cidade.
 - SEO para profissionais liberais: https://rcbseo.com.br/blog/seo-para-profissionais-liberais/. Como consultores, arquitetos, fisioterapeutas, psicólogos e advogados constroem autoridade no Google respeitando a ética da profissão.
 - Como escolher uma consultoria de SEO local: https://rcbseo.com.br/blog/como-escolher-consultoria-seo-local/. O que avaliar no fornecedor, quais perguntas fazer e os red flags (como a promessa de primeira página) ao contratar.
+- Como escolher consultoria de SEO em Goiânia: https://rcbseo.com.br/blog/como-escolher-consultoria-seo-goiania/. O que avaliar, sinais de alerta e métricas reais de retorno, com foco em Goiânia.
+- Como saber se um consultor de Google Meu Negócio é bom: https://rcbseo.com.br/blog/como-saber-se-consultor-google-meu-negocio-e-bom/. Perguntas para fazer, o que ele deve entregar e os sinais de alerta.
+- Vale a pena contratar consultor de Google Meu Negócio: https://rcbseo.com.br/blog/vale-a-pena-contratar-consultor-google-meu-negocio/. Quando fazer sozinho, quando contratar e como escolher bem.
+- Consultor de SEO ou agência de marketing: https://rcbseo.com.br/blog/consultor-seo-ou-agencia-de-marketing-digital/. O que faz mais sentido para clínicas, consultórios e negócios locais.
+- Vale a pena contratar consultor de SEO ou fazer sozinho: https://rcbseo.com.br/blog/vale-a-pena-contratar-consultor-de-seo-ou-fazer-sozinho/. Quando contratar e quando dá para fazer sozinho.
+- Consultor de SEO ou fazer sozinho, checklist para decidir: https://rcbseo.com.br/blog/consultor-seo-ou-fazer-sozinho-checklist/. Checklist prático para decidir entre contratar ou cuidar por conta própria.
 - O que analisar antes de contratar alguém para melhorar seu Google: https://rcbseo.com.br/blog/o-que-analisar-antes-de-contratar-seo/. O check que o dono do negócio faz no próprio site, perfil, indexação, avaliações e conversão antes de contratar.
 - Como funciona uma auditoria de SEO na prática: https://rcbseo.com.br/blog/como-funciona-auditoria-seo-na-pratica/. As etapas reais de uma auditoria, do rastreamento e indexação ao plano de ação.
 - Checklist de presença digital para empresas locais: https://rcbseo.com.br/blog/checklist-presenca-digital-empresa-local/. Checklist prático de site, Google Perfil, avaliações, conteúdo, indexação e conversão, como ponte para o diagnóstico.
 - Vale a pena contratar SEO para pequena empresa: https://rcbseo.com.br/blog/vale-a-pena-seo-para-pequena-empresa/. Quando o SEO faz sentido para um pequeno negócio local, conforme a base digital, prazo e investimento.
-- O que é um Diagnóstico de Presença Digital: https://rcbseo.com.br/blog/o-que-e-diagnostico-presenca-digital/. A oferta-âncora explicada: o que é, para quem serve e o que analisa, conduzindo à solicitação do diagnóstico.
+- O que é um Diagnóstico de Presença Digital: https://rcbseo.com.br/blog/o-que-e-diagnostico-presenca-digital/. A análise gratuita feita antes de contratar: o que é, para quem serve e o que analisa.
 - Como saber se sua empresa está perdendo clientes no Google: https://rcbseo.com.br/blog/empresa-perdendo-clientes-no-google/. Os sintomas da perda silenciosa de clientes no Google e como identificá-los.
 - Como saber se o Google Perfil está atrapalhando seus resultados: https://rcbseo.com.br/blog/google-perfil-atrapalhando-resultados/. Como um perfil mal configurado prejudica visibilidade e conversão, e como corrigir.
 - Quais páginas uma empresa local precisa ter no site: https://rcbseo.com.br/blog/paginas-que-empresa-local-precisa-no-site/. A estrutura de páginas que um site de empresa local precisa para ranquear e converter.
@@ -171,6 +209,9 @@ Marketing para dedetizadoras e empresas de controle de pragas urbanas (o públic
 - Instagram: https://www.instagram.com/rcbseo
 - LinkedIn: https://www.linkedin.com/in/renan-carvalho-barbosa
 - Google: https://share.google/sYd1qgUhLvw0u4cHL
+- YouTube: https://www.youtube.com/channel/UCyKDdrBp6pjqF3AsJ7QBQIg
 
 ## Contato
-- Diagnóstico de Presença Digital (análise inicial e gratuita) pelo site e WhatsApp: https://rcbseo.com.br/diagnostico-presenca-digital/
+- Orçamento grátis em até 24 horas pelo WhatsApp: +55 62 99116-1040 (https://wa.me/5562991161040)
+- Página de contato: https://rcbseo.com.br/contato/
+- Análise gratuita do Google e do site antes de contratar (Diagnóstico de Presença Digital): https://rcbseo.com.br/diagnostico-presenca-digital/
