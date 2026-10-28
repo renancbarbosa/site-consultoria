@@ -4211,6 +4211,39 @@ section {
 .feature-card:hover { border-color: rgba(223,192,110,0.35); transform: translateY(-3px); }
 .feature-card h3 { color: var(--gold-light); font-size: 1.05rem; line-height: 1.35; margin-bottom: 0.6rem; }
 .feature-card p { color: var(--text-muted); font-size: 0.93rem; line-height: 1.6; }
+/* /ferramentas/ (28/10/2026): um cartão por ferramenta + caixa "Dica RCB" */
+.ferramentas-lista { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.25rem; max-width: 860px; margin: 2rem auto 0; }
+.ferramenta-card {
+  padding: 1.6rem 1.5rem;
+  background: linear-gradient(158deg, rgba(22,46,76,0.6) 0%, rgba(14,28,48,0.72) 100%);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  scroll-margin-top: 90px;
+}
+.ferramenta-topo { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.7rem; }
+.ferramenta-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2rem; height: 2rem; border-radius: 50%;
+  background: var(--gold); color: #0e1c30; font-weight: 700;
+}
+.ferramenta-dono { color: var(--text-muted); font-size: 0.85rem; }
+.ferramenta-card h2 { color: var(--gold-light); font-size: 1.3rem; line-height: 1.3; margin-bottom: 0.6rem; }
+.ferramenta-card > p { color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem; }
+.dica-rcb {
+  margin-top: 1.2rem;
+  padding: 1rem 1.1rem;
+  border-left: 3px solid var(--gold);
+  background: rgba(223,192,110,0.07);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+.dica-rcb strong { display: block; color: var(--gold-light); font-size: 0.85rem; margin-bottom: 0.3rem; }
+.dica-rcb p { color: var(--text-muted); font-size: 0.93rem; line-height: 1.6; }
+.dica-rcb a { color: var(--gold-light); text-decoration: underline; }
+/* o mesmo bloco no fim dos 4 artigos citados pelas dicas (RCB:FERRAMENTAS) */
+.artigo-body .artigo-ferramentas { margin: 2.5rem 0 0; }
+.artigo-body .artigo-ferramentas h3 { color: var(--gold-light); font-size: 1.1rem; margin: 0 0 0.4rem; }
+.artigo-body .artigo-ferramentas p { margin-bottom: 0; }
 .visual-card-title { color: var(--text-main); font-weight: 700; font-size: 1rem; margin-bottom: 1rem; }
 .visual-list { display: flex; flex-direction: column; gap: 0.75rem; }
 .visual-list li {

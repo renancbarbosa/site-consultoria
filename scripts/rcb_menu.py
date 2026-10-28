@@ -77,7 +77,8 @@ RODAPE_SERVICOS = [
     ("/servicos/", "Todos os serviços"),
     ("/nichos/", "Nichos que atendemos"),
 ]
-RODAPE_INSTITUCIONAL = [("/blog/", "Blog"), ("/cases/", "Cases"), ("/sobre/", "Sobre")]
+RODAPE_INSTITUCIONAL = [("/blog/", "Blog"), ("/cases/", "Cases"), ("/sobre/", "Sobre"),
+                        ("/ferramentas/", "Ferramentas de diagnóstico")]  # 28/10/2026
 
 REMOVIDAS = ("/agentes-de-ia/", "/agente-de-ia-para-clinicas/",
              "/automacao-de-processos/", "/recuperacao-de-vendas-whatsapp/")
