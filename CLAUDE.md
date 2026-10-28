@@ -1106,8 +1106,8 @@ de exemplo. Aceito o que é legítimo:
   `data/benchmark-clinicas.json` (bloqueado ao público; lá estão os nomes reais). O gerador **se recusa a gerar
   sem dados medidos**. Medido com Lighthouse 13.4.1 local (o motor do PageSpeed; a API do PSI estava sem cota),
   celular, 3 testes por site, mediana. 15 medidos + 1 fora (página em branco). Média 56, nenhum verde.
-  `mostrar_nomes: false` troca os nomes por "Clínica A, B..."; virar `true` e regerar mostra os nomes reais
-  (decisão do Renan, em aberto). Afirmações do prompt original que eram falsas e NÃO entraram: "75% WordPress"
+  Desde 28/10 com `mostrar_nomes: true` (nomes reais na tabela e no CSV, sem link para as clínicas; o site em branco não é nomeado). `false` volta a "Clínica A, B..."
+  (decisão do Renan, para mandar a cada clínica o resultado dela pelo WhatsApp). Afirmações do prompt original que eram falsas e NÃO entraram: "75% WordPress"
   (são 7 de 15), "site em HTTP puro feito internamente" (tem cadeado; só não redireciona; tem desenvolvedor
   no rodapé), "3 sites de 2 agências" (são 4) e "perda de conversão de Y%" (inventado). Agências não são
   nomeadas. Links recebidos: `/ferramentas/` (relacionados, no gerador) e `/seo-para-clinicas/` (à mão).

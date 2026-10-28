@@ -36,6 +36,10 @@ SLUG = "blog/velocidade-sites-clinicas-goiania"
 DP = SLUG.replace("/", "-")  # data-page do GA4
 DADOS = os.path.join(S.RAIZ, "data", "benchmark-clinicas.json")
 CSV = "benchmark-dados.csv"
+# Com nomes à mostra, a nota vale para o dia do teste e o dono pode pedir um teste novo.
+AVISO_NOMES = {False: "Nomes trocados por letras.",
+               True: "As notas valem para o dia do teste: o site pode ter mudado depois. "
+                     "É responsável por uma das clínicas e quer um teste novo? Fale comigo no WhatsApp."}
 FONTE_LENTIDAO = "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/page-load-time-statistics/"
 
 
@@ -90,7 +94,7 @@ def pagina(dados):
     h1 = ("Testamos o site de %d clínicas de Goiânia no celular. Nenhum foi rápido." % total
           if c["rapidos"] == 0 else "Testamos o site de %d clínicas de Goiânia no celular" % total)
     p = {
-        "slug": SLUG, "trilha": "Velocidade dos sites de clínicas", "data": dados["data"],
+        "slug": SLUG, "trilha": "Velocidade dos sites de clínicas", "data": dados["data"], "mostrar_nomes": bool(dados.get("mostrar_nomes")),
         "title": M.titulo("Sites de Clínicas em Goiânia: %d Testados no Celular | RCB SEO" % total),
         "desc": ("Testamos %d sites de clínicas de Goiânia no celular: média %d de 100%s. "
                  "Veja a tabela, o que mais pesa e baixe os dados."
@@ -121,6 +125,7 @@ def pagina(dados):
         '<td>%s</td><td>%s</td><td>%s</td></tr>'
         % (e(r["rotulo"]), r["score"], *faixa(r["score"]), e(r["nicho"]), e(r["plataforma"]), e(r["prova"]))
         for r in rs)
+    aviso_nomes = AVISO_NOMES[bool(dados.get("mostrar_nomes"))]
     nota_fora = ""
     if fora:
         nota_fora = (" %s ficou fora da conta: %s." % (
@@ -162,7 +167,7 @@ def pagina(dados):
         <h2 class="section-title">O resultado</h2>
         <div class="bench-tabela-wrap">
           <table class="bench-tabela">
-            <caption>Nota de desempenho no celular, da maior para a menor (%(quando)s). Nomes trocados por letras.</caption>
+            <caption>Nota de desempenho no celular, da maior para a menor (%(quando)s). %(aviso_nomes)s</caption>
             <thead><tr><th scope="col">Clínica</th><th scope="col">Nota no celular</th><th scope="col">Situação</th><th scope="col">Ramo</th><th scope="col">Como o site foi feito</th><th scope="col">Avaliações do Google na página</th></tr></thead>
             <tbody>%(linhas)s
             </tbody>
@@ -191,7 +196,7 @@ def pagina(dados):
         </div>
       </div>
     </section>
-""" % dict(trilha=e(p["trilha"]), quando=quando, h1=e(h1), n=n, total=total, byline=S.autor_data(p),
+""" % dict(trilha=e(p["trilha"]), quando=quando, aviso_nomes=e(aviso_nomes), h1=e(h1), n=n, total=total, byline=S.autor_data(p),
            linhas=linhas, fonte=FONTE_LENTIDAO, dp=DP, csv=CSV, nota_fora=nota_fora, https=https,
            vazio=vazio, agencia=agencia,
            t1=("Nenhum site chegou ao verde" if c["rapidos"] == 0
@@ -218,7 +223,7 @@ def schema(p, rs, h1):
          "description": "Nota de desempenho no celular (0 a 100), tempo até o conteúdo principal aparecer, "
                         "plataforma e presença de avaliações do Google na página inicial de %d sites de clínicas "
                         "de Goiânia, medidos com o Lighthouse (motor do PageSpeed Insights) em %s. "
-                        "Nomes trocados por letras." % (len(rs), br(p["data"])),
+                        "%s" % (len(rs), br(p["data"]), ("Inclui o nome de cada clínica." if p["mostrar_nomes"] else "Nomes trocados por letras.")),
          "url": url, "creator": autor, "license": "https://creativecommons.org/licenses/by/4.0/",
          "isAccessibleForFree": True, "temporalCoverage": p["data"], "inLanguage": "pt-BR",
          "spatialCoverage": {"@type": "Place", "name": "Goiânia, GO, Brasil"},

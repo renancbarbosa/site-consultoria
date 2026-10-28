@@ -1,16 +1,16 @@
-clinica,ramo,plataforma,avaliacoes_google_na_pagina,nota_celular,lcp_segundos,https_automatico,situacao,data_do_teste
-Clínica A,Estética,WordPress,Sim,70,6.3,sim,Razoável,2026-10-28
-Clínica B,Estética,WordPress,Parcial,63,8.9,sim,Razoável,2026-10-28
-Clínica C,Estética,Sob medida,Sim,62,10.5,sim,Razoável,2026-10-28
-Clínica D,Odontologia,Construtor com IA,Sim,61,6.4,sim,Razoável,2026-10-28
-Clínica E,Odontologia,WordPress,Parcial,59,11.0,sim,Razoável,2026-10-28
-Clínica F,Estética,WordPress,Parcial,59,11.1,sim,Razoável,2026-10-28
-Clínica G,Estética,Sob medida,Sim,56,9.4,sim,Razoável,2026-10-28
-Clínica H,Odontologia,WordPress,Não,56,11.0,sim,Razoável,2026-10-28
-Clínica I,Odontologia,WordPress,Não,53,14.6,sim,Razoável,2026-10-28
-Clínica J,Fisioterapia,Sob medida,Parcial,53,3.8,não,Razoável,2026-10-28
-Clínica K,Estética,WordPress,Não,52,14.6,sim,Razoável,2026-10-28
-Clínica L,Odontologia,Plataforma de agência,Parcial,52,18.4,sim,Razoável,2026-10-28
-Clínica M,Odontologia,Plataforma de agência,Parcial,50,6.6,sim,Razoável,2026-10-28
-Clínica N,Outras especialidades,Plataforma de agência,Sim,48,28.3,sim,Lento,2026-10-28
-Clínica O,Estética,Sob medida,Não,43,5.2,sim,Lento,2026-10-28
+clinica,url,ramo,plataforma,avaliacoes_google_na_pagina,nota_celular,lcp_segundos,https_automatico,situacao,data_do_teste
+Estética Excelência,https://esteticaexcelencia.com.br/,Estética,WordPress,Sim,70,6.3,sim,Razoável,2026-10-28
+Morozoff Clinic,https://morozoffclinic.com.br/,Estética,WordPress,Parcial,63,8.9,sim,Razoável,2026-10-28
+Rosany Medeiros Estética,https://www.rosanymedeirosestetica.com.br/,Estética,Sob medida,Sim,62,10.5,sim,Razoável,2026-10-28
+Casa Branca Odontologia,https://casabrancaodontologia.com.br/,Odontologia,Construtor com IA,Sim,61,6.4,sim,Razoável,2026-10-28
+Leonardo Bueno Odontologia,https://leonardobuenoodontologia.com.br/,Odontologia,WordPress,Parcial,59,11.0,sim,Razoável,2026-10-28
+Vitalle Estética Avançada,https://vitalleestetica.com.br/,Estética,WordPress,Parcial,59,11.1,sim,Razoável,2026-10-28
+Angela Spa & Estética,https://www.angelaestetica.com/,Estética,Sob medida,Sim,56,9.4,sim,Razoável,2026-10-28
+MRJ Odonto Center,https://mrjodontocenter.com.br/,Odontologia,WordPress,Não,56,11.0,sim,Razoável,2026-10-28
+Buccal Odontologia,https://buccalodontologia.com.br/,Odontologia,WordPress,Não,53,14.6,sim,Razoável,2026-10-28
+Clínica Físio Vitale,http://fisiovitale.com.br/,Fisioterapia,Sob medida,Parcial,53,3.8,não,Razoável,2026-10-28
+Cléo Camargo Estética,https://cleocamargoestetica.com.br/,Estética,WordPress,Não,52,14.6,sim,Razoável,2026-10-28
+Faccia Odontologia,https://lp.clinicafacciaodonto.com.br/,Odontologia,Plataforma de agência,Parcial,52,18.4,sim,Razoável,2026-10-28
+CGO - Centro Goiano de Odontologia,https://www.centrogoianodeodontologia.com.br/,Odontologia,Plataforma de agência,Parcial,50,6.6,sim,Razoável,2026-10-28
+CLIMT Saúde,https://www.climt.com.br/,Outras especialidades,Plataforma de agência,Sim,48,28.3,sim,Lento,2026-10-28
+Harmony Esthétique,https://harmonyesthetique.com.br/,Estética,Sob medida,Não,43,5.2,sim,Lento,2026-10-28

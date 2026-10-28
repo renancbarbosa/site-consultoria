@@ -1,6 +1,6 @@
 {
   "data": "2026-10-28",
-  "mostrar_nomes": false,
+  "mostrar_nomes": true,
   "metodo": "Lighthouse 13.4.1 (o motor do PageSpeed Insights), celular simulado em 4G lento, 3 testes por site, mediana. A API pública do PageSpeed estava sem cota no dia. Avaliações: conferidas na página inicial aberta no navegador, tela de celular.",
   "fora": [
     {"clinica": "Instituto Naves Queiroz", "url": "https://institutonavesqueiroz.com/", "nicho": "Fisioterapia",
