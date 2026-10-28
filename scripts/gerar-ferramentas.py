@@ -66,6 +66,8 @@ P = {
         ("/criacao-de-sites-goiania/", "Criação de sites", "Site rápido no celular, feito para o cliente achar e chamar."),
         ("/blog/por-que-minha-empresa-nao-aparece-no-google/", "Por que minha empresa não aparece?",
          "Os motivos mais comuns, explicados sem complicação."),
+        ("/blog/velocidade-sites-clinicas-goiania/", "Testamos 16 sites de clínicas",
+         "O resultado do teste de velocidade no celular, com a tabela e os dados."),
     ],
     "cta_final": ("Testou e ficou com dúvida?",
                   "Me mande o print do resultado no WhatsApp. Eu olho com você e digo, com franqueza, o que vale a pena arrumar primeiro."),

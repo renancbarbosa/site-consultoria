@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Kit para sites de clientes (uso interno)</title>
+<!-- Uso interno do Renan (28/10/2026). Fica em docs/, que o site bloqueia (functions/_middleware.js).
+     Para colar nos sites que a RCB SEO entrega. Não é página do rcbseo.com.br. -->
+<style>
+  body { font: 16px/1.6 system-ui, sans-serif; max-width: 820px; margin: 0 auto; padding: 24px 16px; color: #1d2733; background: #fff; }
+  h1 { font-size: 1.5rem; } h2 { font-size: 1.15rem; margin-top: 2.5rem; }
+  pre { background: #f4f6f8; padding: 14px; border-radius: 8px; overflow-x: auto; white-space: pre-wrap; font-size: 0.85rem; }
+  .regra { background: #fff7e6; border-left: 4px solid #e0a63a; padding: 10px 14px; border-radius: 0 8px 8px 0; }
+  .exemplo { border: 1px dashed #c9d2db; padding: 16px; border-radius: 8px; }
+</style>
+</head>
+<body>
+<h1>Kit para sites de clientes</h1>
+<p>Dois blocos para colar nos sites que você entrega. Copie o que está nas caixas cinzas.</p>
+
+<h2>Bloco A: crédito no rodapé</h2>
+<p>Vai no fim do rodapé do site do cliente, numa linha só.</p>
+<pre>&lt;div class="rcb-credit"&gt;Site desenvolvido por &lt;a href="https://rcbseo.com.br/"&gt;RCB SEO&lt;/a&gt;&lt;/div&gt;</pre>
+<pre>&lt;style&gt;
+  .rcb-credit { font-size: 12px; color: #8a8f98; text-align: center; padding: 12px 0; }
+  .rcb-credit a { color: inherit; text-decoration: underline; }
+&lt;/style&gt;</pre>
+<p class="exemplo"><span style="font-size:12px;color:#8a8f98">Site desenvolvido por <a href="https://rcbseo.com.br/" style="color:inherit">RCB SEO</a></span></p>
+<div class="regra">
+  <p><strong>Regras para não virar problema:</strong></p>
+  <ul>
+    <li>Só em site que a RCB fez de verdade, e com o cliente sabendo.</li>
+    <li>O texto do link é sempre o nome da marca, "RCB SEO". Nunca "consultoria de SEO em Goiânia" ou outra palavra de busca: link de rodapé com palavra de busca é o tipo que o Google trata como manipulação.</li>
+    <li>Se o cliente pedir para tirar, tire.</li>
+  </ul>
+</div>
+
+<h2>Bloco B: trecho de case para o blog do cliente</h2>
+<p>Para um post do cliente do tipo "por que mudamos o nosso site". Troque o que está entre colchetes.</p>
+<pre>A decisão de modernizar o nosso site veio depois de uma análise de velocidade. Com a ajuda da &lt;a href="https://rcbseo.com.br/"&gt;RCB SEO&lt;/a&gt;, descobrimos que o site demorava mais do que deveria para abrir no celular. Depois dos ajustes, a nota no PageSpeed Insights do Google subiu de [OLD_SCORE] para [NEW_SCORE].</pre>
+<div class="regra">
+  <p><strong>Antes de usar:</strong></p>
+  <ul>
+    <li>As duas notas têm que ser medidas de verdade, no mesmo site, no modo celular. Guarde o print das duas.</li>
+    <li>O texto sai no site do cliente, com o nome dele: só publique com a autorização dele, por escrito (pode ser no WhatsApp).</li>
+    <li>Não use o mesmo texto em vários clientes. Texto igual em vários sites, todos com link para a RCB, é o padrão que o Google procura. Reescreva com as palavras de cada cliente.</li>
+  </ul>
+</div>
+</body>
+</html>

@@ -4244,6 +4244,28 @@ section {
 .artigo-body .artigo-ferramentas { margin: 2.5rem 0 0; }
 .artigo-body .artigo-ferramentas h3 { color: var(--gold-light); font-size: 1.1rem; margin: 0 0 0.4rem; }
 .artigo-body .artigo-ferramentas p { margin-bottom: 0; }
+/* teste de velocidade das clínicas (gerar-benchmark-clinicas.py) */
+.bench { max-width: 860px; }
+.bench > p { color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem; }
+.bench > p a { color: var(--gold-light); text-decoration: underline; }
+.bench .section-title { margin: 2.5rem 0 1rem; }
+.bench-tabela-wrap { overflow-x: auto; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.08); }
+.bench-tabela { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+.bench-tabela caption { caption-side: bottom; padding: 0.7rem; color: var(--text-muted); font-size: 0.82rem; text-align: left; }
+.bench-tabela th, .bench-tabela td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.bench-tabela th { color: var(--text-main); background: rgba(255,255,255,0.04); font-size: 0.85rem; }
+.bench-tabela td { color: var(--text-muted); }
+.bench-num { font-weight: 700; color: var(--text-main) !important; }
+.bench-tabela td:first-child { white-space: nowrap; color: var(--text-main); }
+.bench > h3 { color: var(--text-main); font-size: 1.1rem; margin: 1.6rem 0 0.6rem; }
+@media (max-width: 640px) {
+  .bench-tabela { font-size: 0.88rem; }
+  .bench-tabela th, .bench-tabela td { padding: 0.6rem 0.7rem; }
+}
+.status-bad { color: #ff7b72; font-weight: 600; }
+.status-mid { color: #f0a94b; font-weight: 600; }
+.status-good { color: #4cc38a; font-weight: 600; }
+.bench-download { margin: 1.2rem 0 0; }
 .visual-card-title { color: var(--text-main); font-weight: 700; font-size: 1rem; margin-bottom: 1rem; }
 .visual-list { display: flex; flex-direction: column; gap: 0.75rem; }
 .visual-list li {

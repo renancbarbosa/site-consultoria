@@ -1,0 +1,16 @@
+clinica,ramo,plataforma,avaliacoes_google_na_pagina,nota_celular,lcp_segundos,https_automatico,situacao,data_do_teste
+Clínica A,Estética,WordPress,Sim,70,6.3,sim,Razoável,2026-10-28
+Clínica B,Estética,WordPress,Parcial,63,8.9,sim,Razoável,2026-10-28
+Clínica C,Estética,Sob medida,Sim,62,10.5,sim,Razoável,2026-10-28
+Clínica D,Odontologia,Construtor com IA,Sim,61,6.4,sim,Razoável,2026-10-28
+Clínica E,Odontologia,WordPress,Parcial,59,11.0,sim,Razoável,2026-10-28
+Clínica F,Estética,WordPress,Parcial,59,11.1,sim,Razoável,2026-10-28
+Clínica G,Estética,Sob medida,Sim,56,9.4,sim,Razoável,2026-10-28
+Clínica H,Odontologia,WordPress,Não,56,11.0,sim,Razoável,2026-10-28
+Clínica I,Odontologia,WordPress,Não,53,14.6,sim,Razoável,2026-10-28
+Clínica J,Fisioterapia,Sob medida,Parcial,53,3.8,não,Razoável,2026-10-28
+Clínica K,Estética,WordPress,Não,52,14.6,sim,Razoável,2026-10-28
+Clínica L,Odontologia,Plataforma de agência,Parcial,52,18.4,sim,Razoável,2026-10-28
+Clínica M,Odontologia,Plataforma de agência,Parcial,50,6.6,sim,Razoável,2026-10-28
+Clínica N,Outras especialidades,Plataforma de agência,Sim,48,28.3,sim,Lento,2026-10-28
+Clínica O,Estética,Sob medida,Não,43,5.2,sim,Lento,2026-10-28

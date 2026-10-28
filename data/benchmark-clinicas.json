@@ -1,0 +1,29 @@
+{
+  "data": "2026-10-28",
+  "mostrar_nomes": false,
+  "metodo": "Lighthouse 13.4.1 (o motor do PageSpeed Insights), celular simulado em 4G lento, 3 testes por site, mediana. A API pública do PageSpeed estava sem cota no dia. Avaliações: conferidas na página inicial aberta no navegador, tela de celular.",
+  "fora": [
+    {"clinica": "Instituto Naves Queiroz", "url": "https://institutonavesqueiroz.com/", "nicho": "Fisioterapia",
+     "motivo": "página em branco no dia do teste (servidor responde, mas não manda conteúdo)"}
+  ],
+  "resultados": [
+    {"clinica": "Casa Branca Odontologia", "url": "https://casabrancaodontologia.com.br/", "nicho": "Odontologia", "plataforma": "Construtor com IA", "prova": "Sim", "https": true, "score": 61, "lcp": 6.4, "notas": [60, 62, 61]},
+    {"clinica": "Leonardo Bueno Odontologia", "url": "https://leonardobuenoodontologia.com.br/", "nicho": "Odontologia", "plataforma": "WordPress", "prova": "Parcial", "https": true, "score": 59, "lcp": 11.0, "notas": [59, 59, 58]},
+    {"clinica": "Buccal Odontologia", "url": "https://buccalodontologia.com.br/", "nicho": "Odontologia", "plataforma": "WordPress", "prova": "Não", "https": true, "score": 53, "lcp": 14.6, "notas": [53, 54, 52]},
+    {"clinica": "Harmony Esthétique", "url": "https://harmonyesthetique.com.br/", "nicho": "Estética", "plataforma": "Sob medida", "prova": "Não", "https": true, "score": 43, "lcp": 5.2, "notas": [43, 43, 44]},
+    {"clinica": "Vitalle Estética Avançada", "url": "https://vitalleestetica.com.br/", "nicho": "Estética", "plataforma": "WordPress", "prova": "Parcial", "https": true, "score": 59, "lcp": 11.1, "notas": [58, 59, 69]},
+    {"clinica": "Angela Spa & Estética", "url": "https://www.angelaestetica.com/", "nicho": "Estética", "plataforma": "Sob medida", "prova": "Sim", "https": true, "score": 56, "lcp": 9.4, "notas": [51, 61, 56]},
+    {"clinica": "Clínica Físio Vitale", "url": "http://fisiovitale.com.br/", "nicho": "Fisioterapia", "plataforma": "Sob medida", "prova": "Parcial", "https": false, "score": 53, "lcp": 3.8, "notas": [50, 53, 56],
+     "obs": "tem cadeado válido, mas quem digita sem https fica na versão sem cadeado (não redireciona)"},
+    {"clinica": "Morozoff Clinic", "url": "https://morozoffclinic.com.br/", "nicho": "Estética", "plataforma": "WordPress", "prova": "Parcial", "https": true, "score": 63, "lcp": 8.9, "notas": [64, 63, 63]},
+    {"clinica": "CLIMT Saúde", "url": "https://www.climt.com.br/", "nicho": "Outras especialidades", "plataforma": "Plataforma de agência", "prova": "Sim", "https": true, "score": 48, "lcp": 28.3, "notas": [48, 56, 44]},
+    {"clinica": "MRJ Odonto Center", "url": "https://mrjodontocenter.com.br/", "nicho": "Odontologia", "plataforma": "WordPress", "prova": "Não", "https": true, "score": 56, "lcp": 11.0, "notas": [56, 56, 54]},
+    {"clinica": "Estética Excelência", "url": "https://esteticaexcelencia.com.br/", "nicho": "Estética", "plataforma": "WordPress", "prova": "Sim", "https": true, "score": 70, "lcp": 6.3, "notas": [66, 70, 70]},
+    {"clinica": "Cléo Camargo Estética", "url": "https://cleocamargoestetica.com.br/", "nicho": "Estética", "plataforma": "WordPress", "prova": "Não", "https": true, "score": 52, "lcp": 14.6, "notas": [52, 52, 53]},
+    {"clinica": "Rosany Medeiros Estética", "url": "https://www.rosanymedeirosestetica.com.br/", "nicho": "Estética", "plataforma": "Sob medida", "prova": "Sim", "https": true, "score": 62, "lcp": 10.5, "notas": [62, 57, 65]},
+    {"clinica": "Faccia Odontologia", "url": "https://lp.clinicafacciaodonto.com.br/", "nicho": "Odontologia", "plataforma": "Plataforma de agência", "prova": "Parcial", "https": true, "score": 52, "lcp": 18.4, "notas": [55, 51, 52],
+     "obs": "quadro de avaliações instalado, mas aparece vazio"},
+    {"clinica": "CGO - Centro Goiano de Odontologia", "url": "https://www.centrogoianodeodontologia.com.br/", "nicho": "Odontologia", "plataforma": "Plataforma de agência", "prova": "Parcial", "https": true, "score": 50, "lcp": 6.6, "notas": [50, 40, 54],
+     "obs": "quadro de avaliações instalado, mas aparece vazio"}
+  ]
+}

@@ -1084,3 +1084,32 @@ Pedido do Renan: texto simples, para quem não sabe o que é SEO, e **sem nenhum
   explicação e troca de jargão nela.
 - Ao escrever texto novo: frase curta, palavra do dia a dia, e se precisar de termo técnico, explique com
   uma comparação do mundo real (SEO = vitrine da loja de rua; consultor independente = mecânico de confiança).
+
+## Rodada de 28/10/2026: /ferramentas/ (publicada — `a5e75a65`) + estrutura do teste de velocidade
+
+O pedido veio de um prompt de "pirâmide de links / N1-N2". Recusado: benchmark com números inventados
+("500 domínios, 73%"), links combinados em sites de clientes para manipular ranking, case com número
+de exemplo. Aceito o que é legítimo:
+
+- **`/ferramentas/`**: 5 ferramentas grátis e oficiais (Perfil da Empresa, PageSpeed, Search Console,
+  Bing Places, teste de pesquisa aprimorada), cada uma com "Dica RCB" para um artigo existente.
+  Gerador: `scripts/gerar-ferramentas.py` (reaproveita `montar()` do `gerar-servicos-marketing.py`; o
+  menu/barra herdam `#orcamento` do modelo e o script troca por `/#pacotes`, padrão do blog).
+- **Rodapé**: "Ferramentas de diagnóstico" entrou em `rcb_menu.RODAPE_INSTITUCIONAL` (linha Blog/Cases/
+  Sobre). Aplicado por `scripts/ligar-ferramentas-2026-10-28.py`, que também põe o bloco
+  `RCB:FERRAMENTAS` ("Quer testar agora?") no fim dos 4 artigos citados pelas dicas e a URL no sitemap
+  (180) e nos dois `llms`. **`/consultor-seo-goiania/` foi pulada de propósito** (protegida). Atenção:
+  rodar `rcb_menu.aplicar()` no site inteiro levaria o link para ela.
+- IndexNow: 179 URLs alteradas e indexáveis, todas conferidas em 200 com o link novo. Aceito.
+- **Teste de velocidade das clínicas** (publicado em 28/10/2026): `/blog/velocidade-sites-clinicas-goiania/`
+  + `/benchmark-dados.csv`, com Article + Dataset. Gerador `scripts/gerar-benchmark-clinicas.py`, dados em
+  `data/benchmark-clinicas.json` (bloqueado ao público; lá estão os nomes reais). O gerador **se recusa a gerar
+  sem dados medidos**. Medido com Lighthouse 13.4.1 local (o motor do PageSpeed; a API do PSI estava sem cota),
+  celular, 3 testes por site, mediana. 15 medidos + 1 fora (página em branco). Média 56, nenhum verde.
+  `mostrar_nomes: false` troca os nomes por "Clínica A, B..."; virar `true` e regerar mostra os nomes reais
+  (decisão do Renan, em aberto). Afirmações do prompt original que eram falsas e NÃO entraram: "75% WordPress"
+  (são 7 de 15), "site em HTTP puro feito internamente" (tem cadeado; só não redireciona; tem desenvolvedor
+  no rodapé), "3 sites de 2 agências" (são 4) e "perda de conversão de Y%" (inventado). Agências não são
+  nomeadas. Links recebidos: `/ferramentas/` (relacionados, no gerador) e `/seo-para-clinicas/` (à mão).
+- **`docs/client-kit.html`**: crédito de rodapé (âncora sempre "RCB SEO") e trecho de case com notas
+  reais e autorização do cliente. Fica em `docs/` porque a raiz é publicada inteira.
