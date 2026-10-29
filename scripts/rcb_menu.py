@@ -35,6 +35,7 @@ SEO_GMN = [
     ("/acompanhamento-seo/", "Acompanhamento de SEO"),
     ("/diagnostico-presenca-digital/", "Diagnóstico de presença digital"),
     ("/consultor-seo-goiania/", "Consultor de SEO em Goiânia"),
+    ("/seo-para-ia/", "SEO para IA (ChatGPT e Gemini)"),  # 5º pilar, 29/10/2026
     ("/servicos/", "Todos os serviços"),  # pagina-indice (Etapa 10, 05/10/2026)
 ]
 SITES = [
@@ -73,6 +74,7 @@ RODAPE_SERVICOS = [
     ("/criacao-de-sites-goiania/", "Criação de sites"),
     (PROVISORIO["trafego"], "Tráfego pago (Google Ads)"),
     (PROVISORIO["seo_youtube"], "SEO para YouTube"),
+    ("/seo-para-ia/", "SEO para IA"),  # 5º pilar, 29/10/2026
     ("/criacao-de-loja-virtual-goiania/", "Loja virtual"),
     ("/servicos/", "Todos os serviços"),
     ("/nichos/", "Nichos que atendemos"),

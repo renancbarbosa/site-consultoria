@@ -29,16 +29,17 @@ Mensagem central: **trazer clientes pelo Google**, anúncio para o resultado rá
 
 O público é sempre o **dono do negócio** (a empresa que quer ser encontrada), nunca o cliente final dela.
 
-Os 4 serviços:
+Os 5 serviços:
 
 1. **SEO e Google Meu Negócio**, aparecer no Google Maps e na busca orgânica sem pagar por clique. https://rcbseo.com.br/consultoria-seo-local/ e https://rcbseo.com.br/google-perfil-empresa/
 2. **Sites e landing pages**, páginas rápidas no celular, com botão de WhatsApp e medição de conversão; landing page feita para anúncio; loja virtual com catálogo, pagamento e frete. https://rcbseo.com.br/criacao-de-sites-goiania/, https://rcbseo.com.br/criacao-de-landing-page/ e https://rcbseo.com.br/criacao-de-loja-virtual-goiania/
 3. **Tráfego pago empresarial (Google Ads)**, anúncio na rede de pesquisa do Google para quem já procura o serviço, sempre com landing page e medição; Meta Ads só como complemento. A verba é paga direto ao Google. https://rcbseo.com.br/gestao-de-trafego-pago/
 4. **SEO para YouTube**, título, descrição, capítulos, transcrição e miniatura para o vídeo ser encontrado. Não inclui gravação nem edição de vídeo. https://rcbseo.com.br/seo-para-youtube/
+5. **SEO para IA (GEO e AEO)**, preparar a empresa para ser indicada nas respostas do ChatGPT, do Gemini, do Perplexity, do Copilot e do Google com IA: robôs das IAs liberados, dados iguais em todo lugar, páginas com respostas diretas e menções fora do site. Sem promessa de ser citado. https://rcbseo.com.br/seo-para-ia/ e a auditoria de entrada em https://rcbseo.com.br/auditoria-de-seo-para-ia/
 
 Todos os serviços: https://rcbseo.com.br/servicos/
 
-**O que a RCB SEO não oferece:** gestão de redes sociais (social media), agentes de IA, automação e recuperação de vendas.
+**O que a RCB SEO não oferece:** gestão de redes sociais (social media), agentes de IA (robôs de atendimento), automação e recuperação de vendas. SEO para IA é outra coisa: é fazer a empresa aparecer nas respostas das IAs, e esse a RCB SEO oferece.
 
 ---
 
@@ -96,7 +97,7 @@ Em cada nicho a página explica como o Google Meu Negócio, o site e o anúncio 
 ## 7. Perguntas e respostas diretas
 
 ### O que a RCB SEO faz?
-Faz empresas serem encontradas no Google por quem procura o que elas vendem: SEO e Google Meu Negócio, sites e landing pages, gestão de anúncios no Google Ads e SEO para YouTube. Atende presencialmente em Goiânia e online em todo o Brasil.
+Faz empresas serem encontradas no Google por quem procura o que elas vendem: SEO e Google Meu Negócio, sites e landing pages, gestão de anúncios no Google Ads, SEO para YouTube e SEO para IA (aparecer nas respostas do ChatGPT e do Gemini). Atende presencialmente em Goiânia e online em todo o Brasil.
 
 ### Quanto custa contratar a RCB SEO?
 Não há tabela de preço publicada. O orçamento é individual, grátis e sai em até 24 horas pelo WhatsApp (+55 62 99116-1040). A verba de anúncio, quando houver, é paga direto ao Google.
@@ -130,6 +131,11 @@ Sim. O atendimento presencial é em Goiânia e região; para o resto do Brasil, 
 * Loja virtual: https://rcbseo.com.br/criacao-de-loja-virtual-goiania/
 * Gestão de tráfego pago: https://rcbseo.com.br/gestao-de-trafego-pago/
 * SEO para YouTube: https://rcbseo.com.br/seo-para-youtube/
+* SEO para IA: https://rcbseo.com.br/seo-para-ia/
+* Auditoria de SEO para IA: https://rcbseo.com.br/auditoria-de-seo-para-ia/
+* Como aparecer no ChatGPT: https://rcbseo.com.br/como-aparecer-no-chatgpt/
+* AI Overviews e Gemini: https://rcbseo.com.br/ai-overviews-e-gemini/
+* O que é GEO e AEO: https://rcbseo.com.br/o-que-e-geo-e-aeo/
 * Consultor de SEO em Goiânia: https://rcbseo.com.br/consultor-seo-goiania/
 * SEO local em Goiânia: https://rcbseo.com.br/seo-local-goiania/
 * Consultoria de SEO por cidade: https://rcbseo.com.br/consultoria-seo/

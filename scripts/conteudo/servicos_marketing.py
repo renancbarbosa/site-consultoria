@@ -910,6 +910,9 @@ PAGINAS = [
                     "acompanha o vídeo — título, descrição, capítulos e transcrição — para entender o assunto e decidir "
                     "quando mostrar ou citar aquele conteúdo. Um vídeo excelente com texto pobre é um vídeo difícil de "
                     "encontrar. Por isso a transcrição revisada e a descrição bem escrita valem tanto quanto a gravação.",
+                    # RCB:PILAR-IA (29/10/2026): mesma frase que scripts/ligar-seo-para-ia-2026-10-29.py poe no HTML
+                    "Se você quer que a empresa inteira, e não só o vídeo, apareça nas respostas do ChatGPT e do "
+                    "Gemini, veja o <a href=\"/seo-para-ia/\">SEO para IA</a>.",
                 ],
             }),
             ("texto", {
@@ -1985,12 +1988,13 @@ PAGINAS = [
         "cta_hero": "Pedir orçamento grátis",
         "msg": "Olá, Renan! Quero entender qual serviço faz mais sentido para a minha empresa.",
         "pills": ["Orçamento em até 24h", "Sem fidelidade", "Prazo por escrito"],
-        "painel_h2": "Os 4 serviços",
+        "painel_h2": "Os 5 serviços",
         "painel": [
             "SEO e Google Meu Negócio.",
             "Sites e landing pages.",
             "Tráfego pago no Google Ads.",
             "SEO para YouTube.",
+            "SEO para IA (ChatGPT e Gemini).",  # 5º pilar, 29/10/2026
         ],
         "faq_titulo": "Perguntas frequentes sobre os serviços",
         "secoes": [
@@ -2006,6 +2010,10 @@ PAGINAS = [
                     "dependência do anúncio com o tempo e o site transforma a visita em conversa. No orçamento eu te "
                     "digo por onde começar no seu caso. Se preferir ver por ramo de negócio, veja os "
                     "<a href=\"/nichos/\">nichos que atendemos</a>.",
+                    # RCB:PILAR-IA (29/10/2026)
+                    "Se o seu cliente já pergunta ao ChatGPT ou ao Gemini quem indicar, entra o "
+                    "<a href=\"/seo-para-ia/\">SEO para IA</a>. Ele usa a mesma base do SEO e do Google Meu "
+                    "Negócio, então costuma vir junto com eles ou logo depois.",
                 ],
             }),
             ("cards", {
@@ -2059,6 +2067,24 @@ PAGINAS = [
                      "/trafego-pago-para-imobiliarias/"),
                     ("SEO para YouTube", "Título, descrição, capítulos e transcrição para o vídeo ser encontrado.",
                      "/seo-para-youtube/"),
+                ],
+            }),
+            # 5º pilar (29/10/2026): mesmo componente dos outros 4 grupos
+            ("cards", {
+                "tag": "SEO para IA",
+                "titulo": "Como aparecer nas respostas do ChatGPT, do Gemini e do Google com IA?",
+                "desc": "Para quando o seu cliente pergunta à inteligência artificial quem indicar.",
+                "itens": [
+                    ("SEO para IA", "O serviço completo: deixar a empresa fácil de achar, entender e indicar pelas IAs.",
+                     "/seo-para-ia/"),
+                    ("Auditoria de SEO para IA", "O que o ChatGPT e o Gemini dizem hoje sobre o seu ramo, e o que "
+                     "arrumar primeiro.", "/auditoria-de-seo-para-ia/"),
+                    ("Como aparecer no ChatGPT", "Por que não existe cadastro e o que o ChatGPT lê para indicar uma "
+                     "empresa.", "/como-aparecer-no-chatgpt/"),
+                    ("AI Overviews e Gemini", "Como a empresa entra na resposta de IA do próprio Google.",
+                     "/ai-overviews-e-gemini/"),
+                    ("O que é GEO e AEO", "Os nomes novos do SEO para IA, explicados sem complicação.",
+                     "/o-que-e-geo-e-aeo/"),
                 ],
             }),
             ("orcamento", {

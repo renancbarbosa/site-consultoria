@@ -164,7 +164,8 @@ def sem_jargao(t):
 
 # ------------------------------------------------------------------ 4. explicacao do termo (1a vez)
 GLOSSARIO = [
-    ("seo", re.compile(r"(?<!RCB )\bSEO(?: [Ll]ocal)?\b"),
+    # "SEO para IA" e nome de servico (28/10/2026): explicar o "SEO" ali partia o nome ao meio
+    ("seo", re.compile(r"(?<!RCB )\bSEO(?: [Ll]ocal)?\b(?! para IA)"),
      "o trabalho de fazer o Google mostrar a sua empresa de graça para quem procura o que você vende"),
     ("gmn", re.compile(r"\bGoogle (?:Meu Negócio|Perfil da Empresa)\b"),
      "a ficha da sua empresa no Google Maps, com endereço, horário, fotos e avaliações"),
