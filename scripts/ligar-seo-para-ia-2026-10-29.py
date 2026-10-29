@@ -116,7 +116,7 @@ def sobre(h):
 
 LLMS = ("- SEO para IA (ChatGPT, Gemini e Google com IA): https://rcbseo.com.br/seo-para-ia/. preparar a empresa "
         "para ser indicada nas respostas escritas por inteligência artificial (também chamado de GEO e AEO): robôs "
-        "das IAs liberados, dados iguais no site, no Perfil da Empresa no Google e no Bing Places, páginas com "
+        "das IAs liberados, dados iguais no site, no Perfil da Empresa no Google e nos outros mapas e cadastros, páginas com "
         "respostas diretas e menções fora do site. Sem promessa de ser citado. Auditoria de entrada: "
         "https://rcbseo.com.br/auditoria-de-seo-para-ia/. Guias: https://rcbseo.com.br/como-aparecer-no-chatgpt/, "
         "https://rcbseo.com.br/ai-overviews-e-gemini/ e https://rcbseo.com.br/o-que-e-geo-e-aeo/.\n")

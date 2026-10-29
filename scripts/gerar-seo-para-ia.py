@@ -13,6 +13,8 @@ celular e cookies da página viva /criacao-de-sites-goiania/). Este script só a
   * schema Article nos satélites ("tipo": "artigo") e Service nas páginas comerciais
   * as URLs no sitemap.xml (insere se faltar; atualiza o lastmod se já existir)
 
+  * seção "ajuda": caixa no meio do texto com botão do WhatsApp
+
 Regras: SEM PREÇO da RCB; sem selo "Mais pedido"; nenhum resultado prometido.
 Idempotente: rodar duas vezes seguidas não muda nada na segunda.
 """
@@ -134,10 +136,31 @@ def s_relacionados(p):
 """ % (e(p["relacionados_titulo"]), cards)
 
 
+def s_ajuda(d, slug, n):
+    """Caixa no meio do texto chamando para o WhatsApp (data-location ajuda_1, ajuda_2...)."""
+    return """
+    <section class="solution-section alt-bg">
+      <div class="container">
+        <div class="split-copy" style="max-width:760px;margin:0 auto;text-align:center">
+          <h2 class="section-title">%s</h2>
+          <p>%s</p>
+          <div class="page-actions" style="justify-content:center;margin-top:1.5rem">
+            %s
+          </div>
+        </div>
+      </div>
+    </section>
+""" % (e(d["titulo"]), d["texto"],
+       cta(wa(d["msg"]), e(d.get("botao", "Falar no WhatsApp")), "ajuda_%d" % n, slug, "btn btn-whatsapp btn-lg"))
+
+
 def corpo(p):
-    slug, partes, alt = p["slug"], [s_hero(p)], False
+    slug, partes, alt, n_ajuda = p["slug"], [s_hero(p)], False, 0
     for tipo, d in p["secoes"]:
-        if tipo == "tabela":
+        if tipo == "ajuda":
+            n_ajuda += 1
+            partes.append(s_ajuda(d, slug, n_ajuda))
+        elif tipo == "tabela":
             partes.append(s_tabela(d))
         elif tipo == "fontes":
             partes.append(s_fontes(d))

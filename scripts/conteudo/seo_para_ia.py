@@ -17,6 +17,10 @@ Regras (não afrouxar):
     "Mais pedido" nos cartões de orçamento.
   * Fato técnico só com fonte oficial linkada (OpenAI, Google, Anthropic, Perplexity, Microsoft).
   * Toda página fala de RESPOSTA DE IA; quando encosta em SEO comum, linka a página que já existe.
+  * Explica O QUÊ e POR QUÊ, nunca o COMO (decisão do Renan, 29/10/2026): o leigo entende, mas não
+    sai fazendo sozinho. Fora do texto visível: nome de robô (OAI-SearchBot, GPTBot...), robots.txt,
+    Disallow, Bing Places e Bing Webmaster ("outros mapas e cadastros que as IAs consultam").
+    Passo a passo virou "o que precisa estar certo" + caixa "ajuda" chamando para o WhatsApp.
 
 O texto é escrito à mão aqui; o gerador (scripts/gerar-seo-para-ia.py) só monta o invólucro.
 Tipos de seção: os do gerar-servicos-marketing.py + "tabela" e "fontes".
@@ -36,14 +40,12 @@ ANTHROPIC_BOTS = ("https://support.claude.com/en/articles/8896518-does-anthropic
                   "and-how-can-site-owners-block-the-crawler")
 PERPLEXITY_BOTS = "https://docs.perplexity.ai/docs/resources/perplexity-crawlers"
 PAPER_GEO = "https://arxiv.org/abs/2311.09735"
-BING_PLACES = "https://www.bingplaces.com/"
-BING_WEBMASTER = "https://www.bing.com/webmasters"
 
 FONTES_BASE = [
-    ("OpenAI: robôs da OpenAI (OAI-SearchBot, GPTBot, ChatGPT-User)", OPENAI_BOTS),
+    ("OpenAI: como o ChatGPT visita e lê os sites", OPENAI_BOTS),
     ("Google Search Central: recursos de IA e o seu site", GOOGLE_IA),
-    ("Anthropic: como funcionam os robôs do Claude", ANTHROPIC_BOTS),
-    ("Perplexity: robôs do Perplexity", PERPLEXITY_BOTS),
+    ("Anthropic: como o Claude visita e lê os sites", ANTHROPIC_BOTS),
+    ("Perplexity: como o Perplexity visita e lê os sites", PERPLEXITY_BOTS),
 ]
 
 PILAR = "/seo-para-ia/"
@@ -138,7 +140,7 @@ PAGINAS = [
                     "Perfil no Google pela metade.",
                     "Nome e telefone diferentes em cada lugar.",
                     "Ninguém fala da empresa fora do site dela.",
-                    "Robô da IA bloqueado no site.",
+                    "Site com a porta fechada para as IAs, sem o dono saber.",
                 ],
             }),
             ("cards", {
@@ -150,15 +152,16 @@ PAGINAS = [
                      "Eu faço ao ChatGPT, ao Gemini, ao Perplexity e ao Copilot as perguntas que o seu cliente "
                      "faria, e anoto quem aparece, quem não aparece e de onde a IA tirou a informação. Esse é o "
                      "começo da <a href=\"/auditoria-de-seo-para-ia/\">auditoria de SEO para IA</a>."),
-                    ("2. Robôs liberados",
-                     "Confiro se o seu site deixa entrar os robôs das IAs. A OpenAI, por exemplo, explica que o "
-                     + _A % (OPENAI_BOTS, "robô OAI-SearchBot") + " é o que leva os sites para a busca do ChatGPT. "
-                     "Se ele estiver bloqueado, o site some dessa busca."),
+                    ("2. Porta aberta para as IAs",
+                     "Cada IA usa programas próprios para visitar e ler os sites, e muitos sites barram alguns "
+                     "deles por uma configuração antiga, sem o dono saber. A "
+                     + _A % (OPENAI_BOTS, "própria OpenAI explica") + " que site com a porta fechada fica fora "
+                     "da busca do ChatGPT. Eu confiro e deixo aberta só a porta certa."),
                     ("3. Dados iguais em todo lugar",
                      "Nome, endereço, telefone, horário e serviços iguais no site, no "
-                     "<a href=\"/google-perfil-empresa/\">Perfil da Empresa no Google</a>, no "
-                     + _A % (BING_PLACES, "Bing Places") + " e nas redes. Dado desencontrado deixa a IA em dúvida, "
-                     "e IA em dúvida não indica."),
+                     "<a href=\"/google-perfil-empresa/\">Perfil da Empresa no Google</a>, nos outros mapas e "
+                     "cadastros que as IAs consultam e nas redes. Dado desencontrado deixa a IA em dúvida, e IA em "
+                     "dúvida não indica."),
                     ("4. Site que responde",
                      "Páginas que respondem, logo na primeira frase, as perguntas reais do seu cliente: o que você "
                      "faz, quanto tempo leva, onde atende, como funciona. É o formato que a IA consegue copiar e citar."),
@@ -167,6 +170,15 @@ PAGINAS = [
                      "reais. Quanto mais lugares confiáveis confirmam que a sua empresa existe e é boa no que faz, "
                      "mais segura a IA fica para citar você."),
                 ],
+            }),
+            ("ajuda", {
+                "titulo": "Parece muita coisa? É mesmo.",
+                "texto": "Cada uma dessas cinco frentes tem detalhes que fazem diferença. Um erro pequeno, como "
+                         "um telefone antigo num cadastro esquecido, já basta para a IA deixar a sua empresa de "
+                         "fora. Me chama no WhatsApp: eu olho a sua empresa e te digo o que está faltando, sem "
+                         "compromisso.",
+                "msg": "Olá, Renan! Li sobre SEO para IA e quero que você olhe o que falta na minha empresa.",
+                "botao": "Quero que você olhe a minha empresa",
             }),
             ("texto", {
                 "tag": "ChatGPT, Gemini, Perplexity e Copilot",
@@ -178,11 +190,11 @@ PAGINAS = [
                     "O <strong>Gemini</strong> e as respostas de IA do Google usam o índice do próprio Google, "
                     "então um site que já aparece bem no Google sai na frente (veja "
                     "<a href=\"/ai-overviews-e-gemini/\">AI Overviews e Gemini</a>).",
-                    "O <strong>Perplexity</strong> mostra as fontes numeradas em cada resposta e tem o próprio robô, "
-                    "o " + _A % (PERPLEXITY_BOTS, "PerplexityBot") + ". O <strong>Copilot</strong>, da Microsoft, "
-                    "se apoia no Bing: por isso o perfil no " + _A % (BING_PLACES, "Bing Places") + " e o "
-                    + _A % (BING_WEBMASTER, "Bing Webmaster Tools") + " entram no trabalho, coisa que quase "
-                    "ninguém faz no Brasil.",
+                    "O <strong>Perplexity</strong> mostra as fontes numeradas em cada resposta e visita os sites "
+                    "com programas próprios. O <strong>Copilot</strong>, da Microsoft, não usa a mesma base do "
+                    "Google: ele consulta outros mapas e cadastros, onde quase nenhuma empresa brasileira está. "
+                    "É a parte do trabalho que quase ninguém faz no Brasil, e onde muita empresa fica de fora "
+                    "sem saber.",
                 ],
             }),
             ("texto", {
@@ -252,11 +264,11 @@ PAGINAS = [
                 "itens": [
                     ("Auditoria de SEO para IA", "Para saber o que a IA diz hoje sobre o seu ramo.",
                      ["Perguntas reais nas 4 IAs e no Google", "Quem aparece e de onde veio",
-                      "Lista do que arrumar primeiro"],
+                      "Pronta em 1 a 3 dias úteis"],
                      "Olá, Renan! Quero a auditoria de SEO para IA da minha empresa.", "Pedir orçamento"),
                     ("Preparar a empresa para a IA", "Para quem quer arrumar a casa de uma vez.",
-                     ["Auditoria incluída", "Site, Perfil no Google e Bing Places",
-                      "Robôs liberados e dados iguais"],
+                     ["Auditoria incluída", "Site, Perfil no Google e outros cadastros",
+                      "Porta aberta para as IAs e dados iguais"],
                      "Olá, Renan! Quero preparar a minha empresa para aparecer nas respostas da IA.",
                      "Pedir orçamento"),
                     ("Acompanhamento mensal", "Para quem quer ver a evolução todo mês.",
@@ -284,8 +296,8 @@ PAGINAS = [
         "faq": [
             ("Dá para cadastrar a minha empresa no ChatGPT?",
              "Não. O ChatGPT não tem cadastro de empresas, como o Google tem o Perfil da Empresa. Ele indica quem "
-             "consegue confirmar em fontes públicas: site, Perfil no Google, Bing, diretórios, avaliações e "
-             "notícias. Por isso o trabalho é deixar essas fontes completas e iguais entre si."),
+             "consegue confirmar em fontes públicas: site, Perfil no Google, outros mapas e cadastros, diretórios, "
+             "avaliações e notícias. Por isso o trabalho é deixar essas fontes completas e iguais entre si."),
             ("SEO para IA substitui o SEO normal?",
              "Não substitui, depende dele. As respostas de IA do Google usam o índice do próprio Google, e o "
              "ChatGPT também busca páginas na internet. Uma empresa que não aparece na busca comum dificilmente "
@@ -326,14 +338,14 @@ PAGINAS = [
         "data": DATA,
         "title": "Como Aparecer no ChatGPT: Guia para Empresas | RCB SEO",
         "desc": ("Como aparecer no ChatGPT: não existe cadastro. Veja o que o ChatGPT lê para indicar uma "
-                 "empresa e o que fazer no site e nos perfis para entrar na resposta."),
+                 "empresa e as 6 coisas que precisam estar certas para entrar na resposta."),
         "trilha": "Como aparecer no ChatGPT",
         "servico": "SEO para IA",
         "eyebrow": "Guia para donos de negócio",
         "h1": "Como aparecer no ChatGPT: o guia para a sua empresa ser indicada",
         "sub": ("Para aparecer no ChatGPT, a sua empresa precisa estar descrita com clareza em fontes que ele "
-                "consegue ler: o seu site, o Perfil no Google, o Bing, diretórios e avaliações. Não existe "
-                "cadastro nem botão de “colocar minha empresa no ChatGPT”."),
+                "consegue ler: o seu site, o Perfil no Google, outros mapas e cadastros, diretórios e "
+                "avaliações. Não existe cadastro nem botão de “colocar minha empresa no ChatGPT”."),
         "cta_hero": "Quero ajuda para aparecer no ChatGPT",
         "botao2": ("/seo-para-ia/#orcamento", "Ver como funciona o serviço"),
         "msg": "Olá, Renan! Li o guia e quero ajuda para a minha empresa aparecer no ChatGPT.",
@@ -342,7 +354,7 @@ PAGINAS = [
         "painel": [
             "Não existe cadastro de empresa no ChatGPT.",
             "Ele busca na internet e mostra de onde tirou a resposta.",
-            "Seu site precisa deixar o robô dele entrar.",
+            "Seu site precisa estar aberto para ele ler.",
             "Dados iguais em todo lugar dão confiança.",
             "Menções fora do site pesam muito.",
         ],
@@ -367,9 +379,9 @@ PAGINAS = [
                 "ps": [
                     "O ChatGPT escolhe com base no que encontra e consegue confirmar. Quando a busca dele está "
                     "ligada, ele procura páginas na hora e mostra os links das fontes junto com a resposta. A "
-                    "OpenAI explica na " + _A % (OPENAI_BOTS, "página oficial dos robôs dela") + " que o robô "
-                    "<strong>OAI-SearchBot</strong> é o que leva os sites para os resultados de busca do ChatGPT, "
-                    "e que o <strong>ChatGPT-User</strong> é usado quando uma pessoa pede para ele abrir uma página.",
+                    "OpenAI explica, na " + _A % (OPENAI_BOTS, "página oficial dela") + ", que usa programas "
+                    "próprios para visitar os sites, e que um site que fecha a porta para eles fica fora dos "
+                    "resultados de busca do ChatGPT.",
                     "Na prática, ele tende a indicar empresas que aparecem em mais de um lugar confiável, com as "
                     "mesmas informações, e cujo site responde de forma direta o que a pessoa perguntou. Empresa "
                     "que só existe no Instagram, por exemplo, quase não é lida: boa parte do conteúdo das redes "
@@ -379,12 +391,13 @@ PAGINAS = [
             ("tabela", {
                 "tag": "Onde ele procura",
                 "titulo": "O que o ChatGPT lê para indicar uma empresa?",
-                "desc": "Estas são as fontes públicas que mais contam e o que conferir em cada uma.",
-                "colunas": ["Fonte", "O que conferir"],
+                "desc": "Estas são as fontes públicas que mais contam e a pergunta que a IA, na prática, faz a cada uma.",
+                "colunas": ["Fonte", "O que conta"],
                 "linhas": [
                     ["Seu site", "Diz o que você faz, para quem e em que cidade, logo no começo da página?"],
+                    ["Porta do site", "O site deixa as IAs entrarem para ler? Muitos barram sem o dono saber."],
                     ["Perfil da Empresa no Google", "Está completo, com categoria certa, horário, fotos e avaliações?"],
-                    ["Bing Places", "Existe? Muitas empresas nunca criaram, e o Bing é a base de busca da Microsoft."],
+                    ["Outros mapas e cadastros", "A empresa existe neles? O Google não é o único mapa que as IAs consultam."],
                     ["Diretórios e associações do ramo", "A empresa aparece, com o mesmo nome e telefone do site?"],
                     ["Avaliações", "São reais, recentes e respondidas?"],
                     ["Notícias, vídeos e blogs da cidade", "Alguém além de você fala da sua empresa?"],
@@ -392,29 +405,36 @@ PAGINAS = [
                 "nota": "Lista montada pela RCB SEO com base na documentação da OpenAI e na prática de SEO local.",
             }),
             ("cards", {
-                "tag": "Passo a passo",
-                "titulo": "Como aparecer no ChatGPT em 6 passos",
-                "desc": "Faça na ordem. Os três primeiros você mesmo consegue fazer em uma tarde.",
+                "tag": "O que precisa estar certo",
+                "titulo": "Como aparecer no ChatGPT: as 6 coisas que precisam estar certas",
+                "desc": "É o que a IA confere antes de indicar alguém. Cada item tem detalhes que mudam de ramo para ramo.",
                 "itens": [
-                    ("1. Pergunte ao ChatGPT como um cliente",
-                     "Abra o ChatGPT e pergunte o que o seu cliente perguntaria: “qual [seu serviço] indicar em "
-                     "[sua cidade]?”. Anote quem aparece e clique nas fontes. Isso mostra onde ele está procurando."),
-                    ("2. Complete o Perfil no Google",
-                     "Categoria certa, descrição clara, horário, fotos e avaliações respondidas. Veja o passo a "
-                     "passo em <a href=\"/google-perfil-empresa/\">Google Meu Negócio</a>."),
-                    ("3. Crie o perfil no Bing Places",
-                     "O " + _A % (BING_PLACES, "Bing Places") + " é grátis e deixa importar os dados do perfil do "
-                     "Google em poucos cliques."),
-                    ("4. Libere os robôs no seu site",
-                     "O arquivo robots.txt do site (a lista de quem pode entrar) não pode bloquear o OAI-SearchBot. "
-                     "Quem fez o seu site confere isso em minutos."),
-                    ("5. Escreva o que você faz, sem rodeio",
-                     "Na página inicial e em cada página de serviço, a primeira frase precisa dizer o que é, para "
-                     "quem e onde. É essa frase que a IA copia."),
-                    ("6. Apareça fora do seu site",
-                     "Associação do seu ramo, diretórios da cidade, um vídeo no YouTube explicando o serviço, uma "
-                     "entrevista num portal local. Cada menção confiável é uma confirmação a mais."),
+                    ("1. Saber o que ele já diz",
+                     "Antes de mexer em qualquer coisa, é preciso saber quem o ChatGPT indica hoje no seu ramo e de "
+                     "onde ele tira essa informação. É esse retrato que mostra onde a sua empresa precisa estar."),
+                    ("2. Perfil no Google completo",
+                     "Categoria, descrição, horário, fotos e avaliações. O perfil é uma das fontes que as IAs mais "
+                     "leem sobre empresas locais. Entenda o <a href=\"/google-perfil-empresa/\">Google Meu Negócio</a>."),
+                    ("3. Presença nos outros mapas",
+                     "O Google não é o único mapa da internet. Algumas IAs consultam outras bases de empresas, e "
+                     "quase nenhuma empresa brasileira está nelas."),
+                    ("4. Site aberto para as IAs",
+                     "Muitos sites barram os programas das IAs por uma configuração antiga, e o dono nem sabe. Com "
+                     "a porta fechada, a empresa simplesmente não é lida."),
+                    ("5. Texto que a IA consegue citar",
+                     "A primeira frase de cada página precisa dizer o que é, para quem e onde. Parece simples, mas "
+                     "é onde a maioria dos sites erra."),
+                    ("6. Menções fora do seu site",
+                     "Associação do seu ramo, diretórios da cidade, imprensa local, YouTube. Cada menção confiável "
+                     "é uma confirmação a mais de que a sua empresa existe e é boa no que faz."),
                 ],
+            }),
+            ("ajuda", {
+                "titulo": "Quer saber quais desses 6 estão errados na sua empresa?",
+                "texto": "Eu confiro os seis para você, sem compromisso. Me manda o nome da empresa e a cidade no "
+                         "WhatsApp e eu te digo o que está tirando você da resposta do ChatGPT.",
+                "msg": "Olá, Renan! Quero que você confira os 6 pontos do ChatGPT na minha empresa.",
+                "botao": "Quero que você confira",
             }),
             ("split", {
                 "tag": "Cuidado",
@@ -443,23 +463,23 @@ PAGINAS = [
         "faq": [
             ("Como colocar a minha empresa no ChatGPT?",
              "Não existe um jeito de colocar a empresa direto no ChatGPT. Ele indica o que encontra em fontes "
-             "públicas, como o seu site, o Perfil no Google, o Bing e diretórios. O caminho é deixar essas fontes "
-             "completas, com os mesmos dados, e liberar o robô dele no seu site."),
+             "públicas, como o seu site, o Perfil no Google, outros mapas e diretórios. O caminho é deixar essas "
+             "fontes completas, com os mesmos dados, e o seu site aberto para ele ler."),
             ("O ChatGPT usa o Google Meu Negócio?",
              "A OpenAI não publica a lista completa de fontes que usa. O que se sabe é que o ChatGPT busca páginas "
              "na internet e mostra os links. Um Perfil no Google completo, com avaliações reais, costuma aparecer "
              "nessas buscas e reforça as outras fontes."),
             ("Preciso pagar o ChatGPT para a minha empresa aparecer?",
              "Não. O ChatGPT não vende espaço nas respostas como o Google vende anúncios. Aparecer depende do que "
-             "está publicado sobre a sua empresa na internet. Você pode fazer os primeiros passos sozinho, de graça."),
+             "está publicado sobre a sua empresa na internet, e é aí que o trabalho acontece."),
             ("Quanto tempo depois dos ajustes a empresa aparece?",
              "Não há prazo certo. Depende de quando o ChatGPT volta a ler as fontes e de quanta concorrência existe "
              "no seu ramo e na sua cidade. Faça as mesmas perguntas uma vez por mês e anote o resultado para ver a "
              "evolução."),
             ("Como saber se o meu site bloqueia o ChatGPT?",
-             "Abra o endereço do seu site seguido de /robots.txt, por exemplo seusite.com.br/robots.txt. Se aparecer "
-             "OAI-SearchBot ou GPTBot com a palavra Disallow, existe bloqueio. Na dúvida, mande o print para quem "
-             "cuida do site ou para mim."),
+             "Dá para conferir, mas a leitura não é óbvia: cada IA usa programas com nomes diferentes, e um site "
+             "pode liberar um e barrar outro sem ninguém perceber. O jeito mais rápido é me mandar o endereço do "
+             "site no WhatsApp. Eu confiro e te digo, de graça, se a porta está aberta."),
         ],
         "relacionados_titulo": "Leia também sobre SEO para IA",
         "relacionados": [_REL_PILAR, _REL_GOOGLE, _REL_AUDITORIA, _REL_PERFIL],
@@ -495,7 +515,7 @@ PAGINAS = [
             "Usa as páginas que já estão no Google.",
             "Mostra links para as fontes que usou.",
             "Não tem cadastro nem otimização secreta.",
-            "Bloquear o Google-Extended não tira você dela.",
+            "O site precisa estar aberto para o Google ler.",
         ],
         "faq_titulo": "Perguntas frequentes sobre AI Overviews e Gemini",
         "secoes": [
@@ -554,13 +574,14 @@ PAGINAS = [
                 ],
                 "card_titulo": "Resumo",
                 "card": [
-                    "Googlebot: busca e AI Overviews.",
-                    "Google-Extended: treino do Gemini e respostas do app Gemini.",
-                    "Para aparecer nos dois: deixe os dois liberados.",
+                    "O Google tem mais de uma porta de entrada no site.",
+                    "Uma serve para a busca, outra para o Gemini.",
+                    "Fechar a errada tira a empresa do Gemini.",
+                    "Conferir as duas faz parte do serviço.",
                 ],
             }),
             ("cards", {
-                "tag": "O que fazer",
+                "tag": "O que pesa",
                 "titulo": "O que deixa a sua página pronta para a resposta de IA do Google",
                 "itens": [
                     ("Resposta na primeira frase",
@@ -572,15 +593,22 @@ PAGINAS = [
                     ("Tabelas e listas",
                      "Comparação vira tabela, passo a passo vira lista numerada. É o formato mais fácil de ler, "
                      "para gente e para máquina."),
-                    ("Dados estruturados verdadeiros",
-                     "Marcação que conta ao Google o nome, o endereço e os serviços da empresa, sempre igual ao "
-                     "que está escrito na página. Dá para conferir no "
-                     "<a href=\"/ferramentas/\">teste de pesquisa aprimorada</a>."),
+                    ("A ficha da empresa no código",
+                     "Uma marcação que o visitante não vê conta ao Google o nome, o endereço e os serviços da "
+                     "empresa. Feita certa, ajuda o Google a confiar. Feita errada, mais atrapalha do que ajuda."),
                     ("Autor e data",
                      "Quem escreveu, qual a experiência e quando foi atualizado. Ajuda o Google a confiar no texto."),
                     ("Perfil da Empresa completo",
                      "Para perguntas com cidade ou bairro, o perfil no Google é uma das fontes principais."),
                 ],
+            }),
+            ("ajuda", {
+                "titulo": "As suas páginas têm tudo isso?",
+                "texto": "A maioria tem dois ou três desses seis, e o Google escolhe quem tem todos. Eu analiso as "
+                         "suas páginas com os olhos do Google e te digo o que falta para elas virarem fonte da "
+                         "resposta de IA. Sem compromisso.",
+                "msg": "Olá, Renan! Quero que você veja se as minhas páginas estão prontas para a resposta de IA do Google.",
+                "botao": "Quero que você analise o meu site",
             }),
             ("texto", {
                 "tag": "Como medir",
@@ -612,8 +640,9 @@ PAGINAS = [
              "fonte ganha destaque no topo. Para empresa local, a decisão de contratar quase sempre leva a pessoa a "
              "clicar, ligar ou chamar no WhatsApp."),
             ("Meu site precisa de algo técnico para o AI Overviews?",
-             "Precisa do básico bem feito: estar indexado, abrir rápido, ter o texto no próprio HTML e não bloquear "
-             "o Googlebot. O Google afirma que não há marcação especial obrigatória para aparecer nas respostas de IA."),
+             "Precisa do básico bem feito: estar guardado pelo Google, abrir rápido, ter o texto lido sem depender de "
+             "programação e não barrar o robô do Google. O Google afirma que não há marcação especial obrigatória "
+             "para aparecer nas respostas de IA, mas cada um desses pontos tem detalhes que derrubam muito site."),
         ],
         "relacionados_titulo": "Leia também sobre SEO para IA",
         "relacionados": [_REL_PILAR, _REL_CHATGPT, _REL_GEO, ("/como-aparecer-no-google/", "Como aparecer no Google",
@@ -704,17 +733,23 @@ PAGINAS = [
                 ],
             }),
             ("texto", {
-                "tag": "Os robôs",
-                "titulo": "Que robôs as IAs usam para ler o seu site?",
+                "tag": "A porta do site",
+                "titulo": "As IAs conseguem ler qualquer site?",
                 "ps": [
-                    "Cada empresa de IA tem robôs com nomes próprios, e cada uma documenta os seus. A OpenAI usa o "
-                    "OAI-SearchBot, o GPTBot e o ChatGPT-User (" + _A % (OPENAI_BOTS, "documentação da OpenAI") + "). "
-                    "A Anthropic, dona do Claude, usa o ClaudeBot e outros (" + _A % (ANTHROPIC_BOTS, "documentação da Anthropic") + "). "
-                    "O Perplexity usa o PerplexityBot (" + _A % (PERPLEXITY_BOTS, "documentação do Perplexity") + "). "
-                    "O Google usa o Googlebot para a busca e para o AI Overviews.",
-                    "Todos respeitam o arquivo robots.txt do site, a lista que diz quem pode entrar. Para ser "
-                    "citado, o site precisa deixar esses robôs passarem.",
+                    "Não. Cada empresa de IA usa programas próprios para visitar e ler os sites, os chamados "
+                    "robôs, e cada site decide quais deixa entrar. A OpenAI, o Google, a Anthropic e o Perplexity "
+                    "explicam isso nas páginas oficiais deles, listadas no fim desta página.",
+                    "Muitos sites fecham a porta para algumas IAs sem querer, por uma configuração antiga ou um "
+                    "plugin de segurança. Quem está com a porta fechada não é lido, e quem não é lido não é "
+                    "citado. Conferir isso é uma das primeiras coisas que eu faço.",
                 ],
+            }),
+            ("ajuda", {
+                "titulo": "Ainda confuso com tanta sigla?",
+                "texto": "Você não precisa decorar nenhuma. Me conta o que a sua empresa faz e onde atende, e eu te "
+                         "explico em poucos minutos de conversa o que vale a pena fazer primeiro.",
+                "msg": "Olá, Renan! Li sobre GEO e AEO e quero entender o que faz sentido para a minha empresa.",
+                "botao": "Quero entender o meu caso",
             }),
             ("fontes", {"itens": [
                 ("Pesquisa “GEO: Generative Engine Optimization” (Aggarwal e outros, 2023)", PAPER_GEO),
@@ -730,9 +765,9 @@ PAGINAS = [
              "páginas na internet. Empresa invisível na busca comum dificilmente vira fonte da IA. O GEO é uma "
              "camada a mais sobre a mesma base."),
             ("Dá para fazer GEO sozinho?",
-             "Dá para começar. Completar o Perfil no Google, criar o perfil no Bing Places e escrever no site, sem "
-             "rodeio, o que a empresa faz e onde atende são passos que o dono consegue fazer. A parte técnica e a "
-             "medição mensal costumam pedir ajuda."),
+             "Uma parte, sim: completar o Perfil no Google e escrever com clareza o que a empresa faz. O resto, como "
+             "abrir o site para as IAs sem abrir brecha, deixar os dados iguais em todos os cadastros que elas "
+             "consultam e medir a evolução mês a mês, pede quem já faz isso todo dia."),
             ("O que é LLM?",
              "LLM é a sigla em inglês para modelo de linguagem grande, o tipo de inteligência artificial que está "
              "por trás do ChatGPT, do Gemini e do Claude. Otimização para LLM é mais um nome para o mesmo trabalho "
@@ -766,7 +801,7 @@ PAGINAS = [
         "cta_hero": "Quero a auditoria da minha empresa",
         "botao2": ("#orcamento", "Ver o que está incluído"),
         "msg": "Olá, Renan! Quero a auditoria de SEO para IA da minha empresa.",
-        "pills": ["Orçamento em até 24h", "Prazo por escrito", "Relatório em português simples"],
+        "pills": ["Orçamento em até 24h", "Pronta em 1 a 3 dias úteis", "Relatório em português simples"],
         "painel_h2": "O que você descobre",
         "painel": [
             "Se o ChatGPT, o Gemini, o Perplexity e o Copilot citam a sua empresa.",
@@ -788,12 +823,19 @@ PAGINAS = [
                      "Para cada resposta: se a sua empresa aparece, quais concorrentes aparecem e quais sites a "
                      "IA usou como fonte. É aqui que se descobre onde vale a pena estar."),
                     ("3. A parte técnica do site",
-                     "Robôs das IAs liberados, texto visível sem depender de programação, dados estruturados "
-                     "corretos e páginas que respondem as perguntas do item 1."),
+                     "Se o site está aberto para as IAs, se elas conseguem ler o texto, se a ficha da empresa "
+                     "escondida no código está certa e se as páginas respondem as perguntas do item 1."),
                     ("4. A sua empresa fora do site",
-                     "Perfil no Google, Bing Places, redes e diretórios: se existem, se estão completos e se o "
-                     "nome, o telefone e o endereço batem em todos."),
+                     "Perfil no Google, outros mapas e cadastros, redes e diretórios: se existem, se estão "
+                     "completos e se o nome, o telefone e o endereço batem em todos."),
                 ],
+            }),
+            ("ajuda", {
+                "titulo": "Quer ver isso aplicado à sua empresa?",
+                "texto": "Em 1 a 3 dias úteis você sabe o que a IA diz hoje sobre o seu ramo, quem ela indica no "
+                         "seu lugar e o que arrumar primeiro. Me chama no WhatsApp e me conta o que você faz.",
+                "msg": "Olá, Renan! Quero a auditoria de SEO para IA da minha empresa.",
+                "botao": "Quero a minha auditoria",
             }),
             ("tabela", {
                 "tag": "Entregáveis",
@@ -831,7 +873,7 @@ PAGINAS = [
                     ("Você me conta o seu negócio",
                      "Pelo WhatsApp: o que você faz, onde atende e quem são os concorrentes que você conhece."),
                     ("Orçamento e prazo por escrito",
-                     "Em até 24 horas você recebe o que entra na auditoria, o prazo e o valor."),
+                     "Em até 24 horas você recebe o que entra na auditoria, o prazo (de 1 a 3 dias úteis) e o valor."),
                     ("Perguntas e análise",
                      "Faço as perguntas nas IAs, analiso as fontes, o site e os perfis."),
                     ("Entrega e conversa",
@@ -844,7 +886,7 @@ PAGINAS = [
                 "destaque": -1,
                 "itens": [
                     ("Só a auditoria", "Para saber onde a sua empresa está antes de decidir.",
-                     ["Perguntas nas 4 IAs e no Google", "Mapa das fontes", "Lista de correções"],
+                     ["Perguntas nas 4 IAs e no Google", "Mapa das fontes", "Pronta em 1 a 3 dias úteis"],
                      "Olá, Renan! Quero só a auditoria de SEO para IA.", "Pedir orçamento"),
                     ("Auditoria + correções", "Para quem já quer resolver.",
                      ["A auditoria completa", "Correções no site e nos perfis", "Novo teste depois dos ajustes"],
@@ -855,12 +897,12 @@ PAGINAS = [
         ],
         "faq": [
             ("Quanto tempo leva a auditoria de SEO para IA?",
-             "O prazo vai por escrito no orçamento e depende de quantas perguntas e quantos concorrentes entram na "
-             "análise. A entrega inclui a planilha das perguntas, o mapa das fontes, a lista de correções e uma "
-             "conversa para explicar o resultado."),
+             "A auditoria fica pronta em 1 a 3 dias úteis, conforme o número de perguntas e de concorrentes que "
+             "entram na análise. O prazo exato vai por escrito no orçamento. A entrega inclui a planilha das "
+             "perguntas, o mapa das fontes, a lista de correções e uma conversa para explicar o resultado."),
             ("A auditoria serve para empresa que ainda não tem site?",
              "Serve. Nesse caso a auditoria mostra quais fontes as IAs usam no seu ramo e o que precisa existir "
-             "para a sua empresa entrar nelas: Perfil no Google, Bing Places, diretórios e, quando fizer sentido, "
+             "para a sua empresa entrar nelas: Perfil no Google, outros mapas, diretórios e, quando fizer sentido, "
              "um site ou uma página simples."),
             ("Eu mesmo não consigo perguntar ao ChatGPT?",
              "Consegue, e eu recomendo que faça. A auditoria vai além: repete as perguntas em várias IAs, registra "
@@ -873,7 +915,7 @@ PAGINAS = [
         "relacionados_titulo": "Leia também sobre SEO para IA",
         "relacionados": [_REL_PILAR, _REL_CHATGPT, _REL_GOOGLE, _REL_SERVICOS],
         "cta_final": ("Quer saber, com dados, o que a IA diz sobre o seu ramo?",
-                      "Me conte o que você faz e onde atende. Em até 24 horas você recebe o orçamento da auditoria, "
-                      "com o prazo por escrito."),
+                      "Me conte o que você faz e onde atende. Em até 24 horas você recebe o orçamento, e a "
+                      "auditoria fica pronta em 1 a 3 dias úteis."),
     },
 ]
