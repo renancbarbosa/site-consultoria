@@ -793,17 +793,6 @@
 
         <div class="wform-wrap">
           <form class="wform" id="rcbLeadForm" novalidate>
-            <input type="hidden" name="access_key" value="b9f6b538-d4a7-4e5a-8ee9-5f8310832733">
-            <input type="hidden" name="subject" value="Novo lead — RCB Consultoria (site)">
-            <input type="hidden" name="from_name" value="Site RCB Consultoria">
-            <input type="hidden" name="Resumo" id="rcbResumoEmail" value="">
-            <input type="hidden" name="Pagina de origem" id="rcbPaginaOrigem" value="">
-            <!-- Armadilha anti-robo do Web3Forms. aria-hidden + display:none (no
-                 .wform-hp) escondem de leitor de tela: so tirar da tela com
-                 left:-9999px nao esconde, e um visitante cego podia marcar o
-                 campo sem querer e ter o proprio contato descartado como spam. -->
-            <input type="checkbox" name="botcheck" class="wform-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-
             <div class="wform-linha">
               <label for="rcbNome">
                 <span>Seu nome</span>
@@ -822,7 +811,13 @@
                   <option value="Clínica">Clínica ou consultório</option>
                   <option value="Dentista">Dentista ou clínica odontológica</option>
                   <option value="Estética">Clínica de estética</option>
-                  <option value="Comércio local">Comércio local</option>
+                  <option value="Advocacia">Escritório de advocacia</option>
+                  <option value="Contabilidade">Escritório de contabilidade</option>
+                  <option value="Imobiliária">Imobiliária ou corretor</option>
+                  <option value="Energia solar">Energia solar</option>
+                  <option value="Serviço em domicílio">Serviço no local do cliente (limpeza, reformas, guincho...)</option>
+                  <option value="Comércio local">Comércio local (loja, restaurante, salão...)</option>
+                  <option value="Profissional liberal">Profissional liberal</option>
                   <option value="Outro">Outro</option>
                 </select>
               </label>
@@ -832,20 +827,20 @@
               </label>
             </div>
 
-            <label for="rcbPacote">
-              <span>Pacote de interesse</span>
-              <select id="rcbPacote" name="pacote" required>
-                <option value="Presença Lite">Presença Lite: arrumar meu Google Meu Negócio</option>
-                <option value="Presença">Presença: site + Google Meu Negócio</option>
-                <option value="Crescimento">Crescimento: subir de posição todo mês</option>
-                <option value="Dominação">Dominação: ser o primeiro da cidade</option>
+            <label for="rcbServico">
+              <span>Serviço de interesse</span>
+              <select id="rcbServico" name="servico" required>
+                <option value="Aparecer no Google">Aparecer no Google e no Google Maps</option>
+                <option value="Site ou landing page">Site ou landing page</option>
+                <option value="Anúncio no Google">Anúncio no Google (Google Ads)</option>
+                <option value="Aparecer nas IAs">Aparecer no ChatGPT e no Gemini</option>
+                <option value="SEO para YouTube">Vídeos no YouTube que tragam cliente</option>
                 <option value="Ainda não sei">Ainda não sei, quero sua opinião</option>
               </select>
             </label>
 
-            <button type="submit" class="btn btn-primary wform-enviar" data-event="cta_click" data-location="formulario" data-page="home">
-              <span class="rotulo">Falar no WhatsApp</span>
-              <span class="spin" aria-hidden="true"></span>
+            <button type="submit" class="btn btn-whatsapp wform-enviar" data-event="cta_click" data-location="formulario" data-page="home">
+              <span class="rotulo">Enviar pelo WhatsApp</span>
             </button>
 
             <div class="wform-passos" aria-label="O que acontece depois">
@@ -853,20 +848,10 @@
               <span>Te digo o que está travando</span>
               <span>Você decide se quer seguir</span>
             </div>
-            <p class="wform-privacidade">Isso não é uma compra. Ao enviar, você autoriza o contato sobre este pedido. Veja a <a href="/privacidade/">Política de Privacidade</a>.</p>
+            <p class="wform-privacidade">Isso não é uma compra. Nada fica gravado no site: os seus dados vão só na mensagem que você mesmo envia pelo WhatsApp. Veja a <a href="/privacidade/">Política de Privacidade</a>.</p>
             <p class="wform-erro" role="alert"></p>
+            <p class="wform-aviso" id="rcbAviso" hidden>O WhatsApp não abriu? <a id="rcbWaBtn" href="https://wa.me/5562991161040" target="_blank" rel="noopener noreferrer" data-event="cta_click" data-location="pos_formulario" data-page="home">Toque aqui para enviar a mensagem</a>.</p>
           </form>
-
-          <div class="wform-ok" id="rcbLeadOk" hidden>
-            <div class="visto" aria-hidden="true">✓</div>
-            <h3>Recebi seus dados!</h3>
-            <p>Agora é só apertar o botão abaixo. Sua mensagem já está escrita: é só enviar que eu respondo hoje.</p>
-            <pre class="wform-resumo" id="rcbResumo"></pre>
-            <a class="btn btn-whatsapp" id="rcbWaBtn" href="https://wa.me/5562991161040" target="_blank" rel="noopener noreferrer" data-event="cta_click" data-location="pos_formulario" data-page="home">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.09c-.24.68-1.42 1.31-1.95 1.36-.5.05-.5.42-3.16-.66-2.66-1.08-4.32-3.84-4.45-4.02-.13-.18-1.06-1.41-1.06-2.69 0-1.28.67-1.9.91-2.16.24-.26.52-.32.7-.32.17 0 .35 0 .5.01.16.01.38-.06.59.45.24.55.81 1.9.88 2.04.07.13.12.29.02.47-.09.18-.14.29-.28.44-.14.15-.29.34-.42.45-.14.13-.28.27-.12.53.16.26.72 1.18 1.54 1.91 1.06.94 1.95 1.24 2.22 1.37.27.13.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.22.59-.13.24.09 1.52.72 1.78.85.26.13.43.2.5.31.06.11.06.64-.18 1.32Z"/></svg>
-              Enviar minha mensagem no WhatsApp
-            </a>
-          </div>
         </div>
       </div>
     </section>
@@ -1112,22 +1097,18 @@
     </div>
   </div>
 
-  <!-- Formulário -> Web3Forms -> WhatsApp. Sem backend: o lead é registrado por
-       e-mail antes de abrir a conversa, para nada se perder se a pessoa desistir. -->
+  <!-- Formulário -> WhatsApp no mesmo clique (29/10/2026). Nada é enviado a servidor:
+       a mensagem pronta abre no WhatsApp e quem envia é o próprio visitante. -->
   <script>
   (function () {
     var WHATSAPP = '5562991161040';
     var form = document.getElementById('rcbLeadForm');
-    var pronto = document.getElementById('rcbLeadOk');
-    if (!form || !pronto) return;
+    if (!form) return;
 
-    var botao = form.querySelector('.wform-enviar');
     var erro = form.querySelector('.wform-erro');
-    var resumoEl = document.getElementById('rcbResumo');
-    var resumoEmail = document.getElementById('rcbResumoEmail');
-    var paginaOrigem = document.getElementById('rcbPaginaOrigem');
+    var aviso = document.getElementById('rcbAviso');
     var waBtn = document.getElementById('rcbWaBtn');
-    var selPacote = document.getElementById('rcbPacote');
+    var selServico = document.getElementById('rcbServico');
     var selNegocio = document.getElementById('rcbNegocio');
 
     // Artigo certo para a frase "tenho um(a) ___".
@@ -1135,10 +1116,23 @@
       'Clínica': 'uma clínica',
       'Dentista': 'uma clínica odontológica',
       'Estética': 'uma clínica de estética',
+      'Advocacia': 'um escritório de advocacia',
+      'Contabilidade': 'um escritório de contabilidade',
+      'Imobiliária': 'uma imobiliária',
+      'Energia solar': 'uma empresa de energia solar',
+      'Serviço em domicílio': 'uma empresa que atende no local do cliente',
       'Comércio local': 'um comércio local',
+      'Profissional liberal': 'um trabalho como profissional liberal',
       'Outro': 'um negócio'
     };
-    var VALOR = { 'Presença Lite': 1997, 'Presença': 2497, 'Crescimento': 2997, 'Dominação': 4997, 'Ainda não sei': 0 };
+    var PEDIDO = {
+      'Aparecer no Google': 'Quero que a minha empresa apareça no Google e no Google Maps',
+      'Site ou landing page': 'Quero um site ou uma landing page',
+      'Anúncio no Google': 'Quero anunciar a minha empresa no Google',
+      'Aparecer nas IAs': 'Quero que a minha empresa apareça no ChatGPT e no Gemini',
+      'SEO para YouTube': 'Quero que os meus vídeos no YouTube tragam cliente',
+      'Ainda não sei': 'Ainda não sei por onde começar e queria a sua opinião'
+    };
 
     function campo(nome) {
       var el = form.elements.namedItem(nome);
@@ -1150,83 +1144,42 @@
         page_location: window.location.href,
         page_path: window.location.pathname,
         form_id: 'rcbLeadForm',
-        lead_pacote: selPacote.value,
-        lead_negocio: selNegocio.value,
-        value: VALOR[selPacote.value] || 0,
-        currency: 'BRL'
+        lead_pacote: selServico.value,
+        lead_negocio: selNegocio.value
       };
       for (var k in (extra || {})) params[k] = extra[k];
       if (typeof window.rcbTrackEvent === 'function') window.rcbTrackEvent(evento, params);
       else if (typeof window.gtag === 'function') window.gtag('event', evento, params);
     }
 
-    // Clicar no botão de um pacote já deixa o formulário com ele selecionado.
+    // Os botões dos pacotes da home já deixam o serviço certo escolhido.
     document.querySelectorAll('[data-pacote]').forEach(function (link) {
       link.addEventListener('click', function () {
-        var alvo = link.getAttribute('data-pacote');
-        var mapa = { 'presenca-lite': 'Presença Lite', presenca: 'Presença', crescimento: 'Crescimento', dominacao: 'Dominação' };
-        if (mapa[alvo]) selPacote.value = mapa[alvo];
+        var mapa = { 'presenca-lite': 'Aparecer no Google', presenca: 'Site ou landing page',
+                     crescimento: 'Aparecer no Google', dominacao: 'Aparecer no Google' };
+        var alvo = mapa[link.getAttribute('data-pacote')];
+        if (alvo) selServico.value = alvo;
       });
     });
 
-    if (paginaOrigem) paginaOrigem.value = window.location.pathname;
-
     var comecou = false;
-    form.addEventListener('focusin', function (e) {
-      if (comecou || (e.target && e.target.classList.contains('wform-hp'))) return;
+    form.addEventListener('focusin', function () {
+      if (comecou) return;
       comecou = true;
       medir('begin_lead');
     });
 
-    function resumoCurto() {
-      return [
-        'Nome: ' + campo('nome'),
-        'WhatsApp: ' + campo('whatsapp'),
-        'Negócio: ' + campo('tipo_de_negocio'),
-        'Cidade: ' + campo('cidade'),
-        'Pacote: ' + campo('pacote')
-      ].join('\n');
-    }
-
-    function corpoEmail() {
-      return [
-        'NOVO LEAD — SITE RCB',
-        '',
-        resumoCurto(),
-        '',
-        'Página de origem: ' + window.location.pathname,
-        'Recebido em: ' + new Date().toLocaleString('pt-BR')
-      ].join('\n');
-    }
-
-    function pacotePorExtenso() {
-      var p = campo('pacote');
-      return p === 'Ainda não sei'
-        ? 'Ainda não sei qual pacote, queria sua opinião'
-        : 'Quero saber mais sobre o Pacote ' + p;
-    }
-
     function mensagemWhats() {
-      return 'Olá! Meu nome é ' + campo('nome') +
+      return 'Olá, Renan! Meu nome é ' + campo('nome') +
         ', tenho ' + (ARTIGO[campo('tipo_de_negocio')] || 'um negócio') +
         ' em ' + campo('cidade') + '. ' +
-        pacotePorExtenso() + '. ' +
+        (PEDIDO[campo('servico')] || 'Quero um orçamento') + '. ' +
         'Meu WhatsApp é ' + campo('whatsapp') + '.';
-    }
-
-    function dadosParaEnvio() {
-      var dados = {};
-      new FormData(form).forEach(function (valor, chave) {
-        if (chave === 'botcheck') return;
-        dados[chave] = typeof valor === 'string' ? valor : valor.name;
-      });
-      return dados;
     }
 
     form.addEventListener('submit', function (evento) {
       evento.preventDefault();
       erro.textContent = '';
-      if (form.botcheck && form.botcheck.checked) return;
 
       if (!form.checkValidity()) {
         var invalido = form.querySelector(':invalid');
@@ -1235,37 +1188,14 @@
         return;
       }
 
-      resumoEmail.value = corpoEmail();
-      resumoEl.textContent = resumoCurto();
-      waBtn.href = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(mensagemWhats());
-
-      botao.classList.add('carregando');
-      botao.disabled = true;
-
-      fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(dadosParaEnvio())
-      })
-        .then(function (r) { return r.json(); })
-        .then(function (saida) {
-          if (!saida.success) throw new Error(saida.message || 'Falha no envio');
-          medir('generate_lead', { method: 'formulario_whatsapp' });
-          form.hidden = true;
-          pronto.hidden = false;
-          pronto.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        })
-        .catch(function () {
-          // Registrar o lead falhou, mas a conversa não pode ser perdida:
-          // libera o WhatsApp mesmo assim.
-          medir('lead_error', { error_field: 'web3forms' });
-          erro.textContent = 'Não consegui registrar agora, mas dá para falar comigo direto no WhatsApp pelo botão verde.';
-          botao.classList.remove('carregando');
-          botao.disabled = false;
-        });
+      var url = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(mensagemWhats());
+      waBtn.href = url;
+      aviso.hidden = false;
+      medir('generate_lead', { method: 'formulario_whatsapp' });
+      // Abre dentro do próprio clique: se esperasse alguma resposta, o celular bloquearia a janela.
+      var janela = window.open(url, '_blank', 'noopener');
+      if (!janela) window.location.href = url;
     });
-
-    waBtn.addEventListener('click', function () { medir('whatsapp_continue'); });
   })();
   </script>
 </body>
