@@ -1113,3 +1113,36 @@ de exemplo. Aceito o que é legítimo:
   nomeadas. Links recebidos: `/ferramentas/` (relacionados, no gerador) e `/seo-para-clinicas/` (à mão).
 - **`docs/client-kit.html`**: crédito de rodapé (âncora sempre "RCB SEO") e trecho de case com notas
   reais e autorização do cliente. Fica em `docs/` porque a raiz é publicada inteira.
+
+## Rodada de 29/10/2026: pilar "SEO para IA" (GEO/AEO) — 5º serviço do site
+
+Documentos de trabalho em `docs/visibilidade-ia/` (AUDITORIA, MAPA-DE-TERMOS, PESQUISA-PROTOCOLO,
+SCHEMA-VALIDACAO, MEDICAO). Branch local `pilar-visibilidade-ia`, um commit por fase, merge no `main`.
+Pedido de "black/grey hat" recusado; feito o agressivo dentro das regras.
+
+- **5 páginas novas** (sitemap 181 → 186): `/seo-para-ia/` (pilar, Service), `/como-aparecer-no-chatgpt/`,
+  `/ai-overviews-e-gemini/`, `/o-que-e-geo-e-aeo/` (Article) e `/auditoria-de-seo-para-ia/` (Service,
+  "pronta em 1 a 3 dias úteis"). Conteúdo `scripts/conteudo/seo_para_ia.py`, gerador
+  `scripts/gerar-seo-para-ia.py` (reaproveita `montar()` do gerar-servicos-marketing), ligação ao resto
+  do site `scripts/ligar-seo-para-ia-2026-10-29.py` (menu, rodapé, /servicos/, llms). Idempotentes.
+- **Regra editorial do Renan para essas páginas: explicar O QUÊ e POR QUÊ para leigo, nunca o COMO.**
+  Nada de nome de robô, robots.txt, Bing Places/Bing Webmaster no texto visível ("outros mapas e
+  cadastros que as IAs consultam"). Cada página tem uma caixa de WhatsApp no meio (`data-location`
+  `ajuda_1`). Fontes oficiais no fim (Google, OpenAI, Anthropic, Perplexity).
+- `/ferramentas/`: o cartão do Bing Places virou **Google Trends** (mesmo motivo).
+- **Entidade** (`scripts/entidade-ia-2026-10-29.py`): `knowsAbout` único em `data/marca.json`
+  (`fundador.knowsAbout`, com GEO e AEO ligados à Wikipédia) nas 11 páginas com a Person #renan; sameAs
+  do Renan = só LinkedIn; OfferCatalog da home com "SEO para IA"; publisher de 21 artigos com o sameAs
+  completo (só tinha o YouTube desde 13/10).
+- **Abertura "resposta primeiro"** nas 10 páginas com mais impressão (`scripts/answer-first-2026-10-29.py`):
+  1º parágrafo responde em até 2 frases. Inclui as 4 que tinham gancho editorial (pedido do Renan).
+- **Fonte local** (`scripts/fonte-local-2026-10-29.py`): Inter em `/assets/fonts/inter-latin.woff2` com
+  preload e "Inter Fallback" (Arial com as medidas da Inter). Saiu o Google Fonts de 189 páginas e de
+  `rcb_base.py`/`gerar-paginas-cidades.py`. CLS 0,113 → 0. **A protegida continua com o Google Fonts.**
+- `robots.txt`: OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User, Perplexity-User, Bingbot.
+- **Formulário da home sem Web3Forms** (`scripts/formulario-whatsapp-2026-10-29.py`): abre o WhatsApp no
+  mesmo clique, sem 2ª tela; campo "Serviço de interesse" com os 5 serviços; 11 tipos de negócio; saiu o
+  mapa VALOR. Não há mais cópia do contato por e-mail (decisão do Renan). Eventos GA4 com os mesmos nomes.
+- `/servicos/`: 4 cartões de orçamento (entrou "Aparecer nas IAs"), botões com a ação.
+- Pendente com o Renan: rodar `PESQUISA-PROTOCOLO.md` (o artigo `/blog/quem-a-ia-indica-em-goiania/`
+  só é gerado com dados reais) e a medição mensal de `MEDICAO.md`. Revisão em meados de janeiro/2027.
