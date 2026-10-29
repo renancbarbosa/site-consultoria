@@ -503,8 +503,8 @@ PAGINAS = [
         "eyebrow": "Guia para donos de negócio",
         "h1": "AI Overviews e Gemini: como a sua empresa aparece na resposta de IA do Google",
         "sub": ("AI Overviews é o resumo escrito por inteligência artificial que o Google mostra acima dos links. "
-                "Para a sua empresa aparecer nele, a página precisa estar no índice do Google e responder bem a "
-                "pergunta. O Google diz que não existe otimização especial além do bom SEO."),
+                "Para a sua empresa aparecer nele, vale o que o próprio Google pede: a página estar no índice do "
+                "Google e responder bem a pergunta, sem otimização especial além do bom SEO."),
         "cta_hero": "Quero minha empresa na resposta do Google",
         "botao2": ("/seo-para-ia/#orcamento", "Ver como funciona o serviço"),
         "msg": "Olá, Renan! Quero que a minha empresa apareça nas respostas de IA do Google.",
