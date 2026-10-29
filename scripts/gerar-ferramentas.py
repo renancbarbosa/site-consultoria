@@ -42,17 +42,17 @@ P = {
         "Se o seu perfil no Google Maps está certo",
         "Se o seu site abre rápido no celular",
         "O que as pessoas digitam antes de achar você",
-        "Se a sua empresa também aparece no Bing",
+        "Quanto o seu serviço é procurado na sua região",
         "Se o Google entende os dados do seu site",
     ],
     "msg": "Olá, Renan! Testei minha empresa nas ferramentas do site e quero ajuda para entender o resultado.",
     "faq_titulo": "Perguntas frequentes sobre as ferramentas grátis",
     "faq": [
         ("Essas ferramentas são grátis mesmo?",
-         "Sim. As cinco são gratuitas e oficiais, do Google e da Microsoft. Só pedem uma conta Google ou Microsoft, "
+         "Sim. As cinco são gratuitas e oficiais, todas do Google. No máximo pedem uma conta Google, "
          "que você provavelmente já tem."),
         ("Preciso saber mexer com computador?",
-         "Não. Quatro delas funcionam colando um endereço ou entrando com a sua conta. O Search Console é a única que "
+         "Não. Quatro delas funcionam digitando um endereço ou uma palavra, ou entrando com a sua conta. O Search Console é a única que "
          "pede um passo a mais: provar que o site é seu. Se travar nessa parte, quem fez o seu site resolve em minutos."),
         ("Fiz o teste e o resultado veio ruim. E agora?",
          "Calma, quase todo negócio tem alguma coisa para acertar. Tire um print do resultado e me mande no WhatsApp: "
@@ -93,12 +93,13 @@ FERRAMENTAS = [
      "Os números começam a aparecer alguns dias depois de você cadastrar o site. Abra o relatório Desempenho: "
      "ali está a lista das buscas que mostraram a sua empresa.",
      "/blog/por-que-meu-site-nao-aparece-no-google/", "Saiba o que fazer quando o site some do Google"),
-    ("bing-places", "Bing Places", "Microsoft",
-     "É o perfil da sua empresa no Bing, a busca que vem no Windows e que alimenta o Copilot.",
-     "https://www.bingplaces.com/",
-     "O Bing deixa importar os dados do seu Perfil da Empresa no Google. Se o perfil do Google está certo, "
-     "o do Bing fica pronto em poucos cliques.",
-     "/google-perfil-empresa/", "Veja o que deixa o Perfil da Empresa completo"),
+    ("trends", "Google Trends", "Google",
+     "Mostra se a procura pelo seu serviço sobe ou desce ao longo do ano, e em quais cidades do estado ela é maior.",
+     "https://trends.google.com.br/",
+     "Digite o seu serviço do jeito que o cliente falaria, como \"dentista\" ou \"conserto de celular\", e "
+     "escolha o seu estado. Se aparecer \"dados insuficientes\", use uma palavra mais comum: a ferramenta só "
+     "mostra o que muita gente procura.",
+     "/blog/como-aparecer-nas-buscas-perto-de-mim/", "Veja como aparecer quando o cliente procura perto dele"),
     ("rich-results", "Teste de pesquisa aprimorada", "Google",
      "Confere se o Google consegue ler as informações do seu site, como endereço, horário e telefone.",
      "https://search.google.com/test/rich-results",

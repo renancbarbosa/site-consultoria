@@ -39,7 +39,7 @@ BLOCO = ('<!--RCB:FERRAMENTAS--><div class="dica-rcb artigo-ferramentas">'
          '</div><!--/RCB:FERRAMENTAS-->\r\n        ')
 
 LLMS = ("- Ferramentas grátis para ver sua empresa no Google: %s. Cinco ferramentas oficiais e gratuitas "
-        "(Perfil da Empresa, PageSpeed Insights, Search Console, Bing Places e teste de pesquisa aprimorada), "
+        "(Perfil da Empresa, PageSpeed Insights, Search Console, Google Trends e teste de pesquisa aprimorada), "
         "com uma dica de uso para cada uma." % URL)
 LLMS_FULL = "* Ferramentas grátis para ver sua empresa no Google: %s" % URL
 SITEMAP = ("  <url>\r\n    <loc>%s</loc>\r\n    <lastmod>%s</lastmod>\r\n"
