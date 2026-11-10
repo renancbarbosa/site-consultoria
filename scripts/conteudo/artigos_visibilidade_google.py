@@ -8,10 +8,9 @@ DATA = "2026-08-15"
 ARTIGOS = [
     {
         "slug": "como-colocar-minha-empresa-no-google",
-        "h1": "Como colocar minha empresa no Google: passo a passo",
-        "title": "Como colocar minha empresa no Google: passo a passo | RCB SEO",
-        "desc": ("Como colocar sua empresa no Google de graça: veja como criar ou reivindicar o perfil, "
-                 "verificar o negócio e aparecer na Busca e no Maps."),
+        "h1": "Como colocar minha empresa no Google: passo a passo para cadastrar de graça",
+        "title": "Como Colocar (Cadastrar) Minha Empresa no Google: Passo a Passo",
+        "desc": ("Como colocar minha empresa no Google de graça: como cadastrar ou reivindicar o perfil, verificar o negócio e aparecer na busca e no Google Maps."),
         "cat": "Google Perfil da Empresa",
         "data": DATA,
         "imagem": {
