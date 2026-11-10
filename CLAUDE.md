@@ -1147,7 +1147,7 @@ Pedido de "black/grey hat" recusado; feito o agressivo dentro das regras.
 - Pendente com o Renan: rodar `PESQUISA-PROTOCOLO.md` (o artigo `/blog/quem-a-ia-indica-em-goiania/`
   só é gerado com dados reais) e a medição mensal de `MEDICAO.md`. Revisão em meados de janeiro/2027.
 
-## Rodada de 09/11/2026: auditoria de SEO + correções (branch local `auditoria-2026-11-09`, NÃO publicada)
+## Rodada de 09/11/2026: auditoria de SEO + correções (publicada em 10/11 — `18830406`)
 
 Relatório: `docs/auditoria-seo-2026-11-09.md`. Nota geral ≈ 73 (local 50 é o ponto fraco).
 Um commit por item, para o Renan aprovar ou desfazer antes do push. Principais:
@@ -1161,3 +1161,7 @@ Um commit por item, para o Renan aprovar ou desfazer antes do push. Principais:
   rodar `drift_compare.py` nelas.
 - Pendente com o Renan: confirmar horário 8h x 9h no GMN, link curto "Pedir avaliações",
   aprovar os commits. Propostas não feitas: texto das cidades (~60% parecido) e scripts/fonte.
+- Publicada em 10/11/2026 com aprovação do Renan: 187 URLs conferidas em 200, IndexNow aceito (187).
+  `link_avaliacao` = https://g.page/r/CWBT4A_HtUcKEBM/review (link curto do GMN). Horário: Renan
+  disse que tanto faz, ficou 8h às 18h. drift_compare nas 9 páginas: título, H1, canonical e robots
+  iguais; só mudaram ficha técnica (esperado) e conteúdo.
