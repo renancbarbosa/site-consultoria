@@ -1165,3 +1165,54 @@ Um commit por item, para o Renan aprovar ou desfazer antes do push. Principais:
   `link_avaliacao` = https://g.page/r/CWBT4A_HtUcKEBM/review (link curto do GMN). Horário: Renan
   disse que tanto faz, ficou 8h às 18h. drift_compare nas 9 páginas: título, H1, canonical e robots
   iguais; só mudaram ficha técnica (esperado) e conteúdo.
+
+## Rodada de 10/11/2026: pesquisa de palavras-chave (planejador do Google Ads) e correções
+
+Ramo local `pesquisa-2026-11-10`, um commit por item. Dados: 19 arquivos do planejador (Goiânia e
+Brasil, 12 meses, faixas de volume) em `C:\Users\renan\Downloads\planejador`, cruzados com o Search Console.
+
+### O que os dados mostraram (muda decisão antiga)
+- Quem quer contratar em Goiânia digita **"agência de marketing"**, "agência de marketing goiânia",
+  "marketing digital (em) goiânia" e "criação de site(s) goiânia": 100 a 1 mil buscas/mês cada.
+  "consultor de seo", "consultoria seo" e "agência de seo": 10 a 100. O site estava bem posicionado
+  na palavra de menor procura.
+- No Brasil: "marketing médico" e "landing page para advogados" 1 mil a 10 mil; "como colocar minha
+  empresa no google" e "cadastrar empresa no google" 1 mil a 10 mil cada ("como aparecer no google" só
+  100 a 1 mil).
+- **Decisão do Renan (10/11/2026): trabalhar pelo dado, não pela opinião.** Pode escrever "agência".
+  "Marketing para X" vai na frente de "SEO para X" quando o planejador mostrar mais procura
+  (substitui a decisão editorial 1 de 09/08). Black hat continua fora (avaliação falsa, texto
+  escondido, página copiada, rede de links): derruba o perfil e o site.
+
+### O que foi feito
+1. **2 páginas novas** (sitemap 187 → 189): `/agencia-de-marketing-digital-goiania/` e
+   `/landing-page-para-advogados/`. Conteúdo `scripts/conteudo/pesquisa_2026_11_10.py`, gerador
+   `scripts/gerar-paginas-2026-11-10.py`. A página da agência diz a verdade sobre o tamanho (quem
+   atende é quem faz) e o que não é feito (redes sociais).
+2. **Links** (`scripts/ligar-pesquisa-2026-11-10.py`): item "Agência de marketing digital em Goiânia"
+   no menu "SEO e Google" e no rodapé (`rcb_menu.py`); caixa `RCB:PESQUISA-1110` em 146 páginas com
+   âncoras tiradas das buscas reais, para a agência, `/criacao-de-sites-goiania/` e
+   `/blog/como-colocar-minha-empresa-no-google/` (recebia link de 9 páginas, agora 69); home; `llms.txt`
+   e `llms-full.txt`. Protegida: só menu e rodapé, com `--protegida`, em commit próprio.
+3. **Títulos** (`scripts/titulos-marketing-2026-11-10.py`): médicos, dentistas e imobiliárias passam a
+   abrir com "Marketing ..."; "SEO para ..." continua no título e no H1. URLs iguais.
+4. **Reforço** (`scripts/reforco-paginas-2026-11-10.py`): seção `RCB:SITES-PROF` em criação de sites
+   ("sites profissionais", "desenvolvimento de sites"); "cadastrar" no título/H1 do artigo de colocar
+   a empresa no Google (também na fonte `artigos_visibilidade_google.py`).
+
+### Ordem ao regerar
+Página gerada perde a caixa de links: depois de qualquer gerador, rode
+`python scripts/ligar-pesquisa-2026-11-10.py` (e `--protegida` se o menu mudou). 2ª execução: 0 alteradas.
+
+### Armadilhas desta rodada
+- O planejador não grava no arquivo nem o local nem o site pesquisado: pedir ao Renan para pôr no nome.
+- `s_tabela` do `gerar-seo-para-ia.py` escapa link dentro de célula e o `s_fontes` tem frase fixa sobre
+  IA: o gerador novo usa versões próprias.
+- Regex `.*$` com `re.M` engole o `\r` em arquivo CRLF (o `llms.txt` tinha uma linha com `\r\r\n` desde
+  09/11): usar `[^\r\n]*`.
+
+### Não feito, fica como próximo passo
+- "tráfego pago goiânia" / "gestor de tráfego goiânia" (10 a 100): hoje só há a página nacional.
+- "marketing para clínicas/advogados/psicólogos": páginas já existem; medir antes de mexer.
+- Revisão no Search Console em ~30 dias (meados de dezembro/2026) para ver se as páginas novas
+  ganharam impressão.
