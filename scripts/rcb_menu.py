@@ -154,6 +154,63 @@ def _tira_links_removidos(h):
     return h
 
 
+# --- 09/11/2026 (auditoria, itens 3 e 5) -------------------------------------------
+# Rodape ganha: telefone clicavel, link para o perfil no Google Maps, botao de avaliar e
+# horario. Dados SO do data/marca.json (telefone, perfil_google, link_avaliacao,
+# horario_texto). Bloco com marcador RCB:LOCAL-FOOTER: reaplicar substitui, nao duplica.
+# Os cliques em "Ligar" ja sao medidos pelo script.js (a[href^="tel:"] -> contato_telefone);
+# Maps e avaliar levam data-event proprio.
+_LOCAL = re.compile(r'<!--RCB:LOCAL-FOOTER-->.*?<!--/RCB:LOCAL-FOOTER-->', re.S)
+_ENDERECO = 'Rua 18-A, nº 256, Goiânia - GO, CEP 74070-060'
+
+
+def _marca():
+    import json
+    import os
+    raiz = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    with open(os.path.join(raiz, "data", "marca.json"), encoding="utf-8") as f:
+        return json.load(f)
+
+
+def bloco_local(home=False):
+    m = _marca()
+    tel = m["telefone"]                                  # +5562991161040
+    fone = "(%s) %s-%s" % (tel[3:5], tel[5:10], tel[10:])
+    maps = ('<a href="%s" target="_blank" rel="noopener" data-event="perfil_google" '
+            'data-location="footer">Ver a %s no Google Maps</a>' % (m["perfil_google"], m["nome"]))
+    aval = ('<a href="%s" target="_blank" rel="noopener" data-event="avaliar_google" '
+            'data-location="footer">Avaliar a %s no Google</a>' % (m["link_avaliacao"], m["nome"]))
+    ligar = '<a href="tel:%s">Ligar: %s</a>' % (tel, fone)
+    if home:  # rodape proprio da home (.footer-contact com <p>)
+        corpo = ('<p><strong>Telefone:</strong><br>%s</p>'
+                 '<p><strong>Endereço:</strong><br>%s</p>'
+                 '<p><strong>Google Maps:</strong><br>%s<br>%s</p>' % (ligar, _ENDERECO, maps, aval))
+    else:
+        corpo = '%s%s%s<span>Atendimento: %s</span>' % (ligar, maps, aval, m["horario_texto"])
+    return "<!--RCB:LOCAL-FOOTER-->" + corpo + "<!--/RCB:LOCAL-FOOTER-->"
+
+
+def rodape_local(h):
+    """Poe (ou atualiza) o bloco local no ULTIMO <footer> da pagina. Sem rodape: nao mexe."""
+    h = _LOCAL.sub("", h)
+    ini = h.rfind("<footer")
+    fim = h.rfind("</footer>")
+    if ini < 0 or fim < ini:
+        return h
+    rod = h[ini:fim]
+    # qualquer grafia do endereco (o rcb_base escreve com travessao, que o humanizar troca depois)
+    spans = list(re.finditer(r'<span>Rua 18-A[^<]*</span>', rod))
+    if spans:
+        k = spans[-1].end()
+        rod = rod[:k] + bloco_local() + rod[k:]
+    else:
+        m = re.search(r'<p><strong>WhatsApp:</strong>.*?</p>', rod, re.S)
+        if not m or 'class="footer-contact"' not in rod:
+            return h
+        rod = rod[:m.end()] + bloco_local(home=True) + rod[m.end():]
+    return h[:ini] + rod + h[fim:]
+
+
 def aplicar(h):
     """Menu novo, rodape sem agentes de IA, servicos do rodape e links removidos."""
     h = _troca_menu(h)
@@ -162,4 +219,5 @@ def aplicar(h):
                           + "<!--/RCB:SITES-FOOTER-->", h)
     if 'role="contentinfo"' in h:
         h = _institucional(h)
+    h = rodape_local(h)  # 09/11/2026
     return _tira_links_removidos(h)

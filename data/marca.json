@@ -38,6 +38,9 @@
   },
   "geo": {"latitude": -16.6729448, "longitude": -49.2695683},
   "perfil_google": "https://www.google.com/maps?cid=740760530295214944",
+  "_link_avaliacao": "09/11/2026: sem o codigo do perfil (place ID) o botao Avaliar abre o perfil no Maps. Quando o Renan pegar o link curto em Perfil da Empresa > Pedir avaliacoes (g.page/r/.../review), troque aqui e rode python scripts/rodape-local-2026-11-09.py",
+  "link_avaliacao": "https://www.google.com/maps?cid=740760530295214944",
+  "horario_texto": "Seg a sex, 8h às 18h",
   "mapa_embed": "https://www.google.com/maps?cid=740760530295214944&output=embed",
   "sameAs": [
     "https://www.google.com/maps?cid=740760530295214944",
