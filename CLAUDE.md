@@ -1146,3 +1146,18 @@ Pedido de "black/grey hat" recusado; feito o agressivo dentro das regras.
 - `/servicos/`: 4 cartões de orçamento (entrou "Aparecer nas IAs"), botões com a ação.
 - Pendente com o Renan: rodar `PESQUISA-PROTOCOLO.md` (o artigo `/blog/quem-a-ia-indica-em-goiania/`
   só é gerado com dados reais) e a medição mensal de `MEDICAO.md`. Revisão em meados de janeiro/2027.
+
+## Rodada de 09/11/2026: auditoria de SEO + correções (branch local `auditoria-2026-11-09`, NÃO publicada)
+
+Relatório: `docs/auditoria-seo-2026-11-09.md`. Nota geral ≈ 73 (local 50 é o ponto fraco).
+Um commit por item, para o Renan aprovar ou desfazer antes do push. Principais:
+- Rodapé local (`RCB:LOCAL-FOOTER`, `rcb_menu.rodape_local()`): Ligar, Maps, Avaliar, horário.
+  Dados em `data/marca.json` (`link_avaliacao`, `horario_texto`); mudou? `python scripts/rodape-local-2026-11-09.py`.
+- Página nova `/google-meu-negocio-goiania/` (gerador `scripts/gerar-gmn-goiania.py`), sitemap 187.
+- Protegida `/consultor-seo-goiania/` em commit próprio (`4c6f4722`): fonte local, @id único da
+  empresa, rodapé local. Título/H1/textos intocados.
+- Links em texto corrido agora dourados e sublinhados (`main :is(p, li, td) a:not([class])`).
+- Linha de base seo-drift de 9 páginas gravada em 10/11 (antes do deploy): depois de publicar,
+  rodar `drift_compare.py` nelas.
+- Pendente com o Renan: confirmar horário 8h x 9h no GMN, link curto "Pedir avaliações",
+  aprovar os commits. Propostas não feitas: texto das cidades (~60% parecido) e scripts/fonte.
