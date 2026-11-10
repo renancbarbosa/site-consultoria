@@ -4179,6 +4179,9 @@ section {
 .artigo-faq-item p { margin-bottom: 0; color: var(--text-muted); font-size: .95rem; line-height: 1.65; }
 .artigo-link { color: var(--gold); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; transition: color var(--transition); }
 .artigo-link:hover { color: var(--gold-light); }
+/* links no meio do texto: dourados e sublinhados para o visitante ver que sao clicaveis (auditoria 09/11/2026) */
+main :is(p, li, td) a:not([class]) { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+main :is(p, li, td) a:not([class]):hover { color: var(--gold-light); }
 .artigo-cta-box { margin: 40px 0; padding: 28px; background: rgba(201,168,76,.06); border: 1px solid rgba(201,168,76,.18); border-radius: var(--radius-md); }
 .artigo-cta-box p { margin-bottom: 16px; color: var(--text-main); }
 .artigo-cta-box p:last-child { margin-bottom: 0; }
