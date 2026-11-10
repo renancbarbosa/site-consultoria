@@ -30,6 +30,7 @@ _CHEVRON = ('<svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fil
 SEO_GMN = [
     ("/consultoria-seo-local/", "Consultoria de SEO"),
     ("/google-perfil-empresa/", "Google Meu Negócio"),
+    ("/google-meu-negocio-goiania/", "Google Meu Negócio em Goiânia"),  # 09/11/2026
     ("/auditoria-seo/", "Auditoria de SEO"),
     ("/conteudo-para-seo/", "Conteúdo para SEO"),
     ("/acompanhamento-seo/", "Acompanhamento de SEO"),
@@ -70,6 +71,7 @@ NICHOS = [
 ]
 # links de servico do rodape (bloco RCB:SITES-FOOTER); o resto da coluna continua
 RODAPE_SERVICOS = [
+    ("/google-meu-negocio-goiania/", "Google Meu Negócio em Goiânia"),  # 09/11/2026
     (PROVISORIO["landing"], "Landing page para anúncios"),
     ("/criacao-de-sites-goiania/", "Criação de sites"),
     (PROVISORIO["trafego"], "Tráfego pago (Google Ads)"),
