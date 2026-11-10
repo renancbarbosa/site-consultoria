@@ -770,9 +770,13 @@ section {
 }
 
 /* ── Hero: animações de entrada ── */
+/* 09/11/2026: so desliza, sem partir de opacidade 0. Elemento invisivel nao conta como
+   "maior elemento" (LCP) para o Google: com opacity 0 o titulo da home era ignorado e o LCP
+   virava o aviso de cookies, que o JavaScript mostra depois. Medido no Lighthouse (copia local):
+   o LCP passou a ser o h1.hero-title. */
 @keyframes heroFadeUp {
-  from { opacity: 0; transform: translateY(28px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { transform: translateY(28px); }
+  to   { transform: translateY(0); }
 }
 @keyframes heroFadeIn {
   from { opacity: 0; }
