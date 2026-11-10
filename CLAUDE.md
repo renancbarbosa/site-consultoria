@@ -1211,6 +1211,11 @@ Página gerada perde a caixa de links: depois de qualquer gerador, rode
 - Regex `.*$` com `re.M` engole o `\r` em arquivo CRLF (o `llms.txt` tinha uma linha com `\r\r\n` desde
   09/11): usar `[^\r\n]*`.
 
+### Publicação (10/11/2026)
+`80b14038..ed307c27` → `origin main`, com OK do Renan. As 189 URLs do sitemap conferidas em 200;
+conteúdo novo conferido no ar por amostra. IndexNow (`--sitemap`, 189 URLs) aceito, chave de sempre.
+Com o Renan: reenviar `sitemap.xml` e pedir indexação das 2 páginas novas e das 6 alteradas.
+
 ### Não feito, fica como próximo passo
 - "tráfego pago goiânia" / "gestor de tráfego goiânia" (10 a 100): hoje só há a página nacional.
 - "marketing para clínicas/advogados/psicólogos": páginas já existem; medir antes de mexer.
