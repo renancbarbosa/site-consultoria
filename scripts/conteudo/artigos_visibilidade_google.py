@@ -717,8 +717,8 @@ ARTIGOS = [
         "corpo": f"""
         <p><strong>O Google não cobra para criar ou manter um Perfil da Empresa.</strong> O custo aparece quando
         o dono contrata alguém para diagnosticar, configurar, produzir fotos, corrigir problemas e acompanhar
-        o posicionamento. Na RCB, a otimização profissional do perfil começa em <strong>R$ 1.997, em pagamento
-        único</strong>. Quando o trabalho também inclui site, conteúdo e acompanhamento, o escopo e o preço mudam.</p>
+        o posicionamento. Na RCB, a otimização do perfil tem <strong>valor sob medida e orçamento
+        grátis</strong>, e pode sair mais em conta do que você imagina. Quando o trabalho também inclui site, conteúdo e acompanhamento, o escopo e o preço mudam.</p>
 
         {caixa('<p><strong>Resposta direta:</strong> cadastrar a empresa é gratuito. Na RCB, a otimização tem orçamento '
                'sob medida e grátis, e inclui configuração e otimização do perfil, publicação de dez fotos, '

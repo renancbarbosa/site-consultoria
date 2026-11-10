@@ -28,7 +28,9 @@ from rcb_pacotes import MARCA_INI, MARCA_FIM  # noqa: E402
 # ("site custa de R$ 100/mes a R$ 10 mil") sao permitidas e nao casam aqui.
 # Mesmo padrao do scripts/remover-precos-2026-09-28.py.
 PRECO_RCB = re.compile(
-    r'R\$\s?(?:1\.997|2\.497|2\.997|4\.997|997|1\.497)(?![\d.,])'
+    # (?!\d|[.,]\d): "R$ 1.997, em" e "R$ 1.997." sao preco; "R$ 1.997,50" e "R$ 997.000" nao.
+    # Ate 09/11/2026 era (?![\d.,]) e deixava passar "R$ 1.997, em pagamento unico".
+    r'R\$\s?(?:1\.997|2\.497|2\.997|4\.997|997|1\.497)(?!\d|[.,]\d)'
     r'|(?<![\d.])(?:1997|2497|2997|4997)\.00'
     r'|a partir de R\$'
     r'|tabela pública|valores abaixo são fechados'
