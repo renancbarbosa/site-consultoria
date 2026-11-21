@@ -1221,3 +1221,22 @@ Com o Renan: reenviar `sitemap.xml` e pedir indexação das 2 páginas novas e d
 - "marketing para clínicas/advogados/psicólogos": páginas já existem; medir antes de mexer.
 - Revisão no Search Console em ~30 dias (meados de dezembro/2026) para ver se as páginas novas
   ganharam impressão.
+
+## Rodada de 21/11/2026: /cases/ vira landing page com dados do Search Console (publicada — `a98a435a`)
+
+- 4 cases, nesta ordem: **Imune Consultórios** (Dr. Paulo Prado, alergista em Rio Verde, autorizado),
+  **Nalu Prado**, **Radar de CNPJ** e **Docevidade**. Cada um com antes → depois em percentual, gráfico
+  semanal, tabela de buscas no topo e "O que foi feito". WhatsApp no topo, em 2 caixas no meio e no fim; FAQPage.
+- **Radar entra como "projeto"** (decisão do Renan): nunca dizer quem é o dono nem chamar de cliente.
+- **"O que foi feito" é superficial de propósito** (pedido do Renan): diz que foi feito e que mudou, nunca
+  o como (nada de quantidade de páginas, página por cidade/doença, categorias do perfil). Concorrente copia.
+- Comparações usam **as 4 primeiras × as 4 últimas semanas** do Search Console (robusto contra mês parcial).
+- Gráficos: `scripts/gerar-graficos-cases.py` gera SVG entre os marcadores `RCB:GRAFICO:<id>` a partir de
+  `data/cases/<projeto>-dias.json` (bloqueado ao público). Para atualizar: puxar de novo com
+  `seo gsc-query ... --dimensions date` (comando no topo do script) e rodar o script. **Os números do texto
+  não se atualizam sozinhos:** o script imprime o resumo para reescrever à mão.
+- Search Console tem as propriedades `sc-domain:naluprado.com.br`, `sc-domain:radardecnpj.com.br` e
+  `sc-domain:imuneconsultoriosrioverde.com.br` (comando `seo sites`).
+- A regra geral `section { padding: 96px 0 }` abria buracos entre os blocos dos cases; corrigido com
+  `.case-content .case-section { padding: 0 }`.
+- IndexNow enviado com `/cases/`, aceito.
