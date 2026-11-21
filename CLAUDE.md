@@ -1241,7 +1241,12 @@ Com o Renan: reenviar `sitemap.xml` e pedir indexação das 2 páginas novas e d
   `.case-content .case-section { padding: 0 }`.
 - IndexNow enviado com `/cases/`, aceito.
 
-## Rodada de 21/11/2026 (2ª leva): números dos cases no site + links dos sites de clientes (commit local, NÃO publicado)
+## Rodada de 21/11/2026 (2ª leva): números dos cases no site + links dos sites de clientes (publicada em 21/11 — `0280de74`, `df9cec28`)
+
+Publicada com "pode publicar" e "pode dar push" do Renan: os 4 repositórios enviados. rcbseo: 54 URLs
+conferidas em 200 e IndexNow aceito. Capas SVG dos 2 artigos do Google refeitas (ícone sobre o texto).
+Radar ganhou mais 3 links em texto (outbound, clientes potenciais, empresa recém-aberta) para
+/como-aparecer-no-google/, /blog/como-colocar-minha-empresa-no-google/ e /cases/.
 
 Feito com o Renan fora, autorizado ("pode fazer tudo"). Tudo commitado localmente nos 4 repositórios; **nenhum push**.
 
