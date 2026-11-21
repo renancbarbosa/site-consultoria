@@ -3533,6 +3533,192 @@ section {
   font-style: italic;
 }
 
+/* ── Página /cases/ (21/11/2026): números, gráficos e chamadas ── */
+/* a regra geral "section { padding: 96px 0 }" abria buracos entre os blocos do case */
+.case-content .case-section {
+  padding: 0;
+}
+.case-section p a:not([class]),
+.case-section li a:not([class]) {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.cases-hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 24px 0;
+}
+.cases-hero-stat {
+  background: rgba(201, 168, 76, 0.08);
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.cases-hero-stat strong {
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  font-weight: 800;
+  color: var(--gold);
+  line-height: 1.1;
+}
+.cases-hero-stat span {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+.cases-hero .cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.cases-leitura {
+  padding: 48px 0 8px;
+}
+.cases-leitura-titulo {
+  font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+  color: var(--white);
+  margin-bottom: 20px;
+}
+.cases-leitura-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.cases-leitura-item {
+  background: linear-gradient(158deg, rgba(22,46,76,0.6) 0%, rgba(14,28,48,0.72) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+.cases-leitura-item strong {
+  display: block;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+.cases-leitura-item p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 0;
+}
+.cases-leitura-fonte {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: 16px;
+}
+.case-antes-depois {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: -24px 0 48px;
+}
+.case-ad-item {
+  background: rgba(201, 168, 76, 0.06);
+  border: 1px solid rgba(201, 168, 76, 0.22);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.case-ad-rotulo {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+}
+.case-ad-valores {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.case-ad-antes {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  text-decoration: line-through;
+  text-decoration-color: rgba(255, 255, 255, 0.3);
+}
+.case-ad-seta {
+  color: var(--gold);
+}
+.case-ad-depois {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.1;
+}
+.case-ad-ganho {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #6fd39a;
+  background: rgba(76, 201, 120, 0.1);
+  border-radius: 999px;
+  padding: 2px 10px;
+}
+.case-chart {
+  margin: 8px 0 20px;
+  background: rgba(13, 27, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 16px 12px 10px;
+}
+.case-chart-svg {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  height: auto;
+  font-family: inherit;
+}
+.case-chart figcaption {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 6px;
+}
+.cases-pergunta,
+.cases-final {
+  max-width: 860px;
+  margin: 0 auto 72px;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(201,168,76,0.14) 0%, rgba(201,168,76,0.04) 100%);
+  border: 1px solid rgba(201, 168, 76, 0.35);
+  border-radius: 16px;
+  padding: 32px 24px;
+}
+.cases-final {
+  margin: 40px auto 0;
+}
+.cases-pergunta p {
+  color: var(--text-muted);
+  max-width: 560px;
+  margin: 0 auto 18px;
+}
+.cases-pergunta .cases-pergunta-titulo,
+.cases-final .cases-pergunta-titulo {
+  font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.cases-final .cases-pergunta-titulo {
+  margin-bottom: 18px;
+}
+@media (max-width: 760px) {
+  .cases-hero-stats,
+  .cases-leitura-grid,
+  .case-antes-depois {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .cta-buttons {
   display: flex;
   flex-wrap: wrap;
