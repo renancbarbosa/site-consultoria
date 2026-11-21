@@ -4536,3 +4536,74 @@ main :is(p, li, td) a:not([class]):hover { color: var(--gold-light); }
 @media (min-width: 1100px) { .cluster-grid.cluster-grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .cluster-grid-4 + .section-desc { margin-top: 28px; }
 .cluster-grid-4 + .section-desc a { text-decoration: underline; }
+
+/* Faixa de numeros dos cases no topo da home (21/11/2026) */
+.hero-cases {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 22px;
+  margin-top: 26px;
+  padding: 14px 18px;
+  max-width: 640px;
+  border: 1px solid rgba(201,168,76,0.28);
+  border-radius: var(--radius-md);
+  background: rgba(201,168,76,0.06);
+  color: var(--text-main);
+  text-decoration: none;
+  transition: border-color var(--transition), background var(--transition);
+}
+.hero-cases:hover { border-color: var(--gold); background: rgba(201,168,76,0.10); }
+.hero-cases-item { font-size: 0.9rem; color: var(--text-muted); }
+.hero-cases-item strong { color: var(--gold-light); font-size: 1.15rem; font-weight: 800; margin-right: 4px; }
+.hero-cases-ver { font-size: 0.85rem; font-weight: 700; color: var(--gold); margin-left: auto; }
+@media (max-width: 640px) {
+  .hero-cases { gap: 6px 14px; padding: 12px 14px; }
+  .hero-cases-item { flex: 1 1 100%; }
+  .hero-cases-ver { margin-left: 0; }
+}
+
+/* Caixa "Resultado real" nas paginas de nicho (21/11/2026, scripts/cases-nichos-2026-11-21.py) */
+.case-nicho { padding: 56px 0; }
+.case-nicho-box {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 36px 32px;
+  border: 1px solid rgba(201,168,76,0.30);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(160deg, rgba(201,168,76,0.09), rgba(26,51,80,0.55));
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}
+.case-nicho-box h2 { font-size: clamp(1.35rem, 2.6vw, 1.85rem); line-height: 1.25; margin: 6px 0 22px; }
+.case-nicho-numeros {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.case-nicho-num {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 10px;
+  border-radius: var(--radius-md);
+  background: rgba(13,27,42,0.55);
+}
+.case-nicho-num strong { color: var(--gold-light); font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 800; line-height: 1.1; }
+.case-nicho-num span { color: var(--text-muted); font-size: 0.88rem; line-height: 1.35; }
+.case-nicho-texto { color: var(--text-muted); max-width: 680px; margin: 0 auto 22px; }
+.case-nicho-acoes { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+@media (max-width: 640px) {
+  .case-nicho { padding: 40px 0; }
+  .case-nicho-box { padding: 26px 18px; }
+  .case-nicho-numeros { grid-template-columns: 1fr; gap: 10px; }
+  .case-nicho-acoes .btn { width: 100%; }
+}
+.artigo-body .case-nicho-artigo, .case-nicho-artigo { margin: 2.5rem 0; }
+.case-nicho-artigo h2 { margin-top: 6px; }
+@media (max-width: 640px) {
+  .case-nicho-num { flex-direction: row; align-items: center; gap: 12px; padding: 10px 14px; text-align: left; }
+  .case-nicho-num strong { flex: 0 0 auto; min-width: 86px; font-size: 1.45rem; }
+  .case-nicho-box h2 { margin-bottom: 16px; }
+}

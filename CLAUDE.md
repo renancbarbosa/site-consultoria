@@ -1240,3 +1240,27 @@ Com o Renan: reenviar `sitemap.xml` e pedir indexação das 2 páginas novas e d
 - A regra geral `section { padding: 96px 0 }` abria buracos entre os blocos dos cases; corrigido com
   `.case-content .case-section { padding: 0 }`.
 - IndexNow enviado com `/cases/`, aceito.
+
+## Rodada de 21/11/2026 (2ª leva): números dos cases no site + links dos sites de clientes (commit local, NÃO publicado)
+
+Feito com o Renan fora, autorizado ("pode fazer tudo"). Tudo commitado localmente nos 4 repositórios; **nenhum push**.
+
+- **Títulos** (`scripts/titulos-cases-2026-11-21.py`): 5 páginas que já estão na 1ª página com zero clique
+  (consultoria-seo-local, estética, imobiliárias, google-perfil-empresa, artigo do checklist) com title/description
+  em língua leiga e número de case. Artigo do checklist ganhou a seção "Contratei um consultor de SEO há 6 meses e
+  não vi resultado. E agora?" (era a busca real que trazia a página).
+- **Home**: faixa `.hero-cases` com os números (+180% / +145% / 1º no Maps) e os 4 cases em cartões com link para a
+  âncora de cada um em /cases/.
+- **Caixa "Resultado real"** (`scripts/cases-nichos-2026-11-21.py`, marcador `RCB:CASE-NICHO`, idempotente e
+  ATUALIZA): 18 páginas de nicho/serviço/leigas, cada uma com o case que combina (Imune para saúde, Docevidade para
+  Perfil da Empresa, Nalu para site/agência). Mudou número de case? Edite `CASES` no script e rode de novo.
+  Docevidade não tem gráfico: o botão dela diz "Ver o case completo".
+- **Links internos para as páginas leigas** (`scripts/ligar-leigas-2026-11-21.py`): 1ª ocorrência de "aparecer no
+  Google", "não aparece no Google" e "ChatGPT" em texto corrido vira link; nunca dentro de bloco `RCB:`.
+- **Sites de clientes** (rede de links: feita do jeito natural, recusada a versão com artigo fora do assunto e
+  link com palavra-chave): Imune (D:\IMUNE) crédito "Site e SEO: RCB SEO" → /cases/ (follow só na home, como já era);
+  Nalu: nome da marca no rodapé e na página Sobre (que já linkava para o case); Radar: marca no rodapé, autor,
+  schema e imprensa + 1 link em texto no artigo de agência de marketing → /cases/. /cases/ já linka os 3.
+  Nunca cruzar Nalu ↔ Radar.
+- Páginas geradas (gmn-goiania, agência, criação de sites, artigos de visibilidade) perdem a caixa e os links se
+  forem regeradas: depois de regerar, rode os dois scripts acima.
