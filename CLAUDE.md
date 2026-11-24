@@ -1362,7 +1362,7 @@ perguntas e cola as respostas; a tabulação e a página ficam com o Claude. O a
 - **IndexNow (`--sitemap`, 199 URLs) aceito (HTTP 200).** Chave de sempre.
 - Falta o Renan: reenviar o `sitemap.xml` (199 URLs) e pedir indexação das 10 novas e de `/nichos/`.
 
-## Rodada de 24/11/2026: estudo de velocidade dos sites das construtoras (ramo `estudo-construtoras-2026-11-24`, `9f060eae`, NÃO publicado)
+## Rodada de 24/11/2026: estudo de velocidade dos sites das construtoras (publicado em 24/11 — `9f060eae`)
 
 Pedido do Renan: "faz o estudo das construtoras" (mesmo método do teste das clínicas). Durante a medição ele
 encerrou: "chega de estudo, é esses dados que a gente vai usar".
@@ -1398,9 +1398,17 @@ encerrou: "chega de estudo, é esses dados que a gente vai usar".
 - **Falso alarme de quebra de linha:** depois dos geradores, ~170 arquivos aparecem como alterados no
   `git status` só por troca CRLF/LF. `git diff --stat` mostra a mudança real. Não é alteração de conteúdo.
 
-### Para publicar (falta o "pode publicar" do Renan)
-1. `git checkout main && git merge estudo-construtoras-2026-11-24 && git push origin main`.
-2. Conferir HTTP 200 em: o estudo, o CSV, `/marketing-para-construtoras/`, `/blog/landing-page-para-construtora/`
-   e `/blog/velocidade-sites-clinicas-goiania/`.
-3. `python scripts/indexnow.py` com essas 5 URLs (chave de sempre).
-4. Renan: reenviar o `sitemap.xml` (200 URLs) e pedir indexação do estudo no Search Console.
+### Publicação (24/11/2026)
+- Com o "pode publicar" do Renan: `666b11b9..6ecaf310` → `origin main` (avanço direto do ramo, sem conflito).
+  Cloudflare publicou em ~1 min.
+- Conferido no ar: o estudo, `/marketing-para-construtoras/`, `/blog/landing-page-para-construtora/` e o teste
+  das clínicas em HTTP 200, com DOCTYPE e o link novo; CSV em 200 (`text/csv`); sitemap com 200 URLs;
+  `/data/benchmark-construtoras.json` e os 2 scripts novos em 404 pelo middleware.
+- **IndexNow com as 4 páginas aceito (HTTP 200).** Chave de sempre.
+- Falta o Renan: reenviar o `sitemap.xml` (200 URLs) e pedir indexação do estudo (e das 11 da rodada dos
+  nichos, se ainda não pediu).
+
+### Próximo passo combinado
+Mais estudos com dado próprio nos nichos mais buscados e em temas populares ("coisa que todo mundo usa e
+gosta"), cada um com artigos de apoio. Começa levantando a procura no planejador de palavras-chave, nunca por
+opinião. Método pronto: `medir-velocidade-sites.py` + gerador no molde de `gerar-benchmark-construtoras.py`.
