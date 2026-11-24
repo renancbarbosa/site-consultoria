@@ -89,7 +89,10 @@ Página-índice: https://rcbseo.com.br/nichos/
 * **Saúde:** clínicas, dentistas (regras do CFO), médicos (regras do CFM), estética, emagrecimento, psicólogos (código de ética do CFP), veterinários.
 * **Escritórios e profissionais:** advogados (Provimento 205/2021 da OAB), contadores, imobiliárias (regra do COFECI), profissionais liberais.
 * **Empresas que atendem no local do cliente:** energia solar (Lei 14.300/2022), limpeza e terceirização, higienização de estofados, guincho e reboque, reformas (NBR 16280 em condomínio), dedetização (RDC 622/2022 da Anvisa, que também regula a propaganda dessas empresas).
-* **Comércio:** pequenas empresas e comércios locais.
+* **Comércio:** pequenas empresas, comércios locais e lojas.
+* **Beleza:** salões de beleza e barbearias (Lei 12.592/2012).
+* **Automotivo:** oficinas mecânicas (orçamento prévio do art. 40 do Código de Defesa do Consumidor).
+* **Construção:** construtoras e incorporadoras (registro da incorporação, Lei 4.591/1964) e arquitetos (Resolução CAU/BR 75/2014).
 
 Em cada nicho a página explica como o Google Meu Negócio, o site e o anúncio funcionam naquele ramo, citando a regra de propaganda que vale para ele.
 

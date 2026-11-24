@@ -2135,7 +2135,8 @@ PAGINAS = [
         "slug": "nichos",
         "hub": True,
         "nacional": True,
-        "data": "2026-10-05",
+        "publicado": "2026-10-05",
+        "data": "2026-11-23",  # 23/11/2026: salão, oficina, loja, construtoras e arquitetos
         "title": "Nichos que Atendemos: Marketing e SEO por Ramo | RCB SEO",
         "desc": ("Marketing e SEO por ramo: clínicas, dentistas, advogados, contadores, energia solar, "
                  "limpeza, guincho, reformas, dedetização e mais. Orçamento em 24h."),
@@ -2157,6 +2158,7 @@ PAGINAS = [
             "Escritórios e profissionais.",
             "Serviços no local do cliente.",
             "Comércio e pequenas empresas.",
+            "Construção e arquitetura.",
             "Site e anúncio por nicho.",
         ],
         "faq_titulo": "Perguntas frequentes sobre os nichos que atendemos",
@@ -2232,6 +2234,21 @@ PAGINAS = [
                     ("Pequenas empresas", "Por onde começar quando o orçamento de marketing é curto.",
                      "/seo-para-pequenas-empresas/"),
                     ("Comércios locais", "Loja de bairro encontrada por quem está perto.", "/para-comercios-locais/"),
+                    ("Lojas", "Loja física e online, com produtos no Google e as datas que vendem.",
+                     "/marketing-para-loja/"),
+                    ("Salões de beleza e barbearias", "Agenda cheia com fotos reais, botão de agendar e avaliações.",
+                     "/marketing-para-salao-de-beleza/"),
+                    ("Oficinas mecânicas", "Confiança antes do orçamento, avaliações na entrega e frotas.",
+                     "/marketing-para-oficina-mecanica/"),
+                ],
+            }),
+            ("cards", {
+                "tag": "Construção e arquitetura",
+                "titulo": "Atendo construtoras e arquitetos?",
+                "itens": [
+                    ("Construtoras e incorporadoras", "Uma página por empreendimento, com o registro da incorporação.",
+                     "/marketing-para-construtoras/"),
+                    ("Arquitetos", "Portfólio e anúncio dentro das regras do CAU.", "/marketing-para-arquitetos/"),
                 ],
             }),
             ("cards", {

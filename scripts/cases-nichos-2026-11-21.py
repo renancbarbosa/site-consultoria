@@ -69,6 +69,13 @@ PAGINAS = {
     "como-aparecer-no-google": "nalu",
     "blog/por-que-minha-empresa-nao-aparece-no-google": "imune",
     "blog/como-colocar-minha-empresa-no-google": "docevidade",
+    # 5 nichos de 23/11/2026: comércio de rua e serviço de bairro vivem do Maps (Docevidade);
+    # construtora e arquiteto são encontrados pelo site (Nalu)
+    "marketing-para-salao-de-beleza": "docevidade",
+    "marketing-para-oficina-mecanica": "docevidade",
+    "marketing-para-loja": "docevidade",
+    "marketing-para-construtoras": "nalu",
+    "marketing-para-arquitetos": "nalu",
 }
 
 def caixa(c, data_page, recuo, artigo):

@@ -69,6 +69,12 @@ NICHOS = [
     ("/marketing-para-empresa-de-guincho/", "Guincho"),
     ("/marketing-para-empresa-de-reformas/", "Reformas"),
     ("/marketing-para-dedetizadora/", "Dedetização"),
+    # 23/11/2026: 5 nichos do planejador de palavras-chave (100 a 1 mil buscas/mês cada)
+    ("/marketing-para-salao-de-beleza/", "Salão de beleza"),
+    ("/marketing-para-oficina-mecanica/", "Oficina mecânica"),
+    ("/marketing-para-loja/", "Lojas"),
+    ("/marketing-para-construtoras/", "Construtoras"),
+    ("/marketing-para-arquitetos/", "Arquitetos"),
 ]
 # links de servico do rodape (bloco RCB:SITES-FOOTER); o resto da coluna continua
 RODAPE_SERVICOS = [
