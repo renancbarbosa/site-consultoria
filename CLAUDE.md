@@ -1270,13 +1270,14 @@ Feito com o Renan fora, autorizado ("pode fazer tudo"). Tudo commitado localment
 - Páginas geradas (gmn-goiania, agência, criação de sites, artigos de visibilidade) perdem a caixa e os links se
   forem regeradas: depois de regerar, rode os dois scripts acima.
 
-## Rodada de 23–24/11/2026: 5 nichos novos + site pessoal (NÃO publicada — ramo local `nichos-2026-11-23`)
+## Rodada de 23–24/11/2026: 5 nichos novos + site pessoal (nichos publicados em 24/11 — `b9b2e0fa`; site pessoal ainda não)
 
 Pedido do Renan: revisão geral da estratégia de links, "o máximo possível" de agressividade, e usar o domínio
 pessoal sem uso. Respostas dele à proposta: "1 sim" (nichos novos + site pessoal), "2, vc mesmo pode fazer isso"
 (pesquisa com as IAs), "3, vc mesmo pode olhar" (Perfil da Empresa). Diagnóstico com os números do Search Console:
-memória `diagnostico-nichos-vs-autoridade`. Commits locais: `bfc1e654` (nichos), `0f1efced` (textos menos
-parecidos + conserto de quebra de linha), `2ffb000f` (protegida, só menu). **Nenhum push.**
+memória `diagnostico-nichos-vs-autoridade`. Commits: `bfc1e654` (nichos), `0f1efced` (textos menos
+parecidos + conserto de quebra de linha), `2ffb000f` (protegida, só menu), `b9b2e0fa` (este registro).
+Publicados juntos em 24/11/2026 com "pode publicar" do Renan, inclusive o da protegida.
 
 ### rcbseo: 10 URLs novas (sitemap 189 → 199)
 | Nicho | Página | Artigo |
@@ -1299,7 +1300,7 @@ Os 5 tinham de 100 a 1 mil buscas/mês no planejador de 10/11 e nenhuma página 
 - Caixa "Resultado real" (`cases-nichos-2026-11-21.py`): salão, oficina e loja → Docevidade; construtoras e
   arquitetos → Nalu.
 - Protegida `/consultor-seo-goiania/`: só os 5 itens do menu (`ligar-nichos-2026-11-23.py --protegida`), em
-  commit próprio (`2ffb000f`), que pode ser descartado sozinho se o Renan não autorizar.
+  commit próprio (`2ffb000f`). O Renan foi avisado e publicou junto ("pode publicar").
 
 **Ordem ao regerar esta rodada** (a 2ª passada da cadeia inteira tem que dar 0 alteradas em todos):
 ```
@@ -1352,8 +1353,11 @@ perguntas e cola as respostas; a tabulação e a página ficam com o Claude. O a
 - Depois que estiver no ar: acrescentar `https://renancarvalhobarbosa.com.br/` em `fundador.sameAs` do
   `data/marca.json` e rodar `python scripts/entidade-ia-2026-10-29.py` (os dois sites passam a apontar um para o outro).
 
-### Publicação (aguardando "pode publicar")
-1. `git checkout main`, `git merge nichos-2026-11-23`, `git push origin main`.
-2. Conferir HTTP 200 nas 10 URLs novas e nas alteradas indexáveis (curl com user-agent de navegador).
-3. `python scripts/indexnow.py` com essas URLs (chave de sempre).
-4. Renan: reenviar o `sitemap.xml` (199 URLs) e pedir indexação das 10 novas e de `/nichos/`.
+### Publicação (24/11/2026)
+- `2ea06be5..b9b2e0fa` → `origin main` (merge direto, sem conflito). Antes: `conferir-conversao.py` sem problema
+  e gitleaks com 205 achados, **todos** conferidos linha a linha como o código público do Cloudflare.
+- As 199 páginas com HTML alterado (todas as do sitemap, por causa do menu) conferidas no ar: **todas HTTP 200**,
+  começando com `<!DOCTYPE` e já com o item novo do menu (prova de HTML novo, não de cópia em cache).
+- Arquivos internos novos (`/scripts/...nichos...`) conferidos em 404 pelo middleware.
+- **IndexNow (`--sitemap`, 199 URLs) aceito (HTTP 200).** Chave de sempre.
+- Falta o Renan: reenviar o `sitemap.xml` (199 URLs) e pedir indexação das 10 novas e de `/nichos/`.
