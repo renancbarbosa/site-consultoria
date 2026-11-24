@@ -1269,3 +1269,91 @@ Feito com o Renan fora, autorizado ("pode fazer tudo"). Tudo commitado localment
   Nunca cruzar Nalu ↔ Radar.
 - Páginas geradas (gmn-goiania, agência, criação de sites, artigos de visibilidade) perdem a caixa e os links se
   forem regeradas: depois de regerar, rode os dois scripts acima.
+
+## Rodada de 23–24/11/2026: 5 nichos novos + site pessoal (NÃO publicada — ramo local `nichos-2026-11-23`)
+
+Pedido do Renan: revisão geral da estratégia de links, "o máximo possível" de agressividade, e usar o domínio
+pessoal sem uso. Respostas dele à proposta: "1 sim" (nichos novos + site pessoal), "2, vc mesmo pode fazer isso"
+(pesquisa com as IAs), "3, vc mesmo pode olhar" (Perfil da Empresa). Diagnóstico com os números do Search Console:
+memória `diagnostico-nichos-vs-autoridade`. Commits locais: `bfc1e654` (nichos), `0f1efced` (textos menos
+parecidos + conserto de quebra de linha), `2ffb000f` (protegida, só menu). **Nenhum push.**
+
+### rcbseo: 10 URLs novas (sitemap 189 → 199)
+| Nicho | Página | Artigo |
+|---|---|---|
+| Salão de beleza | `/marketing-para-salao-de-beleza/` | `/blog/como-atrair-clientes-para-salao-de-beleza/` |
+| Oficina mecânica | `/marketing-para-oficina-mecanica/` | `/blog/como-atrair-clientes-para-oficina-mecanica/` |
+| Lojas | `/marketing-para-loja/` | `/blog/como-atrair-clientes-para-loja/` |
+| Construtoras | `/marketing-para-construtoras/` | `/blog/landing-page-para-construtora/` |
+| Arquitetos | `/marketing-para-arquitetos/` | `/blog/google-ads-para-arquitetos/` |
+
+Os 5 tinham de 100 a 1 mil buscas/mês no planejador de 10/11 e nenhuma página no site.
+- Texto escrito à mão em `scripts/conteudo/nichos_2026_11_paginas.py` e `nichos_2026_11_artigos.py`. Gerador
+  `scripts/gerar-nichos-2026-11-23.py`: clona o esqueleto de `/criacao-de-sites-goiania/` pelo `montar()` do
+  `gerar-servicos-marketing.py` e também refaz o hub `/nichos/`, sitemap, cartões do índice do blog e os dois llms.
+  Idempotente. `--teste` remonta a página e o artigo de guincho e confere que saem iguais (prova que o molde não mudou).
+- Menu "Nichos": 5 itens novos em `rcb_menu.NICHOS`, propagados por `scripts/ligar-nichos-2026-11-23.py`, com
+  trava (só grava se a única diferença forem os 5 itens) e 9 caixas de link entre assuntos vizinhos (marcador
+  `RCB:NICHOS-1123`): guincho → oficina, reformas → construtoras e arquitetos, estética → salão, comércios → loja,
+  landing page → construtora, loja virtual → loja, imobiliárias → construtoras.
+- Caixa "Resultado real" (`cases-nichos-2026-11-21.py`): salão, oficina e loja → Docevidade; construtoras e
+  arquitetos → Nalu.
+- Protegida `/consultor-seo-goiania/`: só os 5 itens do menu (`ligar-nichos-2026-11-23.py --protegida`), em
+  commit próprio (`2ffb000f`), que pode ser descartado sozinho se o Renan não autorizar.
+
+**Ordem ao regerar esta rodada** (a 2ª passada da cadeia inteira tem que dar 0 alteradas em todos):
+```
+python scripts/gerar-nichos-2026-11-23.py
+python scripts/ligar-nichos-2026-11-23.py
+python scripts/ligar-pesquisa-2026-11-10.py
+python scripts/cases-nichos-2026-11-21.py
+python scripts/ligar-leigas-2026-11-21.py
+python scripts/conferir-conversao.py
+```
+O `ligar-pesquisa` pode precisar de 2 execuções para estabilizar (outras caixas entram entre ela e o FAQ).
+
+### Defeito escondido corrigido: caixa duplicada depois de checkout
+`ligar-pesquisa-2026-11-10.py`, `ligar-gmn-goiania-2026-11-09.py` e `reforco-links-2026-11-09.py` procuravam a
+caixa velha terminando em `-->\n`. Com `core.autocrlf=true`, um checkout ou merge regrava os arquivos com `\r\n`:
+a caixa velha não era achada e a página ganhava uma **segunda** caixa. Agora aceitam `\r?\n`. Regra para script
+novo de caixa: aceitar as duas quebras de linha e gravar com a quebra do próprio arquivo.
+
+### Semelhança entre textos: sempre o mesmo método
+Método do `scripts/medir-similaridade.py` (palavras sem pontuação, `difflib.SequenceMatcher` padrão), **aplicado
+só ao `<main>`**. Páginas novas: maior par salão × oficina **37,2%**. Artigos: abaixo de 22% em qualquer método.
+Cuidado: a página inteira (menu e rodapé iguais em todo o site) dá ~48% no mesmo par, e `autojunk=False` dá
+~42%. Números medidos de jeitos diferentes não se comparam.
+
+### gitleaks: os achados de "generic-api-key" são falso positivo
+`gitleaks dir .` acusa ~205 (10 só nesta rodada). Todos são o mesmo trecho: o código público do Cloudflare Web
+Analytics (`data-cf-beacon='{"token": ...}'`), presente em toda página e visível para qualquer visitante. Não é
+segredo. Um achado de **outro** tipo, ou fora desse trecho, continua merecendo investigação.
+
+### Perfil da Empresa no Google (olhado em 24/11/2026)
+Categoria "Agência de marketing digital" correta; nota 5,0 com 5 avaliações; as 2 mais recentes **sem resposta**;
+última postagem em 07/10/2026; só 5 fotos. Há duas avaliações com nomes muito parecidos (possivelmente a mesma
+pessoa): uma avaliação por pessoa é o mais seguro.
+
+### Pesquisa "Quem a IA indica em Goiânia": não dá para rodar daqui
+Os termos do ChatGPT e do Gemini proíbem acesso automatizado, e as APIs são pagas. Caminho: o Renan faz as 20
+perguntas e cola as respostas; a tabulação e a página ficam com o Claude. O artigo
+`/blog/quem-a-ia-indica-em-goiania/` continua só com dado real.
+
+### Site pessoal renancarvalhobarbosa.com.br (pasta própria, NÃO publicado)
+- Pasta `C:/Users/renan/renancarvalhobarbosa/`, repositório git próprio (commit local `97356fc`, sem remoto).
+  `python gerar.py` grava em `site/`, a única pasta que vai ao ar. Manual e passo a passo de publicação no
+  `LEIA-ME.md` de lá.
+- 4 páginas: início (`ProfilePage`), sobre (`AboutPage`), imprensa (bio curta e completa, foto oficial, temas, o
+  dado do teste de velocidade das clínicas) e palestras (temas e formatos; não afirma palestra já dada) + 404.
+- Lê telefone, e-mail, LinkedIn e `knowsAbout` deste `data/marca.json`: **mexeu no marca.json, rode o gerador de
+  lá também.**
+- **Não é portal de links:** só RCB SEO, LinkedIn e WhatsApp. O gerador para com erro se aparecer outro link
+  externo. Nunca Nalu, Radar ou Imune.
+- Depois que estiver no ar: acrescentar `https://renancarvalhobarbosa.com.br/` em `fundador.sameAs` do
+  `data/marca.json` e rodar `python scripts/entidade-ia-2026-10-29.py` (os dois sites passam a apontar um para o outro).
+
+### Publicação (aguardando "pode publicar")
+1. `git checkout main`, `git merge nichos-2026-11-23`, `git push origin main`.
+2. Conferir HTTP 200 nas 10 URLs novas e nas alteradas indexáveis (curl com user-agent de navegador).
+3. `python scripts/indexnow.py` com essas URLs (chave de sempre).
+4. Renan: reenviar o `sitemap.xml` (199 URLs) e pedir indexação das 10 novas e de `/nichos/`.
