@@ -57,7 +57,8 @@ ALVOS = [
     "blog/como-aparecer-google-clinica-estetica-goiania/index.html",
     "blog/o-que-e-seo-local/index.html", "blog/seo-para-empresas-locais/index.html",
 ]
-_CAIXA = re.compile(r'<!--RCB:GMN-GOIANIA-->.*?<!--/RCB:GMN-GOIANIA-->\n', re.S)
+# \r?\n: depois de um checkout o git (autocrlf) troca a quebra de linha (corrigido em 24/11/2026)
+_CAIXA = re.compile(r'<!--RCB:GMN-GOIANIA-->.*?<!--/RCB:GMN-GOIANIA-->\r?\n', re.S)
 _FAQ = re.compile(r'<h2[^>]*>\s*Perguntas frequentes', re.I)
 
 

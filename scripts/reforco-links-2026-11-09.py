@@ -80,7 +80,8 @@ DOADORES = {
         + " e veja o " + A % (VEL, "teste de velocidade dos sites de clínicas da cidade") + ".",
     "consultoria-seo-local/index.html": "<strong>Fora de Goiânia?</strong> " + CIDADES,
 }
-_CAIXA = re.compile(r'<!--RCB:REFORCO-->.*?<!--/RCB:REFORCO-->\n', re.S)
+# \r?\n: depois de um checkout o git (autocrlf) troca a quebra de linha (corrigido em 24/11/2026)
+_CAIXA = re.compile(r'<!--RCB:REFORCO-->.*?<!--/RCB:REFORCO-->\r?\n', re.S)
 _FAQ = re.compile(r'<h2[^>]*>\s*Perguntas frequentes', re.I)
 
 

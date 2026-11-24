@@ -75,7 +75,9 @@ SEGUNDO = [
 ADV = " É advogado e anuncia no Google? Veja a " + A % (LP, "landing page para advogados") + "."
 ADV_ALVOS = ("advog", "advoc", "criacao-de-landing-page", "juridic")
 
-_CAIXA = re.compile(r'<!--RCB:PESQUISA-1110-->.*?<!--/RCB:PESQUISA-1110-->\n', re.S)
+# \r?\n: depois de um checkout o git (autocrlf) troca a quebra de linha; sem isso a caixa velha não
+# é achada e a página ganha uma segunda caixa (corrigido em 24/11/2026)
+_CAIXA = re.compile(r'<!--RCB:PESQUISA-1110-->.*?<!--/RCB:PESQUISA-1110-->\r?\n', re.S)
 _FAQ = re.compile(r'<h2[^>]*>\s*Perguntas frequentes', re.I)
 _OUTRAS = ("<!--RCB:GMN-GOIANIA-->", "<!--RCB:REFORCO-->")
 

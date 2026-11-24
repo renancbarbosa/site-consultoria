@@ -331,7 +331,7 @@ PAGINAS = [
             ("cards", {
                 "tag": "As frentes",
                 "titulo": "O que entra no marketing de uma oficina mecânica?",
-                "desc": "As frentes que enchem o pátio. Dá para começar por uma e somar as outras.",
+                "desc": "O que traz carro para o elevador. Dá para fazer uma frente de cada vez.",
                 "itens": [
                     ("Perfil no Google Maps",
                      "Categoria, serviços um por um, fotos da oficina por dentro, horário de sábado e rotina de "
@@ -382,7 +382,7 @@ PAGINAS = [
                 "titulo": "Como funciona o marketing da sua oficina, do diagnóstico ao pátio cheio?",
                 "itens": [
                     ("Diagnóstico", "Olho o seu perfil no Google, o site e quem aparece antes de você na região."),
-                    ("Plano por escrito", "Em até 24 horas: as frentes para começar, o que entra e o valor de cada uma."),
+                    ("Proposta por escrito", "Em até 24 horas você recebe o que eu faria primeiro na oficina e quanto custa cada parte."),
                     ("Perfil e site", "Serviços, fotos, horário e um site que explica cada serviço."),
                     ("Anúncio, se fizer sentido", "Campanha só no raio da oficina, com as buscas erradas bloqueadas."),
                     ("Medição", "Relatório de ligações e mensagens por canal."),
@@ -390,7 +390,7 @@ PAGINAS = [
             }),
             ("orcamento", {
                 "titulo": "Por onde a sua oficina quer começar?",
-                "desc": "Escolha o ponto de partida. O orçamento é grátis e sai em até 24 horas pelo WhatsApp.",
+                "desc": "Diga por onde a oficina quer começar. A resposta vem pelo WhatsApp em até 24 horas, sem custo.",
                 "destaque": 1,
                 "itens": [
                     ("Aparecer no mapa da região", "Para quem ainda depende de indicação.",
@@ -419,8 +419,8 @@ PAGINAS = [
              "Sim. O Código de Defesa do Consumidor (art. 40) manda entregar orçamento prévio com mão de obra, "
              "peças, pagamento e datas, válido por 10 dias salvo combinação diferente."),
             ("Quanto custa o marketing para oficina mecânica?",
-             "Depende das frentes que entram e da concorrência na sua região. O orçamento é individual, grátis e "
-             "sai em até 24 horas pelo WhatsApp. A verba de anúncio, quando houver, é paga direto ao Google."),
+             "Depende do que a oficina já tem e de quantas oficinas disputam a sua região. Eu mando a proposta "
+             "pelo WhatsApp em até 24 horas, sem custo. Se houver anúncio, a verba vai direto para o Google."),
             FIDELIDADE,
         ],
         "relacionados": [
@@ -578,7 +578,7 @@ PAGINAS = [
                 "titulo": "Como funciona o marketing da sua loja, do diagnóstico às vendas?",
                 "itens": [
                     ("Diagnóstico", "Olho o seu perfil no Google, o site e quem aparece antes de você na região."),
-                    ("Plano por escrito", "Em até 24 horas: as frentes para começar, o que entra e o valor de cada uma."),
+                    ("Plano no papel", "Em até 24 horas: por onde a loja começa, o que cada frente inclui e o valor de cada uma."),
                     ("Perfil e produtos", "Fotos, produtos, horário especial e rotina de avaliações."),
                     ("Site e anúncio, se fizer sentido", "Site ou loja virtual e anúncio nas datas que vendem."),
                     ("Medição", "Relatório de rotas, ligações, mensagens e vendas por canal."),
@@ -586,7 +586,7 @@ PAGINAS = [
             }),
             ("orcamento", {
                 "titulo": "Por onde a sua loja quer começar?",
-                "desc": "Escolha o ponto de partida. O orçamento é grátis e sai em até 24 horas pelo WhatsApp.",
+                "desc": "Escolha o primeiro passo da loja. Eu respondo pelo WhatsApp em até 24 horas, sem cobrar nada.",
                 "destaque": 1,
                 "itens": [
                     ("Aparecer no mapa da região", "Para quem depende de quem passa na frente.",
@@ -615,8 +615,8 @@ PAGINAS = [
              "Quem vende só no bairro costuma resolver com um site com catálogo e WhatsApp. Quem quer vender para "
              "outras cidades precisa de loja virtual com pagamento e frete."),
             ("Quanto custa o marketing para loja?",
-             "Depende das frentes que entram e do tamanho do catálogo. O orçamento é individual, grátis e sai em até "
-             "24 horas pelo WhatsApp. A verba de anúncio, quando houver, é paga direto ao Google."),
+             "Depende do tamanho do catálogo e de quantas frentes a loja quer. A proposta sai sem custo, em até "
+             "24 horas, pelo WhatsApp. Quando houver anúncio, a verba é paga direto ao Google."),
             FIDELIDADE,
         ],
         "relacionados": [
@@ -771,7 +771,7 @@ PAGINAS = [
                 "titulo": "Como funciona o marketing da sua construtora, do diagnóstico ao contato certo?",
                 "itens": [
                     ("Diagnóstico", "Olho o site, os anúncios, as páginas dos empreendimentos e quem aparece antes de você."),
-                    ("Plano por escrito", "Em até 24 horas: as frentes para começar, o que entra e o valor de cada uma."),
+                    ("Proposta por lançamento", "Em até 24 horas: o que cada empreendimento precisa, o que entra e o valor de cada parte."),
                     ("Página do empreendimento", "Uma página por empreendimento, com o registro da incorporação e formulário curto."),
                     ("Anúncio, se fizer sentido", "Campanha por bairro e tipo de imóvel, com as buscas erradas bloqueadas."),
                     ("Medição", "Relatório de contatos e visitas por anúncio e por página."),
@@ -779,7 +779,7 @@ PAGINAS = [
             }),
             ("orcamento", {
                 "titulo": "Por onde a sua construtora quer começar?",
-                "desc": "Escolha o ponto de partida. O orçamento é grátis e sai em até 24 horas pelo WhatsApp.",
+                "desc": "Comece por um lançamento ou pelo site da construtora. Orçamento sem custo em até 24 horas.",
                 "destaque": 0,
                 "itens": [
                     ("Página de lançamento", "Para vender um empreendimento específico.",
@@ -808,8 +808,8 @@ PAGINAS = [
              "Precisa, com outro foco: portfólio, obras entregues, perfil no Google com avaliações e parceria com "
              "arquitetos e engenheiros."),
             ("Quanto custa o marketing para construtora?",
-             "Depende do número de empreendimentos, das frentes que entram e da região. O orçamento é individual, "
-             "grátis e sai em até 24 horas pelo WhatsApp. A verba de anúncio é paga direto ao Google."),
+             "Varia com o número de lançamentos e com a região. A proposta é feita para a sua construtora, sem "
+             "custo, em até 24 horas pelo WhatsApp. A verba de anúncio vai direto para o Google."),
             FIDELIDADE,
         ],
         "relacionados": [
@@ -929,7 +929,7 @@ PAGINAS = [
             ("cards", {
                 "tag": "As frentes",
                 "titulo": "O que entra no marketing de um escritório de arquitetura?",
-                "desc": "As frentes que trazem projeto novo. Dá para começar por uma e somar as outras.",
+                "desc": "As frentes que trazem projeto novo, na ordem que fizer sentido para o escritório.",
                 "itens": [
                     ("Site com portfólio",
                      "Projetos por tipo, com problema, solução e fotos autorizadas."),
@@ -951,7 +951,7 @@ PAGINAS = [
                 "titulo": "Como funciona o marketing do seu escritório, do diagnóstico ao projeto novo?",
                 "itens": [
                     ("Diagnóstico", "Olho o seu site, o perfil no Google e quem aparece antes de você na cidade."),
-                    ("Plano por escrito", "Em até 24 horas: as frentes para começar, o que entra e o valor de cada uma."),
+                    ("Proposta para o escritório", "Em até 24 horas: o que falta primeiro, o que entra e quanto custa cada frente."),
                     ("Portfólio e páginas", "Projetos organizados por tipo e uma página para cada serviço."),
                     ("Anúncio, se fizer sentido", "Campanha na sua região, com o registro no CAU e as buscas erradas bloqueadas."),
                     ("Medição", "Relatório de contatos por canal."),
@@ -959,7 +959,7 @@ PAGINAS = [
             }),
             ("orcamento", {
                 "titulo": "Por onde o seu escritório quer começar?",
-                "desc": "Escolha o ponto de partida. O orçamento é grátis e sai em até 24 horas pelo WhatsApp.",
+                "desc": "Comece pelo que mais falta no escritório. Orçamento sem custo, respondido em até 24 horas.",
                 "destaque": 0,
                 "itens": [
                     ("Site com portfólio", "Para o cliente entender o seu estilo antes de ligar.",
@@ -989,8 +989,8 @@ PAGINAS = [
              "Vale para quem tem página por serviço e responde rápido. O cuidado é anunciar só na sua região e "
              "bloquear buscas de curso, vaga e planta grátis."),
             ("Quanto custa o marketing para arquitetos?",
-             "Depende das frentes que entram e da sua cidade. O orçamento é individual, grátis e sai em até 24 horas "
-             "pelo WhatsApp. A verba de anúncio, quando houver, é paga direto ao Google."),
+             "Varia com o que o escritório já tem e com a cidade. Você recebe a proposta sem custo, em até 24 horas, "
+             "pelo WhatsApp. Se houver anúncio, a verba é paga direto ao Google."),
             FIDELIDADE,
         ],
         "relacionados": [
