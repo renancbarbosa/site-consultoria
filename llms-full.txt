@@ -151,3 +151,5 @@ Sim. O atendimento presencial é em Goiânia e região; para o resto do Brasil, 
 * Blog: https://rcbseo.com.br/blog/
 * Guia de SEO local: https://rcbseo.com.br/guia-seo-local/
 * Ferramentas grátis para ver sua empresa no Google: https://rcbseo.com.br/ferramentas/
+* Velocidade dos sites de clínicas de Goiânia: https://rcbseo.com.br/blog/velocidade-sites-clinicas-goiania/. Teste de velocidade no celular dos sites de 16 clínicas de Goiânia (dados próprios, 28/10/2026): Lighthouse, 3 testes por site; média 56 de 100, nenhum no verde. Tabela e dados para baixar (CSV).
+* Velocidade dos sites de construtoras de Goiânia: https://rcbseo.com.br/blog/velocidade-sites-construtoras-goiania/. Teste de velocidade no celular dos sites de 31 construtoras e incorporadoras associadas à ADEMI-GO (dados próprios, 24/11/2026): Lighthouse, 3 testes por site; média 47 de 100; conteúdo principal em 10,2 segundos no site do meio da lista. Tabela e dados para baixar (CSV).

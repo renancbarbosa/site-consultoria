@@ -1,0 +1,245 @@
+{
+ "consulta": "2026-11-24",
+ "fonte": "https://ademigo.com.br/associados",
+ "regra": "Todas as associadas da ADEMI-GO listadas no site da associação em 24/11/2026 (34). Testado o endereço de site que a própria lista informa, com e sem www e com e sem https; vale o que abrir. Fica fora quem não abriu em nenhuma variação.",
+ "empresas": [
+  {
+   "nome": "Água Santa Incorporadora",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/agua-santa-incorporadora",
+   "site_informado": "https://aguasantaincorporadora.com.br",
+   "url": "https://aguasantaincorporadora.com.br"
+  },
+  {
+   "nome": "ÁVOLLI Inc",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/avolli-inc",
+   "site_informado": "https://avolli.com.br/",
+   "url": "https://avolli.com.br/"
+  },
+  {
+   "nome": "Bambuí Singular",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/bambui-singular",
+   "site_informado": "https://bambui.com.br",
+   "url": "https://bambui.com.br"
+  },
+  {
+   "nome": "Brasal Incorporações",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/brasal",
+   "site_informado": "http://brasalincorporacoes.com.br",
+   "url": "https://www.brasal.com.br/incorporacoes/"
+  },
+  {
+   "nome": "Cinq Inteligência Urbana",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/cinq-inteligencia-urbana",
+   "site_informado": "https://cinqdi.com.br/",
+   "url": "https://cinqdi.com.br/"
+  },
+  {
+   "nome": "CITY Incorporadora",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/city",
+   "site_informado": "http://www.cityinc.com.br",
+   "url": "https://www.cityinc.com.br/"
+  },
+  {
+   "nome": "CMO Construtora",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/cmo",
+   "site_informado": "https://cmoconstrutora.com.br",
+   "url": "https://www.cmoconstrutora.com.br/"
+  },
+  {
+   "nome": "Dinâmica Engenharia",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/dinamica",
+   "site_informado": "http://www.dinamicaeng.com.br",
+   "fora": "certificado de segurança vencido desde 15/01/2025: o navegador mostra o aviso de site perigoso antes de abrir"
+  },
+  {
+   "nome": "EBM Incorporações",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/ebm",
+   "site_informado": "http://www.ebm.com.br",
+   "url": "https://ebm.com.br/"
+  },
+  {
+   "nome": "Elmo Engenharia",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/elmo",
+   "site_informado": "http://www.elmoengenharia.com.br",
+   "url": "https://elmoengenharia.com.br/"
+  },
+  {
+   "nome": "Enec Engenharia",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/enec-engenharia",
+   "site_informado": "http://www.enecengenharia.com.br",
+   "url": "https://enecengenharia.com.br/"
+  },
+  {
+   "nome": "Engel",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/engel",
+   "site_informado": "http://www.engelengenharia.com.br",
+   "url": "http://www.engelengenharia.com.br/"
+  },
+  {
+   "nome": "Euroamérica Incorporações",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/euroamerica-incorporacoes",
+   "site_informado": "http://euroamericaconstrutora.com.br",
+   "url": "https://euroinc.com.br/"
+  },
+  {
+   "nome": "Flamboyant Urbanismo",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/flamboyant-urbanismo",
+   "site_informado": "http://www.flamboyanturbanismo.com.br/",
+   "url": "https://flamboyanturbanismo.com.br/"
+  },
+  {
+   "nome": "GMP Incorporação",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/gmp-incorporacao",
+   "site_informado": "http://gmpincorporacao.com.br",
+   "url": "https://www.gmpincorporacao.com.br/"
+  },
+  {
+   "nome": "GPL Incorporadora",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/gpl-incorporadora",
+   "site_informado": "http://www.gplincorporadora.com.br",
+   "url": "https://www.gplincorporadora.com.br/"
+  },
+  {
+   "nome": "Grupo Castel",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/grupo-castel",
+   "site_informado": "https://grupocastel.com.br",
+   "url": "https://grupocastel.com.br"
+  },
+  {
+   "nome": "Louly Incorporadora",
+   "cidade": "Aparecida de Goiânia",
+   "ademi": "https://ademigo.com.br/associados/louly-incorporadora",
+   "site_informado": "https://loulycaixe.com.br/",
+   "url": "https://loulyinc.com.br/"
+  },
+  {
+   "nome": "Oliveira Melo Incorporadora",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/oliveira-melo-construtora",
+   "site_informado": "http://www.ominc.com.br",
+   "url": "https://ominc.com.br/"
+  },
+  {
+   "nome": "Opus Incorporadora",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/opus",
+   "site_informado": "http://www.opus.inc",
+   "url": "https://www.opus.inc/"
+  },
+  {
+   "nome": "Palme",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/palme",
+   "site_informado": "https://grupopalme.com.br/",
+   "url": "https://palmeincorporadora.com.br/"
+  },
+  {
+   "nome": "Plano e Plano",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/plano-e-plano",
+   "site_informado": "https://www.planoeplano.com.br/",
+   "url": "https://www.planoeplano.com.br/"
+  },
+  {
+   "nome": "Serca Incorporadora",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/serca-incorporadora",
+   "site_informado": "http://www.sercaconstrutora.com.br",
+   "url": "https://www.sercaconstrutora.com.br/"
+  },
+  {
+   "nome": "Sim Engenharia",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/sim-engenharia",
+   "site_informado": "http://simengenharia.eng.br",
+   "url": "https://siminc.com.br/"
+  },
+  {
+   "nome": "Somos",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/somos",
+   "site_informado": "http://somosdi.com.br",
+   "url": "https://somosdi.com.br/"
+  },
+  {
+   "nome": "Sousa Andrade Construtora",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/sousa-andrade-construtora",
+   "site_informado": "http://www.sousaandrade.com.br",
+   "url": "https://sousaandrade.com.br/"
+  },
+  {
+   "nome": "Terral Incorporações",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/terral",
+   "site_informado": "http://terralincorporadora.com.br",
+   "url": "https://www.terralincorporadora.com.br/"
+  },
+  {
+   "nome": "Toctao Engenharia",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/toctao-engenharia",
+   "site_informado": "http://www.toctaoengenharia.com.br/",
+   "url": "http://www.toctaoengenharia.com.br/"
+  },
+  {
+   "nome": "Tropical Urbanismo e Incorporações",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/tropical-urbanismo-e-incorporacoes",
+   "site_informado": "http://www.tropicalurbanismo.com.br",
+   "url": "https://www.tropicalurbanismo.com.br/"
+  },
+  {
+   "nome": "UP Inc.",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/up-inc",
+   "site_informado": "https://www.upincorporadora.com/",
+   "url": "https://www.upincorporadora.com/"
+  },
+  {
+   "nome": "Vega Incorporações",
+   "cidade": "Aparecida de Goiânia",
+   "ademi": "https://ademigo.com.br/associados/vega-incorporacoes",
+   "site_informado": "http://www.grupovega.com.br",
+   "url": "https://www.grupovega.com.br/"
+  },
+  {
+   "nome": "Vinci",
+   "cidade": "",
+   "ademi": "https://ademigo.com.br/associados/vinci",
+   "site_informado": "https://vincipart.com.br",
+   "fora": "o endereço informado não existe mais (o domínio não responde) e a lista não traz cidade"
+  },
+  {
+   "nome": "Virta Incorporadora",
+   "cidade": "Goiânia",
+   "ademi": "https://ademigo.com.br/associados/virta",
+   "site_informado": "https://virtainc.com.br/",
+   "url": "https://virtainc.com.br/"
+  },
+  {
+   "nome": "WV Maldi",
+   "cidade": "Aparecida de Goiânia",
+   "ademi": "https://ademigo.com.br/associados/wv-maldi",
+   "site_informado": "https://www.wvmaldi.com.br/",
+   "url": "https://www.wvmaldi.com.br/"
+  }
+ ]
+}

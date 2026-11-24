@@ -516,7 +516,8 @@ ARTIGOS = [
         <p>Boa parte de quem clica no anúncio está no celular, muitas vezes com internet fraca. Fotos pesadas,
         vídeo que toca sozinho e excesso de efeitos deixam a página lenta, e a pessoa desiste antes de ver o
         imóvel. Fotos bem comprimidas, texto curto e botão de contato sempre à vista fazem mais diferença do que
-        qualquer animação.</p>
+        qualquer animação. Para ver como isso aparece na prática, veja o
+        {link('/blog/velocidade-sites-construtoras-goiania/', 'teste de velocidade dos sites das construtoras de Goiânia')}.</p>
 
         <h2>10. Medição por anúncio e por página</h2>
         <p>Cada contato precisa chegar com a origem marcada: qual anúncio, qual página, qual empreendimento. Sem

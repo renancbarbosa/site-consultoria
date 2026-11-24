@@ -1,0 +1,32 @@
+construtora,url,cidade,nota_celular,situacao,notas_dos_3_testes,lcp_segundos,peso_mb,video_mb,plataforma,whatsapp_na_pagina,cadeado_https,data_do_teste
+Vega Incorporações,https://www.grupovega.com.br/,Aparecida de Goiânia,97,Rápido,97 98 97,2.5,0.5,0.0,Next.js,não,sim,2026-11-24
+ÁVOLLI Inc,https://avolli.com.br/,Goiânia,82,Razoável,82 89 67,3.4,1.3,0.0,WordPress,sim,sim,2026-11-24
+UP Inc.,https://www.upincorporadora.com/,Goiânia,81,Razoável,81 66 81,4.0,5.5,0.0,Não identificada,sim,sim,2026-11-24
+Elmo Engenharia,https://elmoengenharia.com.br/,Goiânia,75,Razoável,75 73 80,3.5,1.0,0.0,WordPress,sim,sim,2026-11-24
+Engel,http://www.engelengenharia.com.br/,Goiânia,66,Razoável,67 63 66,6.7,1.0,0.0,Não identificada,não,não,2026-11-24
+CITY Incorporadora,https://www.cityinc.com.br/,Goiânia,63,Razoável,50 63 66,3.1,2.3,0.0,Nuxt com WordPress,sim,sim,2026-11-24
+Tropical Urbanismo e Incorporações,https://www.tropicalurbanismo.com.br/,Goiânia,63,Razoável,55 64 63,7.2,19.7,1.9,WordPress,sim,sim,2026-11-24
+CMO Construtora,https://www.cmoconstrutora.com.br/,Goiânia,57,Razoável,48 57 61,4.5,17.2,8.8,Next.js,sim,sim,2026-11-24
+Toctao Engenharia,http://www.toctaoengenharia.com.br/,Goiânia,57,Razoável,57 57 57,21.4,4.7,0.0,WordPress,não,não,2026-11-24
+Oliveira Melo Incorporadora,https://ominc.com.br/,Goiânia,56,Razoável,53 59 56,3.6,2.5,0.0,Nuxt com WordPress,sim,parcial,2026-11-24
+Somos,https://somosdi.com.br/,Goiânia,55,Razoável,55 55 55,17.5,130.5,0.0,WordPress,não,sim,2026-11-24
+GMP Incorporação,https://www.gmpincorporacao.com.br/,Goiânia,48,Lento,47 48 49,13.0,9.8,7.2,WordPress,sim,sim,2026-11-24
+Enec Engenharia,https://enecengenharia.com.br/,Goiânia,47,Lento,47 52 47,9.1,2.2,0.0,WordPress,não,sim,2026-11-24
+Grupo Castel,https://grupocastel.com.br,Goiânia,46,Lento,46 45 48,29.5,27.4,0.0,Não identificada,sim,sim,2026-11-24
+Louly Incorporadora,https://loulyinc.com.br/,Aparecida de Goiânia,45,Lento,45 49 42,16.0,3.0,0.0,Não identificada,sim,sim,2026-11-24
+Plano e Plano,https://www.planoeplano.com.br/,Goiânia,41,Lento,42 41 28,6.9,6.8,3.1,Não identificada,sim,sim,2026-11-24
+Opus Incorporadora,https://www.opus.inc/,Goiânia,41,Lento,46 39 41,18.5,11.8,0.0,Não identificada,sim,sim,2026-11-24
+Serca Incorporadora,https://www.sercaconstrutora.com.br/,Goiânia,40,Lento,40 36 41,37.7,7.4,0.1,Wix,sim,sim,2026-11-24
+Terral Incorporações,https://www.terralincorporadora.com.br/,Goiânia,38,Lento,36 38 38,27.1,4.8,0.0,Inforce,sim,sim,2026-11-24
+Bambuí Singular,https://bambui.com.br,Goiânia,37,Lento,35 37 41,5.8,7.6,0.0,WordPress,sim,sim,2026-11-24
+Euroamérica Incorporações,https://euroinc.com.br/,Goiânia,35,Lento,35 35 35,10.2,9.9,0.0,WordPress,sim,sim,2026-11-24
+Palme,https://palmeincorporadora.com.br/,Goiânia,35,Lento,38 34 35,15.5,7.4,0.0,WordPress,sim,sim,2026-11-24
+Virta Incorporadora,https://virtainc.com.br/,Goiânia,35,Lento,33 35 35,19.4,23.5,0.0,WordPress,sim,sim,2026-11-24
+Sim Engenharia,https://siminc.com.br/,Goiânia,35,Lento,43 33 35,20.7,3.8,0.0,Grifo Apps,sim,sim,2026-11-24
+Brasal Incorporações,https://www.brasal.com.br/incorporacoes/,Goiânia,34,Lento,33 35 34,10.2,2.8,0.0,WordPress,sim,sim,2026-11-24
+Flamboyant Urbanismo,https://flamboyanturbanismo.com.br/,Goiânia,32,Lento,33 32 32,6.7,2.9,0.0,WordPress,sim,sim,2026-11-24
+Água Santa Incorporadora,https://aguasantaincorporadora.com.br,Goiânia,29,Lento,62 29 29,6.2,2.2,0.0,WordPress,sim,sim,2026-11-24
+EBM Incorporações,https://ebm.com.br/,Goiânia,28,Lento,26 29 28,6.8,30.2,16.9,WordPress,sim,sim,2026-11-24
+Sousa Andrade Construtora,https://sousaandrade.com.br/,Goiânia,19,Lento,19 13 19,20.3,12.3,0.0,WordPress,sim,sim,2026-11-24
+Cinq Inteligência Urbana,https://cinqdi.com.br/,Goiânia,19,Lento,18 19 19,28.6,5.0,0.0,WordPress,sim,sim,2026-11-24
+GPL Incorporadora,https://www.gplincorporadora.com.br/,Goiânia,14,Lento,14 13 14,13.3,18.4,0.0,Não identificada,sim,sim,2026-11-24

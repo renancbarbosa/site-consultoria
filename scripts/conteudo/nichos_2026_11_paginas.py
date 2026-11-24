@@ -702,6 +702,9 @@ PAGINAS = [
                     "Ela também é onde se mede o resultado: cada contato chega com a origem marcada, e dá para saber "
                     "qual anúncio traz quem visita o decorado. Veja a "
                     "<a href=\"/criacao-de-landing-page/\">criação de landing page para anúncios</a>.",
+                    "E ela precisa abrir rápido no celular. Veja como os sites das construtoras de Goiânia se saem "
+                    "no <a href=\"/blog/velocidade-sites-construtoras-goiania/\">teste de velocidade que fizemos "
+                    "com eles</a>.",
                 ],
             }),
             ("texto", {

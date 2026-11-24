@@ -42,7 +42,10 @@ INTERNAS = ("docs/", "scripts/", "data/", "reports/", "node_modules/", "graphify
             "Projetos/", "modelos/", "functions/", "tmp/")
 SEM_CAIXA = ("consultoria-seo/", "privacidade/", "cookies/", "404.html", "diagnostico-presenca-digital/exemplo/",
              "index.html", "blog/index.html", "servicos/index.html", "nichos/index.html", "contato/index.html",
-             "sobre/index.html", "cases/index.html", "ferramentas/index.html")
+             "sobre/index.html", "cases/index.html", "ferramentas/index.html",
+             # estudo de 24/11/2026: página nova no meio da lista em ordem alfabética; com caixa, o rodízio de
+             # âncoras de todas as páginas depois dela mudaria (~60 páginas alteradas sem necessidade)
+             "blog/velocidade-sites-construtoras-goiania/index.html")
 NOME_MENU = "Agência de marketing digital em Goiânia"
 ITEM_MENU = '<a href="%s" class="nav-dropdown-item" role="menuitem">%s</a>' % (AG, NOME_MENU)
 ITENS_RODAPE = ('<li><a href="%s">%s</a></li>' % (AG, NOME_MENU), '<a href="%s">%s</a>' % (AG, NOME_MENU))
