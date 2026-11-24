@@ -1361,3 +1361,46 @@ perguntas e cola as respostas; a tabulação e a página ficam com o Claude. O a
 - Arquivos internos novos (`/scripts/...nichos...`) conferidos em 404 pelo middleware.
 - **IndexNow (`--sitemap`, 199 URLs) aceito (HTTP 200).** Chave de sempre.
 - Falta o Renan: reenviar o `sitemap.xml` (199 URLs) e pedir indexação das 10 novas e de `/nichos/`.
+
+## Rodada de 24/11/2026: estudo de velocidade dos sites das construtoras (ramo `estudo-construtoras-2026-11-24`, `9f060eae`, NÃO publicado)
+
+Pedido do Renan: "faz o estudo das construtoras" (mesmo método do teste das clínicas). Durante a medição ele
+encerrou: "chega de estudo, é esses dados que a gente vai usar".
+
+- **Página nova** `/blog/velocidade-sites-construtoras-goiania/` + `benchmark-construtoras.csv` na pasta dela.
+  Article + Dataset + FAQPage. Sitemap 199 → **200**. Linha nova nos dois `llms` (e a do estudo das clínicas,
+  que não estava lá).
+- **Seleção:** todas as associadas da lista pública da ADEMI-GO (ademigo.com.br/associados), consultada em
+  24/11/2026: 34 empresas. **31 medidas.** Fora: Dinâmica Engenharia (certificado vencido desde 15/01/2025),
+  Vinci (domínio não responde) e WV Maldi (a última em ordem alfabética: a medição foi encerrada antes).
+  A página explica os 3 casos **sem dizer o nome**.
+- **Resultado:** média 47, nota do meio 41; só a Vega no verde (97, e é a página mais leve: 0,5 MB); 20 na
+  faixa vermelha. Conteúdo principal em 10,2 s no site do meio (16 acima de 10 s). Peso do meio 5,5 MB; Somos
+  com 130,5 MB (uma única foto de 31,7 MB). 26 de 31 com WhatsApp. Engel e Toctao sem cadeado.
+- **Nomes na tabela** (`mostrar_nomes: true`), mesmo critério das clínicas. Para trocar por "Construtora A,
+  B...": `false` em `data/benchmark-construtoras.json` e `python scripts/gerar-benchmark-construtoras.py`.
+- **Scripts:** `scripts/medir-velocidade-sites.py` (genérico, lê uma seleção em JSON; serve para outro ramo) e
+  `scripts/gerar-benchmark-construtoras.py` (página, CSV, sitemap e llms; idempotente; todo número do texto
+  sai dos dados, e as frases "o único no verde" e "o maior arquivo" só entram quando os dados confirmam).
+- **Medir em blocos, nunca sozinho em segundo plano:** o Claude Code encerrou a medição em segundo plano por
+  falta de memória no computador. `--ate 500` mede por ~8 minutos em primeiro plano, salva e sai com código 3;
+  rodar de novo continua de onde parou (relatórios brutos e páginas já conferidas não são refeitos).
+- **Chrome 154+ (out/2026) pede permissão antes de abrir site sem https.** Para medir esses sites o medidor usa
+  `--disable-features=HttpsFirstBalancedModeAutoEnable` e marca `aviso_chrome`. A página cita o anúncio
+  oficial do Google ("HTTPS by default", 28/10/2025).
+- **WhatsApp:** só conta link com número (wa.me/55..., send?phone=) ou botão de WhatsApp; botão de compartilhar
+  não conta. Ícone dentro de comentário HTML engana o detector: aconteceu na Toctao, corrigido à mão (`obs`).
+- **Links que entraram:** parágrafo em `/marketing-para-construtoras/` (`nichos_2026_11_paginas.py`), seção 9
+  de `/blog/landing-page-para-construtora/` (`nichos_2026_11_artigos.py`) e parágrafo no teste das clínicas
+  (`gerar-benchmark-clinicas.py`). Cadeia rodada duas vezes: a 2ª passada deu zero em tudo.
+- `ligar-pesquisa-2026-11-10.py`: o estudo entrou em `SEM_CAIXA` de propósito. Página nova no meio da ordem
+  alfabética deslocaria o rodízio de âncoras de ~60 páginas.
+- **Falso alarme de quebra de linha:** depois dos geradores, ~170 arquivos aparecem como alterados no
+  `git status` só por troca CRLF/LF. `git diff --stat` mostra a mudança real. Não é alteração de conteúdo.
+
+### Para publicar (falta o "pode publicar" do Renan)
+1. `git checkout main && git merge estudo-construtoras-2026-11-24 && git push origin main`.
+2. Conferir HTTP 200 em: o estudo, o CSV, `/marketing-para-construtoras/`, `/blog/landing-page-para-construtora/`
+   e `/blog/velocidade-sites-clinicas-goiania/`.
+3. `python scripts/indexnow.py` com essas 5 URLs (chave de sempre).
+4. Renan: reenviar o `sitemap.xml` (200 URLs) e pedir indexação do estudo no Search Console.
